@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0'/>
+	<title>speech</title>
+
+	<!-- build:css style.min.css -->	
+	<link rel="stylesheet" type="text/css" href="assets/css/font.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/flex.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
+  	<!-- endbuild -->
+
+	<script type="text/javascript" src="assets/text/text.json"></script>
+	
+</head>
+<body>
+	<div class="start_wrapper" layout="column" layout-align="center center">
+		<button class="start_button">START</button>
+	</div>
+	<div class="slide" layout="column" layout-align="center center">
+		<span class="slide_current"></span>
+		<h1 class="slide_sentence"></h1>
+		<span class="slide_img"></span>
+		<span class="slide_music"></span>
+		<span class="slide_points"></span>
+		<span class="slide_tot"></span>
+		<span class="slide_keywords"></span>
+		<button class="next">next</button>
+		<button class="previous">previous</button>
+		<button class="restart">restart</button>
+	</div>
+
+	<!-- build:js optimized.js -->
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
+	<script type="text/javascript" src="bower_components/prefixfree/prefixfree.min.js"></script>
+	<script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+  	<!-- endbuild -->
+
+</body>
+</html>

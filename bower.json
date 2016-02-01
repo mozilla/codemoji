@@ -1,0 +1,28 @@
+{
+  "name": "speech",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Amedeo Spagnolo <amedeo.spagnolo@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fastclick": "~1.0.6",
+    "lodash": "~3.10.1",
+    "normalize-css": "~3.0.3",
+    "jquery": "~2.2.0",
+    "prefixfree": "*",
+    "d3": "~3.5.14"
+  }
+}
+
+

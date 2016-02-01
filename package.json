@@ -1,0 +1,25 @@
+{
+  "name": "speech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "csvtojson": "^0.5.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-usemin": "^3.1.1",
+    "lodash": "^4.0.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-uglify": "^0.11.0",
+    "load-grunt-tasks": "^3.4.0"
+  }
+}
+
+
