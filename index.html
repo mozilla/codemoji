@@ -17,22 +17,29 @@
   
 </head>
 <body>
-  
   <!-- <input type="text"/> -->
   <div class="traslation"></div>
-  <div class="emojibox">box emojy</div>
+  <div class="emojibox">cleartext here:</div>
   <label class="thefix">
     <textarea id="input_field"></textarea>
   </label>
+  <p>encrypted -> emojied -> de-emojied</p>
+  <div class="backfromtheemoji"></div>
+  <p>encrypted -> emojied -> de-emojied -> decrypted</p>
+  <div class="backfromthepast"></div>
   <div class="cssicon"></div>
 
-  <!-- build:js optimized.js -->
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
   <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
   <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+  <script type="text/javascript" src="bower_components/esrever/esrever.js"></script>
+  
+  <!-- build:js optimized.js -->
+  <script type="text/javascript" src="assets/js/caesarShift.js"></script>
+  <script type="text/javascript" src="assets/js/emojiEncoder.js"></script>
+  
   <script type="text/javascript" src="assets/js/script.js"></script>
-  <script type="text/javascript" src="assets/js/caesarcipher.js"></script>
   <!-- endbuild -->
 
 </body>
