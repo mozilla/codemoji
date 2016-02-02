@@ -37,8 +37,8 @@ var caesarShift = function(str, shift) {
 }
 
 caesarEncode(string, shift) {
-  return caesarShift(stirng, shift)
+  return caesarShift(string, shift)
 }
 caesarDecode(string, shift) {
-  return caesarShift(stirng, -shift)
+  return caesarShift(string, -shift)
 }
