@@ -1,12 +1,12 @@
 #input_field{
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .thefix { 
-	padding–right: 10px; 
+  padding–right: 10px; 
 }
 
 .cssicon{
-	content: '\u1F601';
-	}
+  content: '\u1F601';
+  }
