@@ -13,22 +13,6 @@ function findSurrogatePair(point) {
 var EMOJI_POINTS_RANGE = { lower: 128513, upper: 128591 }
 
 function emojiEncode(string) {
-  // var output = []
-  // string.split('').forEach(function (c) {
-  //   // console.log(c)
-  //   if (c.match(/[a-z]/i)) {
-  //     var code = c.charCodeAt()
-  //     // console.log(code)
-  //     code = ((code - 97) % 26)
-  //     // console.log(code)
-  //     // console.log(String.fromCodePoint(EMOJI_POINTS_RANGE.lower + code))
-  //     code = EMOJI_POINTS_RANGE.lower + code
-  //     console.log(code)
-  //     c = String.fromCodePoint(code)
-  //   }
-  //   output.push(c)
-  // })
-  // return output.join('')
   var output = ''
   for (var i = string.length - 1; i >= 0; i--) {
     var c = string[i]
@@ -44,47 +28,6 @@ function emojiEncode(string) {
   }
   return esrever.reverse(output)
 }
-
-// V1 - does not work, emoji are 2 char long
-// function emojiDecode(string) {
-//   var output = []
-//   string.split('').forEach(function (c, index) {
-//     // console.log(c)
-//     // console.log(findSurrogatePair(c))
-//     var code = string.codePointAt(index)
-//     console.log(code)
-//     code = (EMOJI_POINTS_RANGE.lower - code) + 97
-//     console.log(code)
-//     c = String.fromCodePoint(code)
-//     console.log(c)
-
-//     output.push(c)
-//   })
-//   return output.join('')
-// }
-// 
-// V2 - recursion with globals
-// var decodedOutput = ''
-// function emojiDecode(string) {
-//   console.log(string.length)
-//   if (string.codePointAt(0) >= EMOJI_POINTS_RANGE.lower && 
-//       string.codePointAt(0) <= EMOJI_POINTS_RANGE.upper) {
-//     // console.log('down', string)
-//     console.log('down', string.codePointAt(0))
-//     // console.log('code', string.codePointAt(0) - EMOJI_POINTS_RANGE.lower)
-//     decodedOutput += String.fromCodePoint(97 + string.codePointAt(0) - EMOJI_POINTS_RANGE.lower)
-//     return emojiDecode(string.slice(2))
-//   }
-//   if (string == '') {
-//     console.log('end')
-//     return decodedOutput.split('').reverse().join('')
-//   }
-//   if (typeof string[0].codePointAt(1) === 'undefined') {
-//     console.log('code', string[0].codePointAt())
-//     decodedOutput += String.fromCodePoint(string.codePointAt(0))
-//     return emojiDecode(string.slice(1))
-//   }
-// }
 
 function emojiDecode(string) {
   function emojiDecodeRecursion(memo, string) {
