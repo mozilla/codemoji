@@ -1,4 +1,11 @@
  $(document).ready(function(){
+
+  var cleartext = 'Insert text'
+  var ciphred = caesarShift(cleartext, 3)
+  var emojied = emojiEncode(ciphred)
+  $(".traslation").html(emojied.replace(/\n/g,"<br>"))
+
+
   $("#input_field").on('input',function(e){
     // console.log($("#input_field").val())
     // $(".traslation").text($("#input_field").val())

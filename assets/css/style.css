@@ -10,3 +10,9 @@
 .cssicon{
   content: '\u1F601';
   }
+
+.to-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
