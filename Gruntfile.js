@@ -34,9 +34,6 @@ module.exports = function (grunt) {
           html: {
               src: './index.html', dest: 'public/index.html'
           },
-          svg_modules: {
-              src: 'svg_modules/*', dest: 'public/'
-          },
           assets_dir: {
               src: 'assets/', dest: 'public/'
           },
@@ -52,18 +49,39 @@ module.exports = function (grunt) {
           svg: {
               src: 'assets/svg/*', dest: 'public/'
           }
-        }
+        },
+        postcss: {
+          options: {
+            map: false, // inline sourcemaps
+
+            processors: [
+              //require('pixrem')(), // add fallbacks for rem units
+              require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+              //require('cssnano')() // minify the result
+            ]
+          },
+          dist: {
+            src: 'assets/css/*.css'
+          }
+        },
+        watch: {
+          scripts: {
+            files: 'assets/css/*.css',
+            tasks: ['postcss'],
+          },
+        },
     });
- 
+    
+
     grunt.registerTask('dev', ['browserSync:dev']);
     grunt.registerTask('build',[
       'copy:html',
-      'copy:svg_modules',
       'copy:assets_dir',
       'copy:font',
       'copy:img',
       'copy:text',
       'copy:svg',
+      'postcss',
       'useminPrepare',
       'concat',
       'uglify',
