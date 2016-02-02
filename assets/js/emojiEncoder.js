@@ -11,6 +11,10 @@ function findSurrogatePair(point) {
  */
 
 var EMOJI_POINTS_RANGE = { lower: 128513, upper: 128591 }
+var lowercase_mod = 26
+var uppercase_mod = 58
+var uppercase_enabled = true
+var mod = uppercase_enabled ? uppercase_mod : lowercase_mod
 
 function emojiEncode(string) {
   var output = ''
@@ -19,7 +23,7 @@ function emojiEncode(string) {
     if (c.match(/[a-z]/i)) {
       var code = string.charCodeAt(i)
       // console.log(code)
-      code = ((code - 97) % 26)
+      code = ((code - 65) % mod)
       code = EMOJI_POINTS_RANGE.lower + code
       // console.log(code)
       c = String.fromCodePoint(code)
@@ -44,7 +48,7 @@ function emojiDecode(string) {
         string.codePointAt(0) <= EMOJI_POINTS_RANGE.upper) {
       // console.log('down', string.codePointAt(0))
       // subtract to codePoint lower emoji value, mod 26 than add 97 (lowercase 'a')
-      memo += String.fromCodePoint(97 + ((string.codePointAt(0) - EMOJI_POINTS_RANGE.lower) % 26))
+      memo += String.fromCodePoint(65 + (string.codePointAt(0) - EMOJI_POINTS_RANGE.lower) % mod)
       // go down the rabbit hole without first 2 chars (because emoji are 2 char in UTF8)
       return emojiDecodeRecursion(memo, string.slice(2))
     }
