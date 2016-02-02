@@ -3,7 +3,7 @@
  * https://en.wikipedia.org/wiki/Caesar_cipher
  */
 
-var caesarShift = function(str, shift) {
+var caesarShift = function caesarShift(str, shift) {
   // if shift is 0 return string
   if (shift == 0)
     return str
@@ -36,9 +36,9 @@ var caesarShift = function(str, shift) {
   return output.reverse().join('')
 }
 
-caesarEncode(string, shift) {
+var caesarEncode = function caesarEncode(string, shift) {
   return caesarShift(string, shift)
 }
-caesarDecode(string, shift) {
+var caesarDecode = function caesarDecode(string, shift) {
   return caesarShift(string, -shift)
 }
