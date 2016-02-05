@@ -6,11 +6,7 @@
       $('.main_content_bottom_input').text(Criptoloji.encode(text, key))
   })
 
-<<<<<<< 66ec02e98c79e08c651c60d7378efd05ed3303bc
   var emoji_list = ['😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂']
-=======
-  var emoji_list = ['a','b','c','d','e','f','g','a','b','c','d','e','f','g']
->>>>>>> .
 
   _.each(emoji_list, function(d){
     $(".keyslider_content").append('<p class="key" key="'+d+'">'+d+'</p>')
