@@ -6,34 +6,42 @@
   <title>Mozilla Cryptoloji</title>
 
   <!-- build:css style.min.css -->  
+  <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
   <link rel="stylesheet" type="text/css" href="assets/css/font.css">
   <link rel="stylesheet" type="text/css" href="assets/css/flex.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/generic.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
   <!-- endbuild -->
 
   <script type="text/javascript" src="assets/text/text.json"></script>
   
 </head>
 <body>
-  <!-- <input type="text"/> -->
-  <div class="emojibox">cleartext here:</div>
-  <label class="thefix to-bottom">
-    <textarea id="input_field" class="to-bottom">Insert text</textarea>
-  </label>
-  <p>encrypted -> emojied</p>
-  <div class="traslation"></div>
-  <p>encrypted -> emojied -> de-emojied</p>
-  <div class="backfromtheemoji"></div>
-  <p>encrypted -> emojied -> de-emojied -> decrypted</p>
-  <div class="backfromthepast"></div>
-  <div class="cssicon"></div>
+  <!-- main section -->
+  <div class="header">
+      <h1 class="header_title" layout="row" layout-align="start center">Cryptoloji</h1>
+  </div>
+  <div class="section_main" layout="column" layout-align="start center">
+    <div class="main_keyslider">
+      <label class="header__lable main_keyslider_bottom_label">your message</label>
+    </div>
+    <div class="main_content">
+      <div class="main_content_top" flex>
+        <label class="header__lable main_content_top_label">your message</label>
+        <textarea></textarea>
+      </div>
+      <div class="main_content_bottom" flex>
+        <label class="header__lable main_content_bottom_label">your message</label>
+        <textarea readonly="true"></textarea>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
 
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
   <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
-  <script type="text/javascript" src="bower_components/d3/d3.js"></script>
   <script type="text/javascript" src="bower_components/esrever/esrever.js"></script>
   
   <!-- build:js optimized.js -->
