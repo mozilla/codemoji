@@ -6,6 +6,10 @@
       $('.main_content_bottom_input').text(Criptoloji.encode(text))
   })
 
+  $('.key').click(function(){
+    console.log($(this).attr('key'))
+  })
+
 })
 
 
