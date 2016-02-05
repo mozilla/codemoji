@@ -45,7 +45,7 @@
   left: 0;
   right: 0;
   height: 8rem;
-  background-color: red;
+  background-color: #E6E6E6;
   transform: translate(0,-50%)
 }
 
@@ -53,7 +53,7 @@
   height: 50%;
   padding-bottom: 4rem;
   padding-top: 8rem;
-  background-color: yellow;
+  background-color: #B3B3B3;
   position: relative;
 }
 
@@ -61,10 +61,10 @@
   height: 50%;
   padding-top: 4rem;
   position: relative;
-  background-color: green;
+  background-color: #4D4D4D;
 }
 
-.header__lable{
+.header__label{
   position: absolute;
   top: 4px;
   left: 50%;
@@ -80,6 +80,26 @@
   margin-top: 4rem;
 }
 
+.header__input{
+  position: absolute;
+  top: 4px;
+  font-size: 70%;
+      width: 100%;
+    text-align: center;
+    border: none;
+    padding: 0 2rem;
+    height: 9rem;
+}
+
+.main_content_top_input{
+    background-color: rgba(255,255,255,.1);
+  margin-top: 11rem;
+}
+
+.main_content_bottom_input{
+  margin-top: 7rem;
+  background-color: transparent;
+}
 
 
 
