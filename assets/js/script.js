@@ -1,7 +1,9 @@
  $(document).ready(function(){
-  $("body").height($(window).innerHeight())
-  $(".main_content_top").height($(window).innerHeight()/2-120)
-  $(".main_content_bottom").height($(window).innerHeight()/2-120)
+  $("body").css("height",$(window).innerHeight())
+  $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
+  $(".main_content_bottom").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
+  $(".main_content_top_label").css("margin-top", $(".header").height())
+
   console.log($(window).innerHeight()/2-120/2)
 
 
