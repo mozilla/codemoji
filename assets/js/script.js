@@ -12,15 +12,16 @@
       $(".keyslider_content").fadeIn()
   })
 
+  //
+  // Crypt & decrypt
+  //
+  var emoji_list = ['😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂']
+  _.each(emoji_list, function(d){
+    $(".keyslider_content").append('<p class="key" key="'+d+'">'+d+'</p>')
+  })
   $('.main_content_top_input').bind('input propertychange', function() {
     var text = $('.main_content_top_input').val()
     $('.main_content_bottom_input').text(Criptoloji.encrypt(text))
-  })
-
-  var emoji_list = ['😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂']
-
-  _.each(emoji_list, function(d){
-    $(".keyslider_content").append('<p class="key" key="'+d+'">'+d+'</p>')
   })
   $('.key').click(function(){
     var text = $('.main_content_top_input').val()
@@ -29,6 +30,10 @@
     console.log('Chosen key', key)
     $('.main_content_bottom_input').text(Criptoloji.encrypt(text))
   })
+
+  //
+  // Key Slider
+  //
 
 })
 
