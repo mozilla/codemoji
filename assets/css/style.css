@@ -12,6 +12,14 @@
   max-width: 22rem;
 }
 
+.header_share{
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+}
+
+
 .section_main{
   z-index: 8;
 }

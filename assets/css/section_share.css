@@ -1,0 +1,56 @@
+.section_share{
+  background-color: red;
+  text-align: center;
+  color: white;
+  height: 100%;
+  width: 100%; 
+  z-index: 3000; 
+}
+
+.share_message{
+  height: 60%;
+  font-size: 150%;
+  letter-spacing: 2px;
+  line-height: 120%;
+  background-color: #6D6D6D;
+  width: 100%;  
+}
+
+.share_key{
+  height: 20%;
+  background-color: #B2B2B2;
+  font-size: 90%;
+  letter-spacing: 2px;
+  line-height: 120%;
+  width: 100%;  
+}
+
+.share_social{
+  height: 20%;
+  background-color: white;
+  width: 100%;  
+  color: black;
+}
+
+.share_message_exit{
+  margin: 0;
+  width: auto;
+  background-color: transparent;
+  border:none;
+  display:inline-block;
+  cursor:pointer;
+  padding:10px 15px;
+  text-decoration:none;
+  text-shadow: none;
+  font-size: 80%;
+  color: white;
+  outline: none;
+}
+
+.share_message h3{
+  max-width: 22rem;
+}
+
+
+
+

@@ -43,6 +43,7 @@ function keySelect(key) {
 function encryptText() {
   var text = $('.main_content_top_input').val()
   $('.main_content_bottom_input').text(Criptoloji.encrypt(text))
+  $(".share_message_item").text($('.main_content_bottom_input').val())
 }
 
 //

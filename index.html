@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/section_welcome.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_home.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_share.css">
   <!-- endbuild -->
 
   <script type="text/javascript" src="assets/text/text.json"></script>
@@ -23,6 +24,7 @@
   <!-- main section -->
   <div class="header">
       <h1 class="header_title" layout="row" layout-align="start center">Cryptoloji</h1>
+      <button class="header_share" onclick="toSection('.section_share')">SHARE</button>
   </div>
   <div class="section_welcome section" layout="column" layout-align="center center">
     <div class="section_inner">
@@ -62,10 +64,27 @@
         <textarea class="header__input main_content_bottom_input" readonly="true"></textarea>
         <p></p>
       </div>
-
     </div>
   </div>
-
+  <div class="section_share section" layout="column" layout-align="start center">
+    <div class="share_message" layout="column" layout-align="start center">
+      <button class="share_message_exit" onclick="toSection('.section_main')">X</button>
+      <div layout="column" layout-align="center center">
+        <h3>READY TO SHARE THE MESSAGE?</h3>
+      </div>
+      <span class="share_message_item"></span>
+    </div>
+    <div class="share_key" layout="row" layout-align="center center">
+      <span>Pst! Remember to share the key with your peer</span>
+    </div>
+    <div class="share_social" layout="row" layout-align="space-around center">
+      <div class="social">1</div>
+      <div class="social">2</div>
+      <div class="social">3</div>
+      <div class="social">4</div>
+      <div class="social">5</div>
+    </div>
+  </div>
 
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
