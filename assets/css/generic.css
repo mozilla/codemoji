@@ -28,9 +28,19 @@ a ,a:visited ,a:hover ,a:active{
   cursor: pointer;
 }
 
+svg *{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;  
+    -khtml-user-select: none;   
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none; 
+}
+
 .no_margin{
   margin: .3rem 0;
-}
+} 
 
 .no_margin_bottom{
   margin-bottom: .2rem;

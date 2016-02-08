@@ -1,5 +1,9 @@
  $(document).ready(function(){
   $("body").height($(window).innerHeight())
+  $(".main_content_top").height($(window).innerHeight()/2-120)
+  $(".main_content_bottom").height($(window).innerHeight()/2-120)
+  console.log($(window).innerHeight()/2-120/2)
+
 
   $('.main_content_top_input').bind('input propertychange', function() {
     var text = $('.main_content_top_input').val()
