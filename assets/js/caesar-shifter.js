@@ -2,16 +2,16 @@
   'use strict'
 
   var CaesarShifter = {
-    encode: encode,
-    decode: decode
+    crypt: crypt,
+    decrypt: decrypt
   }
   w.CaesarShifter = CaesarShifter
 
-  function encode (text, key) {
+  function crypt (text, key) {
     return _caesarShift(text, key)
   }
 
-  function decode (text, key) {
+  function decrypt (text, key) {
     return _caesarShift(text, -key)
   }
 

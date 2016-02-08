@@ -21,13 +21,27 @@
     emojiKey: true,
 
     /**
+     * A global set key, used for encoding and decoding
      * 
      * @type {string}
      */
     key: null,
 
-    encode: encode,
-    decode: decode
+    /**
+     * Encrypt text value argument with the given key ( or the global one ) and
+     * encode it with emoji
+     * 
+     * @type {function}
+     */
+    encrypt: encrypt,
+
+    /**
+     * Dencrypt text value argument with the given key ( or the global one ) and
+     * decode it from emoji
+     * 
+     * @type {function}
+     */
+    decrypt: decrypt
 
   }
   w.Criptoloji = Criptoloji
@@ -38,8 +52,8 @@
   var _downcaseAlphabetUnicodeStart = 97
 
 
-  function encode (text, key) {
-    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Criptoloji.encode called without key'
+  function encrypt (text, key) {
+    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Criptoloji.encrypt called without key'
     if (typeof key === 'undefined') key = this.key
     if (_isEmoji(key) && !this.emojiKey) throw 'ArgumentError: Emoji as key but Criptoloji.emojiKey is false'
     // console.log('emoji key', key)
@@ -49,15 +63,15 @@
     var mod = this.enableUppercase ? _upcaseCodePointMod : _downcaseCodePointMod
     var unicodeStart = this.enableUppercase ? _upcaseAlphabetUnicodeStart : _downcaseAlphabetUnicodeStart
     // console.log(mod, unicodeStart)
-    text = CaesarShifter.encode(text, key)
-    // console.log('caesar encode', text)
+    text = CaesarShifter.crypt(text, key)
+    // console.log('caesar crypted', text)
     text = Emojifier.encode(text, mod, unicodeStart).replace(/\n/g, '<br>')
     // console.log('emoji encode', text)
     return text
   }
 
-  function decode (text, key) {
-    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Criptoloji.decode called without key'
+  function decrypt (text, key) {
+    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Criptoloji.decrypt called without key'
     if (typeof key === 'undefined') key = this.key
     if (_isEmoji(key) && !this.emojiKey) throw 'ArgumentError: Emoji as key but Criptoloji.emojiKey is false'
     // console.log('emoji key', key)
@@ -69,8 +83,8 @@
     text = Emojifier.decode(text, mod, unicodeStart).replace(/\n/g, '<br>')
     // text = this.enableUppercase ? text : text.toLowerCase()
     // console.log('emoji decode', text)
-    text = CaesarShifter.decode(text, key)
-    // console.log('caesar decode', text)
+    text = CaesarShifter.decrypt(text, key)
+    // console.log('caesar decrypted', text)
     return text
   }
 

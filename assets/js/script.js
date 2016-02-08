@@ -7,7 +7,7 @@
 
   $('.main_content_top_input').bind('input propertychange', function() {
     var text = $('.main_content_top_input').val()
-    $('.main_content_bottom_input').text(Criptoloji.encode(text))
+    $('.main_content_bottom_input').text(Criptoloji.encrypt(text))
   })
 
   var emoji_list = ['😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂']
@@ -20,7 +20,7 @@
     var key = $(this).attr('key')
     Criptoloji.key = key
     console.log('Chosen key', key)
-    $('.main_content_bottom_input').text(Criptoloji.encode(text))
+    $('.main_content_bottom_input').text(Criptoloji.encrypt(text))
   })
 
 })
