@@ -119,5 +119,15 @@
   background-color: transparent;
 }
 
-
+.main_keyslider_cicle{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0,-50%);
+  user-select: none;
+  background-color: gray;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
 
