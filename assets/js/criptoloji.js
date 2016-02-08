@@ -2,19 +2,33 @@
   'use strict'
   
   var Criptoloji = {
-    /* Enable uppercase support
+    /**
+     * Enable uppercase support
      *
      * If false all strings are downcased
+     * 
+     * @type {boolean}
      */
     enableUppercase: true,
-    /* Enable emoji as encode/decode key
+    
+    /**
+     * Enable emoji as encode/decode key
      *
      * If disabled and an emoji is passed as key an exception is raised
+     *
+     * @type {boolean}
      */
     emojiKey: true,
 
+    /**
+     * 
+     * @type {string}
+     */
+    key: null,
+
     encode: encode,
     decode: decode
+
   }
   w.Criptoloji = Criptoloji
 
@@ -25,6 +39,8 @@
 
 
   function encode (text, key) {
+    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Criptoloji.encode called without key'
+    if (typeof key === 'undefined') key = this.key
     if (_isEmoji(key) && !this.emojiKey) throw 'ArgumentError: Emoji as key but Criptoloji.emojiKey is false'
     // console.log('emoji key', key)
     key = this.emojiKey ? _emoji2key(key) : key
@@ -41,6 +57,8 @@
   }
 
   function decode (text, key) {
+    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Criptoloji.decode called without key'
+    if (typeof key === 'undefined') key = this.key
     if (_isEmoji(key) && !this.emojiKey) throw 'ArgumentError: Emoji as key but Criptoloji.emojiKey is false'
     // console.log('emoji key', key)
     key = this.emojiKey ? _emoji2key(key) : key
