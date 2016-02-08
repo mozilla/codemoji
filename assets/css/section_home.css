@@ -1,0 +1,39 @@
+.section_home{
+  z-index: 10;
+  text-align: center;
+  padding: 0;
+  color: white;
+}
+
+.home_encrypt{ 
+  height: 70%; 
+  background-color: #6D6D6D;
+  font-size: 150%;
+  letter-spacing: 2px;
+  line-height: 120%;
+}
+
+.home_decrypt{ 
+  height: 30%; 
+  background-color: #B2B2B2;
+  font-size: 90%;
+  letter-spacing: 2px;
+  line-height: 120%;
+}
+
+.home_button{
+  width: 100%;
+  margin: 0;
+  border:none;
+  display:inline-block;
+  cursor:pointer;
+  padding:10px 15px;
+  text-decoration:none;
+  text-shadow: none;
+  color: white;
+  outline: none;
+}
+
+.home_button span{
+  max-width: 22rem;
+}

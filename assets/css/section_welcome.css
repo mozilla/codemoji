@@ -1,0 +1,45 @@
+.section_welcome{
+  z-index: 10;
+  background-color: #6D6D6D;
+  text-align: center;
+  padding: 0 2rem;
+  color: white;
+}
+
+.welcome_button_more{
+  margin: 4rem;
+  background-color: transparent;
+  border:1px solid white;
+  display:inline-block;
+  cursor:pointer;
+  padding:10px 15px;
+  text-decoration:none;
+  text-shadow: none;
+  font-size: 80%;
+  color: white;
+  outline: none;
+}
+
+.welcome_button_more:active {
+  position:relative;
+  top:1px;
+  text-decoration:none;
+}
+
+.welcome_button_send{
+  background-color: transparent;
+  border: none;
+  display:inline-block;
+  cursor:pointer;
+  text-decoration:none;
+  text-shadow: none;
+  font-size: 80%;
+  color: white;
+  outline: none;
+  border-bottom: solid 1px white;
+  padding: 0;
+}
+
+.welcome_button_send:active {
+  text-decoration:none;
+}

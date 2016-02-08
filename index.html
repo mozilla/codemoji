@@ -11,6 +11,9 @@
   <link rel="stylesheet" type="text/css" href="assets/css/flex.css">
   <link rel="stylesheet" type="text/css" href="assets/css/generic.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_welcome.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_home.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_main.css">
   <!-- endbuild -->
 
   <script type="text/javascript" src="assets/text/text.json"></script>
@@ -21,7 +24,27 @@
   <div class="header">
       <h1 class="header_title" layout="row" layout-align="start center">Cryptoloji</h1>
   </div>
-  <div class="section_main" layout="column" layout-align="start center">
+  <div class="section_welcome section" layout="column" layout-align="center center">
+    <div class="section_inner">
+      <h2>WELCOME TO CRYPTOLOJI</h2>
+      <span class="welcome_text">Encrypt any message into a colorful string of emojis (and crack your friends up, whether they crack the code or not)</span>
+      <button class="welcome_button_more">TELL ME MORE</button>
+      <button class="welcome_button_send" onclick="toSection('.section_home')">SEND YOUR SECRET MESSAGE</button>
+    </div>
+  </div>
+  <div class="section_home section" layout="column" layout-align="end center">
+    <button class="home_button home_encrypt" onclick="toSection('.section_main')">
+      <span>
+        ENCRYPT<br>AND SHARE A<br>MESSAGE
+      </span>
+    </button>
+    <button class="home_button home_decrypt">
+      <span>
+        DO YOU HAVE AN EMOJI<br>MESSAGE TO DECRYPT?
+      </span>
+    </button>
+  </div>
+  <div class="section_main section" layout="column" layout-align="start center">
     <div class="main_content">
       <div class="main_content_top" flex>
         <label class="header__label main_content_top_label">YOUR MESSAGE</label>

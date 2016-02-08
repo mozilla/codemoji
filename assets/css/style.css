@@ -1,3 +1,21 @@
+.section{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+
+.section_inner{
+  max-width: 22rem;
+}
+
+.section_main{
+  z-index: 8;
+}
+
 .header{
   position: fixed;
   z-index: 2000;
@@ -21,16 +39,6 @@
 .main_content{
   width: 100%;
   height: 100%;
-}
-
-.section_main{
-  z-index: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  right: 0;
 }
 
 .main_keyslider{
