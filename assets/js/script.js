@@ -15,21 +15,30 @@
     $(".keyslider_content").append('<p class="key" key="'+d+'">'+d+'</p>')
   })
   $('.main_content_top_input').bind('input propertychange', function() {
-    var text = $('.main_content_top_input').val()
-    $('.main_content_bottom_input').text(Criptoloji.encrypt(text))
+    encryptText()
   })
   $('.key').click(function(){
-    var text = $('.main_content_top_input').val()
     var key = $(this).attr('key')
-    Criptoloji.key = key
-    console.log('Chosen key', key)
-    $('.main_content_bottom_input').text(Criptoloji.encrypt(text))
+    keySelect(key)
+    encryptText()
   })
 })
 
 function toSection(button){
   $(".section").hide()
   $(button).show()
+}
+
+//
+// Encrypt / key select
+//
+function keySelect(key) {
+  Criptoloji.key = key
+  console.log('Chosen key', key)
+}
+function encryptText() {
+  var text = $('.main_content_top_input').val()
+  $('.main_content_bottom_input').text(Criptoloji.encrypt(text))
 }
 
 //
