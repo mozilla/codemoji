@@ -17,6 +17,9 @@
   $('.main_content_top_input').bind('input propertychange', function() {
     encryptText()
   })
+  $('.main_content_top_input').on("focus", function(){
+    $('.header_share').fadeIn()
+  })
   $('.key').click(function(){
     var key = $(this).attr('key')
     keySelect(key)
