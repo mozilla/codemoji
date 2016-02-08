@@ -7,8 +7,10 @@
   $(".main_content_bottom").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
   $(".main_content_top_label").css("margin-top", $(".header").height())
 
-  console.log($(window).innerHeight()/2-120/2)
-
+  $(".keyslider_content").hide()
+  $('.main_content_top_input').focus(function() {
+      $(".keyslider_content").fadeIn()
+  })
 
   $('.main_content_top_input').bind('input propertychange', function() {
     var text = $('.main_content_top_input').val()
@@ -31,7 +33,6 @@
 })
 
 function toSection(button){
-  console.log(button)
   $(".section").hide()
   $(button).show()
 }
