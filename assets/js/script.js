@@ -7,11 +7,6 @@
   $(".main_content_bottom").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
   $(".main_content_top_label").css("margin-top", $(".header").height())
 
-  $(".keyslider_content").hide()
-  $('.main_content_top_input').focus(function() {
-      $(".keyslider_content").fadeIn()
-  })
-
   //
   // Crypt & decrypt
   //
