@@ -44,7 +44,7 @@
     decrypt: decrypt
 
   }
-  window.Encrypter = Encrypter
+  window.Cryptoloji.Encrypter = Encrypter
 
   var _downcaseCodePointMod = 26
   var _upcaseCodePointMod = 58
