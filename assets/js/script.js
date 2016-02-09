@@ -1,6 +1,6 @@
  $(document).ready(function(){
 
-  toSection(".section_welcome")
+  toSection(".section_share")
 
   $("body").css("height",$(window).innerHeight())
   $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
@@ -42,6 +42,7 @@ function toSection(button){
 function keySelect(key) {
   Criptoloji.key = key
   console.log('Chosen key', key)
+  $(".share_key_emoji-item").text(key)
 }
 function encryptText() {
   var text = $('.main_content_top_input').val()

@@ -1,5 +1,4 @@
 .section_share{
-  background-color: red;
   text-align: center;
   color: white;
   height: 100%;
@@ -14,6 +13,7 @@
   line-height: 120%;
   background-color: #6D6D6D;
   width: 100%;  
+  padding: 0 2rem;
 }
 
 .share_key{
@@ -23,6 +23,7 @@
   letter-spacing: 2px;
   line-height: 120%;
   width: 100%;  
+  padding: 0 2rem;
 }
 
 .share_social{
@@ -55,4 +56,45 @@
   width: 4rem;
   height: 4rem;
 }
+
+.share_key_emoji{
+  font-size: 250%;
+  position: relative;
+  text-align: center;
+  min-width: 5rem;
+  min-height: 5rem;
+}
+
+/*.share_key_emoji:before{
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 3001;
+}*/
+
+.share_key_sentence{
+  padding: 0 2rem;
+}
+
+.share_message_item{
+  padding: 1rem;
+  border: solid 1px white;
+  border-radius: 2rem;
+  border-bottom-right-radius: 0px;
+}
+
+
+
+
+
+
+
+
 
