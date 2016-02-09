@@ -12,7 +12,7 @@
   //
   var emoji_list = ['😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂','😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂']
   _.each(emoji_list, function(d){
-    $(".keyslider_content").append('<p class="key" key="'+d+'">'+d+'</p>')
+    $(".keyslider_content").append('<p class="key" key="'+d+'">'+twemoji.parse(d)+'</p>')
   })
   $('.main_content_top_input').bind('input propertychange', function() {
     encryptText()
@@ -45,8 +45,10 @@ function keySelect(key) {
 }
 function encryptText() {
   var text = $('.main_content_top_input').val()
-  $('.main_content_bottom_input').text(Criptoloji.encrypt(text))
-  $(".share_message_item").text($('.main_content_bottom_input').val())
+  text = Criptoloji.encrypt(text)
+  text = twemoji.parse(text)
+  $('.main_content_bottom_input').html(text)
+  $(".share_message_item").html(text)
 }
 
 //
