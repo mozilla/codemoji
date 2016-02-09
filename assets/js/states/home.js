@@ -3,10 +3,10 @@
   
   Cryptoloji.states.home = {
     enter: function () {
-      $(".section_home").show()
+      $(".section_home").addClass("section-show")
     },
     leave: function () {
-      $(".section_home").hide()
+      $(".section_home").removeClass("section-show")
     }
   }
 

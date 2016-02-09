@@ -3,10 +3,10 @@
   
   Cryptoloji.states.decrypt = {
     enter: function () {
-       $(".decryption").show()
+      $(".decryption").addClass("section-show")
     },
     leave: function () {
-       $(".decryption").hide()
+      $(".decryption").removeClass("section-show")
     }
   }
 

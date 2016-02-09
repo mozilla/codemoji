@@ -5,10 +5,10 @@
 
   Cryptoloji.states.welcome = {
     enter: function () {
-      $(".section_welcome").show()
+      $(".section_welcome").addClass("section-show")
     },
     leave: function () {
-      $(".section_welcome").hide()
+      $(".section_welcome").removeClass("section-show")
     }
   }
 

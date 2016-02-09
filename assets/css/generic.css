@@ -85,3 +85,12 @@ svg{
   }
 }
 
+.section-hide{
+  display: none;
+}
+
+.section-show{
+  display: flex !important;
+}
+
+

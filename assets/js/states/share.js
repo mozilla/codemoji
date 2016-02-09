@@ -3,10 +3,10 @@
   
   Cryptoloji.states.share = {
     enter: function () {
-       $(".section_share").show()
+      $(".section_share").addClass("section-show")
     },
     leave: function () {
-       $(".section_share").hide()
+      $(".section_share").removeClass("section-show")
     }
   }
 

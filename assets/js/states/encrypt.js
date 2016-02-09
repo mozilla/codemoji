@@ -3,12 +3,10 @@
   
   Cryptoloji.states.encrypt = {
     enter: function () {
-      console.log('bau')
-      console.log($('.encryption'))
-      $(".encryption").show()
+      $(".encryption").addClass("section-show")
     },
     leave: function () {
-       $(".encryption").hide()
+      $(".encryption").removeClass("section-show")
     }
   }
 
