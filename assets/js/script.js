@@ -2,11 +2,11 @@
 
   // toSection(".section_welcome")
 
-  $("body").css("height",$(window).innerHeight())
-  $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
-  $(".main_key_modal").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
-  $(".main_content_bottom").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
-  $(".main_content_top_label").css("margin-top", $(".header").height())
+  // $("body").css("height",$(window).innerHeight())
+  // $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
+  // $(".main_key_modal").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
+  // $(".main_content_bottom").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
+  // $(".main_content_top_label").css("margin-top", $(".header").height())
 
   //
   // Crypt & decrypt
