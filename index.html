@@ -118,13 +118,13 @@
 
   <!-- DECRYPTION views/decryption -->
   <div class="section_main section decryption" layout="column" layout-align="start center">
-    <div class="main_content">
-      <div class="main_content_bottom" flex>
-        <label class="header__label main_content_bottom_label">SECRET MESSAGE</label>
-        <div class="header__input main_content_bottom_input" readonly="true">
-          😹😤😐😖😀😻😕🙍😠😨😘😇😄😂😹😤😐😖😀
-        </div>
+    <div class="section_main_wrapper" layout="column" layout-align="center center">
+
+      <div class="main_content_top">
+        <label class="header__label main_content_top_label">YOUR MESSAGE</label>
+        <textarea class="header__input main_content_top_input">😹😤😐😖😀😻😕🙍😠😨😘😇😄😂😹😤😐😖😀</textarea>
       </div>
+
       <div class="main_keyslider">
         <label class="header__label main_keyslider_bottom_label">CHOOSE A KEY</label>
         <div class="main_keyslider_cicle"></div>
@@ -134,16 +134,19 @@
           </div>
         </div>
         <div class="main_keyslider_bubble-top" layout="column" layout-align="center center">
-          <p>?</p>
-        </div>
-        <div class="main_keyslider_bubble-bottom" layout="column" layout-align="center center">
           <p>a</p>
         </div>
-      </div>  
-      <div class="main_content_top" flex>
-        <label class="header__label main_content_top_label">YOUR MESSAGE</label>
-        <div class="header__input main_content_top_input"></div>
+        <div class="main_keyslider_bubble-bottom" layout="column" layout-align="center center">
+          <p>?</p>
+        </div>
       </div>
+
+      <div class="main_content_bottom">
+        <label class="header__label main_content_bottom_label">YOUR MESSAGE</label>
+        <div class="header__input main_content_bottom_input"></div>
+        <p></p>
+      </div>
+
     </div>
   </div>
   <!-- /DECRYPTION -->
