@@ -29,7 +29,7 @@
   <!-- main section -->
   <div class="header">
       <h1 class="header_title" layout="row" layout-align="start center">Cryptoloji</h1>
-      <button class="header_share" onclick="toSection('.section_share')">SHARE</button>
+      <button class="header_share" to-state="share">SHARE</button>
   </div>
   <div class="main_key_modal">
     <div class="main_key_modal_1" layout="row" layout-align="start center"></div>
@@ -44,16 +44,16 @@
       <h2>WELCOME TO CRYPTOLOJI</h2>
       <span class="welcome_text">Encrypt any message into a colorful string of emojis (and crack your friends up, whether they crack the code or not)</span>
       <button class="welcome_button_more">TELL ME MORE</button>
-      <button class="welcome_button_send" onclick="toSection('.section_home')">SEND YOUR SECRET MESSAGE</button>
+      <button class="welcome_button_send" to-state="home">SEND YOUR SECRET MESSAGE</button>
     </div>
   </div>
   <div class="section_home section" layout="column" layout-align="end center">
-    <button class="home_button home_encrypt" onclick="toSection('.encryption')">
+    <button class="home_button home_encrypt" to-state="encrypt">
       <span>
         ENCRYPT<br>AND SHARE A<br>MESSAGE
       </span>
     </button>
-    <button class="home_button home_decrypt" onclick="toSection('.decryption')">
+    <button class="home_button home_decrypt" to-state="decrypt">
       <span>
         DO YOU HAVE AN EMOJI<br>MESSAGE TO DECRYPT?
       </span>
@@ -120,7 +120,7 @@
 
   <div class="section_share section" layout="column" layout-align="start center">
     <div class="share_message" layout="column" layout-align="start center">
-      <button class="share_message_exit" onclick="toSection('.section_main')">X</button>
+      <button class="share_message_exit" to-state="encrypt">X</button>
       <div layout="column" layout-align="center center">
         <h3>READY TO SHARE THE MESSAGE?</h3>
       </div>
