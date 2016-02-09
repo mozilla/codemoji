@@ -1,6 +1,6 @@
  $(document).ready(function(){
 
-  toSection(".section_welcome")
+  // toSection(".section_welcome")
 
   $("body").css("height",$(window).innerHeight())
   $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
@@ -53,7 +53,7 @@
 
 function toSection(button){
   $(".section").hide()
-  $(button).show()
+  // $(button).show()
 }
 
 //

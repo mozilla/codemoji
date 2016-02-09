@@ -5,9 +5,11 @@
 
   Cryptoloji.states.welcome = {
     enter: function () {
-      console.log('welcome')
+      $(".section_welcome").show()
     },
-    leave: function () {}
+    leave: function () {
+      $(".section_welcome").hide()
+    }
   }
 
 })(window, window.Cryptoloji); 

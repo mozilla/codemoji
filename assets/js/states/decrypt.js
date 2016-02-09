@@ -3,9 +3,11 @@
   
   Cryptoloji.states.decrypt = {
     enter: function () {
-      console.log('decrypt')
+       $(".decryption").show()
     },
-    leave: function () {}
+    leave: function () {
+       $(".decryption").hide()
+    }
   }
 
 })(window, window.Cryptoloji); 

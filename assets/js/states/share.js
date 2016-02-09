@@ -3,9 +3,11 @@
   
   Cryptoloji.states.share = {
     enter: function () {
-      console.log('share')
+       $(".section_share").show()
     },
-    leave: function () {}
+    leave: function () {
+       $(".section_share").hide()
+    }
   }
 
 })(window, window.Cryptoloji); 

@@ -3,9 +3,11 @@
   
   Cryptoloji.states.home = {
     enter: function () {
-      console.log('home')
+      $(".section_home").show()
     },
-    leave: function () {}
+    leave: function () {
+      $(".section_home").hide()
+    }
   }
 
 })(window, window.Cryptoloji); 

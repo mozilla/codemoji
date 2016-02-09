@@ -3,9 +3,13 @@
   
   Cryptoloji.states.encrypt = {
     enter: function () {
-      console.log('encrypt')
+      console.log('bau')
+      console.log($('.encryption'))
+      $(".encryption").show()
     },
-    leave: function () {}
+    leave: function () {
+       $(".encryption").hide()
+    }
   }
 
 })(window, window.Cryptoloji); 
