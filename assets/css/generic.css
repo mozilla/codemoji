@@ -93,4 +93,6 @@ svg{
   display: flex !important;
 }
 
-
+img.emoji {
+  width: 4rem;
+}
