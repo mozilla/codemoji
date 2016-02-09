@@ -1,0 +1,38 @@
+.header{
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: white;
+}
+
+.header_share{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: none;
+  transform: translate(0,-50%);
+}
+
+
+.header_title{
+  position: relative;
+  padding-left: 2rem;
+  margin: 0;
+  height: 100%;
+  font-size: 100%;
+  color: gray;
+}
+
+.header__label{
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  font-size: 50%;
+  transform: translate(-50%,0);
+  opacity: .6;
+  user-select: none;
+}

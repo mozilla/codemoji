@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/font.css">
   <link rel="stylesheet" type="text/css" href="assets/css/flex.css">
   <link rel="stylesheet" type="text/css" href="assets/css/generic.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/module_header.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_welcome.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_home.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_main.css">
@@ -26,13 +26,19 @@
   </script>
 </head>
 <body>
-  <!-- main section -->
+
+
+  <!-- HEADER -->
   <div class="header">
       <h1 class="header_title" layout="row" layout-align="start center">
         <button to-state="welcome">Cryptoloji</button>
       </h1>
       <button class="header_share" to-state="share">SHARE</button>
   </div>
+  <!-- /HEADER -->
+
+
+  <!-- MODAL_KEYS -->
   <div class="main_key_modal">
     <div class="main_key_modal_1" layout="row" layout-align="start center"></div>
     <div class="main_key_modal_pages" layout="row" layout-align="center center">
@@ -41,7 +47,10 @@
       <div class="main_key_modal_pages_circle"></div>
     </div>
   </div>
+  <!-- /MODAL_KEYS -->
   
+
+  <!-- WELCOME views/welcome -->
   <div class="section_welcome section">
     <div layout="column" layout-align="center center">
         <h2>WELCOME TO CRYPTOLOJI</h2>
@@ -50,20 +59,64 @@
         <button class="welcome_button_send" to-state="home">SEND YOUR SECRET MESSAGE</button>
     </div>
   </div>
+  <!-- /WELCOME -->
 
-  <div class="section_home section" layout="column" layout-align="end center">
-    <button class="home_button home_encrypt" to-state="encrypt">
-      <span>
-        ENCRYPT<br>AND SHARE A<br>MESSAGE
-      </span>
-    </button>
-    <button class="home_button home_decrypt" to-state="decrypt">
-      <span>
-        DO YOU HAVE AN EMOJI<br>MESSAGE TO DECRYPT?
-      </span>
-    </button>
+
+  <!-- HOME views/welcome -->
+  <div class="section_home section">
+    <div class="section_home_wrapper">
+      <div class="home_button home_encrypt" to-state="encrypt" layout="column" layout-align="center center">
+        <span>
+          ENCRYPT<br>AND SHARE A<br>MESSAGE
+        </span>
+      </div>
+      <div class="home_button home_decrypt" to-state="decrypt" layout="column" layout-align="center center">
+        <span>
+          DO YOU HAVE AN EMOJI<br>MESSAGE TO DECRYPT?
+        </span>
+      </div>
+    </div>
   </div>
-  
+  <!-- /HOME -->
+
+
+  <!-- ENCRYPTION views/encryption -->
+  <div class="section_main section encryption" layout="column" layout-align="start center">
+    <div class="section_main_wrapper" layout="column" layout-align="center center">
+
+      <div class="main_content_top">
+        <label class="header__label main_content_top_label">YOUR MESSAGE</label>
+        <textarea class="header__input main_content_top_input"></textarea>
+      </div>
+
+      <div class="main_keyslider">
+        <label class="header__label main_keyslider_bottom_label">CHOOSE A KEY</label>
+        <div class="main_keyslider_cicle"></div>
+        <div class="keyslider">
+          <div class="keyslider_content" layout="row" layout-align="start center">
+            <p class="key_modal">+</p>
+          </div>
+        </div>
+        <div class="main_keyslider_bubble-top" layout="column" layout-align="center center">
+          <p>?</p>
+        </div>
+        <div class="main_keyslider_bubble-bottom" layout="column" layout-align="center center">
+          <p>a</p>
+        </div>
+      </div>
+
+      <div class="main_content_bottom">
+        <label class="header__label main_content_bottom_label">SECRET MESSAGE</label>
+        <div class="header__input main_content_bottom_input" readonly="true"></div>
+        <p></p>
+      </div>
+
+    </div>
+  </div>
+  <!-- /ENCRYPTION -->
+
+
+  <!-- DECRYPTION views/decryption -->
   <div class="section_main section decryption" layout="column" layout-align="start center">
     <div class="main_content">
       <div class="main_content_bottom" flex>
@@ -93,36 +146,10 @@
       </div>
     </div>
   </div>
+  <!-- /DECRYPTION -->
 
-  <div class="section_main section encryption" layout="column" layout-align="start center">
-    <div class="main_content">
-      <div class="main_content_top" flex>
-        <label class="header__label main_content_top_label">YOUR MESSAGE</label>
-        <textarea class="header__input main_content_top_input"></textarea>
-      </div>
-      <div class="main_keyslider">
-        <label class="header__label main_keyslider_bottom_label">CHOOSE A KEY</label>
-        <div class="main_keyslider_cicle"></div>
-        <div class="keyslider">
-          <div class="keyslider_content" layout="row" layout-align="start center">
-            <p class="key_modal">+</p>
-          </div>
-        </div>
-        <div class="main_keyslider_bubble-top" layout="column" layout-align="center center">
-          <p>?</p>
-        </div>
-        <div class="main_keyslider_bubble-bottom" layout="column" layout-align="center center">
-          <p>a</p>
-        </div>
-      </div>
-      <div class="main_content_bottom" flex>
-        <label class="header__label main_content_bottom_label">SECRET MESSAGE</label>
-        <div class="header__input main_content_bottom_input" readonly="true"></div>
-        <p></p>
-      </div>
-    </div>
-  </div>
 
+  <!-- SHARE views/share -->
   <div class="section_share section" layout="column" layout-align="start center">
     <div class="share_message" layout="column" layout-align="start center">
       <button class="share_message_exit" to-state="encrypt">X</button>
@@ -165,6 +192,8 @@
       </a>
     </div>
   </div>
+  <!-- /SHARE -->
+
 
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
      <symbol id="social_fb" viewBox="0 0 316 316" enable-background="new 0 0 316 316">

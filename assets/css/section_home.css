@@ -5,8 +5,15 @@
   color: white;
 }
 
+.section_home_wrapper{
+  width: 100%;
+  height: 100%;
+}
+
 .home_encrypt{ 
+  position: relative;
   height: 70%; 
+  width: 100%;
   background-color: #6D6D6D;
   font-size: 150%;
   letter-spacing: 2px;
@@ -14,7 +21,9 @@
 }
 
 .home_decrypt{ 
+  position: relative;
   height: 30%; 
+  width: 100%;
   background-color: #B2B2B2;
   font-size: 90%;
   letter-spacing: 2px;
@@ -25,15 +34,10 @@
   width: 100%;
   margin: 0;
   border:none;
-  display:inline-block;
   cursor:pointer;
   padding:10px 15px;
   text-decoration:none;
   text-shadow: none;
   color: white;
   outline: none;
-}
-
-.home_button span{
-  max-width: 22rem;
 }
