@@ -13,10 +13,10 @@
   //
   var emoji_list = ['😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂','😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂']
   _.each(emoji_list, function(d){
-    $(".key_modal").before('<p class="key" key="'+d+'">'+twemoji.parse(d)+'</p>')
+    $(".key_modal").before('<p class="key" key="'+d+'">'+Cryptoloji.twemoji(d)+'</p>')
   })
   _.each(emoji_list, function(d){
-    $(".main_key_modal_1").append('<p class="key" key="'+d+'">'+d+'</p>')
+    $(".main_key_modal_1").append('<p class="key" key="'+d+'">'+Cryptoloji.twemoji(d)+'</p>')
   })
   $('.main_content_top_input').bind('input propertychange', function() {
     encryptText()
@@ -24,14 +24,16 @@
   $('.main_content_top_input').on("focus", function(){
     $('.header_share').fadeIn()
   })
-  $('.key').click(function(){
-    var key = $(this).attr('key')
+  $('.key').click(function(e) {
+    e.stopPropagation()
+    var $self = $(event.target).closest('.key')
+    var key = $self.attr('key')
     keySelect(key)
     encryptText()
 
     var elementWidth = $('.encryption .keyslider .key:nth-child(1)').outerWidth(true)
-    var toElem = $('.encryption .keyslider .key').index(this)
-    console.log($('.encryption .keyslider .key').length, emoji_list.length, toElem)
+    var toElem = $('.encryption .keyslider .key').index($self)
+    // console.log($('.encryption .keyslider .key').length, emoji_list.length, toElem)
     keysliderGoto(toElem, elementWidth)
   })
 
@@ -60,15 +62,17 @@ function toSection(button){
 // Encrypt / key select
 //
 function keySelect(key) {
-  Encrypter.key = key
-  console.log('Chosen key', key)
-  $(".share_key_emoji-item").text(key)
+  Cryptoloji.use_key(key)
+  console.debug('Chosen key', key)
+  $(".share_key_emoji-item").html(Cryptoloji.twemoji(key))
 }
 function encryptText() {
-  var text = $('.main_content_top_input').val()
-  text = Encrypter.encrypt(text)
-  text = twemoji.parse(text)
-  $('.main_content_bottom_input').html(text)
+  var text = $('.encryption .main_content_top_input').val()
+  console.debug('Chosen text:', text)
+  text = Cryptoloji.encrypt(text)
+  console.debug('Encrypted text:', text)
+  text = Cryptoloji.twemoji(text)
+  $('.encryption .main_content_bottom_input').html(text)
   $(".share_message_item").html(text)
 }
 
