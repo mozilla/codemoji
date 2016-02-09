@@ -27,12 +27,7 @@
   color: gray;
 }
 
-.header__label{
-  position: absolute;
-  top: 4px;
-  left: 50%;
-  font-size: 50%;
-  transform: translate(-50%,0);
-  opacity: .6;
-  user-select: none;
+.header_home_button{
+    border: none;
+    background-color: transparent;
 }

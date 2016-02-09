@@ -31,7 +31,7 @@
   <!-- HEADER -->
   <div class="header">
       <h1 class="header_title" layout="row" layout-align="start center">
-        <button to-state="welcome">Cryptoloji</button>
+        <button class="header_home_button" to-state="welcome">Cryptoloji</button>
       </h1>
       <button class="header_share" to-state="share">SHARE</button>
   </div>
@@ -40,6 +40,7 @@
 
   <!-- MODAL_KEYS -->
   <div class="main_key_modal">
+    <div id="main_key_modal_close">X</div>
     <div class="main_key_modal_1" layout="row" layout-align="start center"></div>
     <div class="main_key_modal_pages" layout="row" layout-align="center center">
       <div class="main_key_modal_pages_circle"></div>
@@ -86,7 +87,7 @@
 
       <div class="main_content_top">
         <label class="header__label main_content_top_label">YOUR MESSAGE</label>
-        <textarea class="header__input main_content_top_input"></textarea>
+        <textarea class="header__input main_content_top_input" placeholder="Type here your message"></textarea>
       </div>
 
       <div class="main_keyslider">
@@ -121,7 +122,7 @@
     <div class="section_main_wrapper" layout="column" layout-align="center center">
 
       <div class="main_content_top">
-        <label class="header__label main_content_top_label">YOUR MESSAGE</label>
+        <label class="header__label main_content_top_label">SECRET MESSAGE</label>
         <textarea class="header__input main_content_top_input">😹😤😐😖😀😻😕🙍😠😨😘😇😄😂😹😤😐😖😀</textarea>
       </div>
 
@@ -142,7 +143,7 @@
       </div>
 
       <div class="main_content_bottom">
-        <label class="header__label main_content_bottom_label">YOUR MESSAGE</label>
+        <label class="header__label main_content_bottom_label">MESSAGE REVEALED</label>
         <div class="header__input main_content_bottom_input"></div>
         <p></p>
       </div>

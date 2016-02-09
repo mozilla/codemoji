@@ -3,7 +3,7 @@
   // temporaly removed
   // $("body").css("height",$(window).innerHeight())
   // $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
-  // $(".main_key_modal").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
+  $(".main_key_modal").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
   // $(".main_content_bottom").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
   // $(".main_content_top_label").css("margin-top", $(".header").height())
 
@@ -50,6 +50,11 @@
       $(".main_key_modal").show()
       $('body').addClass('key-modal-open')
   })
+  // $('#main_key_modal_close').click(function(event){
+  //   event.stopPropagation()
+  //     $(".main_key_modal").hide()
+  //     $('body').removeClass('key-modal-open')
+  // })
 })
 
 //
