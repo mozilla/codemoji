@@ -1,7 +1,6 @@
  $(document).ready(function(){
 
-  // toSection(".section_welcome")
-
+  // temporaly removed
   // $("body").css("height",$(window).innerHeight())
   // $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
   // $(".main_key_modal").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
@@ -52,11 +51,6 @@
       $('body').addClass('key-modal-open')
   })
 })
-
-function toSection(button){
-  $(".section").hide()
-  // $(button).show()
-}
 
 //
 // Encrypt / key select
