@@ -29,8 +29,9 @@
     keySelect(key)
     encryptText()
 
-    var elementWidth = $('.key:nth-child(1)', $wrapper).outerWidth(true)
-    var toElem = $('.key').index(this)
+    var elementWidth = $('.encryption .keyslider .key:nth-child(1)').outerWidth(true)
+    var toElem = $('.encryption .keyslider .key').index(this)
+    console.log($('.encryption .keyslider .key').length, emoji_list.length, toElem)
     keysliderGoto(toElem, elementWidth)
   })
 
@@ -76,18 +77,17 @@ function encryptText() {
 //
 function keysliderGoto(toElem, elementWidth) {
   // console.log(toElem, elementWidth)
-  $('.keyslider').animate({scrollLeft: toElem*elementWidth}, 200)
-  keySelect($('.keyslider .key:nth-child('+toElem+')').attr('key'))
+  $('.encryption .keyslider').animate({scrollLeft: toElem*elementWidth}, 200)
+  keySelect($('.encryption .keyslider .key:nth-child('+toElem+')').attr('key'))
   encryptText()
 }
 var debouncedKeysliderGoto = _.debounce(keysliderGoto, 200)
 var lastPos = 0
-var $wrapper = $('.keyslider')
 $('.keyslider').scroll(function (event) {
   // debugger;
-  var elementWidth = $('.key:nth-child(1)', $wrapper).outerWidth(true)
+  var elementWidth = $('.encryption .keyslider .key:nth-child(1)').outerWidth(true)
   // console.log('elwidth', elementWidth)
-  var currPos = $wrapper.scrollLeft()
+  var currPos = $('.encryption .keyslider').scrollLeft()
   var direction = (currPos > lastPos) ? 'right' : 'left'
   // console.log('keyslider direction: ' + direction)
   // calculate proper slide to element    
