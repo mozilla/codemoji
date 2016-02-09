@@ -76,7 +76,10 @@ function encryptText() {
 function keysliderGoto(toElem, elementWidth) {
   // console.log(toElem, elementWidth)
   $('.encryption .keyslider').animate({scrollLeft: toElem*elementWidth}, 200)
-  keySelect($('.encryption .keyslider .key:nth-child('+toElem+')').attr('key'))
+  // prevent toElem being 0 and breaking nth-child selector
+  if (toElem == 0) toElem = 1
+  var key = $('.encryption .keyslider .key:nth-child('+toElem+')').attr('key')
+  keySelect(key)
   encryptText()
 }
 var debouncedKeysliderGoto = _.debounce(keysliderGoto, 200)
