@@ -17,8 +17,13 @@
   <link rel="stylesheet" type="text/css" href="assets/css/section_share.css">
   <!-- endbuild -->
 
-  <script type="text/javascript" src="assets/text/text.json"></script>
-  
+  <!-- <script type="text/javascript" src="assets/text/text.json"></script> -->
+  <script type="text/javascript">
+    // Setup global namespace
+    window.Cryptoloji = {
+      states: {}
+    }
+  </script>
 </head>
 <body>
   <!-- main section -->
@@ -163,7 +168,15 @@
   <script type="text/javascript" src="assets/js/emojifier.js"></script>
   <script type="text/javascript" src="assets/js/encrypter.js"></script>
   
+  <script type="text/javascript" src="assets/js/states/decrypt.js"></script>
+  <script type="text/javascript" src="assets/js/states/encrypt.js"></script>
+  <script type="text/javascript" src="assets/js/states/home.js"></script>
+  <script type="text/javascript" src="assets/js/states/share.js"></script>
+  <script type="text/javascript" src="assets/js/states/welcome.js"></script>
+  
   <script type="text/javascript" src="assets/js/script.js"></script>
+  <script type="text/javascript" src="assets/js/routes.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
   <!-- endbuild -->
 
 </body>
