@@ -20,6 +20,7 @@
     "lodash": "~3.10.1",
     "normalize-css": "~3.0.3",
     "jquery": "~2.2.0",
-    "esrever": "~0.2.0"
+    "esrever": "~0.2.0",
+    "stateman": "0.2.0"
   }
 }
