@@ -63,13 +63,13 @@ function toSection(button){
 // Encrypt / key select
 //
 function keySelect(key) {
-  Criptoloji.key = key
+  Encrypter.key = key
   console.log('Chosen key', key)
   $(".share_key_emoji-item").text(key)
 }
 function encryptText() {
   var text = $('.main_content_top_input').val()
-  text = Criptoloji.encrypt(text)
+  text = Encrypter.encrypt(text)
   text = twemoji.parse(text)
   $('.main_content_bottom_input').html(text)
   $(".share_message_item").html(text)

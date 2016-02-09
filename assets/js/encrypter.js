@@ -1,7 +1,7 @@
-(function (w) {
+(function (window, undefined) {
   'use strict'
   
-  var Criptoloji = {
+  var Encrypter = {
     /**
      * Enable uppercase support
      *
@@ -44,7 +44,7 @@
     decrypt: decrypt
 
   }
-  w.Criptoloji = Criptoloji
+  window.Encrypter = Encrypter
 
   var _downcaseCodePointMod = 26
   var _upcaseCodePointMod = 58
@@ -53,9 +53,9 @@
 
 
   function encrypt (text, key) {
-    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Criptoloji.encrypt called without key'
+    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Encrypter.encrypt called without key'
     if (typeof key === 'undefined') key = this.key
-    if (_isEmoji(key) && !this.emojiKey) throw 'ArgumentError: Emoji as key but Criptoloji.emojiKey is false'
+    if (_isEmoji(key) && !this.emojiKey) throw 'ArgumentError: Emoji as key but Encrypter.emojiKey is false'
     // console.log('emoji key', key)
     key = this.emojiKey ? _emoji2key(key) : key
     // console.log('key', key)
@@ -71,9 +71,9 @@
   }
 
   function decrypt (text, key) {
-    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Criptoloji.decrypt called without key'
+    if (typeof key === 'undefined' && !this.key) throw 'ArgumentError: Encrypter.decrypt called without key'
     if (typeof key === 'undefined') key = this.key
-    if (_isEmoji(key) && !this.emojiKey) throw 'ArgumentError: Emoji as key but Criptoloji.emojiKey is false'
+    if (_isEmoji(key) && !this.emojiKey) throw 'ArgumentError: Emoji as key but Encrypter.emojiKey is false'
     // console.log('emoji key', key)
     key = this.emojiKey ? _emoji2key(key) : key
     // console.log('key', key)
