@@ -1,3 +1,5 @@
+var historyApiFallback = require('connect-history-api-fallback')
+
 module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt);
@@ -15,6 +17,7 @@ module.exports = function (grunt) {
         options: {
           server: {
             baseDir: "./",
+            middleware: [ historyApiFallback() ]
           },
           watchTask: false,
           open: false
