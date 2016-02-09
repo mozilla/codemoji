@@ -61,13 +61,20 @@ function keySelect(key) {
   $(".share_key_emoji-item").html(Cryptoloji.twemoji(key))
 }
 function encryptText() {
-  var text = $('.encryption .main_content_top_input').val()
-  console.debug('Chosen text:', text)
-  text = Cryptoloji.encrypt(text)
-  console.debug('Encrypted text:', text)
-  text = Cryptoloji.twemoji(text)
-  $('.encryption .main_content_bottom_input').html(text)
-  $(".share_message_item").html(text)
+  if (Cryptoloji.Encrypter.key) {
+    var text = $('.encryption .main_content_top_input').val()
+    if (text == '') {
+      $('.encryption .main_content_bottom_input').html('')
+      $('.share_message_item').html('')
+    } else {
+      console.debug('Chosen text:', text)
+      text = Cryptoloji.encrypt(text)
+      console.debug('Encrypted text:', text)
+      text = Cryptoloji.twemoji(text)
+      $('.encryption .main_content_bottom_input').html(text)
+      $('.share_message_item').html(text)
+    }
+  }
 }
 
 //
