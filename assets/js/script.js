@@ -1,6 +1,6 @@
  $(document).ready(function(){
 
-  toSection(".section_main")
+  toSection(".section_welcome")
 
   $("body").css("height",$(window).innerHeight())
   $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
@@ -34,16 +34,11 @@
     keysliderGoto(toElem, elementWidth)
   })
 
-
   // modal
   $("body").click(function(event) { 
-    console.log(event)
-    console.log(event.target)
-    console.log(event.target.closest('.main_key_modal'))
     if($('body').hasClass('key-modal-open')  && !$(event.target.closest('.main_key_modal')).is('.main_key_modal')) {
         $(".main_key_modal").hide()
         $('body').removeClass('key-modal-open')
-        console.log(event.target)
     }        
   })
 
@@ -52,6 +47,7 @@
       $(".main_key_modal").show()
       $('body').addClass('key-modal-open')
   })
+  
 })
 
 function toSection(button){

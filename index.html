@@ -48,18 +48,48 @@
     </div>
   </div>
   <div class="section_home section" layout="column" layout-align="end center">
-    <button class="home_button home_encrypt" onclick="toSection('.section_main')">
+    <button class="home_button home_encrypt" onclick="toSection('.encryption')">
       <span>
         ENCRYPT<br>AND SHARE A<br>MESSAGE
       </span>
     </button>
-    <button class="home_button home_decrypt">
+    <button class="home_button home_decrypt" onclick="toSection('.decryption')">
       <span>
         DO YOU HAVE AN EMOJI<br>MESSAGE TO DECRYPT?
       </span>
     </button>
   </div>
-  <div class="section_main section" layout="column" layout-align="start center">
+  <div class="section_main section decryption" layout="column" layout-align="start center">
+    <div class="main_content">
+      <div class="main_content_bottom" flex>
+        <label class="header__label main_content_bottom_label">SECRET MESSAGE</label>
+        <div class="header__input main_content_bottom_input" readonly="true">
+          😹😤😐😖😀😻😕🙍😠😨😘😇😄😂😹😤😐😖😀
+        </div>
+      </div>
+      <div class="main_keyslider">
+        <label class="header__label main_keyslider_bottom_label">CHOOSE A KEY</label>
+        <div class="main_keyslider_cicle"></div>
+        <div class="keyslider">
+          <div class="keyslider_content" layout="row" layout-align="start center">
+            <p class="key_modal">+</p>
+          </div>
+        </div>
+        <div class="main_keyslider_bubble-top" layout="column" layout-align="center center">
+          <p>?</p>
+        </div>
+        <div class="main_keyslider_bubble-bottom" layout="column" layout-align="center center">
+          <p>a</p>
+        </div>
+      </div>  
+      <div class="main_content_top" flex>
+        <label class="header__label main_content_top_label">YOUR MESSAGE</label>
+        <div class="header__input main_content_top_input"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section_main section encryption" layout="column" layout-align="start center">
     <div class="main_content">
       <div class="main_content_top" flex>
         <label class="header__label main_content_top_label">YOUR MESSAGE</label>
@@ -87,6 +117,7 @@
       </div>
     </div>
   </div>
+
   <div class="section_share section" layout="column" layout-align="start center">
     <div class="share_message" layout="column" layout-align="start center">
       <button class="share_message_exit" onclick="toSection('.section_main')">X</button>
