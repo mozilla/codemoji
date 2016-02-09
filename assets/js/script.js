@@ -35,11 +35,12 @@
     keysliderGoto(toElem, elementWidth)
   })
 
+
   // modal
   $("body").click(function(event) { 
     if($('body').hasClass('key-modal-open')  && !$(event.target.closest('.main_key_modal')).is('.main_key_modal')) {
-        $(".main_key_modal").hide()
-        $('body').removeClass('key-modal-open')
+      $(".main_key_modal").hide()
+      $('body').removeClass('key-modal-open')
     }        
   })
 
@@ -48,7 +49,6 @@
       $(".main_key_modal").show()
       $('body').addClass('key-modal-open')
   })
-  
 })
 
 function toSection(button){
