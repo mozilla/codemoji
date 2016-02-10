@@ -23,6 +23,12 @@
     Cryptoloji.UI.fillKeymodal(emoji_list)
 
     //
+    // Input text size counter
+    //
+    var maxInputTextSize = 400
+    Cryptoloji.UI.encryptionInputCounter(maxInputTextSize)
+
+    //
     // Key modal
     //
     $('body').click(function(event) { 

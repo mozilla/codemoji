@@ -53,6 +53,14 @@
       }
     }
   }
+
+  function encryptionInputCounter(textMaxSize) {
+    $('#encryption_input_count').text(textMaxSize)
+    $('#encryption_input').keypress(function (event) {
+      var textSize = $('#encryption_input').val().length
+      $('#encryption_input_count').text(textMaxSize-textSize)
+    })
+  }
   
   function fillEncryptionKeyslider(emojiList) {
     var text = ''
@@ -86,6 +94,7 @@
 
   Cryptoloji.UI = {
     encryptText: encryptText,
+    encryptionInputCounter: encryptionInputCounter,
     fillEncryptionKeyslider: fillEncryptionKeyslider,
     fillDecryptionKeyslider: fillDecryptionKeyslider,
     fillKeymodal: fillKeymodal,
