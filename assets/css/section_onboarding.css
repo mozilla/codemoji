@@ -17,11 +17,16 @@
 
 .onboarding_sentence{
   margin: 4rem 0;
+  min-height: 14rem;
 }
 
 .onboarding_sentence,
 .svg_wrapper_onboarding{
   display: none;
+}
+
+.onboarding_end_button{
+  margin-top: 4rem;
 }
 
 .step-0 .onboarding_sentence_0, .step-0 .svg_wrapper_onboarding_0,

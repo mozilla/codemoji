@@ -5,6 +5,9 @@
 
   Cryptoloji.states.welcome = {
     enter: function () {
+      // fix height
+      $("body").css("height",$(window).innerHeight())
+      
       $(".section_welcome").addClass("section-show")
       $(".header").hide()
     },
