@@ -29,6 +29,9 @@
   margin-top: 4rem;
 }
 
+.onboarding_pages_circle{
+  opacity: .5;
+}
 .step-0 .onboarding_sentence_0, .step-0 .svg_wrapper_onboarding_0,
 .step-1 .onboarding_sentence_1, .step-1 .svg_wrapper_onboarding_1,
 .step-2 .onboarding_sentence_2, .step-2 .svg_wrapper_onboarding_2,
@@ -38,6 +41,14 @@
   display: block;
 }
 
+.step-0 .onboarding_pages_circle_0,
+.step-1 .onboarding_pages_circle_1,
+.step-2 .onboarding_pages_circle_2,
+.step-3 .onboarding_pages_circle_3,
+.step-4 .onboarding_pages_circle_4,
+.step-5 .onboarding_pages_circle_5{
+  opacity: 1;
+}
 .onboarding_pages{
   position: absolute;
   bottom: 10px;
