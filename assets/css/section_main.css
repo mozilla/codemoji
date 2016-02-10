@@ -80,6 +80,8 @@
   transform: translate(-50%,0);
   color: white;
   cursor: pointer;
+  /* move on top of everything */
+  z-index: 3100;
 }
 
 .main_key_modal_pages_circle{
