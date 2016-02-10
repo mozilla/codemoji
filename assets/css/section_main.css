@@ -159,9 +159,13 @@
 }
 
 
-
 .main_content_top_input{
   background-color: rgba(255,255,255,.1);
+  /* remove default styling */
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
 }
 
 .main_content_bottom_input{
