@@ -15,7 +15,7 @@
     .state('onboarding.watermelon', Cryptoloji.states.onboarding.watermelon)
     .state('onboarding.apple', Cryptoloji.states.onboarding.apple)
 
-  $('[to-state]').on('click', function (event) {
+  $('body').on('click', '[to-state]', function (event) {
     event.preventDefault()
     var goToState = $(event.target).closest('[to-state]').attr('to-state')
     console.info('Change state detected:', goToState)
