@@ -11,9 +11,8 @@
     .state('encrypt', Cryptoloji.states.encrypt)
     .state('decrypt', Cryptoloji.states.decrypt)
     .state('share',   Cryptoloji.states.share)
-    .state('onboarding', Cryptoloji.states.onboarding.root)
     .state('onboarding.watermelon', Cryptoloji.states.onboarding.watermelon)
-    .state('onboarding.apple', Cryptoloji.states.onboarding.apple)
+    .state('loading', Cryptoloji.states.loading)
 
   $('body').on('click', '[to-state]', function (event) {
     event.preventDefault()
