@@ -23,14 +23,12 @@
          if(i < 4){
            $(".section_onboarding").removeClass("step-"+ parseInt(i)).addClass("step-"+ parseInt(i + 1))
            i = i + 1
-         } else {
-          Cryptoloji.stateman.go("home")
          }
       })
     },
     leave: function () {
-      $(".section_onboarding").removeClass("section-show")
       $(".header").show()
+      $(".section_onboarding").removeClass("step-4")
     }
   }
 
