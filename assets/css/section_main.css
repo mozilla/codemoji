@@ -103,7 +103,7 @@
 }
 
 
-.main_keyslider:after{
+/*.main_keyslider:after{
   position: absolute;
   content: "";
   width: 3px;
@@ -126,7 +126,7 @@
   background-color: #E6E6E6;
   z-index: 2500;
 }
-
+*/
 .main_keyslider_bubble-top{
   position: absolute;
   width: 20px;
