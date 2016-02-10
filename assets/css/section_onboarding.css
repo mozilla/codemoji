@@ -1,0 +1,55 @@
+.section_onboarding{
+  z-index: 10;
+  background-color: #E5E5E5;
+  text-align: center;
+  padding: 0 3.5rem;
+}
+
+.svg_wrapper_onboarding{
+  width: 16rem;
+  margin-bottom: 2rem;
+}
+
+.onboarding_sentence p{
+  margin: 0;
+  padding: 0;
+}
+
+.onboarding_sentence{
+  margin: 4rem 0;
+}
+
+.onboarding_sentence,
+.svg_wrapper_onboarding{
+  display: none;
+}
+
+.step-0 .onboarding_sentence_0,
+.step-0 .svg_wrapper_onboarding_0{
+  display: block;
+}
+
+.step-1 .onboarding_sentence_1,
+.step-1 .svg_wrapper_onboarding_1{
+  display: block;
+}
+
+.step-2 .onboarding_sentence_2,
+.step-2 .svg_wrapper_onboarding_2{
+  display: block;
+}
+
+.step-3 .onboarding_sentence_3,
+.step-3 .svg_wrapper_onboarding_3{
+  display: block;
+}
+
+.step-4 .onboarding_sentence_4,
+.step-4 .svg_wrapper_onboarding_4{
+  display: block;
+}
+
+.step-5 .onboarding_sentence_5,
+.step-5 .svg_wrapper_onboarding_5{
+  display: block;
+}

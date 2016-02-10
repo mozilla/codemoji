@@ -94,3 +94,8 @@ img.emoji {
   -ms-user-select: none;
   user-select: none;
 }
+
+[wide]{
+  width: 100%;
+}
+

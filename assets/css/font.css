@@ -1,4 +1,4 @@
-/*
+  /*
 color palette
 
   black
@@ -66,12 +66,11 @@ color palette
     letter-spacing: 1px;
 }
 
-[style_subtitle]{
-    font-weight: 700;
-    font-size: 115%;
-    margin: .2rem 0;
-    padding: 0;
-    letter-spacing: 1px;
+[style-sub]{
+    font-weight: 500;
+    font-size: 140%;
+    letter-spacing: 5px;
+    line-height: 109%;
 }
 
 
