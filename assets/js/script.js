@@ -7,33 +7,31 @@
   // $(".main_content_bottom").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
   // $(".main_content_top_label").css("margin-top", $(".header").height())
 
-  //
-  // Crypt & decrypt
-  //
   var emoji_list = ['😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂','😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂']
+  
+  //
+  // Keyslider filler
+  //
   _.each(emoji_list, function(d){
     $(".key_modal").before('<p class="key" key="'+d+'">'+Cryptoloji.twemoji(d)+'</p>')
   })
+  //
+  // Keymodal filler
+  //
   _.each(emoji_list, function(d){
     $(".main_key_modal_1").append('<p class="key" key="'+d+'">'+Cryptoloji.twemoji(d)+'</p>')
   })
-  $('.main_content_top_input').bind('input propertychange', function() {
-    encryptText()
-  })
-  $('.main_content_top_input').on("focus", function(){
-    $('.header_share').fadeIn()
-  })
-  $('.key').click(function(e) {
-    e.stopPropagation()
-    var $self = $(event.target).closest('.key')
-    var key = $self.attr('key')
-    keySelect(key)
-    encryptText()
 
-    var elementWidth = $('.encryption .keyslider .key:nth-child(1)').outerWidth(true)
-    var toElem = $('.encryption .keyslider .key').index($self)
-    // console.log($('.encryption .keyslider .key').length, emoji_list.length, toElem)
-    keysliderGoto(toElem, elementWidth)
+  //
+  // <encryption> encrypt text
+  //
+  $('.encryption .main_content_top_input').bind('input propertychange', function() {
+    encryptText()
+  })
+
+  // show share button on <encryption> input focis
+  $('.encryption .main_content_top_input').on("focus", function(){
+    $('.header_share').fadeIn()
   })
 
   //
