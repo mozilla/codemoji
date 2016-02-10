@@ -1,71 +1,72 @@
+/*
+color palette
+
+  black
+  #5D5D5D
+
+  gray
+  #B3B3B3
+
+  light gray
+  #E5E5E5
+*/
+
+
 @font-face {
-    font-family: 'neosans';
-    src: url('../assets/font/neosansarabic-light.eot');
-    src: url('../assets/font/neosansarabic-light.woff') format('woff'),
-         url('../assets/font/neosansarabic-light.ttf') format('truetype');
-    font-weight: 100;
+    font-family: 'fira_mono';
+    src: url('../font/firamono-bold-webfont.eot');
+    src: url('../font/firamono-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/firamono-bold-webfont.woff2') format('woff2'),
+         url('../font/firamono-bold-webfont.woff') format('woff'),
+         url('../font/firamono-bold-webfont.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
 }
 @font-face {
-    font-family: 'neosans';
-    src: url('../assets/font/neosansarabic.eot');
-    src: url('../assets/font/neosansarabic.woff') format('woff'),
-         url('../assets/font/neosansarabic.ttf') format('truetype');
+    font-family: 'fira_mono';
+    src: url('../font/firamono-medium-webfont.eot');
+    src: url('../font/firamono-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/firamono-medium-webfont.woff2') format('woff2'),
+         url('../font/firamono-medium-webfont.woff') format('woff'),
+         url('../font/firamono-medium-webfont.ttf') format('truetype');
     font-weight: 500;
+    font-style: normal;
 }
 @font-face {
-    font-family: 'neosans';
-    src: url('../assets/font/neosans-medium-webfont.eot');
-    src: url('../assets/font/neosans-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../assets/font/neosans-medium-webfont.woff2') format('woff2'),
-         url('../assets/font/neosans-medium-webfont.woff') format('woff'),
-         url('../assets/font/neosans-medium-webfont.ttf') format('truetype');
-    font-weight: 700;
-}
-@font-face {
-    font-family: 'neosans';
-    src: url('../assets/font/neosans-bold-webfont.eot');
-    src: url('../assets/font/neosans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../assets/font/neosans-bold-webfont.woff2') format('woff2'),
-         url('../assets/font/neosans-bold-webfont.woff') format('woff'),
-         url('../assets/font/neosans-bold-webfont.ttf') format('truetype');
-    font-weight: 900;
-}
-@font-face {
-    font-family: 'MJDubai';
-    src: url('../assets/font/MJDubaibold.eot');
-    src: url('../assets/font/MJDubaibold.woff') format('woff'),
-         url('../assets/font/MJDubaibold.ttf') format('truetype');
-    font-weight: 900;
-}
-@font-face {
-    font-family: 'MJDubai';
-    src: url('../assets/font/MJDubaiLight.eot');
-    src: url('../assets/font/MJDubaiLight.woff') format('woff'),
-         url('../assets/font/MJDubaiLight.ttf') format('truetype');
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'MJDubai';
-    src: url('../assets/font/MJDubaiLight.eot');
-    src: url('../assets/font/MJDubaiLight.woff') format('woff'),
-         url('../assets/font/MJDubaiLight.ttf') format('truetype');
-    font-weight: 700;
-}
-[text="title"],
-[text="title lightblue"],
-[text="title blue"],
-[text="title white"]{
-    font-weight: 100;
-    font-size: 250%;
-    margin: 3rem 0 .5rem 0;
-    padding: 0;
-    letter-spacing: 2px;
+    font-family: 'fira_mono';
+    src: url('../font/firamono-regular-webfont.eot');
+    src: url('../font/firamono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/firamono-regular-webfont.woff2') format('woff2'),
+         url('../font/firamono-regular-webfont.woff') format('woff'),
+         url('../font/firamono-regular-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
 }
 
-[text="subtitle"],
-[text="subtitle lightblue"],
-[text="subtitle blue"],
-[text="subtitle white"]{
+/* color */
+
+[gray]{
+  color: #B3B3B3;
+  border-bottom-color: #B3B3B3; 
+}
+
+/* text */
+
+[style-title]{
+    font-weight: 500;
+    font-size: 190%;
+    letter-spacing: 5px;
+    line-height: 109%;
+}
+
+[style-text]{
+    font-weight: 300;
+    font-size: 100%;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+[style_subtitle]{
     font-weight: 700;
     font-size: 115%;
     margin: .2rem 0;
@@ -73,21 +74,19 @@
     letter-spacing: 1px;
 }
 
-[text="small"],
-[text="small lightblue"],
-[text="small blue"],
-[text="small white"]{
+
+[style_medium]{
     font-weight: 100;
-    font-size: 100%;
-    margin: 1rem 0;
+    font-size: 160%;
+    margin: 2rem 0;
     padding: 0;
-    line-height: 26px;
+    line-height: 30px;
+    letter-spacing: 2px;
+
+
 }
 
-[text="medium"],
-[text="medium lightblue"],
-[text="medium blue"],
-[text="medium white"]{
+[style_huge]{
     font-weight: 100;
     font-size: 160%;
     margin: 2rem 0;
@@ -96,37 +95,67 @@
     letter-spacing: 2px;
 }
 
-[text="small-medium"],
-[text="small-medium lightblue"],
-[text="small-medium blue"],
-[text="small-medium white"]{
+/* buttons */
+
+[button-box]{
+  font-weight: 800;
+  padding:10px 15px;
+  background-color: transparent;
+  border:2px solid #5D5D5D;
+  cursor:pointer;
+  color: #5D5D5D;
+  outline: none;
+  display:inline-block;
+  text-shadow: none;
+  text-decoration: none; 
+  font-size: 80%;
+}
+
+[button-box]:active{
+  position:relative;
+  top:1px;
+  text-decoration:none;
+  background-color: #B3B3B3;
+}
+
+[button-line]{
+  font-weight: 800;
+  background-color: transparent;
+  border: none;
+  cursor:pointer;
+  outline: none;
+  display:inline-block;
+  text-shadow: none;
+  text-decoration: none; 
+  font-size: 80%;
+  border-bottom: solid 2px;
+}
+
+[button-line]:active{
+  position:relative;
+  top:1px;
+  text-decoration:none;
+  background-color: #B3B3B3;
+}
+
+
+
+[text="small-medium"]{
     font-weight: 500;
     font-size: 80%;
     margin: 0;
     padding: 0;
 }
 
-[text="title lightblue"],
-[text="subtitle lightblue"],
-[text="small lightblue"],
-[text="medium lightblue"],
-[text="small-medium lightblue"]{
+[text="title lightblue"]{
     color: rgb(71, 188, 217);;
 }
 
-[text="title blue"],
-[text="subtitle blue"],
-[text="small blue"],
-[text="medium blue"],
-[text="small-medium blue"]{
+[text="title blue"]{
     color: #01898B;
 }
 
-[text="title white"],
-[text="subtitle white"],
-[text="small white"],
-[text="medium white"],
-[text="small-medium white"]{
+[text="title white"]{
     color: white;
 }
 
