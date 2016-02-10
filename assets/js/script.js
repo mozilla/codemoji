@@ -36,6 +36,10 @@
     keysliderGoto(toElem, elementWidth)
   })
 
+  //
+  // Keyslider key select handler
+  //
+  $('.encryption .key').on('click', encryptionKeySelect)
 
   // modal
   $("body").click(function(event) { 
@@ -81,40 +85,12 @@ function encryptText() {
     }
   }
 }
-
-//
-// Key Slider
-//
-function keysliderGoto(toElem, elementWidth) {
-  // console.log(toElem, elementWidth)
-  $('.encryption .keyslider').animate({scrollLeft: toElem*elementWidth}, 200)
-  // prevent toElem being 0 and breaking nth-child selector
-  if (toElem == 0) toElem = 1
-  var key = $('.encryption .keyslider .key:nth-child('+toElem+')').attr('key')
+function encryptionKeySelect(event) {
+  $('.encryption .key').removeClass('selected')
+  event.stopPropagation()
+  var $self = $(event.target).closest('.key')
+  var key = $self.attr('key')
+  $self.addClass('selected')
   keySelect(key)
   encryptText()
 }
-var debouncedKeysliderGoto = _.debounce(keysliderGoto, 200)
-var lastPos = 0
-$('.keyslider').scroll(function (event) {
-  // debugger;
-  var elementWidth = $('.encryption .keyslider .key:nth-child(1)').outerWidth(true)
-  // console.log('elwidth', elementWidth)
-  var currPos = $('.encryption .keyslider').scrollLeft()
-  var direction = (currPos > lastPos) ? 'right' : 'left'
-  // console.log('keyslider direction: ' + direction)
-  // calculate proper slide to element    
-  var toElem = (currPos / elementWidth)
-  var rightThreshold = 0.5
-  var leftThreshold = 0.75
-  var decimal = (toElem % 1).toFixed(1)
-  // console.log(toElem, decimal)
-  if (direction === 'right' && decimal > rightThreshold)  
-    toElem += 1
-  if (direction === 'left' && decimal > 0 && decimal < leftThreshold)  
-    toElem -= 1
-  toElem = Math.ceil(toElem)
-  // console.log('keyslider goTo', toElem)
-  debouncedKeysliderGoto(toElem, elementWidth)
-  lastPos = currPos
-});

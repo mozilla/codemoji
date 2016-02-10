@@ -197,8 +197,14 @@
   font-size: 250%;
 }
 
-.keyslider p{
-  margin: 0 2rem; 
+.keyslider .key{
+  margin: 0 0rem; 
+}
+
+.keyslider .key.selected {
+  background-color: #B3B3B3;
+  border-radius: 50rem;
+  border: 0.3rem solid #B3B3B3;
 }
 
 .header__input{
