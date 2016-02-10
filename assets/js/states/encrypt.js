@@ -5,17 +5,18 @@
     enter: function () {
       $(".encryption").addClass("section-show")
 
-      // show share button on <encryption> input focus
-      $('.encryption .main_content_top_input').on('focus', function() {
-        $('.header_share').fadeIn()
-      })
       $('.encryption .main_content_top_input').bind('input propertychange', function() {
         Cryptoloji.UI.encryptText()
+      })
+
+      // show share button at proper time
+      Cryptoloji.stateman.on('encrypt:show-share', function() {
+        $('.header_share').fadeIn()
       })
     },
     leave: function () {
       $(".encryption").removeClass("section-show")
-      $('.header_share').fadeOut()
+      Cryptoloji.stateman.off('encrypt')
     }
   }
 

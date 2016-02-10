@@ -50,6 +50,7 @@
         text = Cryptoloji.twemoji(text)
         $('.encryption .main_content_bottom_input').html(text)
         $('.share_message_item').html(text)
+        Cryptoloji.stateman.emit('encrypt:show-share')
       }
     }
   }
