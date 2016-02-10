@@ -210,7 +210,6 @@
 .keyslider .key.selected {
   background-color: #B3B3B3;
   border-radius: 50rem;
-  border: 0.3rem solid #B3B3B3;
 }
 
 .header__input{
