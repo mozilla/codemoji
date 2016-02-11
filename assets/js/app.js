@@ -30,20 +30,7 @@
     //
     // Key modal
     //
-    $('body').click(function(event) { 
-      if($('body').hasClass('main_key_modal-open') && !$(event.target.closest('.main_key_modal')).is('.main_key_modal')) {
-        $('body').removeClass('main_key_modal-open')
-      }        
-    })
-
-    $('#encryption_key_modal_open').click(function(event){
-      event.stopPropagation()
-      if ($('body').hasClass('main_key_modal-open')) {
-        $('body').removeClass('main_key_modal-open')
-      } else {
-        $('body').addClass('main_key_modal-open')
-      }
-    })
+    Cryptoloji.UI.handleKeymodal()
   })
 
   //

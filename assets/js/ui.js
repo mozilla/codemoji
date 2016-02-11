@@ -89,6 +89,33 @@
     $(".main_key_modal_emoji_container").append(text)
   }
 
+  function handleKeymodal () {
+    $('body').click(function(event) { 
+      if($('body').hasClass('main_key_modal-open') && !$(event.target.closest('.main_key_modal')).is('.main_key_modal')) {
+        $('body').removeClass('main_key_modal-open')
+      }        
+    })
+
+    $('#encryption_key_modal_open').click(function(event) {
+      event.stopPropagation()
+      if ($('body').hasClass('main_key_modal-open')) {
+        $('body').removeClass('main_key_modal-open')
+      } else {
+        $('body').addClass('main_key_modal-open')
+      }
+    })
+
+    $('.main_key_modal_emoji_container').on('click', '.key', function (event) {
+      // remove selected from keyslider
+      $('.keyslider .key').removeClass('selected')
+      var $self = $(event.target).closest('.key')
+      var key = $self.attr('key')
+      $self.addClass('selected')
+      _keySelect(key)
+      encryptText()
+    })
+  }
+
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -99,6 +126,7 @@
     fillEncryptionKeyslider: fillEncryptionKeyslider,
     fillDecryptionKeyslider: fillDecryptionKeyslider,
     fillKeymodal: fillKeymodal,
+    handleKeymodal: handleKeymodal,
   }
   
 })(window, window.Cryptoloji, jQuery); 
