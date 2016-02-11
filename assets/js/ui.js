@@ -102,6 +102,7 @@
         $('body').removeClass('main_key_modal-open')
       } else {
         $('body').addClass('main_key_modal-open')
+        $('.main_key_modal').css("height", $('.main_content_top').height())
       }
     })
 

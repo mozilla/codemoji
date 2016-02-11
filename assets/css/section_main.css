@@ -10,8 +10,6 @@
 
 .main_content_top{
   height: 100%;
-  padding-bottom: 4rem;
-  padding-top: 8rem;
   background-color: #B3B3B3;
   position: relative;
   width: 100%;
@@ -50,6 +48,13 @@
 
 .svg_wrapper_plus{
   width: 4rem;
+  transition: transform .5s;
+}
+
+.main_keyslider_spacer{
+  width: 100%;
+  height: 10px;
+  background-color: transparent;
 }
 
 .main_key_modal{
@@ -61,7 +66,6 @@
   background-color: #414042;
   z-index: 3000;
   transform: translate(0,-100%);
-  transition: transform .5s;
 }
 .main_key_modal-open .main_key_modal {
   transform: translate(0,0%);
@@ -238,11 +242,18 @@
 
 .keyslider .key{
   margin: 0 0rem; 
+  position: relative;
 }
 
-.keyslider .key.selected {
-  background-color: #B3B3B3;
-  border-radius: 50rem;
+.keyslider .key.selected:after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-color: #E6E6E6;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
 
 .header__input{
@@ -256,7 +267,7 @@
   text-align: left;
   overflow-y: scroll;
   font-size: 120%;
-  padding: 1.5rem 2rem 0 4rem;
+  padding: 9.5rem 7rem 4rem 4rem;
 }
 
 .main_content_top_label{
