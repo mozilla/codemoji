@@ -28,7 +28,7 @@
     },
     leave: function () {
       $(".header").show()
-      $(".section_onboarding").removeClass("step-4")
+      $(".section_onboarding").removeClass("step-4").removeClass("section-show")
     }
   }
 
