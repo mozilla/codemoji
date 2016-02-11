@@ -63,7 +63,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  background-color: #414042;
+  background-color: #F2F2F2;
   z-index: 3000;
   transform: translate(0,-100%);
 }
@@ -82,7 +82,7 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding: 4rem 2rem 2rem 2rem;
+  padding: .2rem 1rem;
   font-size: 200%;
   overflow-y: scroll; 
   height: 100%;
@@ -294,12 +294,12 @@
 }
 
 .main_keyslider_plus{
-  width: 7rem;
+  width: 8rem;
   height: 100%;
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(230, 230, 230,1);
+  background-color: #E5E5E5;
   position: absolute;
 }
 
