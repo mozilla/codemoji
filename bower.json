@@ -21,6 +21,7 @@
     "normalize-css": "~3.0.3",
     "jquery": "~2.2.0",
     "esrever": "~0.2.0",
-    "stateman": "0.2.0"
+    "stateman": "0.2.0",
+    "typed.js": "1.1.1"
   }
 }
