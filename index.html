@@ -62,12 +62,13 @@
         <svg class="svg_wrapper svg_wrapper_welcome" viewBox="0 0 800 800" nw="800" nh="800">
           <use xlink:href="#watermelon"/>
         </svg>
-        <h2 style-title>WELCOME TO CRYPTOLOJI</h2>
+        <h2 style-title>Welcome to Cryptoloji</h2>
         <p class="welcome_text" style-text gray>
-          Encrypt any message into a colorful string of emojis (and crack your friends up, whether they crack the code or not)
+          Turn your message into fun emojis, share it, and bring a <img class="emoji" draggable="false" alt="😀" src="http://twemoji.maxcdn.com/svg/1f600.svg"> to your friends' face
         </p>
-        <button button-box class="welcome_button_more" to-state="onboarding.watermelon">TELL ME MORE</button>
-        <button button-line class="welcome_button_send" to-state="home" gray>SEND YOUR SECRET MESSAGE</button>    
+        <button button-box class="welcome_button_more" to-state="onboarding.watermelon">Show me how it works</button>
+        <button button-line class="welcome_button_send" to-state="home" gray>Let me write my secret message</button>    
+        <button button-line class="welcome_button_send" to-state="decrypt" gray>I received a message I want to decrypt</button>    
       </div>
   </div>
   <!-- /WELCOME -->
@@ -92,25 +93,25 @@
           <use xlink:href="#orange"/>
         </svg>
         <div class="onboarding_sentence_0 onboarding_sentence" layout="column" layout-align="center center">
-          <p style-text gray>THIS IS NOT A</p>
-          <p style-sub>WATERMELON</p>
+          <p style-text gray>This is not a</p>
+          <p style-sub>watermelon</p>
         </div>
         <div class="onboarding_sentence_1 onboarding_sentence" layout="column" layout-align="center center">
-          <p style-text gray>ACTUALLY, IT'S A</p>
-          <p style-sub>LETTER</p>
+          <p style-text gray>It's actually a</p>
+          <p style-sub>letter</p>
         </div>
         <div class="onboarding_sentence_2 onboarding_sentence" layout="column" layout-align="center center">
-          <p style-sub gray>THIS IS</p>
-          <p style-sub>🍉RYPTOLOJI</p>
+          <p style-sub gray>This is</p>
+          <p style-sub><img class="emoji" draggable="false" alt="🍉" src="http://twemoji.maxcdn.com/svg/1f349.svg">ryptoloji</p>
         </div>
         <div class="onboarding_sentence_3 onboarding_sentence" layout="column" layout-align="center center">
-          <p style-sub gray>TH💈S 💈S</p>
-          <p style-sub>CRYPTOLOJ💈</p>
+          <p style-sub gray>Th<img class="emoji" draggable="false" alt="💈" src="http://twemoji.maxcdn.com/svg/1f488.svg">s <img class="emoji" draggable="false" alt="💈" src="http://twemoji.maxcdn.com/svg/1f488.svg">s</p>
+          <p style-sub>Cryptoloj<img class="emoji" draggable="false" alt="💈" src="http://twemoji.maxcdn.com/svg/1f488.svg"></p>
         </div>
         <div class="onboarding_sentence_4 onboarding_sentence" layout="column" layout-align="center center">
-          <p style-sub gray>THIS IS</p>
-          <p style-sub>CRYPT🍊L🍊JI</p>
-          <button class="onboarding_end_button" button-line to-state="loading">let's start</button>
+          <p style-sub gray>This is</p>
+          <p style-sub>Crypt<img class="emoji" draggable="false" alt="🍊" src="http://twemoji.maxcdn.com/svg/1f34a.svg">l<img class="emoji" draggable="false" alt="🍊" src="http://twemoji.maxcdn.com/svg/1f34a.svg">ji</p>
+          <button class="onboarding_end_button" button-line to-state="loading">Got it, thanks</button>
         </div>
         <div class="onboarding_pages" layout="row" layout-align="center center">
           <div class="onboarding_pages_circle onboarding_pages_circle_0"></div>
@@ -139,12 +140,12 @@
     <div class="section_home_wrapper">
       <div class="home_button home_encrypt" to-state="encrypt" layout="column" layout-align="center center">
         <span>
-          ENCRYPT<br>AND SHARE A<br>MESSAGE
+          Let me write my secret message
         </span>
       </div>
       <div class="home_button home_decrypt" to-state="home" layout="column" layout-align="center center">
         <span>
-          DO YOU HAVE AN EMOJI<br>MESSAGE TO DECRYPT?
+          I received a message I want to decrypt
         </span>
       </div>
     </div>
@@ -158,12 +159,12 @@
 
       <div class="main_content_top">
         <label class="header__label main_content_top_label" style-lable>YOUR MESSAGE</label>
-        <textarea id="encryption_input" class="header__input main_content_top_input" style-input></textarea>
+        <textarea id="encryption_input" class="header__input main_content_top_input" style-input placeholder="Write your message here."></textarea>
         <p id="encryption_input_count" class="encryption_input_count" style-lable></p>
       </div>
 
       <div class="main_keyslider">
-        <label class="header__label main_keyslider_bottom_label" style-lable>CHOOSE A KEY</label>
+        <label class="header__label main_keyslider_bottom_label" style-lable>Pick the key</label>
         <div id="encryption_keyslider" class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
@@ -181,13 +182,13 @@
 
       <div class="main_content_bottom">
         <label class="header__label main_content_bottom_label" style-lable>SECRET MESSAGE</label>
-        <div class="header__input main_content_bottom_input unselectable"></div>
+        <div class="header__input main_content_bottom_input unselectable" placeholder="Your message will be encrypted here.">Your message will be encrypted here.</div>
         <p></p>
       </div>
 
       <div id="encryption_share_button">
         <div class="main_share" to-state="share" layout="column" layout-align="start center">
-          <p class="encryption_share_button">SHARE THIS MESSAGE</p>
+          <p class="encryption_share_button">Your  message is ready to share.</p>
         </div>
       </div>
     </div>
@@ -243,7 +244,7 @@
       <div class="share_key_emoji" layout="row" layout-align="center center">
         <p class="share_key_emoji-item"></p>
       </div>
-      <span class="share_key_sentence">Pst! Remember to share the key with your peer</span>
+      <span class="share_key_sentence">Don't forget to give people your key if you want them to read the message.</span>
     </div>
     <div class="share_social" layout="row" layout-align="space-around center">
       <a href="" class="social">
