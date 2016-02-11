@@ -1,6 +1,5 @@
 .section_main{
   z-index: 8;
-  text-align: center;
   padding: 0;
 }
 
@@ -36,10 +35,8 @@
 
 .header__label{
   position: absolute;
-  top: 8px;
-  left: 50%;
-  font-size: 50%;
-  transform: translate(-50%,0);
+  top: 1rem;
+  left: 2rem;
   opacity: .6;
   user-select: none;
 }
@@ -231,17 +228,23 @@
   margin-top: 50px;
 }
 
-#encryption_share {
+#encryption_share_button {
   display: none;
 }
 
+.encryption_share_button {
+  margin: auto;
+  padding: 0;
+}
+
 .main_share{
+  background-color: #E6E6E6;
+  height: 45px;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;  
-  background-color: #E6E6E6;
 }
 
 .main_keyslider_plus{

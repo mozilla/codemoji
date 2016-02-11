@@ -74,15 +74,11 @@ color palette
 }
 
 
-[style_medium]{
-    font-weight: 100;
-    font-size: 160%;
-    margin: 2rem 0;
-    padding: 0;
-    line-height: 30px;
-    letter-spacing: 2px;
-
-
+[style-lable]{
+    font-weight: 500;
+    font-size: 80%;
+    letter-spacing: 1px;
+    line-height: 109%;
 }
 
 [style_huge]{

@@ -26,7 +26,7 @@
 
       // show share button at proper time
       Cryptoloji.stateman.on('encrypt:show-share', function() {
-        $('#encryption_share').fadeIn()
+        $('#encryption_share_button').fadeIn()
       })
     },
     leave: function () {

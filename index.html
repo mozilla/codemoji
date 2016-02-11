@@ -177,7 +177,7 @@
       <div class="main_content_top">
         <label class="header__label main_content_top_label">YOUR MESSAGE</label>
         <textarea id="encryption_input" class="header__input main_content_top_input"></textarea>
-        <p id="encryption_input_count"></p>
+        <p id="encryption_input_count" style-lable></p>
       </div>
 
       <div class="main_keyslider">
@@ -194,12 +194,14 @@
         </div>
       </div>
       <div class="main_content_bottom">
-        <label class="header__label main_content_bottom_label">SECRET MESSAGE</label>
+        <label class="header__label main_content_bottom_label" style-lable>SECRET MESSAGE</label>
         <div class="header__input main_content_bottom_input unselectable"></div>
         <p></p>
       </div>
-      <div class="main_share" to-state="share">
-        <p id="encryption_share">SHARE THIS MESSAGE</p>
+      <div id="encryption_share_button">
+        <div class="main_share" to-state="share" layout="column" layout-align="start center">
+          <p class="encryption_share_button">SHARE THIS MESSAGE</p>
+        </div>
       </div>
     </div>
   </div>
