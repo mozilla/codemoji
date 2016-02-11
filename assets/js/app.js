@@ -19,7 +19,9 @@
     var emoji_list = [ '😹','😤','😐','😖','😀','😻','😕','🙍','😠', ]
     Cryptoloji.UI.fillEncryptionKeyslider(emoji_list)
     Cryptoloji.UI.fillDecryptionKeyslider(emoji_list)
-    Cryptoloji.UI.fillKeymodal(emoji_list)
+    var keymodalEmojiList = [ '😈', '👹', '👺', '👓', '👔', '👕', '👖', '🐯', '🐆',
+      '🐖', '🐏', '🐫', '🐿', '🐦', '🍉', '🍊', '🍱', '🍲', '🍝', '🍩',  ]
+    Cryptoloji.UI.fillKeymodal(emoji_list.concat(keymodalEmojiList))
 
     //
     // Input text size counter
