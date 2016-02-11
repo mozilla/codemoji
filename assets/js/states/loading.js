@@ -4,6 +4,7 @@
   Cryptoloji.states.loading = {
     enter: function () {
       $(".section_loading").addClass("section-show")
+      Cryptoloji.stateman.emit('header:hide')
 
       setTimeout(function(){
         Cryptoloji.stateman.go('home')
