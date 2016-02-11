@@ -18,7 +18,6 @@
   }
   function _encryptionKeySelect(event) {
     $('.encryption .key').removeClass('selected')
-    event.stopPropagation()
     var $self = $(event.target).closest('.key')
     var key = $self.attr('key')
     $self.addClass('selected')
@@ -27,7 +26,6 @@
   }
   function _decryptionKeySelect(event) {
     $('.decryption .key').removeClass('selected')
-    event.stopPropagation()
     var $self = $(event.target).closest('.key')
     var key = $self.attr('key')
     $self.addClass('selected')
