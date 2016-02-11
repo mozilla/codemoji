@@ -79,6 +79,7 @@ color palette
     font-size: 70%;
     letter-spacing: 1px;
     line-height: 109%;
+    text-transform: uppercase;
 }
 
 [style-input]{

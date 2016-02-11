@@ -190,16 +190,21 @@
   box-shadow: none;
   /* prevent textarea resize behaviour */
   resize: none;
+  margin-top: 9rem;
+  padding: 0 5rem 0 3rem;
+  width: 100%;
 }
 
 .main_content_bottom_input{
   background-color: transparent;
+  margin: 0rem 4rem 4rem 3rem;
+  overflow-y: scroll;
 }
+
 .main_content_bottom_input.placeholdit {
   color: gray;
   opacity: .4;
 }
-
 
 .main_keyslider_cicle{
   position: absolute;
@@ -255,15 +260,12 @@
 .header__input{
   top: 4px;
   font-size: 70%;
-  width: 100%;
   text-align: center;
   border: none;
   height: 9rem;
   color: white;
   text-align: left;
-  overflow-y: scroll;
   font-size: 120%;
-  padding: 9.5rem 7rem 4rem 4rem;
 }
 
 .main_content_top_label{
