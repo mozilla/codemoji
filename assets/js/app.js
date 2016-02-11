@@ -37,7 +37,7 @@
       }        
     })
 
-    $('.key_modal').click(function(event){
+    $('#encryption_key_modal_open').click(function(event){
       event.stopPropagation()
       $('.main_key_modal').show()
       $('body').addClass('key-modal-open')
