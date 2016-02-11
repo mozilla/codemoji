@@ -6,7 +6,7 @@
       $(".section_loading").addClass("section-show")
 
       setTimeout(function(){
-        Cryptoloji.stateman.go('encrypt')
+        Cryptoloji.stateman.go('home')
       }, 1000)
     },
     leave: function () {
