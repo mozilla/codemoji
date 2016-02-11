@@ -43,7 +43,7 @@
   function encryptText() {
     if (Cryptoloji.Encrypter.key) {
       var text = $('.encryption .main_content_top_input').val()
-      if (text !== '') {
+      if (text !== '' && !/^\s+$/.test(text)) {
         console.debug('Chosen text:', text)
         text = Cryptoloji.encrypt(text)
         console.debug('Encrypted text:', text)
