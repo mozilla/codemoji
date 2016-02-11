@@ -57,6 +57,9 @@
   display: none;
   z-index: 3000;
 }
+.main_key_modal-open .main_key_modal {
+  display: block;
+}
 
 .main_key_modal_emoji_wrapper{
   position: relative;

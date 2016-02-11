@@ -31,21 +31,18 @@
     // Key modal
     //
     $('body').click(function(event) { 
-      if($('body').hasClass('key-modal-open') && !$(event.target.closest('.main_key_modal')).is('.main_key_modal')) {
-        $('.main_key_modal').hide()
-        $('body').removeClass('key-modal-open')
+      if($('body').hasClass('main_key_modal-open') && !$(event.target.closest('.main_key_modal')).is('.main_key_modal')) {
+        $('body').removeClass('main_key_modal-open')
       }        
     })
 
     $('#encryption_key_modal_open').click(function(event){
       event.stopPropagation()
-      $('.main_key_modal').show()
-      $('body').addClass('key-modal-open')
-    })
-    $('#main_key_modal_close').click(function(event){
-      event.stopPropagation()
-      $('.main_key_modal').hide()
-      $('body').removeClass('key-modal-open')
+      if ($('body').hasClass('main_key_modal-open')) {
+        $('body').removeClass('main_key_modal-open')
+      } else {
+        $('body').addClass('main_key_modal-open')
+      }
     })
   })
 
