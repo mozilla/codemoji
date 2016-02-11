@@ -205,6 +205,9 @@
   color: gray;
   opacity: .4;
 }
+.main_content_bottom_input.placeholdit:after {
+  content: attr(placeholder);
+}
 
 .main_keyslider_cicle{
   position: absolute;

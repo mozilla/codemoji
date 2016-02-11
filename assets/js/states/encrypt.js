@@ -20,14 +20,14 @@
       })
 
       // show/hide bottom placeholder text
-      $('.main_content_bottom_input').text($('.main_content_bottom_input').attr('placeholder'))
       Cryptoloji.stateman.on('encrypt:hide-output-placeholder', function () {
         $('.main_content_bottom_input').html('').removeClass('placeholdit')
       })
 
       // empty input field
       $('#encryption_input_cleaner').on('click', function () {
-        $('#encryption_input').val('')
+        Cryptoloji.UI.emptyEncryptInput()
+        Cryptoloji.UI.emptyEncryptOutput()
       })
 
       // show input related UI elements

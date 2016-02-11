@@ -37,6 +37,15 @@
   //
   // public methods
   //
+
+  function emptyEncryptInput () {
+    $('#encryption_input').val('')
+  }
+
+  function emptyEncryptOutput () {
+    $('#encryption_output').html('').addClass('placeholdit')
+    $('.share_message_item').html('')
+  }
   
   function encryptText() {
     if (Cryptoloji.Encrypter.key) {
@@ -50,7 +59,8 @@
         $('.encryption .main_content_bottom_input').html(text)
         $('.share_message_item').html(text)
         Cryptoloji.stateman.emit('encrypt:show-share')
-        
+      } else {
+        emptyEncryptOutput()
       }
     }
   }
@@ -139,6 +149,8 @@
   //////////////////////////////////////////////////////////////////////////////
 
   Cryptoloji.UI = {
+    emptyEncryptInput: emptyEncryptInput,
+    emptyEncryptOutput: emptyEncryptOutput,
     encryptText: encryptText,
     encryptionInputCounter: encryptionInputCounter,
     fillEncryptionKeyslider: fillEncryptionKeyslider,
@@ -146,7 +158,7 @@
     fillKeymodal: fillKeymodal,
     handleKeymodal: handleKeymodal,
     handleKeysliderMore: handleKeysliderMore,
-    handleHeader: handleHeader
+    handleHeader: handleHeader,
   }
   
 })(window, window.Cryptoloji, jQuery); 
