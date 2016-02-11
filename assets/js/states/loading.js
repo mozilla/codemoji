@@ -7,8 +7,8 @@
       $(".header").hide()
 
       setTimeout(function(){
-        Cryptoloji.stateman.go('home')
-      }, 5000)
+        Cryptoloji.stateman.go('encrypt')
+      }, 1000)
     },
     leave: function () {
       $(".section_loading").removeClass("section-show")

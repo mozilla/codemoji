@@ -284,6 +284,7 @@
 
 #encryption_share_button {
   display: none;
+  text-align: center;
 }
 
 .encryption_share_button {
