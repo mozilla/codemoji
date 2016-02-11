@@ -6,9 +6,13 @@
 }
 
 .welcome_button_more{
-    margin: 4rem;
+    margin: 2rem;
 }
 
 .svg_wrapper_welcome{
   width: 10rem;
+}
+
+.welcome_button_send{
+  margin: 1rem 0;
 }
