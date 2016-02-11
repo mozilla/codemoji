@@ -16,8 +16,7 @@
     //
     // Key selectors filler
     //
-    var emoji_list = [ '😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇',
-      '😄','😂','😹','😤','😐','😖','😀','😻','😕','🙍','😠','😨','😘','😇','😄','😂']
+    var emoji_list = [ '😹','😤','😐','😖','😀','😻','😕','🙍','😠', ]
     Cryptoloji.UI.fillEncryptionKeyslider(emoji_list)
     Cryptoloji.UI.fillDecryptionKeyslider(emoji_list)
     Cryptoloji.UI.fillKeymodal(emoji_list)
