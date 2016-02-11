@@ -199,6 +199,8 @@
   overflow: auto;
   outline: none;
   box-shadow: none;
+  /* prevent textarea resize behaviour */
+  resize: none;
 }
 
 .main_content_bottom_input{
