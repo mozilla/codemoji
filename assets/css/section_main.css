@@ -54,13 +54,23 @@
   z-index: 3000;
 }
 
-.main_key_modal_1{
+.main_key_modal_emoji_wrapper{
   position: relative;
   width: 100%;
   flex-wrap: wrap;
   padding: 4rem 2rem 2rem 2rem;
   font-size: 200%;
   overflow-y: scroll; 
+  height: 100%;
+}
+.main_key_modal_emoji_container{
+  height: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+} 
+.main_key_modal_emoji_container p{
+  margin: 0;
+  padding: 0;
 }
 
 .main_key_modal_pages{
@@ -87,12 +97,6 @@
   cursor: pointer;
   /* move on top of everything */
   z-index: 3100;
-}
-
-
-.main_key_modal_1 p{
-  margin: 0;
-  padding: 0;
 }
 
 .main_content_top .header__label,

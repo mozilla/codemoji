@@ -83,10 +83,12 @@
 
   function fillKeymodal (emojiList) {
     var text = ''
-    _.each(emojiList, function(elem) {
-      text += _createKeyElement(elem)
+    _.times(20, function () {
+      _.each(emojiList, function(elem) {
+        text += _createKeyElement(elem)
+      })
     })
-    $(".main_key_modal_1").append(text)
+    $(".main_key_modal_emoji_container").append(text)
   }
 
 
