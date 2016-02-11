@@ -45,7 +45,9 @@
   user-select: none;
 }
 
-
+.svg_wrapper_plus{
+  width: 4rem;
+}
 
 .main_key_modal{
   position: fixed;
