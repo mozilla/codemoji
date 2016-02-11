@@ -14,7 +14,6 @@
     },
     leave: function () {
       $(".section_welcome").removeClass("section-show")
-      $(".header").show()
     }
   }
 
