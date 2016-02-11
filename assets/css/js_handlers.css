@@ -9,3 +9,7 @@
 #encryption_input_cleaner {
   display: none;
 }
+
+#encryption_input_count {
+  display: none;
+}

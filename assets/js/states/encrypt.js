@@ -26,11 +26,14 @@
       })
 
       // empty input field
-      $('#encryption_input').on('focus', function () {
-        $('#encryption_input_cleaner').show()
-      })
       $('#encryption_input_cleaner').on('click', function () {
         $('#encryption_input').val('')
+      })
+
+      // show input related UI elements
+      $('#encryption_input').on('focus', function () {
+        $('#encryption_input_cleaner').show()
+        $('#encryption_input_count').show()
       })
     },
     leave: function () {
