@@ -7,9 +7,10 @@
     enter: function () {
       // fix height
       $("body").css("height",$(window).innerHeight())
+
+      Cryptoloji.stateman.emit('header:hide')
       
       $(".section_welcome").addClass("section-show")
-      $(".header").hide()
     },
     leave: function () {
       $(".section_welcome").removeClass("section-show")

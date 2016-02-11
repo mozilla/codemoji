@@ -127,6 +127,15 @@
     })
   }
 
+  function handleHeader () {
+    Cryptoloji.stateman.on('header:show', function () {
+      $("#header").show()
+    })
+    Cryptoloji.stateman.on('header:hide', function () {
+      $("#header").hide()
+    })
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
   Cryptoloji.UI = {
@@ -137,6 +146,7 @@
     fillKeymodal: fillKeymodal,
     handleKeymodal: handleKeymodal,
     handleKeysliderMore: handleKeysliderMore,
+    handleHeader: handleHeader
   }
   
 })(window, window.Cryptoloji, jQuery); 

@@ -4,7 +4,6 @@
   Cryptoloji.states.loading = {
     enter: function () {
       $(".section_loading").addClass("section-show")
-      $(".header").hide()
 
       setTimeout(function(){
         Cryptoloji.stateman.go('encrypt')

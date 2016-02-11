@@ -4,6 +4,7 @@
   Cryptoloji.states.encrypt = {
     enter: function () {
       $(".encryption").addClass("section-show")
+      Cryptoloji.stateman.emit('header:show')
 
       // animate input placeholder text
       animateInputPlaceholder()

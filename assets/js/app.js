@@ -34,6 +34,11 @@
     //
     Cryptoloji.UI.handleKeysliderMore()
     Cryptoloji.UI.handleKeymodal()
+
+    //
+    // handle header show/hide
+    //
+    Cryptoloji.UI.handleHeader()
   })
 
   //
