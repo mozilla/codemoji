@@ -88,13 +88,11 @@ color palette
     line-height: 109%;
 }
 
-[style_huge]{
-    font-weight: 100;
-    font-size: 160%;
-    margin: 2rem 0;
-    padding: 0;
-    line-height: 30px;
-    letter-spacing: 2px;
+[style-huge]{
+    font-weight: 500;
+    font-size: 400%;
+    letter-spacing: 5px;
+    line-height: 109%;
 }
 
 /* buttons */
