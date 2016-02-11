@@ -39,14 +39,14 @@
     // handle header show/hide
     //
     Cryptoloji.UI.handleHeader()
-  })
 
-  //
-  // StateMan bootstrap
-  //
-  Cryptoloji.stateman.start()
-  // go to welcome if no state is active
-  if (Cryptoloji.stateman.current.name === '')
-    Cryptoloji.stateman.go('welcome')
+    //
+    // StateMan bootstrap
+    //
+    Cryptoloji.stateman.start()
+    // go to welcome if no state is active
+    if (Cryptoloji.stateman.current.name === '')
+      Cryptoloji.stateman.go('welcome')
+  })
 
 })(window, window.Cryptoloji, jQuery); 
