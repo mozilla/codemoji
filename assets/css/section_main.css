@@ -28,7 +28,7 @@
 
 .main_keyslider{
   width: 100%;
-  height: 28rem;
+  min-height: 10rem;
   background-color: #E6E6E6;
   position: relative;
   opacity: 1;
@@ -243,4 +243,29 @@
   width: 100%;  
   background-color: #E6E6E6;
 }
+
+.main_keyslider_plus{
+  width: 7rem;
+  height: 10rem;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(230, 230, 230,.9);
+  position: absolute;
+}
+
+.main_keyslider_plus_circle{
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 50%;
+  margin: auto;
+}
+
+
+.main_keyslider_plus_wrp{
+  width: 100%;
+  height: 100%;
+}
+
 

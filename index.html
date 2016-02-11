@@ -33,7 +33,7 @@
   <!-- HEADER -->
   <div class="header">
       <h1 class="header_title" layout="row" layout-align="start center">
-        <button class="header_home_button" to-state="welcome">Cryptoloji</button>
+        <button class="header_home_button" to-state="welcome" style-text>Cryptoloji</button>
       </h1>
       <!-- <button class="header_share" to-state="share">SHARE</button> -->
   </div>
@@ -187,16 +187,17 @@
             <p id="encryption_key_modal_open" class="key_modal">+</p>
           </div>
         </div>
-<!--         <div class="main_keyslider_bubble-top" layout="column" layout-align="center center"><p>?</p></div>
-        <div class="main_keyslider_bubble-bottom" layout="column" layout-align="center center"><p>a</p></div> -->
+        <div class="main_keyslider_plus" >
+          <div class="main_keyslider_plus_wrp" layout="column" layout-align="start center">
+            <p class="main_keyslider_plus_circle">+</p>
+          </div>
+        </div>
       </div>
-
       <div class="main_content_bottom">
         <label class="header__label main_content_bottom_label">SECRET MESSAGE</label>
         <div class="header__input main_content_bottom_input unselectable"></div>
         <p></p>
       </div>
-
       <div class="main_share" to-state="share">
         <p id="encryption_share">SHARE THIS MESSAGE</p>
       </div>
