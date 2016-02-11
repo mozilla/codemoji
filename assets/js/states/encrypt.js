@@ -8,6 +8,7 @@
       // animate input placeholder text
       animateInputPlaceholder()
 
+      // encrypt text on input
       $('.encryption .main_content_top_input').bind('input propertychange', function() {
         Cryptoloji.UI.encryptText()
       })
@@ -15,6 +16,12 @@
       // show share button at proper time
       Cryptoloji.stateman.on('encrypt:show-share', function() {
         $('#encryption_share_button').fadeIn()
+      })
+
+      // show/hide bottom placeholder text
+      $('.main_content_bottom_input').text($('.main_content_bottom_input').attr('placeholder'))
+      Cryptoloji.stateman.on('encrypt:hide-output-placeholder', function () {
+        $('.main_content_bottom_input').html('').removeClass('placeholdit')
       })
     },
     leave: function () {

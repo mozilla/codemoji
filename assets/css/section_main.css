@@ -204,6 +204,11 @@
 .main_content_bottom_input{
   background-color: transparent;
 }
+.main_content_bottom_input.placeholdit {
+  color: gray;
+  opacity: .4;
+}
+
 
 .main_keyslider_cicle{
   position: absolute;

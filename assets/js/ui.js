@@ -42,6 +42,7 @@
     if (Cryptoloji.Encrypter.key) {
       var text = $('.encryption .main_content_top_input').val()
       if (text !== '' && !/^\s+$/.test(text)) {
+        Cryptoloji.stateman.emit('encrypt:hide-output-placeholder')
         console.debug('Chosen text:', text)
         text = Cryptoloji.encrypt(text)
         console.debug('Encrypted text:', text)
@@ -49,6 +50,7 @@
         $('.encryption .main_content_bottom_input').html(text)
         $('.share_message_item').html(text)
         Cryptoloji.stateman.emit('encrypt:show-share')
+        
       }
     }
   }
