@@ -81,6 +81,13 @@ color palette
     line-height: 109%;
 }
 
+[style-input]{
+    font-weight: 300;
+    font-size: 80%;
+    letter-spacing: 1px;
+    line-height: 109%;
+}
+
 [style_huge]{
     font-weight: 100;
     font-size: 160%;

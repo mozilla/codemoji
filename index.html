@@ -175,13 +175,13 @@
     <div class="section_main_wrapper" layout="column" layout-align="center center">
 
       <div class="main_content_top">
-        <label class="header__label main_content_top_label">YOUR MESSAGE</label>
-        <textarea id="encryption_input" class="header__input main_content_top_input"></textarea>
-        <p id="encryption_input_count" style-lable></p>
+        <label class="header__label main_content_top_label" style-lable>YOUR MESSAGE</label>
+        <textarea id="encryption_input" class="header__input main_content_top_input" style-input></textarea>
+        <p id="encryption_input_count" class="encryption_input_count" style-lable></p>
       </div>
 
       <div class="main_keyslider">
-        <label class="header__label main_keyslider_bottom_label">CHOOSE A KEY</label>
+        <label class="header__label main_keyslider_bottom_label" style-lable>CHOOSE A KEY</label>
         <div id="encryption_keyslider" class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <p id="encryption_key_modal_open" class="key_modal">+</p>
@@ -193,11 +193,13 @@
           </div>
         </div>
       </div>
+
       <div class="main_content_bottom">
         <label class="header__label main_content_bottom_label" style-lable>SECRET MESSAGE</label>
         <div class="header__input main_content_bottom_input unselectable"></div>
         <p></p>
       </div>
+
       <div id="encryption_share_button">
         <div class="main_share" to-state="share" layout="column" layout-align="start center">
           <p class="encryption_share_button">SHARE THIS MESSAGE</p>
