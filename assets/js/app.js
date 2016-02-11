@@ -16,12 +16,12 @@
     //
     // Key selectors filler
     //
-    var emoji_list = [ '😹','😤','😐','😖','😀','😻','😕','🙍','😠', ]
-    Cryptoloji.UI.fillEncryptionKeyslider(emoji_list)
-    Cryptoloji.UI.fillDecryptionKeyslider(emoji_list)
+    var keysliderEmojiList = [ '😹','😤','😐','😖','😀','😻','😕','🙍','😠', '☺' ]
+    Cryptoloji.UI.fillEncryptionKeyslider(keysliderEmojiList)
+    Cryptoloji.UI.fillDecryptionKeyslider(keysliderEmojiList)
     var keymodalEmojiList = [ '😈', '👹', '👺', '👓', '👔', '👕', '👖', '🐯', '🐆',
       '🐖', '🐏', '🐫', '🐿', '🐦', '🍉', '🍊', '🍱', '🍲', '🍝', '🍩',  ]
-    Cryptoloji.UI.fillKeymodal(emoji_list.concat(keymodalEmojiList))
+    Cryptoloji.UI.fillKeymodal(keysliderEmojiList.concat(keymodalEmojiList))
 
     //
     // Input text size counter
