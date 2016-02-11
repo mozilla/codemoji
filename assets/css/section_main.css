@@ -27,10 +27,14 @@
 
 .main_keyslider{
   width: 100%;
-  min-height: 10rem;
-  background-color: #E6E6E6;
+  min-height: 11rem;
+  background-color: white;
   position: relative;
   opacity: 1;
+}
+
+.main_keyslider .header__label{
+  top: 1rem;
 }
 
 .header__label{
@@ -203,6 +207,8 @@
   left: 0;
   height: 100%;
   font-size: 250%;
+  padding-top: 2.6rem;
+  padding-left: 1.4rem;
 }
 
 .keyslider .key{
@@ -253,11 +259,11 @@
 
 .main_keyslider_plus{
   width: 7rem;
-  height: 10rem;
+  height: 100%;
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(230, 230, 230,.9);
+  background-color: rgba(230, 230, 230,1);
   position: absolute;
 }
 
@@ -267,6 +273,7 @@
   background-color: white;
   border-radius: 50%;
   margin: auto;
+  transform: translate(0, 1rem);
 }
 
 
