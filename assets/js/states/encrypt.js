@@ -1,6 +1,6 @@
 (function (window, Cryptoloji, undefined) {
   'use strict'
-  
+
   Cryptoloji.states.encrypt = {
     enter: function () {
       $(".encryption").addClass("section-show")
@@ -22,6 +22,14 @@
       $('.main_content_bottom_input').text($('.main_content_bottom_input').attr('placeholder'))
       Cryptoloji.stateman.on('encrypt:hide-output-placeholder', function () {
         $('.main_content_bottom_input').html('').removeClass('placeholdit')
+      })
+
+      // empty input field
+      $('#encryption_input').on('focus', function () {
+        $('#encryption_input_cleaner').show()
+      })
+      $('#encryption_input_cleaner').on('click', function () {
+        $('#encryption_input').val('')
       })
     },
     leave: function () {
