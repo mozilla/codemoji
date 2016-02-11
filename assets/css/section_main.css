@@ -231,3 +231,6 @@
   margin-top: 50px;
 }
 
+#encryption_share {
+  display: none;
+}
