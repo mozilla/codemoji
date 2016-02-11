@@ -119,7 +119,13 @@
     })
   }
 
-
+  function handleKeysliderMore () {
+    $('.keyslider').on("scroll", function(){
+      if (!$('body').hasClass("main_keyslider_plus-show")){
+        $('body').addClass("main_keyslider_plus-show")
+      }
+    })
+  }
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -130,6 +136,7 @@
     fillDecryptionKeyslider: fillDecryptionKeyslider,
     fillKeymodal: fillKeymodal,
     handleKeymodal: handleKeymodal,
+    handleKeysliderMore: handleKeysliderMore,
   }
   
 })(window, window.Cryptoloji, jQuery); 

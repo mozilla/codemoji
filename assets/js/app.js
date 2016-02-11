@@ -30,6 +30,7 @@
     //
     // Key modal
     //
+    Cryptoloji.UI.handleKeysliderMore()
     Cryptoloji.UI.handleKeymodal()
   })
 

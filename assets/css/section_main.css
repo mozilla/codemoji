@@ -308,6 +308,12 @@
   bottom: 0;
   background-color: #E5E5E5;
   position: absolute;
+  transform: translate(100%,0);
+  transition: transform .5s;
+}
+
+.main_keyslider_plus-show .main_keyslider_plus{
+  transform: translate(0%,0);
 }
 
 .main_keyslider_plus_circle{
