@@ -42,7 +42,10 @@
   top: 1.7rem;
   left: 2rem;
   opacity: .6;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .svg_wrapper_plus{
@@ -66,7 +69,9 @@
 .main_key_modal_emoji_wrapper{
   position: relative;
   width: 100%;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   padding: 4rem 2rem 2rem 2rem;
   font-size: 200%;
   overflow-y: scroll; 
@@ -87,7 +92,8 @@
   position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translate(-50%,0);
+  -webkit-transform: translate(-50%,0);
+          transform: translate(-50%,0);
 }
 
 .main_key_modal_pages_circle{
@@ -102,7 +108,8 @@
   position: absolute;
   top: 15px;
   left: 50%;
-  transform: translate(-50%,0);
+  -webkit-transform: translate(-50%,0);
+          transform: translate(-50%,0);
   color: white;
   cursor: pointer;
   /* move on top of everything */
@@ -145,7 +152,8 @@
   height: 20px;
   left: 3rem;
   bottom: -20px;
-  transform: translate(-50%,100%);
+  -webkit-transform: translate(-50%,100%);
+          transform: translate(-50%,100%);
   background-color: #E6E6E6;
   border-radius: 50%;
   z-index: 2500;
@@ -157,7 +165,8 @@
   height: 20px;
   left: 3rem;
   top: -20px;
-  transform: translate(-50%,-100%);
+  -webkit-transform: translate(-50%,-100%);
+          transform: translate(-50%,-100%);
   background-color: #E6E6E6;
   border-radius: 50%;
   z-index: 2500;
@@ -190,8 +199,12 @@
   position: absolute;
   top: 50%;
   left: 10px;
-  transform: translate(0,-50%);
-  user-select: none;
+  -webkit-transform: translate(0,-50%);
+          transform: translate(0,-50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background-color: gray;
   width: 80px;
   height: 80px;
