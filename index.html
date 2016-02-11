@@ -17,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/section_share.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_onboarding.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_loading.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/js_handlers.css">
   <!-- endbuild -->
 
   <!-- <script type="text/javascript" src="assets/text/text.json"></script> -->
@@ -161,7 +162,7 @@
         <label class="header__label main_content_top_label" style-lable>YOUR MESSAGE</label>
         <textarea id="encryption_input" class="header__input main_content_top_input" style-input placeholder="Write your message here."></textarea>
         <p id="encryption_input_count" class="encryption_input_count" style-lable></p>
-        <svg class="svg_wrapper svg_wrapper_x" viewBox="0 0 800 800" nw="800" nh="800">
+        <svg id="encryption_input_cleaner" class="svg_wrapper svg_wrapper_x" viewBox="0 0 800 800" nw="800" nh="800">
           <use xlink:href="#x"/>
         </svg>
       </div>
@@ -185,7 +186,7 @@
 
       <div class="main_content_bottom">
         <label class="header__label main_content_bottom_label" style-lable>SECRET MESSAGE</label>
-        <div class="header__input main_content_bottom_input unselectable placeholdit" placeholder="Your message will be encrypted here."></div>
+        <div id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" placeholder="Your message will be encrypted here."></div>
         <p></p>
       </div>
 

@@ -115,18 +115,6 @@
   margin: 0 3px;
 }
 
-#main_key_modal_close{
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  -webkit-transform: translate(-50%,0);
-          transform: translate(-50%,0);
-  color: white;
-  cursor: pointer;
-  /* move on top of everything */
-  z-index: 3100;
-}
-
 .main_content_top .header__label,
 .main_content_bottom .header__label{
   color: white;
@@ -282,14 +270,10 @@
   margin-top: 45px;
 }
 
-#encryption_share_button {
-  display: none;
-  text-align: center;
-}
-
 .encryption_share_button {
   margin: auto;
   padding: 0;
+  text-align: center;
 }
 
 .main_share{
