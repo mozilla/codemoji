@@ -326,3 +326,50 @@
   padding: 0;
   color: #E6E6E6;
 }
+
+/*******************************************************************************
+ * multiple repetition for cross-browser placeholder styling.
+ * IT IS ANNOYING, but please remember to update ALL styles.
+ ******************************************************************************/
+/* all browser with support for ::placeholder */
+.main_content_top_input::placeholder {
+  color: gray;
+  opacity: .4;
+  transition: 1s;
+}
+.main_content_top_input-first .main_content_top_input::placeholder {
+  color: white;
+  opacity: 1;
+}
+/* chrome */
+.main_content_top_input::-webkit-input-placeholder {
+  color: gray;
+  opacity: .4;
+  transition: 1s;
+}
+.main_content_top_input-first .main_content_top_input::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+/* FF */
+.main_content_top_input::-moz-placeholder {
+  color: gray;
+  opacity: .4;
+  transition: 1s;
+}
+.main_content_top_input-first .main_content_top_input::-moz-placeholder {
+  color: white;
+  opacity: 1;
+}
+/* IE */
+.main_content_top_input:-ms-input-placeholder {
+  color: gray;
+  opacity: .4;
+  transition: 1s;
+}
+.main_content_top_input-first .main_content_top_input:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+/******************************************************************************/
