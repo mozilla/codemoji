@@ -57,7 +57,7 @@
 
   function encryptionInputCounter(textMaxSize) {
     $('#encryption_input_count').text(textMaxSize)
-    $('#encryption_input').keypress(function (event) {
+    $('#encryption_input').on('input propertychange', function (event) {
       var textSize = $('#encryption_input').val().length
       $('#encryption_input_count').text(textMaxSize-textSize)
     })
