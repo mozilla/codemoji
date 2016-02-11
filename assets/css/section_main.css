@@ -66,6 +66,7 @@
   font-size: 200%;
   overflow-y: scroll; 
   height: 100%;
+  -webkit-overflow: touch;
 }
 .main_key_modal_emoji_container{
   height: 100%;
