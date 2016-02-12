@@ -88,7 +88,7 @@
     _.each(emojiList, function(elem) {
       text += _createKeyElement(elem)
     })
-    $('.section_main.encryptiony .keyslider_content').append(text)
+    $('.section_main.encryption .keyslider_content').append(text)
     $('#encryption_keyslider').on('click', '.key', _encryptionKeySelect)
   }
 
