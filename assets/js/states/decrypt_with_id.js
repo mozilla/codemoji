@@ -6,7 +6,7 @@
   // last selected key was wrong?
   var wrongKey = false
 
-  Cryptoloji.states.decrypt = {
+  Cryptoloji.states.decrypt_with_id = {
     enter: function (options) {
       Cryptoloji.stateman.emit('header:show')
       $(".decryption").addClass("section-show")

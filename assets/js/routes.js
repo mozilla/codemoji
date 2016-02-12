@@ -10,6 +10,7 @@
     .state('home',    Cryptoloji.states.home)
     .state('encrypt', Cryptoloji.states.encrypt)
     .state('decrypt', Cryptoloji.states.decrypt)
+    .state('decrypt/:id', Cryptoloji.states.decrypt_with_id)
     .state('share',   Cryptoloji.states.share)
     .state('onboarding.watermelon', Cryptoloji.states.onboarding.watermelon)
     .state('loading', Cryptoloji.states.loading)
