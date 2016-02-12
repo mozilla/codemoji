@@ -15,9 +15,13 @@
       
       $(".decryption").addClass("section-show")
 
-      // will be retrieved from promise via param.id
-      Cryptoloji.UI.showDecryptableText('😱😥😦😰 😦😰 😸 😪😢😰😰😸😤😢')
-      correctKey = '😻'
+
+      Cryptoloji.Api.getMessage(options.param.id)
+        .then(function (result) {
+          Cryptoloji.UI.showDecryptableText(result.message)
+          correctKey = result.key
+        })  
+        .catch(function () { alert('cannot retrieve from server') })   
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
         if (key !== correctKey) {
