@@ -98,7 +98,7 @@
       var $self = $(event.target).closest('.key')
       var key = $self.attr('key')
       $self.addClass('selected')
-      _keySelect(key)
+      selectKey(key)
       if (Cryptoloji.stateman.current && Cryptoloji.stateman.current.name === 'encrypt') {
         encryptText()
       } else {
