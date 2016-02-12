@@ -18,27 +18,23 @@
       // will be retrieved from promise via param.id
       Cryptoloji.UI.showDecryptableText('😱😥😦😰 😦😰 😸 😪😢😰😰😸😤😢')
       correctKey = '😻'
-      
-      // show reply button at proper time
-      Cryptoloji.stateman.on('decrypt:show-reply', function() {
-        if (!wrongKey)
-          $('#decryption_reply_button').fadeIn()
-      })
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
-        Cryptoloji.UI.selectKey(key)
-        Cryptoloji.UI.decryptText()
-      })
-
-      // notify wrong key
-      Cryptoloji.stateman.on('decrypt:key-chosen', function (key) {
         if (key !== correctKey) {
           wrongKey = true
           Cryptoloji.stateman.emit('decrypt:wrong-key')
         } else {
           wrongKey = false
           Cryptoloji.stateman.emit('decrypt:right-key')
+          Cryptoloji.UI.selectKey(key)
+          Cryptoloji.UI.decryptText()
         }
+      })
+
+      // show reply button at proper time
+      Cryptoloji.stateman.on('decrypt:show-reply', function() {
+        if (!wrongKey)
+          $('#decryption_reply_button').fadeIn()
       })
 
       // wrong key handler
