@@ -18,12 +18,15 @@
 .encryption .main_content_top,
 .decryption .main_content_bottom{
   background-color: #B3B3B3;
-  padding-top: 4rem;
 }
 
 .decryption .main_content_top,
 .encryption .main_content_bottom{
-  background-color: #4D4D4D; 
+  background-color: #4D4D4D;
+}
+
+.main_content_bottom{
+  padding-top: 4rem;
 }
 
 .main_keyslider{
