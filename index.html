@@ -1046,9 +1046,9 @@
           <use xlink:href="#x"/>
         </svg>
       </div>
-      <div class="main_keyslider">
+      <div id="encryption_keyslider" class="main_keyslider">
         <label class="header__label main_keyslider_bottom_label" style-lable>Pick a key</label>
-        <div id="encryption_keyslider" class="keyslider">
+        <div class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
           </div>
@@ -1086,9 +1086,9 @@
           <!-- js injected -->
         </div>
       </div>
-      <div class="main_keyslider">
+      <div id="decryption_keyslider" class="main_keyslider">
         <label class="header__label main_keyslider_bottom_label" style-lable>SECRET MESSAGE</label>
-        <div id="decryption_keyslider" class="keyslider">
+        <div class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
           </div>
@@ -1413,7 +1413,9 @@
   <script type="text/javascript" src="assets/js/states/welcome.js"></script>
   <script type="text/javascript" src="assets/js/states/loading.js"></script>
   
+  
   <script type="text/javascript" src="assets/js/ui.js"></script>
+  <script type="text/javascript" src="assets/js/ui/keyslider.js"></script>
   <script type="text/javascript" src="assets/js/routes.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
   <!-- endbuild -->

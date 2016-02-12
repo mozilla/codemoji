@@ -14,6 +14,11 @@
         Cryptoloji.UI.encryptText()
       })
 
+      Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
+        Cryptoloji.UI.selectKey(key)
+        Cryptoloji.UI.encryptText()
+      })
+
       // show share button at proper time
       Cryptoloji.stateman.on('encrypt:show-share', function() {
         $('#encryption_share_button').fadeIn()
@@ -39,6 +44,7 @@
     leave: function () {
       $('.encryption').removeClass('section-show')
       Cryptoloji.stateman.off('encrypt')
+      Cryptoloji.stateman.off('keyslider')
     }
   }
 

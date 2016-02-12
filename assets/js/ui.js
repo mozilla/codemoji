@@ -8,31 +8,6 @@
   function _createKeyElement (key) {
     return '<p class="key" key="' + key + '">' + Cryptoloji.twemoji(key) + '</p>'
   }
-  //
-  // Encrypt / key select
-  //
-  function _keySelect(key) {
-    Cryptoloji.use_key(key)
-    console.debug('Chosen key', key)
-    $(".share_key_emoji-item").html(Cryptoloji.twemoji(key))
-  }
-  function _encryptionKeySelect(event) {
-    $('.encryption .key').removeClass('selected')
-    var $self = $(event.target).closest('.key')
-    var key = $self.attr('key')
-    $self.addClass('selected')
-    _keySelect(key)
-    encryptText()
-  }
-  function _decryptionKeySelect(event) {
-    $('.decryption .key').removeClass('selected')
-    var $self = $(event.target).closest('.key')
-    var key = $self.attr('key')
-    $self.addClass('selected')
-    _keySelect(key)
-    Cryptoloji.stateman.emit('decrypt:key-chosen', key)
-    decryptText()
-  }
 
   //////////////////////////////////////////////////////////////////////////////
   //
@@ -81,25 +56,6 @@
       var textSize = $('#encryption_input').val().length
       $('#encryption_input_count').text(textMaxSize-textSize)
     })
-  }
-  
-  function fillEncryptionKeyslider(emojiList) {
-    var text = ''
-    _.each(emojiList, function(elem) {
-      text += _createKeyElement(elem)
-    })
-    $('.section_main.encryption .keyslider_content').append(text)
-    $('#encryption_keyslider').on('click', '.key', _encryptionKeySelect)
-  }
-
-  function fillDecryptionKeyslider(emojiList) {
-    var text = ''
-    _.each(emojiList, function(elem) {
-      text += _createKeyElement(elem)
-    })
-    $('.section_main.decryption .keyslider_content').append(text)
-    // $('#decryption_key_modal_open').before(text)
-    $('#decryption_keyslider').on('click', '.key', _decryptionKeySelect)
   }
 
   function fillKeymodal (emojiList) {
@@ -153,14 +109,6 @@
     })
   }
 
-  function handleKeysliderMore () {
-    $('.keyslider').on("scroll", function(){
-      if (!$('body').hasClass("main_keyslider_plus-show")){
-        $('body').addClass("main_keyslider_plus-show")
-      }
-    })
-  }
-
   function handleHeader () {
     Cryptoloji.stateman.on('header:show', function () {
       $("#header").show()
@@ -168,6 +116,12 @@
     Cryptoloji.stateman.on('header:hide', function () {
       $("#header").hide()
     })
+  }
+
+  function selectKey (key) {
+    Cryptoloji.use_key(key)
+    console.debug('Chosen key', key)
+    $(".share_key_emoji-item").html(Cryptoloji.twemoji(key))
   }
 
   function showDecryptableText (text) {
@@ -252,12 +206,10 @@
     emptyEncryptOutput: emptyEncryptOutput,
     encryptText: encryptText,
     encryptionInputCounter: encryptionInputCounter,
-    fillEncryptionKeyslider: fillEncryptionKeyslider,
-    fillDecryptionKeyslider: fillDecryptionKeyslider,
     fillKeymodal: fillKeymodal,
     handleKeymodal: handleKeymodal,
-    handleKeysliderMore: handleKeysliderMore,
     handleHeader: handleHeader,
+    selectKey: selectKey,
     showDecryptableText: showDecryptableText,
     buildSlider: buildSlider
   }

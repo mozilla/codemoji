@@ -21,6 +21,11 @@
           $('#decryption_reply_button').fadeIn()
       })
 
+      Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
+        Cryptoloji.UI.selectKey(key)
+        Cryptoloji.UI.decryptText()
+      })
+
       // notify wrong key
       Cryptoloji.stateman.on('decrypt:key-chosen', function (key) {
         if (key !== correctKey) {
@@ -49,6 +54,7 @@
       Cryptoloji.stateman.off('decrypt:key-chosen')
       Cryptoloji.stateman.off('decrypt:wrong-key')
       Cryptoloji.stateman.off('decrypt:right-key')
+      Cryptoloji.stateman.off('keyslider')
     }
   }
 
