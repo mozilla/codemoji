@@ -3,8 +3,12 @@
 
   Cryptoloji.states.encrypt = {
     enter: function () {
-      $(".encryption").addClass("section-show")
       Cryptoloji.stateman.emit('header:show')
+
+      Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
+        .fill(_.take(emojiList, 10))
+
+      $(".encryption").addClass("section-show")
 
       // animate input placeholder text
       animateInputPlaceholder()

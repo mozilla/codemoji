@@ -9,6 +9,10 @@
   Cryptoloji.states.decrypt = {
     enter: function (options) {
       Cryptoloji.stateman.emit('header:show')
+
+      Cryptoloji.UI.Keyslider('decrypt', '#decryption_keyslider')
+        .fill(_.take(emojiList, 10))
+      
       $(".decryption").addClass("section-show")
 
       // will be retrieved from promise via param.id

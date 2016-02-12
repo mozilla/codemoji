@@ -18,11 +18,6 @@
     //
     Cryptoloji.UI.fillKeymodal(emojiList)
 
-    Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
-      .fill(_.take(emojiList, 10))
-    Cryptoloji.UI.Keyslider('decrypt', '#decryption_keyslider')
-      .fill(_.take(emojiList, 10))
-
     //
     // Input text size counter
     //
