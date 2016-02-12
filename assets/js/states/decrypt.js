@@ -30,9 +30,9 @@
         } else {
           wrongKey = false
           Cryptoloji.stateman.emit('decrypt:right-key')
-          Cryptoloji.UI.selectKey(key)
-          Cryptoloji.UI.decryptText()
         }
+        Cryptoloji.UI.selectKey(key)
+        Cryptoloji.UI.decryptText()
       })
 
       // show reply button at proper time
