@@ -16,8 +16,6 @@
     //
     // Key selectors filler
     //
-    var emojiList = [ '😹','😤','😐','😖','😀','😻','😕','🙍','😠', '☺', '😈', '👹', '👺', '👓', '👔', '👕', '👖', '🐯', '🐆',
-      '🐖', '🐏', '🐫', '🐿', '🐦', '🍉', '🍊', '🍱', '🍲', '🍝', '🍩' ]
     Cryptoloji.UI.fillKeymodal(emojiList)
 
     Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
