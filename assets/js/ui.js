@@ -175,6 +175,75 @@
                           .attr('text', text)
   }
 
+
+
+
+  function buildSlider(content_selector){
+    var mapval = rebound.MathUtil.mapValueInRange;
+    var springSystem = new rebound.SpringSystem();
+    var spring = springSystem.createSpring(50, 10);
+
+    var el = $(content_selector);
+    var num = el.children().length;
+    var w = $(document).width();
+
+    var mousedown=false;
+    var currentX = 0;
+    var lastX = 0;
+    var currentPos = 0;
+    var currentShift = 0;
+    var step = 0;
+
+    el.on('touchmousedown', function(e) {
+      currentX = e.pageX;
+      mousedown=true;
+    });
+
+    $('body').on('touchmousemove', function(e){
+      if (!mousedown) return;
+
+      var fakt = 1;
+      if(step==0 && e.pageX > currentX){
+        fakt = .29;
+      }
+      if(step==num && e.pageX < currentX){
+        fakt = .29;
+      }
+
+      currentShift = (e.pageX - currentX) * fakt;
+      TweenLite.set(el[0], {x:currentPos+currentShift, y:0})
+      var shiftNorm = mapval(currentPos+currentShift, 0, w*num, 0, 1)
+      spring.setCurrentValue(shiftNorm*-1);
+      lastX = e.pageX;
+    })
+
+    $('body').on('touchmouseup', function(e){
+      if (!mousedown) return;
+      mousedown=false;
+      currentPos += currentShift;
+
+      if(lastX < currentX){
+        step++;
+        if(step > num-1) step=num-1;
+      }else{
+        step--;
+        if(step < 0) step=0;
+      }
+      spring.setEndValue(step/num);
+    })
+
+    spring.addListener({
+      onSpringUpdate: function(spring) {
+        var val = spring.getCurrentValue();
+        val = mapval(val, 0, 1, 0, (w*num*-1));
+        if(!mousedown) {
+          TweenLite.set(el[0], {x:val, y:0})
+          currentPos = val
+        }
+      }
+    });
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
   Cryptoloji.UI = {
@@ -190,6 +259,7 @@
     handleKeysliderMore: handleKeysliderMore,
     handleHeader: handleHeader,
     showDecryptableText: showDecryptableText,
+    buildSlider: buildSlider
   }
   
 })(window, window.Cryptoloji, jQuery); 
