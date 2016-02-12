@@ -34,14 +34,14 @@
   
   function encryptText() {
     if (Cryptoloji.Encrypter.key) {
-      var text = $('.encryption .main_content_top_input').val()
+      var text = $('#encryption_input').val()
       if (text !== '' && !/^\s+$/.test(text)) {
         Cryptoloji.stateman.emit('encrypt:hide-output-placeholder')
         console.debug('Chosen text:', text)
         text = Cryptoloji.encrypt(text)
         console.debug('Encrypted text:', text)
         text = Cryptoloji.twemoji(text)
-        $('.encryption .main_content_bottom_input').html(text)
+        $('#encryption_output').html(text)
         $('.share_message_item').html(text)
         Cryptoloji.stateman.emit('encrypt:show-share')
       } else {
