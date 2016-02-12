@@ -6,199 +6,60 @@
       $(".section_loading").addClass("section-show")
       Cryptoloji.stateman.emit('header:hide')
 
-      stephy();
+      svgTransition()
       setTimeout(function(){
         Cryptoloji.stateman.go('home')
-      }, 5200)
+      }, 8000)
     },
     leave: function () {
       $(".section_loading").removeClass("section-show")
     }
   }
 
-})(window, window.Cryptoloji); 
+  function svgTransition(){
 
+        var callbacks = $.Callbacks()
+        var time_flow = 0
 
-
-
-function stephy(){
-  var svg = d3.select('#ttloading')
-
-  svg.selectAll('#text > g')
-      .attr('opacity', 0)
-
-      console.log(svg.selectAll('#text > g'));
-  svg.selectAll('#cryptoloji > g')
-      .attr('opacity', 0)
-  
-  
-  // appearing title    
-  
-      svg.selectAll('#text > g')
-          .attr('opacity', 0)
-          .transition()
-          .delay(function(d, i){
-          return (5-i)*70
+        function animate(item_class, execution_time, delay_time_next, delay_time_next_extension, value) {
+          time_flow += execution_time * $(item_class).length + delay_time_next_extension
+          $(item_class).each(function(i) {
+            var j=($(item_class).length-1) - i
+            TweenLite.to($(this), execution_time, {delay: execution_time * j + delay_time_next, opacity: value})
           })
-          .attr('opacity', 1)
-      
-      svg.selectAll('#cryptoloji > g')
-          .transition()
-          .delay(function(d, i){
-          return 800 + ((9-i)*70)
-          })
-          .attr('opacity', 1)
-      
-  // appearing emojis
-      
-  // T
-      svg.select('#tT text')
-          .transition()
-          .delay(2500)
-          .attr('fill', '#E5E5E5')
-      svg.select('#gem_1')
-          .transition()
-          .delay(2500)
-          .attr('opacity', 1)
-      svg.select('#tT_1 text')
-          .transition()
-          .delay(2550)
-          .attr('fill', '#E5E5E5')
-      svg.select('#gem_2')
-          .transition()
-          .delay(2550)
-          .attr('opacity', 1)
-  // I
-      svg.select('#tI text')
-          .transition()
-          .delay(2000)
-          .attr('fill', '#E5E5E5')
-      svg.select('#barber_pole_1')
-          .transition()
-          .delay(2000)
-          .attr('opacity', 1)
-      svg.select('#tI_1 text')
-          .transition()
-          .delay(2050)
-          .attr('fill', '#E5E5E5')
-      svg.select('#barber_pole_3')
-          .transition()
-          .delay(2050)
-          .attr('opacity', 1)
-      svg.select('#tI_2 text')
-          .transition()
-          .delay(2000)
-          .attr('fill', '#E5E5E5')
-      svg.select('#barber_pole_2')
-          .transition()
-          .delay(2000)
-          .attr('opacity', 1)
-  // C
-      svg.select('#tC text')
-          .transition()
-          .delay(3400)
-          .attr('fill', '#E5E5E5')
-      svg.select('#s_watermelon')
-          .transition()
-          .delay(3400)
-          .attr('opacity', 1)
-  // R
-      svg.select('#tR text')
-          .transition()
-          .delay(3300)
-          .attr('fill', '#E5E5E5')
-      svg.select('#grape')
-          .transition()
-          .delay(3300)
-          .attr('opacity', 1)
-  // J
-      svg.select('#tJ text')
-          .transition()
-          .delay(3200)
-          .attr('fill', '#E5E5E5')
-      svg.select('#cactus')
-          .transition()
-          .delay(3200)
-          .attr('opacity', 1)
-  // P
-      svg.select('#tP text')
-          .transition()
-          .delay(3100)
-          .attr('fill', '#E5E5E5')
-      svg.select('#donut')
-          .transition()
-          .delay(3100)
-          .attr('opacity', 1)
-  // Y
-      svg.select('#tY text')
-          .transition()
-          .delay(3000)
-          .attr('fill', '#E5E5E5')
-      svg.select('#cocktail')
-          .transition()
-          .delay(3000)
-          .attr('opacity', 1)
-  // H
-      svg.select('#tH text')
-          .transition()
-          .delay(2900)
-          .attr('fill', '#E5E5E5')
-      svg.select('#hen')
-          .transition()
-          .delay(2900)
-          .attr('opacity', 1)
-  // L
-      svg.select('#tL text')
-          .transition()
-          .delay(2800)
-          .attr('fill', '#E5E5E5')
-      svg.select('#target')
-          .transition()
-          .delay(2800)
-          .attr('opacity', 1)
-  // S
-      svg.select('#tS text')
-          .transition()
-          .delay(2700)
-          .attr('fill', '#E5E5E5')
-      svg.select('#tonguee')
-          .transition()
-          .delay(2700)
-          .attr('opacity', 1)
-      svg.select('#tS_1 text')
-          .transition()
-          .delay(2750)
-          .attr('fill', '#E5E5E5')
-      svg.select('#tongue')
-          .transition()
-          .delay(2750)
-          .attr('opacity', 1)
-  // O
-      svg.select('#tO text')
-          .transition()
-          .delay(2300)
-          .attr('fill', '#E5E5E5')
-      svg.select('#tangerine_2')
-          .transition()
-          .delay(2300)
-          .attr('opacity', 1)
-      svg.select('#tO_1 text')
-          .transition()
-          .delay(2350)
-          .attr('fill', '#E5E5E5')
-      svg.select('#tangerine_1')
-          .transition()
-          .delay(2350)
-          .attr('opacity', 1)
-      
-// end of onboarding - fade out
-      
-      svg.selectAll('#emoji> g')
-          .transition()
-          .duration(500)
-          .delay(function(d, i){
-          return 4000 + ((9-i)*70)
-          })
-          .attr('opacity', 0)
-  
-}
+        }
+        
+        callbacks.add(animate)
+        callbacks.fire('.emoji_item', 0,  0, 0, '0')
+        callbacks.fire('.loading_text_black', 0, 0, 0, '0')
+        callbacks.fire('.loading_text_gray', 0, 0, 0, '0')
+        callbacks.fire('.loading_text_gray', .2, time_flow, .6, '1')
+        callbacks.fire('.loading_text_black', .15, time_flow, 0.3, '1')
+        callbacks.fire('.letter_i', .05,  time_flow, 0, '0')
+        callbacks.fire('.emoji_i', .05,  time_flow, 0.05, '1')
+        callbacks.fire('.letter_o', .05,  time_flow, 0, '0')
+        callbacks.fire('.emoji_o', .05,  time_flow, 0.05, '1')
+        callbacks.fire('.letter_t', .05,  time_flow, 0, '0')
+        callbacks.fire('.emoji_t', .05,  time_flow, 0.05, '1')
+        callbacks.fire('.letter_s', .05,  time_flow, 0, '0')
+        callbacks.fire('.emoji_s', .05,  time_flow, 0.05, '1')
+        callbacks.fire('.letter_last', .2, time_flow, -1, '0')
+        callbacks.fire('.emoji_last', .2, time_flow, 0, '1')
+        callbacks.fire('.emoji_item',  .1, time_flow, 0, '0')
+  }
+})(window, window.Cryptoloji) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
