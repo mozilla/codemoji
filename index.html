@@ -61,7 +61,7 @@
 
   <!-- WELCOME views/welcome -->
   <div class="section_welcome section">
-    <div layout="column" layout-align="center center">
+    <div layout="column" layout-align="center center" wide>
         <svg class="svg_wrapper svg_wrapper_welcome" viewBox="0 0 800 800" nw="800" nh="800">
           <use xlink:href="#watermelon"/>
         </svg>
@@ -71,7 +71,7 @@
         </p>
         <button uppercase button-box class="welcome_button_more" to-state="onboarding.watermelon">Show me how it works</button>
         <button uppercase button-line class="welcome_button_send" to-state="encrypt" gray>Send a secret message</button>    
-        <button uppercase button-line class="welcome_button_receive" to-state="welcome" gray>Decrypt a secret message</button>    
+        <button uppercase button-line class="welcome_button_receive" to-state="decrypt" gray>Decrypt a secret message</button>    
       </div>
   </div>
   <!-- /WELCOME -->
@@ -1007,7 +1007,7 @@
           Send a secret message
         </span>
       </div>
-      <div class="home_button home_decrypt" to-state="home" layout="column" layout-align="center center">
+      <div class="home_button home_decrypt" to-state="decrypt" layout="column" layout-align="center center">
         <span>
           Decrypt a secret message
         </span>
@@ -1020,7 +1020,6 @@
   <!-- ENCRYPTION views/encryption -->
   <div class="section_main section encryption" layout="column" layout-align="start center">
     <div class="section_main_wrapper" layout="column" layout-align="center center">
-
       <div class="main_content_top">
         <label class="header__label main_content_top_label" style-lable>YOUR MESSAGE</label>
         <textarea id="encryption_input" class="header__input main_content_top_input" style-input placeholder="Write your message here."></textarea>
@@ -1029,7 +1028,6 @@
           <use xlink:href="#x"/>
         </svg>
       </div>
-
       <div class="main_keyslider">
         <label class="header__label main_keyslider_bottom_label" style-lable>Pick a key</label>
         <div id="encryption_keyslider" class="keyslider">
@@ -1046,13 +1044,11 @@
           </div>
         </div>
       </div>
-
       <div class="main_content_bottom">
         <label class="header__label main_content_bottom_label" style-lable>SECRET MESSAGE</label>
         <div id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" placeholder="Your message will be encrypted here."></div>
         <p></p>
       </div>
-
       <div id="encryption_share_button">
         <div class="main_share" layout="column" layout-align="start center">
           <p class="encryption_share_button">Share this message</p>
@@ -1066,33 +1062,38 @@
   <!-- DECRYPTION views/decryption -->
   <div class="section_main section decryption" layout="column" layout-align="start center">
     <div class="section_main_wrapper" layout="column" layout-align="center center">
-
       <div class="main_content_top">
-        <label class="header__label main_content_top_label">SECRET MESSAGE</label>
-        <textarea class="header__input main_content_top_input">😹😤😐😖😀😻😕🙍😠😨😘😇😄😂😹😤😐😖😀</textarea>
+        <label class="header__label main_content_top_label" style-lable>YOUR MESSAGE</label>
+        <div id="encryption_input" class="header__input main_content_top_input" style-input>
+          😀😬😁😂😃😄😅😆😇😉😊
+        </div>
       </div>
-
       <div class="main_keyslider">
-        <label class="header__label main_keyslider_bottom_label">CHOOSE A KEY</label>
-        <div id="decryption_keyslider" class="keyslider">
-          <div class="keyslider_content" layout="row" layout-align="start center">
-            <p id="decryption_key_modal_open" class="key_modal">+</p>
+        <label class="header__label main_keyslider_bottom_label" style-lable>SECRET MESSAGE</label>
+        <div id="encryption_keyslider" class="keyslider">
+          <div class="keyslider_content unselectable" layout="row" layout-align="start center">
+            <!-- js injected -->
           </div>
         </div>
-        <div class="main_keyslider_bubble-top" layout="column" layout-align="center center">
-          <p>a</p>
-        </div>
-        <div class="main_keyslider_bubble-bottom" layout="column" layout-align="center center">
-          <p>?</p>
+        <div class="main_keyslider_plus" >
+          <div class="main_keyslider_plus_wrp" id="encryption_key_modal_open"  layout="column" layout-align="center center">
+            <div class="main_keyslider_spacer"></div>
+            <svg class="svg_wrapper svg_wrapper_plus" viewBox="0 0 800 800" nw="800" nh="800">
+              <use xlink:href="#plus"/>
+            </svg>
+          </div>
         </div>
       </div>
-
       <div class="main_content_bottom">
-        <label class="header__label main_content_bottom_label">MESSAGE REVEALED</label>
-        <div class="header__input main_content_bottom_input"></div>
+        <label class="header__label main_content_bottom_label" style-lable>MESSAGE REVEALED</label>
+        <div id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" placeholder="Your message will be encrypted here."></div>
         <p></p>
       </div>
-
+      <div id="encryption_share_button">
+        <div class="main_share" layout="column" layout-align="start center">
+          <p class="encryption_share_button">Share this message</p>
+        </div>
+      </div>
     </div>
   </div>
   <!-- /DECRYPTION -->

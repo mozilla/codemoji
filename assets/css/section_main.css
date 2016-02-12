@@ -8,19 +8,22 @@
   height: 100%;
 }
 
-.main_content_top{
-  height: 100%;
-  background-color: #B3B3B3;
-  position: relative;
-  width: 100%;
-}
-
+.main_content_top,
 .main_content_bottom{
   height: 100%;
-  padding-top: 4rem;
-  position: relative;
   width: 100%;
-  background-color: #4D4D4D;
+  position: relative;
+}
+
+.encryption .main_content_top,
+.decryption .main_content_bottom{
+  background-color: #B3B3B3;
+}
+
+.decryption .main_content_top,
+.encryption .main_content_bottom{
+  padding-top: 4rem;
+  background-color: #4D4D4D; 
 }
 
 .main_keyslider{
