@@ -79,52 +79,70 @@
 
   <!-- ONBOARDING views/onboarding -->
   <div class="section_onboarding section">
-    <div layout="column" layout-align="center center" wide>
+    <div layout="row" class="slider_wrapper">
+
+      <div layout="column" layout-align="center center" wide flex>
         <svg class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_0" viewBox="0 0 800 800" nw="800" nh="800">
           <use xlink:href="#watermelon"/>
-        </svg>
-        <svg class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_1" viewBox="0 0 800 800" nw="800" nh="800">
-          <use xlink:href="#watermelon_c"/>
-        </svg>
-        <svg class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_2" viewBox="0 0 800 800" nw="800" nh="800">
-          <use xlink:href="#watermelon"/>
-        </svg>
-        <svg class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_3" viewBox="0 0 800 800" nw="800" nh="800">
-          <use xlink:href="#roll"/>
-        </svg>
-        <svg class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_4" viewBox="0 0 800 800" nw="800" nh="800">
-          <use xlink:href="#orange"/>
         </svg>
         <div class="onboarding_sentence_0 onboarding_sentence" layout="column" layout-align="center center">
           <p uppercase style-text gray>This is not a</p>
           <p uppercase style-sub>watermelon</p>
         </div>
+      </div>
+
+      <div layout="column" layout-align="center center" wide flex>
+        <svg class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_1" viewBox="0 0 800 800" nw="800" nh="800">
+          <use xlink:href="#watermelon_c"/>
+        </svg>
         <div class="onboarding_sentence_1 onboarding_sentence" layout="column" layout-align="center center">
           <p uppercase style-text gray>It's actually a</p>
           <p uppercase style-sub>letter</p>
         </div>
+      </div>
+
+      <div layout="column" layout-align="center center" wide flex>
+        <svg class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_2" viewBox="0 0 800 800" nw="800" nh="800">
+          <use xlink:href="#watermelon"/>
+        </svg>
         <div class="onboarding_sentence_2 onboarding_sentence" layout="column" layout-align="center center">
           <p uppercase style-sub gray>This is</p>
           <p uppercase style-sub><img class="emoji" draggable="false" alt="🍉" src="https://twemoji.maxcdn.com/svg/1f349.svg">ryptoloji</p>
         </div>
+      </div>
+
+      <div layout="column" layout-align="center center" wide flex>
+        <svg class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_3" viewBox="0 0 800 800" nw="800" nh="800">
+          <use xlink:href="#roll"/>
+        </svg>
         <div class="onboarding_sentence_3 onboarding_sentence" layout="column" layout-align="center center">
           <p uppercase style-sub gray>Th<img class="emoji" draggable="false" alt="💈" src="https://twemoji.maxcdn.com/svg/1f488.svg">s <img class="emoji" draggable="false" alt="💈" src="https://twemoji.maxcdn.com/svg/1f488.svg">s</p>
           <p uppercase style-sub>Cryptoloj<img class="emoji" draggable="false" alt="💈" src="https://twemoji.maxcdn.com/svg/1f488.svg"></p>
           <button class="onboarding_end_button" button-line to-state="loading">Got it, thanks</button>
         </div>
+      </div>
+
+      <div layout="column" layout-align="center center" wide flex>
+        <svg class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_4" viewBox="0 0 800 800" nw="800" nh="800">
+          <use xlink:href="#orange"/>
+        </svg>
         <div class="onboarding_sentence_4 onboarding_sentence" layout="column" layout-align="center center">
           <p uppercase style-sub gray>This is</p>
           <p uppercase style-sub>Crypt<img class="emoji" draggable="false" alt="🍊" src="https://twemoji.maxcdn.com/svg/1f34a.svg">l<img class="emoji" draggable="false" alt="🍊" src="https://twemoji.maxcdn.com/svg/1f34a.svg">ji</p>
           <button class="onboarding_end_button" button-line to-state="loading">Got it, thanks</button>
         </div>
-        <div class="onboarding_pages" layout="row" layout-align="center center">
-          <div class="onboarding_pages_circle onboarding_pages_circle_0"></div>
-          <div class="onboarding_pages_circle onboarding_pages_circle_1"></div>
-          <div class="onboarding_pages_circle onboarding_pages_circle_2"></div>
-          <div class="onboarding_pages_circle onboarding_pages_circle_3"></div>
-          <div class="onboarding_pages_circle onboarding_pages_circle_4"></div>
-        </div>
+      </div> 
+        
       </div>
+
+    <div class="onboarding_pages" layout="row" layout-align="center center">
+      <div class="onboarding_pages_circle onboarding_pages_circle_0"></div>
+      <div class="onboarding_pages_circle onboarding_pages_circle_1"></div>
+      <div class="onboarding_pages_circle onboarding_pages_circle_2"></div>
+      <div class="onboarding_pages_circle onboarding_pages_circle_3"></div>
+      <div class="onboarding_pages_circle onboarding_pages_circle_4"></div>
+    </div>
+
   </div>
   <!-- /ONBOARDING -->
 
@@ -1370,6 +1388,12 @@
   <script type="text/javascript" src="bower_components/esrever/esrever.js"></script>
   <script type="text/javascript" src="bower_components/stateman/stateman.js"></script>
   <script type="text/javascript" src="bower_components/typed.js/js/typed.js"></script>
+  <script type="text/javascript" src="bower_components/gsap/src/uncompressed/TweenLite.js"></script>
+  <script type="text/javascript" scr="bower_components/gsap/src/uncompressed/jquery.gsap.js"></script>
+  <script type="text/javascript" src="bower_components/gsap/src/uncompressed/plugins/CSSPlugin.js"></script>
+  <script type="text/javascript" src="bower_components/rebound-js/rebound.js"></script>
+  
+  <script type="text/javascript" src="assets/js/touchmouse.js"></script>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/twemoji/1.3.2/twemoji.min.js"></script>
   

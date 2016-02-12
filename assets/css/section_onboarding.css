@@ -2,7 +2,8 @@
   z-index: 10;
   background-color: #E5E5E5;
   text-align: center;
-  padding: 0 3.5rem;
+  overflow: hidden;
+  width: 100%;
 }
 
 .svg_wrapper_onboarding{
@@ -22,7 +23,12 @@
 
 .onboarding_sentence,
 .svg_wrapper_onboarding{
-  display: none;
+}
+
+.slider_wrapper{
+  width: 500%;
+  height: 100%;
+  position: absolute;
 }
 
 .onboarding_end_button{
