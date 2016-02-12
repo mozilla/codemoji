@@ -54,10 +54,7 @@
     leave: function () {
       $(".decryption").removeClass("section-show")
       // unregister listeners
-      Cryptoloji.stateman.off('decrypt:show-reply')
-      Cryptoloji.stateman.off('decrypt:key-chosen')
-      Cryptoloji.stateman.off('decrypt:wrong-key')
-      Cryptoloji.stateman.off('decrypt:right-key')
+      Cryptoloji.stateman.off('decrypt')
       Cryptoloji.stateman.off('keyslider')
     }
   }
