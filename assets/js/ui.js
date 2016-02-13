@@ -140,6 +140,7 @@
     var el = $(content_selector);
     var num = el.children().length;
     var w = $(document).width();
+    var dots = $('.onboarding_pages').children()
 
     var mousedown=false;
     var currentX = 0;
@@ -171,6 +172,7 @@
       lastX = e.pageX;
     })
 
+
     $('body').on('touchmouseup', function(e){
       if (!mousedown) return;
       mousedown=false;
@@ -183,6 +185,14 @@
         step--;
         if(step < 0) step=0;
       }
+
+      dots.removeClass('current')
+      $(dots[step]).addClass('current')
+
+      if(step == num-1){
+        $('.onboarding_pages').addClass('hide')
+      }
+
       spring.setEndValue(step/num);
     })
 
