@@ -26,7 +26,7 @@
 }
 
 .slider_wrapper{
-  width: 500%;
+  width: 600%;
   height: 100%;
   position: absolute;
 }
@@ -47,26 +47,28 @@
   display: block;
 }
 
-.step-0 .onboarding_pages_circle_0,
-.step-1 .onboarding_pages_circle_1,
-.step-2 .onboarding_pages_circle_2,
-.step-3 .onboarding_pages_circle_3,
-.step-4 .onboarding_pages_circle_4,
-.step-5 .onboarding_pages_circle_5{
-  opacity: 1;
-}
+
 .onboarding_pages{
+  transition: opacity 1s;
   position: absolute;
   bottom: 10px;
   left: 50%;
   -webkit-transform: translate(-50%,0);
           transform: translate(-50%,0);
 }
+.onboarding_pages.hide{
+  opacity: 0;
+}
 
-.onboarding_pages_circle{
+.onboarding_pages > div{
   width: 8px;
   height: 8px;
-  background-color: gray;
+  background-color: black;
   border-radius: 50%;
   margin: 0 3px;
+  opacity: .25;
+  transition: opacity 1s;
+}
+.onboarding_pages > div.current{
+  opacity: 1;
 }
