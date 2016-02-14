@@ -138,7 +138,8 @@
     var spring = springSystem.createSpring(50, 10);
 
     var el = $(content_selector);
-    var num = el.children().length;
+    var scenes = el.children();
+    var num = scenes.length;
     var w = $(document).width();
     var dots = $('.onboarding_pages').children()
 
@@ -148,6 +149,7 @@
     var currentPos = 0;
     var currentShift = 0;
     var step = 0;
+
 
     el.on('touchmousedown', function(e) {
       currentX = e.pageX;
@@ -187,7 +189,15 @@
       }
 
       dots.removeClass('current')
+
+      var currentScene = $(scenes[step])
       $(dots[step]).addClass('current')
+
+      var childs = currentScene.children()
+
+      TweenLite.from( $(childs[0]), 1, {delay:.25, opacity: 0, y:"-30px", ease:Expo.easeInOut});
+      TweenLite.from( $(childs[1]), 1, {delay:.5, opacity: 0, y:"+30px", ease:Expo.easeInOut});
+
 
       if(step == num-1){
         $('.onboarding_pages').addClass('hide')
