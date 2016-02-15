@@ -35,8 +35,6 @@
         $('#encryption_output').html(text)
         $('.share_message_item').html(text)
         Cryptoloji.stateman.emit('encrypt:show-share')
-      } else {
-        emptyEncryptOutput()
       }
     }
   }
