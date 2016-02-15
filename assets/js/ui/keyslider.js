@@ -12,6 +12,9 @@
     console.debug('creating keyslider ' + name + ' on ' + selector)
     self.$element = $(selector)
 
+    // if instace .fill() has been called
+    self.filled = false
+
     self.$element.on('click', '.key', self.onClick)
     
     $('.keyslider', self.$element).on('scroll', function() {
@@ -25,6 +28,9 @@
 
   Keyslider.prototype.fill = function fill (emojis) {
     var self = this
+    if (self.filled) return
+    self.filled = true
+    
     var text = ''
     _.each(emojis, function(elem) {
       text += _createKeyElement(elem)
