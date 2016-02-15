@@ -207,7 +207,7 @@
   box-shadow: none;
   /* prevent textarea resize behaviour */
   resize: none;
-  margin-top: 9rem;
+  margin-top: 6.5rem;
   padding: 0 5rem 0 1.7rem;
   width: 100%;
 }
@@ -279,13 +279,11 @@
 
 .header__input{
   top: 4px;
-  font-size: 70%;
   text-align: center;
   border: none;
   height: 9rem;
   color: white;
   text-align: left;
-  font-size: 120%;
   padding-top: 6px;
 }
 
@@ -341,10 +339,14 @@
 }
 
 .encryption_input_count{
-  bottom: 1rem;
-  left: 2rem;
+  /*bottom: 1rem;*/
+  /*left: 2rem;*/
+      top: .8rem;
+    right: .7rem;
   position: absolute;
-  margin: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-right: 0;
   padding: 0;
   color: #E6E6E6;
 }
