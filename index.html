@@ -73,55 +73,31 @@
 
   <!-- ONBOARDING views/onboarding -->
   <div class="section_onboarding section">
+
     <div layout="row" class="slider_wrapper">
 
-      <div layout="column" layout-align="center center" wide flex>
-        <div class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_0" data-svg="assets/svg/watermelon.svg"></div>
-        <div class="onboarding_sentence_0 onboarding_sentence" layout="column" layout-align="center center">
-          <p uppercase style-text gray>This is not a</p>
-          <p uppercase style-sub>watermelon</p>
-        </div>
+
+      <div layout="column" layout-align="center center" wide flex style="background-color:red;">
       </div>
 
-      <div layout="column" layout-align="center center" wide flex>
-        <div class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_1" data-svg="assets/svg/watermelon_c.svg"></div>
-        <div class="onboarding_sentence_1 onboarding_sentence" layout="column" layout-align="center center">
-          <p uppercase style-text gray>It's actually a</p>
-          <p uppercase style-sub>letter</p>
-        </div>
+      <div layout="column" layout-align="center center" wide flex style="background-color:green;">
       </div>
 
-      <div layout="column" layout-align="center center" wide flex>
-        <div class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_2" data-svg="assets/svg/watermelon.svg"></div>
-        <div class="onboarding_sentence_2 onboarding_sentence" layout="column" layout-align="center center">
-          <p uppercase style-sub gray>This is</p>
-          <p uppercase style-sub><img class="emoji" draggable="false" alt="🍉" src="https://twemoji.maxcdn.com/svg/1f349.svg">ryptoloji</p>
-        </div>
+      <div layout="column" layout-align="center center" wide flex style="background-color:orange;">
       </div>
 
-      <div layout="column" layout-align="center center" wide flex>
-        <div class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_3" data-svg="assets/svg/roll.svg"></div>
-        <div class="onboarding_sentence_3 onboarding_sentence" layout="column" layout-align="center center">
-          <p uppercase style-sub gray>Th<img class="emoji" draggable="false" alt="💈" src="https://twemoji.maxcdn.com/svg/1f488.svg">s <img class="emoji" draggable="false" alt="💈" src="https://twemoji.maxcdn.com/svg/1f488.svg">s</p>
-          <p uppercase style-sub>Cryptoloj<img class="emoji" draggable="false" alt="💈" src="https://twemoji.maxcdn.com/svg/1f488.svg"></p>
-          <button class="onboarding_end_button" button-line to-state="loading">Got it, thanks</button>
-        </div>
+      <div layout="column" layout-align="center center" wide flex style="background-color:yellow;">
       </div>
 
-      <div layout="column" layout-align="center center" wide flex>
-        <div class="svg_wrapper svg_wrapper_onboarding svg_wrapper_onboarding_4" data-svg="assets/svg/orange.svg"></div>
-        <div class="onboarding_sentence_4 onboarding_sentence" layout="column" layout-align="center center">
-          <p uppercase style-sub gray>This is</p>
-          <p uppercase style-sub>Crypt<img class="emoji" draggable="false" alt="🍊" src="https://twemoji.maxcdn.com/svg/1f34a.svg">l<img class="emoji" draggable="false" alt="🍊" src="https://twemoji.maxcdn.com/svg/1f34a.svg">ji</p>
-          <button class="onboarding_end_button" button-line to-state="loading">Got it, thanks</button>
-        </div>
+      <div layout="column" layout-align="center center" wide flex style="background-color:blue;">
       </div> 
 
-      <div layout="column" layout-align="center center" wide flex>
-        
+      <div layout="column" layout-align="center center" wide flex style="background-color:red;">
       </div>
     </div>
 
+    <div id="onboarding_svg" data-svg="assets/svg/onboarding.svg">
+    </div>
 
     <div class="onboarding_pages" layout="row" layout-align="center center">
       <div class="current"></div>
@@ -132,6 +108,25 @@
     </div>
 
   </div>
+<script type="text/javascript">
+d3.xml('assets/svg/onboarding.svg', "image/svg+xml", function(xml) {
+    d3.select('#onboarding_svg').node().appendChild(xml.documentElement);
+    
+    svg = d3.select('#onboarding_svg').select('svg');
+
+    width = svg.attr('width')
+    height = svg.attr('height')
+    var view = svg.attr('viewBox').split(' ')
+
+    if(!width) width = view[2]
+    if(!height) height = view[3]
+    
+    // avoid this in iOS-7
+    svg.attr('width', null)
+        .attr('height', null)
+    
+})
+</script>
   <!-- /ONBOARDING -->
 
   <!-- LOADING loading -->

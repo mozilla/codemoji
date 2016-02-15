@@ -132,6 +132,11 @@
     var step = 0;
 
 
+    TweenLite.from('#onboarding_svg #text1', 1, {delay:1, opacity:0})
+    TweenLite.set('#onboarding_svg #text2', {x:w})
+    TweenLite.set('#onboarding_svg #text3', {x:w*2})
+    TweenLite.set('#onboarding_svg #lttr', {opacity:0})
+
     el.on('touchmousedown', function(e) {
       currentX = e.pageX;
       mousedown=true;
@@ -149,7 +154,18 @@
       }
 
       currentShift = (e.pageX - currentX) * fakt;
-      TweenLite.set(el[0], {x:currentPos+currentShift, y:0})
+
+      TweenLite.set(el[0], {x:currentPos+currentShift})
+      
+
+      if(step == 0){
+        TweenLite.set('#onboarding_svg #text1', {x:currentPos+currentShift})
+        TweenLite.set('#onboarding_svg #text2', {x:w+currentPos+currentShift})
+      }
+      if(step == 1){
+        TweenLite.set('#onboarding_svg #text2', {x:w+currentPos+currentShift})
+      }
+
       var shiftNorm = mapval(currentPos+currentShift, 0, w*num, 0, 1)
       spring.setCurrentValue(shiftNorm*-1);
       lastX = e.pageX;
@@ -179,6 +195,9 @@
       TweenLite.from( $(childs[0]), 1, {delay:.25, opacity: 0, y:"-30px", ease:Expo.easeInOut});
       TweenLite.from( $(childs[1]), 1, {delay:.5, opacity: 0, y:"+30px", ease:Expo.easeInOut});
 
+      if(step == 1){
+        TweenLite.to('#onboarding_svg #lttr', 1, {delay:1, opacity:1})
+      }
 
       if(step == num-1){
         $('.onboarding_pages').addClass('hide')
@@ -205,7 +224,14 @@
         var val = spring.getCurrentValue();
         val = mapval(val, 0, 1, 0, (w*num*-1));
         if(!mousedown) {
-          TweenLite.set(el[0], {x:val, y:0})
+          TweenLite.set(el[0], {x:val})
+
+          if(step >= 0 && step <= 2){
+            TweenLite.set('#onboarding_svg #text1', {x:val})
+            TweenLite.set('#onboarding_svg #text2', {x:w+val})
+            TweenLite.set('#onboarding_svg #text3', {x:w*2+val})
+          }
+
           currentPos = val
         }
       }

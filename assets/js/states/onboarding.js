@@ -4,6 +4,7 @@
   Cryptoloji.states.onboarding = {
     enter: function () {
       Cryptoloji.UI.buildSlider('.slider_wrapper')
+      
       $(".section_onboarding").addClass("section-show")
     },
     leave: function () {
