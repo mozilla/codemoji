@@ -69,7 +69,7 @@
         </svg>
         <h2 uppercase style-title>Welcome to Cryptoloji</h2>
         <p class="welcome_text" style-text gray>
-          Turn your message into fun emojis, share it, and bring a <img class="emoji" draggable="false" alt="😀" src="http://twemoji.maxcdn.com/svg/1f600.svg"> to your friends' face
+          Turn your message into fun emojis, share it, and bring a smile to your friends' face
         </p>
         <button uppercase button-box class="welcome_button_more" to-state="onboarding">Show me how it works</button>
         <button uppercase button-line class="welcome_button_send" to-state="encrypt" gray>Send a secret message</button>    
@@ -196,7 +196,7 @@
         </svg>
       </div>
       <div id="encryption_keyslider" class="main_keyslider">
-        <label class="header__label main_keyslider_bottom_label" style-lable>Pick a key</label>
+        <label class="header__label main_keyslider_bottom_label" style-lable>YOUR KEY</label>
         <div class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
@@ -212,8 +212,8 @@
         </div>
       </div>
       <div class="main_content_bottom">
-        <label class="header__label main_content_bottom_label" style-lable>SECRET MESSAGE</label>
-        <div id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" placeholder="Your message will be encrypted here."></div>
+        <label class="header__label main_content_bottom_label" style-lable>YOUR SECRET MESSAGE</label>
+        <div id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" placeholder="Pick a key to see your message encrypted here."></div>
         <p></p>
       </div>
       <div id="encryption_share_button">
@@ -230,13 +230,13 @@
   <div class="section_main section decryption" layout="column" layout-align="start center">
     <div class="section_main_wrapper" layout="column" layout-align="center center">
       <div class="main_content_top">
-        <label class="header__label main_content_top_label" style-lable>SECRET MESSAGE</label>
+        <label class="header__label main_content_top_label" style-lable>Paste the secret message you received here.</label>
         <div id="decryption_input" class="header__input main_content_top_input" style-input>
           <!-- js injected -->
         </div>
       </div>
       <div id="decryption_keyslider" class="main_keyslider">
-        <label class="header__label main_keyslider_bottom_label" style-lable>DECRYPTION KEY</label>
+        <label class="header__label main_keyslider_bottom_label" style-lable>Pick a key</label>
         <div class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
