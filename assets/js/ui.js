@@ -122,6 +122,7 @@
     var scenes = el.children();
     var num = scenes.length;
     var w = $(document).width();
+    console.log('w', w)
     var dots = $('.onboarding_pages').children()
 
     var mousedown=false;
@@ -129,13 +130,18 @@
     var lastX = 0;
     var currentPos = 0;
     var currentShift = 0;
-    var step = 0;
-
+    var step = 0
+    var consolidated_step = 0
+    var dir
 
     TweenLite.from('#onboarding_svg #text1', 1, {delay:1, opacity:0})
     TweenLite.set('#onboarding_svg #text2', {x:w})
     TweenLite.set('#onboarding_svg #text3', {x:w*2})
     TweenLite.set('#onboarding_svg #lttr', {opacity:0})
+
+    TweenLite.set('#onboarding_svg #watermelon', {x:0})
+    TweenLite.set('#onboarding_svg #pole_1_', {x:w})
+    TweenLite.set('#onboarding_svg #orange', {x:w*2})
 
     el.on('touchmousedown', function(e) {
       currentX = e.pageX;
@@ -153,18 +159,17 @@
         fakt = .29;
       }
 
+      if(lastX < currentX){
+        dir=1
+      }else{
+        dir=-1
+      }
+
       currentShift = (e.pageX - currentX) * fakt;
 
       TweenLite.set(el[0], {x:currentPos+currentShift})
       
-
-      if(step == 0){
-        TweenLite.set('#onboarding_svg #text1', {x:currentPos+currentShift})
-        TweenLite.set('#onboarding_svg #text2', {x:w+currentPos+currentShift})
-      }
-      if(step == 1){
-        TweenLite.set('#onboarding_svg #text2', {x:w+currentPos+currentShift})
-      }
+      handlePosition(currentPos+currentShift);
 
       var shiftNorm = mapval(currentPos+currentShift, 0, w*num, 0, 1)
       spring.setCurrentValue(shiftNorm*-1);
@@ -177,10 +182,14 @@
       mousedown=false;
       currentPos += currentShift;
 
+      previous = step
+
       if(lastX < currentX){
+        dir=1
         step++;
         if(step > num-1) step=num-1;
       }else{
+        dir=-1
         step--;
         if(step < 0) step=0;
       }
@@ -226,16 +235,50 @@
         if(!mousedown) {
           TweenLite.set(el[0], {x:val})
 
-          if(step >= 0 && step <= 2){
-            TweenLite.set('#onboarding_svg #text1', {x:val})
-            TweenLite.set('#onboarding_svg #text2', {x:w+val})
-            TweenLite.set('#onboarding_svg #text3', {x:w*2+val})
-          }
+          if(val % w === 0) consolidated_step=step
+
+          handlePosition(val);
 
           currentPos = val
         }
       }
-    });
+    })
+
+
+    function handlePosition(x){
+      console.log(step, consolidated_step, dir)
+
+      if(dir == 1){
+        if(consolidated_step>=0 && consolidated_step<=1){
+          TweenLite.set('#onboarding_svg #text1', {x:x})
+          TweenLite.set('#onboarding_svg #text2', {x:w+x})
+          TweenLite.set('#onboarding_svg #text3', {x:w*2+x})
+        }
+        if(consolidated_step>=2 && consolidated_step<=3){
+          TweenLite.set('#onboarding_svg #watermelon', {x:w*2+x})
+          TweenLite.set('#onboarding_svg #pole_1_', {x:w*3+x})
+          TweenLite.set('#onboarding_svg #orange', {x:w*4+x})
+        }
+
+      }
+
+
+      if(dir == -1){
+        if(consolidated_step>=0 && consolidated_step<=2){
+          TweenLite.set('#onboarding_svg #text1', {x:x})
+          TweenLite.set('#onboarding_svg #text2', {x:w+x})
+          TweenLite.set('#onboarding_svg #text3', {x:w*2+x})
+        }
+        if(consolidated_step>=3 && consolidated_step<=4){
+          TweenLite.set('#onboarding_svg #watermelon', {x:w*2+x})
+          TweenLite.set('#onboarding_svg #pole_1_', {x:w*3+x})
+          TweenLite.set('#onboarding_svg #orange', {x:w*4+x})
+        }
+      }
+      
+    }
+
+
   }
 
   function handleSvgLoading () {
