@@ -36,6 +36,7 @@
     var self = this
     self.currentSize = self.maxSize
     self.$element.text(self.currentSize)
+    self.$element.removeClass('oversize')
     return self
   }
 
