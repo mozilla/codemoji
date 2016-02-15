@@ -16,7 +16,7 @@
     // if instace .fill() has been called
     self.filled = false
 
-    self.$element.on('click', '.key', self.onClick)
+    self.$element.on('click', '.key', self.onClick.bind(this))
 
     var keysliderMore = {
       width: 5.5,
@@ -35,6 +35,13 @@
     return self
   }
 
+  Keyslider.prototype.addKey = function addKey (key) {
+    var self = this
+    if ($('.keyslider .key[key="' + key + '"]', self.$element).length < 1)
+      $('.keyslider_content', self.$element).append(_createKeyElement(key))
+    return self
+  }
+
   Keyslider.prototype.fill = function fill (emojis) {
     var self = this
     if (self.filled) return
@@ -49,11 +56,22 @@
 
   Keyslider.prototype.onClick = function onClick (event) {
     var self = this
-    $('.key', self.$element).removeClass('selected')
-    var $self = $(event.target).closest('.key')
-    var key = $self.attr('key')
-    $self.addClass('selected')
+    var key = $(event.target).closest('.key').attr('key')
+    self.select(key)
+  }
+
+  Keyslider.prototype.select = function select (key) {
+    var self = this
+    self.resetSelection()
+    $('.keyslider .key[key="' + key + '"]', self.$element).addClass('selected')
     Cryptoloji.stateman.emit('keyslider:key-chosen', key)
+    return self
+  }
+
+  Keyslider.prototype.resetSelection = function resetSelection () {
+    var self = this
+    $('.key', self.$element).removeClass('selected')
+    return self
   }
 
   function _createKeyElement (key) {
