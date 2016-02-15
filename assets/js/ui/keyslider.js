@@ -3,7 +3,8 @@
   var keysliders = {}
 
   Cryptoloji.UI.Keyslider = function createKeyslider (name, selector) {
-    keysliders[name] = new Keyslider(name, selector)
+    if (!keysliders[name]) 
+      keysliders[name] = new Keyslider(name, selector)
     return keysliders[name]
   }
 
