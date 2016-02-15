@@ -27,6 +27,9 @@
         Cryptoloji.UI.encryptText()
       })
       Cryptoloji.stateman.on('keymodal:key-chosen', function (key) {
+        Cryptoloji.UI.Keyslider('encrypt')
+          .resetSelection()
+          .addKey(key).select(key)
         Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.encryptText()
       })
