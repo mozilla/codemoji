@@ -14,12 +14,11 @@
     self.$element = $(selector)
     self.maxSize = 400
     self.currentSize = 0
-
-    self.$element.text(self.maxSize)
   }
 
   CharCounter.prototype.attachTo = function attachTo (selector) {
     var self = this
+    self.resetCount()
     $(selector).on('input propertychange', function (event) {
       var textSize = $(event.target).val().length
       self.currentSize = self.maxSize - textSize
