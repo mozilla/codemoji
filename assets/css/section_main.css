@@ -26,7 +26,7 @@
 }
 
 .main_content_bottom{
-  padding-top: 4rem;
+  padding-top: 2.2rem;
 }
 
 .main_keyslider{
@@ -214,7 +214,7 @@
 
 .main_content_bottom_input{
   background-color: transparent;
-  margin: 0rem 4rem 4rem 1.7rem;
+  margin: 0rem 5rem 0 1.7rem;
   overflow-y: scroll;
 }
 
@@ -357,8 +357,8 @@
 
 .svg_wrapper_x{
   position: absolute;
-  right: 2rem;
-  top: 9rem;
+  right: .9rem;
+  top: 7rem;
   width: 20px;
   height: 20px;
 }
