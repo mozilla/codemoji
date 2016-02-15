@@ -20,34 +20,41 @@
 
   function svgTransition(){
 
-        var callbacks = $.Callbacks()
-        var time_flow = 0
-        
-        function animate(item_class, execution_time, delay_time_next, delay_time_next_extension, value) {
-          time_flow += execution_time * $(item_class).length + delay_time_next_extension
-          $(item_class).each(function(i) {
-            var j=($(item_class).length-1) - i
-            TweenLite.to($(this), execution_time, {delay: execution_time * j + delay_time_next, opacity: value})
-          })
-        }
+    var callbacks = $.Callbacks()
+    var time_flow = 0
+    
+    function animate(item_class, execution_time, delay_time_next, delay_time_next_extension, value) {
+      time_flow += execution_time * $(item_class).length + delay_time_next_extension
+      $(item_class).each(function(i) {
+        var j=($(item_class).length-1) - i
+        TweenLite.to($(this), execution_time, {delay: execution_time * j + delay_time_next, opacity: value})
+      })
+    }
 
-        callbacks.add(animate)
-        callbacks.fire('.emoji_item', 0,  0, 0, '0')
-        callbacks.fire('.loading_text_black', 0, 0, 0, '0')
-        callbacks.fire('.loading_text_gray', 0, 0, 0, '0')
-        callbacks.fire('.loading_text_gray', .2, time_flow, .6, '1')
-        callbacks.fire('.loading_text_black', .15, time_flow, 0.3, '1')
-        callbacks.fire('.letter_i', .05,  time_flow, 0, '0')
-        callbacks.fire('.emoji_i', .05,  time_flow, 0.05, '1')
-        callbacks.fire('.letter_o', .05,  time_flow, 0, '0')
-        callbacks.fire('.emoji_o', .05,  time_flow, 0.05, '1')
-        callbacks.fire('.letter_t', .05,  time_flow, 0, '0')
-        callbacks.fire('.emoji_t', .05,  time_flow, 0.05, '1')
-        callbacks.fire('.letter_s', .05,  time_flow, 0, '0')
-        callbacks.fire('.emoji_s', .05,  time_flow, 0.05, '1')
-        callbacks.fire('.letter_last', .2, time_flow, -1, '0')
-        callbacks.fire('.emoji_last', .2, time_flow, 0, '1')
-        callbacks.fire('.emoji_item',  .1, time_flow, 0, '0')
+    function animate_async(item_class, element_time, delay, value) {
+      $(item_class).each(function(i) {
+        var j=($(item_class).length-1) - i
+        TweenLite.to($(this), element_time, {delay: element_time * j + delay, opacity: value})
+      })
+    }
+
+    callbacks.add(animate_async)
+    callbacks.fire('.emoji_item', 0, 0, '0');
+    callbacks.fire('.loading_text_black', 0, 0, '0')
+    callbacks.fire('.loading_text_gray', 0, 0, '0')
+    callbacks.fire('.loading_text_gray', .07, 0, '1')
+    callbacks.fire('.loading_text_black', .07, .8, '1')
+    callbacks.fire('.letter_t', 0, 2.5, '0')
+    callbacks.fire('.emoji_t', 0, 2.55, '1')
+    callbacks.fire('.letter_i', 0, 2, '0')
+    callbacks.fire('.emoji_i', 0.05, 2, '1' )
+    callbacks.fire('.letter_o', 0, 2.3, 0)
+    callbacks.fire('.emoji_o', 0.05, 2.3, '1')
+    callbacks.fire('.letter_s', 0, 2.7, '0')
+    callbacks.fire('.emoji_s', 0.05, 2.7, '1')
+    callbacks.fire('.letter_last', 0.1, 3, '0' )
+    callbacks.fire('.emoji_last', 0.1, 3, '1')
+    callbacks.fire('.emoji_item', 0.1, 4, '0')
   }
 })(window, window.Cryptoloji) 
 
