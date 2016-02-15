@@ -23,6 +23,11 @@
       var textSize = $(event.target).val().length
       self.currentSize = self.maxSize - textSize
       self.$element.text(self.currentSize)
+      if (textSize > self.maxSize) {
+        self.$element.addClass('oversize')
+      } else {
+        self.$element.removeClass('oversize')
+      }
     })
     return self
   }
