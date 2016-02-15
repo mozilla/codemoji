@@ -227,6 +227,27 @@
     });
   }
 
+  function handleSvgLoading () {
+    function loadSvg (element, path) {
+      $.get(path)
+       .done(function (result) {
+          // console.log(result)
+          $(element).append(result.documentElement)
+          Cryptoloji.stateman.emit('svg:loaded', path)
+        })
+       .fail(function () {
+          console.error(this)
+        })
+    }
+    $("div[data-svg*='assets/svg']").each(function () {
+      var self = this
+      var path = $(self).attr('data-svg')
+      // console.log(self, path)
+      loadSvg(self, path)
+    })
+
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
   Cryptoloji.UI = {
@@ -236,9 +257,10 @@
     fillKeymodal: fillKeymodal,
     handleKeymodal: handleKeymodal,
     handleHeader: handleHeader,
+    handleSvgLoading: handleSvgLoading,
     selectKey: selectKey,
     showDecryptableText: showDecryptableText,
     buildSlider: buildSlider
   }
   
-})(window, window.Cryptoloji, jQuery); 
+})(window, window.Cryptoloji, window.jQuery);
