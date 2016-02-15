@@ -12,7 +12,7 @@
     .state('decrypt', Cryptoloji.states.decrypt)
     .state('decrypt/:id', Cryptoloji.states.decrypt_with_id)
     .state('share',   Cryptoloji.states.share)
-    .state('onboarding.watermelon', Cryptoloji.states.onboarding.watermelon)
+    .state('onboarding', Cryptoloji.states.onboarding)
     .state('loading', Cryptoloji.states.loading)
 
   $('body').on('click', '[to-state]', function (event) {

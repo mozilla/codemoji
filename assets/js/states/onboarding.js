@@ -1,9 +1,7 @@
 (function (window, Cryptoloji, undefined) {
   'use strict'
   
-  Cryptoloji.states.onboarding = {}
-
-  Cryptoloji.states.onboarding.watermelon = {
+  Cryptoloji.states.onboarding = {
     enter: function () {
       Cryptoloji.UI.buildSlider('.slider_wrapper')
       $(".section_onboarding").addClass("section-show")
