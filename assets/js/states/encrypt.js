@@ -30,6 +30,7 @@
         Cryptoloji.UI.Keyslider('encrypt')
           .resetSelection()
           .addKey(key).select(key)
+        scrollToSelectedKey()
         Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.encryptText()
       })
@@ -93,6 +94,11 @@
   function emptyOutput () {
     $('#encryption_output').html('').addClass('placeholdit')
     $('.share_message_item').html('')
+  }
+
+  function scrollToSelectedKey () {
+    var value = $('.keyslider .selected', $('.section-show')).position().left - Cryptoloji.utils.remToPx(1.7)
+    $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
   }
 
 })(window, window.Cryptoloji); 
