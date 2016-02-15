@@ -71,7 +71,7 @@ color palette
 
 [style-text]{
     font-weight: 300;
-    font-size: 100%;
+    font-size: 90%;
     line-height: 22px;
     letter-spacing: 1px;
 }
@@ -120,6 +120,7 @@ color palette
   text-shadow: none;
   text-decoration: none; 
   font-size: 80%;
+  min-height: 45px;
 }
 
 [button-box]:active{
@@ -140,6 +141,7 @@ color palette
   text-decoration: none; 
   font-size: 80%;
   border-bottom: solid 2px;
+  min-height: 30px;
 }
 
 [button-line]:active{
