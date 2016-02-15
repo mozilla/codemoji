@@ -46,6 +46,11 @@
     $('#encryption_input').on('input propertychange', function (event) {
       var textSize = $('#encryption_input').val().length
       $('#encryption_input_count').text(textMaxSize-textSize)
+      if (textSize > textMaxSize) {
+        $('#encryption_input_count').addClass('oversize')
+      } else {
+        $('#encryption_input_count').removeClass('oversize')
+      }
     })
   }
 
