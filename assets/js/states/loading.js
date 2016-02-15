@@ -20,7 +20,7 @@
 
         var callbacks = $.Callbacks()
         var time_flow = 0
-
+        
         function animate(item_class, execution_time, delay_time_next, delay_time_next_extension, value) {
           time_flow += execution_time * $(item_class).length + delay_time_next_extension
           $(item_class).each(function(i) {
@@ -28,7 +28,7 @@
             TweenLite.to($(this), execution_time, {delay: execution_time * j + delay_time_next, opacity: value})
           })
         }
-        
+
         callbacks.add(animate)
         callbacks.fire('.emoji_item', 0,  0, 0, '0')
         callbacks.fire('.loading_text_black', 0, 0, 0, '0')
