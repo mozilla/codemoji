@@ -18,6 +18,11 @@
     // $(".main_content_top_label").css("margin-top", $(".header").height())
 
     //
+    // load svg
+    //
+    Cryptoloji.UI.handleSvgLoading()
+
+    //
     // Key selectors filler
     //
     Cryptoloji.UI.fillKeymodal(emojiList)
