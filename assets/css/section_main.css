@@ -53,7 +53,13 @@
 }
 
 .svg_wrapper_plus{
-  width: 45px;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.svg_wrapper_plus svg{
+  width: 4.5rem;
+  height: 4.5rem;
   transition: transform .5s;
 }
 
@@ -78,9 +84,8 @@
   transform: translate(0,0%);
 }
 
-.main_key_modal-open .svg_wrapper_plus {
+.main_key_modal-open .svg_wrapper_plus svg{
   transform: rotate(225deg);
-  transition: transform .5s;
 }
 
 .main_key_modal_emoji_wrapper{
