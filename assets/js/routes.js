@@ -7,7 +7,6 @@
 
   stateman
     .state('welcome', Cryptoloji.states.welcome)
-    .state('home',    Cryptoloji.states.home)
     .state('encrypt', Cryptoloji.states.encrypt)
     .state('decrypt', Cryptoloji.states.decrypt)
     .state('decrypt/:id', Cryptoloji.states.decrypt_with_id)
