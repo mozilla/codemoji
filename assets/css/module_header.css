@@ -21,7 +21,7 @@
 
 .header_title{
   position: relative;
-  padding-left: 2rem;
+  padding-left: 1.7rem;
   margin: 0;
   height: 100%;
   font-size: 100%;
@@ -31,4 +31,6 @@
 .header_home_button{
     border: none;
     background-color: transparent;
+    padding: 0;
+    margin: 0;
 }
