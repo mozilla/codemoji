@@ -36,7 +36,7 @@
 
       // show share button at proper time
       Cryptoloji.stateman.on('encrypt:show-share', function() {
-        $('#encryption_share_button').fadeIn()
+        $('#encryption_share_button').addClass('main_share-open')
       })
 
       // show/hide bottom placeholder text
@@ -87,7 +87,7 @@
     $('#encryption_input').val('')
     $('#encryption_input_cleaner').hide()
     $('#encryption_input_count').hide()
-    $('#encryption_share_button').fadeOut()
+    $('#encryption_share_button').removeClass('main_share-open')
   }
 
   function emptyOutput () {
