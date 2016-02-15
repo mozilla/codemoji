@@ -52,8 +52,10 @@
     callbacks.fire('.emoji_o', 0.05, 2.3, '1')
     callbacks.fire('.letter_s', 0, 2.7, '0')
     callbacks.fire('.emoji_s', 0.05, 2.7, '1')
-    callbacks.fire('.letter_last', 0.1, 3, '0' )
-    callbacks.fire('.emoji_last', 0.1, 3, '1')
+
+    callbacks.fire('.letter_c', 0, 2.7, '0')
+    callbacks.fire('.emoji_c', 0.05, 2.7, '1')
+
     callbacks.fire('.emoji_item', 0.1, 4, '0')
   }
 })(window, window.Cryptoloji) 

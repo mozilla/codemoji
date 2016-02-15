@@ -5,23 +5,23 @@
           <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 57.8335 338.4194)" fill="#999999" font-family="'FiraMono'" font-size="75" letter-spacing="3">I</text>
           <text class="loading_text_gray letter_s" transform="matrix(1 0 0 1 292.2168 234.7925)" fill="#B3B3B3" font-family="'FiraMono'" font-size="75" letter-spacing="3">S</text>
           <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 214.0902 234.7926)" fill="#B3B3B3" font-family="'FiraMono'" font-size="75" letter-spacing="3">I</text>
-          <text class="loading_text_gray letter_last" transform="matrix(1 0 0 1 135.9614 234.7925)" fill="#B3B3B3" font-family="'FiraMono'" font-size="75" letter-spacing="3">H</text>
+          <text class="loading_text_gray letter_h" transform="matrix(1 0 0 1 135.9614 234.7925)" fill="#B3B3B3" font-family="'FiraMono'" font-size="75" letter-spacing="3">H</text>
           <text class="loading_text_gray letter_t" transform="matrix(1 0 0 1 57.8335 234.7925)" fill="#B3B3B3" font-family="'FiraMono'" font-size="75" letter-spacing="3">T</text>
         </g>
         <g id="loading_text_black" class="loading_text"> 
           <text class="loading_text_black letter_i" transform="matrix(1 0 0 1 292.2168 556.0117)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">I</text>
-          <text class="loading_text_black letter_last" transform="matrix(1 0 0 1 214.0898 556.0117)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">J</text>
+          <text class="loading_text_black letter_j" transform="matrix(1 0 0 1 214.0898 556.0117)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">J</text>
           <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 135.1942 556.0119)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">O</text>
-          <text class="loading_text_black letter_last" transform="matrix(1 0 0 1 57.8335 556.0117)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">L</text>
+          <text class="loading_text_black letter_l" transform="matrix(1 0 0 1 57.8335 556.0117)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">L</text>
           <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 292.2167 447.672)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">O</text>
           <text class="loading_text_black letter_t" transform="matrix(1 0 0 1 214.0898 447.6719)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">T</text>
-          <text class="loading_text_black letter_last" transform="matrix(1 0 0 1 135.1948 447.6719)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">P</text>
-          <text class="loading_text_black letter_last" transform="matrix(1 0 0 1 57.8335 447.6719)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">Y</text>
-          <text class="loading_text_black letter_last" transform="matrix(1 0 0 1 292.2168 338.4194)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">R</text>
-          <text class="loading_text_black letter_last" transform="matrix(1 0 0 1 214.0901 338.4195)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">C</text>
+          <text class="loading_text_black letter_p" transform="matrix(1 0 0 1 135.1948 447.6719)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">P</text>
+          <text class="loading_text_black letter_y" transform="matrix(1 0 0 1 57.8335 447.6719)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">Y</text>
+          <text class="loading_text_black letter_r" transform="matrix(1 0 0 1 292.2168 338.4194)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">R</text>
+          <text class="loading_text_black letter_c" transform="matrix(1 0 0 1 214.0901 338.4195)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">C</text>
         </g>
         <g id="emoji">
-          <g id="grape" class="emoji_last emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
+          <g id="grape" class="emoji_r emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g id="g12_6_">
               <g>
                 <defs>
@@ -68,7 +68,7 @@
               </g>
             </g>
           </g>
-          <g id="target" class="emoji_last emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
+          <g id="target" class="emoji_l emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g id="g12_79_">
               <g>
                 <defs>
@@ -211,7 +211,7 @@
               </g>
             </g>
           </g>
-          <g class="emoji_last emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
+          <g class="emoji_c emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g id="g12_17_">
               <g>
                 <defs>
@@ -476,7 +476,7 @@
               </g>
             </g>
           </g>
-          <g id="cactus" class="emoji_last emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
+          <g id="cactus" class="emoji_j emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g id="g12_62_">
               <g>
                 <defs>
@@ -552,7 +552,7 @@
               </g>
             </g>
           </g>
-          <g id="donut" class="emoji_last emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
+          <g id="donut" class="emoji_p emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g id="g12_95_">
               <g>
                 <defs>
@@ -702,7 +702,7 @@
               </g>
             </g>
           </g>
-          <g id="hen" class="emoji_last emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
+          <g id="hen" class="emoji_h emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g id="g12_273_">
               <g>
                 <defs>
@@ -748,7 +748,7 @@
               </g>
             </g>
           </g>
-          <g id="cocktail" class="emoji_last emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
+          <g id="cocktail" class="emoji_y emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g id="g12_7_">
               <g>
                 <defs>
