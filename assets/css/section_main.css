@@ -43,8 +43,8 @@
 
 .header__label{
   position: absolute;
-  top: 1.7rem;
-  left: 2rem;
+  top: .8rem;
+  left: .7rem;
   opacity: .6;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -208,13 +208,13 @@
   /* prevent textarea resize behaviour */
   resize: none;
   margin-top: 9rem;
-  padding: 0 5rem 0 3rem;
+  padding: 0 5rem 0 1.7rem;
   width: 100%;
 }
 
 .main_content_bottom_input{
   background-color: transparent;
-  margin: 0rem 4rem 4rem 3rem;
+  margin: 0rem 4rem 4rem 1.7rem;
   overflow-y: scroll;
 }
 
