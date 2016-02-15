@@ -9,9 +9,9 @@
       $( ".section_loading_wrapper" ).load( "assets/svg/loading.svg", function() {
         svgTransition()
       })
-      // setTimeout(function(){
-      //   Cryptoloji.stateman.go('home')
-      // }, 8000)
+      setTimeout(function(){
+        Cryptoloji.stateman.go('home')
+      }, 5800)
     },
     leave: function () {
       $(".section_loading").removeClass("section-show")
@@ -21,15 +21,6 @@
   function svgTransition(){
 
     var callbacks = $.Callbacks()
-    var time_flow = 0
-    
-    function animate(item_class, execution_time, delay_time_next, delay_time_next_extension, value) {
-      time_flow += execution_time * $(item_class).length + delay_time_next_extension
-      $(item_class).each(function(i) {
-        var j=($(item_class).length-1) - i
-        TweenLite.to($(this), execution_time, {delay: execution_time * j + delay_time_next, opacity: value})
-      })
-    }
 
     function animate_async(item_class, element_time, delay, value) {
       $(item_class).each(function(i) {
