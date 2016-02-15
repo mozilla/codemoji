@@ -201,10 +201,23 @@
 
       if(step == num-1){
         $('.onboarding_pages').addClass('hide')
+        destroy();
       }
 
       spring.setEndValue(step/num);
     })
+
+
+    function destroy(){
+      el.off('touchmousedown')
+      $('body').on('touchmousemove')
+      $('body').off('touchmouseup')
+      
+      setTimeout(function(){
+        Cryptoloji.stateman.go('loading')
+        spring.destroy()
+      }, 1000)
+    }
 
     spring.addListener({
       onSpringUpdate: function(spring) {
