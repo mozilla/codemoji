@@ -109,23 +109,23 @@
 
   </div>
 <script type="text/javascript">
-d3.xml('assets/svg/onboarding.svg', "image/svg+xml", function(xml) {
-    d3.select('#onboarding_svg').node().appendChild(xml.documentElement);
+// d3.xml('assets/svg/onboarding.svg', "image/svg+xml", function(xml) {
+//     d3.select('#onboarding_svg').node().appendChild(xml.documentElement);
     
-    svg = d3.select('#onboarding_svg').select('svg');
+//     svg = d3.select('#onboarding_svg').select('svg');
 
-    width = svg.attr('width')
-    height = svg.attr('height')
-    var view = svg.attr('viewBox').split(' ')
+//     width = svg.attr('width')
+//     height = svg.attr('height')
+//     var view = svg.attr('viewBox').split(' ')
 
-    if(!width) width = view[2]
-    if(!height) height = view[3]
+//     if(!width) width = view[2]
+//     if(!height) height = view[3]
     
-    // avoid this in iOS-7
-    svg.attr('width', null)
-        .attr('height', null)
+//     // avoid this in iOS-7
+//     svg.attr('width', null)
+//         .attr('height', null)
     
-})
+// })
 </script>
   <!-- /ONBOARDING -->
 
