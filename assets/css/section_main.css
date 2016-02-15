@@ -259,7 +259,6 @@
   font-size: 250%;
   padding-top: 2.6rem;
   padding-left: 1.4rem;
-  padding-right: 10rem;
 }
 
 .keyslider .key{
@@ -312,7 +311,6 @@
 }
 
 .main_keyslider_plus{
-  width: 5.5rem;
   height: 100%;
   right: 0;
   top: 0;

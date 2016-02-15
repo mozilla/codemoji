@@ -17,10 +17,18 @@
     self.filled = false
 
     self.$element.on('click', '.key', self.onClick)
-    
+
+    var keysliderMore = {
+      width: 5.5,
+      margin: 0.5
+    }
+    $('.keyslider_content', self.$element).css('padding-right', keysliderMore.width + keysliderMore.margin + 'rem')
+    var offset = Cryptoloji.utils.remToPx(keysliderMore.width);
+
     $('.keyslider', self.$element).on('scroll', function() {
-      if (!self.$element.hasClass('main_keyslider_plus-show')){
+      if ($('.keyslider')[0].scrollWidth - $('.keyslider')[0].offsetWidth <= $('.keyslider', self.$element).scrollLeft() + offset){
         self.$element.addClass("main_keyslider_plus-show")
+        $('.main_keyslider_plus', self.$element).css('width', keysliderMore.width + 'rem')
       }
     })
 
