@@ -10,7 +10,7 @@
         svgTransition()
       })
       setTimeout(function(){
-        Cryptoloji.stateman.go('home')
+        Cryptoloji.stateman.go('encrypt')
       }, 5800)
     },
     leave: function () {
@@ -59,19 +59,4 @@
     callbacks.fire('.emoji_l', 0.05, 2.8, '1')
     callbacks.fire('.emoji_item', 0.1, 4, '0')
   }
-})(window, window.Cryptoloji) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})(window, window.Cryptoloji)
