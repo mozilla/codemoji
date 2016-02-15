@@ -26,6 +26,10 @@
         Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.encryptText()
       })
+      Cryptoloji.stateman.on('keymodal:key-chosen', function (key) {
+        Cryptoloji.UI.selectKey(key)
+        Cryptoloji.UI.encryptText()
+      })
 
       // show share button at proper time
       Cryptoloji.stateman.on('encrypt:show-share', function() {

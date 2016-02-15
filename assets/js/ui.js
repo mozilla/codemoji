@@ -49,47 +49,6 @@
     $(".main_key_modal_emoji_container").append(text)
   }
 
-  function handleKeymodal () {
-    $('body').click(function(event) { 
-      if($('body').hasClass('main_key_modal-open') && !$(event.target.closest('.main_key_modal')).is('.main_key_modal')) {
-        $('body').removeClass('main_key_modal-open')
-      }        
-    })
-
-    function clickHandler (event) {
-      event.stopPropagation()
-      if ($('body').hasClass('main_key_modal-open')) {
-        $('body').removeClass('main_key_modal-open')
-      } else {
-        if (Cryptoloji.stateman.current && Cryptoloji.stateman.current.name === 'encrypt') {
-          $('.main_key_modal').css("height", $('.section_main.encryption .main_content_top').height())
-        } else {
-          $('.main_key_modal').css("height", $('.section_main.decryption .main_content_top').height())
-        }
-        $('body').addClass('main_key_modal-open')
-      }
-    }
-
-    $('#encryption_key_modal_open').click(clickHandler)
-    $('#decryption_key_modal_open').click(clickHandler)
-
-    $('.main_key_modal_emoji_container').on('click', '.key', function (event) {
-      // remove selected from keyslider
-      $('.keyslider .key').removeClass('selected')
-      var $self = $(event.target).closest('.key')
-      var key = $self.attr('key')
-      $self.addClass('selected')
-      selectKey(key)
-      if (Cryptoloji.stateman.current && Cryptoloji.stateman.current.name === 'encrypt') {
-        encryptText()
-      } else {
-        Cryptoloji.stateman.emit('decrypt:key-chosen', key)
-        decryptText()
-      }
-
-    })
-  }
-
   function handleHeader () {
     Cryptoloji.stateman.on('header:show', function () {
       $("#header").show()
@@ -308,7 +267,6 @@
     decryptText: decryptText,
     encryptText: encryptText,
     fillKeymodal: fillKeymodal,
-    handleKeymodal: handleKeymodal,
     handleHeader: handleHeader,
     handleSvgLoading: handleSvgLoading,
     selectKey: selectKey,

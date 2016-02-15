@@ -23,14 +23,12 @@
     Cryptoloji.UI.handleSvgLoading()
 
     //
-    // Key selectors filler
-    //
-    Cryptoloji.UI.fillKeymodal(emojiList)
-
-    //
-    // Key modal
-    //
-    Cryptoloji.UI.handleKeymodal()
+    // Key modal setup
+    //    
+    Cryptoloji.UI.KeyModal('#key-modal')
+      .fill([].concat(emojiList, emojiList)) // just for testing
+      .addClickHandler('#encryption_key_modal_open')
+      .addClickHandler('#decryption_key_modal_open')
 
     //
     // handle header show/hide
