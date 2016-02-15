@@ -8,6 +8,10 @@
       Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
         .fill(_.take(emojiList, 10))
 
+      Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')
+        .setMaxSize(Cryptoloji.settings.inputMaxSize)
+        .attachTo('#encryption_input')
+
       $(".encryption").addClass("section-show")
 
       // animate input placeholder text
@@ -37,6 +41,7 @@
       $('#encryption_input_cleaner').on('click', function () {
         emptyInput()
         emptyOutput()
+        Cryptoloji.UI.CharCounter('encrypt').resetCount()
       })
 
       // show input related UI elements

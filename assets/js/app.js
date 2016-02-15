@@ -1,6 +1,10 @@
 (function (window, Cryptoloji, $, undefined) {
   'use strict'
 
+  Cryptoloji.settings = {
+    inputMaxSize: 120
+  }
+
   //
   // jQuery document ready bootstrap
   //
@@ -17,12 +21,6 @@
     // Key selectors filler
     //
     Cryptoloji.UI.fillKeymodal(emojiList)
-
-    //
-    // Input text size counter
-    //
-    var maxInputTextSize = 400
-    Cryptoloji.UI.encryptionInputCounter(maxInputTextSize)
 
     //
     // Key modal
