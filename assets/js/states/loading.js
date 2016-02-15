@@ -6,10 +6,12 @@
       $(".section_loading").addClass("section-show")
       Cryptoloji.stateman.emit('header:hide')
 
-      svgTransition()
-      setTimeout(function(){
-        Cryptoloji.stateman.go('home')
-      }, 8000)
+      $( ".section_loading_wrapper" ).load( "assets/svg/loading.svg", function() {
+        svgTransition()
+      })
+      // setTimeout(function(){
+      //   Cryptoloji.stateman.go('home')
+      // }, 8000)
     },
     leave: function () {
       $(".section_loading").removeClass("section-show")
