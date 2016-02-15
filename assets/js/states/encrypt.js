@@ -14,7 +14,7 @@
       animateInputPlaceholder()
 
       // encrypt text on input
-      $('.encryption .main_content_top_input').bind('input propertychange', function() {
+      $('#encryption_input').bind('input propertychange', function() {
         Cryptoloji.UI.encryptText()
       })
 
@@ -35,8 +35,8 @@
 
       // empty input field
       $('#encryption_input_cleaner').on('click', function () {
-        Cryptoloji.UI.emptyEncryptInput()
-        Cryptoloji.UI.emptyEncryptOutput()
+        emptyInput()
+        emptyOutput()
       })
 
       // show input related UI elements
@@ -69,6 +69,18 @@
         setTimeout(function () { $('body').removeClass('main_content_top_input-first') }, 1000)          
       }
     })
+  }
+
+  function emptyInput () {
+    $('#encryption_input').val('')
+    $('#encryption_input_cleaner').hide()
+    $('#encryption_input_count').hide()
+    $('#encryption_share_button').fadeOut()
+  }
+
+  function emptyOutput () {
+    $('#encryption_output').html('').addClass('placeholdit')
+    $('.share_message_item').html('')
   }
 
 })(window, window.Cryptoloji); 

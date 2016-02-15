@@ -22,15 +22,6 @@
     $('#decryption_output').removeClass('placeholdit').text(text)
     Cryptoloji.stateman.emit('decrypt:show-reply')
   }
-
-  function emptyEncryptInput () {
-    $('#encryption_input').val('')
-  }
-
-  function emptyEncryptOutput () {
-    $('#encryption_output').html('').addClass('placeholdit')
-    $('.share_message_item').html('')
-  }
   
   function encryptText() {
     if (Cryptoloji.Encrypter.key) {
@@ -235,8 +226,6 @@
 
   Cryptoloji.UI = {
     decryptText: decryptText,
-    emptyEncryptInput: emptyEncryptInput,
-    emptyEncryptOutput: emptyEncryptOutput,
     encryptText: encryptText,
     encryptionInputCounter: encryptionInputCounter,
     fillKeymodal: fillKeymodal,
