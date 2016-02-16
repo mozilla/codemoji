@@ -81,7 +81,7 @@
     var scenes = el.children();
     var num = scenes.length;
     var w = $(document).width();
-    console.log('w', w)
+    var svgw = w//400;
     var dots = $('.onboarding_pages').children()
 
     var mousedown=false;
@@ -94,13 +94,13 @@
     var dir
 
     TweenLite.from('#onboarding_svg #text1', 1, {delay:1, opacity:0})
-    TweenLite.set('#onboarding_svg #text2', {x:w})
-    TweenLite.set('#onboarding_svg #text3', {x:w*2})
+    TweenLite.set('#onboarding_svg #text2', {x:svgw})
+    TweenLite.set('#onboarding_svg #text3', {x:svgw*2})
     TweenLite.set('#onboarding_svg #lttr', {opacity:0})
 
     TweenLite.set('#onboarding_svg #watermelon', {x:0})
-    TweenLite.set('#onboarding_svg #pole_1_', {x:w})
-    TweenLite.set('#onboarding_svg #orange', {x:w*2})
+    TweenLite.set('#onboarding_svg #pole_1_', {x:svgw})
+    TweenLite.set('#onboarding_svg #orange', {x:svgw*2})
 
     el.on('touchmousedown', function(e) {
       currentX = e.pageX;
@@ -128,9 +128,11 @@
 
       TweenLite.set(el[0], {x:currentPos+currentShift})
       
-      handlePosition(currentPos+currentShift);
-
       var shiftNorm = mapval(currentPos+currentShift, 0, w*num, 0, 1)
+
+      var svgval2 = mapval(shiftNorm, 0, 1, 0, (svgw*num));
+      handlePosition(svgval2);
+      
       spring.setCurrentValue(shiftNorm*-1);
       lastX = e.pageX;
     })
@@ -143,13 +145,14 @@
 
       previous = step
 
+      var diff = Math.abs(e.pageX - currentX)
       if(lastX < currentX){
         dir=1
-        step++;
+        if(diff>5) step++;
         if(step > num-1) step=num-1;
       }else{
         dir=-1
-        step--;
+        if(diff>5) step--;
         if(step < 0) step=0;
       }
 
@@ -157,11 +160,6 @@
 
       var currentScene = $(scenes[step])
       $(dots[step]).addClass('current')
-
-      var childs = currentScene.children()
-
-      TweenLite.from( $(childs[0]), 1, {delay:.25, opacity: 0, y:"-30px", ease:Expo.easeInOut});
-      TweenLite.from( $(childs[1]), 1, {delay:.5, opacity: 0, y:"+30px", ease:Expo.easeInOut});
 
       if(step == 1){
         TweenLite.to('#onboarding_svg #lttr', 1, {delay:1, opacity:1})
@@ -189,14 +187,15 @@
 
     spring.addListener({
       onSpringUpdate: function(spring) {
-        var val = spring.getCurrentValue();
-        val = mapval(val, 0, 1, 0, (w*num*-1));
+        var oval = spring.getCurrentValue();
+        val = mapval(oval, 0, 1, 0, (w*num*-1));
+        var svgval = mapval(oval, 0, 1, 0, (svgw*num*-1));
         if(!mousedown) {
           TweenLite.set(el[0], {x:val})
 
           if(val % w === 0) consolidated_step=step
 
-          handlePosition(val);
+          handlePosition(svgval);
 
           currentPos = val
         }
@@ -205,18 +204,19 @@
 
 
     function handlePosition(x){
-      console.log(step, consolidated_step, dir)
+      console.log(x, step, consolidated_step, dir)
+
 
       if(dir == 1){
         if(consolidated_step>=0 && consolidated_step<=1){
           TweenLite.set('#onboarding_svg #text1', {x:x})
-          TweenLite.set('#onboarding_svg #text2', {x:w+x})
-          TweenLite.set('#onboarding_svg #text3', {x:w*2+x})
+          TweenLite.set('#onboarding_svg #text2', {x:svgw+x})
+          TweenLite.set('#onboarding_svg #text3', {x:svgw*2+x})
         }
         if(consolidated_step>=2 && consolidated_step<=3){
-          TweenLite.set('#onboarding_svg #watermelon', {x:w*2+x})
-          TweenLite.set('#onboarding_svg #pole_1_', {x:w*3+x})
-          TweenLite.set('#onboarding_svg #orange', {x:w*4+x})
+          TweenLite.set('#onboarding_svg #watermelon', {x:svgw*2+x})
+          TweenLite.set('#onboarding_svg #pole_1_', {x:svgw*3+x})
+          TweenLite.set('#onboarding_svg #orange', {x:svgw*4+x})
         }
 
       }

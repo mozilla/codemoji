@@ -23,6 +23,16 @@ color palette
     font-style: normal;
 }
 @font-face {
+    font-family: 'FiraMono-Medium';
+    src: url('../font/firamono-medium-webfont.eot');
+    src: url('../font/firamono-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/firamono-medium-webfont.woff2') format('woff2'),
+         url('../font/firamono-medium-webfont.woff') format('woff'),
+         url('../font/firamono-medium-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
     font-family: 'fira_mono';
     src: url('../font/firamono-bold-webfont.eot');
     src: url('../font/firamono-bold-webfont.eot?#iefix') format('embedded-opentype'),
