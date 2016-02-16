@@ -15,6 +15,7 @@
     self.$element = $(selector)
     // if instace .fill() has been called
     self.filled = false
+    self.currentSelection = null
 
     _setupGlobalHandler()
 
@@ -31,43 +32,52 @@
 
   KeyModal.prototype.close = function close () {
     var self = this
-    self.resetSelection()
     $('body').removeClass('main_key_modal-open')
     return self
   }
 
   KeyModal.prototype.fill = function fill (emojis) {
     var self = this
-    if (self.filled) return
-    self.filled = true
-    
-    var text = ''
-    _.each(emojis, function(elem) {
-      text += _createKeyElement(elem)
-    })
-    $('.main_key_modal_emoji_container', self.$element).append(text)
+    // if element has been filled once, avoid filling again
+    if (!self.filled) {
+      self.filled = true
+      var text = ''
+      _.each(emojis, function(elem) { text += _createKeyElement(elem) })
+      $('.main_key_modal_emoji_container', self.$element).append(text)
+    }
     return self
   }
 
   KeyModal.prototype.onClick = function onClick (event) {
     var self = this
-    // remove selected from keyslider
-    self.resetSelection()
+    // get key value
     var key = $(event.target).closest('.key').attr('key')
+    // trigger select
     self.select(key)
     return self
   }
 
   KeyModal.prototype.select = function select (key) {
     var self = this
-    self.resetSelection()
-    $('.main_key_modal_emoji_container .key[key="' + key + '"]', self.$element).addClass('selected')
-    Cryptoloji.stateman.emit('keymodal:key-chosen', key)
+    // select only if not already selected ( we are notifying subscribers of 
+    // element selection, so we should assure to avoid "false positives" and 
+    // event loops )
+    if (self.currentSelection != key) {
+      // reset and clean selection
+      self.resetSelection()
+      // store current key
+      self.currentSelection = key
+      // DOM selection
+      $('.main_key_modal_emoji_container .key[key="' + key + '"]', self.$element).addClass('selected')
+      // notify
+      Cryptoloji.stateman.emit('keymodal:key-chosen', key)
+    }
     return self
   }
 
   KeyModal.prototype.resetSelection = function resetSelection () {
     var self = this
+    self.currentSelection = null
     $('.main_key_modal_emoji_container .key', self.$element).removeClass('selected')
     return self
   }

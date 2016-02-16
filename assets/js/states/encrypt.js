@@ -23,6 +23,9 @@
       })
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
+        // select corresponding emoji in keymodal
+        Cryptoloji.UI.KeyModal().select(key)
+        
         if ($('#encryption_input').val().length == 0) {
           $('body').addClass('main_content_top_input-first')
           animateInputPlaceholder(["You've picked a key.", "Write your message here to see it encrypted."])
