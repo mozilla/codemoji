@@ -5,13 +5,13 @@
     enter: function () {
 
       Cryptoloji.stateman.on('svg:loaded', function(p){
-        if(p == 'assets/svg/onboarding1.svg'){
-          Cryptoloji.UI.buildSlider('.slider_wrapper')
+        if(p == 'assets/svg/onboarding.svg'){
+          Cryptoloji.buildSlider('.slider_wrapper')
         }
       })
 
       // need a better way to handle this
-      if(!Cryptoloji.UI.onBoardingSlider) Cryptoloji.UI.buildSlider('.slider_wrapper')
+      if(!Cryptoloji.onBoardingSlider) Cryptoloji.buildSlider('.slider_wrapper')
       
       $(".section_onboarding").addClass("section-show")
     },
