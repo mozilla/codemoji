@@ -19,6 +19,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/section_share.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_onboarding.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_loading.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_more.css">
   <link rel="stylesheet" type="text/css" href="assets/css/js_handlers.css">
   <!-- endbuild -->
 
@@ -218,21 +219,16 @@
   <!-- SHARE views/share -->
   <div color-bg-main class="section_share section" layout="column" layout-align="start center">
     <div class="share_message" layout="column" layout-align="start center">
-
       <div class="main_content_bottom" layout="column">
         <label class="header__label main_content_bottom_label" uppercase style-lable>MESSAGE REVEALED</label>
         <div id="decryption_output" flex
              class="header__input main_content_bottom_input" 
              placeholder="Your message will be encrypted here."></div>
       </div>
-
-
-
     </div>
     <div class="share_text_wrapper" layout="column" layout-align="center center" wide>
       <p layout="column" layout-align="center center" style-text class="share_text">SHARE THIS MESSAGE</p>
     </div>
-
     <div class="share_social" layout="column" layout-align="space-around center" color-bg-main>
       <lable style-lable color-ligth class="share_social_lable">with the world</lable>
       <div class="share_social_wrapper" layout="row" layout-align="space-around center" wide>
@@ -265,21 +261,25 @@
         </a>
       </div>
     </div>
-    
     <div color-bg-main-ligther class="share_key" layout="row" layout-align="start center">
       <div class="share_key_emoji" layout="row" layout-align="center center">
         <p class="share_key_emoji-item"></p>
       </div>
       <span uppercase class="share_key_sentence">REMEMBER TO<br>SHARE THE KEY</span>
     </div>
-
     <div color-bg-dark class="share_more" layout="row" layout-align="center center">
-      <span uppercase class="share_more_sentence">MORE ABOUT ENCRYPT</span>
+      <span uppercase class="share_more_sentence" to-state="more">MORE ABOUT ENCRYPT</span>
     </div>
-
   </div>
   <!-- /SHARE -->
 
+  <!-- MORE views/more -->
+  <div color-bg-dark class="section_more section" layout="column" layout-align="start start">
+    <div class="more_back" color-ligth to-state="share" wide layout="column" layout-align="center center">BACK TO SHARE</div>
+    <p class="more_text" flex color-ligth style-text layout="row" layout-align="start end">Cryptoloji is a part of Mozilla Foundation's campaing to promote encryptyion.<br>To learn visit advocacy.mozilla.org</p>
+    <div class="svg_wrapper svg_wrapper_more" data-svg="assets/svg/roll.svg"></div>
+  </div>
+  <!-- /MORE -->
 
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
@@ -311,6 +311,7 @@
   <script type="text/javascript" src="assets/js/states/onboarding.js"></script>
   <script type="text/javascript" src="assets/js/states/welcome.js"></script>
   <script type="text/javascript" src="assets/js/states/loading.js"></script>
+  <script type="text/javascript" src="assets/js/states/more.js"></script>
   
   
   <script type="text/javascript" src="assets/js/api.js"></script>

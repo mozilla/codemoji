@@ -13,6 +13,7 @@
     .state('share',   Cryptoloji.states.share)
     .state('onboarding', Cryptoloji.states.onboarding)
     .state('loading', Cryptoloji.states.loading)
+    .state('more', Cryptoloji.states.more)
 
   $('body').on('click', '[to-state]', function (event) {
     event.preventDefault()
