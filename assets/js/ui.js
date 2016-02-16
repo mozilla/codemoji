@@ -84,7 +84,7 @@
     var scenes = el.children();
     var num = scenes.length;
     var w = $(document).width();
-    var svgw = w//400;
+    var svgw = 400;
     var dots = $('.onboarding_pages').children()
 
     var mousedown=false;
@@ -95,6 +95,9 @@
     var step = 0
     var consolidated_step = 0
     var dir
+
+    $('#onboarding_svg svg').removeAttr('width')
+    $('#onboarding_svg svg').removeAttr('height')
 
     TweenLite.from('#onboarding_svg #text1', 1, {delay:1, opacity:0})
     TweenLite.set('#onboarding_svg #text2', {x:svgw})
@@ -194,7 +197,7 @@
       setTimeout(function(){
         Cryptoloji.stateman.go('loading')
         spring.destroy()
-      }, 1000)
+      }, 3000)
     }
 
     spring.addListener({
@@ -228,6 +231,12 @@
           showHidelettersTwo(true)
           showHidelettersThree(true)
         }
+        if(consolidated_step == 1){
+            showHidelettersOne(true)
+            showHidelettersTwo(true)
+            showHidelettersThree(true)
+            showHidelettersZero(false)
+        }
         if(consolidated_step == 2){
             showHidelettersTwo(true)
             showHidelettersThree(true)
@@ -243,6 +252,12 @@
             showHidelettersOne(true)
             showHidelettersTwo(true)
         }
+        if(consolidated_step == 5){
+            showHidelettersFour(false)
+            showHidelettersOne(true)
+            showHidelettersTwo(true)
+            showHidelettersThree(true)
+        }
 
         clearInterval(debouncer)
 
@@ -254,7 +269,7 @@
           TweenLite.set('#onboarding_svg #text2', {x:svgw+x})
           TweenLite.set('#onboarding_svg #text3', {x:svgw*2+x})
         }
-        if(consolidated_step>=2 && consolidated_step<=3){
+        if(consolidated_step>=2 && consolidated_step<=4){
           TweenLite.set('#onboarding_svg #watermelon', {x:svgw*2+x})
           TweenLite.set('#onboarding_svg #pole_1_', {x:svgw*3+x})
           TweenLite.set('#onboarding_svg #orange', {x:svgw*4+x})
@@ -286,8 +301,11 @@
       })
     }
 
+    function showHidelettersZero(invert){
+      showHideElements(['#lttr_c'], invert)
+    }
     function showHidelettersOne(invert){
-      showHideElements(['#lttr_c','#icon_c_1'], invert)
+      showHideElements(['#icon_c_1'], invert)
       showHideElements(['#single_c_1'], !invert)
     }
     function showHidelettersTwo(invert){
@@ -297,6 +315,9 @@
     function showHidelettersThree(invert){
       showHideElements(['#lttr_o','#icon_o_1','#icon_o_2'], invert)
       showHideElements(['#single_o_1', '#single_o_2'], !invert)
+    }
+    function showHidelettersFour(invert){
+      showHideElements(['#lttr_o','#icon_o_1','#icon_o_2', '#text3'], !invert)
     }
 
 
