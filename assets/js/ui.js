@@ -1,4 +1,4 @@
-(function (window, Cryptoloji, $, undefined) {
+(function (window, Cryptoloji, $, twemoji, undefined) {
 
   /*
     methods prefixed with _ are "private"
@@ -6,7 +6,7 @@
   */
 
   function _createKeyElement (key) {
-    return '<p class="key" key="' + key + '">' + Cryptoloji.twemoji(key) + '</p>'
+    return '<p class="key" key="' + key + '">' + toTwemoji(key) + '</p>'
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -31,7 +31,7 @@
         console.debug('Chosen text:', text)
         text = Cryptoloji.encrypt(text)
         console.debug('Encrypted text:', text)
-        text = Cryptoloji.twemoji(text)
+        text = toTwemoji(text)
         $('#encryption_output').html(text)
         $('.share_message_item').html(text)
         Cryptoloji.stateman.emit('encrypt:show-share')
@@ -61,11 +61,11 @@
   function selectKey (key) {
     Cryptoloji.use_key(key)
     console.debug('Chosen key', key)
-    $(".share_key_emoji-item").html(Cryptoloji.twemoji(key))
+    $(".share_key_emoji-item").html(toTwemoji(key))
   }
 
   function showDecryptableText (text) {
-    $('#decryption_input').html(Cryptoloji.twemoji(text))
+    $('#decryption_input').html(toTwemoji(text))
                           .attr('text', text)
   }
 
@@ -95,6 +95,13 @@
 
   }
 
+  function toTwemoji (text) {
+    return twemoji.parse(text, {
+      folder: 'svg',
+      ext:    '.svg'
+    })
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
   Cryptoloji.UI = {
@@ -104,7 +111,8 @@
     handleHeader: handleHeader,
     handleSvgLoading: handleSvgLoading,
     selectKey: selectKey,
-    showDecryptableText: showDecryptableText
+    showDecryptableText: showDecryptableText,
+    toTwemoji: toTwemoji
   }
   
-})(window, window.Cryptoloji, window.jQuery);
+})(window, window.Cryptoloji, window.jQuery, window.twemoji);

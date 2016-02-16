@@ -83,7 +83,7 @@
   }
 
   function _createKeyElement (key) {
-    return '<p class="key" key="' + key + '">' + Cryptoloji.twemoji(key) + '</p>'
+    return '<p class="key" key="' + key + '">' + Cryptoloji.UI.toTwemoji(key) + '</p>'
   }
 
   function _clickHandler (event) {
