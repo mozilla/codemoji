@@ -15,6 +15,7 @@
     self.$element = $(selector)
     // if instace .fill() has been called
     self.filled = false
+    self.currentSelection = null
 
     _setupGlobalHandler()
 
@@ -60,14 +61,25 @@
 
   KeyModal.prototype.select = function select (key) {
     var self = this
-    self.resetSelection()
-    $('.main_key_modal_emoji_container .key[key="' + key + '"]', self.$element).addClass('selected')
-    Cryptoloji.stateman.emit('keymodal:key-chosen', key)
+    // select only if not already selected ( we are notifying subscribers of 
+    // element selection, so we should assure to avoid "false positives" and 
+    // event loops )
+    if (self.currentSelection != key) {
+      // reset and clean selection
+      self.resetSelection()
+      // store current key
+      self.currentSelection = key
+      // DOM selection
+      $('.main_key_modal_emoji_container .key[key="' + key + '"]', self.$element).addClass('selected')
+      // notify
+      Cryptoloji.stateman.emit('keymodal:key-chosen', key)
+    }
     return self
   }
 
   KeyModal.prototype.resetSelection = function resetSelection () {
     var self = this
+    self.currentSelection = null
     $('.main_key_modal_emoji_container .key', self.$element).removeClass('selected')
     return self
   }
