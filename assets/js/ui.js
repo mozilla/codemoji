@@ -73,6 +73,9 @@
 
 
   function buildSlider(content_selector){
+
+    Cryptoloji.UI.onBoardingSlider = true
+
     var mapval = rebound.MathUtil.mapValueInRange;
     var springSystem = new rebound.SpringSystem();
     var spring = springSystem.createSpring(50, 10);
@@ -96,7 +99,16 @@
     TweenLite.from('#onboarding_svg #text1', 1, {delay:1, opacity:0})
     TweenLite.set('#onboarding_svg #text2', {x:svgw})
     TweenLite.set('#onboarding_svg #text3', {x:svgw*2})
-    TweenLite.set('#onboarding_svg #lttr', {opacity:0})
+
+    var letter_icons = ['#single_c_1', '#single_i_1', '#single_i_1', '#single_i_1', '#single_o_1', '#single_o_2']
+    var icon_icons = ['#icon_c_1', '#icon_i_1', '#icon_i_2', '#icon_i_3', '#icon_o_1', '#icon_o_2']
+    var bigletters = ['#lttr_c', '#lttr_i', '#lttr_o']
+
+    var arr = [].concat(icon_icons).concat(bigletters)
+
+    arr.forEach(function(e){
+      TweenLite.set('#onboarding_svg '+e, {opacity:0})
+    })
 
     TweenLite.set('#onboarding_svg #watermelon', {x:0})
     TweenLite.set('#onboarding_svg #pole_1_', {x:svgw})
@@ -202,10 +214,39 @@
       }
     })
 
+    var debouncer;
+    var elmprev = []
 
     function handlePosition(x){
-      console.log(x, step, consolidated_step, dir)
+      console.log(step, consolidated_step, dir)
 
+      clearInterval(debouncer)
+      debouncer = setInterval(function(){
+
+        if(consolidated_step <= 1){
+          showHidelettersOne(true)
+          showHidelettersTwo(true)
+          showHidelettersThree(true)
+        }
+        if(consolidated_step == 2){
+            showHidelettersTwo(true)
+            showHidelettersThree(true)
+            showHidelettersOne(false)
+        }
+        if(consolidated_step == 3){
+            showHidelettersOne(true)
+            showHidelettersThree(true)
+            showHidelettersTwo(false)
+        }
+        if(consolidated_step == 4){
+            showHidelettersThree(false)
+            showHidelettersOne(true)
+            showHidelettersTwo(true)
+        }
+
+        clearInterval(debouncer)
+
+      }, 500)
 
       if(dir == 1){
         if(consolidated_step>=0 && consolidated_step<=1){
@@ -235,6 +276,27 @@
         }
       }
       
+    }
+
+
+    function showHideElements(arr, hide){
+      var o = (hide) ? 0 : 1;
+      arr.forEach(function(e){
+        TweenLite.to('#onboarding_svg '+e, .35, {opacity:o})
+      })
+    }
+
+    function showHidelettersOne(invert){
+      showHideElements(['#lttr_c','#icon_c_1'], invert)
+      showHideElements(['#single_c_1'], !invert)
+    }
+    function showHidelettersTwo(invert){
+      showHideElements(['#lttr_i','#icon_i_1','#icon_i_2','#icon_i_3'], invert)
+      showHideElements(['#single_i_1', '#single_i_2', '#single_i_3'], !invert)
+    }
+    function showHidelettersThree(invert){
+      showHideElements(['#lttr_o','#icon_o_1','#icon_o_2'], invert)
+      showHideElements(['#single_o_1', '#single_o_2'], !invert)
     }
 
 
@@ -271,7 +333,8 @@
     handleSvgLoading: handleSvgLoading,
     selectKey: selectKey,
     showDecryptableText: showDecryptableText,
-    buildSlider: buildSlider
+    buildSlider: buildSlider,
+    onBoardingSlider: false
   }
   
 })(window, window.Cryptoloji, window.jQuery);
