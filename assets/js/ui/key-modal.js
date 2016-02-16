@@ -32,6 +32,7 @@
   KeyModal.prototype.close = function close () {
     var self = this
     self.resetSelection()
+    $('body').removeClass('main_key_modal-open')
     return self
   }
 
@@ -79,7 +80,6 @@
       event.stopPropagation()
       if ($('body').hasClass('main_key_modal-open')) {
         keyModal.close()
-        $('body').removeClass('main_key_modal-open')
       } else {
         if (Cryptoloji.stateman.is('encrypt')) {
           $('.main_key_modal').css("height", $('.section_main.encryption .main_content_top').height())
@@ -96,7 +96,6 @@
         if (keyModal) {
           keyModal.close()
         }
-        $('body').removeClass('main_key_modal-open')
       }        
     })
   }
