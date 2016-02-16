@@ -216,26 +216,26 @@
 
 
   <!-- SHARE views/share -->
-  <div class="section_share section" layout="column" layout-align="start center">
+  <div color-bg-main class="section_share section" layout="column" layout-align="start center">
     <div class="share_message" layout="column" layout-align="start center">
 
-      <div class="main_content_bottom">
+      <div class="main_content_bottom" layout="column">
         <label class="header__label main_content_bottom_label" uppercase style-lable>MESSAGE REVEALED</label>
-        <div id="decryption_output" 
-             class="header__input main_content_bottom_input unselectable placeholdit" 
+        <div id="decryption_output" flex
+             class="header__input main_content_bottom_input" 
              placeholder="Your message will be encrypted here."></div>
       </div>
 
-      <div layout="column" layout-align="center center">
-        <p style-text>SHARE THIS MESSAGE</p>
-      </div>
 
 
+    </div>
+    <div class="share_text_wrapper" layout="column" layout-align="center center" wide>
+      <p layout="column" layout-align="center center" style-text class="share_text">SHARE THIS MESSAGE</p>
     </div>
 
     <div class="share_social" layout="column" layout-align="space-around center" color-bg-main>
       <lable style-lable color-ligth class="share_social_lable">with the world</lable>
-      <div class="" layout="row" layout-align="space-around center" wide>
+      <div class="share_social_wrapper" layout="row" layout-align="space-around center" wide>
         <a href="" class="social">
           <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
         </a>
@@ -250,7 +250,7 @@
         </a>
       </div>
       <lable style-lable color-ligth class="share_social_lable">with someone special</lable>
-      <div class="" layout="row" layout-align="space-around center" wide>
+      <div class="share_social_wrapper" layout="row" layout-align="space-around center" wide>
         <a href="" class="social">
           <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
         </a>
@@ -266,7 +266,7 @@
       </div>
     </div>
     
-    <div color-bg-main-ligther class="share_key" layout="row" layout-align="center center">
+    <div color-bg-main-ligther class="share_key" layout="row" layout-align="start center">
       <div class="share_key_emoji" layout="row" layout-align="center center">
         <p class="share_key_emoji-item"></p>
       </div>
