@@ -11,6 +11,8 @@ color palette
   #E5E5E5
 */
 
+rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefined)
+
 
 @font-face {
     font-family: 'FiraMono';
@@ -104,7 +106,7 @@ color palette
 
 [style-input]{
     font-weight: 300;
-    font-size: 90%!important;
+    font-size: 100%!important;
     letter-spacing: 1px;
     line-height: 109%;
 }
