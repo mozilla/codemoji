@@ -4,7 +4,9 @@
 
 	function buildSlider(content_selector){
 
-	    Cryptoloji.UI.onBoardingSlider = true
+		console.log('buildSlider')
+
+	    Cryptoloji.onBoardingSlider = true
 
 	    var mapval = rebound.MathUtil.mapValueInRange;
 	    var springSystem = new rebound.SpringSystem();
@@ -30,16 +32,23 @@
 	    $('#onboarding_svg svg').removeAttr('width')
 	    $('#onboarding_svg svg').removeAttr('height')
 
-	    var letter_icons = ['#single_c_1', '#single_i_1', '#single_i_1', '#single_i_1', '#single_o_1', '#single_o_2']
-	    var icon_icons = ['#icon_c_1', '#icon_i_1', '#icon_i_2', '#icon_i_3', '#icon_o_1', '#icon_o_2']
-	    var bigletters = ['#lttr_c', '#lttr_i', '#lttr_o']
+	    setTimeout(function(){
+		    var letter_icons = ['#single_c_1', '#single_i_1', '#single_i_1', '#single_i_1', '#single_o_1', '#single_o_2']
+		    var icon_icons = ['#icon_c_1_1_', '#icon_i_1_1_', '#icon_i_2_1_', '#icon_i_3_1_', '#icon_o_1_1_', '#icon_o_2_1_']
+		    var bigletters = ['#lttr_c', '#lttr_i', '#lttr_o']
 
-	    var arr = [].concat(icon_icons).concat(bigletters)
+		    var arr = [].concat(icon_icons).concat(bigletters)
 
-	    arr.forEach(function(e){
-	      TweenLite.set('#onboarding_svg '+e, {opacity:0})
-	    })
+		    arr.forEach(function(e){
+		      TweenLite.set('#onboarding_svg '+e, {opacity:0})
+		    })
 
+		    TweenLite.set('#onboarding_svg #lttr_c', {opacity:0})
+	    	TweenLite.to('#onboarding_svg #text1', 1, {opacity:1})
+
+	    }, 100)
+
+	    
 	    el.on('touchmousedown', function(e) {
 	    	currpagex=e.pageX
 	    	currentX = e.pageX;
@@ -100,9 +109,7 @@
 	      var currentScene = $(scenes[step])
 	      $(dots[step]).addClass('current')
 
-	      if(step == 1){
-	        TweenLite.to('#onboarding_svg #lttr', 1, {delay:1, opacity:1})
-	      }
+	      
 
 	      if(step == num-1){
 	        $('.onboarding_pages').addClass('hide')
@@ -145,47 +152,84 @@
 	    var elmprev = []
 
 	    function handlePosition(x){
-	      console.log(step, consolidated_step, dir)
+	      //console.log(step, consolidated_step, dir)
 
 	      clearInterval(debouncer)
 	      debouncer = setInterval(function(){
 
+	      	if(consolidated_step == 0){
+	      		console.warn('zero')
+	          	TweenLite.to('#onboarding_svg #lttr_c', 1, {opacity:0})
+	          	TweenLite.to('#onboarding_svg #watermelon_icon_1_', 4, {rotation:360, transformOrigin:"50% 50%"})
+
+	      	}
 	        if(consolidated_step <= 1){
-	          showHidelettersOne(true)
-	          showHidelettersTwo(true)
-	          showHidelettersThree(true)
+	          // showHidelettersOne(true)
+	          // showHidelettersTwo(true)
+	          // showHidelettersThree(true)
 	        }
 	        if(consolidated_step == 1){
-	            showHidelettersOne(true)
-	            showHidelettersTwo(true)
-	            showHidelettersThree(true)
-	            showHidelettersZero(false)
+	      		console.warn('uno')
+	            TweenLite.to('#onboarding_svg #lttr_c', 1, {opacity:1})
 	        }
 	        if(consolidated_step == 2){
-	            showHidelettersTwo(true)
-	            showHidelettersThree(true)
-	            showHidelettersOne(false)
+	      		console.warn('due')
+	      		TweenLite.to('#onboarding_svg #lttr_c', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #single_c_1', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #icon_c_1_1_', 1, {opacity:1})
+
+	      		TweenLite.to('#onboarding_svg #single_i_1',  1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #icon_i_1_1_', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #single_i_2',  1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #icon_i_2_1_', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #single_i_3',  1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #icon_i_3_1_', 1, {opacity:0})
+	            
 	        }
 	        if(consolidated_step == 3){
-	            showHidelettersOne(true)
-	            showHidelettersThree(true)
-	            showHidelettersTwo(false)
+	      		console.warn('tre')
+
+	      		TweenLite.to('#onboarding_svg #single_c_1',  1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #icon_c_1_1_', 1, {opacity:0})
+
+	      		TweenLite.to('#onboarding_svg #single_i_1',  1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #icon_i_1_1_', 1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #single_i_2',  1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #icon_i_2_1_', 1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #single_i_3',  1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #icon_i_3_1_', 1, {opacity:1})
+
+	      		TweenLite.to('#onboarding_svg #single_o_1',  1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #icon_o_1_1_', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #single_o_2',  1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #icon_o_2_1_', 1, {opacity:0})
+	            
 	        }
 	        if(consolidated_step == 4){
-	            showHidelettersThree(false)
-	            showHidelettersOne(true)
-	            showHidelettersTwo(true)
+	      		console.warn('quatto')
+	            TweenLite.to('#onboarding_svg #single_o_1',  1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #icon_o_1_1_', 1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #single_o_2',  1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #icon_o_2_1_', 1, {opacity:1})
+
+	      		TweenLite.to('#onboarding_svg #single_i_1',  1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #icon_i_1_1_', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #single_i_2',  1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #icon_i_2_1_', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #single_i_3',  1, {opacity:1})
+	      		TweenLite.to('#onboarding_svg #icon_i_3_1_', 1, {opacity:0})
 	        }
 	        if(consolidated_step == 5){
-	            showHidelettersFour(false)
-	            showHidelettersOne(true)
-	            showHidelettersTwo(true)
-	            showHidelettersThree(true)
+	      		console.warn('cinque')
+	            
+
+	      		TweenLite.to('#onboarding_svg #txts', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #icns', 1, {opacity:0})
 	        }
 
 	        clearInterval(debouncer)
 
-	      }, 500)
+	      }, 200)
 
 	      if(dir == 1){
 	        if(consolidated_step>=0 && consolidated_step<=1){
@@ -219,7 +263,7 @@
 	    }
 
 	    function showHidelettersZero(invert){
-	      showHideElements(['#lttr_c'], invert)
+	      //showHideElements(['#lttr_c'], invert)
 	    }
 	    function showHidelettersOne(invert){
 	      showHideElements(['#icon_c_1'], invert)
@@ -227,15 +271,15 @@
 	      //TweenLite.to('#onboarding_svg #watermelon_icon_1_', 2, {transformOrigin:"50% 50%", rotation:360})
 	    }
 	    function showHidelettersTwo(invert){
-	      showHideElements(['#lttr_i','#icon_i_1','#icon_i_2','#icon_i_3'], invert)
+	      showHideElements(['#lttr_i','#icon_i_1_1','#icon_i_2_1','#icon_i_3_1'], invert)
 	      showHideElements(['#single_i_1', '#single_i_2', '#single_i_3'], !invert)
 	    }
 	    function showHidelettersThree(invert){
-	      showHideElements(['#lttr_o','#icon_o_1','#icon_o_2'], invert)
+	      showHideElements(['#lttr_o','#icon_o_1_1','#icon_o_2_1'], invert)
 	      showHideElements(['#single_o_1', '#single_o_2'], !invert)
 	    }
 	    function showHidelettersFour(invert){
-	      showHideElements(['#lttr_o','#icon_o_1','#icon_o_2', '#text3'], !invert)
+	      showHideElements(['#lttr_o','#icon_o_1_1','#icon_o_2_1', '#text3'], !invert)
 	    }
 
 

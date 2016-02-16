@@ -6,7 +6,7 @@
 
       Cryptoloji.stateman.on('svg:loaded', function(p){
         if(p == 'assets/svg/onboarding_bottom.svg'){
-          Cryptoloji.buildSlider('.slider_wrapper')
+          if(!Cryptoloji.onBoardingSlider) Cryptoloji.buildSlider('.slider_wrapper')
         }
       })
 
