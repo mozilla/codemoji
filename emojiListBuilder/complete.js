@@ -27,3 +27,11 @@ fs.writeFile("../assets/js/libs/emojis.js", content, function(err) {
   console.log("The file emojis.json was saved!")
 })
 
+var content = '<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head><body>'
+_.each(emojis, function (e) { content += '<span>' + String.fromCodePoint(e) + '</span>' })
+content += '<script src="//twemoji.maxcdn.com/twemoji.min.js"></script><script>twemoji.parse(document.body);</script></body></html>'
+
+fs.writeFile("/tmp/complete.html", content, function(err) {
+  if(err) return console.log(err)
+  console.log("The file was saved!")
+})
