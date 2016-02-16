@@ -213,7 +213,7 @@
   /* prevent textarea resize behaviour */
   resize: none;
   margin-top: 6.5rem;
-  padding: 0 5rem 0 1.7rem;
+  padding: 0 5rem 1rem 1.7rem;
   width: 100%;
 }
 
@@ -221,6 +221,7 @@
   background-color: transparent;
   margin: 0rem 5rem 0 1.7rem;
   overflow-y: scroll;
+  margin-bottom: 45px;
 }
 
 .main_content_bottom_input.placeholdit {
@@ -342,7 +343,6 @@
   margin: auto;
   transform: translate(0, 1rem);
 }
-
 
 .main_keyslider_plus_wrp{
   width: 100%;
