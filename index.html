@@ -10,6 +10,7 @@
   <!-- build:css style.min.css -->  
   <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
   <link rel="stylesheet" type="text/css" href="assets/css/font.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/color.css">
   <link rel="stylesheet" type="text/css" href="assets/css/flex.css">
   <link rel="stylesheet" type="text/css" href="assets/css/generic.css">
   <link rel="stylesheet" type="text/css" href="assets/css/module_header.css">
@@ -141,13 +142,13 @@
   <div class="section_main section encryption" layout="column" layout-align="start center">
     <div class="section_main_wrapper" layout="column" layout-align="center center">
       <div class="main_content_top" layout="column">
-        <label class="header__label main_content_top_label" style-lable>YOUR MESSAGE</label>
+        <label uppercase class="header__label main_content_top_label" style-lable>YOUR MESSAGE</label>
         <textarea flex id="encryption_input" class="header__input main_content_top_input" style-input placeholder="Write your message here."></textarea>
-        <p id="encryption_input_count" class="encryption_input_count main_content_top_label" style-lable></p>
+        <p id="encryption_input_count" class="encryption_input_count main_content_top_label" uppercase style-lable></p>
         <div id="encryption_input_cleaner" class="svg_wrapper svg_wrapper_x" data-svg="assets/svg/x.svg"></div>
       </div>
       <div id="encryption_keyslider" class="main_keyslider">
-        <label class="header__label main_keyslider_bottom_label" style-lable>YOUR KEY</label>
+        <label class="header__label main_keyslider_bottom_label" uppercase style-lable>YOUR KEY</label>
         <div class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
@@ -161,7 +162,7 @@
         </div>
       </div>
       <div class="main_content_bottom" layout="column">
-        <label class="header__label main_content_bottom_label" style-lable>YOUR SECRET MESSAGE</label>
+        <label class="header__label main_content_bottom_label" uppercase style-lable>YOUR SECRET MESSAGE</label>
         <div flex id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" 
              placeholder="Pick a key to see your message encrypted here." style-input></div>
       </div>
@@ -179,13 +180,13 @@
   <div class="section_main section decryption" layout="column" layout-align="start center">
     <div class="section_main_wrapper" layout="column" layout-align="center center">
       <div class="main_content_top">
-        <label class="header__label main_content_top_label" style-lable>Paste the secret message you received here.</label>
+        <label class="header__label main_content_top_label" uppercase style-lable>Paste the secret message you received here.</label>
         <div id="decryption_input" class="header__input main_content_top_input" style-input>
           <!-- js injected -->
         </div>
       </div>
       <div id="decryption_keyslider" class="main_keyslider">
-        <label class="header__label main_keyslider_bottom_label" style-lable>Pick a key</label>
+        <label class="header__label main_keyslider_bottom_label" uppercase style-lable>Pick a key</label>
         <div class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
@@ -199,9 +200,10 @@
         </div>
       </div>
       <div class="main_content_bottom">
-        <label class="header__label main_content_bottom_label" style-lable>MESSAGE REVEALED</label>
-        <div id="decryption_output" class="header__input main_content_bottom_input unselectable placeholdit" placeholder="Your message will be encrypted here."></div>
-        <p></p>
+        <label class="header__label main_content_bottom_label" uppercase style-lable>MESSAGE REVEALED</label>
+        <div id="decryption_output" 
+             class="header__input main_content_bottom_input unselectable placeholdit" 
+             placeholder="Your message will be encrypted here."></div>
       </div>
       <div id="decryption_reply_button">
         <div class="main_share" layout="column" layout-align="start center">
@@ -216,37 +218,68 @@
   <!-- SHARE views/share -->
   <div class="section_share section" layout="column" layout-align="start center">
     <div class="share_message" layout="column" layout-align="start center">
-      <button class="share_message_exit" to-state="encrypt">X</button>
-      <div layout="column" layout-align="center center">
-        <h3>READY TO SHARE THE MESSAGE?</h3>
+
+      <div class="main_content_bottom">
+        <label class="header__label main_content_bottom_label" uppercase style-lable>MESSAGE REVEALED</label>
+        <div id="decryption_output" 
+             class="header__input main_content_bottom_input unselectable placeholdit" 
+             placeholder="Your message will be encrypted here."></div>
       </div>
-      <span class="share_message_item"></span>
+
+      <div layout="column" layout-align="center center">
+        <p style-text>SHARE THIS MESSAGE</p>
+      </div>
+
+
     </div>
-    <div class="share_key" layout="row" layout-align="center center">
+
+    <div class="share_social" layout="column" layout-align="space-around center" color-bg-main>
+      <lable style-lable color-ligth class="share_social_lable">with the world</lable>
+      <div class="" layout="row" layout-align="space-around center" wide>
+        <a href="" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
+        </a>
+        <a href="" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tw.svg"></div>
+        </a>
+        <a href="" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_go.svg"></div>
+        </a>
+        <a href="" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_go.svg"></div>
+        </a>
+      </div>
+      <lable style-lable color-ligth class="share_social_lable">with someone special</lable>
+      <div class="" layout="row" layout-align="space-around center" wide>
+        <a href="" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
+        </a>
+        <a href="" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tw.svg"></div>
+        </a>
+        <a href="" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_go.svg"></div>
+        </a>
+        <a href="" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_go.svg"></div>
+        </a>
+      </div>
+    </div>
+    
+    <div color-bg-main-ligther class="share_key" layout="row" layout-align="center center">
       <div class="share_key_emoji" layout="row" layout-align="center center">
         <p class="share_key_emoji-item"></p>
       </div>
-      <span class="share_key_sentence">Don't forget to give people your key if you want them to read the message.</span>
+      <span uppercase class="share_key_sentence">REMEMBER TO<br>SHARE THE KEY</span>
     </div>
-    <div class="share_social" layout="row" layout-align="space-around center">
-      <a href="" class="social">
-        <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
-      </a>
-      <a href="" class="social">
-        <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tw.svg"></div>
-      </a>
-      <a href="" class="social">
-        <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_go.svg"></div>
-      </a>
-      <a href="" class="social">
-        <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
-      </a>
-      <a href="" class="social">
-        <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_te.svg"></div>
-      </a>
+
+    <div color-bg-dark class="share_more" layout="row" layout-align="center center">
+      <span uppercase class="share_more_sentence">MORE ABOUT ENCRYPT</span>
     </div>
+
   </div>
   <!-- /SHARE -->
+
 
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="bower_components/lodash/lodash.js"></script>

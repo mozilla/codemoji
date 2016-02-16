@@ -1,0 +1,27 @@
+[color-bg-main]{
+  background-color: rgb(244,96,96);
+}
+[color-bg-main-ligther]{
+  background-color: rgb(248,160,160);
+}
+[color-bg-dark]{
+  background-color: rgb(40,51,68);
+}
+[color-bg-ligth]{
+  background-color: white;
+}
+
+
+[color-main]{
+  color: rgb(244,96,96);
+}
+[color-main-ligther]{
+  color: rgb(248,160,160);
+}
+[color-dark]{
+  color: rgb(40,51,68);
+}
+[color-ligth]{
+  color: white;
+}
+
