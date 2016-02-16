@@ -1,4 +1,4 @@
-(function (window, Cryptoloji, undefined) {
+(function (window, Cryptoloji, $, theaterJS, undefined) {
   'use strict'
 
   Cryptoloji.states.encrypt = {
@@ -27,8 +27,8 @@
         Cryptoloji.UI.KeyModal().select(key)
         
         if ($('#encryption_input').val().length == 0) {
-          $('body').addClass('main_content_top_input-first')
-          animateInputPlaceholder(["You've picked a key.", "Write your message here to see it encrypted."])
+          var newplaceholder = ['You\'ve picked a key...', 300, -2, 400, ' Write your message here to see it encrypted.', 600]
+          animateInputPlaceholder(newplaceholder)
         }
         Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.encryptText()
@@ -75,21 +75,26 @@
 
   function animateInputPlaceholder (text) {
     // store current placeholder
-    var encryptionInputPlaceholder = text ? text : $('#encryption_input').attr('placeholder')
-    // remove it for a cleaner start
-    $('#encryption_input').attr('placeholder', '')
+    var inputElem = $('#encryption_input')
+    var encryptionInputPlaceholder = text ? text : inputElem.attr('placeholder')
+
     // typify placeholder
-    $('#encryption_input').typed({
-      strings: [encryptionInputPlaceholder],
-      typeSpeed: 10,
-      contentType: 'text',
-      showCursor: false,
-      attr: 'placeholder',
-      callback: function () {
-        // everything back to normal please
-        setTimeout(function () { $('body').removeClass('main_content_top_input-first') }, 1000)          
-      }
-    })
+    theaterJS()
+      .addActor('inputPlaceholder', {speed: 1.1, accuracy: 1}, function (displayValue) {
+        inputElem.attr('placeholder', displayValue)
+      })
+      .on('type:start', function () {
+        $('body').addClass('main_content_top_input-first')
+        // remove current placeholder for a cleaner start
+        inputElem.attr('placeholder', '')
+      })
+      .addScene('inputPlaceholder:', encryptionInputPlaceholder)
+      .addScene(function (done) {
+        setTimeout(function () {
+          $('body').removeClass('main_content_top_input-first')
+          done()
+        }, 400)
+      })
   }
 
   function emptyInput () {
@@ -109,4 +114,4 @@
     $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
   }
 
-})(window, window.Cryptoloji); 
+})(window, window.Cryptoloji, window.jQuery, window.theaterJS);
