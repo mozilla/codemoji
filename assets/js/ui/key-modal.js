@@ -32,7 +32,6 @@
 
   KeyModal.prototype.close = function close () {
     var self = this
-    self.resetSelection()
     $('body').removeClass('main_key_modal-open')
     return self
   }
@@ -52,8 +51,6 @@
 
   KeyModal.prototype.onClick = function onClick (event) {
     var self = this
-    // remove selected from keyslider
-    self.resetSelection()
     var key = $(event.target).closest('.key').attr('key')
     self.select(key)
     return self
