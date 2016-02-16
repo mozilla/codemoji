@@ -23,6 +23,10 @@
       })
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
+        if ($('#encryption_input').val().length == 0) {
+          $('body').addClass('main_content_top_input-first')
+          animateInputPlaceholder(["You've picked a key.", "Write your message here to see it encrypted.")
+        }
         Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.encryptText()
       })
@@ -65,9 +69,9 @@
     }
   }
 
-  function animateInputPlaceholder () {
+  function animateInputPlaceholder (text) {
     // store current placeholder
-    var encryptionInputPlaceholder = $('#encryption_input').attr('placeholder')
+    var encryptionInputPlaceholder = text ? text : $('#encryption_input').attr('placeholder')
     // remove it for a cleaner start
     $('#encryption_input').attr('placeholder', '')
     // typify placeholder
