@@ -38,20 +38,21 @@
 
   KeyModal.prototype.fill = function fill (emojis) {
     var self = this
-    if (self.filled) return
-    self.filled = true
-    
-    var text = ''
-    _.each(emojis, function(elem) {
-      text += _createKeyElement(elem)
-    })
-    $('.main_key_modal_emoji_container', self.$element).append(text)
+    // if element has been filled once, avoid filling again
+    if (!self.filled) {
+      self.filled = true
+      var text = ''
+      _.each(emojis, function(elem) { text += _createKeyElement(elem) })
+      $('.main_key_modal_emoji_container', self.$element).append(text)
+    }
     return self
   }
 
   KeyModal.prototype.onClick = function onClick (event) {
     var self = this
+    // get key value
     var key = $(event.target).closest('.key').attr('key')
+    // trigger select
     self.select(key)
     return self
   }
