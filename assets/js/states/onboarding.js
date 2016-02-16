@@ -5,8 +5,8 @@
     enter: function () {
 
       Cryptoloji.stateman.on('svg:loaded', function(p){
-        if(p == 'assets/svg/onboarding.svg'){
-          Cryptoloji.buildSlider('.slider_wrapper')
+        if(p == 'assets/svg/onboarding_bottom.svg'){
+          if(!Cryptoloji.onBoardingSlider) Cryptoloji.buildSlider('.slider_wrapper')
         }
       })
 
