@@ -3,6 +3,8 @@
 
   Cryptoloji.states.encrypt = {
     enter: function () {
+      var theater = theaterJS()
+
       Cryptoloji.stateman.emit('header:show')
 
       Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
@@ -15,7 +17,7 @@
       $(".encryption").addClass("section-show")
 
       // animate input placeholder text
-      animateInputPlaceholder()
+      animateInputPlaceholder(theater)
 
       // encrypt text on input
       $('#encryption_input').bind('input propertychange', function() {
@@ -27,8 +29,8 @@
         Cryptoloji.UI.KeyModal().select(key)
         
         if ($('#encryption_input').val().length == 0) {
-          var newplaceholder = ['You\'ve picked a key...', 300, -2, 400, ' Write your message here to see it encrypted.', 600]
-          animateInputPlaceholder(newplaceholder)
+          var newplaceholder = ['You\'ve picked a key.', 400, 'inputPlaceholder:Write your message here to see it encrypted.', 600]
+          animateInputPlaceholder(theater, newplaceholder)
         }
         Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.encryptText()
@@ -73,28 +75,30 @@
     }
   }
 
-  function animateInputPlaceholder (text) {
+  function animateInputPlaceholder (theater, text) {
     // store current placeholder
     var inputElem = $('#encryption_input')
     var encryptionInputPlaceholder = text ? text : inputElem.attr('placeholder')
 
-    // typify placeholder
-    theaterJS()
-      .addActor('inputPlaceholder', {speed: 1.1, accuracy: 1}, function (displayValue) {
-        inputElem.attr('placeholder', displayValue)
-      })
-      .on('type:start', function () {
-        $('body').addClass('main_content_top_input-first')
-        // remove current placeholder for a cleaner start
-        inputElem.attr('placeholder', '')
-      })
-      .addScene('inputPlaceholder:', encryptionInputPlaceholder)
-      .addScene(function (done) {
-        setTimeout(function () {
-          $('body').removeClass('main_content_top_input-first')
-          done()
-        }, 400)
-      })
+    // typify placeholder (if it'is not playing yet)
+    if (theater.status !== 'playing') {
+      theater
+        .addActor('inputPlaceholder', {speed: 1.1, accuracy: 1}, function (displayValue) {
+          inputElem.attr('placeholder', displayValue)
+        })
+        .on('type:start', function () {
+          $('body').addClass('main_content_top_input-first')
+          // remove current placeholder for a cleaner start
+          inputElem.attr('placeholder', '')
+        })
+        .addScene('inputPlaceholder:', encryptionInputPlaceholder)
+        .addScene(function (done) {
+          setTimeout(function () {
+            $('body').removeClass('main_content_top_input-first')
+            done()
+          }, 400)
+        })
+    }
   }
 
   function emptyInput () {
