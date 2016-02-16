@@ -1,3 +1,4 @@
+
 (function (window, Cryptoloji, $, undefined) {
 
 
@@ -24,13 +25,10 @@
 	    var step = 0
 	    var consolidated_step = 0
 	    var dir
+	    var currpagex
 
 	    $('#onboarding_svg svg').removeAttr('width')
 	    $('#onboarding_svg svg').removeAttr('height')
-
-	    TweenLite.from('#onboarding_svg #text1', 1, {delay:1, opacity:0})
-	    TweenLite.set('#onboarding_svg #text2', {x:svgw})
-	    TweenLite.set('#onboarding_svg #text3', {x:svgw*2})
 
 	    var letter_icons = ['#single_c_1', '#single_i_1', '#single_i_1', '#single_i_1', '#single_o_1', '#single_o_2']
 	    var icon_icons = ['#icon_c_1', '#icon_i_1', '#icon_i_2', '#icon_i_3', '#icon_o_1', '#icon_o_2']
@@ -42,43 +40,41 @@
 	      TweenLite.set('#onboarding_svg '+e, {opacity:0})
 	    })
 
-	    TweenLite.set('#onboarding_svg #watermelon', {x:0})
-	    TweenLite.set('#onboarding_svg #pole_1_', {x:svgw})
-	    TweenLite.set('#onboarding_svg #orange', {x:svgw*2})
-
 	    el.on('touchmousedown', function(e) {
-	      currentX = e.pageX;
-	      mousedown=true;
+	    	currpagex=e.pageX
+	    	currentX = e.pageX;
+	    	mousedown=true;
 	    });
 
 	    $('body').on('touchmousemove', function(e){
-	      if (!mousedown) return;
+	    	currpagex=e.pageX
+		    if (!mousedown) return;
 
-	      var fakt = 1;
-	      if(step==0 && e.pageX > currentX){
-	        fakt = .29;
-	      }
-	      if(step==num && e.pageX < currentX){
-	        fakt = .29;
-	      }
+		    var fakt = 1;
+		    if(step==0 && e.pageX > currentX){
+		      fakt = .29;
+		    }
+		    if(step==num && e.pageX < currentX){
+		      fakt = .29;
+		    }
 
-	      if(lastX < currentX){
-	        dir=1
-	      }else{
-	        dir=-1
-	      }
+		    if(lastX < currentX){
+		      dir=1
+		    }else{
+		      dir=-1
+		    }
 
-	      currentShift = (e.pageX - currentX) * fakt;
+		    currentShift = (e.pageX - currentX) * fakt;
 
-	      TweenLite.set(el[0], {x:currentPos+currentShift})
-	      
-	      var shiftNorm = mapval(currentPos+currentShift, 0, w*num, 0, 1)
+		    TweenLite.set(el[0], {x:currentPos+currentShift})
+		    
+		    var shiftNorm = mapval(currentPos+currentShift, 0, w*num, 0, 1)
 
-	      var svgval2 = mapval(shiftNorm, 0, 1, 0, (svgw*num));
-	      handlePosition(svgval2);
-	      
-	      spring.setCurrentValue(shiftNorm*-1);
-	      lastX = e.pageX;
+		    var svgval2 = mapval(shiftNorm, 0, 1, 0, (svgw*num));
+		    handlePosition(svgval2);
+		    
+		    spring.setCurrentValue(shiftNorm*-1);
+		    lastX = e.pageX;
 	    })
 
 
@@ -88,15 +84,14 @@
 	      currentPos += currentShift;
 
 	      previous = step
-
-	      var diff = Math.abs(e.pageX - currentX)
+	      var diff = (currpagex) ? Math.abs(currpagex - currentX) : 0
 	      if(lastX < currentX){
 	        dir=1
-	        if(diff>5) step++;
+	        if(diff>10) step++;
 	        if(step > num-1) step=num-1;
 	      }else{
 	        dir=-1
-	        if(diff>5) step--;
+	        if(diff>10) step--;
 	        if(step < 0) step=0;
 	      }
 
@@ -194,14 +189,11 @@
 
 	      if(dir == 1){
 	        if(consolidated_step>=0 && consolidated_step<=1){
-	          TweenLite.set('#onboarding_svg #text1', {x:x})
-	          TweenLite.set('#onboarding_svg #text2', {x:svgw+x})
-	          TweenLite.set('#onboarding_svg #text3', {x:svgw*2+x})
+	          	TweenLite.set('#onboarding_svg #txts', {x:x})
 	        }
 	        if(consolidated_step>=2 && consolidated_step<=4){
-	          TweenLite.set('#onboarding_svg #watermelon', {x:svgw*2+x})
-	          TweenLite.set('#onboarding_svg #pole_1_', {x:svgw*3+x})
-	          TweenLite.set('#onboarding_svg #orange', {x:svgw*4+x})
+	        	console.log(svgw*2+x, x)
+	          	TweenLite.set('#onboarding_svg #icns', {x:svgw*2+x})
 	        }
 
 	      }
@@ -209,14 +201,10 @@
 
 	      if(dir == -1){
 	        if(consolidated_step>=0 && consolidated_step<=2){
-	          TweenLite.set('#onboarding_svg #text1', {x:x})
-	          TweenLite.set('#onboarding_svg #text2', {x:w+x})
-	          TweenLite.set('#onboarding_svg #text3', {x:w*2+x})
+	          	TweenLite.set('#onboarding_svg #txts', {x:x})
 	        }
 	        if(consolidated_step>=3 && consolidated_step<=4){
-	          TweenLite.set('#onboarding_svg #watermelon', {x:w*2+x})
-	          TweenLite.set('#onboarding_svg #pole_1_', {x:w*3+x})
-	          TweenLite.set('#onboarding_svg #orange', {x:w*4+x})
+	          	TweenLite.set('#onboarding_svg #icns', {x:svgw*2+x})
 	        }
 	      }
 	      
@@ -236,6 +224,7 @@
 	    function showHidelettersOne(invert){
 	      showHideElements(['#icon_c_1'], invert)
 	      showHideElements(['#single_c_1'], !invert)
+	      //TweenLite.to('#onboarding_svg #watermelon_icon_1_', 2, {transformOrigin:"50% 50%", rotation:360})
 	    }
 	    function showHidelettersTwo(invert){
 	      showHideElements(['#lttr_i','#icon_i_1','#icon_i_2','#icon_i_3'], invert)
@@ -257,3 +246,4 @@
   Cryptoloji.onBoardingSlider = false
 
 })(window, window.Cryptoloji, window.jQuery);
+
