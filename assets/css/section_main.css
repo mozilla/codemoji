@@ -352,7 +352,7 @@
 .encryption_input_count{
   /*bottom: 1rem;*/
   /*left: 2rem;*/
-      top: .8rem;
+   bottom: .8rem;
     right: .7rem;
   position: absolute;
   margin-left: 0;
