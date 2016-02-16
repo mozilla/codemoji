@@ -63,6 +63,7 @@
       })
     },
     leave: function () {
+      Cryptoloji.UI.KeyModal().close()
       $('.encryption').removeClass('section-show')
       Cryptoloji.stateman.off('encrypt')
       Cryptoloji.stateman.off('keyslider')
