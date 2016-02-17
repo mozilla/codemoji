@@ -5,6 +5,13 @@
   <meta name="viewport" content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0'/>
   <title>Mozilla Cryptoloji</title>
 
+  <!-- share meta descriptions -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cryptoloji" />
+  <meta property="og:description" content="A secret message" />
+  <!-- <meta property="og:image" content="" /> -->
+  <meta property="og:site_name" content="Cryptoloji" />
+
   <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
   <!-- build:css style.min.css -->  
@@ -44,8 +51,10 @@
       </h1> -->
       <!-- <button class="header_share" to-state="share">SHARE</button> -->
       <div layout="column" layout-align="center center">
-        <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header.svg"
-             layout="column" layout-align="center center"></div>
+        <a to-state="welcome">
+          <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header.svg"
+               layout="column" layout-align="center center"></div>
+        </a>
       </div>
   </div>
   <!-- /HEADER -->
@@ -83,7 +92,6 @@
 
     <div layout="row" class="slider_wrapper">
 
-
       <div layout="column" layout-align="center center" wide flex>
       </div>
 
@@ -106,6 +114,9 @@
     <div id="onboarding_svg" layout="column" layout-align="center center" wide data-svg="assets/svg/onboarding_bottom.svg">
     </div>
 
+    <div wide center style="margin-top: 0.5rem;z-index: 9999;height: 3rem;">
+      <a href="" to-state="encrypt">skip</a>
+    </div>
     <div class="onboarding_pages" layout="row" layout-align="center center">
       <div class="current"></div>
       <div></div>
@@ -174,7 +185,7 @@
       </div>
       <div id="encryption_share_button">
         <div class="main_share" layout="column" layout-align="start center">
-          <p class="encryption_share_button" to-state="share">Share this message</p>
+          <a class="encryption_share_button" to-state="share">Share this message</a>
         </div>
       </div>
     </div>
@@ -223,58 +234,73 @@
 
   <!-- SHARE views/share -->
   <div color-bg-main class="section_share section" layout="column" layout-align="start center">
-    <div class="share_message" layout="column" layout-align="start center">
-      <div class="main_content_bottom" layout="column">
-        <label class="header__label main_content_bottom_label" uppercase style-lable>SECRET MESSAGE</label>
-        <div id="decryption_output" flex
-             class="header__input main_content_bottom_input" 
-             placeholder="Your message will be encrypted here."></div>
+    <div class="share_social" layout="column" layout-align="space-around center" flex wide>
+      <div id="share_message_exit" class="share_message_exit" style-title to-state="encrypt" data-svg="assets/svg/x.svg"></div>
+      <div class="share_message">
+        <span style-text uppercase color-light>SHARE THIS MESSAGE</span>
+      </div>
+
+      <div>
+        <lable style-lable color-light class="share_social_lable">Shout it from the rooftops</lable>
+        <div class="share_social_wrapper" layout="row" layout-align="space-around center">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcrypt.ji%2F937U2M9
+        " class="social">
+            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
+          </a>
+          <!-- <a href="twitter://post?message=https%3A%2F%2Fcrypt.ji%2F937U2M9" class="social"> -->
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcrypt.ji%2F937U2M9&text=a%20message" class="social">
+            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tw.svg"></div>
+          </a>
+          <a href="https://plus.google.com/share?url=https%3A%2F%2Fcrypt.ji%2F937U2M9" class="social">
+            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_go.svg"></div>
+          </a>
+          <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://crypt.ji/937U2M9&posttype=text&tags=cryptoloji,mozilla&description=https%3A%2F%2Fcrypt.ji%2F937U2M9" class="social">
+            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tu.svg"></div>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <lable style-lable color-light class="share_social_lable">Send it to someone special</lable>
+        <div class="share_social_wrapper" layout="row" layout-align="center center">
+          <a href="whatsapp://send?text=The text to share!" class="social">
+            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
+          </a>
+          <!-- <a href="" class="social">
+            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fm.svg"></div>
+          </a> -->
+          <a href="mailto:?subject=This is a secret&body=https://crypt.ji/937U2M9" class="social">
+            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_ma.svg"></div>
+          </a>
+          <!-- <a href="" class="social">
+            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
+          </a> -->
+        </div>
+      </div>
+
+      <div>
+        <lable style-lable color-ligth class="share_social_lable">Copy link</lable>
+        <div layout="row" layout-align="space-around center" wide>
+          <input id="share_copytoclipboard" class="share_text" color-dark style-lable type="text" readonly="readonly" data-clipboard-text="https://crypt.ji/937U2M9" value="crypt.ji/937U2M9"/>
+        </div>
       </div>
     </div>
-    <div class="share_text_wrapper" layout="column" layout-align="center center" wide>
-      <p layout="column" layout-align="center center" style-text class="share_text">SHARE THIS MESSAGE</p>
-    </div>
-    <div class="share_social" layout="column" layout-align="space-around center" color-bg-main>
-      <lable style-lable color-light class="share_social_lable">with the world</lable>
-      <div class="share_social_wrapper" layout="row" layout-align="space-around center" wide>
-        <a href="" class="social">
-          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
-        </a>
-        <a href="" class="social">
-          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tw.svg"></div>
-        </a>
-        <a href="" class="social">
-          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_go.svg"></div>
-        </a>
-        <a href="" class="social">
-          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tu.svg"></div>
-        </a>
-      </div>
-      <label style-lable color-light class="share_social_lable">with someone special</label>
-      <div class="share_social_wrapper" layout="row" layout-align="space-around center" wide>
-        <a href="" class="social">
-          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
-        </a>
-        <a href="" class="social">
-          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fm.svg"></div>
-        </a>
-        <a href="" class="social">
-          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_ma.svg"></div>
-        </a>
-        <a href="" class="social">
-          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
-        </a>
-      </div>
-    </div>
-    <div color-bg-light class="share_key" layout="row" layout-align="start center">
+
+    <div color-bg-light class="share_key" layout="column" layout-align="start center">
       <div class="share_key_emoji" layout="row" layout-align="center center">
-        <p class="share_key_emoji-item"></p>
+        <p class="share_key_emoji-item" color-bg-light>
+          <img class="emoji" draggable="false" alt="🎮" src="http://twemoji.maxcdn.com/svg/1f3ae.svg">
+        </p>
       </div>
-      <span uppercase class="share_key_sentence">REMEMBER TO<br>SHARE THE KEY</span>
+      <p style-lable class="share_key_sentence">Without the secret key the message will be undecryptable. Find a way to share it!</p>
+      <div class="share_text_wrapper" layout="column" layout-align="center center" wide>
+        <a id="share_copykeytoclipboard" class="share_text" color-bg-main style-lable data-clipboard-text="🎮">COPY YOUR KEY</a>
+      </div>
     </div>
-    <div color-bg-dark class="share_more" layout="row" layout-align="center center">
-      <span uppercase class="share_more_sentence" to-state="more">MORE ABOUT ENCRYPT</span>
-      <div id="share_more_arrow" class="share_more_arrow"></div>
+
+    <div color-bg-dark class="share_more" layout="column" layout-align="center center">
+      <span uppercase>MOZILLA</span>
+      <p style-lable>Cryptoloji is part of Mozilla ENCRYPT campaign</p>
     </div>
   </div>
   <!-- /SHARE -->
@@ -300,6 +326,7 @@
   <script type="text/javascript" src="bower_components/gsap/src/uncompressed/easing/EasePack.js"></script>
   <script type="text/javascript" src="bower_components/rebound-js/rebound.js"></script>
   <script type="text/javascript" src="bower_components/punycode/punycode.js"></script>
+  <script type="text/javascript" src="bower_components/clipboard/dist/clipboard.js"></script>
   <script type="text/javascript" src="vendor/theater.js"></script>
   
   <script type="text/javascript" src="assets/js/touchmouse.js"></script>

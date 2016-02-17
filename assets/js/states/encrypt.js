@@ -29,7 +29,7 @@
         Cryptoloji.UI.KeyModal().select(key)
         
         if ($('#encryption_input').val().length == 0) {
-          var newplaceholder = ['You\'ve picked a key.', 400, 'inputPlaceholder:Write your message here to see it encrypted.', 600]
+          var newplaceholder = ['You\'ve picked a key.', 400, '\nWrite your message here to see it encrypted.', 600]
           animateInputPlaceholder(theater, newplaceholder)
         }
         Cryptoloji.UI.selectKey(key)
@@ -45,7 +45,10 @@
       })
 
       // show share button at proper time
+      $('#encryption_share_button').css('display', 'none')
+      $('.main_keyslider_plus', self.$element).css('display', 'none')
       Cryptoloji.stateman.on('encrypt:show-share', function() {
+        $('#encryption_share_button').css('display', 'block')
         $('#encryption_share_button').addClass('main_share-open')
       })
 
