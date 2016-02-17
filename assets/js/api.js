@@ -3,7 +3,7 @@
   function getMessage (id) {
     return Q.promise(function (resolve, reject) {
       var url = 'backend' + escape(id)
-      url = 'backend/message.json' // only for DEV
+      url = 'backend/GET-message-id.json' // only for DEV
       $.get(url)
         .done(function (result) {
           // console.log(result)
