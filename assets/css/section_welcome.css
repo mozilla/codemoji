@@ -1,12 +1,13 @@
 .section_welcome{
   z-index: 10;
-  background-color: #E5E5E5;
   text-align: center;
   padding: 2rem 3.5rem;
 }
 
 .welcome_button_more{
     margin: 2rem;
+    font-size: 1.8rem;
+    border-radius: 10rem;
 }
 
 .svg_wrapper_welcome{
@@ -15,5 +16,6 @@
 
 .welcome_button_send{
   margin-bottom: 2rem;
-  color: gray;
+  font-size: 1.2rem;
+  border-radius: 10rem;
 }
