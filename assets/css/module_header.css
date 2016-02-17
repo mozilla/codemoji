@@ -5,7 +5,6 @@
   width: 100%;
   left: 0;
   right: 0;
-  height: 45px;
   background-color: white;
 }
 
@@ -33,4 +32,9 @@
     background-color: transparent;
     padding: 0;
     margin: 0;
+}
+
+.svg_wrapper_header{
+    width: 18rem;
+    height: 4.5rem;
 }
