@@ -161,7 +161,13 @@
   position: relative;
 }
 
-
+.share_copytoclipboard {
+  border: none;
+  border-radius: 10rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
 
 
 
