@@ -16,6 +16,7 @@
 }
 
 .encryption .main_content_top,
+.encryptionInput .main_content_top,
 .decryption .main_content_bottom{
   background-color: #B3B3B3;
 }
@@ -349,7 +350,8 @@
   height: 100%;
 }
 
-.encryption_input_count{
+.encryption_input_count,
+.edit_encryption_input_count{
   /*bottom: 1rem;*/
   /*left: 2rem;*/
    bottom: .8rem;
@@ -362,7 +364,8 @@
   color: #E6E6E6;
 }
 
-.encryption_input_count.oversize{
+.encryption_input_count.oversize,
+.edit_encryption_input_count.oversize{
   color: red;
 }
 

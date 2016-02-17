@@ -8,6 +8,7 @@
   stateman
     .state('welcome', Cryptoloji.states.welcome)
     .state('encrypt', Cryptoloji.states.encrypt)
+    .state('encryptionInput', Cryptoloji.states.encryptionInput)
     .state('decrypt', Cryptoloji.states.decrypt)
     .state('decrypt/:id', Cryptoloji.states.decrypt_with_id)
     .state('share',   Cryptoloji.states.share)
