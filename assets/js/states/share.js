@@ -1,7 +1,8 @@
 (function (window, Cryptoloji, undefined) {
   'use strict'
 
-  var clipboard = null
+  var linkClipboard = null
+  var keyClipboard = null
   
   Cryptoloji.states.share = {
     enter: function () {
@@ -10,18 +11,22 @@
         $("#share_more_arrow").addClass("shown")
       }, 0)
 
-      clipboard = new Clipboard('#share_copytoclipboard')
-      fillLinkCopy()
-      copyToClipboardHandler()
+      // fillLinkCopy()
+      // fillKeyCopy()
+
+      linkClipboard = new Clipboard('#share_copytoclipboard')
+      keyClipboard = new Clipboard('#share_copykeytoclipboard')
+      copyLinkToClipboardHandler()
+      copyKeyToClipboardHandler()
     },
     leave: function () {
       $(".section_share").removeClass("section-show")
-      clipboard.destroy()
+      linkClipboard.destroy()
     }
   }
 
-  function copyToClipboardHandler () {
-    clipboard.on('success', function(e) {
+  function copyLinkToClipboardHandler () {
+    linkClipboard.on('success', function(e) {
       e.clearSelection()
 
       // give feedback in place
@@ -32,7 +37,26 @@
       }, 350)
     });
 
-    clipboard.on('error', function(e) {
+    linkClipboard.on('error', function(e) {
+      alert('cannot copy')
+      console.error('Action:', e.action)
+      console.error('Trigger:', e.trigger)
+    });
+  }
+
+  function copyKeyToClipboardHandler () {
+    keyClipboard.on('success', function(e) {
+      e.clearSelection()
+
+      // give feedback in place
+      var oldVal = $(e.trigger).text()
+      $(e.trigger).text('Copied!')
+      setTimeout(function () {
+        $(e.trigger).text(oldVal)
+      }, 350)
+    });
+
+    keyClipboard.on('error', function(e) {
       alert('cannot copy')
       console.error('Action:', e.action)
       console.error('Trigger:', e.trigger)
