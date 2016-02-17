@@ -26,7 +26,7 @@
     // Key modal setup
     //    
     Cryptoloji.UI.KeyModal('#key-modal')
-      .fill([].concat(emojiList, emojiList)) // just for testing
+      .fill(EmojiList)
       .addClickHandler('#encryption_key_modal_open')
       .addClickHandler('#decryption_key_modal_open')
 

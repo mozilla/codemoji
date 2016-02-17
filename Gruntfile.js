@@ -12,7 +12,9 @@ module.exports = function (grunt) {
           '*.html',
           'assets/css/*.css',
           'assets/js/*.js',
-          'assets/js/{*,}/*.js'
+          'assets/js/{*,}/*.js',
+          'libs/*.js',
+          'libs/{*,}/*.js'
           ]
         },
         options: {

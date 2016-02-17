@@ -27,10 +27,11 @@
   <script type="text/javascript">
     // Setup global namespace
     window.Cryptoloji = {
-      states: {}
+      states: {},
+      current: { input: null, output: null, key: null }
     }
 
-    var emojiList = [ '😁', '👀', '🚀', '🍉', '⚡', '💩', '😡', '🍕', '🍊', '😱', '💛', '😹','😤','😐','😖','😀','😻','😕','🙍','😠', '☺', '😈', '👹', '👺', '👓', '👔', '👕', '👖', '🐯', '🐆', '🐖', '🐏', '🐫', '🐿', '🐦', '🍉', '🍊', '🍱', '🍲', '🍝', '🍩' ]
+    // Maybe? var keysliderEmojiList = [ '😁', '👀', '🚀', '🍉', '⚡', '💩', '😡', '🍕', '🍊', '😱' ]
   </script>
 </head>
 <body class="main_content_top_input-first">
@@ -292,6 +293,7 @@
   <script type="text/javascript" src="bower_components/gsap/src/uncompressed/plugins/CSSPlugin.js"></script>
   <script type="text/javascript" src="bower_components/gsap/src/uncompressed/easing/EasePack.js"></script>
   <script type="text/javascript" src="bower_components/rebound-js/rebound.js"></script>
+  <script type="text/javascript" src="bower_components/punycode/punycode.js"></script>
   <script type="text/javascript" src="vendor/theater.js"></script>
   
   <script type="text/javascript" src="assets/js/touchmouse.js"></script>
@@ -299,10 +301,11 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/twemoji/1.3.2/twemoji.min.js"></script>
   
   <!-- build:js optimized.js -->
-  <script type="text/javascript" src="assets/js/libs/caesar-shifter.js"></script>
-  <script type="text/javascript" src="assets/js/libs/emojifier.js"></script>
-  <script type="text/javascript" src="assets/js/libs/encrypter.js"></script>
-  <script type="text/javascript" src="assets/js/libs/main.js"></script>
+  <script type="text/javascript" src="libs/crypto-lib/char-list.js"></script>
+  <script type="text/javascript" src="libs/crypto-lib/emoji-list.js"></script>
+  <script type="text/javascript" src="libs/crypto-lib/caesar-shifter.js"></script>
+  <script type="text/javascript" src="libs/crypto-lib/emojifier.js"></script>
+  <script type="text/javascript" src="libs/crypto-lib.js"></script>
   
   <script type="text/javascript" src="assets/js/states/decrypt.js"></script>
   <script type="text/javascript" src="assets/js/states/decrypt_with_id.js"></script>

@@ -17,13 +17,14 @@
   ],
   "dependencies": {
     "fastclick": "~1.0.6",
-    "lodash": "~3.10.1",
+    "lodash": "^4.0.0",
     "normalize-css": "~3.0.3",
     "jquery": "~2.2.0",
     "esrever": "~0.2.0",
     "stateman": "0.2.0",
     "q": "1.0.1",
     "gsap": "~1.18.2",
-    "rebound-js": "~0.0.10"
+    "rebound-js": "~0.0.10",
+    "punycode": "^1.4.0"
   }
 }

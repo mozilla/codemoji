@@ -8,7 +8,7 @@
       Cryptoloji.stateman.emit('header:show')
 
       Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
-        .fill(_.take(emojiList, 10))
+        .fill(_.take(EmojiList, 10))
 
       Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')
         .setMaxSize(Cryptoloji.settings.inputMaxSize)
