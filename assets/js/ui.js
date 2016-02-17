@@ -17,6 +17,7 @@
     console.debug('Chosen text:', Cryptoloji.current.input)
     text = CryptoLib.decrypt(Cryptoloji.current.input, Cryptoloji.current.key)
     console.debug('Decrypted text:', text)
+    Cryptoloji.current.output = text
     $('#decryption_output').removeClass('placeholdit').text(text)
     Cryptoloji.stateman.emit('decrypt:show-reply')
   }
@@ -30,6 +31,7 @@
         console.debug('Chosen text:', text)
         text = CryptoLib.encrypt(Cryptoloji.current.input, Cryptoloji.current.key)
         console.debug('Encrypted text:', text)
+        Cryptoloji.current.output = text
         text = toTwemoji(text)
         $('#encryption_output').html(text)
         $('.share_message_item').html(text)

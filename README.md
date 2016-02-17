@@ -8,6 +8,8 @@ Mozilla Foundation Cryptoloji frontend application for Encryption Campaign Beat 
 This Source Code is subject to the terms of the Mozilla Public License, v. 2.0.  
 A copy of the License is available in the LICENSE file.
 
+--------------------------------------------------------------------------------
+
 polyfill 
   https://github.com/mathiasbynens/String.fromCodePoint
   https://github.com/mathiasbynens/String.prototype.codePointAt
@@ -17,3 +19,6 @@ Resources
   => https://github.com/mathiasbynens/regenerate
   => https://github.com/bestiejs/punycode.js
   https://github.com/mathiasbynens/jsesc
+
+Share to app ( iOS + Android )
+  <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share">Share via Whatsapp</a>
