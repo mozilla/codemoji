@@ -94,7 +94,7 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding: .2rem 1rem;
+  padding: 1.2rem 1rem .6rem 1rem;
   font-size: 200%;
   overflow-y: scroll; 
   height: 100%;
