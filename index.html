@@ -223,14 +223,14 @@
 
   <!-- SHARE views/share -->
   <div color-bg-main class="section_share section" layout="column" layout-align="start center">
-    <div class="share_social" layout="column" layout-align="space-around center" flex>
-      <div id="share_close" class="share_close"></div>
-      <div class="share_message" layout="column" layout-align="start center">
-        <span uppercase class="share_key_sentence">SHARE THIS MESSAGE</span>
+    <div class="share_social" layout="column" layout-align="space-around center" flex wide>
+      <div id="share_message_exit" class="share_message_exit" style-title>x</div>
+      <div class="share_message">
+        <span style-text uppercase color-light>SHARE THIS MESSAGE</span>
       </div>
 
-      <lable style-lable color-ligth class="share_social_lable">Shout it from the rooftops</lable>
-      <div class="share_social_wrapper" layout="row" layout-align="space-around center" wide>
+      <lable style-lable color-light class="share_social_lable">Shout it from the rooftops</lable>
+      <div class="share_social_wrapper" layout="row" layout-align="space-around center">
         <a href="" class="social">
           <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
         </a>
@@ -244,8 +244,8 @@
           <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tu.svg"></div>
         </a>
       </div>
-      <lable style-lable color-ligth class="share_social_lable">Send it to someone special</lable>
-      <div class="share_social_wrapper" layout="row" layout-align="space-around center" wide>
+      <lable style-lable color-light class="share_social_lable">Send it to someone special</lable>
+      <div class="share_social_wrapper" layout="row" layout-align="center center">
         <a href="" class="social">
           <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
         </a>
@@ -260,19 +260,26 @@
         </a>
       </div>
       <lable style-lable color-ligth class="share_social_lable">Copy link</lable>
-      <div class="share_social_wrapper" layout="row" layout-align="space-around center" wide>
-        <input id="share_copytoclipboard" class="share_copytoclipboard" type="text" readonly="readonly" data-clipboard-text="https://crypt.ji/937U2M9" value="crypt.ji/937U2M9"/>
+      <div layout="row" layout-align="space-around center" wide>
+        <input id="share_copytoclipboard" class="share_text" color-dark style-lable type="text" readonly="readonly" data-clipboard-text="https://crypt.ji/937U2M9" value="crypt.ji/937U2M9"/>
       </div>
     </div>
-    <!-- OK -->
-    <div color-bg-ligth class="share_key" layout="row" layout-align="start center">
+
+    <div color-bg-light class="share_key" layout="column" layout-align="start center">
       <div class="share_key_emoji" layout="row" layout-align="center center">
-        <p class="share_key_emoji-item"></p>
+        <p class="share_key_emoji-item" color-bg-light>
+          <img class="emoji" draggable="false" alt="🎮" src="http://twemoji.maxcdn.com/svg/1f3ae.svg">
+        </p>
       </div>
-      <span uppercase class="share_key_sentence">REMEMBER TO<br>SHARE THE KEY</span>
+      <p style-lable class="share_key_sentence">Without the secret key the message will be undecryptable. Find a way to share it!</p>
+      <div class="share_text_wrapper" layout="column" layout-align="center center" wide>
+        <a class="share_text" color-bg-main style-lable>COPY YOUR KEY</a>
+      </div>
     </div>
-    <div color-bg-dark class="share_more" layout="row" layout-align="center center">
-      <span uppercase class="share_more_sentence" to-state="more">MORE ABOUT ENCRYPT</span>
+
+    <div color-bg-dark class="share_more" layout="column" layout-align="center center">
+      <span uppercase>MOZILLA</span>
+      <p style-lable>Cryptoloji is part of Mozilla ENCRYPT campaign</p>
     </div>
   </div>
   <!-- /SHARE -->
