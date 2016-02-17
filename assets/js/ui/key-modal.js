@@ -42,7 +42,7 @@
     if (!self.filled) {
       self.filled = true
       var text = ''
-      _.each(emojis, function(elem) { text += _createKeyElement(elem) })
+      _.each(emojis, function(codePoint) { text += _createKeyElement(String.fromCodePoint(codePoint)) })
       $('.main_key_modal_emoji_container', self.$element).append(text)
     }
     return self

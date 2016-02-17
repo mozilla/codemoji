@@ -48,9 +48,7 @@
     self.filled = true
     
     var text = ''
-    _.each(emojis, function(elem) {
-      text += _createKeyElement(elem)
-    })
+    _.each(emojis, function(codePoint) { text += _createKeyElement(String.fromCodePoint(codePoint)) })
     $('.keyslider_content', self.$element).append(text)
   }
 
