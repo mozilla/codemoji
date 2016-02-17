@@ -1,10 +1,9 @@
 (function (window, Cryptoloji, $, theaterJS, undefined) {
   'use strict'
 
+  var theater = theaterJS()
   Cryptoloji.states.encrypt = {
     enter: function () {
-      var theater = theaterJS()
-
       Cryptoloji.stateman.emit('header:show')
 
       Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
@@ -14,7 +13,13 @@
         .setMaxSize(Cryptoloji.settings.inputMaxSize)
         .attachTo('#encryption_input')
 
-      $(".encryption").addClass("section-show")
+      $('.encryption').addClass('section-show')
+      $('body').addClass('main_content_top_input-first')
+
+      if ($('#encryption_input').val() !== '') {
+        $('#encryption_input_cleaner').show()
+        $('#encryption_input_count').show()
+      }
 
       // animate input placeholder text
       animateInputPlaceholder(theater)
@@ -27,9 +32,9 @@
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
         // select corresponding emoji in keymodal
         Cryptoloji.UI.KeyModal().select(key)
-        
-        if ($('#encryption_input').val().length == 0) {
-          var newplaceholder = ['You\'ve picked a key.', 400, 'inputPlaceholder:Write your message here to see it encrypted.', 600]
+
+        if ($('#encryption_input').val().length === 0) {
+          var newplaceholder = ['You\'ve picked a key.', 400, '\nWrite your message here to see it encrypted.', 600]
           animateInputPlaceholder(theater, newplaceholder)
         }
         Cryptoloji.UI.selectKey(key)
@@ -62,9 +67,10 @@
       })
 
       // show input related UI elements
-      $('#encryption_input').on('focus', function () {
-        $('#encryption_input_cleaner').show()
-        $('#encryption_input_count').show()
+      $('#encryption_input').on('focus', function (event) {
+        $('.encryptionInput').addClass('section-show')
+        $('#edit_encryption_input').focus()
+        Cryptoloji.stateman.go('encryptionInput')
       })
     },
     leave: function () {
@@ -103,6 +109,7 @@
 
   function emptyInput () {
     $('#encryption_input').val('')
+    $('#edit_encryption_input').val('')
     $('#encryption_input_cleaner').hide()
     $('#encryption_input_count').hide()
     $('#encryption_share_button').removeClass('main_share-open')
