@@ -10,7 +10,6 @@
         }
       })
 
-      // need a better way to handle this
       if(!Cryptoloji.onBoardingSlider) Cryptoloji.buildSlider('.slider_wrapper')
       
       $(".section_onboarding").addClass("section-show")
