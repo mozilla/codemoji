@@ -55,7 +55,7 @@
       emojis = EmojiList.slice(0, CharList.length)
     } else { 
       var z = key
-      var m = CharList.length
+      var m = EmojiList.length
       function getNext(x) { return (x * z) % m }
 
       var newEmojis = []

@@ -8,25 +8,49 @@ var chars = require('./libs/crypto-lib/char-list.js')
 console.log('chars  ', chars)
 
 var CryptoLib = require('./libs/crypto-lib.js')
-var encryptedText = CryptoLib.encrypt(chars, '🍘')
-console.log('encrypt', encryptedText)
-console.log('decrypt', CryptoLib.decrypt(encryptedText, '🍘'))
+// var encryptedText = CryptoLib.encrypt(chars, '🍘')
+// console.log('encrypt', encryptedText)
+// console.log('decrypt', CryptoLib.decrypt(encryptedText, '🍘'))
 
 
-CryptoLib.generateEmojiSubsetFrom('🍘')
-var encryptedText = CryptoLib.encrypt('this is a text', '🍘')
-console.log('encrypt', encryptedText)
-console.log('decrypt', CryptoLib.decrypt(encryptedText, '🍘'))
+// CryptoLib.generateEmojiSubsetFrom('🍘')
+// var encryptedText = CryptoLib.encrypt('this is a text', '🍘')
+// console.log('encrypt', encryptedText)
+// console.log('decrypt', CryptoLib.decrypt(encryptedText, '🍘'))
+
+var clearText = 'this is a text bau bau!!!'
 
 CryptoLib.generateEmojiSubsetFrom('🍎')
-var encryptedText = CryptoLib.encrypt('this is a text', '🍎')
+var encryptedText = CryptoLib.encrypt(clearText, '🍎')
+console.log('Cryptoloji with key 🍎')
 console.log('encrypt', encryptedText)
 console.log('decrypt', CryptoLib.decrypt(encryptedText, '🍎'))
 
 CryptoLib.generateEmojiSubsetFrom('🐝')
-var encryptedText = CryptoLib.encrypt('this is a text', '🐝')
+var encryptedText = CryptoLib.encrypt(clearText, '🐝')
+console.log('Cryptoloji with key 🐝')
 console.log('encrypt', encryptedText)
 console.log('decrypt', CryptoLib.decrypt(encryptedText, '🐝'))
+
+CryptoLib.generateEmojiSubsetFrom('💣')
+var encryptedText = CryptoLib.encrypt(clearText, '💣')
+console.log('Cryptoloji with key 💣')
+console.log('encrypt', encryptedText)
+console.log('decrypt', CryptoLib.decrypt(encryptedText, '💣'))
+
+CryptoLib.generateEmojiSubsetFrom('🚝')
+var encryptedText = CryptoLib.encrypt(clearText, '🚝')
+console.log('Cryptoloji with key 🚝')
+console.log('encrypt', encryptedText)
+console.log('decrypt', CryptoLib.decrypt(encryptedText, '🚝'))
+console.log('decrypt', CryptoLib.decrypt(encryptedText, '💺'))
+
+CryptoLib.generateEmojiSubsetFrom('💺')
+var encryptedText = CryptoLib.encrypt(clearText, '💺')
+console.log('Cryptoloji with key 💺')
+console.log('encrypt', encryptedText)
+console.log('decrypt', CryptoLib.decrypt(encryptedText, '💺'))
+console.log('decrypt', CryptoLib.decrypt(encryptedText, '🚝'))
 
 
 // caesar cypher OK
