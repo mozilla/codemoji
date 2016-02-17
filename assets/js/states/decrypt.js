@@ -11,7 +11,7 @@
       Cryptoloji.stateman.emit('header:show')
 
       Cryptoloji.UI.Keyslider('decrypt', '#decryption_keyslider')
-        .fill(_.take(emojiList, 10))
+        .fill(_.take(EmojiList, 10))
       
       $(".decryption").addClass("section-show")
 
