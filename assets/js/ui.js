@@ -5,10 +5,6 @@
     to see exposed method goto bottom :)
   */
 
-  function _createKeyElement (key) {
-    return '<p class="key" key="' + key + '">' + toTwemoji(key) + '</p>'
-  }
-
   //////////////////////////////////////////////////////////////////////////////
   //
   // public methods
@@ -40,16 +36,6 @@
         Cryptoloji.stateman.emit('encrypt:show-share')
       }
     }
-  }
-
-  function fillKeymodal (emojiList) {
-    var text = ''
-    _.times(20, function () {
-      _.each(emojiList, function(elem) {
-        text += _createKeyElement(elem)
-      })
-    })
-    $(".main_key_modal_emoji_container").append(text)
   }
 
   function handleHeader () {
@@ -110,7 +96,6 @@
   Cryptoloji.UI = {
     decryptText: decryptText,
     encryptText: encryptText,
-    fillKeymodal: fillKeymodal,
     handleHeader: handleHeader,
     handleSvgLoading: handleSvgLoading,
     selectKey: selectKey,
