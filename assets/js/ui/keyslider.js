@@ -25,8 +25,10 @@
     $('.keyslider_content', self.$element).css('padding-right', keysliderMore.width + keysliderMore.margin + 'rem')
     var offset = Cryptoloji.utils.remToPx(keysliderMore.width);
 
+
     $('.keyslider', self.$element).on('scroll', function() {
       if ($('.keyslider')[0].scrollWidth - $('.keyslider')[0].offsetWidth <= $('.keyslider', self.$element).scrollLeft() + offset){
+        $('.main_keyslider_plus', self.$element).css('display', 'block')
         self.$element.addClass("main_keyslider_plus-show")
         $('.main_keyslider_plus', self.$element).css('width', keysliderMore.width + 'rem')
       }
