@@ -36,6 +36,28 @@
   line-height: 120%;
   width: 100%;  
   padding: 0 2rem;
+  position: relative;
+  padding-bottom: 1.7rem;
+}
+
+.share_more_arrow{
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translate(-50%,0) rotate(45deg);
+  border-bottom: solid 2px white;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: solid 2px white;
+  transition: bottom .5s ease;
+  /*transition-delay: 2s;*/
+}
+
+.share_more_arrow.shown{
+  bottom: 14px;
 }
 
 .share_social{
@@ -68,6 +90,7 @@
 .svg_wrapper_social{
   width: 4rem;
   height: 4rem;
+  position: relative;
 }
 
 .share_key_emoji{
@@ -116,8 +139,26 @@
   border-bottom-right-radius: 0px;
 }
 
+.share_social_wrapper .svg_wrapper_social:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgb(248,160,160);
+  position: absolute;
+  border-radius: 50%;
+}
 
+.share_social_wrapper .svg_wrapper_social svg{
+  fill: white;
+  position: relative;
+}
 
+.social{
+  position: relative;
+}
 
 
 
