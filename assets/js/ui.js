@@ -16,20 +16,23 @@
 
   function decryptText () {
     var text = $('#decryption_input').attr('text')
-    console.debug('Chosen text:', text)
-    text = Cryptoloji.decrypt(text)
+    Cryptoloji.current.input = text
+
+    console.debug('Chosen text:', Cryptoloji.current.input)
+    text = CryptoLib.decrypt(Cryptoloji.current.input, Cryptoloji.current.key)
     console.debug('Decrypted text:', text)
     $('#decryption_output').removeClass('placeholdit').text(text)
     Cryptoloji.stateman.emit('decrypt:show-reply')
   }
   
   function encryptText() {
-    if (Cryptoloji.Encrypter.key) {
+    if (Cryptoloji.current.key) {
       var text = $('#encryption_input').val()
       if (text !== '' && !/^\s+$/.test(text)) {
+        Cryptoloji.current.input = text
         Cryptoloji.stateman.emit('encrypt:hide-output-placeholder')
         console.debug('Chosen text:', text)
-        text = Cryptoloji.encrypt(text)
+        text = CryptoLib.encrypt(Cryptoloji.current.input, Cryptoloji.current.key)
         console.debug('Encrypted text:', text)
         text = toTwemoji(text)
         $('#encryption_output').html(text)
@@ -59,7 +62,7 @@
   }
 
   function selectKey (key) {
-    Cryptoloji.use_key(key)
+    Cryptoloji.current.key = key
     console.debug('Chosen key', key)
     $(".share_key_emoji-item").html(toTwemoji(key))
   }
