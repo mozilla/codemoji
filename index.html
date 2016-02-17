@@ -174,7 +174,7 @@
       </div>
       <div id="encryption_share_button">
         <div class="main_share" layout="column" layout-align="start center">
-          <p class="encryption_share_button" to-state="share">Share this message</p>
+          <a class="encryption_share_button" to-state="share">Share this message</a>
         </div>
       </div>
     </div>
@@ -224,7 +224,7 @@
   <!-- SHARE views/share -->
   <div color-bg-main class="section_share section" layout="column" layout-align="start center">
     <div class="share_social" layout="column" layout-align="space-around center" flex wide>
-      <div id="share_message_exit" class="share_message_exit" style-title>x</div>
+      <div id="share_message_exit" class="share_message_exit" style-title to-state="encrypt" data-svg="assets/svg/x.svg"></div>
       <div class="share_message">
         <span style-text uppercase color-light>SHARE THIS MESSAGE</span>
       </div>
@@ -264,7 +264,7 @@
           </a>
         </div>
       </div>
-      
+
       <div>
         <lable style-lable color-ligth class="share_social_lable">Copy link</lable>
         <div layout="row" layout-align="space-around center" wide>

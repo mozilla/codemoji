@@ -93,6 +93,12 @@
   line-height: 0.8;
 }
 
+.share_message_exit svg{
+  height: 2rem;
+  width: 2rem;
+  fill: white;
+}
+
 .svg_wrapper_social{
   width: 4rem;
   height: 4rem;
