@@ -104,3 +104,14 @@ img.emoji {
   width: 100%;
 }
 
+
+[scroll-y]{
+    overflow:hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+[scroll-x]{
+    overflow:hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}

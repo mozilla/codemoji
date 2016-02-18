@@ -96,9 +96,10 @@
           flex-wrap: wrap;
   padding: 1.2rem 1rem .6rem 1rem;
   font-size: 200%;
-  overflow-y: scroll; 
   height: 100%;
-  -webkit-overflow: touch;
+  overflow:hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .main_key_modal_emoji_container{
   height: 100%;
@@ -253,9 +254,9 @@
   left: 0;
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
-  overflow-x: none;
-  -webkit-overflow: touch;
+  overflow:hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .keyslider_content{
