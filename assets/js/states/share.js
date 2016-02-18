@@ -14,8 +14,6 @@
       // fillLinkForClipboardCopy()
       fillKeyForClipboardCopy()
 
-      linkClipboard = new Clipboard('#share_copytoclipboard')
-      keyClipboard = new Clipboard('#share_copykeytoclipboard')
       copyLinkToClipboardHandler()
       copyKeyToClipboardHandler()
 
@@ -24,6 +22,7 @@
     leave: function () {
       $(".section_share").removeClass("section-show")
       linkClipboard.destroy()
+      keyClipboard.destroy()
 
       // sharer cleanup
       Cryptoloji.UI.Sharer('facebook').unbind()
@@ -36,6 +35,8 @@
   }
 
   function copyLinkToClipboardHandler () {
+    linkClipboard = new Clipboard('#share_copytoclipboard')
+
     linkClipboard.on('success', function(e) {
       e.clearSelection()
 
@@ -48,13 +49,37 @@
     });
 
     linkClipboard.on('error', function(e) {
-      alert('cannot copy')
-      console.error('Action:', e.action)
-      console.error('Trigger:', e.trigger)
+      console.warn('using copy fallback')
+      console.warn('Action:', e.action)
+      console.warn('Trigger:', e.trigger)
+      // select as fallback
+      var input = e.trigger
+      input.focus()
+      input.setSelectionRange(0, 50)
     });
   }
 
   function copyKeyToClipboardHandler () {
+    function selectText(element){
+      var doc = document,
+      text = doc.getElementById(element),
+      range,
+      selection;
+      if (doc.body.createTextRange) { //ms
+        range = doc.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+      } else if (window.getSelection) { //all others
+        selection = window.getSelection();
+        range = doc.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    }
+
+    keyClipboard = new Clipboard('#share_copykeytoclipboard')
+
     keyClipboard.on('success', function(e) {
       e.clearSelection()
 
@@ -67,9 +92,11 @@
     });
 
     keyClipboard.on('error', function(e) {
-      alert('cannot copy')
-      console.error('Action:', e.action)
-      console.error('Trigger:', e.trigger)
+      console.warn('using copy fallback')
+      console.warn('Action:', e.action)
+      console.warn('Trigger:', e.trigger)
+      // select as fallback
+      selectText('share_currentkey')
     });
   }
 
