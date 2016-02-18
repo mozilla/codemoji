@@ -5,13 +5,22 @@
   var keyClipboard = null
 
   Cryptoloji.states.share = {
+    canEnter: function () {
+      // prevent user from entering a broken share without message and key 
+      // informations. Redirect to encrypt state
+      if (!Cryptoloji.current.key) {
+        Cryptoloji.stateman.go('encrypt')
+        return false
+      }
+      return true
+    },
     enter: function () {
       $(".section_share").addClass("section-show")
       setTimeout(function(){
         $("#share_more_arrow").addClass("shown")
       }, 0)
 
-      // fillLinkForClipboardCopy()
+      fillLinkForClipboardCopy()
       fillKeyForClipboardCopy()
 
       copyLinkToClipboardHandler()
