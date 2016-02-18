@@ -24,6 +24,9 @@
         .catch(function () { alert('cannot retrieve from server') })   
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
+        // select corresponding emoji in keymodal
+        Cryptoloji.UI.KeyModal().select(key)
+
         if (key !== correctKey) {
           wrongKey = true
           Cryptoloji.stateman.emit('decrypt:wrong-key')
@@ -31,6 +34,14 @@
           wrongKey = false
           Cryptoloji.stateman.emit('decrypt:right-key')
         }
+        Cryptoloji.UI.selectKey(key)
+        Cryptoloji.UI.decryptText()
+      })
+      Cryptoloji.stateman.on('keymodal:key-chosen', function (key) {
+        Cryptoloji.UI.Keyslider('decrypt')
+          .resetSelection()
+          .addKey(key).select(key)
+        scrollToSelectedKey()
         Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.decryptText()
       })
@@ -57,6 +68,11 @@
       Cryptoloji.stateman.off('decrypt')
       Cryptoloji.stateman.off('keyslider')
     }
+  }
+
+  function scrollToSelectedKey () {
+    var value = $('.keyslider .selected', $('.section-show')).position().left - Cryptoloji.utils.remToPx(1.7)
+    $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
   }
 
 })(window, window.Cryptoloji); 
