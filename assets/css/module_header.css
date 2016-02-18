@@ -17,7 +17,6 @@
           transform: translate(0,-50%);
 }
 
-
 .header_title{
   position: relative;
   padding-left: 1.7rem;
@@ -37,4 +36,8 @@
 .svg_wrapper_header{
     width: 18rem;
     height: 4.5rem;
+}
+
+.header_spacer{
+  width: 100%;
 }

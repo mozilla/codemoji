@@ -10,7 +10,7 @@
 
 .main_content_top,
 .main_content_bottom{
-  height: 100%;
+  height: auto;
   width: 100%;
   position: relative;
 }
@@ -213,7 +213,7 @@
   box-shadow: none;
   /* prevent textarea resize behaviour */
   resize: none;
-  margin-top: 6.5rem;
+  margin-top: 2.1rem;
   padding: 0 5rem 1rem 1.7rem;
   width: 100%;
 }
@@ -294,10 +294,6 @@
   padding-top: 6px;
 }
 
-.main_content_top_label{
-  margin-top: 45px;
-}
-
 .encryption_share_button {
   margin: auto;
   padding: 0;
@@ -353,7 +349,7 @@
 .encryption_input_count{
   /*bottom: 1rem;*/
   /*left: 2rem;*/
-   bottom: .8rem;
+   top: .8rem;
     right: .7rem;
   position: absolute;
   margin-left: 0;
