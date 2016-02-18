@@ -48,7 +48,6 @@
 <!--       <h1 class="header_title" layout="row" layout-align="start center">
         <button class="header_home_button" to-state="welcome" style-text>Cryptoloji</button>
       </h1> -->
-      <!-- <button class="header_share" to-state="share">SHARE</button> -->
       <div layout="column" layout-align="center center">
         <!-- <a to-state="welcome"> -->
           <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header.svg"
@@ -71,17 +70,35 @@
   
 
   <!-- WELCOME views/welcome -->
-  <div class="section_welcome section" color-bg-dark color-light layout="column" layout-align="end end">
-    <div layout="column" layout-align="center center" wide>
-        <div class="svg_wrapper svg_wrapper_welcome" data-svg="assets/svg/watermelon.svg"></div>
-        <h2 uppercase style-title>Welcome to Cryptoloji</h2>
-        <p class="welcome_text" style-text>
+  <div class="section_welcome section" color-bg-dark color-light layout="column" layout-align="center center">
+    <div class="section_welcome_header" color-bg-light layout="column" layout-align="start center" wide>
+      <div class="svg_wrapper svg_wrapper_header_logo" data-svg="assets/svg/mozilla_logo.svg" color-fill-main-alt
+           layout="column" layout-align="center center"></div>
+      <div class="svg_wrapper svg_wrapper_header_name" data-svg="assets/svg/header.svg" color-fill-main-alt
+           layout="column" layout-align="center center"></div>
+      <p color-main style-text>THE FUN ENCRYPTION TOOL</p>
+    </div>
+    <div color-bg-dark layout="column" layout-align="center center" wide flex>
+        <p class="welcome_text" style-sub>
           Turn your message into fun emojis, share it, and bring a smile to your friends' face
         </p>
-        <button uppercase button-box class="welcome_button_more" to-state="onboarding" color-light border-light>Show me how it works</button>
+        <button uppercase button-box class="welcome_button_more" to-state="onboarding" color-light border-light>
+          TRY IT
+        </button>
+        <div wide layout="row" layout-align="start center">
+          <p>Legal</p>
+          <p>Privacy Policy</p>
+        </div>
         <!-- <button uppercase button-box class="welcome_button_send" to-state="encrypt" color-light border-light>Send a secret message</button> -->
         <!-- <button uppercase button-line class="welcome_button_receive" to-state="decrypt" gray>Decrypt a secret message</button>     -->
       </div>
+      <div class="section_welcome_header" color-bg-main-alt layout="column" layout-align="end center" wide>
+        <p color-light style-lable>lorem ipsum dolor</p>
+        <div layout="row" layout-align="end center">
+          <p color-light style-lable>Cryptoloji is part of  Mozilla </p>
+          <p color-light style-lable>Mozilla campaign</p>
+        </div>
+    </div>
   </div>
   <!-- /WELCOME -->
 

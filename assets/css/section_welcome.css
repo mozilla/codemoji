@@ -1,7 +1,7 @@
 .section_welcome{
   z-index: 10;
   text-align: center;
-  padding: 2rem 3.5rem;
+  /*padding: 2rem 3.5rem;*/
 }
 
 .welcome_button_more{
@@ -10,12 +10,23 @@
     border-radius: 10rem;
 }
 
-.svg_wrapper_welcome{
-  width: 10rem;
-}
-
 .welcome_button_send{
   margin-bottom: 2rem;
   font-size: 1.2rem;
   border-radius: 10rem;
+}
+
+.svg_wrapper_header_logo{
+  width: 11rem;
+  height: auto;
+  margin: 2rem 0 5rem 0;
+}
+
+.section_welcome_header{
+  min-height: 15rem;
+}
+
+.svg_wrapper_header_name{
+  width: 27rem;
+  height: auto;
 }
