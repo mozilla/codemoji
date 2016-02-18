@@ -45,8 +45,10 @@
       })
 
       // show share button at proper time
-      $('#encryption_share_button').css('display', 'none')
-      $('.main_keyslider_plus', self.$element).css('display', 'none')
+      if (!$('#encryption_share_button').hasClass('main_share-open')){
+        $('#encryption_share_button').css('display', 'none')
+        $('.main_keyslider_plus', self.$element).css('display', 'none')
+      }
       Cryptoloji.stateman.on('encrypt:show-share', function() {
         $('#encryption_share_button').css('display', 'block')
         $('#encryption_share_button').addClass('main_share-open')
