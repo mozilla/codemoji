@@ -177,9 +177,10 @@
   <!-- DECRYPTION views/decryption -->
   <div class="section_main section decryption" layout="column" layout-align="start center">
     <div class="section_main_wrapper" layout="column" layout-align="center center">
-      <div class="main_content_top">
+      <div class="header_spacer"></div>
+      <div class="main_content_top" flex layout="column">
         <label class="header__label main_content_top_label" uppercase style-lable>SECRET MESSAGE RECEIVED</label>
-        <div id="decryption_input" class="header__input main_content_top_input" style-input>
+        <div flex id="decryption_input" class="header__input main_content_top_input" style-input>
           <!-- js injected -->
         </div>
       </div>
@@ -197,9 +198,9 @@
           </div>
         </div>
       </div>
-      <div class="main_content_bottom">
+      <div class="main_content_bottom" flex layout="column">
         <label class="header__label main_content_bottom_label" uppercase style-lable>MESSAGE REVEALED</label>
-        <div id="decryption_output" 
+        <div flex id="decryption_output" 
              class="header__input main_content_bottom_input unselectable placeholdit" 
              placeholder="Your message will be encrypted here."></div>
       </div>
