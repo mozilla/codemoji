@@ -3,4 +3,4 @@
 /untrackbin/
 .tmp
 .DS_Store
-GreenSock-ShockinglyGreen-js
+libs/gsap
