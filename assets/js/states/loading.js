@@ -6,7 +6,7 @@
       $(".section_loading").addClass("section-show")
       Cryptoloji.stateman.emit('header:hide')
 
-      $( ".section_loading_wrapper" ).load( "assets/svg/loading.svg", function() {
+      $( ".section_loading_wrapper" ).load( "assets/svg/loading1.svg", function() {
         svgTransition()
       })
       setTimeout(function(){
