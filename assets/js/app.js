@@ -19,6 +19,15 @@
     // 
     $("body").css("height",$(window).innerHeight())
 
+    // fix header spacer
+    var supportsOrientationChange = 'onorientationchange' in window
+    var orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize'
+    $(window).on(orientationEvent, function (event) {
+      // console.log(event)
+      // recalculate height on onrientation change
+      $('body').css('height', $(window).innerHeight())
+    })
+
     //
     // load svg
     //

@@ -58,6 +58,40 @@ svg{
   display: block;
 }
 
+@media (min-width: 1024px) {
+    
+    [hideItIfMobile]{
+      display: block;
+    }
+
+    [showItIfMobile]{
+      display: none;
+  }
+}
+
+.landscape-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgb(244,96,96);
+  display: none;
+}
+
+.landscape-overlay .content {
+  font-size: 4rem;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-height: 400px) {
+  .landscape-overlay {
+    display: block;
+  }
+}
+
 .section{
   position: absolute;
   top: 0;
