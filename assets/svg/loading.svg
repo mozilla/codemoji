@@ -1,24 +1,24 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    viewBox="0 0 400 700" enable-background="new 0 0 400 700" xml:space="preserve">
         <g class="loading_text"> 
-          <text class="loading_text_gray letter_s" transform="matrix(1 0 0 1 135.9614 338.4194)" fill="#999999" font-family="'FiraMono'" font-size="75" letter-spacing="3">S</text>
-          <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 57.8335 338.4194)" fill="#999999" font-family="'FiraMono'" font-size="75" letter-spacing="3">I</text>
-          <text class="loading_text_gray letter_s" transform="matrix(1 0 0 1 292.2168 234.7925)" fill="#B3B3B3" font-family="'FiraMono'" font-size="75" letter-spacing="3">S</text>
-          <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 214.0902 234.7926)" fill="#B3B3B3" font-family="'FiraMono'" font-size="75" letter-spacing="3">I</text>
-          <text class="loading_text_gray letter_h" transform="matrix(1 0 0 1 135.9614 234.7925)" fill="#B3B3B3" font-family="'FiraMono'" font-size="75" letter-spacing="3">H</text>
-          <text class="loading_text_gray letter_t" transform="matrix(1 0 0 1 57.8335 234.7925)" fill="#B3B3B3" font-family="'FiraMono'" font-size="75" letter-spacing="3">T</text>
+          <text class="loading_text_black letter_i" transform="matrix(1 0 0 1 292.2168 556.0117)" font-family="'FiraMono'" font-size="75" letter-spacing="3">I</text>
+          <text class="loading_text_black letter_j" transform="matrix(1 0 0 1 214.0898 556.0117)" font-family="'FiraMono'" font-size="75" letter-spacing="3">J</text>
+          <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 135.1942 556.0119)" font-family="'FiraMono'" font-size="75" letter-spacing="3">O</text>
+          <text class="loading_text_black letter_l" transform="matrix(1 0 0 1 57.8335 556.0117)" font-family="'FiraMono'" font-size="75" letter-spacing="3">L</text>
+          <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 292.2167 447.672)" font-family="'FiraMono'" font-size="75" letter-spacing="3">O</text>
+          <text class="loading_text_black letter_t" transform="matrix(1 0 0 1 214.0898 447.6719)" font-family="'FiraMono'" font-size="75" letter-spacing="3">T</text>
+          <text class="loading_text_black letter_p" transform="matrix(1 0 0 1 135.1948 447.6719)" font-family="'FiraMono'" font-size="75" letter-spacing="3">P</text>
+          <text class="loading_text_black letter_y" transform="matrix(1 0 0 1 57.8335 447.6719)" font-family="'FiraMono'" font-size="75" letter-spacing="3">Y</text>
+          <text class="loading_text_black letter_r" transform="matrix(1 0 0 1 292.2168 338.4194)" font-family="'FiraMono'" font-size="75" letter-spacing="3">R</text>
+          <text class="loading_text_black letter_c" transform="matrix(1 0 0 1 214.0901 338.4195)" font-family="'FiraMono'" font-size="75" letter-spacing="3">C</text>
         </g>
         <g class="loading_text"> 
-          <text class="loading_text_black letter_i" transform="matrix(1 0 0 1 292.2168 556.0117)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">I</text>
-          <text class="loading_text_black letter_j" transform="matrix(1 0 0 1 214.0898 556.0117)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">J</text>
-          <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 135.1942 556.0119)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">O</text>
-          <text class="loading_text_black letter_l" transform="matrix(1 0 0 1 57.8335 556.0117)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">L</text>
-          <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 292.2167 447.672)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">O</text>
-          <text class="loading_text_black letter_t" transform="matrix(1 0 0 1 214.0898 447.6719)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">T</text>
-          <text class="loading_text_black letter_p" transform="matrix(1 0 0 1 135.1948 447.6719)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">P</text>
-          <text class="loading_text_black letter_y" transform="matrix(1 0 0 1 57.8335 447.6719)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">Y</text>
-          <text class="loading_text_black letter_r" transform="matrix(1 0 0 1 292.2168 338.4194)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">R</text>
-          <text class="loading_text_black letter_c" transform="matrix(1 0 0 1 214.0901 338.4195)" fill="#5D5D5D" font-family="'FiraMono'" font-size="75" letter-spacing="3">C</text>
+          <text class="loading_text_gray letter_s" transform="matrix(1 0 0 1 135.9614 338.4194)" font-family="'FiraMono'" font-size="75" letter-spacing="3">S</text>
+          <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 57.8335 338.4194)" font-family="'FiraMono'" font-size="75" letter-spacing="3">I</text>
+          <text class="loading_text_gray letter_s" transform="matrix(1 0 0 1 292.2168 234.7925)" font-family="'FiraMono'" font-size="75" letter-spacing="3">S</text>
+          <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 214.0902 234.7926)" font-family="'FiraMono'" font-size="75" letter-spacing="3">I</text>
+          <text class="loading_text_gray letter_h" transform="matrix(1 0 0 1 135.9614 234.7925)" font-family="'FiraMono'" font-size="75" letter-spacing="3">H</text>
+          <text class="loading_text_gray letter_t" transform="matrix(1 0 0 1 57.8335 234.7925)" font-family="'FiraMono'" font-size="75" letter-spacing="3">T</text>
         </g>
         <g>
           <g class="emoji_r emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
@@ -269,7 +269,78 @@
               </g>
             </g>
           </g>
-          <g class="emoji_i emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
+
+                    <g class="emoji_i emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
+            <g>
+              <g>
+                <defs>
+                  <rect x="221.1" y="-413" width="61" height="62"/>
+                </defs>
+                <clipPath>
+                  <use xlink:href="#SVGID_23_"  overflow="visible"/>
+                </clipPath>
+                <g clip-path="url(#SVGID_24_)">
+                  <g transform="translate(25,31)">
+                    <path fill="#CCD6DD" d="M234.6-397.7c0-4.3-3.5-7.7-7.7-7.7s-7.7,3.5-7.7,7.7c0,4.3,3.5,7.7,7.7,7.7
+                      S234.6-393.4,234.6-397.7"/>
+                  </g>
+                  <path fill="#CCD6DD" d="M260.8-401.2h-17.6v27.2h17.6V-401.2z"/>
+                </g>
+              </g>
+            </g>
+            <g>
+              <g>
+                <defs>
+                  <rect x="241" y="-404.6" width="22" height="34"/>
+                </defs>
+                <clipPath>
+                  <use xlink:href="#SVGID_25_"  overflow="visible"/>
+                </clipPath>
+                <g clip-path="url(#SVGID_26_)">
+                  <g transform="translate(34.1914,15.4902)">
+                    <path fill="#DD2E44" d="M237.2-402.2l-30.1,14.7l2.3,4.6l30.1-14.7L237.2-402.2z"/>
+                  </g>
+                  <g transform="translate(27.1758,1.1094)">
+                    <path fill="#DD2E44" d="M235.2-406.3l-30.1,14.7l2.3,4.6l30.1-14.7L235.2-406.3z"/>
+                  </g>
+                  <g transform="translate(32.4375,11.8945)">
+                    <path fill="#FFFFFF" d="M236.7-403.2l-30.1,14.7l2.3,4.6l30.1-14.7L236.7-403.2z"/>
+                  </g>
+                  <g transform="translate(28.9297,4.7051)">
+                    <path fill="#FFFFFF" d="M235.7-405.3l-30.1,14.7l2.3,4.6l30.1-14.7L235.7-405.3z"/>
+                  </g>
+                  <g transform="translate(25.4219,-2.4854)">
+                    <path fill="#FFFFFF" d="M234.7-407.4l-30.1,14.7l2.3,4.6l30.1-14.7L234.7-407.4z"/>
+                  </g>
+                  <g transform="translate(30.6836,8.2998)">
+                    <path fill="#55ACEE" d="M236.2-404.3l-30.1,14.7l2.3,4.6l30.1-14.7L236.2-404.3z"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g>
+              <g>
+                <defs>
+                  <rect x="221.1" y="-413" width="61" height="62"/>
+                </defs>
+                <clipPath>
+                  <use xlink:href="#SVGID_27_"  overflow="visible"/>
+                </clipPath>
+                <g clip-path="url(#SVGID_28_)">
+                  <g transform="translate(28,26)">
+                    <path fill="#99AAB5" d="M235.4-398.4c0-1.4-1.2-2.4-2.6-2.4h-18c-1.4,0-2.6,1-2.6,2.4s1.2,2.4,2.6,2.4h18
+                      C234.3-396,235.4-397,235.4-398.4"/>
+                  </g>
+                  <g transform="translate(28,3)">
+                    <path fill="#99AAB5" d="M235.4-405.4c0-1.4-1.2-2.8-2.6-2.8h-18c-1.4,0-2.6,1.4-2.6,2.8s1.2,2.8,2.6,2.8h18
+                      C234.3-402.6,235.4-404,235.4-405.4"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+          
+            <g class="emoji_i emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g>
               <g>
                 <defs>
@@ -338,6 +409,7 @@
               </g>
             </g>
           </g>
+
           <g class="emoji_i emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g>
               <g>
@@ -407,75 +479,7 @@
               </g>
             </g>
           </g>
-          <g class="emoji_i emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
-            <g>
-              <g>
-                <defs>
-                  <rect x="221.1" y="-413" width="61" height="62"/>
-                </defs>
-                <clipPath>
-                  <use xlink:href="#SVGID_23_"  overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_24_)">
-                  <g transform="translate(25,31)">
-                    <path fill="#CCD6DD" d="M234.6-397.7c0-4.3-3.5-7.7-7.7-7.7s-7.7,3.5-7.7,7.7c0,4.3,3.5,7.7,7.7,7.7
-                      S234.6-393.4,234.6-397.7"/>
-                  </g>
-                  <path fill="#CCD6DD" d="M260.8-401.2h-17.6v27.2h17.6V-401.2z"/>
-                </g>
-              </g>
-            </g>
-            <g>
-              <g>
-                <defs>
-                  <rect x="241" y="-404.6" width="22" height="34"/>
-                </defs>
-                <clipPath>
-                  <use xlink:href="#SVGID_25_"  overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_26_)">
-                  <g transform="translate(34.1914,15.4902)">
-                    <path fill="#DD2E44" d="M237.2-402.2l-30.1,14.7l2.3,4.6l30.1-14.7L237.2-402.2z"/>
-                  </g>
-                  <g transform="translate(27.1758,1.1094)">
-                    <path fill="#DD2E44" d="M235.2-406.3l-30.1,14.7l2.3,4.6l30.1-14.7L235.2-406.3z"/>
-                  </g>
-                  <g transform="translate(32.4375,11.8945)">
-                    <path fill="#FFFFFF" d="M236.7-403.2l-30.1,14.7l2.3,4.6l30.1-14.7L236.7-403.2z"/>
-                  </g>
-                  <g transform="translate(28.9297,4.7051)">
-                    <path fill="#FFFFFF" d="M235.7-405.3l-30.1,14.7l2.3,4.6l30.1-14.7L235.7-405.3z"/>
-                  </g>
-                  <g transform="translate(25.4219,-2.4854)">
-                    <path fill="#FFFFFF" d="M234.7-407.4l-30.1,14.7l2.3,4.6l30.1-14.7L234.7-407.4z"/>
-                  </g>
-                  <g transform="translate(30.6836,8.2998)">
-                    <path fill="#55ACEE" d="M236.2-404.3l-30.1,14.7l2.3,4.6l30.1-14.7L236.2-404.3z"/>
-                  </g>
-                </g>
-              </g>
-            </g>
-            <g>
-              <g>
-                <defs>
-                  <rect x="221.1" y="-413" width="61" height="62"/>
-                </defs>
-                <clipPath>
-                  <use xlink:href="#SVGID_27_"  overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_28_)">
-                  <g transform="translate(28,26)">
-                    <path fill="#99AAB5" d="M235.4-398.4c0-1.4-1.2-2.4-2.6-2.4h-18c-1.4,0-2.6,1-2.6,2.4s1.2,2.4,2.6,2.4h18
-                      C234.3-396,235.4-397,235.4-398.4"/>
-                  </g>
-                  <g transform="translate(28,3)">
-                    <path fill="#99AAB5" d="M235.4-405.4c0-1.4-1.2-2.8-2.6-2.8h-18c-1.4,0-2.6,1.4-2.6,2.8s1.2,2.8,2.6,2.8h18
-                      C234.3-402.6,235.4-404,235.4-405.4"/>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </g>
+
           <g class="emoji_j emoji_item" transform="matrix(1.25,0,0,-1.25,0,47.5)">
             <g>
               <g>
