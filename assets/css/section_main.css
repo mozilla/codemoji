@@ -207,8 +207,15 @@
   /* prevent textarea resize behaviour */
   resize: none;
   margin-top: 2.1rem;
-  padding: 0 5rem 1rem 0.7rem;
   width: 100%;
+}
+
+.encryption .main_content_top_input{
+  padding: 0 5rem 1rem .7rem;
+}
+
+.decryption .main_content_top_input{
+  padding: 0 .7rem 1rem .7rem;
 }
 
 .main_content_bottom_input{
