@@ -10,6 +10,8 @@
   //
   $(document).ready(function () {
 
+    FastClick.attach(document.body);
+
     // temporaly removed
     // $("body").css("height",$(window).innerHeight())
     // $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
