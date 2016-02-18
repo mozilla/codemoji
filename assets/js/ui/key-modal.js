@@ -92,7 +92,8 @@
         keyModal.close()
       } else {
         if (Cryptoloji.stateman.is('encrypt')) {
-          $('.main_key_modal').css("height", $('.section_main.encryption .main_content_top').height())
+          var modal_height = $('.header').height() + $('.section_main.encryption .main_content_top').height()
+          $('.main_key_modal').css("height", modal_height)
         } else {
           $('.main_key_modal').css("height", $('.section_main.decryption .main_content_top').height())
         }
