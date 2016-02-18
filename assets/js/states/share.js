@@ -11,8 +11,8 @@
         $("#share_more_arrow").addClass("shown")
       }, 0)
 
-      // fillLinkCopy()
-      // fillKeyCopy()
+      // fillLinkForClipboardCopy()
+      fillKeyForClipboardCopy()
 
       linkClipboard = new Clipboard('#share_copytoclipboard')
       keyClipboard = new Clipboard('#share_copykeytoclipboard')
@@ -73,8 +73,12 @@
     });
   }
 
-  function fillLinkCopy () {
+  function fillLinkForClipboardCopy () {
     // fill copy to clipboard link input
+  }
+
+  function fillKeyForClipboardCopy () {
+    $('#share_copykeytoclipboard').attr('data-clipboard-text', Cryptoloji.current.key)
   }
 
   function setupShareButtons () {
