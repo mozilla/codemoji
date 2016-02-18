@@ -1,26 +1,31 @@
 
 [color-bg-main]{
-  background-color: rgb(244,96,96);
+  background-color: #F46060;
+}
+[color-bg-main]{
+  background-color: #005189;
 }
 [color-bg-main-ligther]{
-  background-color: rgb(248,160,160);
+  background-color: #FBBFBF;
 }
 [color-bg-dark]{
-  background-color: rgb(40,51,68);
+  background-color: #283344;
 }
 [color-bg-light]{
   background-color: white;
 }
 
-
 [color-main]{
-  color: rgb(244,96,96);
+  color: #F46060;
+}
+[color-main-alt]{
+  color: #005189;
 }
 [color-main-ligther]{
-  color: rgb(248,160,160);
+  color: #FBBFBF;
 }
 [color-dark]{
-  color: rgb(40,51,68);
+  color: #283344;
 }
 [color-light]{
   color: white;
@@ -29,3 +34,4 @@
 [border-light]{
   border-color: white;
 }
+
