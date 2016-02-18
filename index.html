@@ -43,19 +43,12 @@
 <body class="main_content_top_input-first">
 
 
-  <!-- HEADER -->
-  <div id="header" class="header">
-<!--       <h1 class="header_title" layout="row" layout-align="start center">
-        <button class="header_home_button" to-state="welcome" style-text>Cryptoloji</button>
-      </h1> -->
+<!--   <div id="header" class="header">
       <div layout="column" layout-align="center center">
-        <!-- <a to-state="welcome"> -->
           <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header.svg"
                layout="column" layout-align="center center"></div>
-        <!-- </a> -->
       </div>
-  </div>
-  <!-- /HEADER -->
+  </div> -->
 
 
   <!-- MODAL_KEYS -->
@@ -151,30 +144,33 @@
   <!-- /LOADING -->
 
   <!-- ENCRYPTION views/encryption -->
-  <div class="section_main section encryption" layout="column" layout-align="start center">
+  <div class="section_main section encryption" layout="column" layout-align="start center" color-bg-dark>
     <div class="section_main_wrapper" layout="column" layout-align="center center">
-      <div class="header_spacer"></div>
-      <div class="main_content_top" flex layout="column">
+      <div class="header" layout="column" layout-align="center center" color-bg-light wide>
+          <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header.svg"
+               layout="column" layout-align="center center"></div>
+      </div>
+      <div class="main_content_top" flex layout="column" color-bg-main>
         <label uppercase class="header__label main_content_top_label" style-lable>YOUR MESSAGE</label>
         <textarea flex id="encryption_input" class="header__input main_content_top_input" style-input placeholder="Write your message here."></textarea>
         <p id="encryption_input_count" class="encryption_input_count main_content_top_label" uppercase style-lable></p>
         <div id="encryption_input_cleaner" class="svg_wrapper svg_wrapper_x" data-svg="assets/svg/x.svg"></div>
       </div>
       <div id="encryption_keyslider" class="main_keyslider">
-        <label class="header__label main_keyslider_bottom_label" uppercase style-lable>YOUR KEY</label>
+        <label class="header__label main_keyslider_bottom_label" uppercase style-lable color-dark>YOUR KEY</label>
         <div class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
           </div>
         </div>
-        <div class="main_keyslider_plus" >
-          <div class="main_keyslider_plus_wrp" id="encryption_key_modal_open"  layout="column" layout-align="center center">
+        <div class="main_keyslider_plus" color-bg-main-ligther>
+          <div class="main_keyslider_plus_wrp" id="encryption_key_modal_open" layout="column" layout-align="center center">
             <div class="main_keyslider_spacer"></div>
-            <div class="svg_wrapper svg_wrapper_plus" data-svg="assets/svg/plus.svg"></div>
+            <div class="svg_wrapper svg_wrapper_plus" data-svg="assets/svg/plus.svg" color-fill-main-ligther></div>
           </div>
         </div>
       </div>
-      <div class="main_content_bottom" flex layout="column">
+      <div class="main_content_bottom" flex layout="column" color-bg-dark>
         <label class="header__label main_content_bottom_label" uppercase style-lable>YOUR SECRET MESSAGE</label>
         <div flex id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" 
              placeholder="Pick a key to see your message encrypted here." style-input></div>
@@ -190,10 +186,13 @@
 
 
   <!-- DECRYPTION views/decryption -->
-  <div class="section_main section decryption" layout="column" layout-align="start center">
+  <div class="section_main section decryption" layout="column" layout-align="start center" color-bg-main>
     <div class="section_main_wrapper" layout="column" layout-align="center center">
-      <div class="header_spacer"></div>
-      <div class="main_content_top" flex layout="column">
+      <div class="header" layout="column" layout-align="center center" color-bg-light wide>
+          <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header.svg"
+               layout="column" layout-align="center center"></div>
+      </div>
+      <div class="main_content_top" flex layout="column" color-bg-dark>
         <label class="header__label main_content_top_label" uppercase style-lable>SECRET MESSAGE RECEIVED</label>
         <div flex id="decryption_input" class="header__input main_content_top_input" style-input>
           <!-- js injected -->
@@ -206,10 +205,10 @@
             <!-- js injected -->
           </div>
         </div>
-        <div class="main_keyslider_plus" >
+        <div class="main_keyslider_plus" color-bg-main-ligther>
           <div class="main_keyslider_plus_wrp" id="decryption_key_modal_open"  layout="column" layout-align="center center">
             <div class="main_keyslider_spacer"></div>
-            <div class="svg_wrapper svg_wrapper_plus" data-svg="assets/svg/plus.svg"></div>
+            <div class="svg_wrapper svg_wrapper_plus" data-svg="assets/svg/plus.svg" color-fill-main-ligther></div>
           </div>
         </div>
       </div>

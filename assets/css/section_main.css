@@ -15,23 +15,22 @@
   position: relative;
 }
 
-.encryption .main_content_top,
-.decryption .main_content_bottom{
+/*.decryption .main_content_bottom{
   background-color: #B3B3B3;
 }
 
-.decryption .main_content_top,
-.encryption .main_content_bottom{
+.decryption .main_content_top{
   background-color: #4D4D4D;
-}
+}*/
 
 .main_content_bottom{
   padding-top: 2.2rem;
+  margin-bottom: 45px;
 }
 
 .main_keyslider{
   width: 100%;
-  min-height: 11rem;
+  min-height: 9rem;
   background-color: white;
   position: relative;
   opacity: 1;
@@ -39,13 +38,14 @@
 
 .main_keyslider .header__label{
   top: 1rem;
+  opacity: .5;
 }
 
 .header__label{
   position: absolute;
   top: .8rem;
   left: .7rem;
-  opacity: .6;
+  opacity: .5;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -113,14 +113,15 @@
   font-size: 80%;
 }
 .main_key_modal_emoji_container p.selected:after{
-    content: "";
-    width: 100%;
-    height: 5px;
-    background-color: #E6E6E6;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
+  content: "";
+  width: 100%;
+  height: 6px;
+  background-color: #FBBFBF;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 3px;
 }
 .main_key_modal_pages{
   position: absolute;
@@ -128,14 +129,6 @@
   left: 50%;
   -webkit-transform: translate(-50%,0);
           transform: translate(-50%,0);
-}
-
-.main_key_modal_pages_circle{
-  width: 8px;
-  height: 8px;
-  background-color: gray;
-  border-radius: 50%;
-  margin: 0 3px;
 }
 
 .main_content_top .header__label,
@@ -214,20 +207,20 @@
   /* prevent textarea resize behaviour */
   resize: none;
   margin-top: 2.1rem;
-  padding: 0 5rem 1rem 1.7rem;
+  padding: 0 5rem 1rem 0.7rem;
   width: 100%;
 }
 
 .main_content_bottom_input{
   background-color: transparent;
-  margin: 0rem 5rem 0 1.7rem;
+  margin: 0 0.7rem;
   overflow-y: scroll;
-  margin-bottom: 45px;
+  margin-bottom: 5px;
 }
 
 .main_content_bottom_input.placeholdit {
-  color: gray;
-  opacity: .4;
+  color: white;
+  opacity: .5;
 }
 .main_content_bottom_input.placeholdit:after {
   content: attr(placeholder);
@@ -243,7 +236,6 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: gray;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -276,12 +268,13 @@
 .keyslider .key.selected:after {
   content: "";
   width: 100%;
-  height: 10px;
-  background-color: #E6E6E6;
-  bottom: 0;
+  height: 8px;
+  background-color: #FBBFBF;
+  bottom: 8px;
   left: 0;
   right: 0;
   position: absolute;
+  border-radius: 4px;
 }
 
 .header__input{
@@ -322,7 +315,6 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #E5E5E5;
   position: absolute;
   transform: translate(100%,0);
   transition: transform .5s;
@@ -349,14 +341,15 @@
 .encryption_input_count{
   /*bottom: 1rem;*/
   /*left: 2rem;*/
-   top: .8rem;
+   bottom: .8rem;
     right: .7rem;
   position: absolute;
   margin-left: 0;
   margin-bottom: 0;
   margin-right: 0;
   padding: 0;
-  color: #E6E6E6;
+  color: white;
+  opacity: .5;
 }
 
 .encryption_input_count.oversize{
@@ -366,9 +359,11 @@
 .svg_wrapper_x{
   position: absolute;
   right: .9rem;
-  top: 7rem;
+  top: 2.5rem;
   width: 20px;
   height: 20px;
+  fill: white;
+  opacity: .5;
 }
 
 /*******************************************************************************
@@ -377,8 +372,8 @@
  ******************************************************************************/
 /* all browser with support for ::placeholder */
 .main_content_top_input::placeholder {
-  color: gray;
-  opacity: .4;
+  color: white;
+  opacity: .5;
   transition: 1s;
 }
 .main_content_top_input-first .main_content_top_input::placeholder {
@@ -387,8 +382,8 @@
 }
 /* chrome */
 .main_content_top_input::-webkit-input-placeholder {
-  color: gray;
-  opacity: .4;
+  color: white;
+  opacity: .5;
   transition: 1s;
 }
 .main_content_top_input-first .main_content_top_input::-webkit-input-placeholder {
@@ -397,8 +392,8 @@
 }
 /* FF */
 .main_content_top_input::-moz-placeholder {
-  color: gray;
-  opacity: .4;
+  color: white;
+  opacity: .5;
   transition: 1s;
 }
 .main_content_top_input-first .main_content_top_input::-moz-placeholder {
@@ -407,8 +402,8 @@
 }
 /* IE */
 .main_content_top_input:-ms-input-placeholder {
-  color: gray;
-  opacity: .4;
+  color: white;
+  opacity: .5;
   transition: 1s;
 }
 .main_content_top_input-first .main_content_top_input:-ms-input-placeholder {

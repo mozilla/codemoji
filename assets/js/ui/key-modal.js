@@ -92,10 +92,10 @@
         keyModal.close()
       } else {
         if (Cryptoloji.stateman.is('encrypt')) {
-          var modal_height = $('.header').height() + $('.section_main.encryption .main_content_top').height()
+          var modal_height = $('.section_main.encryption .header').height() + $('.section_main.encryption .main_content_top').height()
           $('.main_key_modal').css("height", modal_height)
         } else {
-          var modal_height = $('.header').height() + $('.section_main.decryption .main_content_top').height()
+          var modal_height = $('.section_main.decryption .header').height() + $('.section_main.decryption .main_content_top').height()
           $('.main_key_modal').css("height", modal_height)
         }
         $('body').addClass('main_key_modal-open')
