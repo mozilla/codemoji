@@ -1,39 +1,39 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 400 700" enable-background="new 0 0 400 700" xml:space="preserve">
         <g class="loading_text"> 
-          <text class="loading_text_black letter_i" transform="matrix(1 0 0 1 292.2168 556.0117)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_i" transform="matrix(1 0 0 1 292.2168 556.0117)"  
                 font-size="75" letter-spacing="3">I</text>
-          <text class="loading_text_black letter_j" transform="matrix(1 0 0 1 214.0898 556.0117)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_j" transform="matrix(1 0 0 1 214.0898 556.0117)"  
                 font-size="75" letter-spacing="3">J</text>
-          <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 135.1942 556.0119)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 135.1942 556.0119)"  
                 font-size="75" letter-spacing="3">O</text>
-          <text class="loading_text_black letter_l" transform="matrix(1 0 0 1 57.8335 556.0117)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_l" transform="matrix(1 0 0 1 57.8335 556.0117)"  
                 font-size="75" letter-spacing="3">L</text>
-          <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 292.2167 447.672)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_o" transform="matrix(1 0 0 1 292.2167 447.672)"  
                 font-size="75" letter-spacing="3">O</text>
-          <text class="loading_text_black letter_t" transform="matrix(1 0 0 1 214.0898 447.6719)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_t" transform="matrix(1 0 0 1 214.0898 447.6719)"  
                 font-size="75" letter-spacing="3">T</text>
-          <text class="loading_text_black letter_p" transform="matrix(1 0 0 1 135.1948 447.6719)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_p" transform="matrix(1 0 0 1 135.1948 447.6719)"  
                 font-size="75" letter-spacing="3">P</text>
-          <text class="loading_text_black letter_y" transform="matrix(1 0 0 1 57.8335 447.6719)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_y" transform="matrix(1 0 0 1 57.8335 447.6719)"  
                 font-size="75" letter-spacing="3">Y</text>
-          <text class="loading_text_black letter_r" transform="matrix(1 0 0 1 292.2168 338.4194)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_r" transform="matrix(1 0 0 1 292.2168 338.4194)"  
                 font-size="75" letter-spacing="3">R</text>
-          <text class="loading_text_black letter_c" transform="matrix(1 0 0 1 214.0901 338.4195)" font-family="'FiraMono'" 
+          <text class="loading_text_black letter_c" transform="matrix(1 0 0 1 214.0901 338.4195)"  
                 font-size="75" letter-spacing="3">C</text>
         </g>
         <g class="loading_text"> 
-          <text class="loading_text_gray letter_s" transform="matrix(1 0 0 1 135.9614 338.4194)" font-family="'FiraMono'"
+          <text class="loading_text_gray letter_s" transform="matrix(1 0 0 1 135.9614 338.4194)" 
                 font-size="75" letter-spacing="3">S</text>
-          <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 57.8335 338.4194)" font-family="'FiraMono'"
+          <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 57.8335 338.4194)" 
                 font-size="75" letter-spacing="3">I</text>
-          <text class="loading_text_gray letter_s" transform="matrix(1 0 0 1 292.2168 234.7925)" font-family="'FiraMono'"
+          <text class="loading_text_gray letter_s" transform="matrix(1 0 0 1 292.2168 234.7925)" 
                 font-size="75" letter-spacing="3">S</text>
-          <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 214.0902 234.7926)" font-family="'FiraMono'"
+          <text class="loading_text_gray letter_i" transform="matrix(1 0 0 1 214.0902 234.7926)" 
                 font-size="75" letter-spacing="3">I</text>
-          <text class="loading_text_gray letter_h" transform="matrix(1 0 0 1 135.9614 234.7925)" font-family="'FiraMono'"
+          <text class="loading_text_gray letter_h" transform="matrix(1 0 0 1 135.9614 234.7925)" 
                 font-size="75" letter-spacing="3">H</text>
-          <text class="loading_text_gray letter_t" transform="matrix(1 0 0 1 57.8335 234.7925)" font-family="'FiraMono'"
+          <text class="loading_text_gray letter_t" transform="matrix(1 0 0 1 57.8335 234.7925)" 
                 font-size="75" letter-spacing="3">T</text>
         </g>
       <g>

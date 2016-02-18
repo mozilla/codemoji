@@ -16,3 +16,7 @@
 .loading_text_black {
 	fill: white;
 }
+
+.loading_text {
+	font-family: 'FiraMono-Medium';
+}
