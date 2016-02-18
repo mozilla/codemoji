@@ -295,14 +295,11 @@
 }
 
 .encryption_share_button {
-  margin: auto;
-  padding: 0;
   text-align: center;
   text-transform: uppercase;
 }
 
 .main_share{
-  background-color: #E6E6E6;
   height: 45px;
   position: absolute;
   bottom: 0;

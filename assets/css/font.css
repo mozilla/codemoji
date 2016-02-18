@@ -121,7 +121,7 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 
 [button-box]{
   font-weight: 800;
-  padding:10px 15px;
+  padding:5px 15px;
   background-color: transparent;
   border:2px solid #5D5D5D;
   cursor:pointer;
@@ -131,8 +131,17 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   text-shadow: none;
   text-decoration: none; 
   font-size: 80%;
-  min-height: 45px;
+  border-radius: 22px;
 }
+
+/*  min-width: 20rem;
+  text-align: center;
+  border: none;
+  padding: 0.8rem 1.4rem .6rem 1.4rem;
+  margin: 0;*/
+
+
+
 
 [button-box]:active{
   position:relative;
