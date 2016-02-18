@@ -48,9 +48,17 @@
 
       // show reply button at proper time
       Cryptoloji.stateman.on('decrypt:show-reply', function() {
-        if (!wrongKey)
+        if (!wrongKey) {
+          // temp fix need to be reviewed
+          $('#decryption_reply_button').css('display', 'block')
+          $('#decryption_reply_button').addClass('main_share-open')
           $('#decryption_reply_button').fadeIn()
-      })
+        } else {
+          // temp fix need to be reviewed
+          $('#decryption_reply_button').css('display', 'none')
+          $('#decryption_reply_button').removeClass('main_share-open')
+        }
+      }) 
 
       // wrong key handler
       Cryptoloji.stateman.on('decrypt:wrong-key', function () {
@@ -60,6 +68,7 @@
       // right key handler
       Cryptoloji.stateman.on('decrypt:right-key', function () {
         console.log('right key')
+        $('body').removeClass('main_key_modal-open')
       })
     },
     leave: function () {
