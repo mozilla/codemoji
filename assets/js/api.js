@@ -7,6 +7,7 @@
       $.get(url)
         .done(function (result) {
           // console.log(result)
+          CryptoLib.generateEmojiSubsetFrom(result.key)
           resolve(result)
         })
         .fail(function () {

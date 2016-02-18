@@ -8,8 +8,7 @@
   stateman
     .state('welcome', Cryptoloji.states.welcome)
     .state('encrypt', Cryptoloji.states.encrypt)
-    .state('decrypt', Cryptoloji.states.decrypt)
-    .state('decrypt/:id', Cryptoloji.states.decrypt_with_id)
+    .state('decrypt/:id', Cryptoloji.states.decrypt)
     .state('share',   Cryptoloji.states.share)
     .state('onboarding', Cryptoloji.states.onboarding)
     .state('loading', Cryptoloji.states.loading)
