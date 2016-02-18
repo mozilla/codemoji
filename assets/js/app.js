@@ -13,7 +13,7 @@
     FastClick.attach(document.body);
 
     // temporaly removed
-    // $("body").css("height",$(window).innerHeight())
+    $("body").css("height",$(window).innerHeight())
     // $(".main_content_top").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
     // $(".main_key_modal").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)
     // $(".main_content_bottom").css("height",$(window).innerHeight()/2-$(".main_keyslider").height()/2)

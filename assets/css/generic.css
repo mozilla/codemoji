@@ -21,6 +21,7 @@ body{
   font-family: "fira_mono", verdana;
   color: #5D5D5D;
   overflow: hidden;
+  position: relative;
 }
 
 ul{
