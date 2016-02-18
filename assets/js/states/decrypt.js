@@ -24,6 +24,9 @@
         .catch(function () { alert('cannot retrieve from server') })   
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
+        // select corresponding emoji in keymodal
+        Cryptoloji.UI.KeyModal().select(key)
+
         if (key !== correctKey) {
           wrongKey = true
           Cryptoloji.stateman.emit('decrypt:wrong-key')
@@ -34,12 +37,28 @@
         Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.decryptText()
       })
+      Cryptoloji.stateman.on('keymodal:key-chosen', function (key) {
+        Cryptoloji.UI.Keyslider('decrypt')
+          .resetSelection()
+          .addKey(key).select(key)
+        scrollToSelectedKey()
+        Cryptoloji.UI.selectKey(key)
+        Cryptoloji.UI.decryptText()
+      })
 
       // show reply button at proper time
       Cryptoloji.stateman.on('decrypt:show-reply', function() {
-        if (!wrongKey)
+        if (!wrongKey) {
+          // temp fix need to be reviewed
+          $('#decryption_reply_button').css('display', 'block')
+          $('#decryption_reply_button').addClass('main_share-open')
           $('#decryption_reply_button').fadeIn()
-      })
+        } else {
+          // temp fix need to be reviewed
+          $('#decryption_reply_button').css('display', 'none')
+          $('#decryption_reply_button').removeClass('main_share-open')
+        }
+      }) 
 
       // wrong key handler
       Cryptoloji.stateman.on('decrypt:wrong-key', function () {
@@ -49,6 +68,7 @@
       // right key handler
       Cryptoloji.stateman.on('decrypt:right-key', function () {
         console.log('right key')
+        $('body').removeClass('main_key_modal-open')
       })
     },
     leave: function () {
@@ -57,6 +77,11 @@
       Cryptoloji.stateman.off('decrypt')
       Cryptoloji.stateman.off('keyslider')
     }
+  }
+
+  function scrollToSelectedKey () {
+    var value = $('.keyslider .selected', $('.section-show')).position().left - Cryptoloji.utils.remToPx(1.7)
+    $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
   }
 
 })(window, window.Cryptoloji); 
