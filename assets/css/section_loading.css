@@ -1,5 +1,6 @@
 .section_loading{
   z-index: 10;
+  background-color: #273243;
   text-align: center;
   padding: 0 3.5rem;
 }
