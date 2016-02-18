@@ -32,9 +32,11 @@
 	    $('#onboarding_svg svg').removeAttr('width')
 	    $('#onboarding_svg svg').removeAttr('height')
 
+	    
+
 	    setTimeout(function(){
 		    var letter_icons = ['#single_c_1', '#single_i_1', '#single_i_1', '#single_i_1', '#single_o_1', '#single_o_2']
-		    var icon_icons = ['#icon_c_1_1_', '#icon_i_1_1_', '#icon_i_2_1_', '#icon_i_3_1_', '#icon_o_1_1_', '#icon_o_2_1_']
+		    var icon_icons = ['#img_c_1', '#img_i_1', '#img_i_2', '#img_i_3', '#img_o_1', '#img_o_2']
 		    var bigletters = ['#lttr_c', '#lttr_i', '#lttr_o']
 
 		    var arr = [].concat(icon_icons).concat(bigletters)
@@ -44,9 +46,16 @@
 		    })
 
 		    TweenLite.set('#onboarding_svg #lttr_c', {opacity:0})
-	    	TweenLite.to('#onboarding_svg #text1', 1, {opacity:1})
 
-	    }, 100)
+		    $('#onboarding_svg image').each(function(i, e){
+		    	var url = $(e).attr('xlink:href').replace('..', 'assets')
+		    	$(e).attr('xlink:href', url)
+		    })
+
+		    TweenLite.to('#onboarding_svg #watermelon image', 1, {delay:1.2, rotation:0, transformOrigin:"50% 50%", ease:Elastic.easeInOut})
+		    TweenLite.from('#onboarding_svg #text1', 1, {delay:1, opacity:0, y:"+20px", ease:Expo.easeInOut})
+
+	    }, 50)
 
 	    
 	    el.on('touchmousedown', function(e) {
@@ -128,7 +137,7 @@
 	      setTimeout(function(){
 	        Cryptoloji.stateman.go('loading')
 	        spring.destroy()
-	      }, 3000)
+	      }, 1200)
 	    }
 
 	    spring.addListener({
@@ -151,6 +160,24 @@
 	    var debouncer;
 	    var elmprev = []
 
+
+	    function lttrIn(sel){
+	    	TweenLite.set('#onboarding_svg '+sel, {opacity:1})
+	      	TweenLite.from('#onboarding_svg '+sel, 1, {opacity:0, y:"+20px", ease:Expo.easeInOut})
+	    }	
+	    function lttrOut(sel){
+	    	TweenLite.to('#onboarding_svg '+sel, 1, {opacity:0, y:"-20px", ease:Expo.easeInOut})
+	    }
+	    function resetIn(sel){
+	    	TweenLite.to('#onboarding_svg '+sel, 1, {opacity:1, y:0})
+	    }
+	    function resetOut(sel){
+	    	TweenLite.to('#onboarding_svg '+sel, 1, {opacity:0, y:0})
+	    }
+	    function resetBigLettr(sel){
+	    	TweenLite.to('#onboarding_svg '+sel, 1, {opacity:0})
+	    }
+
 	    function handlePosition(x){
 	      //console.log(step, consolidated_step, dir)
 
@@ -159,72 +186,76 @@
 
 	      	if(consolidated_step == 0){
 	      		console.warn('zero')
-	          	TweenLite.to('#onboarding_svg #lttr_c', 1, {opacity:0})
-	          	TweenLite.to('#onboarding_svg #watermelon_icon_1_', 4, {rotation:360, transformOrigin:"50% 50%"})
-
+	      		resetBigLettr('#lttr_c')
 	      	}
-	        if(consolidated_step <= 1){
-	          // showHidelettersOne(true)
-	          // showHidelettersTwo(true)
-	          // showHidelettersThree(true)
-	        }
 	        if(consolidated_step == 1){
 	      		console.warn('uno')
 	            TweenLite.to('#onboarding_svg #lttr_c', 1, {opacity:1})
+
+	            resetIn('#single_c_1')
+	            resetOut('#img_c_1')
 	        }
 	        if(consolidated_step == 2){
 	      		console.warn('due')
-	      		TweenLite.to('#onboarding_svg #lttr_c', 1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #single_c_1', 1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #icon_c_1_1_', 1, {opacity:1})
+	      		
+	      		lttrOut('#single_c_1')
+	      		lttrIn('#img_c_1')
 
-	      		TweenLite.to('#onboarding_svg #single_i_1',  1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #icon_i_1_1_', 1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #single_i_2',  1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #icon_i_2_1_', 1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #single_i_3',  1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #icon_i_3_1_', 1, {opacity:0})
+	      		resetIn('#single_i_1')
+	      		resetOut('#img_i_1')
+	      		resetIn('#single_i_2')
+	      		resetOut('#img_i_2')
+	      		resetIn('#single_i_3')
+	      		resetOut('#img_i_3')
 	            
+	            resetBigLettr('#lttr_i')
 	        }
 	        if(consolidated_step == 3){
 	      		console.warn('tre')
 
-	      		TweenLite.to('#onboarding_svg #single_c_1',  1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #icon_c_1_1_', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #lttr_c', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg #single_c_1',  .7, {opacity:1, y:0})
+	      		TweenLite.to('#onboarding_svg #img_c_1', 1, {opacity:0})
 
-	      		TweenLite.to('#onboarding_svg #single_i_1',  1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #icon_i_1_1_', 1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #single_i_2',  1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #icon_i_2_1_', 1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #single_i_3',  1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #icon_i_3_1_', 1, {opacity:1})
+	      		lttrOut('#single_i_1')
+	      		lttrIn('#img_i_1')
+	      		lttrOut('#single_i_2')
+	      		lttrIn('#img_i_2')
+	      		lttrOut('#single_i_3')
+	      		lttrIn('#img_i_3')
 
-	      		TweenLite.to('#onboarding_svg #single_o_1',  1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #icon_o_1_1_', 1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #single_o_2',  1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #icon_o_2_1_', 1, {opacity:0})
+	            TweenLite.to('#onboarding_svg #lttr_i', 1, {delay:1, opacity:1})
+
+	            resetIn('#single_o_1')
+	      		resetOut('#img_o_1')
+	      		resetIn('#single_o_2')
+	      		resetOut('#img_o_2')
+
+	      		resetBigLettr('#lttr_c')
+	      		resetBigLettr('#lttr_o')
 	            
 	        }
 	        if(consolidated_step == 4){
 	      		console.warn('quatto')
-	            TweenLite.to('#onboarding_svg #single_o_1',  1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #icon_o_1_1_', 1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #single_o_2',  1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #icon_o_2_1_', 1, {opacity:1})
 
-	      		TweenLite.to('#onboarding_svg #single_i_1',  1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #icon_i_1_1_', 1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #single_i_2',  1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #icon_i_2_1_', 1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #single_i_3',  1, {opacity:1})
-	      		TweenLite.to('#onboarding_svg #icon_i_3_1_', 1, {opacity:0})
+	      		lttrOut('#single_o_1')
+	      		lttrIn('#img_o_1')
+	      		lttrOut('#single_o_2')
+	      		lttrIn('#img_o_2')
+
+
+	            resetIn('#single_i_1')
+	      		resetOut('#img_i_1')
+	      		resetIn('#single_i_2')
+	      		resetOut('#img_i_2')
+	      		resetIn('#single_i_3')
+	      		resetOut('#img_i_3')
+	      		
+	      		TweenLite.to('#onboarding_svg #lttr_o', 1, {delay:1, opacity:1})
 	        }
 	        if(consolidated_step == 5){
 	      		console.warn('cinque')
-	            
-
-	      		TweenLite.to('#onboarding_svg #txts', 1, {opacity:0})
-	      		TweenLite.to('#onboarding_svg #icns', 1, {opacity:0})
+	      		TweenLite.to('#onboarding_svg', .5, {opacity:0})
 	        }
 
 	        clearInterval(debouncer)
@@ -236,7 +267,6 @@
 	          	TweenLite.set('#onboarding_svg #txts', {x:x})
 	        }
 	        if(consolidated_step>=2 && consolidated_step<=4){
-	        	console.log(svgw*2+x, x)
 	          	TweenLite.set('#onboarding_svg #icns', {x:svgw*2+x})
 	        }
 
@@ -266,20 +296,20 @@
 	      //showHideElements(['#lttr_c'], invert)
 	    }
 	    function showHidelettersOne(invert){
-	      showHideElements(['#icon_c_1'], invert)
+	      showHideElements(['#img_c_1'], invert)
 	      showHideElements(['#single_c_1'], !invert)
-	      //TweenLite.to('#onboarding_svg #watermelon_icon_1_', 2, {transformOrigin:"50% 50%", rotation:360})
+	      //TweenLite.to('#onboarding_svg #watermelon_icon', 2, {transformOrigin:"50% 50%", rotation:360})
 	    }
 	    function showHidelettersTwo(invert){
-	      showHideElements(['#lttr_i','#icon_i_1_1','#icon_i_2_1','#icon_i_3_1'], invert)
+	      showHideElements(['#lttr_i','#img_i_1_1','#img_i_2_1','#img_i_3_1'], invert)
 	      showHideElements(['#single_i_1', '#single_i_2', '#single_i_3'], !invert)
 	    }
 	    function showHidelettersThree(invert){
-	      showHideElements(['#lttr_o','#icon_o_1_1','#icon_o_2_1'], invert)
+	      showHideElements(['#lttr_o','#img_o_1_1','#img_o_2_1'], invert)
 	      showHideElements(['#single_o_1', '#single_o_2'], !invert)
 	    }
 	    function showHidelettersFour(invert){
-	      showHideElements(['#lttr_o','#icon_o_1_1','#icon_o_2_1', '#text3'], !invert)
+	      showHideElements(['#lttr_o','#img_o_1_1','#img_o_2_1', '#text3'], !invert)
 	    }
 
 

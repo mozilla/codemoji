@@ -59,15 +59,26 @@
 }
 
 .onboarding_pages > div{
-  width: 8px;
-  height: 8px;
-  background-color: white;
+  position: relative;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
+  border:1px solid #FFCC4D;
   margin: 0 3px;
-  opacity: .25;
-  transition: opacity 1s;
+}
+.onboarding_pages > div img{
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  transition: opacity .5s;
 }
 .onboarding_pages > div.current{
+  background-color: #FFCC4D;
+}
+
+.onboarding_pages > div.current img{
   opacity: 1;
 }
 
