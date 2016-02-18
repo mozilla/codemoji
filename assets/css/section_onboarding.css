@@ -1,3 +1,9 @@
+.onboarding_wrapper_ui{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .section_onboarding{
   z-index: 10;
   background-color: #273243;
@@ -21,6 +27,12 @@
   min-height: 14rem;
 }
 
+.onboarding_skip{
+  font-size: 1.3rem;
+  padding: 2rem;
+}
+
+
 
 .slider_wrapper{
   width: 600%;
@@ -36,27 +48,15 @@
 .onboarding_pages_circle{
   opacity: .5;
 }
-.step-0 .onboarding_sentence_0, .step-0 .svg_wrapper_onboarding_0,
-.step-1 .onboarding_sentence_1, .step-1 .svg_wrapper_onboarding_1,
-.step-2 .onboarding_sentence_2, .step-2 .svg_wrapper_onboarding_2,
-.step-3 .onboarding_sentence_3, .step-3 .svg_wrapper_onboarding_3,
-.step-4 .onboarding_sentence_4, .step-4 .svg_wrapper_onboarding_4,
-.step-5 .onboarding_sentence_5, .step-5 .svg_wrapper_onboarding_5{
-  display: block;
-}
-
 
 .onboarding_pages{
   transition: opacity 1s;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  -webkit-transform: translate(-50%,0);
-          transform: translate(-50%,0);
+  padding-bottom: 1rem;
 }
 .onboarding_pages.hide{
   opacity: 0;
 }
+
 
 .onboarding_pages > div{
   position: relative;
@@ -83,7 +83,6 @@
 }
 
 #onboarding_svg{
-  position: absolute;
   width: 100%;
   height: 100%;
   pointer-events: none;

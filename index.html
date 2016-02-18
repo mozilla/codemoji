@@ -121,20 +121,23 @@
       </div>
     </div>
 
-    <div id="onboarding_svg" layout="column" layout-align="center center" wide data-svg="assets/svg/onboarding_bottom.svg">
-    </div>
+    <div class="onboarding_wrapper_ui" layout="column" layout-align="center center" wide flex>
 
-    <div wide center style="margin-top: 0.5rem;z-index: 9999;height: 3rem;">
-      <a href="" to-state="encrypt">skip</a>
-    </div>
-    <div class="onboarding_pages" layout="row" layout-align="center center">
-      <div class="current"><img src="assets/img/smile.png" /></div>
-      <div><img src="assets/img/smile.png" /></div>
-      <div><img src="assets/img/smile.png" /></div>
-      <div><img src="assets/img/smile.png" /></div>
-      <div><img src="assets/img/smile.png" /></div>
-    </div>
+      <div id="onboarding_svg" layout="column" layout-align="center center" wide data-svg="assets/svg/onboarding_bottom.svg"></div>
+    
+      <div class="onboarding_pages" layout="row" layout-align="center center">
+        <div class="current"><img src="assets/img/smile.png" /></div>
+        <div><img src="assets/img/smile.png" /></div>
+        <div><img src="assets/img/smile.png" /></div>
+        <div><img src="assets/img/smile.png" /></div>
+        <div><img src="assets/img/smile.png" /></div>
+      </div>
 
+      <div class="onboarding_skip" wide>
+        <a href="" to-state="encrypt">skip</a>
+      </div>
+
+    </div>
   </div>
   <!-- /ONBOARDING -->
 
@@ -313,10 +316,13 @@
   <script type="text/javascript" src="bower_components/esrever/esrever.js"></script>
   <script type="text/javascript" src="bower_components/stateman/stateman.js"></script>
   <script type="text/javascript" src="bower_components/q/q.js"></script>
-  <script type="text/javascript" src="bower_components/gsap/src/uncompressed/TweenLite.js"></script>
-  <script type="text/javascript" scr="bower_components/gsap/src/uncompressed/jquery.gsap.js"></script>
-  <script type="text/javascript" src="bower_components/gsap/src/uncompressed/plugins/CSSPlugin.js"></script>
-  <script type="text/javascript" src="bower_components/gsap/src/uncompressed/easing/EasePack.js"></script>
+  
+  <script type="text/javascript" src="libs/GreenSock-ShockinglyGreen-js/src/uncompressed/TweenLite.js"></script>
+  <script type="text/javascript" scr="libs/GreenSock-ShockinglyGreen-js/src/uncompressed/jquery.gsap.js"></script>
+  <script type="text/javascript" src="libs/GreenSock-ShockinglyGreen-js/src/uncompressed/plugins/CSSPlugin.js"></script>
+  <script type="text/javascript" src="libs/GreenSock-ShockinglyGreen-js/src/uncompressed/plugins/DrawSVGPlugin.js"></script>
+  <script type="text/javascript" src="libs/GreenSock-ShockinglyGreen-js/src/uncompressed/easing/EasePack.js"></script>
+
   <script type="text/javascript" src="bower_components/rebound-js/rebound.js"></script>
   <script type="text/javascript" src="bower_components/punycode/punycode.js"></script>
   <script type="text/javascript" src="bower_components/clipboard/dist/clipboard.js"></script>

@@ -4,7 +4,7 @@
 
 	function buildSlider(content_selector){
 
-		console.log('buildSlider')
+		console.log('buildSlider', content_selector)
 
 	    Cryptoloji.onBoardingSlider = true
 
@@ -13,8 +13,8 @@
 	    var spring = springSystem.createSpring(50, 10);
 
 	    var el = $(content_selector);
-	    var scenes = el.children();
-	    var num = scenes.length;
+	    //var scenes = 6//el.children();
+	    var num = 6//scenes.length;
 	    var w = $(document).width();
 	    var svgw = 400;
 	    var dots = $('.onboarding_pages').children()
@@ -37,20 +37,19 @@
 	    setTimeout(function(){
 		    var letter_icons = ['#single_c_1', '#single_i_1', '#single_i_1', '#single_i_1', '#single_o_1', '#single_o_2']
 		    var icon_icons = ['#img_c_1', '#img_i_1', '#img_i_2', '#img_i_3', '#img_o_1', '#img_o_2']
-		    var bigletters = ['#lttr_c', '#lttr_i', '#lttr_o']
 
-		    var arr = [].concat(icon_icons).concat(bigletters)
+		    var arr = [].concat(icon_icons)
 
 		    arr.forEach(function(e){
 		      TweenLite.set('#onboarding_svg '+e, {opacity:0})
 		    })
 
-		    TweenLite.set('#onboarding_svg #lttr_c', {opacity:0})
-
 		    $('#onboarding_svg image').each(function(i, e){
 		    	var url = $(e).attr('xlink:href').replace('..', 'assets')
 		    	$(e).attr('xlink:href', url)
 		    })
+
+		    TweenLite.set('#onboarding_svg #letter_c', {drawSVG:"100% 100%"})
 
 		    TweenLite.to('#onboarding_svg #watermelon image', 1, {delay:1.2, rotation:0, transformOrigin:"50% 50%", ease:Elastic.easeInOut})
 		    TweenLite.from('#onboarding_svg #text1', 1, {delay:1, opacity:0, y:"+20px", ease:Expo.easeInOut})
@@ -59,6 +58,7 @@
 
 	    
 	    el.on('touchmousedown', function(e) {
+	    	console.log('touchmousedown');
 	    	currpagex=e.pageX
 	    	currentX = e.pageX;
 	    	mousedown=true;
@@ -84,7 +84,7 @@
 
 		    currentShift = (e.pageX - currentX) * fakt;
 
-		    TweenLite.set(el[0], {x:currentPos+currentShift})
+		    //TweenLite.set(el[0], {x:currentPos+currentShift})
 		    
 		    var shiftNorm = mapval(currentPos+currentShift, 0, w*num, 0, 1)
 
@@ -115,7 +115,7 @@
 
 	      dots.removeClass('current')
 
-	      var currentScene = $(scenes[step])
+	      //var currentScene = $(scenes[step])
 	      $(dots[step]).addClass('current')
 
 	      
@@ -146,7 +146,7 @@
 	        val = mapval(oval, 0, 1, 0, (w*num*-1));
 	        var svgval = mapval(oval, 0, 1, 0, (svgw*num*-1));
 	        if(!mousedown) {
-	          TweenLite.set(el[0], {x:val})
+	          //TweenLite.set(el[0], {x:val})
 
 	          if(val % w === 0) consolidated_step=step
 
@@ -186,12 +186,14 @@
 
 	      	if(consolidated_step == 0){
 	      		console.warn('zero')
-	      		resetBigLettr('#lttr_c')
+	      		TweenLite.set('#onboarding_svg #letter_c', {drawSVG:"0% 100%"})
+	            TweenLite.to('#onboarding_svg #letter_c', 2, {drawSVG:"100% 100%", ease:Expo.easeInOut})
 	      	}
 	        if(consolidated_step == 1){
 	      		console.warn('uno')
-	            TweenLite.to('#onboarding_svg #lttr_c', 1, {opacity:1})
-
+	            TweenLite.set('#onboarding_svg #letter_c', {drawSVG:"100% 100%"})
+	            TweenLite.to('#onboarding_svg #letter_c', 2, {drawSVG:"0% 100%", ease:Expo.easeInOut})
+	            
 	            resetIn('#single_c_1')
 	            resetOut('#img_c_1')
 	        }
@@ -207,15 +209,17 @@
 	      		resetOut('#img_i_2')
 	      		resetIn('#single_i_3')
 	      		resetOut('#img_i_3')
-	            
-	            resetBigLettr('#lttr_i')
+
+	      		TweenLite.set('#onboarding_svg #letter_i', {drawSVG:"100% 100%"})
 	        }
 	        if(consolidated_step == 3){
 	      		console.warn('tre')
 
-	      		TweenLite.to('#onboarding_svg #lttr_c', 1, {opacity:0})
 	      		TweenLite.to('#onboarding_svg #single_c_1',  .7, {opacity:1, y:0})
 	      		TweenLite.to('#onboarding_svg #img_c_1', 1, {opacity:0})
+
+
+	            TweenLite.to('#onboarding_svg #letter_i', 2, {drawSVG:"0% 100%", ease:Expo.easeInOut})
 
 	      		lttrOut('#single_i_1')
 	      		lttrIn('#img_i_1')
@@ -224,19 +228,18 @@
 	      		lttrOut('#single_i_3')
 	      		lttrIn('#img_i_3')
 
-	            TweenLite.to('#onboarding_svg #lttr_i', 1, {delay:1, opacity:1})
 
 	            resetIn('#single_o_1')
 	      		resetOut('#img_o_1')
 	      		resetIn('#single_o_2')
 	      		resetOut('#img_o_2')
 
-	      		resetBigLettr('#lttr_c')
-	      		resetBigLettr('#lttr_o')
-	            
 	        }
 	        if(consolidated_step == 4){
 	      		console.warn('quatto')
+
+	      		TweenLite.set('#onboarding_svg #letter_o', {drawSVG:"100% 100%"})
+	            TweenLite.to('#onboarding_svg #letter_o', 2, {drawSVG:"0% 100%", ease:Expo.easeInOut})
 
 	      		lttrOut('#single_o_1')
 	      		lttrIn('#img_o_1')
@@ -251,7 +254,6 @@
 	      		resetIn('#single_i_3')
 	      		resetOut('#img_i_3')
 	      		
-	      		TweenLite.to('#onboarding_svg #lttr_o', 1, {delay:1, opacity:1})
 	        }
 	        if(consolidated_step == 5){
 	      		console.warn('cinque')
@@ -282,34 +284,6 @@
 	        }
 	      }
 	      
-	    }
-
-
-	    function showHideElements(arr, hide){
-	      var o = (hide) ? 0 : 1;
-	      arr.forEach(function(e){
-	        TweenLite.to('#onboarding_svg '+e, .35, {opacity:o})
-	      })
-	    }
-
-	    function showHidelettersZero(invert){
-	      //showHideElements(['#lttr_c'], invert)
-	    }
-	    function showHidelettersOne(invert){
-	      showHideElements(['#img_c_1'], invert)
-	      showHideElements(['#single_c_1'], !invert)
-	      //TweenLite.to('#onboarding_svg #watermelon_icon', 2, {transformOrigin:"50% 50%", rotation:360})
-	    }
-	    function showHidelettersTwo(invert){
-	      showHideElements(['#lttr_i','#img_i_1_1','#img_i_2_1','#img_i_3_1'], invert)
-	      showHideElements(['#single_i_1', '#single_i_2', '#single_i_3'], !invert)
-	    }
-	    function showHidelettersThree(invert){
-	      showHideElements(['#lttr_o','#img_o_1_1','#img_o_2_1'], invert)
-	      showHideElements(['#single_o_1', '#single_o_2'], !invert)
-	    }
-	    function showHidelettersFour(invert){
-	      showHideElements(['#lttr_o','#img_o_1_1','#img_o_2_1', '#text3'], !invert)
 	    }
 
 
