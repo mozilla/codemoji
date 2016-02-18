@@ -8,10 +8,13 @@
 
       $( ".section_loading_wrapper" ).load( "assets/svg/loading1.svg", function() {
         svgTransition()
+        TweenLite.to($('.section_loading_text'), 0.0, {delay: 0, opacity: 0.0})
+        TweenLite.to($('.section_loading_text'), 0.5, {delay: 2.0, opacity: 0.5})
+        TweenLite.to($('.section_loading_text'), 0.5, {delay: 5.0, opacity: 0.0})
       })
       setTimeout(function(){
         Cryptoloji.stateman.go('encrypt')
-      }, 6000)
+      }, 6200)
     },
     leave: function () {
       $(".section_loading").removeClass("section-show")

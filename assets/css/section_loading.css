@@ -1,7 +1,6 @@
 .section_loading{
   z-index: 10;
   text-align: center;
-  padding: 0 3.5rem;
 }
 
 .section_loading_wrapper{
@@ -26,7 +25,7 @@
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  opacity: .5;
+
   padding: 0 2rem;
   width: 100%;
 }
