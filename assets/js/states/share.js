@@ -41,7 +41,7 @@
 
       // give feedback in place
       var oldVal = $(e.trigger).val()
-      $(e.trigger).val('Copied!')
+      $(e.trigger).val('COPIED!')
       setTimeout(function () {
         $(e.trigger).val(oldVal)
       }, 350)
@@ -60,7 +60,7 @@
 
       // give feedback in place
       var oldVal = $(e.trigger).text()
-      $(e.trigger).text('Copied!')
+      $(e.trigger).text('COPIED!')
       setTimeout(function () {
         $(e.trigger).text(oldVal)
       }, 350)
