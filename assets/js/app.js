@@ -5,6 +5,8 @@
     inputMaxSize: 120
   }
 
+  Cryptoloji.visitor.countVisit()
+
   //
   // jQuery document ready bootstrap
   //
