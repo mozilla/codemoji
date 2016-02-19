@@ -44,10 +44,10 @@
 		      TweenLite.set('#onboarding_svg '+e, {opacity:0})
 		    })
 
-		    $('#onboarding_svg image').each(function(i, e){
-		    	var url = $(e).attr('xlink:href').replace('..', 'assets')
-		    	$(e).attr('xlink:href', url)
-		    })
+		    // $('#onboarding_svg image').each(function(i, e){
+		    // 	var url = $(e).attr('xlink:href').replace('..', 'assets')
+		    // 	$(e).attr('xlink:href', url)
+		    // })
 
 		    TweenLite.set('#onboarding_svg #letter_c', {drawSVG:"100% 100%"})
 

@@ -60,32 +60,32 @@
 	<g id="text3_emoji">
 		<g id="img_i_3">
 			
-				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="../img/asset_onboarding-03.png"  transform="matrix(0.2018 0 0 0.2018 967.4043 269.9541)">
+				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="assets/img/asset_onboarding-03.png"  transform="matrix(0.2018 0 0 0.2018 967.4043 269.9541)">
 			</image>
 		</g>
 		<g id="img_i_2">
 			
-				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="../img/asset_onboarding-03.png"  transform="matrix(0.2018 0 0 0.2018 1030.8438 269.9541)">
+				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="assets/img/asset_onboarding-03.png"  transform="matrix(0.2018 0 0 0.2018 1030.8438 269.9541)">
 			</image>
 		</g>
 		<g id="img_i_1">
 			
-				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="../img/asset_onboarding-03.png"  transform="matrix(0.2018 0 0 0.2018 1084.3438 309.5537)">
+				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="assets/img/asset_onboarding-03.png"  transform="matrix(0.2018 0 0 0.2018 1084.3438 309.5537)">
 			</image>
 		</g>
 		<g id="img_c_1">
 			
-				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="../img/asset_onboarding-02.png"  transform="matrix(0.2033 0 0 0.2033 893.876 309.4912)">
+				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="assets/img/asset_onboarding-02.png"  transform="matrix(0.2033 0 0 0.2033 893.876 309.4912)">
 			</image>
 		</g>
 		<g id="img_o_1">
 			
-				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="../img/asset_onboarding-01.png"  transform="matrix(0.1888 0 0 0.1888 999.5 310.9004)">
+				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="assets/img/asset_onboarding-01.png"  transform="matrix(0.1888 0 0 0.1888 999.5 310.9004)">
 			</image>
 		</g>
 		<g id="img_o_2">
 			
-				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="../img/asset_onboarding-01.png"  transform="matrix(0.1888 0 0 0.1888 1042.9463 310.9004)">
+				<image overflow="visible" enable-background="new    " width="128" height="128" xlink:href="assets/img/asset_onboarding-01.png"  transform="matrix(0.1888 0 0 0.1888 1042.9463 310.9004)">
 			</image>
 		</g>
 	</g>
@@ -93,7 +93,7 @@
 <g id="icns">
 	<g id="watermelon">
 		
-			<image overflow="visible" enable-background="new    " width="600" height="600" id="watermelon_img" xlink:href="../img/asset_onboarding-02_big.png"  transform="matrix(0.2174 -0.2174 0.2174 0.2174 68.8335 142.4463)">
+			<image overflow="visible" enable-background="new    " width="600" height="600" id="watermelon_img" xlink:href="assets/img/asset_onboarding-02_big.png"  transform="matrix(0.2174 -0.2174 0.2174 0.2174 68.8335 142.4463)">
 		</image>
 		<g id="lttr_c">
 			<path id="letter_c" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-miterlimit="10" d="M250.1,193.3
@@ -102,7 +102,7 @@
 	</g>
 	<g id="pole">
 		
-			<image overflow="visible" enable-background="new    " width="600" height="600" id="pole_img" xlink:href="../img/asset_onboarding-03_big.png"  transform="matrix(0.3 0 0 0.3 507.8086 53.2085)">
+			<image overflow="visible" enable-background="new    " width="600" height="600" id="pole_img" xlink:href="assets/img/asset_onboarding-03_big.png"  transform="matrix(0.3 0 0 0.3 507.8086 53.2085)">
 		</image>
 		<g id="lttr_i">
 			
@@ -111,7 +111,7 @@
 	</g>
 	<g id="orange">
 		
-			<image overflow="visible" enable-background="new    " width="600" height="600" id="orange_img" xlink:href="../img/asset_onboarding-01_big.png"  transform="matrix(0.2936 0 0 0.2936 918.3555 54.5532)">
+			<image overflow="visible" enable-background="new    " width="600" height="600" id="orange_img" xlink:href="assets/img/asset_onboarding-01_big.png"  transform="matrix(0.2936 0 0 0.2936 918.3555 54.5532)">
 		</image>
 		<g id="lttr_o">
 			<circle id="letter_o" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-miterlimit="10" cx="1006.4" cy="142.6" r="71.1"/>
