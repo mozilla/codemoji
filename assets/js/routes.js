@@ -13,6 +13,7 @@
     .state('onboarding', Cryptoloji.states.onboarding)
     .state('loading', Cryptoloji.states.loading)
     .state('more', Cryptoloji.states.more)
+    .state('landing', Cryptoloji.states.landing)
 
   $('body').on('click', '[to-state]', function (event) {
     event.preventDefault()
