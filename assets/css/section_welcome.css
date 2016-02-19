@@ -5,9 +5,10 @@
 }
 
 .welcome_button_more{
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
     font-size: 1.8rem;
     border-radius: 10rem;
+    min-height: 3.7rem;
 }
 
 .welcome_button_send{
@@ -32,5 +33,44 @@
 }
 
 .welcome_text{
-  font-family: 'fira_sans';
+  font-family: "fira_sans";
+  font-size: 120%;
+  line-height: 130%;
 }
+
+.section_welcome_main{
+  padding: 2rem;
+  position: relative;
+}
+
+.welcome_link_wrapper{
+  font-family: "fira_sans";
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+}
+
+.welcome_link_wrapper p{
+  font-size: 50%;
+  margin: 0;
+  padding: 0;
+  margin-right: 5px;
+  text-decoration: underline;
+  opacity: .8;
+}
+
+.section_welcome_footer{
+  min-height: 9rem; 
+}
+
+
+.section_welcome_footer p{
+  font-family: "fira_sans";
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+}
+
+
+

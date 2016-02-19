@@ -20,7 +20,7 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
     src: url('../font/firasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../font/firasans-regular-webfont.woff2') format('woff2'),
          url('../font/firasans-regular-webfont.woff') format('woff'),
-         url('../font/firasans-regular-webfont.ttf') format('truetype'),
+         url('../font/firasans-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
