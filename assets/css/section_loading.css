@@ -24,4 +24,10 @@
   transform: translateX(-50%);
   padding: 0 2rem;
   width: 100%;
+  opacity: 0;
+}
+
+
+.emoji_item, .loading_text_black, .loading_text_gray{
+  opacity: 0;
 }

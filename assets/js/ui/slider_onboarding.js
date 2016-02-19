@@ -31,7 +31,6 @@
 
 	    $('#onboarding_svg svg').removeAttr('width')
 	    $('#onboarding_svg svg').removeAttr('height')
-
 	    
 
 	    setTimeout(function(){
@@ -220,6 +219,7 @@
 
 
 	            TweenLite.to('#onboarding_svg #letter_i', 2, {drawSVG:"0% 100%", ease:Expo.easeInOut})
+	            TweenLite.set('#onboarding_svg #letter_o', {drawSVG:"100% 100%"})
 
 	      		lttrOut('#single_i_1')
 	      		lttrIn('#img_i_1')
@@ -238,6 +238,7 @@
 	        if(consolidated_step == 4){
 	      		console.warn('quatto')
 
+	      		TweenLite.set('#onboarding_svg #letter_i', {drawSVG:"100% 100%"})
 	      		TweenLite.set('#onboarding_svg #letter_o', {drawSVG:"100% 100%"})
 	            TweenLite.to('#onboarding_svg #letter_o', 2, {drawSVG:"0% 100%", ease:Expo.easeInOut})
 

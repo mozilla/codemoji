@@ -32,10 +32,14 @@
       })
     }
 
+    // $('.emoji_item, .loading_text_black, .loading_text_gray').each(function(i, e){
+    //   TweenLite.set($(e), {opacity:0})
+    // })
+    
     callbacks.add(animate_async)
-    callbacks.fire('.emoji_item', 0, 0, '0');
-    callbacks.fire('.loading_text_black', 0, 0, '0')
-    callbacks.fire('.loading_text_gray', 0, 0, '0')
+    //callbacks.fire('.emoji_item', 0, 0, '0');
+    //callbacks.fire('.loading_text_black', 0, 0, '0')
+    //callbacks.fire('.loading_text_gray', 0, 0, '0')
     callbacks.fire('.loading_text_gray', .07, 0, '1')
     callbacks.fire('.loading_text_black', .07, .8, '1')
     callbacks.fire('.letter_t', 0.25, 2, '0')
