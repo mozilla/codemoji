@@ -17,10 +17,6 @@
 	fill: white;
 }
 
-.loading_text {
-	font-family: 'FiraMono-Medium';
-}
-
 .section_loading_text{
   position: absolute;
   bottom: 1rem;

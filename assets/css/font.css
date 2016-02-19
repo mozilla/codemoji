@@ -15,35 +15,16 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 */
 
 @font-face {
-    font-family: 'FiraMono';
-    src: url('../font/firamono-bold-webfont.eot');
-    src: url('../font/firamono-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/firamono-bold-webfont.woff2') format('woff2'),
-         url('../font/firamono-bold-webfont.woff') format('woff'),
-         url('../font/firamono-bold-webfont.ttf') format('truetype');
-    font-weight: 800;
+    font-family: 'fira_sans';
+    src: url('../font/firasans-regular-webfont.eot');
+    src: url('../font/firasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/firasans-regular-webfont.woff2') format('woff2'),
+         url('../font/firasans-regular-webfont.woff') format('woff'),
+         url('../font/firasans-regular-webfont.ttf') format('truetype'),
+    font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'FiraMono-Medium';
-    src: url('../font/firamono-medium-webfont.eot');
-    src: url('../font/firamono-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/firamono-medium-webfont.woff2') format('woff2'),
-         url('../font/firamono-medium-webfont.woff') format('woff'),
-         url('../font/firamono-medium-webfont.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'fira_mono';
-    src: url('../font/firamono-bold-webfont.eot');
-    src: url('../font/firamono-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/firamono-bold-webfont.woff2') format('woff2'),
-         url('../font/firamono-bold-webfont.woff') format('woff'),
-         url('../font/firamono-bold-webfont.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
+
 @font-face {
     font-family: 'fira_mono';
     src: url('../font/firamono-medium-webfont.eot');
@@ -51,17 +32,7 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
          url('../font/firamono-medium-webfont.woff2') format('woff2'),
          url('../font/firamono-medium-webfont.woff') format('woff'),
          url('../font/firamono-medium-webfont.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'fira_mono';
-    src: url('../font/firamono-regular-webfont.eot');
-    src: url('../font/firamono-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/firamono-regular-webfont.woff2') format('woff2'),
-         url('../font/firamono-regular-webfont.woff') format('woff'),
-         url('../font/firamono-regular-webfont.ttf') format('truetype');
-    font-weight: 300;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -75,21 +46,18 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 /* text */
 
 [style-title]{
-    font-weight: 500;
     font-size: 190%;
     letter-spacing: 5px;
     line-height: 109%;
 }
 
 [style-text]{
-    font-weight: 300;
     font-size: 90%;
     line-height: 22px;
     letter-spacing: 1px;
 }
 
 [style-sub]{
-    font-weight: 500;
     font-size: 140%;
     letter-spacing: 5px;
     line-height: 109%;
@@ -97,21 +65,18 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 
 
 [style-lable]{
-    font-weight: 500;
     font-size: 1.2rem;
     letter-spacing: 1px;
     line-height: 109%;
 }
 
 [style-input]{
-    font-weight: 300;
     font-size: 100%;
     letter-spacing: 1px;
     line-height: 109%;
 }
 
 [style-huge]{
-    font-weight: 500;
     font-size: 400%;
     letter-spacing: 5px;
     line-height: 109%;
@@ -120,7 +85,6 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 /* buttons */
 
 [button-box]{
-  font-weight: 800;
   padding:5px 15px;
   background-color: transparent;
   border:2px solid #5D5D5D;
@@ -151,7 +115,6 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 }
 
 [button-line]{
-  font-weight: 800;
   background-color: transparent;
   border: none;
   cursor:pointer;
@@ -174,7 +137,6 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 
 
 [text="small-medium"]{
-    font-weight: 500;
     font-size: 80%;
     margin: 0;
     padding: 0;
@@ -190,18 +152,6 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 
 [text="title white"]{
     color: white;
-}
-
-[bold]{
-    font-weight: 700!important;
-}
-
-[bolder]{
-    font-weight: 900!important;
-}
-
-[medium]{
-    font-weight: 500!important;
 }
 
 [wide]{

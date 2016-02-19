@@ -11,14 +11,14 @@ html{
   box-sizing: border-box;
 }
 
-body{
+body{ 
   margin: 0;
   padding:  0;
   letter-spacing: 1px;
   width: 100%;
   height: 100%;
   font-size: 18px;
-  font-family: "fira_mono", verdana;
+  font-family: "fira_mono", "fira_sans", verdana;
   color: #5D5D5D;
   overflow: hidden;
   position: relative;

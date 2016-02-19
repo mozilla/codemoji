@@ -30,3 +30,7 @@
   width: 27rem;
   height: auto;
 }
+
+.welcome_text{
+  font-family: 'fira_sans';
+}
