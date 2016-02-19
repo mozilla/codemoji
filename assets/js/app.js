@@ -15,7 +15,7 @@
     // 
     // fix height
     // 
-    // $("body").css("height",$(window).innerHeight())
+    $("body").css("height",$(window).innerHeight())
 
     //
     // load svg

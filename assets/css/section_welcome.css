@@ -36,6 +36,7 @@
   font-family: "fira_sans";
   font-size: 120%;
   line-height: 130%;
+  text-align: center;
 }
 
 .section_welcome_main{
@@ -63,7 +64,6 @@
   min-height: 9rem; 
 }
 
-
 .section_welcome_footer p{
   font-family: "fira_sans";
   margin: 0;
@@ -72,5 +72,18 @@
 
 }
 
+.landing_small_text{
+  font-family: "fira_sans";
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 50%;
+  text-align: center;
+  max-width: 20rem;
+  margin-bottom: 20px;
+}
 
+.section_welcome_header_text{
+  text-align: center;
+}
 
