@@ -68,8 +68,14 @@
 
       // show input related UI elements
       $('#encryption_input').on('focus', function () {
-        $('#encryption_input_cleaner').show()
+        $('#encryption_input_cleaner').hide()
         $('#encryption_input_count').show()
+      })
+      $('#encryption_input').on('blur', function () {
+        var text = $('#encryption_input').val()
+        if (!_.isEmpty(text)) {
+          $('#encryption_input_cleaner').show()
+        }
       })
     },
     leave: function () {
