@@ -9,6 +9,9 @@
   }
 
   /*encryption*/
+  .svg_wrapper_header{
+    height: 7rem;
+  }
   .section_main_wrapper{
     flex-direction: row;
   }
