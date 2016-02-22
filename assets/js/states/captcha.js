@@ -2,7 +2,7 @@
   'use strict'
   
   console.log(Cryptoloji)
-
+  var captcha_url = "el.s.todo.to.it:3000"
   Cryptoloji.states.captcha = {
     enter: function () {
       // fix height
@@ -11,7 +11,7 @@
         event.preventDefault()
         var captcha_string = { 'captcha_string' : $('#g-recaptcha-response').val() }
 
-        $.post('http://localhost:9000/share', captcha_string)
+        $.post(captcha_url + '/share', captcha_string)
         .done(function() {
           Cryptoloji.stateman.go('share')
         })

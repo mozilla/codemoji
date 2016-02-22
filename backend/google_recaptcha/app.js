@@ -3,10 +3,11 @@ var path = require('path')
 var bodyParser = require('body-parser');
 var google_recaptcha = require('./google_recaptcha.js');
 var app = express();
-var port = 9000;
+var port = 3000;
 app.use(function(req, res, next) {
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	res.header("Access-Control-Allow-Origin", "*")
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+	res.header("Access-Control-Allow-Methods", "*")
 	next();
 })
 
