@@ -7,12 +7,45 @@
 
       Cryptoloji.stateman.emit('header:show')
 
-      Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
-        .fill(_.take(EmojiList, 10))
-
       Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')
         .setMaxSize(Cryptoloji.settings.inputMaxSize)
         .attachTo('#encryption_input')
+
+      // if we should serve a smaller version
+      if (!Cryptoloji.mq.matches) {
+        Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
+          .fill(_.take(EmojiList, 10))
+
+        Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
+          // select corresponding emoji in keymodal
+          Cryptoloji.UI.KeyModal().select(key)
+          
+          if ($('#encryption_input').val().length == 0) {
+            var newplaceholder = ['You\'ve picked a key.', 400, '\nWrite your message here to see it encrypted.', 600]
+            animateInputPlaceholder(theater, newplaceholder)
+          }
+          Cryptoloji.UI.selectKey(key)
+          Cryptoloji.UI.encryptText()
+        })
+
+        Cryptoloji.stateman.on('keymodal:key-chosen', function (key) {
+          Cryptoloji.UI.Keyslider('encrypt')
+            .resetSelection()
+            .addKey(key).select(key)
+          scrollToSelectedKey()
+          Cryptoloji.UI.selectKey(key)
+          Cryptoloji.UI.encryptText()
+        })
+      } else {
+        Cryptoloji.stateman.on('keypanel:key-chosen', function (key) {
+          if ($('#encryption_input').val().length == 0) {
+            var newplaceholder = ['You\'ve picked a key.', 400, '\nWrite your message here to see it encrypted.', 600]
+            animateInputPlaceholder(theater, newplaceholder)
+          }
+          Cryptoloji.UI.selectKey(key)
+          Cryptoloji.UI.encryptText()
+        })
+      }
 
       $(".encryption").addClass("section-show")
 
@@ -21,26 +54,6 @@
 
       // encrypt text on input
       $('#encryption_input').bind('input propertychange', function() {
-        Cryptoloji.UI.encryptText()
-      })
-
-      Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
-        // select corresponding emoji in keymodal
-        Cryptoloji.UI.KeyModal().select(key)
-        
-        if ($('#encryption_input').val().length == 0) {
-          var newplaceholder = ['You\'ve picked a key. ', 400, '\nWrite your message here to see it encrypted.', 600]
-          animateInputPlaceholder(theater, newplaceholder)
-        }
-        Cryptoloji.UI.selectKey(key)
-        Cryptoloji.UI.encryptText()
-      })
-      Cryptoloji.stateman.on('keymodal:key-chosen', function (key) {
-        Cryptoloji.UI.Keyslider('encrypt')
-          .resetSelection()
-          .addKey(key).select(key)
-        scrollToSelectedKey()
-        Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.encryptText()
       })
 

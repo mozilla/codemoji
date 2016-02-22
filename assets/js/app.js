@@ -27,10 +27,15 @@
     //
     // Key modal setup
     //    
-    Cryptoloji.UI.KeyModal('#key-modal')
-      .fill(EmojiList)
-      .addClickHandler('#encryption_key_modal_open')
-      .addClickHandler('#decryption_key_modal_open')
+    if (!Cryptoloji.mq.matches) {
+      Cryptoloji.UI.KeyModal('#key-modal')
+        .fill(EmojiList)
+        .addClickHandler('#encryption_key_modal_open')
+        .addClickHandler('#decryption_key_modal_open')
+    } else {
+      Cryptoloji.UI.KeyPanel('#encryption_keypanel')
+        .fill(EmojiList)
+    }
 
     //
     // handle header show/hide
