@@ -68,4 +68,4 @@
 
      callbacks.fire('.emoji_item', 0.05, 5.0, '0')
   }
-})(window, window.Cryptoloji)
+})(window, window.Cryptoloji);
