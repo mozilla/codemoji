@@ -51,6 +51,43 @@
   .main_keyslider .header__label{
     top: 8.8rem;
   }
+  .section_more{
+    display: flex;
+    z-index: 3000;
+    height: 30%;
+    top: auto;
+    flex-direction: row-reverse; 
+    padding: 0;
+    padding-bottom: 10rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .more_text_title{
+    color: gray;
+  }
+  .more_text{
+    align-items: flex-start;
+    margin: 0;
+    position: relative;
+    padding-left: 6rem;
+    padding-right: 2rem;
+    min-width: 66.66%;
+
+  }
+  .more_text:after{
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+  }
+  .svg_wrapper_more{
+    margin: 0;
+    transform: translate(4rem,0);
+  }
 }
 
 

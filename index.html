@@ -63,7 +63,7 @@
     </div>
   </div>
   <!-- /MODAL_KEYS -->
-  
+
 
   <!-- WELCOME views/welcome -->
   <div class="section_welcome section" color-bg-dark color-light layout="column" layout-align="center center">
@@ -353,8 +353,15 @@
 
   <!-- MORE views/more -->
   <div color-bg-dark class="section_more section" layout="column" layout-align="start start">
-    <div class="more_back" color-light to-state="share" wide layout="column" layout-align="center center">BACK TO SHARE</div>
-    <p class="more_text" flex color-light style-text layout="row" layout-align="start end">Cryptoloji is a part of Mozilla Foundation's campaing to promote encryptyion.<br>To learn visit advocacy.mozilla.org</p>
+    <div showItIfMobile class="more_back" color-light to-state="share" wide layout="column" layout-align="center center">
+      BACK TO SHARE
+    </div>
+    <p class="more_text" flex color-light style-text layout="column" layout-align="start end">
+      <span hideItIfMobile class="more_text_title">MORE ABOUT CRYPTOLOJI</span><br>
+      Cryptoloji is a part of Mozilla Foundation's campaing to promote encryptyion.<br>
+      To learn visit advocacy.mozilla.org
+    </p>
+    <div flex></div>
     <div class="svg_wrapper svg_wrapper_more" data-svg="assets/svg/mozilla_logo.svg"></div>
   </div>
   <!-- /MORE -->
