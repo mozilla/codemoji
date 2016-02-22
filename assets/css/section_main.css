@@ -221,7 +221,7 @@
 .main_content_bottom_input{
   background-color: transparent;
   margin: 0 0.7rem;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-bottom: 5px;
 }
 
@@ -364,10 +364,12 @@
   position: absolute;
   right: .9rem;
   top: 2.5rem;
-  width: 20px;
-  height: 20px;
+  width: 45px;
+  height: 45px;
   fill: white;
   opacity: .5;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 /*******************************************************************************
@@ -416,3 +418,22 @@
 }
 
 /******************************************************************************/
+
+/*desktop*/
+
+.desktop_main_selected_key_circle{
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    background-color: gray;
+    padding: 1.5rem;
+}
+
+.desktop_main_selected_key{
+      padding: 7rem 3.4rem;
+}
+.desktop_main_selected_key_description{
+  margin-left: 1rem;
+}
+
+

@@ -58,17 +58,6 @@ svg{
   display: block;
 }
 
-@media (min-width: 1024px) {
-    
-    [hideItIfMobile]{
-      display: block;
-    }
-
-    [showItIfMobile]{
-      display: none;
-  }
-}
-
 .section{
   position: absolute;
   top: 0;

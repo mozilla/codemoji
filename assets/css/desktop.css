@@ -1,0 +1,56 @@
+@media (min-width: 1024px) {
+  
+  [hideItIfMobile]{
+    display: block;
+  }
+
+  [showItIfMobile]{
+    display: none;
+  }
+
+  /*encryption*/
+  .section_main_wrapper{
+    flex-direction: row;
+  }
+  .section_main_wrapper .header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3000;
+    box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
+  }
+  .main_content_top,
+  .main_keyslider{
+    height: 100%;
+    width: 33.33%;
+    padding-top: 4.5rem;
+  }
+  .main_content_bottom{
+    height: 100%;
+    padding-top: 4.5rem;
+    margin-bottom: 0;
+    background-color: #F46060;
+  }
+  .main_content_top{
+    background-color: #F4900C;
+  }
+  .header__label{
+      top: 8.8rem;
+      left: 3.7rem;
+  }
+  .encryption .main_content_top_input,
+  .encryption .main_content_bottom_input{
+  padding: 9rem 5rem 1rem 3.7rem;
+  margin: 0;
+  }
+  .svg_wrapper_x{
+    top: 9rem;
+  }
+  .main_keyslider .header__label{
+    top: 8.8rem;
+  }
+}
+
+

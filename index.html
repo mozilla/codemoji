@@ -27,6 +27,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/section_loading.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_more.css">
   <link rel="stylesheet" type="text/css" href="assets/css/js_handlers.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/desktop.css">
   <!-- endbuild -->
 
   <!-- <script type="text/javascript" src="assets/text/text.json"></script> -->
@@ -187,11 +188,27 @@
         <p id="encryption_input_count" class="encryption_input_count main_content_top_label" uppercase style-lable></p>
         <div id="encryption_input_cleaner" class="svg_wrapper svg_wrapper_x" data-svg="assets/svg/x.svg"></div>
       </div>
+      
       <div id="encryption_keyslider" class="main_keyslider">
+        <div hideItIfMobile>        
+          <div class="desktop_main_selected_key" layout="row" layout-align="start center">
+            <div class="desktop_main_selected_key_circle">
+              <!-- key selected -->
+              <div class="svg_wrapper svg_wrapper_desktop_key" data-svg="assets/svg/x.svg"></div>
+            </div>
+            <p class="desktop_main_selected_key_description">description</p>
+          </div>
+        </div>
         <label class="header__label main_keyslider_bottom_label" uppercase style-lable color-dark>YOUR KEY</label>
-        <div class="keyslider">
+        <div class="keyslider" showItifMobile>
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
+          </div>
+        </div>
+        <div hideItifMobile class="main_key_modal_emoji_wrapper" layout="column" layout-align="start center">
+          <div class="main_key_modal_emoji_container" layout="column" layout-align="start center">
+            <!-- js injected -->
+            aaaaa
           </div>
         </div>
         <div class="main_keyslider_plus" color-bg-main-ligther>
@@ -201,6 +218,8 @@
           </div>
         </div>
       </div>
+
+
       <div class="main_content_bottom" flex layout="column" color-bg-dark>
         <label class="header__label main_content_bottom_label" uppercase style-lable>YOUR SECRET MESSAGE</label>
         <div flex id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" 
