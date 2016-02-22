@@ -11,14 +11,14 @@ var fs = require('fs');
 var copy = require('gulp-copy');
 
 // File where the favicon markups are stored
-var FAVICON_DATA_FILE = 'faviconData.json';
+var FAVICON_DATA_FILE = 'cache/faviconData.json';
 
-gulp.task('copy_fonts', ['clean'], function() {
+gulp.task('copy:fonts', ['clean'], function() {
   return gulp.src('assets/font/**/*.{ttf,woff,woff2,eot,svg}')
       .pipe(gulp.dest('public/font'));
 });
 
-gulp.task('copy_assets', ['clean'], function() {
+gulp.task('copy:assets', ['clean'], function() {
   var assets_paths = [
     'assets/svg/**/*',
     'assets/img/**/*',
@@ -28,6 +28,11 @@ gulp.task('copy_assets', ['clean'], function() {
   
   return gulp.src(assets_paths)
              .pipe(copy('public'));
+});
+
+gulp.task('copy:favicon', ['clean'], function() {
+  return gulp.src('cache/favicon/*')
+      .pipe(gulp.dest('public'));
 });
 
 gulp.task('minify', ['clean'], function() {
@@ -56,7 +61,7 @@ gulp.task('clean', function() {
 gulp.task('generate-favicon', function(done) {
   realFavicon.generateFavicon({
     masterPicture: 'favicon.svg',
-    dest: 'public',
+    dest: 'cache/favicon',
     iconsPath: '/',
     design: {
       ios: {
@@ -106,5 +111,5 @@ gulp.task('inject-favicon-markups', ['minify'], function() {
       .pipe(gulp.dest('public/'));
 });
 
-gulp.task('build', ['clean', 'copy_fonts', 'copy_assets', 'minify', 'inject-favicon-markups']);
-gulp.task('favicon', ['generate-favicon', 'inject-favicon-markups']);
+gulp.task('build', ['clean', 'copy:fonts', 'copy:favicon', 'copy:assets', 'minify', 'inject-favicon-markups']);
+gulp.task('favicon', ['generate-favicon']);
