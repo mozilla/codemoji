@@ -28,31 +28,32 @@
   .main_keyslider{
     height: 100%;
     width: 33.33%;
-    padding-top: 4.5rem;
+    padding: 0;
   }
   .main_content_bottom{
     height: 100%;
-    padding-top: 4.5rem;
     margin-bottom: 0;
+    padding-top: 0;
     background-color: #F46060;
   }
   .main_content_top{
     background-color: #F4900C;
   }
   .header__label{
-      top: 8.8rem;
+      top: 13.8rem;
       left: 3.7rem;
+      font-size: 1.5rem
   }
   .encryption .main_content_top_input,
   .encryption .main_content_bottom_input{
-  padding: 9rem 5rem 1rem 3.7rem;
+  padding: 28rem 5rem 1rem 3.7rem;
   margin: 0;
   }
   .svg_wrapper_x{
-    top: 9rem;
+    top: 26.7rem;
   }
   .main_keyslider .header__label{
-    top: 8.8rem;
+    top: 13.8rem;
   }
   .section_more{
     display: flex;
@@ -90,6 +91,15 @@
   .svg_wrapper_more{
     margin: 0;
     transform: translate(4rem,0);
+  }
+  .header_desktop_lable{
+    margin: 0rem 0 2rem 0;
+  }
+  .desktop_main_selected_key{
+    height: 28rem;
+    align-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem 3.4rem;
   }
 }
 
