@@ -14,6 +14,7 @@
     .state('loading', Cryptoloji.states.loading)
     .state('more', Cryptoloji.states.more)
     .state('landing', Cryptoloji.states.landing)
+    .state('captcha', Cryptoloji.states.captcha)
 
   $('body').on('click', '[to-state]', function (event) {
     event.preventDefault()
