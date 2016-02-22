@@ -2,7 +2,7 @@
   'use strict'
   
   console.log(Cryptoloji)
-  var captcha_url = "el.s.todo.to.it:3000"
+  var captcha_url = "http://el.s.todo.to.it:3000"
   Cryptoloji.states.captcha = {
     enter: function () {
       // fix height
