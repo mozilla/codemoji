@@ -52,4 +52,4 @@
     encrypt: encrypt,
     decrypt: decrypt
   }
-}))
+}));
