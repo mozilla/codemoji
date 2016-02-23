@@ -27,7 +27,9 @@
   background-color: #283344;
   color: #FAFAFA;
 }
-
+.main_content_top_input{
+  color: #FAFAFA;
+}
 .encryption .main_keyslider{
   background-color: #FAFAFA;
   color: #283344;
@@ -39,7 +41,6 @@
   color: #FAFAFA;
   border-color: #FAFAFA;
 }
-
 .main_content_bottom{
   padding-top: 2.2rem;
   margin-bottom: 45px;

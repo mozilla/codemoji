@@ -46,7 +46,20 @@
   .encryption .main_content_top_label{
     color: #FAFAFA;
   }
-
+  .main_key_panel_emoji_container{
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 27rem;
+    margin-bottom: 3rem;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .main_key_panel_emoji_container p{
+    margin: 3px;
+  }
   .main_content_top,
   .main_keyslider{
     height: 100%;
@@ -58,7 +71,9 @@
     margin-bottom: 0;
     padding-top: 0;
   }
-  
+  .main_key_panel_emoji_wrapper{
+    height: 100%;
+  }
   .header__label{
       top: 13.8rem;
       left: 3.7rem;
@@ -120,6 +135,7 @@
     align-content: flex-end;
     align-items: flex-end;
     padding: 1rem 3.4rem;
+    position: absolute;
   }
 }
 
