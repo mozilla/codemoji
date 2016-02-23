@@ -19,12 +19,14 @@
   function encode (text) {
     // convert text into unicode points ( from ucs2 )
     var points = punycode.ucs2.decode(text)
+    console.log(text, EmojiList, points, chars)
     // map points with emoji indexes
     points = _.map(points, function (point) {
       // if point is not a valid symbol return it
       if (!_.includes(chars, point)) return point
       // get index of point in CharList array
-      var index = _.findIndex(chars, function (c) { return c == point }) 
+      var index = _.findIndex(chars, function (c) { return c == point })
+      console.log(index)
       // return emoji char at index position
       return emojis[index]
     })
@@ -35,10 +37,12 @@
   function decode (text) {
     // convert text into unicode points ( from ucs2 )
     var points = punycode.ucs2.decode(text)
+    console.log(text, EmojiList, points)
     // map points with emojis index
     points = _.map(points, function (point) {
       // find index of point in emojis ( or -1 )
       var index = _.findIndex(emojis, function (el) { return el === point })
+      console.log(index)
       // if point is found return it
       if (index >= 0) return CharList[index]
       // else convert point to char and return it
@@ -49,21 +53,10 @@
   }
 
   function generateEmojiListFrom (key) {
-    key = toNumber(key)
-    // if key is undefined reset emoji list
-    if (_.isUndefined(key)) {
-      emojis = EmojiList.slice(0, CharList.length)
-    } else { 
-      var z = key
-      var m = EmojiList.length
-      function getNext(x) { return (x * z) % m }
-
-      var newEmojis = []
-      _.times(CharList.length, function (i) {
-        newEmojis.push(EmojiList[getNext(i)])
-      })
-      emojis = newEmojis
-    }
+    emojis = EmojiList.slice(0)
+    var temp = emojis.splice(0, key)
+    emojis = emojis.concat(temp)
+    console.log(EmojiList, emojis)
   }
 
   function toKey (emoji) {

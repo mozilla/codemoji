@@ -39,7 +39,7 @@
     if (Cryptoloji.current.key) {
       var text = $('#encryption_input').val()
       if (text !== '' && !/^\s+$/.test(text)) {
-        CryptoLib.generateEmojiSubsetFrom(Cryptoloji.current.key)
+        // CryptoLib.generateEmojiSubsetFrom(Cryptoloji.current.key)
         Cryptoloji.current.input = text
         Cryptoloji.stateman.emit('encrypt:hide-output-placeholder')
         console.debug('Chosen text:', text)
