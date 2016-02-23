@@ -29,6 +29,20 @@
     z-index: 3000;
     box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
   }
+  .encryption .main_content_bottom{ 
+    background-color: #FAFAFA;
+    color: #283344;
+  }
+  .encryption{ 
+    background-color: #FAFAFA;
+  }
+  .encryption .main_keyslider{
+    background-color: #283344;
+    color: #FAFAFA;
+  }
+  .encryption .main_keyslider_bottom_label{
+    color: #FAFAFA;
+  }
   .main_content_top,
   .main_keyslider{
     height: 100%;
@@ -88,7 +102,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: #FAFAFA;
   }
   .svg_wrapper_more{
     margin: 0;
