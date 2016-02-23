@@ -25,11 +25,11 @@
 
 .section_welcome_header{
   min-height: 15rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 
 .svg_wrapper_header_name{
-  width: 43rem;
+  width: 22rem;
   height: auto;
 }
 

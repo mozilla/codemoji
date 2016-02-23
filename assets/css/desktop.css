@@ -8,7 +8,12 @@
     display: none;
   }
 
-  /*encryption*/
+  .svg_wrapper_header_name{
+    width: 43rem;
+  }
+  ..section_welcome_header{
+    padding-bottom: 4rem;
+  }
   .svg_wrapper_header{
     height: 7rem;
   }
