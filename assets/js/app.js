@@ -18,6 +18,16 @@
     // fix height
     // 
     $("body").css("height",$(window).innerHeight())
+    
+    // 
+    // on rotation/resize
+    // 
+    var supportsOrientationChange = 'onorientationchange' in window
+    var orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize'
+    $(window).on(orientationEvent, function (event) {
+      // recalculate height on onrientation change
+      $('body').css('height', $(window).innerHeight())
+    })
 
     //
     // load svg
