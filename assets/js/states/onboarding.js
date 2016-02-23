@@ -30,7 +30,9 @@
           Cryptoloji.stateman.go("encrypt")
         })
       },
-      leave: function () {}
+      leave: function () {
+        $('[slide-num="'+n+'"]').removeClass("section-show")
+      }
     }
   }
 
