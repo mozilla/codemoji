@@ -111,21 +111,23 @@
   <!-- LANDING views/landing -->
   <div class="section_landing section" color-bg-dark color-light layout="column" layout-align="center center">
     <div class="section_welcome_header" color-bg-light layout="column" layout-align="start center" wide>
-      <div class="svg_wrapper svg_wrapper_header_logo" data-svg="assets/svg/mozilla_logo.svg" color-fill-main-alt
-           layout="column" layout-align="center center"></div>
+      <div class="svg_wrapper_header_logo_wrp" layout="column" layout-align="start start" wide>
+        <div class="svg_wrapper svg_wrapper_header_logo" data-svg="assets/svg/mozilla_logo.svg" color-fill-main-alt
+             layout="column" layout-align="center center"></div>
+      </div>
       <div class="svg_wrapper svg_wrapper_header_name" data-svg="assets/svg/header.svg" color-fill-main-alt
            layout="column" layout-align="center center"></div>
-      <p class="section_welcome_header_text" color-main style-text>THE FUN ENCRYPTION TOOL landing</p>
+      <p class="section_welcome_header_text" color-main style-text>THE FUN ENCRYPTION TOOL</p>
     </div>
-    <div class="section_welcome_main" color-bg-dark layout="column" layout-align="space-between center" wide flex>
-        <div flex class="welcome_text" layout="column" layout-align="start center">
-          Mozilla has shared a message with you.
+    <div class="section_welcome_main" color-bg-dark layout="column" layout-align="center center" wide flex>
+        <div class="welcome_text" layout="column" layout-align="start center">
+          Turn your message into emojis and bring<br>a smile to your friends' face
           <p></p>
         </div>
-        <p class="landing_small_text">It's encrypted into emojis but can read it here (if you have the rigth key)</p>
+        <!-- <p class="landing_small_text">It's encrypted into emojis but can read it here (if you have the rigth key)</p> -->
         <button uppercase button-box class="welcome_button_more" to-state="onboarding" color-light border-light
                 layout="column" layout-align="center center">
-          NEXT
+          TRY IT
         </button>
         <div class="welcome_link_wrapper" wide layout="row" layout-align="start center">
           <p class="welcome_link">Legal</p>
@@ -136,6 +138,38 @@
     </div>
   </div>
   <!-- /LANDING -->
+
+    <!-- LANDING MESSAGE views/landing message-->
+  <div class="section_landing_message section" color-bg-dark color-light layout="column" layout-align="center center">
+    <div class="section_welcome_header" color-bg-light layout="column" layout-align="start center" wide>
+      <div class="svg_wrapper_header_logo_wrp" layout="column" layout-align="start start" wide>
+        <div class="svg_wrapper svg_wrapper_header_logo" data-svg="assets/svg/mozilla_logo.svg" color-fill-main-alt
+             layout="column" layout-align="center center"></div>
+      </div>
+      <div class="svg_wrapper svg_wrapper_header_name" data-svg="assets/svg/header.svg" color-fill-main-alt
+           layout="column" layout-align="center center"></div>
+      <p class="section_welcome_header_text" color-main style-text>THE FUN ENCRYPTION TOOL</p>
+    </div>
+    <div class="section_welcome_main" color-bg-dark layout="column" layout-align="center center" wide flex>
+        <div class="welcome_text" layout="column" layout-align="start center">
+          Mozilla has shared a message with you.
+          <p></p>
+        </div>
+        <!-- <p class="landing_small_text">It's encrypted into emojis but can read it here (if you have the rigth key)</p> -->
+        <button uppercase button-box class="welcome_button_more" to-state="onboarding" color-light border-light
+                layout="column" layout-align="center center">
+          TRY IT
+        </button>
+        <div class="welcome_link_wrapper" wide layout="row" layout-align="start center">
+          <p class="welcome_link">Legal</p>
+          <p class="welcome_link">Privacy Policy</p>
+        </div>
+        <!-- <button uppercase button-box class="welcome_button_send" to-state="encrypt" color-light border-light>Send a secret message</button> -->
+        <!-- <button uppercase button-line class="welcome_button_receive" to-state="decrypt" gray>Decrypt a secret message</button>     -->
+    </div>
+  </div>
+  <!-- /LANDING MESSAGE -->
+
 
   <!-- ONBOARDING views/onboarding -->
   <div class="section_onboarding section">

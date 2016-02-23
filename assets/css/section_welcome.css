@@ -25,16 +25,17 @@
 
 .section_welcome_header{
   min-height: 15rem;
+  padding-bottom: 4rem;
 }
 
 .svg_wrapper_header_name{
-  width: 27rem;
+  width: 43rem;
   height: auto;
 }
 
 .welcome_text{
   font-family: "fira_sans";
-  font-size: 120%;
+  font-size: 140%;
   line-height: 130%;
   text-align: center;
 }
@@ -87,3 +88,6 @@
   text-align: center;
 }
 
+.svg_wrapper_header_logo_wrp{
+  margin-left: 9rem;
+}

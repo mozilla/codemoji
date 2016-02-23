@@ -56,7 +56,7 @@
     top: 13.8rem;
   }
   .section_more{
-    display: flex;
+    /*display: flex;*/
     z-index: 3000;
     height: 30%;
     top: auto;
