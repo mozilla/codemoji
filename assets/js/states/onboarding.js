@@ -8,33 +8,37 @@
       Cryptoloji.stateman.go('onboarding/step1')
     }
   }
-  
-  Cryptoloji.states.onboarding.step1 = {
-    enter: function () {
-      $(".section_onboarding_step1").addClass("section-show")
-    },
-    leave: function () {
-      $(".section_onboarding_step1").removeClass("section-show")
+
+  function next_slide(n){
+    return {
+      enter: function () {
+        $('[slide-num="'+n+'"]').addClass("section-show")
+        $('[slide-num="'+n+'"]').on("click", function(){
+          Cryptoloji.stateman.go('onboarding/step'+(n+1))
+        })
+      },
+      leave: function () {
+        $('[slide-num="'+n+'"]').removeClass("section-show")
+      }
+    }
+  }
+  function to_encrypt(n){
+    return {
+      enter: function () {
+        $('[slide-num="'+n+'"]').addClass("section-show")
+        $('[slide-num="'+n+'"]').on("click", function(){
+          Cryptoloji.stateman.go("encrypt")
+        })
+      },
+      leave: function () {}
     }
   }
 
-  Cryptoloji.states.onboarding.step2 = {
-    enter: function () {
-      $(".section_onboarding_step2").addClass("section-show")
-    },
-    leave: function () {
-      $(".section_onboarding_step2").removeClass("section-show")
-    }
-  }
+  Cryptoloji.states.onboarding.step1 = next_slide(1)
+  Cryptoloji.states.onboarding.step2 = next_slide(2)
+  Cryptoloji.states.onboarding.step3 = to_encrypt(3)
 
-  Cryptoloji.states.onboarding.step3 = {
-    enter: function () {
-      $(".section_onboarding_step3").addClass("section-show")
-    },
-    leave: function () {
-      $(".section_onboarding_step3").removeClass("section-show")
-    }
-  }
+
 })(window, window.Cryptoloji); 
 
 
