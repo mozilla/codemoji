@@ -78,10 +78,11 @@
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
-  font-size: 50%;
+  font-size: 88%;
   text-align: center;
-  max-width: 20rem;
+  /* max-width: 20rem; */
   margin-bottom: 20px;
+  opacity: .6;
 }
 
 .section_welcome_header_text{
