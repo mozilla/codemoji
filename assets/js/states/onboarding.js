@@ -36,7 +36,12 @@
 
   Cryptoloji.states.onboarding.step1 = next_slide(1)
   Cryptoloji.states.onboarding.step2 = next_slide(2)
-  Cryptoloji.states.onboarding.step3 = to_encrypt(3)
+  Cryptoloji.states.onboarding.step3 = next_slide(3)
+  Cryptoloji.states.onboarding.step4 = next_slide(4)
+  Cryptoloji.states.onboarding.step5 = next_slide(5)
+  Cryptoloji.states.onboarding.step6 = next_slide(6)
+  Cryptoloji.states.onboarding.step7 = next_slide(7)
+  Cryptoloji.states.onboarding.step8 = to_encrypt(8)
 
 
 })(window, window.Cryptoloji); 
