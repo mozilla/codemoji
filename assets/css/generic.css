@@ -97,11 +97,25 @@ img.emoji {
   user-select: none;
 }
 
-@media only screen and (max-width: 778px) and (orientation:landscape) {
+
+.landscape-overlay {
+  width: 100%;
+  height: 100%;
+
+}
+.landscape-overlay .content {
+  font-size: 4rem;
+  height: 100%;
+
+}
+.landscape-overlay .content img{
+  height: 50%;
+}
+/*@media only screen and (max-width: 778px) and (orientation:landscape) {
   .landscape-overlay {
     display: block;
   }
-}
+}*/
 
 [wide]{
   width: 100%;
