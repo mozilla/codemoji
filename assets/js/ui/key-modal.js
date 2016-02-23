@@ -33,6 +33,7 @@
   KeyModal.prototype.close = function close () {
     var self = this
     $('body').removeClass('main_key_modal-open')
+    Cryptoloji.stateman.emit('encrypt:show-share')
     return self
   }
 
@@ -98,6 +99,8 @@
           var modal_height = $('.section_main.decryption .header').height() + $('.section_main.decryption .main_content_top').height()
           $('.main_key_modal').css("height", modal_height)
         }
+        // temporary fix
+        $('#encryption_share_button').css('display', 'none')
         $('body').addClass('main_key_modal-open')
       }
     }
