@@ -43,6 +43,10 @@
   .encryption .main_keyslider_bottom_label{
     color: #FAFAFA;
   }
+  .encryption .main_content_top_label{
+    color: #FAFAFA;
+  }
+
   .main_content_top,
   .main_keyslider{
     height: 100%;
