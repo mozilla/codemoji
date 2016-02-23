@@ -63,7 +63,9 @@
         $('.main_keyslider_plus', self.$element).css('display', 'none')
       }
       Cryptoloji.stateman.on('encrypt:show-share', function() {
-        $('#encryption_share_button').css('display', 'block')
+        if (!$('body').hasClass('main_key_modal-open')) {
+          $('#encryption_share_button').css('display', 'block')
+        }
         $('#encryption_share_button').addClass('main_share-open')
       })
 
