@@ -205,7 +205,7 @@
   <!-- /LOADING -->
 
   <!-- ENCRYPTION views/encryption -->
-  <div class="section_main section encryption" layout="column" layout-align="start center" color-bg-dark>
+  <div class="section_main section encryption" layout="column" layout-align="start center" color-bg-dark color-light>
     <div class="section_main_wrapper" layout="column" layout-align="center center">
       <div class="header" layout="column" layout-align="center center" color-bg-light wide>
           <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header.svg"
@@ -213,13 +213,13 @@
           <p hideItIfMobile class="header_desktop_lable" style-text color-main>THE FUN ENCRYPTION TOOL</p>
       </div>
       <div class="main_content_top" flex layout="column" color-bg-main>
-        <label uppercase class="header__label main_content_top_label" style-lable>SECRET MESSAGE</label>
+        <label uppercase class="header__label main_content_top_label" style-lable color-light>SECRET MESSAGE</label>
         <textarea maxlength="120" flex id="encryption_input" class="header__input main_content_top_input" style-input placeholder="Write your message here."></textarea>
         <p id="encryption_input_count" class="encryption_input_count main_content_top_label" uppercase style-lable></p>
         <div id="encryption_input_cleaner" class="svg_wrapper svg_wrapper_x" data-svg="assets/svg/x.svg"></div>
       </div>
       
-      <div id="encryption_keyslider" class="main_keyslider">
+      <div id="encryption_keyslider" class="main_keyslider" color-bg-dark>
         <div hideItIfMobile>        
           <div class="desktop_main_selected_key" layout="row" layout-align="start center">
             <div class="desktop_main_selected_key_circle">
@@ -248,8 +248,7 @@
         </div>
       </div>
 
-
-      <div class="main_content_bottom" flex layout="column" color-bg-dark>
+      <div class="main_content_bottom" flex layout="column" color-bg-light color-dark>
         <label class="header__label main_content_bottom_label" uppercase style-lable>SCRAMBLED MESSAGE</label>
         <div flex id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" 
              placeholder="Pick a key to see your message encrypted here." style-input></div>

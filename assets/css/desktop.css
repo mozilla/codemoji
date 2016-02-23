@@ -34,11 +34,8 @@
     height: 100%;
     margin-bottom: 0;
     padding-top: 0;
-    background-color: #F46060;
   }
-  .main_content_top{
-    background-color: #F4900C;
-  }
+  
   .header__label{
       top: 13.8rem;
       left: 3.7rem;

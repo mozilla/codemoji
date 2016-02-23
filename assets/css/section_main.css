@@ -31,7 +31,6 @@
 .main_keyslider{
   width: 100%;
   min-height: 9rem;
-  background-color: white;
   position: relative;
   opacity: 1;
 }
@@ -131,12 +130,6 @@
           transform: translate(-50%,0);
 }
 
-.main_content_top .header__label,
-.main_content_bottom .header__label{
-  color: white;
-}
-
-
 /*.main_keyslider:after{
   position: absolute;
   content: "";
@@ -226,7 +219,6 @@
 }
 
 .main_content_bottom_input.placeholdit {
-  color: white;
   opacity: .5;
 }
 .main_content_bottom_input.placeholdit:after {
@@ -289,7 +281,6 @@
   text-align: center;
   border: none;
   height: 9rem;
-  color: white;
   text-align: left;
   padding-top: 6px;
 }
@@ -345,7 +336,7 @@
 .encryption_input_count{
   /*bottom: 1rem;*/
   /*left: 2rem;*/
-   bottom: .8rem;
+   top: 40rem;
     right: .7rem;
   position: absolute;
   margin-left: 0;
