@@ -31,7 +31,7 @@
 }
 
 .share_more{
-  height: 7rem;
+  /*max-height: 7rem;*/
   font-size: 90%;
   letter-spacing: 2px;
   /*line-height: 120%;*/
@@ -67,7 +67,8 @@
   width: 100%;
   /*min-height: 17rem;*/
   /*padding: .8rem 3rem 1rem 3rem;*/
-  margin-bottom: 4rem
+  margin-bottom: 4rem;
+  margin-top: 1rem;
 }
 
 .share_social_lable{

@@ -74,6 +74,13 @@ svg{
   display: -ms-flexbox !important;
   display: flex !important;
 }
+@media screen and (max-height: 500px) {
+  .section-show{
+    display: block !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
 
 img.emoji {
   height: 1em;
