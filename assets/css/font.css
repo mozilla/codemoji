@@ -34,7 +34,6 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'fira_sans';
     src: url('../font/firasans-regular-webfont.eot');
@@ -45,7 +44,6 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'fira_mono';
     src: url('../font/firamono-medium-webfont.eot');
@@ -187,3 +185,16 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
     text-transform: uppercase;
 }
 
+.mozilla_button{
+  font-family: 'fira_sans';
+  font-size: 18px;
+  background-color: #f46060;
+  border: none;
+  color: #fff;
+  padding: 12px 37px;
+  text-align: center;
+  border-radius: 25px;
+  -webkit-transition: all .5s ease-in-out 0s;
+  transition: all .5s ease-in-out 0s;
+  cursor: pointer;
+}

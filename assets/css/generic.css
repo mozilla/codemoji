@@ -18,7 +18,7 @@ body{
   width: 100%;
   height: 100%;
   font-size: 18px;
-  font-family: "fira_mono", "fira_sans", verdana;
+  font-family: "fira_mono", "fira_sans", sans-serif, verdana;
   color: #5D5D5D;
   overflow: hidden;
   position: relative;
