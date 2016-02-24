@@ -97,8 +97,14 @@
         </button> -->
         <button button-box class="mozilla_button" to-state="onboarding">Try It</button>
         <div class="welcome_link_wrapper" wide layout="row" layout-align="start center">
-          <p class="welcome_link">Legal</p>
-          <p class="welcome_link">Privacy Policy</p>
+          <div class="welcome_link_wrapper_opacity" layout="row" layout-align="center start">
+            <div class="svg_wrapper_welcome_footer_icon svg_wrapper" data-svg="assets/svg/footer-icon-terms.svg"></div>
+            <p class="welcome_link">Legal</p>
+          </div>
+          <div class="welcome_link_wrapper_opacity" layout="row" layout-align="center start">
+            <div class="svg_wrapper_welcome_footer_icon svg_wrapper" data-svg="assets/svg/footer-icon-privacy.svg"></div>
+            <p class="welcome_link">Privacy Policy</p>
+          </div>
         </div>
         <!-- <button uppercase button-box class="welcome_button_send" to-state="encrypt" color-light border-light>Send a secret message</button> -->
         <!-- <button uppercase button-line class="welcome_button_receive" to-state="decrypt" gray>Decrypt a secret message</button>     -->

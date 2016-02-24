@@ -53,11 +53,11 @@
 }
 
 .welcome_link_wrapper p{
-  font-size: 50%;
+  font-size: 80%;
   margin: 0;
   padding: 0;
-  margin-right: 5px;
-  text-decoration: underline;
+  margin-right: 19px;
+  margin-left: 5px;
   opacity: .8;
 }
 
@@ -91,4 +91,8 @@
 
 .svg_wrapper_header_logo_wrp{
   align-items: center;
+}
+
+.welcome_link_wrapper_opacity{
+  opacity: .5;
 }
