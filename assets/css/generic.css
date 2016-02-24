@@ -133,3 +133,7 @@ html[orientation="landscape"] .landscape-overlay {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
+
+noscript a {
+  color: #005189 !important;
+}
