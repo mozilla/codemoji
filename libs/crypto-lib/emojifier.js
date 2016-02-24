@@ -52,7 +52,7 @@
       // if point is found return it
       if (index >= 0) return decodeAlfaBet[(index)]
       // else convert point to char and return it
-      return String.fromCodePoint(point)
+      return String.fromCodePoint ? String.fromCodePoint(point) : ' '
     })
     // join points to create a string
     return points.join('')
