@@ -17,6 +17,7 @@
   var emojis = EmojiList.slice(0, CharList.length)
 
   function encode (text) {
+    console.log(chars)
     // convert text into unicode points ( from ucs2 )
     var points = punycode.ucs2.decode(text)
     console.log(text, EmojiList, points, chars)
@@ -35,6 +36,14 @@
   }
 
   function decode (text) {
+    var decodeAlphaBet = CharList.slice(0)
+    var i = 0
+    while (decodeAlphaBet.length < emojis.length && i < 10) {
+      var temp = CharList.slice(0)
+      temp = _.shuffle(temp).join('')
+      decodeAlphaBet += temp
+      i++
+    }
     // convert text into unicode points ( from ucs2 )
     var points = punycode.ucs2.decode(text)
     console.log(text, EmojiList, points)
@@ -44,7 +53,7 @@
       var index = _.findIndex(emojis, function (el) { return el === point })
       console.log(index)
       // if point is found return it
-      if (index >= 0) return CharList[index]
+      if (index >= 0) return decodeAlphaBet[(index)]
       // else convert point to char and return it
       return String.fromCodePoint(point)
     })

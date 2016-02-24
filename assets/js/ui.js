@@ -29,7 +29,7 @@
 
     console.debug('Chosen text:', Cryptoloji.current.input)
     text = CryptoLib.decrypt(Cryptoloji.current.input, Cryptoloji.current.key)
-    console.debug('Decrypted text:', text)
+    console.debug('Decrypted text:', text, text.length)
     Cryptoloji.current.output = text
     $('#decryption_output').removeClass('placeholdit').text(text)
     Cryptoloji.stateman.emit('decrypt:show-reply', Cryptoloji.current.key)
@@ -42,7 +42,7 @@
         // CryptoLib.generateEmojiSubsetFrom(Cryptoloji.current.key)
         Cryptoloji.current.input = text
         Cryptoloji.stateman.emit('encrypt:hide-output-placeholder')
-        console.debug('Chosen text:', text)
+        console.debug('Chosen text:', text, text.length)
         text = CryptoLib.encrypt(Cryptoloji.current.input, Cryptoloji.current.key)
         console.debug('Encrypted text:', text)
         Cryptoloji.current.output = text
