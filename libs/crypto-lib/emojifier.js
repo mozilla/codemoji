@@ -34,6 +34,7 @@
 
   function decode (text) {
     var decodeAlfaBet = CharList.slice(0)
+    // security check to avoid infinite loop
     var i = 0
     // add shuffle padding to the decoding alfabet to make it length like emoji set
     while (decodeAlfaBet.length < emojis.length && i < 10) {
