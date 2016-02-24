@@ -92,15 +92,17 @@
     top: 13.8rem;
   }
   .section_more{
-    /*display: flex;*/
+    display: flex;
     z-index: 3000;
     height: 30%;
     top: auto;
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
     padding: 0;
     padding-bottom: 10rem;
     justify-content: flex-end;
     align-items: flex-end;
+    transition: all .5s;
+    transform: translate(0,95%);
   }
   .more_text_title{
     color: gray;
