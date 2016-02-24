@@ -24,4 +24,4 @@
     getShortenedLink: getShortenedLink
   }
 
-})(window, window.Cryptoloji, window.jQuery, window.Q); 
+})(window, window.Cryptoloji, window.jQuery, window.Q)
