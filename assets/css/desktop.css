@@ -19,6 +19,7 @@
   }
   .section_main_wrapper{
     flex-direction: row;
+    padding-bottom: 20rem;
   }
   .section_main_wrapper .header{
     position: absolute;
@@ -28,6 +29,7 @@
     left: 0;
     z-index: 3000;
     box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
+
   }
   .encryption .main_content_bottom{ 
     background-color: #FAFAFA;
@@ -94,15 +96,14 @@
   .section_more{
     display: flex;
     z-index: 3000;
-    height: 30%;
+    height: 20rem;
     top: auto;
     flex-direction: row-reverse;
     padding: 0;
-    padding-bottom: 10rem;
     justify-content: flex-end;
     align-items: flex-end;
     transition: all .5s;
-    transform: translate(0,95%);
+    transform: translate(0,0);
   }
   .more_text_title{
     color: gray;
@@ -113,7 +114,6 @@
     position: relative;
     padding-left: 6rem;
     padding-right: 2rem;
-    min-width: 66.66%;
 
   }
   .more_text:after{
@@ -128,7 +128,7 @@
   }
   .svg_wrapper_more{
     margin: 0;
-    transform: translate(4rem,0);
+    transform: translate(2rem,-1rem);
   }
   .header_desktop_lable{
     margin: 0rem 0 2rem 0;
@@ -149,6 +149,11 @@
   }
   .main_share{
     margin-left: 33.33%;
+    bottom: 21rem;
+  }
+  .more_text_wpr{
+    height: 100%;
+    min-width: 66.66%;
   }
 }
 
