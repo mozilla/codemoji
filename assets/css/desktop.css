@@ -94,7 +94,7 @@
     top: 13.8rem;
   }
   .section_more{
-    display: flex;
+    display: none;
     z-index: 3000;
     height: 20rem;
     top: auto;

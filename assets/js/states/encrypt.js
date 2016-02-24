@@ -6,6 +6,8 @@
       var theater = theaterJS()
 
       Cryptoloji.stateman.emit('header:show')
+      $(".section_more").addClass("section-show")
+
 
       Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')
         .setMaxSize(Cryptoloji.settings.inputMaxSize)
@@ -102,6 +104,7 @@
       $('.encryption').removeClass('section-show')
       Cryptoloji.stateman.off('encrypt')
       Cryptoloji.stateman.off('keyslider')
+      $(".section_more").removeClass("section-show")
     }
   }
 
