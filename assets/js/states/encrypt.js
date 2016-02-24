@@ -43,6 +43,7 @@
             animateInputPlaceholder(theater, newplaceholder)
           }
           Cryptoloji.UI.selectKey(key)
+          $('#encryption_selected_key').html(Cryptoloji.UI.toTwemoji(key))
           Cryptoloji.UI.encryptText()
         })
       }
