@@ -56,6 +56,9 @@
       // encrypt text on input
       $('#encryption_input').bind('input propertychange', function() {
         Cryptoloji.UI.encryptText()
+        if (_.isEmpty($('#encryption_input').val())) {
+          emptyOutput()
+        }
       })
 
       // show share button at proper time
