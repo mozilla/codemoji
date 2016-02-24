@@ -52,7 +52,7 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    margin-top: 27rem;
+/*    margin-top: 27rem;*/
     margin-bottom: 3rem;
     height: 100%;
     overflow-y: scroll;
@@ -73,6 +73,7 @@
   }
   .main_key_panel_emoji_wrapper{
     height: 100%;
+    padding-top: 27rem;
   }
   .header__label{
       top: 13.8rem;
@@ -136,6 +137,10 @@
     align-items: flex-end;
     padding: 1rem 3.4rem;
     position: absolute;
+  }
+  .svg_wrapper_header_logo_wrp{
+    margin-left: 9rem;
+    align-items: flex-start;
   }
 }
 
