@@ -144,6 +144,9 @@
     margin-left: 9rem;
     align-items: flex-start;
   }
+  .desktop_key{
+    font-size: 7rem;
+  }
 }
 
 

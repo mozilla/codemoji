@@ -434,15 +434,10 @@
     border-radius: 50%;
     width: 8rem;
     height: 8rem;
-    background-color: gray;
     padding: 1.5rem;
 }
 
 .desktop_main_selected_key{
       padding: 7rem 3.4rem;
 }
-.desktop_main_selected_key_description{
-  margin-left: 1rem;
-}
-
 
