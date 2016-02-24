@@ -1,10 +1,6 @@
 (function (window, Cryptoloji, $, undefined) {
   'use strict'
 
-  Cryptoloji.settings = {
-    inputMaxSize: 120
-  }
-
   Cryptoloji.visitor.countVisit()
 
   //
