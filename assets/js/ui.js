@@ -94,6 +94,30 @@
     })
   }
 
+  function handleOrientationChanges () {
+    function _writeOrientationAttr () {
+      // if orientation is 0 or 180 we are in portrait mode
+      if (window.orientation == 0 || window.orientation == 180) {
+        console.info('changed orientation to portrait')
+        $('html').attr('orientation', 'portrait')
+      } else {
+        console.info('changed orientation to landscape')
+        $('html').attr('orientation', 'landscape')
+      }
+    }
+
+    // window.orientation is undefined on desktop
+    if (!_.isUndefined(window.orientation)) {
+      _writeOrientationAttr()
+      // support both onorientationchange and resize event
+      var supportsOrientationChange = 'onorientationchange' in window
+      var orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize'
+      $(window).on(orientationEvent, function (event) {
+        _writeOrientationAttr()
+      })
+    }
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
   Cryptoloji.UI = {
@@ -103,7 +127,8 @@
     handleSvgLoading: handleSvgLoading,
     selectKey: selectKey,
     showDecryptableText: showDecryptableText,
-    toTwemoji: toTwemoji
+    toTwemoji: toTwemoji,
+    handleOrientationChanges: handleOrientationChanges
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.twemoji);

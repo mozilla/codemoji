@@ -114,10 +114,8 @@ img.emoji {
 .landscape-overlay .content img{
   height: 50%;
 }
-@media only screen and (max-width: 778px) and (orientation:landscape) {
-  .landscape-overlay {
-    display: block;
-  }
+html[orientation="landscape"] .landscape-overlay {
+  display: block;
 }
 
 [wide]{
