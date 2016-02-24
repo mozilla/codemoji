@@ -59,6 +59,16 @@
     Cryptoloji.stateman.on('begin', function (event) { console.log('begin ', event) })
     Cryptoloji.stateman.on('end', function (phase) { console.log('end ', phase) })
     Cryptoloji.stateman.on('notfound', function () { console.log('notfound') })
+
+
+    //
+    // handle first visit element display/hide
+    //
+    if (Cryptoloji.visitor.isFirstVisit()) {
+      $('[hide-on-first-visit-only]').hide()
+    } else {
+      $('[show-on-first-visit-only]').hide()
+    }
   })
 
 })(window, window.Cryptoloji, jQuery); 

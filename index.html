@@ -95,7 +95,10 @@
                 layout="column" layout-align="center center">
           TRY IT
         </button> -->
-        <button button-box class="mozilla_button" to-state="onboarding">Try It</button>
+        <button button-box class="mozilla_button" to-state="onboarding" show-on-first-visit-only>Let's get going</button>
+        <button button-box class="mozilla_button" to-state="onboarding" hide-on-first-visit-only>Find out more</button>
+        <button button-box class="mozilla_button" to-state="encrypt" hide-on-first-visit-only>Try It</button>
+
         <div class="welcome_link_wrapper" wide layout="row" layout-align="start center">
           <div class="welcome_link_wrapper_opacity" layout="row" layout-align="center start">
             <div class="svg_wrapper_welcome_footer_icon svg_wrapper" data-svg="assets/svg/footer-icon-terms.svg"></div>
