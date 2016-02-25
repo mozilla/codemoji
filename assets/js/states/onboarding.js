@@ -5,7 +5,7 @@
 
   Cryptoloji.states.onboarding.root = {
     enter: function () {
-      Cryptoloji.stateman.go('onboarding/step1')
+      Cryptoloji.stateman.go('onboarding.step1')
     }
   }
 
@@ -14,7 +14,7 @@
       enter: function () {
         $('[slide-num="'+n+'"]').addClass("section-show")
         $('[slide-num="'+n+'"]').on("click", function(){
-          Cryptoloji.stateman.go('onboarding/step'+(n+1))
+          Cryptoloji.stateman.go('onboarding.step'+(n+1))
         })
       },
       leave: function () {
