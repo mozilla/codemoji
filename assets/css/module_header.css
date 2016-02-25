@@ -8,6 +8,10 @@
   background-color: white;
 }
 
+.section_main .header{
+  position: relative;
+}
+
 .header_share{
   position: absolute;
   top: 50%;
