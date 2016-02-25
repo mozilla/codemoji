@@ -77,6 +77,9 @@
     height: 100%;
     padding-top: 27rem;
   }
+  .main_key_panel_emoji_wrapper .emoji {
+    cursor: pointer;
+  }
   .header__label{
       top: 13.8rem;
       left: 3.7rem;
