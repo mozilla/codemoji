@@ -153,3 +153,12 @@ noscript a {
 .footer_wrapper{
   height: 100%;
 }
+
+.nano > .nano-pane {
+  background: rgba(255,255,255,.10);
+  margin-right: .5rem;
+}
+.nano > .nano-pane > .nano-slider {
+  background: white;
+  background: rgba(255,255,255,.25);
+}
