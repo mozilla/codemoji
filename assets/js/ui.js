@@ -177,6 +177,7 @@
     Cryptoloji.current.key = key
     console.debug('Chosen key', key)
     $(".share_key_emoji-item").html(toTwemoji(key))
+    TweenLite.from($('#encryption_selected_key'), 1.25, {scale:1.25, ease:Expo.easeOut})
   }
 
   function showDecryptableText (text) {
