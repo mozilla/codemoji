@@ -5,16 +5,17 @@
 
   Cryptoloji.states.welcome = {
     enter: function () {
-      // fix height
-      $("body").css("height",$(window).innerHeight())
 
       Cryptoloji.stateman.emit('header:hide')
+      Cryptoloji.stateman.emit('footer:show') 
       
       $(".section_welcome").addClass("section-show")
     },
     leave: function () {
       $(".section_welcome").removeClass("section-show")
+      Cryptoloji.stateman.emit('footer:hide') 
     }
   }
 
 })(window, window.Cryptoloji); 
+ 

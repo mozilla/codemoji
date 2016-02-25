@@ -11,15 +11,11 @@
   .svg_wrapper_header_name{
     width: 43rem;
   }
-  ..section_welcome_header{
-    padding-bottom: 4rem;
-  }
   .svg_wrapper_header{
     height: 7rem;
   }
   .section_main_wrapper{
     flex-direction: row;
-    padding-bottom: 20rem;
   }
   .section_main_wrapper .header{
     position: absolute;

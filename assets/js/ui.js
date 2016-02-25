@@ -153,12 +153,16 @@
   }
 
   function handleFooter () {
-    Cryptoloji.stateman.on('footer:show', function () {
-      $("#footer").show()
-    })
-    Cryptoloji.stateman.on('footer:hide', function () {
-      $("#footer").hide()
-    })
+    if (Cryptoloji.mq.matches) {
+      Cryptoloji.stateman.on('footer:show', function () {
+        $("#footer").show()
+        var h = $("#footer").innerHeight()
+        $("[footer-padding-bottom-correction]").css("padding-bottom", h)
+      })
+      Cryptoloji.stateman.on('footer:hide', function () {
+        $("#footer").hide()
+      })
+    }
   }
   function selectKey (key) {
     Cryptoloji.current.key = key

@@ -84,7 +84,7 @@
   
 
   <!-- WELCOME views/welcome -->
-  <div class="section_welcome section" color-bg-dark color-light layout="column" layout-align="center center">
+  <div class="section_welcome section" footer-padding-bottom-correction color-bg-dark color-light layout="column" layout-align="center center">
     <div class="section_welcome_header" color-bg-light layout="column" layout-align="start center" wide>
       <div class="svg_wrapper_header_logo_wrp" layout="column" layout-align="start start" wide>
         <div class="svg_wrapper svg_wrapper_header_logo" data-svg="assets/svg/mozilla_logo.svg" color-fill-main-alt
@@ -105,27 +105,7 @@
         <button button-box class="mozilla_button" to-state="onboarding" show-on-first-visit-only>Let's get going</button>
         <button button-box class="mozilla_button" to-state="onboarding" hide-on-first-visit-only>Find out more</button>
         <button button-box class="mozilla_button" to-state="encrypt" hide-on-first-visit-only>Try It</button>
-
-        <div class="welcome_link_wrapper" wide layout="row" layout-align="start center">
-          <div class="welcome_link_wrapper_opacity" layout="row" layout-align="center start">
-            <div class="svg_wrapper_welcome_footer_icon svg_wrapper" data-svg="assets/svg/footer-icon-terms.svg"></div>
-            <p class="welcome_link">Legal</p>
-          </div>
-          <div class="welcome_link_wrapper_opacity" layout="row" layout-align="center start">
-            <div class="svg_wrapper_welcome_footer_icon svg_wrapper" data-svg="assets/svg/footer-icon-privacy.svg"></div>
-            <p class="welcome_link">Privacy Policy</p>
-          </div>
-        </div>
-        <!-- <button uppercase button-box class="welcome_button_send" to-state="encrypt" color-light border-light>Send a secret message</button> -->
-        <!-- <button uppercase button-line class="welcome_button_receive" to-state="decrypt" gray>Decrypt a secret message</button>     -->
       </div>
-<!--       <div class="section_welcome_footer" color-bg-main-alt layout="column" layout-align="end center" wide>
-        <p color-light style-lable>lorem ipsum dolor</p>
-        <div layout="row" layout-align="end center">
-          <p color-light style-lable>Cryptoloji is part of  Mozilla </p>
-          <p color-light style-lable>Mozilla campaign</p>
-        </div>
-      </div> -->
   </div>
   <!-- /WELCOME -->
 
@@ -225,7 +205,8 @@
 
   <!-- ENCRYPTION views/encryption -->
   <div class="section_main section encryption" layout="column" layout-align="start center">
-    <div class="section_main_wrapper" layout="column" layout-align="center center">
+    <div class="section_main_wrapper" layout="column" layout-align="center center" 
+         footer-padding-bottom-correction>
       <div class="header" layout="column" layout-align="center center" color-bg-light wide>
           <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header.svg"
                layout="column" layout-align="center center"></div>
@@ -438,39 +419,44 @@
 
 
   <!-- FOOTER -->
-  <div hideItIfMobile color-bg-main-alt id="footer" class="footer">
+  <div color-bg-main-alt id="footer" class="footer">
     <div class="footer_wrapper" layout="column" layout-align="center center">
       <div class="footer_link" layout="row" layout-align="center center">  
-        <div class="footer_link_wrapper_opacity" layout="row" layout-align="center center">
+        <a href="https://www.mozilla.org/contact/" class="footer_link_wrapper_opacity" 
+           layout="row" layout-align="center center">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                data-svg="assets/svg/footer-icon-help.svg"
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Contact Us</p>
-        </div>
-        <div class="footer_link_wrapper_opacity" layout="row" layout-align="center center">
+        </a>
+        <a href="https://twitter.com/Mozilla" class="footer_link_wrapper_opacity" 
+           layout="row" layout-align="center center">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                data-svg="assets/svg/footer-icon-twitter.svg"
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Connect on Twitter</p>
-        </div>
-        <div class="footer_link_wrapper_opacity" layout="row" layout-align="center center">
+        </a>
+        <a href="https://www.mozilla.org/en-US/about/legal.html" class="footer_link_wrapper_opacity" 
+           layout="row" layout-align="center center">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                data-svg="assets/svg/footer-icon-terms.svg"
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Legal</p>
-        </div>
-        <div class="footer_link_wrapper_opacity" layout="row" layout-align="center center">
+        </a>
+        <a href="https://www.mozilla.org/en-US/privacy/" class="footer_link_wrapper_opacity" 
+           layout="row" layout-align="center center">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                data-svg="assets/svg/footer-icon-privacy.svg"
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Privacy Policy</p>
-        </div>
-        <div class="footer_link_wrapper_opacity" layout="row" layout-align="center center">
+        </a>
+        <a href="https://donate.mozilla.org" class="footer_link_wrapper_opacity" 
+           layout="row" layout-align="center center">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                data-svg="assets/svg/footer-icon-heart.svg"
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Donate</p>
-        </div>
+        </a>
       </div>
       <div class="footer_info" layout="row" layout-align="center center">
         <div class="svg_wrapper svg_wrapper_footer" data-svg="assets/svg/mozilla_logo.svg"></div>

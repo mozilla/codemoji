@@ -100,6 +100,8 @@
       })
     },
     leave: function () {
+      Cryptoloji.stateman.emit('header:hide')
+      Cryptoloji.stateman.emit('footer:hide') 
       Cryptoloji.UI.KeyModal().close()
       $('.encryption').removeClass('section-show')
       Cryptoloji.stateman.off('encrypt')
