@@ -46,48 +46,79 @@
     }
   }
 
+  var _animationTimeout = null
   function encryptTextAnimation (text, emojiText) {
     console.log(text, emojiText)
-    text = text.toLowerCase()
-    var letterEmoji = _.map(text, function (c) {
-      // escape space or newline
-      if (c === '\n' || c === ' ') return c
 
-      // remap 'strange' characters
-      var pointC = punycode.ucs2.decode(c)[0]
-      // a <- à 0ca 224 á 1ca 225 â 2ca 226 ã 3ca 227 ä 4ca 228 å 5ca 229 æ 6ca 230
-      if (pointC >= 224 && pointC <= 230) c = 'a'
-      // c <- ç 7ca 231
-      else if (pointC === 231) c = 'c'
-      // d <- ð hda 240 þ vda 254
-      else if (pointC === 240 || pointC === 254) c = 'd'
-      // e <- è 8ca 232 é 9ca 233 ê bda 234 ë cda 235
-      else if (pointC >= 232 && pointC <= 235) c = 'e'
-      // i <- ì dda 236 í eda 237 î fda 238 ï gda 239
-      else if (pointC >= 236 && pointC <= 239) c = 'i'
-      // n <- ñ ida 241
-      else if (pointC === 241) c = 'n'
-      // o <- ò jda 242 ó kda 243 ô lda 244 õ mda 245 ö nda 246 ø pda 248
-      else if (pointC >= 242 && pointC <= 246 || pointC === 248) c = 'o'
-      // u <- ù qda 249 ú rda 250 û sda 251 ü tda 252
-      else if (pointC >= 249 && pointC <= 252) c = 'u'
-      // y <- ý uda 253 ÿ wda 255
-      else if (pointC === 253 || pointC === 255) c = 'y'
+    function _mapToBlueBox (text) {
+      text = text.toLowerCase()
+      var letterEmoji = _.map(text, function (c) {
+        // escape space or newline
+        if (c === '\n' || c === ' ') return c
 
-      // find the emoji letter corresponding to the current char
-      var current = _emojiLetterSet[c]
-      // return the image of emoji letter
-      return current ? toTwemoji(current) : toTwemoji(_emojiLetterSet['symbol'])
-    })
-    letterEmoji = letterEmoji.join('')
-    $('#encryption_output').html(letterEmoji)
+        // remap 'strange' characters
+        var pointC = punycode.ucs2.decode(c)[0]
+        // a <- à 0ca 224 á 1ca 225 â 2ca 226 ã 3ca 227 ä 4ca 228 å 5ca 229 æ 6ca 230
+        if (pointC >= 224 && pointC <= 230) c = 'a'
+        // c <- ç 7ca 231
+        else if (pointC === 231) c = 'c'
+        // d <- ð hda 240 þ vda 254
+        else if (pointC === 240 || pointC === 254) c = 'd'
+        // e <- è 8ca 232 é 9ca 233 ê bda 234 ë cda 235
+        else if (pointC >= 232 && pointC <= 235) c = 'e'
+        // i <- ì dda 236 í eda 237 î fda 238 ï gda 239
+        else if (pointC >= 236 && pointC <= 239) c = 'i'
+        // n <- ñ ida 241
+        else if (pointC === 241) c = 'n'
+        // o <- ò jda 242 ó kda 243 ô lda 244 õ mda 245 ö nda 246 ø pda 248
+        else if (pointC >= 242 && pointC <= 246 || pointC === 248) c = 'o'
+        // u <- ù qda 249 ú rda 250 û sda 251 ü tda 252
+        else if (pointC >= 249 && pointC <= 252) c = 'u'
+        // y <- ý uda 253 ÿ wda 255
+        else if (pointC === 253 || pointC === 255) c = 'y'
 
-    emojiText = toTwemoji(emojiText)
-    setTimeout(function () {
-      $('#encryption_output').html(emojiText)
+        // find the emoji letter corresponding to the current char
+        var current = _emojiLetterSet[c]
+        // return the image of emoji letter wrapped in span
+        var openspan = '<span class="bb_' + c + '">'
+        var closespan = '</span>'
+        var currentTwemoji = current ? toTwemoji(current) : toTwemoji(_emojiLetterSet['symbol'])
+        return openspan + currentTwemoji + closespan
+        // return currentTwemoji
+      })
+      letterEmoji = letterEmoji.join('')
+      return letterEmoji
+    }
+
+    function _generateEmojiHtml (blueBoxText, emojiText) {
+      emojiText = toTwemoji(emojiText)
       $('.share_message_item').html(emojiText)
-      Cryptoloji.stateman.emit('encrypt:show-share')
-    }, 1500)
+
+      emojiText = emojiText.replace(/>/g, '>,').split(',')
+      var emojiOut = _.map(blueBoxText, function (bb, idx) {
+        var openspan = '<span class="' + $(bb).attr('class') + '">'
+        var closespan = '</span>'
+        return openspan + emojiText[idx] + closespan
+      })
+      $('#encryption_output > .emojis_output').html(emojiOut)
+    }
+
+    function _blueBoxAnimation (blueBoxText, emojiText) {
+      if (_animationTimeout) {
+        clearTimeout(_animationTimeout)
+      }
+
+      _animationTimeout = setTimeout(function () {
+        Cryptoloji.stateman.emit('encrypt:show-share')
+      }, 1500)
+    }
+
+    var blueBoxOut = _mapToBlueBox(text)
+    $('#encryption_output > .bluebox_output').html(blueBoxOut)
+
+    var blueBoxElements = $('#encryption_output > .bluebox_output').children()
+    var emojiOut = _generateEmojiHtml(blueBoxElements, emojiText)
+    _blueBoxAnimation(blueBoxOut, emojiOut)
   }
 
   function handleHeader () {

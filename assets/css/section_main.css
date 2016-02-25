@@ -46,6 +46,16 @@
   margin-bottom: 45px;
 }
 
+#encryption_output .bluebox_output,#encryption_output .emojis_output {
+  position: absolute;
+}
+#encryption_output .bluebox_output {
+  z-index: 1;
+}
+#encryption_output .emojis_output {
+  z-index: 2;
+}
+
 .main_keyslider{
   width: 100%;
   min-height: 9rem;
@@ -244,6 +254,7 @@
   margin: 0 0.7rem;
   overflow-y: auto;
   margin-bottom: 5px;
+  position: relative;
 }
 
 .main_content_bottom_input.placeholdit {
@@ -319,7 +330,7 @@
 }
 
 .main_share{
-  height: 45px;
+  /*height: 45px;*/
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -327,6 +338,7 @@
   width: 100%;  
   transform: translate(0,100%);
   transition: transform .2s;
+  z-index: 9;
 }
 
 .main_share-open .main_share{
