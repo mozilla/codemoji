@@ -154,7 +154,11 @@
     height: 100%;
     min-width: 66.66%;
   }
-
+  .svg_wrapper_header_logo{
+    width: 11rem;
+    height: auto;
+    margin: 2rem 0 5rem 0;
+  }
   .unselectable {
     /* enable selection */
     -webkit-user-select: text;
@@ -167,6 +171,12 @@
   }
   .encryption .main_content_top_input {
     line-height: 120%;
+  }
+  .welcome_text{
+    font-family: "fira_sans";
+    font-size: 140%;
+    line-height: 140%;
+    text-align: center;
   }
 }
 

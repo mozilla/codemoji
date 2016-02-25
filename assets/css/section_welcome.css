@@ -17,10 +17,10 @@
   border-radius: 10rem;
 }
 
-.svg_wrapper_header_logo{
-  width: 11rem;
-  height: auto;
-  margin: 2rem 0 5rem 0;
+.svg_wrapper_header_logo {
+    width: 9rem;
+    height: auto;
+    margin: 1rem 0 3rem 0;
 }
 
 .section_welcome_header{
@@ -35,8 +35,8 @@
 
 .welcome_text{
   font-family: "fira_sans";
-  font-size: 140%;
-  line-height: 130%;
+  font-size: 100%;
+  line-height: 140%;
   text-align: center;
 }
 
