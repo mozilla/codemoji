@@ -45,6 +45,16 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
     font-style: normal;
 }
 @font-face {
+    font-family: 'fira_sans';
+    src: url('../font/firasans-light-webfont.eot');
+    src: url('../font/firasans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/firasans-light-webfont.woff2') format('woff2'),
+         url('../font/firasans-light-webfont.woff') format('woff'),
+         url('../font/firasans-light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
     font-family: 'fira_mono';
     src: url('../font/firamono-medium-webfont.eot');
     src: url('../font/firamono-medium-webfont.eot?#iefix') format('embedded-opentype'),
