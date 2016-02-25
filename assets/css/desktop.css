@@ -145,6 +145,7 @@
   }
   .desktop_key{
     font-size: 7rem;
+    transform: translate(0,15px);
   }
   .main_share{
     margin-left: 33.33%;
