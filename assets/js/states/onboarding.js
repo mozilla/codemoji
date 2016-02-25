@@ -6,6 +6,7 @@
   Cryptoloji.states.onboarding.root = {
     enter: function () {
       Cryptoloji.stateman.go('onboarding.step1')
+      Cryptoloji.stateman.emit('header:show')
     }
   }
 
