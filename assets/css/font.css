@@ -205,6 +205,21 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   text-align: center;
   border-radius: 25px;
   -webkit-transition: all .5s ease-in-out 0s;
-  transition: all .5s ease-in-out 0s;
+  transition: all .2s ease-in-out 0s;
   cursor: pointer;
+}
+
+.mozilla_button:hover{
+  background-color: #fff;
+  color: #f46060;
+}
+
+.mozilla_button_blue{
+  background-color: #005189;
+  margin-bottom: 2rem;
+}
+
+.mozilla_button_blue:hover{
+  background-color: #fff;
+  color: #005189;
 }

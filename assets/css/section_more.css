@@ -57,11 +57,15 @@
 
 .footer_link_wrapper_opacity,
 .footer_link_wrapper_opacity:active,
-.footer_link_wrapper_opacity:visited,
-.footer_link_wrapper_opacity:hover{
+.footer_link_wrapper_opacity:visited{
   opacity: .5;
   margin-left: 15px;
   color: white;
   font-family: "fira_sans";
+}
+
+.footer_link_wrapper_opacity:hover{
+  opacity: .8;
+  color: white;
 }
 
