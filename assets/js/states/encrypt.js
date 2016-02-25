@@ -77,7 +77,7 @@
 
       // show/hide bottom placeholder text
       Cryptoloji.stateman.on('encrypt:hide-output-placeholder', function () {
-        $('.main_content_bottom_input').html('').removeClass('placeholdit')
+        $('.main_content_bottom_input').removeClass('placeholdit')
       })
 
       // empty input field
@@ -142,7 +142,9 @@
   }
 
   function emptyOutput () {
-    $('#encryption_output').html('').addClass('placeholdit')
+    $('#encryption_output > .emojis_output').html('')
+    $('#encryption_output > .bluebox_output').html('')
+    $('#encryption_output').addClass('placeholdit')
     $('.share_message_item').html('')
   }
 
