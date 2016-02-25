@@ -75,11 +75,20 @@
         else if (pointC >= 249 && pointC <= 252) c = 'u'
         // y <- ý uda 253 ÿ wda 255
         else if (pointC === 253 || pointC === 255) c = 'y'
+        
+        // custom class attached to containing span element
+        var spanClass = null
+        // is a symbol
+        if (pointC < 48 || (pointC > 57 && pointC < 65) || (pointC > 90 && pointC < 97) || pointC > 122 ) {
+          spanClass = 'bb_symbol'
+        } else {
+          spanClass = 'bb_' + c
+        }
 
         // find the emoji letter corresponding to the current char
         var current = _emojiLetterSet[c]
         // return the image of emoji letter wrapped in span
-        var openspan = '<span class="bb_' + c + '">'
+        var openspan = '<span class="' + spanClass + '">'
         var closespan = '</span>'
         var currentTwemoji = current ? toTwemoji(current) : toTwemoji(_emojiLetterSet['symbol'])
         return openspan + currentTwemoji + closespan
