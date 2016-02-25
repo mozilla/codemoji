@@ -104,3 +104,14 @@
   color: white;
   font-family: "fira_sans"
 }
+
+.mobile_footer_small{
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+.mobile_footer_small a{
+
+}
