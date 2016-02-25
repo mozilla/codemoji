@@ -103,7 +103,17 @@
     }
 
     function _blueBoxAnimation (blueElem, emojiElem) {
-      console.log('_blueBoxAnimation');
+
+      blueElem.css('opacity', 0)
+      emojiElem.css('opacity', 0)
+
+      var fragtime = (blueElem.length<15) ? .02 : .01
+      var totaltime = blueElem.length * fragtime
+
+      blueElem.each(function(i, e){
+        TweenLite.to(e, .3, {opacity:1, delay:fragtime*i, ease:Expo.easeInOut})
+      })
+
       var _uniqueClasses = []
       blueElem.each(function(i, e){
         var _classname = $(e).attr('class')
@@ -112,10 +122,10 @@
 
       _.each(_uniqueClasses, function(d, i){
         $('#encryption_output > .bluebox_output .'+d).each(function(j, e){
-          TweenLite.to(e, .5, {opacity:0, delay:.5 + i*.25, ease:Expo.easeInOut})
+          TweenLite.to(e, .5, {opacity:0, delay:totaltime + i*.25, ease:Expo.easeInOut})
         })
         $('#encryption_output > .emojis_output .'+d).each(function(j, e){
-          TweenLite.from(e, .5, {opacity:0, delay:.5 + i*.25, ease:Expo.easeInOut})
+          TweenLite.to(e, .5, {opacity:1, delay:totaltime + i*.25, ease:Expo.easeInOut})
         })
       })
 
