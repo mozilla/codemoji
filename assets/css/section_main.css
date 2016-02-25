@@ -46,7 +46,7 @@
   margin-bottom: 45px;
 }
 
-#encryption_output .bluebox_output,#encryption_output .emojis_output {
+#encryption_output .bluebox_output, #encryption_output .emojis_output {
   position: absolute;
 }
 #encryption_output .bluebox_output {
@@ -55,6 +55,9 @@
 #encryption_output .emojis_output {
   z-index: 2;
 }
+
+
+
 
 .main_keyslider{
   width: 100%;

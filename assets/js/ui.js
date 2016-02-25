@@ -46,7 +46,6 @@
     }
   }
 
-  var _animationTimeout = null
   function encryptTextAnimation (text, emojiText) {
     console.log(text, emojiText)
 
@@ -103,14 +102,26 @@
       $('#encryption_output > .emojis_output').html(emojiOut)
     }
 
-    function _blueBoxAnimation (blueBoxText, emojiText) {
-      if (_animationTimeout) {
-        clearTimeout(_animationTimeout)
-      }
+    function _blueBoxAnimation (blueElem, emojiElem) {
+      console.log('_blueBoxAnimation');
+      var _uniqueClasses = []
+      blueElem.each(function(i, e){
+        var _classname = $(e).attr('class')
+        if(_uniqueClasses.indexOf(_classname) == -1) _uniqueClasses.push(_classname)
+      })
 
-      _animationTimeout = setTimeout(function () {
+      _.each(_uniqueClasses, function(d, i){
+        $('#encryption_output > .bluebox_output .'+d).each(function(j, e){
+          TweenLite.to(e, .5, {opacity:0, delay:.5 + i*.25, ease:Expo.easeInOut})
+        })
+        $('#encryption_output > .emojis_output .'+d).each(function(j, e){
+          TweenLite.from(e, .5, {opacity:0, delay:.5 + i*.25, ease:Expo.easeInOut})
+        })
+      })
+
+      setTimeout(function () {
         Cryptoloji.stateman.emit('encrypt:show-share')
-      }, 1500)
+      }, 2500)
     }
 
     var blueBoxOut = _mapToBlueBox(text)
@@ -118,7 +129,8 @@
 
     var blueBoxElements = $('#encryption_output > .bluebox_output').children()
     var emojiOut = _generateEmojiHtml(blueBoxElements, emojiText)
-    _blueBoxAnimation(blueBoxOut, emojiOut)
+    var emojiElements = $('#encryption_output > .emojis_output').children()
+    _blueBoxAnimation(blueBoxElements, emojiElements)
   }
 
   function handleHeader () {
