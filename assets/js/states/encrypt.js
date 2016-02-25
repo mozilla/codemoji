@@ -6,7 +6,7 @@
       var theater = theaterJS()
 
       Cryptoloji.stateman.emit('header:show')
-      $(".section_more").addClass("section-show")
+      Cryptoloji.stateman.emit('footer:show') 
 
 
       Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')

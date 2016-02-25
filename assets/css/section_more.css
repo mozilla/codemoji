@@ -8,3 +8,51 @@
   margin: 2rem 0 5rem 0;
   fill: white;
 }
+
+.svg_wrapper_footer{
+  width: 13rem;
+  margin-right: 2rem;
+  fill: white;
+}
+
+.footer_text{
+  font-family: "fira_sans";
+  margin: 0;
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 44rem;
+  font-size: 1.2rem;
+  opacity: .5;
+
+}
+
+.footer_text:after{
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FAFAFA;
+}
+
+.footer_info{
+  margin-top: 3rem;
+}
+
+.footer_link{
+  font-family: "fira_sans";
+  font-size: 1.2rem;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.footer_link_wrapper_opacity{
+  opacity: .5;
+  margin-left: 15px;
+  color: white;
+  font-family: "fira_sans";
+}
+

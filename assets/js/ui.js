@@ -152,6 +152,14 @@
     })
   }
 
+  function handleFooter () {
+    Cryptoloji.stateman.on('footer:show', function () {
+      $("#footer").show()
+    })
+    Cryptoloji.stateman.on('footer:hide', function () {
+      $("#footer").hide()
+    })
+  }
   function selectKey (key) {
     Cryptoloji.current.key = key
     console.debug('Chosen key', key)
@@ -224,6 +232,7 @@
     decryptText: decryptText,
     encryptText: encryptText,
     handleHeader: handleHeader,
+    handleFooter: handleFooter,
     handleSvgLoading: handleSvgLoading,
     selectKey: selectKey,
     showDecryptableText: showDecryptableText,

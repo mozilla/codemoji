@@ -48,6 +48,7 @@
     // handle header show/hide
     //
     Cryptoloji.UI.handleHeader()
+    Cryptoloji.UI.handleFooter()
 
     //
     // StateMan bootstrap

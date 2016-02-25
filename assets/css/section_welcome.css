@@ -45,6 +45,11 @@
   position: relative;
 }
 
+.welcome_link{
+  margin: 0;
+  margin-left: 5px;
+}
+
 .welcome_link_wrapper{
   font-family: "fira_sans";
   position: absolute;
@@ -95,4 +100,7 @@
 
 .welcome_link_wrapper_opacity{
   opacity: .5;
+  margin-left: 15px;
+  color: white;
+  font-family: "fira_sans"
 }
