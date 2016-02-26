@@ -45,3 +45,15 @@
 .header_spacer{
   width: 100%;
 }
+
+.svg_wrapper_header_name *{
+  transition: opacity .8s;
+}
+
+.svg_wrapper_header_name:hover #h_emoji{
+  opacity: 0;
+}
+
+.svg_wrapper_header_name:hover #h_hidden{
+  opacity: 1;
+}
