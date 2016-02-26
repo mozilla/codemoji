@@ -218,6 +218,10 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   color: #f46060;
 }
 
+.encryption .mozilla_button:hover{
+  background-color: #005189;
+  color: #fff;
+}
 .mozilla_button_blue{
   background-color: #005189;
   margin-bottom: 2rem;
