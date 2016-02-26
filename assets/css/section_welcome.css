@@ -33,11 +33,15 @@
   height: auto;
 }
 
+.section_welcome_header_text{
+  position: 0 2rem;
+}
 .welcome_text{
   font-family: "fira_sans";
   font-size: 100%;
   line-height: 140%;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .section_welcome_main{
