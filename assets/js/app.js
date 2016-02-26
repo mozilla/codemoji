@@ -13,13 +13,7 @@
     // 
     // fix height
     // 
-    $("body").css("height",$(window).innerHeight())
-    var supportsOrientationChange = 'onorientationchange' in window
-    var orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize'
-    $(window).on(orientationEvent, function (event) {
-      // recalculate height on orientation change
-      $('body').css('height', $(window).innerHeight())
-    })
+    Cryptoloji.UI.fixHeight()
     
     // 
     // on rotation/resize

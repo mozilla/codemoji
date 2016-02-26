@@ -291,19 +291,31 @@
     }
   }
 
+  function fixHeight () {
+    $('body').css('height', $(window).innerHeight())
+    var supportsOrientationChange = 'onorientationchange' in window
+    var orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize'
+    $(window).on(orientationEvent, function (event) {
+      // recalculate height on orientation change
+      $('body').css('height', $(window).innerHeight())
+    })
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
   Cryptoloji.UI = {
     decryptText: decryptText,
     encryptText: encryptText,
-    handleHeader: handleHeader,
+    fixHeight: fixHeight,
     handleFooter: handleFooter,
+    handleHeader: handleHeader,
+    handleOrientationChanges: handleOrientationChanges,
+    handleOrientationChanges: handleOrientationChanges,
     handleSvgLoading: handleSvgLoading,
+    loadLogicHelpButton: loadLogicHelpButton,
     selectKey: selectKey,
     showDecryptableText: showDecryptableText,
     toTwemoji: toTwemoji,
-    handleOrientationChanges: handleOrientationChanges,
-    loadLogicHelpButton: loadLogicHelpButton
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.twemoji);
