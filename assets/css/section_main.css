@@ -462,8 +462,11 @@
   color: white;
   opacity: 1;
 }
-
+.encryption_help_button{
+  display: none;
+}
 .coachmark{
+  display: none;
   position: absolute;
   top: 0;
   left: 0;

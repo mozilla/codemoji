@@ -46,14 +46,17 @@
   width: 100%;
 }
 
-.svg_wrapper_header_name *{
-  transition: opacity .8s;
+.svg_wrapper_header_name *,
+.svg_wrapper_header *{
+  transition: opacity .6s;
 }
 
-.svg_wrapper_header_name:hover #h_emoji{
+.svg_wrapper_header_name:hover #h_emoji,
+.svg_wrapper_header:hover #h_emoji{
   opacity: 0;
 }
 
-.svg_wrapper_header_name:hover #h_hidden{
+.svg_wrapper_header_name:hover #h_hidden,
+.svg_wrapper_header:hover #h_hidden{
   opacity: 1;
 }

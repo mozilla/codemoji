@@ -149,8 +149,9 @@
     transform: translate(0,15px);
   }
   .main_share{
-    margin-left: 33.33%;
-    bottom: 21rem;
+    /*margin-left: 33.33%;*/
+    bottom: 16rem;
+    transform: translateX(30rem);
   }
   .more_text_wpr{
     height: 100%;
@@ -179,6 +180,14 @@
     font-size: 140%;
     line-height: 140%;
     text-align: center;
+  }
+  .main_share-open .main_share{
+    width: 33.33%;
+    transform: translateX(200%);
+  }
+  .coachmark,
+  .encryption_help_button{
+    display: block;
   }
 }
 
