@@ -8,6 +8,17 @@
       Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
 
+      // draft logic transition 
+      if(Cryptoloji.mq.matches){
+        TweenLite.to($('.encryption .main_keyslider'), 0, {delay: 0, width: "0%"})
+        TweenLite.to($('.encryption .main_keyslider *'), 0, {delay: 0, opacity: "0"})
+        TweenLite.to($('.main_content_bottom_input.placeholdit'), 0, {delay: 0, opacity: "0"})
+        TweenLite.to($('.main_content_bottom_label'), 0, {delay: 0, opacity: "0"})
+        TweenLite.to($('.encryption .main_keyslider'), .5, {delay: 3, width: "35%"})
+        TweenLite.to($('.encryption .main_keyslider *'), 1, {delay: .5, opacity: "1"})
+        TweenLite.to($('.main_content_bottom_input.placeholdit'), .5, {delay: 4, opacity: ".5"})
+        TweenLite.to($('.main_content_bottom_label'), .5, {delay: 4, opacity: ".5"})
+      }
 
       Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')
         .setMaxSize(Cryptoloji.settings.inputMaxSize)

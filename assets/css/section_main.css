@@ -33,7 +33,10 @@
 .encryption .main_keyslider{
   background-color: #FAFAFA;
   color: #283344;
+  transition: .5s width;
+  width: 0%;
 }
+
 .encryption{
   background-color: #283344;
 }
