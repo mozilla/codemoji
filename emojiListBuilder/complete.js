@@ -6,23 +6,32 @@ var fs = require('fs')
 
 var probable_emojis = require('./probable-emojis.json')
 var not_found_emojis = require('./not-found-emojis.json')
+var bad_emojis = require('./bad-emojis.json')
 
+var emojis = probable_emojis
 
-var emojis = _.filter(probable_emojis, function (e) {
+// filter not found emojis
+emojis = _.filter(emojis, function (e) {
   console.log(_.includes(not_found_emojis, e))
   return !_.includes(not_found_emojis, e)
+})
+// filter bad emojis
+emojis = _.filter(emojis, function (e) {
+  console.log(_.includes(bad_emojis, e))
+  return !_.includes(bad_emojis, e)
 })
 
 
 console.log('probable emojis : ' + probable_emojis.length)
 console.log('not found emojis: ' + not_found_emojis.length)
+console.log('bad emojis      : ' + bad_emojis.length)
 console.log('remaining       : ' + emojis.length)
 
 
-var template = "(function (window, Cryptoloji, undefined) {\n  'use strict'\n  Cryptoloji.emojis = <%= emojis %>\n})(window, window.Cryptoloji)"
-var content = _.template(template)({ emojis: JSON.stringify(emojis) })
+// var template = "(function (window, Cryptoloji, undefined) {\n  'use strict'\n  Cryptoloji.emojis = <%= emojis %>\n})(window, window.Cryptoloji)"
+// var content = _.template(template)({ emojis: JSON.stringify(emojis) })
 
-fs.writeFile("./complete.json", JSON.stringify(content), function(err) {
+fs.writeFile("./complete.json", JSON.stringify(emojis), function(err) {
   if(err) return console.log(err)
   console.log("The file complete.json was saved!")
 })
