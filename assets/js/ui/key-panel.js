@@ -1,11 +1,11 @@
 (function (window, Cryptoloji, $, undefined) {
   
-  var keyPanel = null
+  var keyPanel = {}
 
-  Cryptoloji.UI.KeyPanel = function createKeyPanel (selector) {
-    if (!keyPanel) 
-      keyPanel = new KeyPanel(selector)
-    return keyPanel
+  Cryptoloji.UI.KeyPanel = function createKeyPanel (name, selector) {
+    if (!keyPanel[name]) 
+      keyPanel[name] = new KeyPanel(selector)
+    return keyPanel[name]
   }
 
   function KeyPanel (selector) {
