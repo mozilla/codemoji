@@ -224,6 +224,8 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 }
 .mozilla_button_blue{
   background-color: #005189;
+}
+.mozilla_button_bottom_margin {
   margin-bottom: 2rem;
 }
 
