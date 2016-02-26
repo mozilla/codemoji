@@ -13,7 +13,6 @@
   cursor: pointer;
 }
 
-
 .section_main_wrapper{
   width: 100%;
   height: 100%;
@@ -464,6 +463,38 @@
   opacity: 1;
 }
 
+.coachmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  height: 15rem;
+  transform: translateY(-100%);
+  padding-left: 3.7rem; 
+  padding-top: 4.7rem;
+  font-size: 80%;
+  font-family: "fira_sans";
+  font-weight: 300;
+  padding-right: 2rem;
+  z-index: 1;
+}
+
+.coachmark_text{
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.encryption .main_content_top .coachmark{
+  background-color: #F57070;
+}
+.encryption .main_keyslider .coachmark{
+  background-color: #3D4757;
+}
+.encryption .main_content_bottom .coachmark{
+  background-color: #EAEBEC;
+}
 /******************************************************************************/
 
 /*desktop*/

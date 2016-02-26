@@ -256,6 +256,14 @@
           <p hideItIfMobile class="header_desktop_lable" style-text color-main>A FUN TOOL TO LEARN ENCRYPTION</p>
       </div>
       <div class="main_content_top" flex layout="column" color-bg-main>
+
+
+        <div class="coachmark coachmark_encryption_text"
+             layout="column" layout-align="start start">
+          <p class="coachmark_text">This text is our secret that we want to hide from prying eyes.</p>
+        </div>
+
+
         <label uppercase class="header__label main_content_top_label" style-lable color-light>SECRET MESSAGE</label>
         <textarea maxlength="120" flex id="encryption_input" class="header__input main_content_top_input" style-input placeholder="Write your message here."></textarea>
         <p id="encryption_input_count" class="encryption_input_count main_content_top_label" uppercase style-lable></p>
@@ -263,6 +271,13 @@
       </div>
       
       <div id="encryption_keyslider" class="main_keyslider">
+
+
+        <div class="coachmark coachmark_encryption_text">
+          <p class="coachmark_text">Share the key secretely with anyone you want to unlock it.</p>
+        </div>
+
+
         <div hideItIfMobile>        
           <div class="desktop_main_selected_key" layout="row" layout-align="center center" wide>
             <!-- <div class="desktop_main_selected_key_circle"> -->
@@ -294,6 +309,13 @@
       </div>
 
       <div class="main_content_bottom" flex layout="column">
+
+        
+        <div class="coachmark coachmark_encryption_text">
+          <p class="coachmark_text">We don’t have to keep this secret.<br>We can share it on socials.</p>
+        </div>
+
+
         <label class="header__label main_content_bottom_label" uppercase style-lable>SCRAMBLED MESSAGE</label>
         <div flex id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" 
              placeholder="Pick a key to see your message encrypted here." style-input>

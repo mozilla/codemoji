@@ -161,7 +161,37 @@
     })
   }
 
+
   function loadLogicHelpButton () {
+    function toggleCoachmark() {
+      if($('body').hasClass('coachmarks-open')){
+        $('.coachmark').each(function(i){
+          var self = this
+          TweenLite.to($(self), 2, {
+              delay: i * .2 + .3,
+              top: 0 - $('.coachmark').innerHeight()
+          })
+          TweenLite.to($(self).children(), .3, {
+              delay: i * .2,
+              opacity: 0
+          })
+        })
+      } else {
+        var t = $(".section_main_wrapper .header").innerHeight()
+        $('.coachmark').each(function(i){
+          var self = this
+          TweenLite.to($(self), .8, {
+              delay: i * .2,
+              top: t + $('.coachmark').innerHeight()
+          })
+          TweenLite.to($(self).children(), .5, {
+              delay: i * .2 + .7,
+              opacity: 1
+          })
+        })
+      }
+      $('body').toggleClass('coachmarks-open')
+    }
     if (Cryptoloji.mq.matches) {
       $("#encryption_help_button").hover(function(){
         var self = this
@@ -177,9 +207,8 @@
         var color2 = $('.help_button_balon').attr("fill")
         $('.help_button_point').attr("fill", color2)
         $('.help_button_balon').attr("fill", color1)
-
+        toggleCoachmark()
       })
-      
     }
   }
 
