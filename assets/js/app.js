@@ -32,6 +32,11 @@
     Cryptoloji.UI.handleSvgLoading()
 
     //
+    // behavior help button
+    //
+    Cryptoloji.UI.loadLogicHelpButton()
+
+    //
     // Key modal setup
     //    
     if (!Cryptoloji.mq.matches) {

@@ -5,7 +5,7 @@
     enter: function () {
       var theater = theaterJS()
 
-      Cryptoloji.stateman.emit('header:show')
+      // Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
 
       // draft logic transition 
@@ -114,7 +114,7 @@
       })
     },
     leave: function () {
-      Cryptoloji.stateman.emit('header:hide')
+      // Cryptoloji.stateman.emit('header:hide')
       Cryptoloji.stateman.emit('footer:hide') 
       Cryptoloji.UI.KeyModal().close()
       $('.encryption').removeClass('section-show')

@@ -161,6 +161,28 @@
     })
   }
 
+  function loadLogicHelpButton () {
+    if (Cryptoloji.mq.matches) {
+      $("#encryption_help_button").hover(function(){
+        var self = this
+        var t = .2
+        $('.help_button_point').each(function(i){
+          var it = this
+          TweenLite.to($(it), t/2, {delay: 0+i*.1, transform: "translateY(-25px)"})
+          TweenLite.to($(it), t, {delay: t+i*.1, transform: "translateY(0px)"})
+        })
+      },function () {})
+      $("#encryption_help_button").on("click", function () {
+        var color1 = $('.help_button_point').attr("fill")
+        var color2 = $('.help_button_balon').attr("fill")
+        $('.help_button_point').attr("fill", color2)
+        $('.help_button_balon').attr("fill", color1)
+
+      })
+      
+    }
+  }
+
   function handleFooter () {
     if (Cryptoloji.mq.matches) {
       Cryptoloji.stateman.on('footer:show', function () {
@@ -251,7 +273,8 @@
     selectKey: selectKey,
     showDecryptableText: showDecryptableText,
     toTwemoji: toTwemoji,
-    handleOrientationChanges: handleOrientationChanges
+    handleOrientationChanges: handleOrientationChanges,
+    loadLogicHelpButton: loadLogicHelpButton
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.twemoji);
