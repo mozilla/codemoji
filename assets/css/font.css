@@ -207,8 +207,12 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   -webkit-transition: all .5s ease-in-out 0s;
   transition: all .2s ease-in-out 0s;
   cursor: pointer;
+  text-transform: lowercase;
 }
 
+.mozilla_button::first-letter { 
+  text-transform: uppercase;
+}
 .mozilla_button:hover{
   background-color: #fff;
   color: #f46060;
