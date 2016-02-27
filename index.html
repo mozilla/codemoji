@@ -37,7 +37,7 @@
     // Setup global namespace
     window.Cryptoloji = {
       states: {},
-      current: { input: null, output: null, key: null }
+      current: { input: null, output: null, key: null, correctKey: null }
     }
     // Maybe? var keysliderEmojiList = [ '😁', '👀', '🚀', '🍉', '⚡', '💩', '😡', '🍕', '🍊', '😱' ]
   </script>
@@ -134,9 +134,8 @@
   </div>
   <!-- /WELCOME -->
 
-  <!-- LANDING views/landing -->
-  <div class="section_landing section" footer-padding-bottom-correction color-bg-dark color-light 
-       layout="column" layout-align="center center">
+  <!-- DECRYPTION WELCOME views/decryption/welcome -->
+  <div class="section_decryption_welcome section_landing section" footer-padding-bottom-correction color-bg-dark color-light layout="column" layout-align="center center">
     <div class="section_welcome_header" color-bg-light layout="column" layout-align="start center" wide>
       <div class="svg_wrapper_header_logo_wrp" layout="column" layout-align="start start" wide>
         <div class="svg_wrapper svg_wrapper_header_logo" data-svg="assets/svg/mozilla_logo.svg" color-fill-main-alt
@@ -151,11 +150,11 @@
         <p class="welcome_text" layout="column" layout-align="center center">
           Someone has shared<br>a message with you
         </p>
-        <p id="landing_encrypted_message"></p>
+        <p id="decryption_welcome_encrypted_message"></p>
         </div>
         <p hideItIfMobile class="landing_small_text">It's encrypted into emojis but can read it here<br>(if you have the rigth key)</p>
         <p showItIfMobile class="landing_small_text">It's encrypted into emojis but can read it here (if you have the rigth key)</p>
-        <button class="mozilla_button" to-state="decrypt" hide-on-first-visit-only>
+        <button class="mozilla_button" to-state="decryption.decrypt" hide-on-first-visit-only>
           Next
         </button>
 
@@ -179,7 +178,7 @@
         </div>
       </div>
   </div>
-  <!-- /LANDING -->
+  <!-- /DECRYPTION WELCOME -->
 
 
   <!-- ONBOARDING views/onboarding -->
@@ -349,10 +348,26 @@
         </div>
       </div>
       <div id="decryption_keyslider" class="main_keyslider">
+        <div hideItIfMobile>        
+          <div class="desktop_main_selected_key" layout="row" layout-align="center center" wide>
+            <!-- <div class="desktop_main_selected_key_circle"> -->
+              <div id="decryption_selected_key" class="desktop_key">
+                <!-- js-injected -->
+              </div>
+            <!-- </div> -->
+          </div>
+        </div>
         <label class="header__label main_keyslider_bottom_label" uppercase style-lable>PICK A KEY TO UNLOCK THE MESSAGE</label>
         <div class="keyslider">
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
+          </div>
+        </div>
+        <div id="decryption_keypanel" hideItifMobile class="main_key_panel_emoji_wrapper" layout="column" layout-align="start center">
+          <div class="nano">          
+            <div class="main_key_panel_emoji_container nano-content" layout="column" layout-align="start center">
+              <!-- js injected -->
+            </div>
           </div>
         </div>
         <div class="main_keyslider_plus" color-bg-main-ligther>
@@ -583,15 +598,14 @@
   <script type="text/javascript" src="libs/crypto-lib/emojifier.js"></script>
   <script type="text/javascript" src="libs/crypto-lib.js"></script>
   
-  <script type="text/javascript" src="assets/js/states/decrypt.js"></script>
   <script type="text/javascript" src="assets/js/states/encrypt.js"></script>
   <script type="text/javascript" src="assets/js/states/share.js"></script>
   <script type="text/javascript" src="assets/js/states/onboarding.js"></script>
   <script type="text/javascript" src="assets/js/states/welcome.js"></script>
   <script type="text/javascript" src="assets/js/states/loading.js"></script>
   <script type="text/javascript" src="assets/js/states/more.js"></script>
-  <script type="text/javascript" src="assets/js/states/landing.js"></script>
   <script type="text/javascript" src="assets/js/states/captcha.js"></script>
+  <script type="text/javascript" src="assets/js/states/decryption.js"></script>
   
   
   <script type="text/javascript" src="assets/js/settings.js"></script>

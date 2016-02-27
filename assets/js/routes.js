@@ -8,7 +8,9 @@
   stateman
     .state('welcome', Cryptoloji.states.welcome)
     .state('encrypt', Cryptoloji.states.encrypt)
-    .state('decrypt/:id', Cryptoloji.states.decrypt)
+    .state('decryption', Cryptoloji.states.decryption.root)
+    .state('decryption.welcome', Cryptoloji.states.decryption.welcome)
+    .state('decryption.decrypt', Cryptoloji.states.decryption.decrypt)
     .state('share',   Cryptoloji.states.share)
     .state('onboarding', Cryptoloji.states.onboarding.root)
     // use nested states
@@ -22,7 +24,6 @@
       .state('onboarding.step8', Cryptoloji.states.onboarding.step8)
     .state('loading', Cryptoloji.states.loading)
     .state('more', Cryptoloji.states.more)
-    .state('landing', Cryptoloji.states.landing)
     .state('captcha', Cryptoloji.states.captcha)
 
   $('body').on('click', '[to-state]', function (event) {

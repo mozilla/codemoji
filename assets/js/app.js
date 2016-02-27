@@ -39,7 +39,9 @@
         .addClickHandler('#encryption_key_modal_open')
         .addClickHandler('#decryption_key_modal_open')
     } else {
-      Cryptoloji.UI.KeyPanel('#encryption_keypanel')
+      Cryptoloji.UI.KeyPanel('encrypt', '#encryption_keypanel')
+        .fill(EmojiList)
+      Cryptoloji.UI.KeyPanel('decrypt', '#decryption_keypanel')
         .fill(EmojiList)
     }
 

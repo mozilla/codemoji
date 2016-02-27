@@ -15,9 +15,6 @@
   //
 
   function decryptText () {
-    var text = $('#decryption_input').attr('text')
-    Cryptoloji.current.input = text
-
     console.debug('Chosen text:', Cryptoloji.current.input)
     text = CryptoLib.decrypt(Cryptoloji.current.input, Cryptoloji.current.key)
     console.debug('Decrypted text:', text)
