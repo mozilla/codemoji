@@ -189,6 +189,18 @@
   .encryption_help_button{
     display: block;
   }
+  .section_welcome_header{
+    padding-bottom: 1rem; 
+     min-height: 15rem;
+  }
+  .section_welcome_header_text{
+    margin: 1rem 2rem;
+    font-size: 100%;
+    text-align: center;
+  }
+  .landing_encrypted_message{
+    font-size: 70%;
+  }
 }
 
 

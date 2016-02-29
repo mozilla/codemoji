@@ -18,14 +18,13 @@
 }
 
 .svg_wrapper_header_logo {
-    width: 9rem;
+    width: 8rem;
     height: auto;
-    margin: 1rem 0 3rem 0;
+    margin: 1.2rem 0 1.6rem 0;
 }
 
 .section_welcome_header{
-  min-height: 15rem;
-  padding-bottom: 1rem;
+  min-height: 10rem;
 }
 
 .svg_wrapper_header_name{
@@ -34,18 +33,21 @@
 }
 
 .section_welcome_header_text{
-  position: 0 2rem;
+  margin: 1rem 2rem;
+  font-size: 80%;
+  text-align: center;
 }
+
 .welcome_text{
   font-family: "fira_sans";
-  font-size: 100%;
+  font-size: 90%;
   line-height: 140%;
   text-align: center;
-  margin-bottom: 3rem;
+  margin: 1rem 0rem 2rem 0rem;
 }
 
 .section_welcome_main{
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
 }
 
@@ -84,18 +86,15 @@
 
 .landing_small_text{
   font-family: "fira_sans";
+  font-weight: 300;
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
-  font-size: 88%;
+  font-size: 70%;
   text-align: center;
-  /* max-width: 20rem; */
   margin-bottom: 20px;
   opacity: .6;
-}
-
-.section_welcome_header_text{
-  text-align: center;
+  line-height: 152%;
 }
 
 .svg_wrapper_header_logo_wrp{
@@ -115,4 +114,13 @@
   width: 100%;
   right: 0;
   left: 0;
+}
+
+.landing_encrypted_message{
+  margin: 0.2rem .2rem 1.2rem .2rem;
+  max-width: 80rem;
+  line-height: 223%;
+  padding: 0;
+  font-size: 50%;
+  text-align: center;
 }
