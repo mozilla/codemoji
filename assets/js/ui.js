@@ -301,6 +301,26 @@
     })
   }
 
+  function encryptionEnteringTransition () {
+    if(Cryptoloji.mq.matches){
+      // keyslider width
+      TweenLite.to($('.encryption .main_keyslider'), 0, {delay: 0, width: "0%"})
+      TweenLite.to($('.encryption .main_keyslider'), .5, {delay: 3, width: "35%"})
+      // emoji in keyslider
+      TweenLite.to($('.encryption .main_keyslider .main_key_panel_emoji_wrapper'), 0, {delay: 0, opacity: "0"})
+      TweenLite.to($('.encryption .main_keyslider .main_key_panel_emoji_wrapper'), .5, {delay: 4, opacity: "1"})
+      // lable keyslider
+      TweenLite.to($('.encryption .main_keyslider .main_keyslider_bottom_label'), 0, {delay: 0, opacity: "0"})
+      TweenLite.to($('.encryption .main_keyslider .main_keyslider_bottom_label'), .5, {delay: 4, opacity: ".5"})
+      // placeholder
+      TweenLite.to($('.encryption .main_content_bottom_input.placeholdit'), 0, {delay: 0, opacity: "0"})
+      TweenLite.to($('.encryption .main_content_bottom_input.placeholdit'), .5, {delay: 4, opacity: "1"})
+      // lable rigth
+      TweenLite.to($('.encryption .main_content_bottom_label'), 0, {delay: 0, opacity: "0"})
+      TweenLite.to($('.encryption .main_content_bottom_label'), .5, {delay: 4, opacity: "0.5"})
+    }
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
   Cryptoloji.UI = {
@@ -316,6 +336,7 @@
     selectKey: selectKey,
     showDecryptableText: showDecryptableText,
     toTwemoji: toTwemoji,
+    encryptionEnteringTransition: encryptionEnteringTransition,
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.twemoji);
