@@ -273,10 +273,11 @@
 }
 
 .main_content_bottom_input.placeholdit {
-  opacity: .5;
+  /*opacity: .5;*/
 }
 .main_content_bottom_input.placeholdit:after {
   content: attr(placeholder);
+  opacity: .5;
 }
 
 .main_keyslider_cicle{
