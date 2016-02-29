@@ -1,4 +1,4 @@
-(function (window, Cryptoloji, undefined) {
+;(function (window, Cryptoloji, undefined) {
   'use strict'
 
   // Stateman routing

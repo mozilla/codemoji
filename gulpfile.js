@@ -24,7 +24,6 @@ gulp.task('copy:assets', ['clean'], function() {
   var assets_paths = [
     'assets/svg/**/*',
     'assets/img/**/*',
-    'assets/js/touchmouse.js',
     'vendor/**/*'
   ]
   

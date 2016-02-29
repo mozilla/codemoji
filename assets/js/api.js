@@ -1,4 +1,4 @@
-(function (window, Cryptoloji, $, undefined) {
+;(function (window, Cryptoloji, $, undefined) {
 
   function getMessage (id) {
     return Q.promise(function (resolve, reject) {

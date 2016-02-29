@@ -2,7 +2,7 @@
 source: https://gist.github.com/MathiasPaumgarten/2375726
 */
 
-(function() {
+;(function() {
     
     /* == GLOBAL DECLERATIONS == */
     TouchMouseEvent = {

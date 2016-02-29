@@ -1,4 +1,4 @@
-(function (window, Cryptoloji, $, twemoji, undefined) {
+;(function (window, Cryptoloji, $, twemoji, undefined) {
 
   /*
     methods prefixed with _ are "private"

@@ -1,4 +1,4 @@
-(function (window, Cryptoloji, undefined) {
+;(function (window, Cryptoloji, undefined) {
 
   var visitNumber = parseInt(cookie.get('visitNumber', '0'), 10)
 
