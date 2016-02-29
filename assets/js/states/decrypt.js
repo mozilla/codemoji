@@ -8,7 +8,8 @@
 
   Cryptoloji.states.decrypt = {
     enter: function (options) {
-      Cryptoloji.stateman.emit('header:show')
+      // Cryptoloji.stateman.emit('header:show')
+      Cryptoloji.stateman.emit('footer:show') 
 
       Cryptoloji.UI.Keyslider('decrypt', '#decryption_keyslider')
         .fill(_.take(EmojiList, 10))

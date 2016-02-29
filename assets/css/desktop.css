@@ -25,11 +25,14 @@
     left: 0;
     z-index: 3000;
     box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
-
   }
   .encryption .main_content_bottom{ 
     background-color: #FAFAFA;
     color: #283344;
+  }
+  .decryption .main_content_bottom{ 
+    background-color: #F46060;
+    color: #FAFAFA;
   }
   .encryption{ 
     background-color: #FAFAFA;
@@ -38,10 +41,14 @@
     background-color: #283344;
     color: #FAFAFA;
   }
+  .decryption .main_keyslider{
+    background-color: #FAFAFA;
+  }
   .encryption .main_keyslider_bottom_label{
     color: #FAFAFA;
   }
-  .encryption .main_content_top_label{
+  .encryption .main_content_top_label,
+  .decryption .main_content_top_label{
     color: #FAFAFA;
   }
   .main_key_panel_emoji_container{
@@ -85,6 +92,11 @@
   }
   .encryption .main_content_top_input,
   .encryption .main_content_bottom_input{
+  padding: 28rem 5rem 1rem 3.7rem;
+  margin: 0;
+  }
+  .decryption .main_content_top_input,
+  .decryption .main_content_bottom_input{
   padding: 28rem 5rem 1rem 3.7rem;
   margin: 0;
   }
@@ -173,6 +185,9 @@
     font-size: 2.4rem;
   }
   .encryption .main_content_top_input {
+    line-height: 120%;
+  }
+  .decryption .main_content_top_input {
     line-height: 120%;
   }
   .welcome_text{
