@@ -39,6 +39,7 @@
           if ($('#encryption_input').val().length == 0) {
             var newplaceholder = ['You\'ve picked a key.', 400, '\nWrite your message here to see it encrypted.', 600]
             animateInputPlaceholder(theater, newplaceholder)
+            $('.main_key_panel_emoji_container .key[key="' + key + '"]', self.$element).addClass('notext')
           }
           Cryptoloji.UI.selectKey(key)
           Cryptoloji.UI.encryptText()

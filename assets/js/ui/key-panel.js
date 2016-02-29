@@ -56,6 +56,10 @@
       $('.main_key_panel_emoji_container .key[key="' + key + '"]', self.$element).addClass('selected')
       // notify
       Cryptoloji.stateman.emit('keypanel:key-chosen', key)
+      // coachmark error
+      if ($('#encryption_input').val().length == 0) {
+        $('.main_key_panel_emoji_container .key[key="' + key + '"]', self.$element).addClass('notext')
+      }
     }
     return self
   }
@@ -64,6 +68,7 @@
     var self = this
     self.currentSelection = null
     $('.main_key_panel_emoji_container .key', self.$element).removeClass('selected')
+    $('.main_key_panel_emoji_container .key', self.$element).removeClass('notext')
     return self
   }
 
