@@ -45,7 +45,9 @@
   color: #283344;
   transition: .5s width;
 }
-
+.encryption .main_content_bottom_label{
+  opacity
+}
 .encryption{
   background-color: #283344;
 }
@@ -175,6 +177,24 @@
   position: absolute;
   border-radius: 3px;
 }
+
+.main_key_panel_emoji_container p.selected:before{
+  content: "You,ve picked a key. Write your message to see it encrypted.";
+  width: 18rem;
+  height: 7.3rem;
+  background-color: #F46060;
+  bottom: -7px;
+  left: -30px;
+  right: 0;
+  position: absolute;
+  border-radius: 3px;
+  font-size: 30%;
+  padding: 1rem;
+  transform: translateY(100%);
+  z-index: 3000;
+  box-shadow: 0px 2px 21px -1px rgba(0,0,0,0.49);
+}
+
 .main_key_modal_pages{
   position: absolute;
   bottom: 10px;
@@ -476,10 +496,9 @@
   height: 15rem;
   transform: translateY(-100%);
   padding-left: 3.7rem; 
-  padding-top: 4.7rem;
+  padding-top: 6.7rem;
   font-size: 80%;
   font-family: "fira_sans";
-  font-weight: 300;
   padding-right: 2rem;
   z-index: 1;
 }
@@ -492,6 +511,7 @@
 
 .encryption .main_content_top .coachmark{
   background-color: #F57070;
+  color: white;
 }
 .encryption .main_keyslider .coachmark{
   background-color: #3D4757;
