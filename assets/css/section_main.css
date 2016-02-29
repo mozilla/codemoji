@@ -37,10 +37,14 @@
   background-color: #283344;
   color: #FAFAFA;
 }
+.decryption .main_content_bottom{ 
+  color: #FAFAFA;
+}
 .main_content_top_input{
   color: #FAFAFA;
 }
-.encryption .main_keyslider{
+.encryption .main_keyslider,
+.decryption .main_keyslider{
   background-color: #FAFAFA;
   color: #283344;
   transition: .5s width;
@@ -48,6 +52,9 @@
 
 .encryption{
   background-color: #283344;
+}
+.decryption{
+  background-color: #F46060;
 }
 .encryption .encryption_share_button{
   color: #FAFAFA;
