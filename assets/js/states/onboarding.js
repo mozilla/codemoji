@@ -33,6 +33,7 @@
       },
       leave: function () {
         $('[slide-num="'+n+'"]').removeClass("section-show")
+        Cryptoloji.stateman.emit('header:hide')
       }
     }
   }
