@@ -23,11 +23,19 @@
   letter-spacing: 2px;
   line-height: 120%;
   width: 100%;
-  padding: 0 2rem;
-  text-align: left;
+  /*padding: 0 2rem;*/
+  /*padding: 0;*/
+  /*text-align: left;*/
   font-weight: 100;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  /*padding-bottom: 0.5rem;*/
+  /*margin-bottom: 1rem;*/
+  /*position: absolute;*/
+  margin-top: 2rem;
+  bottom: 0rem;
+}
+
+.share_key .hidden {
+  display: none;
 }
 
 .share_social{
@@ -72,10 +80,11 @@
 }
 
 p.share_key_emoji-item {
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   margin: 0;
-  left: -3rem;
-  top: 0;
+  /*left: -3rem;*/
+  top: -1rem;
   padding: .6rem .5rem;
   border-radius: 50%;
   color: rgba(40,51,68,.45);
@@ -85,9 +94,10 @@ p.share_key_emoji-item {
 }
 
 .share_key_sentence{
-  letter-spacing: -1px;
+  /*letter-spacing: -1px;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;*/
+  margin: 3rem 2rem;
 }
 
 .share_text{
@@ -96,7 +106,7 @@ p.share_key_emoji-item {
   border: solid 2px white;
   border-radius: 20px;
   padding: 0.8rem 1.4rem .6rem 1.4rem;
-  margin: 0;
+  margin: .5rem 0;
 }
 
 .share_text_wrapper{

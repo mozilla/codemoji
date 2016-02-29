@@ -598,13 +598,18 @@
     
     </div>
     <div color-bg-dark class="share_key" layout="column" layout-align="start center">
+      <div layout="column" layout-align="center end" wide>
+        <div id="share_key_hide" class="share_message_exit hidden" style-title data-svg="assets/svg/v.svg"></div>
+      </div>
       <div class="share_key_emoji" layout="row" layout-align="center center">
         <p id="share_currentkey" class="share_key_emoji-item" color-bg-light>
           <img class="emoji" draggable="false" alt="🎮" src="http://twemoji.maxcdn.com/svg/1f3ae.svg">
         </p>
       </div>
-      <!-- <p style-lable color-light class="share_key_sentence">Without the secret key the message will be undecryptable. Find a way to share it!</p>
-      <div class="share_text_wrapper" layout="column" layout-align="center center" wide>
+      <p style-text color-light class="hidden share_key_sentence" uppercase>
+        REMEMBER: PEOPLE NEED THE KEY TO READ YOUR MESSAGE!
+      </p>
+      <!-- <div class="share_text_wrapper" layout="column" layout-align="center center" wide>
         <a id="share_copykeytoclipboard" class="share_text" color-bg-main style-lable data-clipboard-text="🎮">COPY YOUR KEY</a>
       </div> -->
     </div>
