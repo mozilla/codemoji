@@ -22,7 +22,7 @@
 .main_content_bottom{
   height: auto;
   width: 100%;
-  position: relative;\
+  position: relative;
 }
 
 /*.decryption .main_content_bottom{ 
@@ -45,9 +45,7 @@
   color: #283344;
   transition: .5s width;
 }
-.encryption .main_content_bottom_label{
-  opacity
-}
+
 .encryption{
   background-color: #283344;
 }

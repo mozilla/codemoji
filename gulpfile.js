@@ -9,6 +9,8 @@ var minifyHtml = require('gulp-minify-html');
 var realFavicon = require('gulp-real-favicon');
 var fs = require('fs');
 var copy = require('gulp-copy');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 
 // File where the favicon markups are stored
 var FAVICON_DATA_FILE = 'cache/faviconData.json';
@@ -36,15 +38,21 @@ gulp.task('copy:favicon', ['clean'], function() {
 });
 
 gulp.task('minify', ['clean'], function() {
+
+  var processors = [
+    autoprefixer({browsers: ['last 2 version']})
+  ];
+
   return gulp.src('index.html')
       .pipe(usemin({
-        css: [ minifyCss, rev ],
+        css: [ minifyCss, postcss(processors), rev ],
         js: [ uglify, rev ],
         vendorjs: [ uglify, rev ],
         html: [ minifyHtml ],
       }))
       .pipe(gulp.dest('public'));
 });
+
 
 gulp.task('clean', function() {
   return del([

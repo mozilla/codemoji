@@ -1,3 +1,7 @@
+:fullscreen a {
+    display: flex
+}
+
 html{
     font-size: 10px;
     box-sizing: border-box;
