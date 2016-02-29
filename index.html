@@ -412,16 +412,27 @@
 
   <!-- CAPTCHA -->
   <div color-bg-main class="section_captcha section" layout="column" layout-align="start center">
-    <div class="share_social" layout="column" layout-align="start center" flex wide>
-      <div id="share_message_exit" class="share_message_exit" style-title to-state="encrypt" data-svg="assets/svg/x.svg"></div>
-      <div>
-        <span style-text uppercase color-light>SHOW ME YOU'RE NOT A ROBOT</span>
+    <div class="share_social" layout="column" layout-align="space-between center" flex wide>
+      <div layout="column" layout-align="center end" wide>
+        <div id="share_message_exit" class="share_message_exit" style-title to-state="encrypt" data-svg="assets/svg/x.svg"></div>
       </div>
-      <div>
-        <p id="captcha_loading" class="loader" color-light>Loading...</p>
-        <form id="captcha_form" method="post">
-          <div id="g-recaptcha" class="g-recaptcha"></div>
-        </form>
+      <div layout="column" layout-align="space-around center" flex>
+        <div layout="row" layout-align="center center">
+          <p style-text center uppercase color-light flex="80">
+            BEFORE SHARING WE HAVE TO MAKE SURE THAT YOU ARE NOT A ROBOT
+          </p>
+        </div>
+        <div>
+          <p id="captcha_loading" class="loader" color-light>Loading...</p>
+          <form id="captcha_form" method="post">
+            <div id="g-recaptcha" class="g-recaptcha"></div>
+          </form>
+        </div>
+        <div>
+          <!-- need to change img source -->
+          <img src="http://emojipedia-us.s3.amazonaws.com/cache/f0/42/f042fe551fb6bfe60868bcc15547d4d5.png"
+               alt="Robot Face on Twitter Twemoji 2.0">
+        </div>
       </div>
     </div>
   </div>
@@ -429,74 +440,175 @@
 
 
   <!-- SHARE views/share -->
-  <div color-bg-main class="section_share section" layout="column" layout-align="start center">
-    <div class="share_social" layout="column" layout-align="space-around center" flex wide>
+  <div color-bg-dark class="section_share section" layout="column" layout-align="start center">
+    <div layout="column" layout-align="center end" wide>
       <div id="share_message_exit" class="share_message_exit" style-title to-state="encrypt" data-svg="assets/svg/x.svg"></div>
-      <div class="share_message">
-        <span style-text uppercase color-light>SHARE THIS MESSAGE</span>
-      </div>
-
-      <div>
-        <lable style-lable color-light class="share_social_lable">Shout it from the rooftops</lable>
-        <div class="share_social_wrapper" layout="row" layout-align="space-around center">
-          <a id="share_button_fb" class="social">
-            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
-          </a>
-          <a id="share_button_tw" class="social">
-            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tw.svg"></div>
-          </a>
-          <a id="share_button_go" class="social">
-            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_go.svg"></div>
-          </a>
-          <!-- tumblr doesn't like their share widget. 
-          <a id="share_button_tu" class="social">
-            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tu.svg"></div>
-          </a> -->
-        </div>
-      </div>
-
-      <div>
-        <lable style-lable color-light class="share_social_lable">Send it to someone special</lable>
-        <div class="share_social_wrapper" layout="row" layout-align="center center">
-          <a id="share_button_wa" class="social">
-            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
-          </a>
-          <!-- <a href="" class="social">
-            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fm.svg"></div>
-          </a> -->
-          <a id="share_button_ma" class="social">
-            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_ma.svg"></div>
-          </a>
-          <!-- <a href="" class="social">
-            <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
-          </a> -->
-        </div>
-      </div>
-
-      <div>
-        <lable style-lable color-ligth class="share_social_lable">Copy link</lable>
-        <div layout="row" layout-align="space-around center" wide>
-          <input id="share_copytoclipboard" class="share_text" color-dark style-lable type="text" readonly="readonly" data-clipboard-text="https://crypt.ji/937U2M9" value="crypt.ji/937U2M9"/>
-        </div>
-      </div>
     </div>
+    <div class="share_social" layout="column" layout-align="space-between center" flex wide>
+      <div layout="column" layout-align="space-between center">
+        <div class="share_message">
+          <span style-text uppercase color-light>SHARE THIS MESSAGE</span>
+        </div>
+        <div class="main_content_bottom_input" style="width: 90%;" layout="row" layout-align="start space-around" layout-wrap>
+          <img class="emoji" draggable="false" alt="🎌" src="http://twemoji.maxcdn.com/svg/1f38c.svg">
+          <img class="emoji" draggable="false" alt="👲" src="http://twemoji.maxcdn.com/svg/1f472.svg">
+          <img class="emoji" draggable="false" alt="😦" src="http://twemoji.maxcdn.com/svg/1f626.svg">
+          <img class="emoji" draggable="false" alt="🍄" src="http://twemoji.maxcdn.com/svg/1f344.svg">
+          <img class="emoji" draggable="false" alt="🐦" src="http://twemoji.maxcdn.com/svg/1f426.svg">
+          <img class="emoji" draggable="false" alt="📧" src="http://twemoji.maxcdn.com/svg/1f4e7.svg">
+          <img class="emoji" draggable="false" alt="☔" src="http://twemoji.maxcdn.com/svg/2614.svg">
+          <img class="emoji" draggable="false" alt="🎷" src="http://twemoji.maxcdn.com/svg/1f3b7.svg">
+          <img class="emoji" draggable="false" alt="💌" src="http://twemoji.maxcdn.com/svg/1f48c.svg">
+          <img class="emoji" draggable="false" alt="😾" src="http://twemoji.maxcdn.com/svg/1f63e.svg">
+          <img class="emoji" draggable="false" alt="🍜" src="http://twemoji.maxcdn.com/svg/1f35c.svg">
+          <img class="emoji" draggable="false" alt="🐾" src="http://twemoji.maxcdn.com/svg/1f43e.svg">
+          <img class="emoji" draggable="false" alt="🔦" src="http://twemoji.maxcdn.com/svg/1f526.svg">
+          <img class="emoji" draggable="false" alt="✨" src="http://twemoji.maxcdn.com/svg/2728.svg">
+          <img class="emoji" draggable="false" alt="🎌" src="http://twemoji.maxcdn.com/svg/1f38c.svg">
+          <img class="emoji" draggable="false" alt="👲" src="http://twemoji.maxcdn.com/svg/1f472.svg">
+          <img class="emoji" draggable="false" alt="😦" src="http://twemoji.maxcdn.com/svg/1f626.svg">
+          <img class="emoji" draggable="false" alt="🍄" src="http://twemoji.maxcdn.com/svg/1f344.svg">
+          <img class="emoji" draggable="false" alt="🐦" src="http://twemoji.maxcdn.com/svg/1f426.svg">
+          <img class="emoji" draggable="false" alt="📧" src="http://twemoji.maxcdn.com/svg/1f4e7.svg">
+          <img class="emoji" draggable="false" alt="☔" src="http://twemoji.maxcdn.com/svg/2614.svg">
+          <img class="emoji" draggable="false" alt="🎷" src="http://twemoji.maxcdn.com/svg/1f3b7.svg">
+          <img class="emoji" draggable="false" alt="💌" src="http://twemoji.maxcdn.com/svg/1f48c.svg">
+          <img class="emoji" draggable="false" alt="😾" src="http://twemoji.maxcdn.com/svg/1f63e.svg">
+          <img class="emoji" draggable="false" alt="🍜" src="http://twemoji.maxcdn.com/svg/1f35c.svg">
+          <img class="emoji" draggable="false" alt="🐾" src="http://twemoji.maxcdn.com/svg/1f43e.svg">
+          <img class="emoji" draggable="false" alt="🔦" src="http://twemoji.maxcdn.com/svg/1f526.svg">
+          <img class="emoji" draggable="false" alt="✨" src="http://twemoji.maxcdn.com/svg/2728.svg">
+          <img class="emoji" draggable="false" alt="🎌" src="http://twemoji.maxcdn.com/svg/1f38c.svg">
+          <img class="emoji" draggable="false" alt="👲" src="http://twemoji.maxcdn.com/svg/1f472.svg">
+          <img class="emoji" draggable="false" alt="😦" src="http://twemoji.maxcdn.com/svg/1f626.svg">
+          <img class="emoji" draggable="false" alt="🍄" src="http://twemoji.maxcdn.com/svg/1f344.svg">
+          <img class="emoji" draggable="false" alt="🐦" src="http://twemoji.maxcdn.com/svg/1f426.svg">
+          <img class="emoji" draggable="false" alt="📧" src="http://twemoji.maxcdn.com/svg/1f4e7.svg">
+          <img class="emoji" draggable="false" alt="☔" src="http://twemoji.maxcdn.com/svg/2614.svg">
+          <img class="emoji" draggable="false" alt="🎷" src="http://twemoji.maxcdn.com/svg/1f3b7.svg">
+          <img class="emoji" draggable="false" alt="💌" src="http://twemoji.maxcdn.com/svg/1f48c.svg">
+          <img class="emoji" draggable="false" alt="😾" src="http://twemoji.maxcdn.com/svg/1f63e.svg">
+          <img class="emoji" draggable="false" alt="🍜" src="http://twemoji.maxcdn.com/svg/1f35c.svg">
+          <img class="emoji" draggable="false" alt="🐾" src="http://twemoji.maxcdn.com/svg/1f43e.svg">
+          <img class="emoji" draggable="false" alt="🔦" src="http://twemoji.maxcdn.com/svg/1f526.svg">
+          <img class="emoji" draggable="false" alt="✨" src="http://twemoji.maxcdn.com/svg/2728.svg">
+          <img class="emoji" draggable="false" alt="🎌" src="http://twemoji.maxcdn.com/svg/1f38c.svg">
+          <img class="emoji" draggable="false" alt="👲" src="http://twemoji.maxcdn.com/svg/1f472.svg">
+          <img class="emoji" draggable="false" alt="😦" src="http://twemoji.maxcdn.com/svg/1f626.svg">
+          <img class="emoji" draggable="false" alt="🍄" src="http://twemoji.maxcdn.com/svg/1f344.svg">
+          <img class="emoji" draggable="false" alt="🐦" src="http://twemoji.maxcdn.com/svg/1f426.svg">
+          <img class="emoji" draggable="false" alt="📧" src="http://twemoji.maxcdn.com/svg/1f4e7.svg">
+          <img class="emoji" draggable="false" alt="☔" src="http://twemoji.maxcdn.com/svg/2614.svg">
+          <img class="emoji" draggable="false" alt="🎷" src="http://twemoji.maxcdn.com/svg/1f3b7.svg">
+          <img class="emoji" draggable="false" alt="💌" src="http://twemoji.maxcdn.com/svg/1f48c.svg">
+          <img class="emoji" draggable="false" alt="😾" src="http://twemoji.maxcdn.com/svg/1f63e.svg">
+          <img class="emoji" draggable="false" alt="🍜" src="http://twemoji.maxcdn.com/svg/1f35c.svg">
+          <img class="emoji" draggable="false" alt="🐾" src="http://twemoji.maxcdn.com/svg/1f43e.svg">
+          <img class="emoji" draggable="false" alt="🔦" src="http://twemoji.maxcdn.com/svg/1f526.svg">
+          <img class="emoji" draggable="false" alt="✨" src="http://twemoji.maxcdn.com/svg/2728.svg">
+          <img class="emoji" draggable="false" alt="🎌" src="http://twemoji.maxcdn.com/svg/1f38c.svg">
+          <img class="emoji" draggable="false" alt="👲" src="http://twemoji.maxcdn.com/svg/1f472.svg">
+          <img class="emoji" draggable="false" alt="😦" src="http://twemoji.maxcdn.com/svg/1f626.svg">
+          <img class="emoji" draggable="false" alt="🍄" src="http://twemoji.maxcdn.com/svg/1f344.svg">
+          <img class="emoji" draggable="false" alt="🐦" src="http://twemoji.maxcdn.com/svg/1f426.svg">
+          <img class="emoji" draggable="false" alt="📧" src="http://twemoji.maxcdn.com/svg/1f4e7.svg">
+          <img class="emoji" draggable="false" alt="☔" src="http://twemoji.maxcdn.com/svg/2614.svg">
+          <img class="emoji" draggable="false" alt="🎷" src="http://twemoji.maxcdn.com/svg/1f3b7.svg">
+          <img class="emoji" draggable="false" alt="💌" src="http://twemoji.maxcdn.com/svg/1f48c.svg">
+          <img class="emoji" draggable="false" alt="😾" src="http://twemoji.maxcdn.com/svg/1f63e.svg">
+          <img class="emoji" draggable="false" alt="🍜" src="http://twemoji.maxcdn.com/svg/1f35c.svg">
+          <img class="emoji" draggable="false" alt="🐾" src="http://twemoji.maxcdn.com/svg/1f43e.svg">
+          <img class="emoji" draggable="false" alt="🔦" src="http://twemoji.maxcdn.com/svg/1f526.svg">
+          <img class="emoji" draggable="false" alt="✨" src="http://twemoji.maxcdn.com/svg/2728.svg">
+          <img class="emoji" draggable="false" alt="🎌" src="http://twemoji.maxcdn.com/svg/1f38c.svg">
+          <img class="emoji" draggable="false" alt="👲" src="http://twemoji.maxcdn.com/svg/1f472.svg">
+          <img class="emoji" draggable="false" alt="😦" src="http://twemoji.maxcdn.com/svg/1f626.svg">
+          <img class="emoji" draggable="false" alt="🍄" src="http://twemoji.maxcdn.com/svg/1f344.svg">
+          <img class="emoji" draggable="false" alt="🐦" src="http://twemoji.maxcdn.com/svg/1f426.svg">
+          <img class="emoji" draggable="false" alt="📧" src="http://twemoji.maxcdn.com/svg/1f4e7.svg">
+          <img class="emoji" draggable="false" alt="☔" src="http://twemoji.maxcdn.com/svg/2614.svg">
+          <img class="emoji" draggable="false" alt="🎷" src="http://twemoji.maxcdn.com/svg/1f3b7.svg">
+          <img class="emoji" draggable="false" alt="💌" src="http://twemoji.maxcdn.com/svg/1f48c.svg">
+          <img class="emoji" draggable="false" alt="😾" src="http://twemoji.maxcdn.com/svg/1f63e.svg">
+          <img class="emoji" draggable="false" alt="🍜" src="http://twemoji.maxcdn.com/svg/1f35c.svg">
+          <img class="emoji" draggable="false" alt="🐾" src="http://twemoji.maxcdn.com/svg/1f43e.svg">
+          <img class="emoji" draggable="false" alt="🔦" src="http://twemoji.maxcdn.com/svg/1f526.svg">
+          <img class="emoji" draggable="false" alt="✨" src="http://twemoji.maxcdn.com/svg/2728.svg">
+          <img class="emoji" draggable="false" alt="🎌" src="http://twemoji.maxcdn.com/svg/1f38c.svg">
+          <img class="emoji" draggable="false" alt="👲" src="http://twemoji.maxcdn.com/svg/1f472.svg">
+          <img class="emoji" draggable="false" alt="😦" src="http://twemoji.maxcdn.com/svg/1f626.svg">
+          <img class="emoji" draggable="false" alt="🍄" src="http://twemoji.maxcdn.com/svg/1f344.svg">
+          <img class="emoji" draggable="false" alt="🐦" src="http://twemoji.maxcdn.com/svg/1f426.svg">
+          <img class="emoji" draggable="false" alt="📧" src="http://twemoji.maxcdn.com/svg/1f4e7.svg">
+          <img class="emoji" draggable="false" alt="☔" src="http://twemoji.maxcdn.com/svg/2614.svg">
+          <img class="emoji" draggable="false" alt="🎷" src="http://twemoji.maxcdn.com/svg/1f3b7.svg">
+          <img class="emoji" draggable="false" alt="💌" src="http://twemoji.maxcdn.com/svg/1f48c.svg">
+          <img class="emoji" draggable="false" alt="😾" src="http://twemoji.maxcdn.com/svg/1f63e.svg">
+          <img class="emoji" draggable="false" alt="🍜" src="http://twemoji.maxcdn.com/svg/1f35c.svg">
+          <img class="emoji" draggable="false" alt="🐾" src="http://twemoji.maxcdn.com/svg/1f43e.svg">
+          <img class="emoji" draggable="false" alt="🔦" src="http://twemoji.maxcdn.com/svg/1f526.svg">
+          <img class="emoji" draggable="false" alt="✨" src="http://twemoji.maxcdn.com/svg/2728.svg">
+          <img class="emoji" draggable="false" alt="🎌" src="http://twemoji.maxcdn.com/svg/1f38c.svg">
+          <img class="emoji" draggable="false" alt="👲" src="http://twemoji.maxcdn.com/svg/1f472.svg">
+          <img class="emoji" draggable="false" alt="😦" src="http://twemoji.maxcdn.com/svg/1f626.svg">
+          <img class="emoji" draggable="false" alt="🍄" src="http://twemoji.maxcdn.com/svg/1f344.svg">
+          <img class="emoji" draggable="false" alt="🐦" src="http://twemoji.maxcdn.com/svg/1f426.svg">
+          <img class="emoji" draggable="false" alt="📧" src="http://twemoji.maxcdn.com/svg/1f4e7.svg">
+          <img class="emoji" draggable="false" alt="☔" src="http://twemoji.maxcdn.com/svg/2614.svg">
+          <img class="emoji" draggable="false" alt="🎷" src="http://twemoji.maxcdn.com/svg/1f3b7.svg">
+          <img class="emoji" draggable="false" alt="💌" src="http://twemoji.maxcdn.com/svg/1f48c.svg">
+          <img class="emoji" draggable="false" alt="😾" src="http://twemoji.maxcdn.com/svg/1f63e.svg">
+          <img class="emoji" draggable="false" alt="🍜" src="http://twemoji.maxcdn.com/svg/1f35c.svg">
+          <img class="emoji" draggable="false" alt="🐾" src="http://twemoji.maxcdn.com/svg/1f43e.svg">
+          <img class="emoji" draggable="false" alt="🔦" src="http://twemoji.maxcdn.com/svg/1f526.svg">
+          <img class="emoji" draggable="false" alt="✨" src="http://twemoji.maxcdn.com/svg/2728.svg">
+          <img class="emoji" draggable="false" alt="🎌" src="http://twemoji.maxcdn.com/svg/1f38c.svg">
+          <img class="emoji" draggable="false" alt="👲" src="http://twemoji.maxcdn.com/svg/1f472.svg">
+          <img class="emoji" draggable="false" alt="😦" src="http://twemoji.maxcdn.com/svg/1f626.svg">
+          <img class="emoji" draggable="false" alt="🍄" src="http://twemoji.maxcdn.com/svg/1f344.svg">
+          <img class="emoji" draggable="false" alt="🐦" src="http://twemoji.maxcdn.com/svg/1f426.svg">
+          <img class="emoji" draggable="false" alt="📧" src="http://twemoji.maxcdn.com/svg/1f4e7.svg">
+          <img class="emoji" draggable="false" alt="☔" src="http://twemoji.maxcdn.com/svg/2614.svg">
+          <img class="emoji" draggable="false" alt="🎷" src="http://twemoji.maxcdn.com/svg/1f3b7.svg">
+        </div>
+      </div>
+        
+      <div class="share_social_wrapper" layout="row" layout-align="space-around center">
+        <a id="share_button_fb" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
+        </a>
+        <a id="share_button_tw" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tw.svg"></div>
+        </a>
+        <a id="share_button_ma" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_ma.svg"></div>
+        </a>
+        <a id="share_button_wa" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
+        </a>
+        <!-- tumblr doesn't like their share widget.  -->
+        <a id="share_button_tu" class="social">
+          <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tu.svg"></div>
+        </a>
+      </div>
 
-    <div color-bg-light class="share_key" layout="column" layout-align="start center">
+      <div layout="row" layout-align="space-around center" wide>
+        <input id="share_copytoclipboard" class="share_text" color-light color-bg-dark style-lable type="text" readonly="readonly" data-clipboard-text="https://crypt.ji/937U2M9" value="crypt.ji/937U2M9"/>
+      </div>
+    
+    </div>
+    <div color-bg-dark class="share_key" layout="column" layout-align="start center">
       <div class="share_key_emoji" layout="row" layout-align="center center">
         <p id="share_currentkey" class="share_key_emoji-item" color-bg-light>
-          <!-- <img class="emoji" draggable="false" alt="🎮" src="http://twemoji.maxcdn.com/svg/1f3ae.svg"> -->
+          <img class="emoji" draggable="false" alt="🎮" src="http://twemoji.maxcdn.com/svg/1f3ae.svg">
         </p>
       </div>
-      <p style-lable class="share_key_sentence">Without the secret key the message will be undecryptable. Find a way to share it!</p>
+      <!-- <p style-lable color-light class="share_key_sentence">Without the secret key the message will be undecryptable. Find a way to share it!</p>
       <div class="share_text_wrapper" layout="column" layout-align="center center" wide>
         <a id="share_copykeytoclipboard" class="share_text" color-bg-main style-lable data-clipboard-text="🎮">COPY YOUR KEY</a>
-      </div>
+      </div> -->
     </div>
 
-    <div color-bg-dark class="share_more" layout="column" layout-align="center center">
-      <span uppercase>MOZILLA</span>
-      <p style-lable>Cryptoloji is part of Mozilla ENCRYPT campaign</p>
-    </div>
   </div>
   <!-- /SHARE -->
 
