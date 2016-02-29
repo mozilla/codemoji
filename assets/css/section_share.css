@@ -113,12 +113,12 @@ p.share_key_emoji-item {
   min-height: 40px;
 }
 
-.share_message_item{
+/*.share_message_item{
   padding: 1rem;
   border: solid 1px white;
   border-radius: 2rem;
   border-bottom-right-radius: 0px;
-}
+}*/
 
 .share_social_wrapper{
   margin: 2rem 0;

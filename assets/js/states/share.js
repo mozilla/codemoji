@@ -32,14 +32,14 @@
         $('.share_key').css('position', 'absolute')
         $('.share_key').css('height', '50%')
         $('.share_key').css('background-color', '#F46060')
-        $('#share_currentkey').css('border', 'none')
+        $('.share_key_emoji-item').css('border', 'none')
         $('.share_key .hidden').css('display', 'block')
       })
       $('#share_key_hide').on('click', function () {
         $('.share_key').css('position', 'relative')
         $('.share_key').css('height', 'auto')
         $('.share_key').css('background-color', '')
-        $('#share_currentkey').css('border', '.5rem solid')
+        $('.share_key_emoji-item').css('border', '.5rem solid')
         $('.share_key .hidden').css('display', 'none')
       })
     },
