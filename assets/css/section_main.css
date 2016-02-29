@@ -183,7 +183,7 @@
   border-radius: 3px;
 }
 
-.main_key_panel_emoji_container p.notext:before{
+.encryption .main_key_panel_emoji_container p.notext:before{
   content: "You,ve picked a key. Write your message to see it encrypted.";
   width: 18rem;
   height: 7.3rem;

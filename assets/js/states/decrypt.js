@@ -11,9 +11,11 @@
       // Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
 
-      Cryptoloji.UI.Keyslider('decrypt', '#decryption_keyslider')
-        .fill(_.take(EmojiList, 10))
-      
+      // if we should serve a smaller version
+      if (!Cryptoloji.mq.matches) {
+        Cryptoloji.UI.Keyslider('decrypt', '#decryption_keyslider')
+          .fill(_.take(EmojiList, 10))
+      }
       $(".decryption").addClass("section-show")
 
 
@@ -44,6 +46,13 @@
           .addKey(key).select(key)
         scrollToSelectedKey()
         Cryptoloji.UI.selectKey(key)
+        Cryptoloji.UI.decryptText()
+      })
+      Cryptoloji.stateman.on('keypanel:key-chosen', function (key) {
+        Cryptoloji.UI.Keyslider('decrypt')
+          .resetSelection()
+        Cryptoloji.UI.selectKey(key)
+        $('#decryption_selected_key').html(Cryptoloji.UI.toTwemoji(key))
         Cryptoloji.UI.decryptText()
       })
 

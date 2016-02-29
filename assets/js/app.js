@@ -41,6 +41,8 @@
     } else {
       Cryptoloji.UI.KeyPanel('#encryption_keypanel')
         .fill(EmojiList)
+      Cryptoloji.UI.KeyPanel('#decryption_keypanel')
+        .fill(EmojiList)
     }
 
     //
