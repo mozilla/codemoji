@@ -7,6 +7,7 @@
 
       // Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
+      Cryptoloji.stateman.emit('header:hide') 
 
       // transition 
       Cryptoloji.UI.encryptionEnteringTransition('encryption')
