@@ -88,7 +88,7 @@
         // find the emoji letter corresponding to the current char
         var current = _emojiLetterSet[c]
         // return the image of emoji letter wrapped in span
-        var openspan = '<span class="' + spanClass + '">'
+        var openspan = '<span unselectable class="' + spanClass + '">'
         var closespan = '</span>'
         var currentTwemoji = current ? toTwemoji(current) : toTwemoji(_emojiLetterSet['symbol'])
         return openspan + currentTwemoji + closespan
