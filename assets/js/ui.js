@@ -13,6 +13,8 @@
   //
   // public methods
   //
+  //Array containing the path of the loaded svg. If the path is present inside the array, the corresponding svg is loaded.
+  var svg_loaded = []
 
   function decryptText () {
     var text = $('#decryption_input').attr('text')
@@ -262,6 +264,7 @@
           // console.log(result)
           $(element).append(result.documentElement)
           Cryptoloji.stateman.emit('svg:loaded', path)
+          svg_loaded.push(path)
         })
        .fail(function () {
           console.error(this)
@@ -353,6 +356,7 @@
     showDecryptableText: showDecryptableText,
     toTwemoji: toTwemoji,
     encryptionEnteringTransition: encryptionEnteringTransition,
+    svg_loaded: svg_loaded
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.twemoji);

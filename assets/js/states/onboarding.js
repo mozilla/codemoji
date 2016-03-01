@@ -19,11 +19,16 @@
         })
 
         if (n === 1) {
-          Cryptoloji.stateman.on('svg:loaded', function(path) {
-            if (path === "assets/svg/slide01.svg") {
-              animate_onboarding1()
-            }
-          })
+          if (_.indexOf(Cryptoloji.UI.svg_loaded, "assets/svg/slide01.svg") == -1) {
+            Cryptoloji.stateman.on('svg:loaded', function(path) {
+              if (path === "assets/svg/slide01.svg") {
+                animate_onboarding1()
+              }
+            })
+          }
+          else {
+            animate_onboarding1()
+          }
         }
       },
       leave: function () {
@@ -47,6 +52,7 @@
   }
 
   function animate_onboarding1() {
+    console.log('animate')
     var tl = new TimelineLite();
     //Set initial state
     tl.to($("#onboarding_slide_1_A1"), 0.0, {x: -200, y: -200.0})
