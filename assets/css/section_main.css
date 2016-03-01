@@ -192,7 +192,7 @@
 }
 
 .encryption .main_key_panel_emoji_container p.notext:before{
-  content: "You've picked a key. Write your message here to see it in cipher.";
+  content: "You've picked a key. Write your message to see it in cipher.";
   width: 18rem;
   height: 7.3rem;
   background-color: #F46060;
