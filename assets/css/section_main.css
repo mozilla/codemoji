@@ -49,18 +49,15 @@
   transition: .5s width;
 }
 
-<<<<<<< 3a1733896acb0807f3e3e5e69cba2e0c828e6270
-=======
 .decryption .main_keyslider{
   background-color: #283344;
   color: #FAFAFA;
   transition: .5s width;
 }
-
 .encryption .main_content_bottom_label{
   opacity
 }
->>>>>>> fix color decrypt section
+
 .encryption{
   background-color: #283344;
 }
@@ -195,7 +192,7 @@
 }
 
 .encryption .main_key_panel_emoji_container p.notext:before{
-  content: "You,ve picked a key. Write your message to see it encrypted.";
+  content: "You've picked a key. Write your message here to see it in cipher.";
   width: 18rem;
   height: 7.3rem;
   background-color: #F46060;

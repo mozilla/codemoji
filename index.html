@@ -150,13 +150,13 @@
     <div class="section_welcome_main" color-bg-dark layout="column" layout-align="center center" wide flex>
         <div layout="column" layout-align="start center">
           <p class="welcome_text" layout="column" layout-align="center center">
-            Someone has shared<br showItIfMobile>&nbsp;a message with you&nbsp;
+            Someone has shared<br showItIfMobile>&nbsp;this message with you.&nbsp;
           </p>
           <p id="landing_encrypted_message" class="landing_encrypted_message">
             💦💛🎏😔😯 🏡👒🍊🙎😯 🚋💛🚦💛🎏 🍊🏡⛄ 🎬😯😔⛄🐯 ✌💛📻🍊😔✌⛄😔⛄🙎🎏 🎬🚋🏡👒🏡🍊✌🏡📻👾 😔🚦🏡⛄🐯 🍊😔🚋 🚋💛 😔🏡🙎🍊😯💛🚋 ⛄😔😯👒💛🎏 🏡📻✌🏡🚋🏡🚋🙎📻⛄ 🙎⛄ 🚦🎬🍖💛🎏😔 😔⛄ 🚋💛🚦💛🎏😔 😯🎬👾📻🎬 🎬🚦
           </p>
-          <p hideItIfMobile class="landing_small_text">It's encrypted into emojis but can read it here<br>(if you have the rigth key)</p>
-          <p showItIfMobile class="landing_small_text">It's encrypted into emojis but can read it here (if you have the rigth key)</p>
+          <p hideItIfMobile class="landing_small_text">It was scrambled into emojis, but you can decipher it here<br>(if you have the right key).</p>
+          <p showItIfMobile class="landing_small_text">It was scrambled into emojis, but you can decipher it here (if you have the right key).</p>
           <button class="mozilla_button" to-state="decrypt" hide-on-first-visit-only>
             Next
           </button>
@@ -241,7 +241,7 @@
     <div class="section_loading_wrapper" layout="column" layout-align="center center" wide>
       <div class="svg_wrapper svg_wrapper_loading" data-svg="assets/svg/loading1.svg"></div>
     </div>
-    <p class="section_loading_text" style-text color-light>A FUN TOOL TO LEARN ENCRYPTION</p>
+    <p class="section_loading_text" style-text color-light>A FUN TOOL TO LEARN CIPHERS</p>
   </div>
   <!-- /LOADING -->
 
@@ -255,21 +255,27 @@
            layout="column" layout-align="center center"></div>
           <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header1.svg"
                layout="column" layout-align="center center"></div>
-          <p hideItIfMobile class="header_desktop_lable" style-text color-main>A FUN TOOL TO LEARN ENCRYPTION</p>
+          <p hideItIfMobile class="header_desktop_lable" style-text color-main>A FUN TOOL TO LEARN CIPHERS</p>
       </div>
       <div class="main_content_top" flex layout="column" color-bg-main>
         <div class="coachmark coachmark_encryption_text"
              layout="column" layout-align="start start">
-          <p class="coachmark_text">This text is our secret that we want to hide from prying eyes.</p>
+          <p class="coachmark_text">
+             We all have things we want to keep between us and someone special.
+          </p>
         </div>
-        <label uppercase class="header__label main_content_top_label" style-lable color-light>SECRET MESSAGE</label>
+        <label uppercase class="header__label main_content_top_label" style-lable color-light>
+               YOUR MESSAGE
+        </label>
         <textarea maxlength="120" flex id="encryption_input" class="header__input main_content_top_input" style-input placeholder="Write your message here."></textarea>
         <p id="encryption_input_count" class="encryption_input_count main_content_top_label" uppercase style-lable></p>
         <div id="encryption_input_cleaner" class="svg_wrapper svg_wrapper_x" data-svg="assets/svg/x.svg"></div>
       </div>
       <div id="encryption_keyslider" class="main_keyslider">
         <div class="coachmark coachmark_encryption_text">
-          <p class="coachmark_text">Share the key secretely with anyone you want to unlock it.</p>
+          <p class="coachmark_text">
+             The key scrambles your message to protect it from prying eyes.
+          </p>
         </div>
         <div hideItIfMobile>        
           <div class="desktop_main_selected_key" layout="row" layout-align="center center" wide>
@@ -278,7 +284,9 @@
             </div>
           </div>
         </div>
-        <label class="header__label main_keyslider_bottom_label" uppercase style-lable>KEY TO ENCODE THE MESSAGE</label>
+        <label class="header__label main_keyslider_bottom_label" uppercase style-lable>
+               KEY TO SCRAMBLE THE MESSAGE
+        </label>
         <div class="keyslider" showItIfMobile>
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
@@ -300,11 +308,13 @@
       </div>
       <div class="main_content_bottom" flex layout="column">
         <div class="coachmark coachmark_encryption_text">
-          <p class="coachmark_text">We don’t have to keep this secret.<br>We can share it on socials.</p>
+          <p class="coachmark_text">Have fun sharing a bunch of emojis. People will be able to decipher them with the right key.</p>
         </div>
-        <label class="header__label main_content_bottom_label" uppercase style-lable>SCRAMBLED MESSAGE</label>
+        <label class="header__label main_content_bottom_label" uppercase style-lable>
+          SCRAMBLED MESSAGE
+        </label>
         <div flex id="encryption_output" class="header__input main_content_bottom_input unselectable placeholdit" 
-             placeholder="Pick a key to see your message encrypted here." style-input>          
+             placeholder="Pick a key to see your message in cipher here." style-input>          
           <div class="bluebox_output"></div>
           <div class="emojis_output"></div>
         </div>
@@ -328,7 +338,7 @@
       <div class="header" layout="column" layout-align="center center" color-bg-light wide>
           <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header1.svg"
                layout="column" layout-align="center center"></div>
-          <p hideItIfMobile class="header_desktop_lable" style-text color-main>A FUN TOOL TO LEARN ENCRYPTION</p>
+          <p hideItIfMobile class="header_desktop_lable" style-text color-main>A FUN TOOL TO LEARN CIPHERS</p>
       </div>
 
 
