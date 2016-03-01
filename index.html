@@ -189,48 +189,56 @@
     <div class="section_onboarding_wrapper">
       <div class="svg_wrapper svg_wrapper_onboarding" data-svg="assets/svg/onboardingNEWversion-1.svg"
            layout="column" layout-align="center center"></div>
+      <p to-state="encrypt" class="onboarding_skip_button">Got it, thanks</p>
     </div>
   </div>
   <div class="section_onboarding section" slide-num="2" color-bg-dark>
     <div class="section_onboarding_wrapper">
       <div class="svg_wrapper svg_wrapper_onboarding" data-svg="assets/svg/onboardingNEWversion-2.svg"
            layout="column" layout-align="center center"></div>
+      <p to-state="encrypt" class="onboarding_skip_button">Got it, thanks</p>
     </div>
   </div>
   <div class="section_onboarding section" slide-num="3" color-bg-dark>
     <div class="section_onboarding_wrapper">
       <div class="svg_wrapper svg_wrapper_onboarding" data-svg="assets/svg/onboardingNEWversion-3.svg"
            layout="column" layout-align="center center"></div>
+      <p to-state="encrypt" class="onboarding_skip_button">Got it, thanks</p>
     </div>
   </div>
   <div class="section_onboarding section" slide-num="4" color-bg-dark>
     <div class="section_onboarding_wrapper">
       <div class="svg_wrapper svg_wrapper_onboarding" data-svg="assets/svg/onboardingNEWversion-4.svg"
            layout="column" layout-align="center center"></div>
+      <p to-state="encrypt" class="onboarding_skip_button">Got it, thanks</p>
     </div>
   </div>
   <div class="section_onboarding section" slide-num="5" color-bg-dark>
     <div class="section_onboarding_wrapper">
       <div class="svg_wrapper svg_wrapper_onboarding" data-svg="assets/svg/onboardingNEWversion-5.svg"
            layout="column" layout-align="center center"></div>
+      <p to-state="encrypt" class="onboarding_skip_button">Got it, thanks</p>
     </div>
   </div>
   <div class="section_onboarding section" slide-num="6" color-bg-dark>
     <div class="section_onboarding_wrapper">
       <div class="svg_wrapper svg_wrapper_onboarding" data-svg="assets/svg/onboardingNEWversion-6.svg"
            layout="column" layout-align="center center"></div>
+      <p to-state="encrypt" class="onboarding_skip_button">Got it, thanks</p>
     </div>
   </div>
   <div class="section_onboarding section" slide-num="7" color-bg-dark>
     <div class="section_onboarding_wrapper">
       <div class="svg_wrapper svg_wrapper_onboarding" data-svg="assets/svg/onboardingNEWversion-7.svg"
            layout="column" layout-align="center center"></div>
+      <p to-state="encrypt" class="onboarding_skip_button">Got it, thanks</p>
     </div>
   </div>
   <div class="section_onboarding section" slide-num="8" color-bg-dark>
     <div class="section_onboarding_wrapper">
       <div class="svg_wrapper svg_wrapper_onboarding" data-svg="assets/svg/onboardingNEWversion-8.svg"
            layout="column" layout-align="center center"></div>
+      <p to-state="encrypt" class="onboarding_skip_button">Got it, thanks</p>
     </div>
   </div>
   <!-- /ONBOARDING -->
@@ -332,25 +340,21 @@
   <div class="section_main section decryption" layout="column" layout-align="start center">
     <div class="section_main_wrapper" layout="column" layout-align="center center" 
          footer-padding-bottom-correction>
-
-
       <!-- header -->
       <div class="header" layout="column" layout-align="center center" color-bg-light wide>
           <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header1.svg"
                layout="column" layout-align="center center"></div>
           <p hideItIfMobile class="header_desktop_lable" style-text color-main>A FUN TOOL TO LEARN CIPHERS</p>
       </div>
-
-
       <!-- main content top -->
       <div class="main_content_top" flex layout="column" color-bg-light>
-        <label class="header__label main_content_top_label" uppercase style-lable color-light>SCRAMBLED MESSAGE</label>
+        <label class="header__label main_content_top_label" uppercase style-lable color-light>
+          SCRAMBLED MESSAGE
+        </label>
         <div flex id="decryption_input" class="header__input main_content_top_input" style-input>
           <!-- js injected -->
         </div>
       </div>
-
-
       <!-- main keyslider  -->
       <div id="decryption_keyslider" class="main_keyslider">
         
@@ -362,16 +366,15 @@
             </div>
           </div>
         </div>
-
-        <label class="header__label main_keyslider_bottom_label" uppercase style-lable>PICK A KEY TO UNLOCK THE MESSAGE</label>
-
+        <label class="header__label main_keyslider_bottom_label" uppercase style-lable>
+          KEY TO UNSCRAMBLE THE MESSAGE
+        </label>
         <!-- modal keys mobile -->
         <div class="keyslider" showItIfMobile>
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
             <!-- js injected -->
           </div>
         </div>
-        
         <!-- panel keys desktop -->
         <div id="decryption_keypanel" hideItifMobile class="main_key_panel_emoji_wrapper" layout="column" layout-align="start center">
           <div class="nano">          
@@ -380,7 +383,6 @@
             </div>
           </div>
         </div>
-
         <!-- plus mobile button -->
         <div class="main_keyslider_plus" color-bg-main-ligther showItIfMobile>
           <div class="main_keyslider_plus_wrp" id="decryption_key_modal_open" layout="column" layout-align="center center">
@@ -388,19 +390,16 @@
             <div class="svg_wrapper svg_wrapper_plus" data-svg="assets/svg/plus.svg" color-fill-main-ligther></div>
           </div>
         </div>
-
       </div>
-
-
       <!-- main content bottom -->
       <div class="main_content_bottom" flex layout="column" color-bg-main>
-        <label class="header__label main_content_bottom_label" uppercase style-lable>SECRET MESSAGE</label>
+        <label class="header__label main_content_bottom_label" uppercase style-lable>
+          YOUR MESSAGE
+        </label>
         <div flex id="decryption_output" 
              class="header__input main_content_bottom_input unselectable placeholdit" 
              placeholder="Your message will be encrypted here."></div>
       </div>
-
-
       <div id="decryption_reply_button">
         <div class="main_share" layout="column" layout-align="start center">
           <a uppercase class="encryption_share_button" to-state="encrypt" color-light button-box border-light>Reply</a>
