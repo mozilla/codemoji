@@ -28,7 +28,8 @@
     //
     // behavior help button
     //
-    Cryptoloji.UI.loadLogicHelpButton()
+    Cryptoloji.UI.loadLogicHelpButton('encryption')
+    Cryptoloji.UI.loadLogicHelpButton('decryption')
 
     //
     // Key modal setup

@@ -343,12 +343,20 @@
          footer-padding-bottom-correction>
       <!-- header -->
       <div class="header" layout="column" layout-align="center center" color-bg-light wide>
+          <div class="svg_wrapper decryption_help_button" id="decryption_help_button" data-svg="assets/svg/help.svg"
+               layout="column" layout-align="center center"></div>
           <div class="svg_wrapper svg_wrapper_header" data-svg="assets/svg/header1.svg"
                layout="column" layout-align="center center"></div>
           <p hideItIfMobile class="header_desktop_lable" style-text color-main>A FUN TOOL TO LEARN CIPHERS</p>
       </div>
       <!-- main content top -->
       <div class="main_content_top" flex layout="column" color-bg-light>
+        <div class="coachmark coachmark_decryption_text"
+             layout="column" layout-align="start start">
+          <p class="coachmark_text">
+             This looks like a bunch of emojis, but actually is a message for you!
+          </p>
+        </div>
         <label class="header__label main_content_top_label" uppercase style-lable color-light>
           SCRAMBLED MESSAGE
         </label>
@@ -358,7 +366,11 @@
       </div>
       <!-- main keyslider  -->
       <div id="decryption_keyslider" class="main_keyslider">
-        
+        <div class="coachmark coachmark_encryption_text">
+          <p class="coachmark_text">
+             Do you know what key the sender used for their cipher?
+          </p>
+        </div>
         <!-- selected key desktop-->
         <div hideItIfMobile>        
           <div class="desktop_main_selected_key" layout="row" layout-align="center center" wide>
@@ -394,6 +406,9 @@
       </div>
       <!-- main content bottom -->
       <div class="main_content_bottom" flex layout="column" color-bg-main>
+        <div class="coachmark coachmark_encryption_text">
+          <p class="coachmark_text">The right key deciphers the message.<br>See gibberish? Ask the sender or try guessing (our cipher is simple – it's just a learning tool). </p>
+        </div>
         <label class="header__label main_content_bottom_label" uppercase style-lable>
           YOUR MESSAGE
         </label>

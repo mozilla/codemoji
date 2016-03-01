@@ -163,14 +163,15 @@
   }
 
 
-  function loadLogicHelpButton () {
+  function loadLogicHelpButton (section) {
+
     function toggleCoachmark() {
       if($('body').hasClass('coachmarks-open')){
-        $('.coachmark').each(function(i){
+        $('.'+section+' .coachmark').each(function(i){
           var self = this
           TweenLite.to($(self), 2, {
               delay: i * .2 + .3,
-              top: 0 - $('.coachmark').innerHeight()
+              top: 0 - $('.'+section+' .coachmark').innerHeight()
           })
           TweenLite.to($(self).children(), .3, {
               delay: i * .2,
@@ -178,12 +179,12 @@
           })
         })
       } else {
-        var t = $(".section_main_wrapper .header").innerHeight()
-        $('.coachmark').each(function(i){
+        var t = $("."+section+" .header").innerHeight()
+        $('.'+section+' .coachmark').each(function(i){
           var self = this
           TweenLite.to($(self), .8, {
               delay: i * .2,
-              top: t + $('.coachmark').innerHeight()
+              top: t + $('.'+section+' .coachmark').innerHeight()
           })
           TweenLite.to($(self).children(), .5, {
               delay: i * .2 + .7,
@@ -193,23 +194,35 @@
       }
       $('body').toggleClass('coachmarks-open')
     }
-    if (Cryptoloji.mq.matches) {
-      $("#encryption_help_button").hover(function(){
+    
+    function toggleHelpButtonColor () {
+      console.log('asd')
+      var color1 = $('.'+section+' .help_button_point').attr("fill")
+      var color2 = $('.'+section+' .help_button_balon').attr("fill")
+      $('.'+section+' .help_button_point').attr("fill", color2)
+      $('.'+section+' .help_button_balon').attr("fill", color1)
+    }
+
+    function bounceDots() {
+      var elem = section + "_help_button"
+      $('#'+elem).hover(function(){
         var self = this
         var t = .2
-        $('.help_button_point').each(function(i){
+        $('.'+elem+' .help_button_point').each(function(i){
           var it = this
           TweenLite.to($(it), t/2, {delay: 0+i*.1, transform: "translateY(-25px)"})
           TweenLite.to($(it), t, {delay: t+i*.1, transform: "translateY(0px)"})
         })
       },function () {})
-      $("#encryption_help_button").on("click", function () {
-        var color1 = $('.help_button_point').attr("fill")
-        var color2 = $('.help_button_balon').attr("fill")
-        $('.help_button_point').attr("fill", color2)
-        $('.help_button_balon').attr("fill", color1)
+    } 
+    
+    if (Cryptoloji.mq.matches) {
+      bounceDots()
+      $("#" + section + "_help_button").on("click", function(){
+        toggleHelpButtonColor()
         toggleCoachmark()
       })
+      
     }
   }
 

@@ -4,6 +4,18 @@
 }
 
 .encryption_help_button{
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  width: 6rem;
+  transform: translate(0,-50%);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.decryption_help_button{
+  display: none;
   position: absolute;
   top: 50%;
   right: 2rem;
@@ -496,9 +508,7 @@
   color: white;
   opacity: 1;
 }
-.encryption_help_button{
-  display: none;
-}
+
 .coachmark{
   display: none;
   position: absolute;
@@ -522,14 +532,17 @@
   opacity: 0;
 }
 
-.encryption .main_content_top .coachmark{
+.encryption .main_content_top .coachmark,
+.decryption .main_content_bottom .coachmark{
   background-color: #F57070;
   color: white;
 }
-.encryption .main_keyslider .coachmark{
+.encryption .main_keyslider .coachmark,
+.decryption .main_keyslider .coachmark{
   background-color: #3D4757;
 }
-.encryption .main_content_bottom .coachmark{
+.encryption .main_content_bottom .coachmark,
+.decryption .main_content_top .coachmark{
   background-color: #EAEBEC;
 }
 /******************************************************************************/
