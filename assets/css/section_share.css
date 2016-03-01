@@ -1,5 +1,11 @@
 .captcha {
-  margin: 4rem 0;
+  margin: 5rem 0;
+}
+
+.svg_captcha_robot {
+  height: 10rem;
+  width: 10rem;
+  margin-bottom: 5rem;
 }
 
 .section_share{

@@ -1,6 +1,9 @@
 (function (window, Cryptoloji, $, undefined) {
   'use strict'
 
+  // if a captcha has already been initialized
+  var _captcha = false
+
   Cryptoloji.states.captcha = {
     canEnter: function () {
       // prevent user from entering a broken captcha without message and key
@@ -22,20 +25,18 @@
   }
 
   function renderCaptcha () {
-    // if a captcha has already been initialized
-    var captcha = false
     
     // init captcha if not already initialized or reset
     function _initOrResetCaptcha () {
-      if (captcha) {
+      if (_captcha) {
         window.grecaptcha.reset()
       } else {
+        _captcha = true
         window.grecaptcha.render('g-recaptcha', {
           'sitekey': Cryptoloji.settings.captcha.sitekey,
           'callback': verifyCaptcha,
           'theme': 'light'
         })
-        captcha = true
       }
     }
     // check if captcha library has loaded completely

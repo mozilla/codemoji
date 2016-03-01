@@ -85,9 +85,9 @@
   }
 
   function copyKeyToClipboardHandler () {
-    linkClipboard = new Clipboard('#share_copytoclipboard2')
+    keyClipboard = new Clipboard('#share_copytoclipboard2')
 
-    linkClipboard.on('success', function(e) {
+    keyClipboard.on('success', function(e) {
       console.log('success', e)
 
       e.clearSelection()
@@ -100,7 +100,7 @@
       }, 350)
     });
 
-    linkClipboard.on('error', function(e) {
+    keyClipboard.on('error', function(e) {
       console.log('error', e)
       console.warn('using copy fallback')
       console.warn('Action:', e.action)
