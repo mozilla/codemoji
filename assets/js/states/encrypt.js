@@ -8,8 +8,8 @@
       // Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
 
-      // draft logic transition 
-      Cryptoloji.UI.encryptionEnteringTransition()
+      // transition 
+      Cryptoloji.UI.encryptionEnteringTransition('encryption')
       
 
       Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')
