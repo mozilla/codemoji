@@ -51,55 +51,124 @@
     }
   }
 
-  function animate_onboarding1() {
-    console.log('animate')
-    var tl = new TimelineLite();
-    //Set initial state
-    tl.to($("#onboarding_slide_1_A1"), 0.0, {x: -200, y: -200.0})
-    .to($("#onboarding_slide_1_A2"), 0.0, {x: -200, y: -200.0})
-    .to($("#onboarding_slide_1_A3"), 0.0, {x: -200, y: -200.0})
-    .to($("#onboarding_slide_1_A4"), 0.0, {x: -200, y: -200.0})
-    .to($("#onboarding_slide_1_A5"), 0.0, {x: -200, y: -200.0})
-    .to($("#onboarding_slide_1_A2"), 0.0, {x: -200, y: -200.0})
-    .to($("#onboarding_slide_1_encrypted_B1"), 0.0, {y: -205})
-    .to($("#onboarding_slide_1_encrypted_B2"), 0.0, {y: -205})
-    .to($("#onboarding_slide_1_encrypted_B3"), 0.0, {y: -205})
-    .to($("#onboarding_slide_1_encrypted_B4"), 0.0, {y: -205})
-    .to($("#onboarding_slide_1_encrypted_B5"), 0.0, {y: -205})
-    .to($("#onboarding_slide1_line_1"), 0.0, {y: -205})
-    .to($("#onboarding_slide1_line_2"), 0.0, {y: -205})
-    .to($("#onboarding_slide1_line_3"), 0.0, {y: -205})
-    .to($("#onboarding_slide1_line_4"), 0.0, {y: -205})
-    .to($("#onboarding_slide1_line_5"), 0.0, {y: -205})
-    .to($("#onboarding_slide_1_text"), 0.0, {opacity: 0.0})
+  function animate_onboarding1_() {
+    var tl = new TimelineLite({onComplete: function() {
+      this.restart()
+    }});
+    var animation_duration = 0.5
+    var animation_delay = 0.5
 
-    //Animation
-    tl.to($("#onboarding_slide_1_A1"), 0.25, {x: 0.0, y: 0.0})
-    .to($("#onboarding_slide_1_A2"), 0.25, {x: 0.0, y: 0.0})
-    .to($("#onboarding_slide_1_A4"), 0.25, {x: 0.0, y: 0.0})
-    .to($("#onboarding_slide_1_A3"), 0.25, {x: 0.0, y: 0.0})
-    .to($("#onboarding_slide_1_A5"), 0.25, {x: 0.0, y: 0.0})
-    .to($("#onboarding_slide_1_A1"), 0.1, {scale: 1.5, rotation: 360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide_1_A1"), 0.1, {scale: 1.0, rotation: -360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide1_line_5"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_encrypted_B1"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_A2"), 0.1, {scale: 1.5, rotation: 360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide_1_A2"), 0.1, {scale: 1.0, rotation: -360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide1_line_4"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_encrypted_B2"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_A4"), 0.1, {scale: 1.5, rotation: 360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide_1_A4"), 0.1, {scale: 1.0, rotation: -360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide1_line_3"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_encrypted_B3"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_A3"), 0.1, {scale: 1.5, rotation: 360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide_1_A3"), 0.1, {scale: 1.0, rotation: -360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide1_line_2"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_encrypted_B4"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_A5"), 0.1, {scale: 1.5, rotation: 360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide_1_A5"), 0.1, {scale: 1.0, rotation: -360, transformOrigin: "50% 50%"})
-    .to($("#onboarding_slide1_line_1"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_encrypted_B5"), 0.1, {y: 0.0})
-    .to($("#onboarding_slide_1_text"), 1.0, {opacity: 1.0})
+    //Set initial state
+    //First encryption letters
+    tl.to($("#onboarding_slide_1_encrypted_hello g"), 0.0, {y: -105, opacity: 0.0})
+    //Second encryption letters
+    .to($("#onboarding_slide_1_encrypted_hello_2 g"), 0.0, {y: -105, opacity: 0.0})
+    //Third encryption letters
+    .to($("#onboarding_slide_1_encrypted_hello_3 g"), 0.0, {y: -105, opacity: 0.0})
+    tl.stop()
+
+    for (var i=0; i<5; i++) {
+      var element = $($("#onboarding_slide_1_encrypted_hello g")[0]).attr("id")
+      console.log(element)
+      tl.to($($("#onboarding_slide_1_encrypted_hello g")[i]), animation_duration, {x: 0, opacity: 1.0})
+    }
+    tl.play()
+  }
+  function animate_onboarding1() {
+    var tl = new TimelineLite({onComplete: function() {
+      this.restart()
+    }});
+    var animation_duration = 0.25
+    var animation_delay = 0.5
+    //Set initial state
+    //First encryption letters
+    tl.to($("#onboarding_slide_1_encrypted_hello g"), 0.0, {y: -60, opacity: 0.0})
+    //Second encryption letters
+    .to($("#onboarding_slide_1_encrypted_hello_2 g"), 0.0, {y: -60, opacity: 0.0})
+    //Third encryption letters
+    .to($("#onboarding_slide_1_encrypted_hello_3 g"), 0.0, {y: -60, opacity: 0.0})
+
+
+    //Lines
+    .to($("#onboarding_slide1_line_5"), 0.0, {x: -60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_4"), 0.0, {x: -60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_3"), 0.0, {x: -60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_2"), 0.0, {x: -60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_1"), 0.0, {x: -60, opacity: 0.0})
+
+
+    //Animation 1
+    .to($("#onboarding_slide1_line_5"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B1"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_4"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B2"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_3"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B3"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_2"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B4"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_1"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B5"), animation_duration, {y: 0, opacity: 1.0})
+    
+    .to($("#onboarding_slide1_line_1"), animation_duration, {delay: animation_delay, x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B5"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_2"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B4"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_3"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B3"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_4"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B2"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_5"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B1"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B1"), animation_duration, {delay: animation_delay, y: 60, opacity: 0.0})
+
+    //Animation 2
+    .to($("#onboarding_slide1_line_5"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B1_2"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_4"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B2_2"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_3"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B3_2"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_2"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B4_2"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_1"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B5_2"), animation_duration, {y: 0, opacity: 1.0})
+    
+    .to($("#onboarding_slide1_line_1"), animation_duration, {delay: animation_delay, x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B5_2"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_2"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B4_2"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_3"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B3_2"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_4"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B2_2"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_5"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B1_2"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B1_2"), animation_duration, {delay: animation_delay, y: 60, opacity: 0.0})
+
+    //Animation 3
+    .to($("#onboarding_slide1_line_5"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B1_3"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_4"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B2_3"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_3"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B3_3"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_2"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B4_3"), animation_duration, {y: 0, opacity: 1.0})
+    .to($("#onboarding_slide1_line_1"), animation_duration, {x: 0, opacity: 1.0})
+    .to($("#onboarding_slide_1_encrypted_B5_3"), animation_duration, {y: 0, opacity: 1.0})
+    
+    .to($("#onboarding_slide1_line_1"), animation_duration, {delay: animation_delay, x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B5_3"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_2"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B4_3"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_3"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B3_3"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_4"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B2_3"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide1_line_5"), animation_duration, {x: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B1_3"), animation_duration, {y: 60, opacity: 0.0})
+    .to($("#onboarding_slide_1_encrypted_B1_3"), animation_duration, {delay: animation_delay, y: 60, opacity: 0.0})
+
   }
 
   Cryptoloji.states.onboarding.step1 = next_slide(1)
