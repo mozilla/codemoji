@@ -13,7 +13,7 @@
   background-color: #283344;
 }
 [color-bg-light]{
-  background-color: white;
+  background-color: #FAFAFA;
 }
 
 /*color*/
@@ -30,7 +30,7 @@
   color: #283344;
 }
 [color-light]{
-  color: white;
+  color: #FAFAFA;
 }
 
 
@@ -48,12 +48,12 @@
   fill: #283344;
 }
 [color-fill-light]{
-  fill: white;
+  fill: #FAFAFA;
 }
 
 /*border*/
 
 [border-light]{
-  border-color: white;
+  border-color: #FAFAFA;
 }
 

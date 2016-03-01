@@ -37,19 +37,19 @@
   .encryption{ 
     background-color: #FAFAFA;
   }
-  .encryption .main_keyslider{
+  .encryption .main_keyslider,
+  .decryption .main_keyslider{
     background-color: #283344;
     color: #FAFAFA;
-  }
-  .decryption .main_keyslider{
-    background-color: #FAFAFA;
   }
   .encryption .main_keyslider_bottom_label{
     color: #FAFAFA;
   }
-  .encryption .main_content_top_label,
-  .decryption .main_content_top_label{
+  .encryption .main_content_top_label{
     color: #FAFAFA;
+  }
+  .decryption .main_content_top_label{
+    color: #283344;
   }
   .main_key_panel_emoji_container{
     flex-wrap: wrap;

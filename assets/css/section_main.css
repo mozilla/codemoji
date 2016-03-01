@@ -43,13 +43,24 @@
 .main_content_top_input{
   color: #FAFAFA;
 }
-.encryption .main_keyslider,
-.decryption .main_keyslider{
+.encryption .main_keyslider{
   background-color: #FAFAFA;
   color: #283344;
   transition: .5s width;
 }
 
+<<<<<<< 3a1733896acb0807f3e3e5e69cba2e0c828e6270
+=======
+.decryption .main_keyslider{
+  background-color: #283344;
+  color: #FAFAFA;
+  transition: .5s width;
+}
+
+.encryption .main_content_bottom_label{
+  opacity
+}
+>>>>>>> fix color decrypt section
 .encryption{
   background-color: #283344;
 }

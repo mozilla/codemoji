@@ -11,6 +11,9 @@
       // Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
 
+      // transition 
+      Cryptoloji.UI.encryptionEnteringTransition('decryption')
+
       // if we should serve a smaller version
       if (!Cryptoloji.mq.matches) {
         Cryptoloji.UI.Keyslider('decrypt', '#decryption_keyslider')
