@@ -23,11 +23,10 @@
 <g id="tap">
 </g>
 <g>
-	<rect x="27.3" y="239.2" fill="none" width="260.4" height="201.5"/>
-	<text transform="matrix(1 0 0 1 92.7007 255.43)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">THAT&apos;S IT. </tspan><tspan x="-38.9" y="25.9" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">NOW YOU KNOW THE </tspan><tspan x="-64.8" y="51.8" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">BASICS OF HOW SIMPLE </tspan><tspan x="-19.4" y="77.8" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">CIHPERS WORK.</tspan><tspan x="64.8" y="103.7" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6"> </tspan><tspan x="-58.3" y="129.6" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">TRY IT YOURSELF AND </tspan><tspan x="-32.4" y="155.5" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">SHARE WITH YOUR </tspan><tspan x="13" y="181.4" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">FRIENDS.</tspan></text>
-</g>
-<g>
 	<rect x="27.3" y="477.1" fill="none" width="260.4" height="46.7"/>
 	<text transform="matrix(1 0 0 1 92.7007 493.3419)" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">Go for it!</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 40.8616 255.4298)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">THAT&apos;S IT. NOW YOU</tspan><tspan x="19.4" y="25.9" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">KNOW THE BASICS</tspan><tspan x="32.4" y="51.8" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">OF HOW SIMPLE</tspan><tspan x="25.9" y="77.8" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">CIPHERS WORK. </tspan><tspan x="19.4" y="129.6" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">TRY IT YOURSELF</tspan><tspan x="25.9" y="155.5" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">AND SHARE WITH</tspan><tspan x="32.4" y="181.4" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="21.6">YOUR FRIENDS.</tspan></text>
 </g>
 </svg>
