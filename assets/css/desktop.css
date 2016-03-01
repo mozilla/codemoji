@@ -7,7 +7,9 @@
   [showItIfMobile]{
     display: none;
   }
-
+  .encryption_input_count{
+   top: 40rem;
+  }
   .svg_wrapper_header_name{
     width: 43rem;
   }
