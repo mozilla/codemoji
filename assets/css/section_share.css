@@ -1,3 +1,7 @@
+.captcha {
+  margin: 4rem 0;
+}
+
 .section_share{
   text-align: center;
   color: white;
@@ -32,16 +36,33 @@
   /*position: absolute;*/
   margin-top: 2rem;
   bottom: 0rem;
+  height: 6rem;
+  transition: all .7s, background-color 1s;
+  position: absolute;
+}
+
+.share_key-open{
+  /*transition: height .7s;*/
+  /*position: absolute;*/
+  background-color: #F46060;
+  height: 273px;
 }
 
 .share_key .hidden {
   display: none;
+  /*opacity: 0;*/
+}
+
+.share_key-open .hidden {
+  display: block;
+  /*opacity: 1;*/
 }
 
 .share_social{
-  width: 100%;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5rem;
+  /*margin-top: 1rem;*/
 }
 
 .share_social_lable{
@@ -79,25 +100,46 @@
   min-height: 2rem;*/
 }
 
-p.share_key_emoji-item {
+.share_key_emoji-item {
   /*position: absolute;*/
   position: relative;
   margin: 0;
   /*left: -3rem;*/
-  top: -1rem;
-  padding: .6rem .5rem;
+  top: -1.5rem;
+  /*padding: .6rem .5rem;*/
+  /*padding: 1.8rem .1rem .5rem .5rem;*/
   border-radius: 50%;
-  color: rgba(40,51,68,.45);
-  border: .5rem solid;
-  min-width: 5.5rem;
-  min-height: 5.5rem;
+  /*border: .5rem solid rgba(40,51,68,.45);*/
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 50%;
+  letter-spacing: 1px;
+  padding-top: 1.5rem;
+  /*padding-top: .9rem;*/
+  padding-left: 1.2rem;
+
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  color: black;
+}
+
+input#share_copytoclipboard {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: center;
+  /*height: 100%;*/
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
 }
 
 .share_key_sentence{
   /*letter-spacing: -1px;
   text-align: center;
   margin-bottom: 0.5rem;*/
-  margin: 3rem 2rem;
+  margin: 2rem 2rem 4rem 2rem;
 }
 
 .share_text{
@@ -113,15 +155,20 @@ p.share_key_emoji-item {
   min-height: 40px;
 }
 
-/*.share_message_item{
-  padding: 1rem;
+.share_message_item{
+  /*padding: 1rem;
   border: solid 1px white;
   border-radius: 2rem;
-  border-bottom-right-radius: 0px;
-}*/
+  border-bottom-right-radius: 0px;*/
+  min-height: 20rem;
+  margin-top: 1rem;
+  /*margin-bottom: 2rem;*/
+  font-size: 96%;
+}
 
 .share_social_wrapper{
-  margin: 2rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
 }
 
 .share_social_wrapper .svg_wrapper_social:before{
@@ -144,6 +191,6 @@ p.share_key_emoji-item {
 }
 
 .social{
-  margin: 0 1rem;
+  /*margin: 0 1rem;*/
   position: relative;
 }

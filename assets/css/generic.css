@@ -126,6 +126,9 @@ html[orientation="landscape"] .landscape-overlay {
   width: 100%;
 }
 
+[opacity="65"] {
+  opacity: .65;
+}
 
 [scroll-y]{
     overflow:hidden;

@@ -29,18 +29,19 @@
       setupShareButtons()
 
       $('#share_currentkey').on('click', function () {
-        $('.share_key').css('position', 'absolute')
-        $('.share_key').css('height', '50%')
-        $('.share_key').css('background-color', '#F46060')
-        $('.share_key_emoji-item').css('border', 'none')
-        $('.share_key .hidden').css('display', 'block')
+        // $('.share_key').css('position', 'absolute')
+        // $('.share_key').css('background-color', '#F46060')
+        $('.share_key').addClass('share_key-open')
+        var share_modal_height = $('body').height() - $('.share_social_wrapper').offset().top
+        $('.share_key').css('height', share_modal_height)
+        // $('.share_key .hidden').css('display', 'block')
       })
       $('#share_key_hide').on('click', function () {
-        $('.share_key').css('position', 'relative')
-        $('.share_key').css('height', 'auto')
-        $('.share_key').css('background-color', '')
-        $('.share_key_emoji-item').css('border', '.5rem solid')
-        $('.share_key .hidden').css('display', 'none')
+        $('.share_key').removeClass('share_key-open')
+        $('.share_key').css('height', '6rem')
+        // $('.share_key .hidden').css('display', 'none')
+        // $('.share_key').css('position', 'relative')
+        // $('.share_key').css('background-color', '')
       })
     },
     leave: function () {
@@ -84,43 +85,30 @@
   }
 
   function copyKeyToClipboardHandler () {
-    function selectText(element){
-      var doc = document,
-      text = doc.getElementById(element),
-      range,
-      selection;
-      if (doc.body.createTextRange) { //ms
-        range = doc.body.createTextRange();
-        range.moveToElementText(text);
-        range.select();
-      } else if (window.getSelection) { //all others
-        selection = window.getSelection();
-        range = doc.createRange();
-        range.selectNodeContents(text);
-        selection.removeAllRanges();
-        selection.addRange(range);
-      }
-    }
+    linkClipboard = new Clipboard('#share_copytoclipboard2')
 
-    keyClipboard = new Clipboard('#share_copykeytoclipboard')
+    linkClipboard.on('success', function(e) {
+      console.log('success', e)
 
-    keyClipboard.on('success', function(e) {
       e.clearSelection()
 
       // give feedback in place
-      var oldVal = $(e.trigger).text()
-      $(e.trigger).text('COPIED!')
+      var oldVal = $(e.trigger).val()
+      $(e.trigger).val('COPIED!')
       setTimeout(function () {
-        $(e.trigger).text(oldVal)
+        $(e.trigger).val(oldVal)
       }, 350)
     });
 
-    keyClipboard.on('error', function(e) {
+    linkClipboard.on('error', function(e) {
+      console.log('error', e)
       console.warn('using copy fallback')
       console.warn('Action:', e.action)
       console.warn('Trigger:', e.trigger)
       // select as fallback
-      selectText('share_currentkey')
+      var input = e.trigger
+      input.focus()
+      input.setSelectionRange(0, 50)
     });
   }
 

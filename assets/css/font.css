@@ -163,7 +163,11 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   background-color: #B3B3B3;
 }
 
-
+[text="extra-small"]{
+    font-size: 60%;
+    margin: 0;
+    padding: 0;
+}
 
 [text="small-medium"]{
     font-size: 80%;
@@ -193,6 +197,10 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 
 [uppercase]{
     text-transform: uppercase;
+}
+
+[underline]{
+    text-decoration: underline;
 }
 
 .mozilla_button{
