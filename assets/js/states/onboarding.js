@@ -10,10 +10,10 @@
   }
 
   var svg_elements = []
-  svg_elements.push("#onboarding_slide_1_encrypted_hello g")
-  svg_elements.push("#onboarding_slide_1_encrypted_hello_2 g")
-  svg_elements.push("#onboarding_slide_1_encrypted_hello_3 g")
-  svg_elements.push("#onboarding_slide_1_encrypted_hello_4 g")
+  svg_elements.push("#onboarding_slide_1_encrypted_hello>g")
+  svg_elements.push("#onboarding_slide_1_encrypted_hello_2>g")
+  svg_elements.push("#onboarding_slide_1_encrypted_hello_3>g")
+  svg_elements.push("#onboarding_slide_1_encrypted_hello_4>g")
 
   function next_slide(n){
     return {
@@ -24,9 +24,9 @@
         })
 
         if (n === 1) {
-          if (_.indexOf(Cryptoloji.UI.svg_loaded, "assets/svg/slide01.svg") == -1) {
+          if (_.indexOf(Cryptoloji.UI.svg_loaded, "assets/svg/slide02.svg") == -1) {
             Cryptoloji.stateman.on('svg:loaded', function(path) {
-              if (path === "assets/svg/slide01.svg") {
+              if (path === "assets/svg/slide02.svg") {
                 Cryptoloji.UI.animate_onboarding(svg_elements)
               }
             })
