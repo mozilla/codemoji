@@ -112,10 +112,7 @@
   top: .8rem;
   left: .7rem;
   opacity: .5;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .svg_wrapper_plus{
@@ -157,9 +154,7 @@
 .main_key_modal_emoji_wrapper{
   position: relative;
   width: 100%;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 1.2rem 1rem .6rem 1rem;
   font-size: 200%;
   height: 100%;
@@ -222,8 +217,7 @@
   position: absolute;
   bottom: 10px;
   left: 50%;
-  -webkit-transform: translate(-50%,0);
-          transform: translate(-50%,0);
+  transform: translate(-50%,0);
 }
 
 /*.main_keyslider:after{
@@ -256,8 +250,7 @@
   height: 20px;
   left: 3rem;
   bottom: -20px;
-  -webkit-transform: translate(-50%,100%);
-          transform: translate(-50%,100%);
+  transform: translate(-50%,100%);
   background-color: #E6E6E6;
   border-radius: 50%;
   z-index: 2500;
@@ -269,8 +262,7 @@
   height: 20px;
   left: 3rem;
   top: -20px;
-  -webkit-transform: translate(-50%,-100%);
-          transform: translate(-50%,-100%);
+  transform: translate(-50%,-100%);
   background-color: #E6E6E6;
   border-radius: 50%;
   z-index: 2500;
@@ -327,12 +319,8 @@
   position: absolute;
   top: 50%;
   left: 10px;
-  -webkit-transform: translate(0,-50%);
-          transform: translate(0,-50%);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  transform: translate(0,-50%);
+  user-select: none;
   width: 80px;
   height: 80px;
   border-radius: 50%;
