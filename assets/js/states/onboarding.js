@@ -24,6 +24,31 @@
         })
 
         if (n === 1) {
+          //Set the array to be passed to the animation function with the name of the four groups we want to animate
+          var svg_elements = []
+          svg_elements.push("#onboarding_slide_1_encrypted_hello g")
+          svg_elements.push("#onboarding_slide_1_encrypted_hello_2 g")
+          svg_elements.push("#onboarding_slide_1_encrypted_hello_3 g")
+          svg_elements.push("#onboarding_slide_1_encrypted_hello_4 g")
+          if (_.indexOf(Cryptoloji.UI.svg_loaded, "assets/svg/slide01.svg") == -1) {
+            Cryptoloji.stateman.on('svg:loaded', function(path) {
+              if (path === "assets/svg/slide01.svg") {
+                Cryptoloji.UI.animate_onboarding(svg_elements)
+              }
+            })
+          }
+          else {
+            Cryptoloji.UI.animate_onboarding(svg_elements)
+          }
+        }
+
+        if (n === 2) {
+          //Set the array to be passed to the animation function with the name of the four groups we want to animate
+          var svg_elements = []
+          svg_elements.push("#onboarding_slide_2_encrypted_hello>g")
+          svg_elements.push("#onboarding_slide_2_encrypted_hello_2>g")
+          svg_elements.push("#onboarding_slide_2_encrypted_hello_3>g")
+          svg_elements.push("#onboarding_slide_2_encrypted_hello_4>g")
           if (_.indexOf(Cryptoloji.UI.svg_loaded, "assets/svg/slide02.svg") == -1) {
             Cryptoloji.stateman.on('svg:loaded', function(path) {
               if (path === "assets/svg/slide02.svg") {
