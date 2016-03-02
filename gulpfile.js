@@ -15,6 +15,7 @@ var svgInject = require('svg-injectr');
 var htmlmin = require('gulp-htmlmin');
 var through = require('through2');
 var processhtml = require('gulp-processhtml');
+var replace = require('gulp-replace');
 
 // File where the favicon markups are stored
 var FAVICON_DATA_FILE = 'cache/faviconData.json';
@@ -50,8 +51,8 @@ gulp.task('minify', ['clean'], function() {
 
   return gulp.src('index.html')
       .pipe(usemin({
-        css: [ cleanCSS(cleancssOpt), postcss(processors), rev ],
-        vendorjs: [ uglify, rev ]
+        css: [ cleanCSS(cleancssOpt), postcss(processors) ],
+        vendorjs: [ uglify ]
       }))
       .pipe(gulp.dest('public'));
 });
@@ -132,6 +133,8 @@ gulp.task('svginj', ['copy:assets'], function(){
       recursive:true,
       data:{version:Math.random()*10000}
     }))
+    .pipe(replace('<script src="app.js"></script>', ''))
+    .pipe(replace('<link rel="stylesheet" href="style.css">', ''))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('public/'))
 })

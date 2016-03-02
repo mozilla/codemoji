@@ -9,11 +9,12 @@
   $(document).ready(function () {
 
     FastClick.attach(document.body);
+    $('#mainLoader').remove();
 
     // 
     // fix height
     // 
-    Cryptoloji.UI.fixHeight()
+    //Cryptoloji.UI.fixHeight()
     
     // 
     // on rotation/resize
@@ -61,9 +62,10 @@
     //
     Cryptoloji.stateman.start()
     // go to welcome if no state is active
-    if (Cryptoloji.stateman.current.name === '')
+    if (Cryptoloji.stateman.current.name === ''){
       Cryptoloji.stateman.go('welcome')
-
+    }
+      
     Cryptoloji.stateman.on('begin', function (event) { console.log('begin ', event) })
     Cryptoloji.stateman.on('end', function (phase) { console.log('end ', phase) })
     Cryptoloji.stateman.on('notfound', function () { console.log('notfound') })

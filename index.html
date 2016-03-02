@@ -32,6 +32,13 @@
   <link rel="stylesheet" type="text/css" href="assets/css/loader.css">
   <!-- endbuild -->
 
+  <!-- process:template 
+  <style type="text/css"> 
+  /process -->
+  <!-- process:include style.css --><!-- /process -->
+  <!-- process:template 
+  </style> 
+  /process -->
 
 
 
@@ -56,6 +63,8 @@
       if you need help figuring out how.
     </p>
   </noscript>
+
+  <div id="mainLoader">loading...</div>
 
   <div id="header" class="header">
     <div layout="column" layout-align="center center">
@@ -777,6 +786,14 @@
   <!-- endbuild -->
 
 
+
+
+<!-- process:template 
+<script type="text/javascript">
+function _l(a,b){var c=new XMLHttpRequest,d=document;c.open("GET",a,!0),c.onload=function(){var a=d.createElement("script");a.type="text/javascript",a.textContent=c.responseText,d.body.appendChild(a),b&&b()},c.send()}
+_l('app.js?v=<%=version%>');
+</script>
+/process -->
 
 
 
