@@ -17,15 +17,17 @@
     enter: function () {
       renderCaptcha()
 
-      $('.encryption').addClass('section-show')
+      // $('.encryption').addClass('section-show')
       $('.section_captcha').addClass('section-show')
-      TweenLite.set($('.section_captcha'), {y: window.innerHeight})
-      TweenLite.to($('.section_captcha'), 1, {y: 0})
+      TweenLite.set($('.section_captcha'), {y: -window.innerHeight})
+      TweenLite.to($('.section_captcha'), 1, {y: 0, onComplete: function(){
+        $('.encryption').removeClass('section-show')
+      }})
 
     },
     leave: function () {
 
-      TweenLite.to($('.section_captcha'), 1, {y: window.innerHeight, onComplete: function(){
+      TweenLite.to($('.section_captcha'), 1, {y: -window.innerHeight, onComplete: function(){
         $('.section_captcha').removeClass('section-show')
       }})
     }
@@ -66,10 +68,12 @@
     var captcha_string = {'captcha_string': $('#g-recaptcha-response').val()}
     $.post(Cryptoloji.settings.captcha.url + '/share', captcha_string)
       .done(function () {
-        Cryptoloji.stateman.go('share')
+        setTimeout(function () {
+          Cryptoloji.stateman.go('share')
+        }, 800)
       })
       .fail(function () {
-        alert('Retry!')
+        window.alert('Retry!')
       })
   }
 

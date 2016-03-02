@@ -14,7 +14,9 @@
       }
       return true
     },
+
     enter: function () {
+      TweenLite.set($('.section_share'), {y: 0})
       $(".section_share").addClass("section-show")
       setTimeout(function(){
         $("#share_more_arrow").addClass("shown")
@@ -45,6 +47,7 @@
       })
     },
     leave: function () {
+
       TweenLite.to($('.section_share'), 1, {y: window.innerHeight, onComplete: function(){
         $(this).removeClass('section-show')
       }})
