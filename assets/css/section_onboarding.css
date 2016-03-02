@@ -18,3 +18,11 @@
     transform: translateX(-50%);
     cursor: pointer;
 }
+
+.svg_wrapper_pagination{
+  width: 30rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

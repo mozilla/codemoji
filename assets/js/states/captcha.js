@@ -17,10 +17,17 @@
     enter: function () {
       renderCaptcha()
 
+      $('.encryption').addClass('section-show')
       $('.section_captcha').addClass('section-show')
+      TweenLite.set($('.section_captcha'), {y: window.innerHeight})
+      TweenLite.to($('.section_captcha'), 1, {y: 0})
+
     },
     leave: function () {
-      $('.section_captcha').removeClass('section-show')
+
+      TweenLite.to($('.section_captcha'), 1, {y: window.innerHeight, onComplete: function(){
+        $('.section_captcha').removeClass('section-show')
+      }})
     }
   }
 

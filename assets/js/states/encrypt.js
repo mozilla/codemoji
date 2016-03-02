@@ -10,7 +10,10 @@
       Cryptoloji.stateman.emit('header:hide') 
 
       // transition 
-      Cryptoloji.UI.encryptionEnteringTransition('encryption')
+      if(Cryptoloji.stateman.previous.name != "share" && 
+         Cryptoloji.stateman.previous.name != "captcha"){
+        Cryptoloji.UI.encryptionEnteringTransition('encryption')
+      }
       
 
       Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')

@@ -8,6 +8,10 @@
   margin-bottom: 5rem;
 }
 
+.section_captcha{
+  z-index: 1000;
+}
+
 .section_share{
   text-align: center;
   color: white;

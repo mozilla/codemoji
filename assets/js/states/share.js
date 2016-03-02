@@ -45,7 +45,10 @@
       })
     },
     leave: function () {
-      $(".section_share").removeClass("section-show")
+      TweenLite.to($('.section_share'), 1, {y: window.innerHeight, onComplete: function(){
+        $(this).removeClass('section-show')
+      }})
+      // $(".section_share").removeClass("section-show")
       linkClipboard.destroy()
       keyClipboard.destroy()
 
