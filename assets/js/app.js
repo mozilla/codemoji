@@ -34,18 +34,22 @@
     //
     // Key modal setup
     //    
-    if (!Cryptoloji.mq.matches) {
-      Cryptoloji.UI.KeyModal('#key-modal')
-        .fill(EmojiList)
-        .addClickHandler('#encryption_key_modal_open')
-        .addClickHandler('#decryption_key_modal_open')
-    } else {
-      Cryptoloji.UI.KeyPanel('#encryption_keypanel')
-        .fill(EmojiList)
-      Cryptoloji.UI.KeyPanel('#decryption_keypanel')
-        .fill(EmojiList)
-    }
 
+    // this delay postpone a bit the emoji download flow 
+    // this way the browser think the webpage has been loaded (hiding its spinner)
+    setTimeout(function(){
+      if (!Cryptoloji.mq.matches) {
+        Cryptoloji.UI.KeyModal('#key-modal')
+          .fill(EmojiList)
+          .addClickHandler('#encryption_key_modal_open')
+          .addClickHandler('#decryption_key_modal_open')
+      } else {
+        Cryptoloji.UI.KeyPanel('#encryption_keypanel')
+          .fill(EmojiList)
+        Cryptoloji.UI.KeyPanel('#decryption_keypanel')
+          .fill(EmojiList)
+      }
+    }, 1000)
     //
     // handle header show/hide
     //

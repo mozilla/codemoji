@@ -1,28 +1,32 @@
+var fs = require('fs');
 var gulp = require('gulp');
 var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var minifyCss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var del = require('del')
 var rev = require('gulp-rev')
-var minifyHtml = require('gulp-minify-html');
 var realFavicon = require('gulp-real-favicon');
-var fs = require('fs');
 var copy = require('gulp-copy');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+var svgInject = require('svg-injectr');
+var htmlmin = require('gulp-htmlmin');
+var through = require('through2');
+var processhtml = require('gulp-processhtml');
 
 // File where the favicon markups are stored
 var FAVICON_DATA_FILE = 'cache/faviconData.json';
 
 gulp.task('copy:fonts', ['clean'], function() {
-  return gulp.src('assets/font/**/*.{ttf,woff,woff2,eot,svg}')
+  return gulp.src('assets/css/font/**/*.{ttf,woff,woff2,eot,svg}')
       .pipe(gulp.dest('public/font'));
 });
 
 gulp.task('copy:assets', ['clean'], function() {
   var assets_paths = [
-    'assets/svg/**/*',
+    'assets/svg/*',
     'assets/img/**/*',
     'vendor/**/*'
   ]
@@ -36,18 +40,18 @@ gulp.task('copy:favicon', ['clean'], function() {
       .pipe(gulp.dest('public'));
 });
 
+
+
 gulp.task('minify', ['clean'], function() {
 
-  var processors = [
-    autoprefixer({browsers: ['last 2 version']})
-  ];
+  var cleancssOpt = {advanced:false, aggressiveMerging:false, restructuring:false}
+  
+  var processors = [autoprefixer({browsers: ['last 2 version']})];
 
   return gulp.src('index.html')
       .pipe(usemin({
-        css: [ minifyCss, postcss(processors), rev ],
-        js: [ uglify, rev ],
-        vendorjs: [ uglify, rev ],
-        html: [ minifyHtml ],
+        css: [ cleanCSS(cleancssOpt), postcss(processors), rev ],
+        vendorjs: [ uglify, rev ]
       }))
       .pipe(gulp.dest('public'));
 });
@@ -55,7 +59,7 @@ gulp.task('minify', ['clean'], function() {
 
 gulp.task('clean', function() {
   return del([
-    'public/**/*',
+    'public/**/**/*',
     // don't remove .gitkeep
     '!public/.gitkeep'
   ]);
@@ -109,14 +113,31 @@ gulp.task('generate-favicon', function(done) {
   });
 });
 
-// Inject the favicon markups in your HTML pages. You should run 
-// this task whenever you modify a page. You can keep this task 
-// as is or refactor your existing HTML pipeline.
-gulp.task('inject-favicon-markups', ['minify'], function() {
-  gulp.src('public/index.html')
-      .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
-      .pipe(gulp.dest('public/'));
-});
 
-gulp.task('build', ['clean', 'copy:fonts', 'copy:favicon', 'copy:assets', 'minify', 'inject-favicon-markups']);
+
+
+
+// inject svg into the index file and strip away the illustrator file, if present
+gulp.task('svginj', ['copy:assets'], function(){
+  gulp.src('public/index.html')
+    .pipe(through.obj(function (chunk, enc, cb) {
+      svgInject({source:chunk.path, selector:'data-svg'}, function(res){
+        chunk.contents = new Buffer('<!DOCTYPE html>' + res)
+        cb(null, chunk);
+      })
+    }))
+    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+    .pipe(processhtml({
+      commentMarker: 'process',
+      recursive:true,
+      data:{version:Math.random()*10000}
+    }))
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('public/'))
+})
+
+
+
+
+gulp.task('build', ['clean', 'copy:fonts', 'copy:favicon', 'copy:assets', 'minify', 'svginj']);
 gulp.task('favicon', ['generate-favicon']);

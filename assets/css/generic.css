@@ -43,9 +43,6 @@ a ,a:visited ,a:hover ,a:active{
 svg *{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-touch-callout: none;
-    -webkit-user-select: none;   
-    -moz-user-select: none;     
-    -ms-user-select: none;      
     user-select: none; 
 }
 
@@ -54,11 +51,11 @@ svg{
   padding: 0;
 }
 
-[hideItIfMobile]{
+body [hideItIfMobile]{
   display: none;
 }
 
-[showItIfMobile]{
+body [showItIfMobile]{
   display: block;
 }
 
@@ -74,8 +71,6 @@ svg{
 }
 
 .section-show{
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
 @media screen and (max-height: 500px) {
@@ -94,10 +89,6 @@ img.emoji {
 }
 
 .unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
