@@ -45,7 +45,7 @@
         // open modal
         TweenLite.to($('.share_key'), .5, {y: 0, onComplete: function(){
           $('.share_key').addClass('share_key-open')
-          $('.share_key_emoji-item').attr('id', 'share_copytoclipboard2')
+          $('.share_key_emoji-item').attr('id', 'share_copykeytoclipboard')
         }})
       })
       $('#share_key_hide').on('click', function () {
@@ -100,7 +100,7 @@
   }
 
   function copyKeyToClipboardHandler () {
-    keyClipboard = new Clipboard('#share_copytoclipboard2')
+    keyClipboard = new Clipboard('#share_copykeytoclipboard')
 
     keyClipboard.on('success', function(e) {
       console.log('success', e)
@@ -132,7 +132,7 @@
   }
 
   function fillKeyForClipboardCopy () {
-    $('#share_copykeytoclipboard').attr('data-clipboard-text', Cryptoloji.current.key)
+    $('.share_key_emoji-item').attr('data-clipboard-text', Cryptoloji.current.key)
   }
 
   function setupShareButtons () {
