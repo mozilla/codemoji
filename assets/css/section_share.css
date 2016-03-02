@@ -51,7 +51,7 @@
   /*transition: height .7s;*/
   /*position: absolute;*/
   background-color: #F46060;
-  height: 273px;
+  /*height: 273px;*/
 }
 
 .share_key .hidden {
@@ -129,23 +129,57 @@
   border: none;
   box-shadow: 0 0 0 rgba(40,51,68,0);
   color: black;
-  animation: glow 2s infinite ease-in-out;
-  animation-delay: -.32s;
+  /*animation: glow 2s infinite ease-in-out;*/
+  /*animation-delay: -.32s;*/
+  z-index: 1;
+}
+#share_currentkey:before {
+    content: "";
+    top: -2.25rem;
+    left: -0.72rem;
+    /* background-color: #ff3466; */
+    background-color: lightblue;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    animation-fill-mode: both;
+    position: absolute;
+    opacity: 0;
+    animation: jumper 2s -0.333s ease-out infinite;
+}
+#share_currentkey:after {
+    content: "";
+    top: -2.25rem;
+    left: -0.72rem;
+    background-color: #ffffff;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    animation-fill-mode: both;
+    position: absolute;
+    opacity: 0;
+    animation: jumper 2s -0.666s ease-out infinite;
 }
 
-.share_key-open .share_key_emoji-item{
+.share_key-open #share_currentkey:before,
+.share_key-open #share_currentkey:after{
   animation-name: none;
 }
-@keyframes glow {
-  50% {
-    background-color: rgba(255,255,255,.85);
-    box-shadow: rgba(255,255,255,0) 0 0 0 .2rem;
+@keyframes jumper{
+  0% {
+    opacity:0;
+    -webkit-transform:scale(0);
+    transform:scale(0);
   }
-  0%,
-  100%{
-    box-shadow: rgba(255,255,255,.7) 0 0 .15rem .4rem;
+  5% {
+    opacity:1;
   }
-
+  40% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
 }
 
 input#share_copytoclipboard {
