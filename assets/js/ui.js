@@ -277,14 +277,10 @@
   }
 
   function toTwemoji (text) {
-    if(!twemoji){
-      return '';
-    }else{
       return twemoji.parse(text, {
         folder: 'svg',
         ext:    '.svg'
       })
-    }
   }
 
   function handleOrientationChanges () {
