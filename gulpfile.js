@@ -120,12 +120,12 @@ gulp.task('generate-favicon', function(done) {
 // inject svg into the index file and strip away the illustrator file, if present
 gulp.task('svginj', ['copy:assets'], function(){
   gulp.src('public/index.html')
-    // .pipe(through.obj(function (chunk, enc, cb) {
-    //   svgInject({source:chunk.path, selector:'data-svg'}, function(res){
-    //     chunk.contents = new Buffer(res)
-    //     cb(null, chunk);
-    //   })
-    // }))
+    .pipe(through.obj(function (chunk, enc, cb) {
+      svgInject({source:chunk.path, selector:'data-svg'}, function(res){
+        chunk.contents = new Buffer('<!DOCTYPE html>' + res)
+        cb(null, chunk);
+      })
+    }))
     .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
     .pipe(processhtml({
       commentMarker: 'process',
