@@ -2,7 +2,6 @@
   'use strict'
 
   Cryptoloji.states.onboarding = {}
-  var tl = null
   Cryptoloji.states.onboarding.root = {
     enter: function () {
       Cryptoloji.stateman.go('onboarding.step1')
@@ -10,7 +9,6 @@
     }
   }
 
-  console.log("TL: " + tl)
   var svg_elements = []
   svg_elements.push("#onboarding_slide_1_encrypted_hello g")
   svg_elements.push("#onboarding_slide_1_encrypted_hello_2 g")

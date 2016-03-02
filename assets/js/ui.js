@@ -15,7 +15,7 @@
   //
   //Array containing the path of the loaded svg. If the path is present inside the array, the corresponding svg is loaded.
   var svg_loaded = []
-  //Animation timeline
+  //Onboarding animation timeline
   var timeline = null
 
   function decryptText () {
@@ -340,22 +340,31 @@
       TweenLite.to($('.'+state+' .main_content_bottom_label'), 0, {delay: 0, opacity: "0"})
       TweenLite.to($('.'+state+' .main_content_bottom_label'), .5, {delay: 4, opacity: "0.5"})
     }
+  }
+  
+  //Onboarding cryptoloji animation
   function animate_onboarding(elements) {
+    //Prevent istanciating multiple timelines
     if (!timeline) {
       timeline = new TimelineLite({onComplete: function() {
+        //loop the animation
         this.restart()
       }});
     }
 
+    //Duration of a single letter transition
     var animation_duration = 0.2
     var animation_delay = 0.8
     
+    //First svg group containing encrypted letter
     var first_group = $($(elements[0]))
+    //Second svg group containing encrypted letter
     var second_group = $($(elements[1]))
+    //Third svg group containing encrypted letter
     var third_group = $($(elements[2]))
+    //Fourth svg group containing encrypted letter (the same as the third one to get a perfect loop)
     var fourth_group = $($(elements[3]))
 
-    console.log("Reset")
     //Set initial state
     timeline.to(first_group, 0.0, {y: -60, opacity: 0.0})
     //Second encryption letters
@@ -366,7 +375,7 @@
     .to(fourth_group, 0.0, {y: -60, opacity: 0.0})
 
 
-    //Animation 1
+    //First encrypted word animation
     .to(first_group[4], animation_duration, {y: 0, opacity: 1.0})
     .to(third_group[4], animation_duration, {y: 60, opacity: 0.0})
     .to(first_group[3], animation_duration, {y: 0, opacity: 1.0})
@@ -377,7 +386,7 @@
     .to(third_group[1], animation_duration, {y: 60, opacity: 0.0})
     .to(first_group[0], animation_duration, {y: 0, opacity: 1.0})
     .to(third_group[0], animation_duration, {y: 60, opacity: 0.0})
-    
+    //Second encrypted word animation
     .to(second_group[4], animation_duration, {delay: animation_delay , y: 0, opacity: 1.0})
     .to(first_group[4], animation_duration, {y: 60, opacity: 0.0})
     .to(second_group[3], animation_duration, {y: 0, opacity: 1.0})
@@ -388,7 +397,7 @@
     .to(first_group[1], animation_duration, {y: 60, opacity: 0.0})
     .to(second_group[0], animation_duration, {y: 0, opacity: 1.0})
     .to(first_group[0], animation_duration, {y: 60, opacity: 0.0})
-
+    //Third encrypted word animation
     .to(fourth_group[4], animation_duration, {delay: animation_delay , y: 0, opacity: 1.0})
     .to(second_group[4], animation_duration, {y: 60, opacity: 0.0})
     .to(fourth_group[3], animation_duration, {y: 0, opacity: 1.0})
