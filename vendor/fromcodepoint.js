@@ -60,4 +60,4 @@ if (!String.fromCodePoint) {
       String.fromCodePoint = fromCodePoint;
     }
   }());
-}
+};

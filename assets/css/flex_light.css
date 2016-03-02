@@ -65,3 +65,9 @@
 [layout-align="space-around end"] {
     align-items: flex-end;
 }
+
+[layout-wrap] {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}

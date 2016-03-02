@@ -34,6 +34,8 @@
     //
     // Key modal setup
     //    
+
+    setTimeout(function(){
     if (!Cryptoloji.mq.matches) {
       Cryptoloji.UI.KeyModal('#key-modal')
         .fill(EmojiList)
@@ -45,7 +47,7 @@
       Cryptoloji.UI.KeyPanel('#decryption_keypanel')
         .fill(EmojiList)
     }
-
+  }, 1000)
     //
     // handle header show/hide
     //

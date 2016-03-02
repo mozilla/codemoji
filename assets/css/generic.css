@@ -54,11 +54,11 @@ svg{
   padding: 0;
 }
 
-[hideItIfMobile]{
+body [hideItIfMobile]{
   display: none;
 }
 
-[showItIfMobile]{
+body [showItIfMobile]{
   display: block;
 }
 
