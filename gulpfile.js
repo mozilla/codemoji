@@ -40,15 +40,17 @@ gulp.task('copy:favicon', ['clean'], function() {
       .pipe(gulp.dest('public'));
 });
 
+
+
 gulp.task('minify', ['clean'], function() {
 
-  var processors = [
-    autoprefixer({browsers: ['last 2 version']})
-  ];
+  var cleancssOpt = {advanced:false, aggressiveMerging:false, restructuring:false}
+  
+  var processors = [autoprefixer({browsers: ['last 2 version']})];
 
   return gulp.src('index.html')
       .pipe(usemin({
-        css: [ cleanCSS, postcss(processors), rev ],
+        css: [ cleanCSS(cleancssOpt), postcss(processors), rev ],
         vendorjs: [ uglify, rev ]
       }))
       .pipe(gulp.dest('public'));
