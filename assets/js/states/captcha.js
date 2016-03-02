@@ -19,7 +19,7 @@
 
       // $('.encryption').addClass('section-show')
       $('.section_captcha').addClass('section-show')
-      TweenLite.set($('.section_captcha'), {y: -window.innerHeight})
+      TweenLite.set($('.section_captcha'), {y: window.innerHeight})
       TweenLite.to($('.section_captcha'), 1, {y: 0, onComplete: function(){
         $('.encryption').removeClass('section-show')
       }})

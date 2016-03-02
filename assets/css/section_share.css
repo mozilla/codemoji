@@ -13,6 +13,7 @@
 }
 
 .section_share{
+  overflow: hidden;
   text-align: center;
   color: white;
   height: 100%;
@@ -37,42 +38,27 @@
   letter-spacing: 2px;
   line-height: 120%;
   width: 100%;
-  /*padding: 0 2rem;*/
-  /*padding: 0;*/
-  /*text-align: left;*/
   font-weight: 100;
-  /*padding-bottom: 0.5rem;*/
-  /*margin-bottom: 1rem;*/
-  /*position: absolute;*/
   margin-top: 2rem;
-  bottom: 0rem;
-  height: 6rem;
-  transition: all .7s, background-color 1s;
+  bottom: 0;
+  transition: background-color .5s;
   position: absolute;
 }
-
 .share_key-open{
-  /*transition: height .7s;*/
-  /*position: absolute;*/
   background-color: #F46060;
-  /*height: 273px;*/
 }
 
 .share_key .hidden {
-  display: none;
-  /*opacity: 0;*/
+  opacity: 0;
 }
-
 .share_key-open .hidden {
-  display: block;
-  /*opacity: 1;*/
+  opacity: 1;
 }
 
 .share_social{
   width: 80%;
   margin: auto;
   margin-bottom: 5rem;
-  /*margin-top: 1rem;*/
   max-width: 40rem;
 }
 
@@ -106,42 +92,30 @@
 .share_key_emoji{
   font-size: 250%;
   position: relative;
-  text-align: center;
-  /*min-width: 5rem;
-  min-height: 2rem;*/
+  left: 0;
+  top: 0;
 }
 
 .share_key_emoji-item {
-  /*position: absolute;*/
   position: relative;
   margin: 0;
-  /*left: -3rem;*/
-  top: -1.5rem;
-  /*padding: .6rem .5rem;*/
-  /*padding: 1.8rem .1rem .5rem .5rem;*/
   border-radius: 50%;
-  /*border: .5rem solid rgba(40,51,68,.45);*/
   width: 4.5rem;
   height: 4.5rem;
   font-size: 50%;
   letter-spacing: 1px;
   padding-top: 1.5rem;
-  /*padding-top: .9rem;*/
   padding-left: 1.2rem;
 
   box-sizing: border-box;
   border: none;
-  box-shadow: 0 0 0 rgba(40,51,68,0);
   color: black;
-  /*animation: glow 2s infinite ease-in-out;*/
-  /*animation-delay: -.32s;*/
   z-index: 1;
 }
 #share_currentkey:before {
     content: "";
-    top: -2.25rem;
-    left: -0.72rem;
-    /* background-color: #ff3466; */
+    top: -1.15rem;
+    left: -0.75rem;
     background-color: lightblue;
     width: 6rem;
     height: 6rem;
@@ -153,8 +127,8 @@
 }
 #share_currentkey:after {
     content: "";
-    top: -2.25rem;
-    left: -0.72rem;
+    top: -1.15rem;
+    left: -0.75rem;
     background-color: #ffffff;
     width: 6rem;
     height: 6rem;
@@ -191,16 +165,12 @@ input#share_copytoclipboard {
   border: none;
   width: 100%;
   text-align: center;
-  /*height: 100%;*/
   box-sizing: border-box;
   border: none;
   box-shadow: none;
 }
 
 .share_key_sentence{
-  /*letter-spacing: -1px;
-  text-align: center;
-  margin-bottom: 0.5rem;*/
   margin: 2rem 2rem 4rem 2rem;
 }
 
@@ -218,13 +188,7 @@ input#share_copytoclipboard {
 }
 
 .share_message_item{
-  /*padding: 1rem;
-  border: solid 1px white;
-  border-radius: 2rem;
-  border-bottom-right-radius: 0px;*/
-  /*min-height: 20rem;*/
   margin-top: 1rem;
-  /*margin-bottom: 2rem;*/
   font-size: 96%;
 }
 
@@ -240,14 +204,12 @@ input#share_copytoclipboard {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  /*background-color: white;*/
   background-color: rgb(244,96,96);
   position: absolute;
   border-radius: 50%;
 }
 
 .share_social_wrapper .svg_wrapper_social svg{
-  /*fill: rgb(244,96,96);*/
   fill: white;
   position: relative;
 }

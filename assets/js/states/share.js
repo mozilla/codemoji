@@ -14,13 +14,19 @@
       }
       return true
     },
-
     enter: function () {
-      TweenLite.set($('.section_share'), {y: 0})
+      TweenLite.set($('.section_share'), {y: window.innerHeight})
+      TweenLite.to($('.section_share'), 1, {y: 0, onComplete: function(){
+        $(this).removeClass('section-show')
+      }})
       $(".section_share").addClass("section-show")
       setTimeout(function(){
         $("#share_more_arrow").addClass("shown")
       }, 0)
+
+      // resize font based on screen height
+      var emojiSize = $('body').height() / 480 * 100
+      $('.share_message_item').css('font-size', emojiSize + '%')
 
       fillLinkForClipboardCopy()
       fillKeyForClipboardCopy()
@@ -30,26 +36,29 @@
 
       setupShareButtons()
 
+      // set the height and the top y coordinate to reach when share key modal is open
+      var share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(0.5)
+      $('.share_key').css('height', share_modal_height)
+      TweenLite.set($('.share_key'), {y: share_modal_height - Cryptoloji.utils.remToPx(10)})
+
       $('#share_currentkey').on('click', function () {
-        // $('.share_key').css('position', 'absolute')
-        // $('.share_key').css('background-color', '#F46060')
-        $('.share_key').addClass('share_key-open')
-        var share_modal_height = $('body').height() - $('.share_social_wrapper').offset().top
-        $('.share_key').css('height', share_modal_height)
-        // $('.share_key .hidden').css('display', 'block')
+        // open modal
+        TweenLite.to($('.share_key'), .5, {y: 0, onComplete: function(){
+          $('.share_key').addClass('share_key-open')
+          $('.share_key_emoji-item').attr('id', 'share_copytoclipboard2')
+        }})
       })
       $('#share_key_hide').on('click', function () {
-        $('.share_key').removeClass('share_key-open')
-        $('.share_key').css('height', '6rem')
-        // $('.share_key .hidden').css('display', 'none')
-        // $('.share_key').css('position', 'relative')
-        // $('.share_key').css('background-color', '')
+        // close modal
+        TweenLite.to($('.share_key'), .5, {y: share_modal_height - Cryptoloji.utils.remToPx(10), onComplete: function(){
+          $('.share_key').removeClass('share_key-open')
+          $('.share_key_emoji-item').attr('id', '')
+        }})
       })
     },
     leave: function () {
-
       TweenLite.to($('.section_share'), 1, {y: window.innerHeight, onComplete: function(){
-        $(this).removeClass('section-show')
+        $('.section_share').removeClass('section-show')
       }})
       // $(".section_share").removeClass("section-show")
       linkClipboard.destroy()
