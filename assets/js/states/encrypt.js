@@ -21,6 +21,8 @@
 
       // if we should serve a smaller version
       if (!Cryptoloji.mq.matches) {
+        animateInputPlaceholder(theater)
+
         Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
           .fill(_.take(EmojiList, 10))
 
@@ -29,7 +31,7 @@
           Cryptoloji.UI.KeyModal().select(key)
 
           if ($('#encryption_input').val().length === 0) {
-            var newplaceholder = ['You\'ve picked a key.', 400, '\nWrite your message here to see it in cipher.', 600]
+            var newplaceholder = ['You\'ve picked a key. ', 500, '\nWrite your message here to see it in cipher.', 400]
             animateInputPlaceholder(theater, newplaceholder)
           }
           Cryptoloji.UI.selectKey(key)
@@ -46,10 +48,10 @@
         })
       } else {
         Cryptoloji.stateman.on('keypanel:key-chosen', function (key) {
-          if ($('#encryption_input').val().length === 0) {
-            var newplaceholder = ['You\'ve picked a key.', 400, '\nWrite your message here to see it in cipher.', 600]
-            animateInputPlaceholder(theater, newplaceholder)
-          }
+          $('body').addClass('main_content_top_input-first')
+          setTimeout(function () {
+            $('body').removeClass('main_content_top_input-first')
+          }, 800)
           Cryptoloji.UI.selectKey(key)
           $('#encryption_selected_key').html(Cryptoloji.UI.toTwemoji(key))
           Cryptoloji.UI.encryptText()
@@ -79,6 +81,9 @@
         $('#encryption_share_button').removeClass('main_share-open')
       })
 
+      Cryptoloji.stateman.on('encrypt:animate-input-placeholder', function () {
+        animateInputPlaceholder(theater)
+      })
       // show/hide bottom placeholder text
       Cryptoloji.stateman.on('encrypt:hide-output-placeholder', function () {
         $('.main_content_bottom_input').removeClass('placeholdit')
@@ -122,7 +127,7 @@
     // typify placeholder (if it'is not playing yet)
     if (theater.status !== 'playing') {
       theater
-        .addActor('inputPlaceholder', {speed: 1.1, accuracy: 1}, function (displayValue) {
+        .addActor('inputPlaceholder', {speed: 1.3, accuracy: 1}, function (displayValue) {
           inputElem.attr('placeholder', displayValue)
         })
         .on('type:start', function () {

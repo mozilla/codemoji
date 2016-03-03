@@ -16,7 +16,7 @@
     },
     enter: function () {
       TweenLite.set($('.section_share'), {y: window.innerHeight})
-      TweenLite.to($('.section_share'), .75, {delay:.25, y: 0, ease:Expo.easeInOut, onComplete: function(){
+      TweenLite.to($('.section_share'), .75, {y: 0, ease:Expo.easeInOut, onComplete: function(){
         $(this).removeClass('section-show')
       }})
       $(".section_share").addClass("section-show")

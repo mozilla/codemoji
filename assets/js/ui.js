@@ -346,9 +346,16 @@
       // lable keyslider
       TweenLite.to($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), .5, {delay: 1.5, opacity: ".5"})
       //placeholder left
-      TweenLite.to($('.'+state+' .main_content_top_input'), .5, {delay: 1.5, opacity: "0.5"})
+      if (state === 'decryption') {
+        TweenLite.to($('.'+state+' .main_content_top_input'), .5, {delay: 1.5, opacity: 1})
+      } else {
+        TweenLite.to($('.'+state+' .main_content_top_input'), .5, {delay: 1.5, onComplete: function() {
+          $('.'+state+' .main_content_top_input').css('opacity', '1')
+          Cryptoloji.stateman.emit('encrypt:animate-input-placeholder')
+        }})
+      }
       // placeholder rigtht
-      TweenLite.to($('.'+state+' .main_content_bottom_input.placeholdit'), .5, {delay: 2.5, opacity: "1"})
+      TweenLite.to($('.'+state+' .main_content_bottom_input.placeholdit'), .5, {delay: 2.5, opacity: 1})
     }
   }
 
