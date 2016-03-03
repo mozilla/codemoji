@@ -330,18 +330,21 @@
       TweenLite.set($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), {delay: 0, opacity: "0"})
       TweenLite.set($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), {delay: 0, opacity: "0"})
       TweenLite.set($('.'+state+' .main_content_bottom_input.placeholdit'), {delay: 0, opacity: "0"})
-      TweenLite.set($('.'+state+' .main_content_bottom_label'), {delay: 0, opacity: "0"})
+      TweenLite.set($('.'+state+' .main_content_top_input'), {delay: 0, opacity: "0"})
+      TweenLite.set($('.'+state+' .encryption_help_button'), {delay: 0, opacity: "0"})
+
 
       // keyslider width
-      TweenLite.to($('.'+state+' .main_keyslider'), .5, {delay: 3, width: "35%"})
+      TweenLite.to($('.'+state+' .main_keyslider'), 0.5, {delay: 0, width: "35%"})
+      TweenLite.to($('.'+state+' .encryption_help_button'), 0.5, {delay: 0, opacity: "1"})
       // emoji in keyslider
-      TweenLite.to($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), .5, {delay: 4, opacity: "1"})
+      TweenLite.to($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), .5, {delay: 1, opacity: "1"})
       // lable keyslider
-      TweenLite.to($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), .5, {delay: 4, opacity: ".5"})
-      // placeholder rigth
-      TweenLite.to($('.'+state+' .main_content_bottom_input.placeholdit'), .5, {delay: 4, opacity: "1"})
-      // lable rigth
-      TweenLite.to($('.'+state+' .main_content_bottom_label'), .5, {delay: 4, opacity: "0.5"})
+      TweenLite.to($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), .5, {delay: 1.5, opacity: ".5"})
+      //placeholder left
+      TweenLite.to($('.'+state+' .main_content_top_input'), .5, {delay: 1.5, opacity: "0.5"})
+      // placeholder rigtht
+      TweenLite.to($('.'+state+' .main_content_bottom_input.placeholdit'), .5, {delay: 2.5, opacity: "1"})
     }
   }
   
