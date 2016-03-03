@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var minifyCss = require('gulp-minify-css');
 var cleanCSS = require('gulp-clean-css');
 var del = require('del')
 var rev = require('gulp-rev')
@@ -15,6 +14,7 @@ var svgInject = require('svg-injectr');
 var htmlmin = require('gulp-htmlmin');
 var through = require('through2');
 var processhtml = require('gulp-processhtml');
+var replace = require('gulp-replace');
 
 // File where the favicon markups are stored
 var FAVICON_DATA_FILE = 'cache/faviconData.json';
@@ -45,13 +45,12 @@ gulp.task('copy:favicon', ['clean'], function() {
 gulp.task('minify', ['clean'], function() {
 
   var cleancssOpt = {advanced:false, aggressiveMerging:false, restructuring:false}
-  
   var processors = [autoprefixer({browsers: ['last 2 version']})];
 
   return gulp.src('index.html')
       .pipe(usemin({
-        css: [ cleanCSS(cleancssOpt), postcss(processors), rev ],
-        vendorjs: [ uglify, rev ]
+        css: [ cleanCSS(cleancssOpt), postcss(processors) ],
+        vendorjs: [ uglify ]
       }))
       .pipe(gulp.dest('public'));
 });
@@ -117,8 +116,10 @@ gulp.task('generate-favicon', function(done) {
 
 
 
-// inject svg into the index file and strip away the illustrator file, if present
-gulp.task('svginj', ['copy:assets'], function(){
+gulp.task('finalhtml', ['copy:assets'], function(){
+
+  var htmlminopt = {collapseWhitespace: true, removeComments:true, collapseWhitespace:true}
+  
   gulp.src('public/index.html')
     .pipe(through.obj(function (chunk, enc, cb) {
       svgInject({source:chunk.path, selector:'data-svg'}, function(res){
@@ -132,12 +133,14 @@ gulp.task('svginj', ['copy:assets'], function(){
       recursive:true,
       data:{version:Math.random()*10000}
     }))
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(replace('<script src="app.js"></script>', ''))
+    .pipe(replace('<link rel="stylesheet" href="style.css">', ''))
+    .pipe(htmlmin(htmlminopt))
     .pipe(gulp.dest('public/'))
 })
 
 
 
 
-gulp.task('build', ['clean', 'copy:fonts', 'copy:favicon', 'copy:assets', 'minify', 'svginj']);
+gulp.task('build', ['clean', 'copy:fonts', 'copy:favicon', 'copy:assets', 'minify', 'finalhtml']);
 gulp.task('favicon', ['generate-favicon']);
