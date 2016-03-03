@@ -379,13 +379,13 @@
     var fourth_group = $($(elements[3]))
 
     //Set initial state
-    timeline.to(first_group, 0.0, {y: -60, opacity: 0.0})
+    timeline.set(first_group, {y: -60, opacity: 0.0})
     //Second encryption letters
-    .to(second_group, 0.0, {y: -60, opacity: 0.0})
+    .set(second_group, {y: -60, opacity: 0.0})
     //Third encryption letters
-    .to(third_group, 0.0, {y: 0, opacity: 1.0})
+    .set(third_group, {y: 0, opacity: 1.0})
     //Third encryption letters bis
-    .to(fourth_group, 0.0, {y: -60, opacity: 0.0})
+    .set(fourth_group, {y: -60, opacity: 0.0})
 
 
     //First encrypted word animation
