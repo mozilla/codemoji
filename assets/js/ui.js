@@ -182,21 +182,23 @@
         $('.'+section+' .coachmark').each(function(i){
           var self = this
           TweenLite.to($(self), .8, {
-              delay: i * .2 + .3,
-              y: 0 - $('.'+section+' .coachmark').innerHeight()
+              delay: i * .15 + .2,
+              y: 0 - $('.'+section+' .coachmark').innerHeight(),
+              ease:Expo.easeInOut
           })
           TweenLite.to($(self).children(), .3, {
               delay: i * .2,
-              opacity: 0 
+              opacity: 0
           })
         })
       } else {
         var t = $("."+section+" .header").innerHeight()
         $('.'+section+' .coachmark').each(function(i){
           var self = this
-          TweenLite.to($(self), .4, {
+          TweenLite.to($(self), 1, {
               delay: i * .2,
-              y: t 
+              y: t,
+              ease:Bounce.easeInOut
           })
           TweenLite.to($(self).children(), .5, {
               delay: i * .2 + .7,
