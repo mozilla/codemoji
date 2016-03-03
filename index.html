@@ -630,9 +630,13 @@
       <div layout="column" layout-align="center end" wide>
         <div id="share_key_hide" class="share_message_exit hidden" style-title data-svg="assets/svg/v.svg"></div>
       </div>
-      <div id="share_currentkey" class="share_key_emoji" layout="row" layout-align="center center">
-        <!-- id="share_copytoclipboard2" -->
-        <input type="text" class="share_key_emoji-item" color-bg-light data-clipboard-text="🍑" value="🍑" readonly="readonly"/>
+      <div id="share_currentkey" class="share_key_emoji" layout="row" layout-align="center center" wide>
+        <div class="share_key-wrapper">
+          <span class="share_key_emoji-item_before"></span>
+          <span class="share_key_emoji-item_after"></span>
+          <!-- id="share_copytoclipboard2" -->
+          <input type="text" class="share_key_emoji-item" color-bg-light data-clipboard-text="🍑" value="🍑" readonly="readonly"/>
+        </div>
       </div>
       <p style-text color-light class="share_key_sentence hidden" uppercase>
         Remember to find a way to give the key to the people you want deciphering your message.

@@ -39,7 +39,6 @@
   line-height: 120%;
   width: 100%;
   font-weight: 100;
-  margin-top: 2rem;
   bottom: 0;
   transition: background-color .5s;
   position: absolute;
@@ -50,6 +49,7 @@
 
 .share_key .hidden {
   opacity: 0;
+  transition: opacity .5s;
 }
 .share_key-open .hidden {
   opacity: 1;
@@ -92,8 +92,6 @@
 .share_key_emoji{
   font-size: 250%;
   position: relative;
-  left: 0;
-  top: 0;
 }
 
 .share_key_emoji-item {
@@ -112,41 +110,37 @@
   color: black;
   z-index: 1;
 }
-#share_currentkey:before {
+.share_key-wrapper {
+  height: 4.5rem;
+  width: 4.5rem;
+}
+.share_key_emoji-item_before,
+.share_key_emoji-item_after {
     content: "";
-    top: -1.15rem;
-    left: -0.75rem;
-    background-color: lightblue;
-    width: 6rem;
-    height: 6rem;
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: 100%;
     animation-fill-mode: both;
     position: absolute;
+}
+.share_key_emoji-item_before {
+    background-color: lightblue;
     opacity: 0;
     animation: jumper 2s -0.333s ease-out infinite;
 }
-#share_currentkey:after {
-    content: "";
-    top: -1.15rem;
-    left: -0.75rem;
+.share_key_emoji-item_after {
     background-color: #ffffff;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 100%;
-    animation-fill-mode: both;
-    position: absolute;
     opacity: 0;
     animation: jumper 2s -0.666s ease-out infinite;
 }
 
-.share_key-open #share_currentkey:before,
-.share_key-open #share_currentkey:after{
+.share_key-open .share_key_emoji-item_before,
+.share_key-open .share_key_emoji-item_after{
   animation-name: none;
 }
 @keyframes jumper{
   0% {
     opacity:0;
-    -webkit-transform:scale(0);
     transform:scale(0);
   }
   5% {
@@ -154,9 +148,11 @@
   }
   40% {
     opacity:1;
+    transform:scale(0.5);
   }
   100% {
     opacity:0;
+    transform:scale(1.5);
   }
 }
 
