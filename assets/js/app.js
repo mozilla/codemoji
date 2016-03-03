@@ -21,11 +21,7 @@
     //
     Cryptoloji.UI.handleOrientationChanges()
 
-    //
-    // load svg
-    //
-    Cryptoloji.UI.handleSvgLoading()
-
+    
     //
     // behavior help button
     //

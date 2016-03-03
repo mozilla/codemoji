@@ -15,6 +15,14 @@
   //
   //Array containing the path of the loaded svg. If the path is present inside the array, the corresponding svg is loaded.
   var svg_loaded = []
+  $('[data-svg]').each(function(i, e){
+    var svg = $(e).find('svg')
+    var attr = $(e).attr('data-svg')
+    if(svg.length>0) svg_loaded.push(attr)
+  })
+
+  if(window.gHandleSvgLoading) window.gHandleSvgLoading(svg_loaded)
+
   //Onboarding animation timeline
   var timeline = null
 
@@ -267,30 +275,7 @@
                           .attr('text', text)
   }
 
-
-
-
-  function handleSvgLoading () {
-    function loadSvg (element, path) {
-      $.get(path)
-       .done(function (result) {
-          // console.log(result)
-          $(element).append(result.documentElement)
-          Cryptoloji.stateman.emit('svg:loaded', path)
-          svg_loaded.push(path)
-        })
-       .fail(function () {
-          console.error(this)
-        })
-    }
-    $("div[data-svg*='assets/svg']").each(function () {
-      var self = this
-      var path = $(self).attr('data-svg')
-      // console.log(self, path)
-      loadSvg(self, path)
-    })
-
-  }
+  
 
   function toTwemoji (text) {
       return twemoji.parse(text, {
@@ -452,7 +437,6 @@
     handleHeader: handleHeader,
     handleOrientationChanges: handleOrientationChanges,
     handleOrientationChanges: handleOrientationChanges,
-    handleSvgLoading: handleSvgLoading,
     loadLogicHelpButton: loadLogicHelpButton,
     selectKey: selectKey,
     showDecryptableText: showDecryptableText,
