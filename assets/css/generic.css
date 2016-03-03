@@ -74,7 +74,7 @@ body [showItIfMobile]{
 .section-show{
   display: flex !important;
 }
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 400px) {
   .section-show{
     display: block !important;
     overflow-y: auto;
