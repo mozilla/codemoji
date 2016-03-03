@@ -40,7 +40,7 @@
   width: 100%;
   font-weight: 100;
   bottom: 0;
-  transition: background-color .5s;
+  transition: background-color .75s ease-in-out;
   position: absolute;
 }
 .share_key-open{

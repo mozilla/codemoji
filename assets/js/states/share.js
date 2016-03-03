@@ -16,7 +16,7 @@
     },
     enter: function () {
       TweenLite.set($('.section_share'), {y: window.innerHeight})
-      TweenLite.to($('.section_share'), 1, {y: 0, onComplete: function(){
+      TweenLite.to($('.section_share'), .75, {delay:.25, y: 0, ease:Expo.easeInOut, onComplete: function(){
         $(this).removeClass('section-show')
       }})
       $(".section_share").addClass("section-show")
@@ -43,21 +43,21 @@
 
       $('#share_currentkey').on('click', function () {
         // open modal
-        TweenLite.to($('.share_key'), .5, {y: 0, onComplete: function(){
-          $('.share_key').addClass('share_key-open')
+        $('.share_key').addClass('share_key-open')
+        TweenLite.to($('.share_key'), .75, {y: 0, ease:Expo.easeInOut, onComplete: function(){
           $('.share_key_emoji-item').attr('id', 'share_copykeytoclipboard')
         }})
       })
       $('#share_key_hide').on('click', function () {
         // close modal
-        TweenLite.to($('.share_key'), .5, {y: share_modal_height - Cryptoloji.utils.remToPx(10), onComplete: function(){
-          $('.share_key').removeClass('share_key-open')
+        $('.share_key').removeClass('share_key-open')
+        TweenLite.to($('.share_key'), .75, {y: share_modal_height - Cryptoloji.utils.remToPx(10), ease:Expo.easeInOut, onComplete: function(){
           $('.share_key_emoji-item').attr('id', '')
         }})
       })
     },
     leave: function () {
-      TweenLite.to($('.section_share'), 1, {y: window.innerHeight, onComplete: function(){
+      TweenLite.to($('.section_share'), .75, {y: window.innerHeight, ease:Expo.easeInOut, onComplete: function(){
         $('.section_share').removeClass('section-show')
       }})
       // $(".section_share").removeClass("section-show")

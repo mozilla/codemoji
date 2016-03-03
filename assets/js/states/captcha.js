@@ -15,19 +15,20 @@
       return true
     },
     enter: function () {
-      renderCaptcha()
+      
 
       // $('.encryption').addClass('section-show')
       $('.section_captcha').addClass('section-show')
       TweenLite.set($('.section_captcha'), {y: window.innerHeight})
-      TweenLite.to($('.section_captcha'), 1, {y: 0, onComplete: function(){
+      TweenLite.to($('.section_captcha'), .75, {y: 0, ease:Expo.easeInOut, onComplete: function(){
         $('.encryption').removeClass('section-show')
+        renderCaptcha()
       }})
 
     },
     leave: function () {
 
-      TweenLite.to($('.section_captcha'), 1, {y: -window.innerHeight, onComplete: function(){
+      TweenLite.to($('.section_captcha'), .75, {y: -window.innerHeight, ease:Expo.easeInOut, onComplete: function(){
         $('.section_captcha').removeClass('section-show')
       }})
     }
