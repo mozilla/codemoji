@@ -9,12 +9,6 @@
     }
   }
 
-  var svg_elements = []
-  svg_elements.push("#onboarding_slide_1_encrypted_hello>g")
-  svg_elements.push("#onboarding_slide_1_encrypted_hello_2>g")
-  svg_elements.push("#onboarding_slide_1_encrypted_hello_3>g")
-  svg_elements.push("#onboarding_slide_1_encrypted_hello_4>g")
-
   function next_slide(n){
     return {
       enter: function () {
@@ -22,6 +16,7 @@
         $('[slide-num="'+n+'"]').on("click", function(){
           Cryptoloji.stateman.go('onboarding.step'+(n+1))
         })
+        Cryptoloji.UI.paginationLogic(n)
 
         if (n === 1) {
           //Set the array to be passed to the animation function with the name of the four groups we want to animate

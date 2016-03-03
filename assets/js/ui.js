@@ -342,6 +342,12 @@
     }
   }
   
+  function paginationLogic (slide) {
+     var num = $('[slide-num='+slide+'] [pagination-step]').attr('pagination-step')
+     TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
+     TweenLite.set($('[slide-num='+slide+'] .pagination_emoji_'+num), {opacity: "1"})
+  }
+
   //Onboarding cryptoloji animation
   function animate_onboarding(elements) {
     //Prevent istanciating multiple timelines
@@ -413,7 +419,7 @@
     .to(fourth_group[0], animation_duration, {y: 0, opacity: 1.0})
     .to(second_group[0], animation_duration, {y: y_transform, opacity: 0.0})
     //Set a delay before looping
-    .to(fourth_group, 0.0, {delay: animation_delay, y: -60, opacity: 0.0})
+    .to(fourth_group, 0.0, {delay: animation_delay, y: y_transform, opacity: 0.0})
 
   }
 
@@ -434,7 +440,8 @@
     toTwemoji: toTwemoji,
     encryptionEnteringTransition: encryptionEnteringTransition,
     svg_loaded: svg_loaded,
-    animate_onboarding: animate_onboarding
+    animate_onboarding: animate_onboarding,
+    paginationLogic: paginationLogic
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.twemoji);

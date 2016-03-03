@@ -22,7 +22,8 @@
 .svg_wrapper_pagination{
   width: 30rem;
   position: absolute;
-  bottom: 0;
+  bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
+
 }
