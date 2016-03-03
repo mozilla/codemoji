@@ -351,7 +351,14 @@
       TweenLite.to($('.'+state+' .main_content_bottom_input.placeholdit'), .5, {delay: 2.5, opacity: "1"})
     }
   }
-  
+
+  var tooltipPosition = {}
+      tooltipPosition.top = 0
+      tooltipPosition.left = 0
+
+
+
+
   function paginationLogic (slide) {
      var num = $('[slide-num='+slide+'] [pagination-step]').attr('pagination-step')
      TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
@@ -453,7 +460,8 @@
     encryptionEnteringTransition: encryptionEnteringTransition,
     svg_loaded: svg_loaded,
     animate_onboarding: animate_onboarding,
-    paginationLogic: paginationLogic
+    paginationLogic: paginationLogic,
+    tooltipPosition: tooltipPosition
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.twemoji);

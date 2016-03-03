@@ -196,7 +196,7 @@
   border-radius: 3px;
 }
 
-.encryption .main_key_panel_emoji_container p.notext:before{
+/*.encryption .main_key_panel_emoji_container p.notext:before{
   content: "You've picked a key. Write your message to see it in cipher.";
   width: 18rem;
   height: 7.3rem;
@@ -212,7 +212,7 @@
   transform: translateY(100%);
   z-index: 3000;
   box-shadow: 0px 2px 21px -1px rgba(0,0,0,0.49);
-}
+}*/
 
 .main_key_modal_pages{
   position: absolute;
@@ -544,3 +544,18 @@
       padding: 7rem 3.4rem;
 }
 
+#tooltip_panel{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  max-width: 18rem;
+  background-color: #F46060;
+  font-family: "fira_sans";
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 1rem;
+  z-index: 4000;
+  box-shadow: 0px 2px 21px -1px rgba(0,0,0,0.49);
+}
