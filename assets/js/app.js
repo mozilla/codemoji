@@ -75,10 +75,6 @@
     } else {
       $('[show-on-first-visit-only]').hide()
     }
-
-    if (Cryptoloji.mq.matches) {
-      $(".nano").nanoScroller()
-    }
   })
 
 })(window, window.Cryptoloji, jQuery); 

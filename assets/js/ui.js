@@ -339,7 +339,10 @@
       TweenLite.to($('.'+state+' .main_keyslider'), 0.5, {delay: 0, width: "35%"})
       TweenLite.to($('.'+state+' .encryption_help_button > svg'), 1, {delay: 2, opacity: 1, y:0, ease:Expo.easeInOut})
       // emoji in keyslider
-      TweenLite.to($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), .5, {delay: 1, opacity: "1"})
+      // then load nano scroller
+      TweenLite.to($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), .5, {delay: 1, opacity: "1", onComplete: function(){
+        $(".nano").nanoScroller()
+      }})
       // lable keyslider
       TweenLite.to($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), .5, {delay: 1.5, opacity: ".5"})
       //placeholder left
