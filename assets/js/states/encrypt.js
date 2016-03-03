@@ -1,4 +1,4 @@
-(function (window, Cryptoloji, $, theaterJS, undefined) {
+(function (window, Cryptoloji, $, _, theaterJS, undefined) {
   'use strict'
 
   Cryptoloji.states.encrypt = {
@@ -6,15 +6,14 @@
       var theater = theaterJS()
 
       // Cryptoloji.stateman.emit('header:show')
-      Cryptoloji.stateman.emit('footer:show') 
-      Cryptoloji.stateman.emit('header:hide') 
+      Cryptoloji.stateman.emit('footer:show')
+      Cryptoloji.stateman.emit('header:hide')
 
-      // transition 
-      if(Cryptoloji.stateman.previous.name != "share" && 
-         Cryptoloji.stateman.previous.name != "captcha"){
+      // transition
+      if (Cryptoloji.stateman.previous.name !== 'share' &&
+          Cryptoloji.stateman.previous.name !== 'captcha') {
         Cryptoloji.UI.encryptionEnteringTransition('encryption')
       }
-      
 
       Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')
         .setMaxSize(Cryptoloji.settings.inputMaxSize)
@@ -28,8 +27,8 @@
         Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
           // select corresponding emoji in keymodal
           Cryptoloji.UI.KeyModal().select(key)
-          
-          if ($('#encryption_input').val().length == 0) {
+
+          if ($('#encryption_input').val().length === 0) {
             var newplaceholder = ['You\'ve picked a key.', 400, '\nWrite your message here to see it in cipher.', 600]
             animateInputPlaceholder(theater, newplaceholder)
           }
@@ -47,7 +46,7 @@
         })
       } else {
         Cryptoloji.stateman.on('keypanel:key-chosen', function (key) {
-          if ($('#encryption_input').val().length == 0) {
+          if ($('#encryption_input').val().length === 0) {
             var newplaceholder = ['You\'ve picked a key.', 400, '\nWrite your message here to see it in cipher.', 600]
             animateInputPlaceholder(theater, newplaceholder)
           }
@@ -57,13 +56,10 @@
         })
       }
 
-      $(".encryption").addClass("section-show")
-
-      // animate input placeholder text
-      // animateInputPlaceholder(theater)
+      $('.encryption').addClass('section-show')
 
       // encrypt text on input
-      $('#encryption_input').bind('input propertychange', function() {
+      $('#encryption_input').bind('input propertychange', function () {
         Cryptoloji.UI.encryptText()
         if (_.isEmpty($('#encryption_input').val())) {
           emptyOutput()
@@ -71,15 +67,16 @@
       })
 
       // show share button at proper time
-      if (!$('#encryption_share_button').hasClass('main_share-open')){
-        $('#encryption_share_button').css('display', 'none')
-        $('.main_keyslider_plus', self.$element).css('display', 'none')
-      }
-      Cryptoloji.stateman.on('encrypt:show-share', function() {
-        if (!$('body').hasClass('main_key_modal-open')) {
-          $('#encryption_share_button').css('display', 'block')
+      Cryptoloji.stateman.on('encrypt:show-share', function () {
+        var text = $('#encryption_input').val()
+        // if want to show the share button only if key modal is closed
+        // if (!$('body').hasClass('main_key_modal-open')) {}
+        if (!_.isEmpty(text)) {
+          $('#encryption_share_button').addClass('main_share-open')
         }
-        $('#encryption_share_button').addClass('main_share-open')
+      })
+      Cryptoloji.stateman.on('encrypt:hide-share', function () {
+        $('#encryption_share_button').removeClass('main_share-open')
       })
 
       // show/hide bottom placeholder text
@@ -108,12 +105,12 @@
     },
     leave: function () {
       // Cryptoloji.stateman.emit('header:hide')
-      Cryptoloji.stateman.emit('footer:hide') 
+      Cryptoloji.stateman.emit('footer:hide')
       Cryptoloji.UI.KeyModal().close()
       // $('.encryption').removeClass('section-show')
       Cryptoloji.stateman.off('encrypt')
       Cryptoloji.stateman.off('keyslider')
-      $(".section_more").removeClass("section-show")
+      $('.section_more').removeClass('section-show')
     }
   }
 
@@ -147,7 +144,6 @@
     $('#encryption_input').val('')
     $('#encryption_input_cleaner').hide()
     $('#encryption_input_count').hide()
-    $('#encryption_share_button').removeClass('main_share-open')
   }
 
   function emptyOutput () {
@@ -155,6 +151,7 @@
     $('#encryption_output > .bluebox_output').html('')
     $('#encryption_output').addClass('placeholdit')
     $('.share_message_item').html('')
+    $('#encryption_share_button').removeClass('main_share-open')
   }
 
   function scrollToSelectedKey () {
@@ -162,4 +159,4 @@
     $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
   }
 
-})(window, window.Cryptoloji, window.jQuery, window.theaterJS);
+})(window, window.Cryptoloji, window.jQuery, window._, window.theaterJS);

@@ -58,6 +58,7 @@
     }
   }
 
+  var _animationTimeout = null
   function encryptTextAnimation (text, emojiText) {
     console.log(text, emojiText)
 
@@ -87,7 +88,7 @@
         else if (pointC >= 249 && pointC <= 252) c = 'u'
         // y <- ý uda 253 ÿ wda 255
         else if (pointC === 253 || pointC === 255) c = 'y'
-        
+
         // custom class attached to containing span element
         var spanClass = null
         // is a symbol
@@ -151,9 +152,12 @@
         })
       })
 
-      setTimeout(function () {
+      if (_animationTimeout) {
+        clearTimeout(_animationTimeout)
+      }
+      _animationTimeout = setTimeout(function () {
         Cryptoloji.stateman.emit('encrypt:show-share')
-      }, 2500)
+      }, _uniqueClasses.length * 300)
     }
 
     var blueBoxOut = _mapToBlueBox(text)

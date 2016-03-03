@@ -1,10 +1,11 @@
 (function (window, Cryptoloji, $, undefined) {
-  
+
   var keyModal = null
 
   Cryptoloji.UI.KeyModal = function createKeyModal (selector) {
-    if (!keyModal) 
+    if (!keyModal) {
       keyModal = new KeyModal(selector)
+    }
     return keyModal
   }
 
@@ -60,10 +61,10 @@
 
   KeyModal.prototype.select = function select (key) {
     var self = this
-    // select only if not already selected ( we are notifying subscribers of 
-    // element selection, so we should assure to avoid "false positives" and 
+    // select only if not already selected ( we are notifying subscribers of
+    // element selection, so we should assure to avoid "false positives" and
     // event loops )
-    if (self.currentSelection != key) {
+    if (self.currentSelection !== key) {
       // reset and clean selection
       self.resetSelection()
       // store current key
@@ -92,27 +93,28 @@
       if ($('body').hasClass('main_key_modal-open')) {
         keyModal.close()
       } else {
+        var modal_height = 0
         if (Cryptoloji.stateman.is('encrypt')) {
-          var modal_height = $('.section_main.encryption .header').height() + $('.section_main.encryption .main_content_top').height()
-          $('.main_key_modal').css("height", modal_height)
+          modal_height = $('.section_main.encryption .header').height() + $('.section_main.encryption .main_content_top').height()
+          $('.main_key_modal').css('height', modal_height)
         } else {
-          var modal_height = $('.section_main.decryption .header').height() + $('.section_main.decryption .main_content_top').height()
-          $('.main_key_modal').css("height", modal_height)
+          modal_height = $('.section_main.decryption .header').height() + $('.section_main.decryption .main_content_top').height()
+          $('.main_key_modal').css('height', modal_height)
         }
-        // temporary fix
-        $('#encryption_share_button').css('display', 'none')
+        // hide share button when you open the key modal to choose a new key
+        Cryptoloji.stateman.emit('encrypt:hide-share')
         $('body').addClass('main_key_modal-open')
       }
     }
 
   function _setupGlobalHandler () {
-    $('body').click(function(event) { 
-      if($('body').hasClass('main_key_modal-open') && !$(event.target.closest('.main_key_modal')).is('.main_key_modal')) {
+    $('body').click(function (event) {
+      if ($('body').hasClass('main_key_modal-open') && !$(event.target.closest('.main_key_modal')).is('.main_key_modal')) {
         if (keyModal) {
           keyModal.close()
         }
-      }        
+      }
     })
   }
 
-})(window, window.Cryptoloji, window.jQuery); 
+})(window, window.Cryptoloji, window.jQuery);
