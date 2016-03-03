@@ -3,7 +3,13 @@
 
   // if a captcha has already been initialized
   var _captcha = false
+  var timeline = new TimelineLite({onComplete: function() {
+    robotBlinkEyes()
+  }});
 
+  function getRandomFloat(min, max) {
+    return Math.random() * (max - min) + min;
+  }
   Cryptoloji.states.captcha = {
     canEnter: function () {
       // prevent user from entering a broken captcha without message and key
@@ -23,6 +29,9 @@
       TweenLite.to($('.section_captcha'), .75, {y: 0, ease:Expo.easeInOut, onComplete: function(){
         $('.encryption').removeClass('section-show')
         renderCaptcha()
+
+        robotBlinkEyes()
+        
       }})
 
     },
@@ -32,6 +41,15 @@
         $('.section_captcha').removeClass('section-show')
       }})
     }
+  }
+
+  function robotBlinkEyes() {
+    
+    timeline.clear()
+    .to($('.eye_pupil_1'), getRandomFloat(0.0, 0.1), {opacity: getRandomFloat(0.5, 1.0)})
+    .to($('.eye_pupil_2'), getRandomFloat(0.0, 0.1), {opacity: getRandomFloat(0.5, 1.0)})
+    .to($('.eye_pupil_1'), getRandomFloat(0.0, 0.1), {opacity: 1})
+    .to($('.eye_pupil_2'), getRandomFloat(0.0, 0.1), {opacity: 1})
   }
 
   function renderCaptcha () {
