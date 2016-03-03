@@ -165,7 +165,7 @@ noscript a {
 
 #mainLoader{
   position: fixed;
-  background-color: yellow;
+  background-color: #2D3A4D;
   z-index: 9999;
   width: 100%;
   height: 100%;
