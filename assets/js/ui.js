@@ -324,16 +324,16 @@
     if(Cryptoloji.mq.matches){
 
       TweenLite.set($('.'+state+' .main_keyslider'), {delay: 0, width: "0%"})
-      TweenLite.set($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), {delay: 0, opacity: "0"})
-      TweenLite.set($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), {delay: 0, opacity: "0"})
-      TweenLite.set($('.'+state+' .main_content_bottom_input.placeholdit'), {delay: 0, opacity: "0"})
-      TweenLite.set($('.'+state+' .main_content_top_input'), {delay: 0, opacity: "0"})
-      TweenLite.set($('.'+state+' .encryption_help_button'), {delay: 0, opacity: "0"})
+      TweenLite.set($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), {opacity: "0"})
+      TweenLite.set($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), {opacity: "0"})
+      TweenLite.set($('.'+state+' .main_content_bottom_input.placeholdit'), {opacity: "0"})
+      TweenLite.set($('.'+state+' .main_content_top_input'), {opacity: "0"})
+      TweenLite.set($('.'+state+' .encryption_help_button > svg'), {opacity: 0, y:30})
 
 
       // keyslider width
       TweenLite.to($('.'+state+' .main_keyslider'), 0.5, {delay: 0, width: "35%"})
-      TweenLite.to($('.'+state+' .encryption_help_button'), 0.5, {delay: 0, opacity: "1"})
+      TweenLite.to($('.'+state+' .encryption_help_button > svg'), 1, {delay: 2, opacity: 1, y:0, ease:Expo.easeInOut})
       // emoji in keyslider
       TweenLite.to($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), .5, {delay: 1, opacity: "1"})
       // lable keyslider
