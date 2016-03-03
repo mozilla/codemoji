@@ -173,22 +173,22 @@
       if($('body').hasClass('coachmarks-open')){
         $('.'+section+' .coachmark').each(function(i){
           var self = this
-          TweenLite.to($(self), 2, {
+          TweenLite.to($(self), .8, {
               delay: i * .2 + .3,
-              top: 0 - $('.'+section+' .coachmark').innerHeight()
+              y: 0 - $('.'+section+' .coachmark').innerHeight()
           })
           TweenLite.to($(self).children(), .3, {
               delay: i * .2,
-              opacity: 0
+              opacity: 0 
           })
         })
       } else {
         var t = $("."+section+" .header").innerHeight()
         $('.'+section+' .coachmark').each(function(i){
           var self = this
-          TweenLite.to($(self), .8, {
+          TweenLite.to($(self), .4, {
               delay: i * .2,
-              top: t + $('.'+section+' .coachmark').innerHeight()
+              y: t 
           })
           TweenLite.to($(self).children(), .5, {
               delay: i * .2 + .7,
@@ -222,6 +222,7 @@
     
     if (Cryptoloji.mq.matches) {
       bounceDots()
+      TweenLite.set($('.'+section+' .coachmark'), { y: 0 - $('.'+section+' .coachmark').innerHeight()})
       $("#" + section + "_help_button").on("click", function(){
         toggleHelpButtonColor()
         toggleCoachmark()
@@ -324,20 +325,22 @@
 
   function encryptionEnteringTransition (state) {
     if(Cryptoloji.mq.matches){
+
+      TweenLite.set($('.'+state+' .main_keyslider'), {delay: 0, width: "0%"})
+      TweenLite.set($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), {delay: 0, opacity: "0"})
+      TweenLite.set($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), {delay: 0, opacity: "0"})
+      TweenLite.set($('.'+state+' .main_content_bottom_input.placeholdit'), {delay: 0, opacity: "0"})
+      TweenLite.set($('.'+state+' .main_content_bottom_label'), {delay: 0, opacity: "0"})
+
       // keyslider width
-      TweenLite.to($('.'+state+' .main_keyslider'), 0, {delay: 0, width: "0%"})
       TweenLite.to($('.'+state+' .main_keyslider'), .5, {delay: 3, width: "35%"})
       // emoji in keyslider
-      TweenLite.to($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), 0, {delay: 0, opacity: "0"})
       TweenLite.to($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), .5, {delay: 4, opacity: "1"})
       // lable keyslider
-      TweenLite.to($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), 0, {delay: 0, opacity: "0"})
       TweenLite.to($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), .5, {delay: 4, opacity: ".5"})
-      // placeholder
-      TweenLite.to($('.'+state+' .main_content_bottom_input.placeholdit'), 0, {delay: 0, opacity: "0"})
+      // placeholder rigth
       TweenLite.to($('.'+state+' .main_content_bottom_input.placeholdit'), .5, {delay: 4, opacity: "1"})
       // lable rigth
-      TweenLite.to($('.'+state+' .main_content_bottom_label'), 0, {delay: 0, opacity: "0"})
       TweenLite.to($('.'+state+' .main_content_bottom_label'), .5, {delay: 4, opacity: "0.5"})
     }
   }

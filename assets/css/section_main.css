@@ -495,12 +495,12 @@
 .coachmark{
   display: none;
   position: absolute;
-  top: 0;
+  /*top: 0;*/
   left: 0;
   width: 100%;
   right: 0;
   height: 15rem;
-  transform: translateY(-100%);
+  /*transform: translateY(-100%);*/
   padding-left: 3.7rem; 
   padding-top: 6.7rem;
   font-size: 80%;

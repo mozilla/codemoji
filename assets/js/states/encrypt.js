@@ -60,7 +60,7 @@
       $(".encryption").addClass("section-show")
 
       // animate input placeholder text
-      animateInputPlaceholder(theater)
+      // animateInputPlaceholder(theater)
 
       // encrypt text on input
       $('#encryption_input').bind('input propertychange', function() {
