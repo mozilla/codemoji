@@ -367,7 +367,7 @@
     //Duration of a single letter transition
     var animation_duration = 0.2
     var animation_delay = 0.8
-    var y_transform = 40
+    var y_transform = 20
     
     //First svg group containing encrypted letter
     var first_group = $($(elements[0]))
@@ -389,38 +389,41 @@
 
 
     //First encrypted word animation
-    .to(first_group[4], animation_duration, {y: 0, opacity: 1.0})
     .to(third_group[4], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(first_group[3], animation_duration, {y: 0, opacity: 1.0})
+    .to(first_group[4], animation_duration, {y: 0, opacity: 1.0})
     .to(third_group[3], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(first_group[2], animation_duration, {y: 0, opacity: 1.0})
+    .to(first_group[3], animation_duration, {y: 0, opacity: 1.0})
     .to(third_group[2], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(first_group[1], animation_duration, {y: 0, opacity: 1.0})
+    .to(first_group[2], animation_duration, {y: 0, opacity: 1.0})
     .to(third_group[1], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(first_group[0], animation_duration, {y: 0, opacity: 1.0})
+    .to(first_group[1], animation_duration, {y: 0, opacity: 1.0})
     .to(third_group[0], animation_duration, {y: y_transform, opacity: 0.0})
-    //Second encrypted word animation
-    .to(second_group[4], animation_duration, {delay: animation_delay , y: 0, opacity: 1.0})
-    .to(first_group[4], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(second_group[3], animation_duration, {y: 0, opacity: 1.0})
+    .to(first_group[0], animation_duration, {y: 0, opacity: 1.0})
+    
+    // //Second encrypted word animation
+    .to(first_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
+    .to(second_group[4], animation_duration, {y: 0, opacity: 1.0})
     .to(first_group[3], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(second_group[2], animation_duration, {y: 0, opacity: 1.0})
+    .to(second_group[3], animation_duration, {y: 0, opacity: 1.0})
     .to(first_group[2], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(second_group[1], animation_duration, {y: 0, opacity: 1.0})
+    .to(second_group[2], animation_duration, {y: 0, opacity: 1.0})
     .to(first_group[1], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(second_group[0], animation_duration, {y: 0, opacity: 1.0})
+    .to(second_group[1], animation_duration, {y: 0, opacity: 1.0})
     .to(first_group[0], animation_duration, {y: y_transform, opacity: 0.0})
-    //Third encrypted word animation
-    .to(fourth_group[4], animation_duration, {delay: animation_delay , y: 0, opacity: 1.0})
-    .to(second_group[4], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(fourth_group[3], animation_duration, {y: 0, opacity: 1.0})
+    .to(second_group[0], animation_duration, {y: 0, opacity: 1.0})
+    
+    // //Third encrypted word animation
+    .to(second_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
+    .to(fourth_group[4], animation_duration, {y: 0, opacity: 1.0})
     .to(second_group[3], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(fourth_group[2], animation_duration, {y: 0, opacity: 1.0})
+    .to(fourth_group[3], animation_duration, {y: 0, opacity: 1.0})
     .to(second_group[2], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(fourth_group[1], animation_duration, {y: 0, opacity: 1.0})
+    .to(fourth_group[2], animation_duration, {y: 0, opacity: 1.0})
     .to(second_group[1], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(fourth_group[0], animation_duration, {y: 0, opacity: 1.0})
+    .to(fourth_group[1], animation_duration, {y: 0, opacity: 1.0})
     .to(second_group[0], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(fourth_group[0], animation_duration, {y: 0, opacity: 1.0})
+    
     //Set a delay before looping
     .to(fourth_group, 0.0, {delay: animation_delay, y: y_transform, opacity: 0.0})
 
