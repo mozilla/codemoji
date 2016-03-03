@@ -1,5 +1,16 @@
 # Cryptoloji
 
+
+### Dev set up
+
+	npm install
+	bower intall
+	
+
+### How to build
+
+	gulp build
+
 ## LICENSE
 
 This Source Code is subject to the terms of the Mozilla Public License, v. 2.0.  
