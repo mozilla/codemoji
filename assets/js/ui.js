@@ -200,10 +200,10 @@
     }
     
     function toggleHelpButtonColor () {
-      console.log('asd')
       var color1 = $('.'+section+' .help_button_point').attr("fill")
       var color2 = $('.'+section+' .help_button_balon').attr("fill")
       $('.'+section+' .help_button_point').attr("fill", color2)
+      $('.'+section+' .help_button_x').attr("fill", color2)
       $('.'+section+' .help_button_balon').attr("fill", color1)
     }
 
@@ -219,6 +219,15 @@
         })
       },function () {})
     } 
+
+    function toggleX () {
+      var elem = section + "_help_button"
+      var a = $('.' + elem +  ' .help_button_x').css('opacity')
+      var b = $('.' + elem +  ' .help_button_point').css('opacity')
+      console.log(a, b)
+      TweenLite.to($('.' + elem +  ' .help_button_x'), .5, {opacity: b})
+      TweenLite.to($('.' + elem +  ' .help_button_point'), .5, {opacity: a})
+    }
     
     if (Cryptoloji.mq.matches) {
       bounceDots()
@@ -226,6 +235,7 @@
       $("#" + section + "_help_button").on("click", function(){
         toggleHelpButtonColor()
         toggleCoachmark()
+        toggleX()
       })
       
     }
