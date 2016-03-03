@@ -37,7 +37,9 @@
       setupShareButtons()
 
       // set the height and the top y coordinate to reach when share key modal is open
-      var share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(0.5)
+      // Cryptoloji.utils.remToPx(.5) is for add a margin
+      // 23 is the magic number...
+      var share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23
       $('.share_key').css('height', share_modal_height)
       TweenLite.set($('.share_key'), {y: share_modal_height - Cryptoloji.utils.remToPx(10)})
 
