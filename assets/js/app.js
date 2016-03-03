@@ -14,7 +14,7 @@
     // 
     // fix height
     // 
-    //Cryptoloji.UI.fixHeight()
+    Cryptoloji.UI.fixHeight() // this is required for android keyboard behaviour
     
     // 
     // on rotation/resize
