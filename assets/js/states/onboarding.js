@@ -2,7 +2,7 @@
   'use strict'
   var timeline = new TimelineLite({onComplete: function() {
     //loop the animation
-    this.restart()
+    //this.restart()
   }});
   
   Cryptoloji.states.onboarding = {}
@@ -90,7 +90,17 @@
 
         if (n === 4) {
           timeline.clear()
-          timeline.stop()
+          //timeline.stop()
+
+
+          $('#slide_4_plain_text > path').each(function(i) { 
+            TweenLite.set($('#slide_4_plain_text > path')[i], {opacity: 1.0})
+          })
+          $('#slide_4_encrypted_emoji > g').each(function(i) { 
+            TweenLite.set($('#slide_4_encrypted_emoji > g')[i], {opacity: 0.0})
+          })
+          TweenLite.set($('#slide_4_emoji_selector'), {opacity: 0})
+
           TweenLite.set($("#slide_4_emoji_1"), {opacity: 0})
           TweenLite.set($("#slide_4_emoji_2"), {opacity: 0})
           TweenLite.set($("#slide_4_emoji_3"), {opacity: 0})
@@ -99,8 +109,35 @@
           TweenLite.to($("#slide_4_emoji_2"), 0.5, {delay: 1, opacity: 1})
           TweenLite.to($("#slide_4_emoji_3"), 0.5, {delay: 1, opacity: 1, onComplete: function() { timeline.play()}})
 
-          timeline.to($("#slide_4_emoji_2"), 0.3, {opacity: 0.2})
-          .to($("#slide_4_emoji_2"), 0.3, {opacity: 1.0})
+          timeline.to($('#slide_4_emoji_2'), 0.3, {delay: 1.5, opacity: 0.2})
+          .to($('#slide_4_emoji_2'), 0.3, {opacity: 1.0})
+          .to($('#slide_4_emoji_2'), 0.3, {opacity: 0.2})
+          .to($('#slide_4_emoji_2'), 0.3, {opacity: 1.0})
+          .to($('#slide_4_emoji_2'), 0.3, {opacity: 0.2})
+          .to($('#slide_4_emoji_2'), 0.3, {opacity: 1.0})
+          .to($('#slide_4_emoji_selector'), 0.4, {opacity: 1.0})
+          .to($('#slide_4_emoji_selector'), 0.5, {x: -105})
+          .to($('#slide_4_emoji_selector'), 0.0, {delay: 1, x: 105})
+          .to($('#slide_4_emoji_selector'), 0.5, {delay: 1, x: 0, onComplete: function() {
+            var text_animation_duration = 0.1
+            $('#slide_4_plain_text > path').each(function(i) {
+              TweenLite.to($('#slide_4_plain_text > path')[i], text_animation_duration, {delay: i * text_animation_duration, opacity: 0.0})
+            })
+
+            $('#slide_4_encrypted_emoji > g').each(function(i) { 
+              TweenLite.to($('#slide_4_encrypted_emoji > g')[i], text_animation_duration, {delay: i * text_animation_duration, opacity: 1.0})
+            })
+          }})
+
+          // timeline.to($("#slide_4_emoji_2"), 0.3, {opacity: 0.2})
+          // .to($("#slide_4_emoji_2"), 0.3, {opacity: 1.0})
+
+          
+          
+
+          // $('#slide_4_encrypted_emoji > g').each(function(i) { 
+          //   TweenLite.to($('#slide_4_encrypted_emoji > g')[i], text_animation_duration, {delay: i * text_animation_duration, opacity: 1.0})
+          // })
         }
 
         if (n === 5) {
