@@ -18,11 +18,8 @@
     return {
       enter: function () {
         $('.section_onboarding_wrapper').addClass("section-show")
-        if(n != 1){
-          Cryptoloji.UI.slideLeftNext($('[slide-num="'+n+'"]'),.5)
-        } else {
-          $('[slide-num="'+n+'"]').addClass("section-show")
-        }
+        $('[slide-num="'+n+'"]').addClass("section-show")
+
         $('[slide-num="'+n+'"]').on("click", function(){
           Cryptoloji.stateman.go('onboarding.step'+(n+1))
         })
@@ -106,9 +103,8 @@
         }
       },
       leave: function () {
-        // $('[slide-num="'+n+'"]').removeClass("section-show")
+        $('[slide-num="'+n+'"]').removeClass("section-show")
         $('.section_onboarding_wrapper').removeClass("section-show")
-        Cryptoloji.UI.slideLeft($('[slide-num="'+n+'"]'),.5)
       }
     }
   }
