@@ -373,14 +373,17 @@
       tooltipPosition.top = 0
       tooltipPosition.left = 0
 
-
-
-
   function paginationLogic (slide) {
-     var num = $('[slide-num='+slide+'] [pagination-step]').attr('pagination-step')
+    console.log(">>>>>>>>",slide)
      TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
-     TweenLite.set($('[slide-num='+slide+'] .pagination_emoji_'+num), {opacity: "1"})
+     TweenLite.set($('.svg_wrapper_pagination .pagination_emoji_'+slide), {opacity: "1"})
   }
+
+  // function paginationLogic (slide) {
+  //    var num = $('[slide-num='+slide+'] [pagination-step]').attr('pagination-step')
+  //    TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
+  //    TweenLite.set($('[slide-num='+slide+'] .pagination_emoji_'+num), {opacity: "1"})
+  // }
 
   function slideLeft (el, duration) {
     console.log(">>>>>>", el, duration)

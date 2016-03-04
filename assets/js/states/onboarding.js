@@ -8,6 +8,7 @@
   Cryptoloji.states.onboarding = {}
   Cryptoloji.states.onboarding.root = {
     enter: function () {
+      $('.section_onboarding_wrapper').addClass("section-show")
       Cryptoloji.stateman.go('onboarding.step1')
       Cryptoloji.stateman.emit('header:show')
     }
@@ -16,7 +17,7 @@
   function next_slide(n){
     return {
       enter: function () {
-
+        $('.section_onboarding_wrapper').addClass("section-show")
         if(n != 1){
           Cryptoloji.UI.slideLeftNext($('[slide-num="'+n+'"]'),.5)
         } else {
@@ -106,7 +107,7 @@
       },
       leave: function () {
         // $('[slide-num="'+n+'"]').removeClass("section-show")
-        
+        $('.section_onboarding_wrapper').removeClass("section-show")
         Cryptoloji.UI.slideLeft($('[slide-num="'+n+'"]'),.5)
       }
     }
@@ -121,6 +122,7 @@
       },
       leave: function () {
         $('[slide-num="'+n+'"]').removeClass("section-show")
+        $('.section_onboarding_wrapper').removeClass("section-show")
         Cryptoloji.stateman.emit('header:hide')
       }
     }
