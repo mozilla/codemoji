@@ -71,9 +71,18 @@
             TweenLite.set($('#slide_4_plain_text > path')[i], {opacity: 0.0})
           })
 
-          timeline.to($("#slide_4_plain_text > path")[0], 0.1, {opacity: 1.0})
-          timeline.to($("#slide_4_plain_text > path")[1], 0.1, {opacity: 1.0})
-          timeline.to($("#slide_4_plain_text > path")[2], 0.1, {opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[0], 0.1, {opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[1], 0.1, {delay: 0.1, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[2], 0.1, {delay: 0.2, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[3], 0.1, {delay: 0.3, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[4], 0.1, {delay: 0.4, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[5], 0.1, {delay: 0.5, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[6], 0.1, {delay: 0.6, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[7], 0.1, {delay: 0.7, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[8], 0.1, {delay: 0.8, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[9], 0.1, {delay: 0.9, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[10], 0.1, {delay: 1.0, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[11], 0.1, {delay: 1.1, opacity: 1.0})
 
         }
 
