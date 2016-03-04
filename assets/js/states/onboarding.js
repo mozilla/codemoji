@@ -110,9 +110,9 @@
 
         if (n === 5) {
           timeline.clear()
-          timeline.to($("#slide_5_emoji_selector"), 1.5, {delay: 1, x: "-73", transformOrigin:'50% 50%'})
-          timeline.to($("#slide_5_emoji_selector"), 0.0, {delay: 1, x: "77", transformOrigin:'50% 50%'})
-          timeline.to($("#slide_5_emoji_selector"), 1.5, {delay: 1, x: "0rem", transformOrigin:'50% 50%'})
+          timeline.to($("#slide_5_emoji_selector"), 1.5, {delay: 1, x: "-73"})
+          timeline.to($("#slide_5_emoji_selector"), 0.0, {delay: 1, x: "77"})
+          timeline.to($("#slide_5_emoji_selector"), 1.5, {delay: 1, x: "0rem"})
         }
       },
       leave: function () {
