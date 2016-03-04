@@ -9,7 +9,19 @@
   $(document).ready(function () {
 
     FastClick.attach(document.body);
+
+    // remove main loader
+
+    TweenLite.set('.section_welcome_header', {y:-300})
+    TweenLite.set('#footer', {y:200})
+    TweenLite.set('#body_landing', {opacity:0})
+
     $('#mainLoader').remove();
+
+    TweenLite.to('#body_landing', .75, {opacity:1, delay:.2, ease:Expo.easeInOut})
+    TweenLite.to('.section_welcome_header', .75, {y:0, delay:1.2, ease:Expo.easeInOut})
+    TweenLite.to('#footer', .75, {y:0, delay:1.8, ease:Expo.easeInOut})
+
 
     // 
     // fix height
@@ -46,7 +58,7 @@
         Cryptoloji.UI.KeyPanel('#decryption_keypanel')
           .fill(EmojiList)
       }
-    }, 1000)
+    }, 2000)
     //
     // handle header show/hide
     //
