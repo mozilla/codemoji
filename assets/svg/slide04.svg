@@ -256,7 +256,7 @@
 		<text transform="matrix(1 0 0 1 67.6593 1399.4651)" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="30.8571">TO SCRAMBLE YOUR </text>
 		<text transform="matrix(1 0 0 1 160.2316 1436.4648)" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="30.8571">MESSAGE</text>
 	</g>
-	<path id="slide_5_emoji_selector" fill="#F46060" d="M254,1300.3h-57c-4,0-7.3-3.3-7.3-7.3l0,0c0-4,3.3-7.3,7.3-7.3h57
+	<path id="slide_4_emoji_selector" fill="#F46060" d="M254,1300.3h-57c-4,0-7.3-3.3-7.3-7.3l0,0c0-4,3.3-7.3,7.3-7.3h57
 		c4,0,7.3,3.3,7.3,7.3l0,0C261.3,1297,258,1300.3,254,1300.3z"/>
 	<path fill="#3B88C3" d="M388.1,1125.6H61.9c-11,0-20-9-20-20V919.1c0-11,9-20,20-20h326.4c11,0,20,9,20,20v186.1
 		C408.1,1116.6,399.1,1125.6,388.1,1125.6z"/>
