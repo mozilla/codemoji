@@ -23,10 +23,18 @@
 }
 
 .svg_wrapper_pagination{
-  width: 30rem;
+  width: 20rem;
   position: absolute;
   bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
 
+}
+
+.next_button_onboarding{
+  width: 30rem;
+  position: absolute;
+  bottom: 9rem;
+  left: 50%;
+  transform: translateX(-50%);
 }

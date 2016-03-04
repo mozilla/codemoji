@@ -374,7 +374,7 @@
       tooltipPosition.left = 0
 
   function paginationLogic (slide) {
-    console.log(">>>>>>>>",slide)
+    console.log(">>>>>>>>",slide, $('.pagination_emoji>g'))
      TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
      TweenLite.set($('.svg_wrapper_pagination .pagination_emoji_'+slide), {opacity: "1"})
   }
