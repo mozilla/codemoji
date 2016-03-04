@@ -220,6 +220,11 @@
   .landing_encrypted_message{
     font-size: 70%;
   }
+
+  .decrypt_feedback{
+    font-size: 90%;
+    line-height: 22px;
+  }
 }
 
 

@@ -432,10 +432,15 @@
         <div flex id="decryption_output" 
              class="header__input main_content_bottom_input unselectable placeholdit" 
              placeholder="Your message will be encrypted here."></div>
-      </div>
-      <div id="decryption_reply_button">
-        <div class="main_share" layout="column" layout-align="start center">
-          <a uppercase class="encryption_share_button" to-state="encrypt" color-light button-box border-light>Reply</a>
+
+        <div id="decryption_reply_button">
+          <div class="decrypt_feedback" layout="column" layout-align="start center" style-lable>
+            <p class="wrong_mozilla_key">Oops! The right key is hidden in Mozilla's newsletter. Try again.</p>
+            <p class="wrong_key">Doesn't look like the right key. Ask the sender or try again!</p>
+          </div>
+          <div class="main_share" layout="column" layout-align="start center">
+            <a class="mozilla_button" to-state="encrypt">Try using a cipher</a>
+          </div>
         </div>
       </div>
     </div>

@@ -35,7 +35,7 @@
     console.debug('Decrypted text:', text)
     Cryptoloji.current.output = text
     $('#decryption_output').removeClass('placeholdit').text(text)
-    Cryptoloji.stateman.emit('decrypt:show-reply')
+    Cryptoloji.stateman.emit('decrypt:show-reply', Cryptoloji.current.key)
   }
 
   function encryptText () {

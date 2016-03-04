@@ -383,6 +383,27 @@
   transform: translate(0,0%);
 }
 
+.decrypt_feedback{
+  /*height: 45px;*/
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 2rem;
+  transform: translate(0,300%);
+  transition: transform .5s;
+  z-index: 9;
+}
+
+.decrypt_feedback .wrong_mozilla_key{
+  display: none;
+}
+
+.decrypt_feedback-open .decrypt_feedback{
+  transform: translate(0,0%);
+}
+
 .main_keyslider_plus{
   height: 100%;
   right: 0;

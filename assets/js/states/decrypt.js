@@ -32,14 +32,6 @@
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
         // select corresponding emoji in keymodal
         Cryptoloji.UI.KeyModal().select(key)
-
-        if (key !== correctKey) {
-          wrongKey = true
-          Cryptoloji.stateman.emit('decrypt:wrong-key')
-        } else {
-          wrongKey = false
-          Cryptoloji.stateman.emit('decrypt:right-key')
-        }
         Cryptoloji.UI.selectKey(key)
         Cryptoloji.UI.decryptText()
       })
@@ -60,28 +52,29 @@
       })
 
       // show reply button at proper time
-      Cryptoloji.stateman.on('decrypt:show-reply', function() {
-        if (!wrongKey) {
-          // temp fix need to be reviewed
-          $('#decryption_reply_button').css('display', 'block')
-          $('#decryption_reply_button').addClass('main_share-open')
-          $('#decryption_reply_button').fadeIn()
+      Cryptoloji.stateman.on('decrypt:show-reply', function(key) {
+        if (key !== correctKey) {
+          wrongKey = true
+          Cryptoloji.stateman.emit('decrypt:wrong-key')
         } else {
-          // temp fix need to be reviewed
-          $('#decryption_reply_button').css('display', 'none')
-          $('#decryption_reply_button').removeClass('main_share-open')
+          wrongKey = false
+          Cryptoloji.stateman.emit('decrypt:right-key')
         }
-      }) 
+      })
 
       // wrong key handler
       Cryptoloji.stateman.on('decrypt:wrong-key', function () {
         console.log('wrong key')
+        $('#decryption_reply_button').removeClass('main_share-open')
+        $('#decryption_reply_button').addClass('decrypt_feedback-open')
       })
 
       // right key handler
       Cryptoloji.stateman.on('decrypt:right-key', function () {
         console.log('right key')
         $('body').removeClass('main_key_modal-open')
+        $('#decryption_reply_button').removeClass('decrypt_feedback-open')
+        $('#decryption_reply_button').addClass('main_share-open')
       })
     },
     leave: function () {
