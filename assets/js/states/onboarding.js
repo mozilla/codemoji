@@ -71,7 +71,9 @@
             TweenLite.set($('#slide_4_plain_text > path')[i], {opacity: 0.0})
           })
 
-         
+          timeline.to($("#slide_4_plain_text > path")[0], 0.1, {opacity: 1.0})
+          timeline.to($("#slide_4_plain_text > path")[1], 0.1, {opacity: 1.0})
+          timeline.to($("#slide_4_plain_text > path")[2], 0.1, {opacity: 1.0})
 
         }
 
