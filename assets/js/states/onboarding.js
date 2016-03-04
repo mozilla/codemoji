@@ -66,23 +66,27 @@
         }
 
         if (n === 3) {
-          timeline.clear()
           $('#slide_4_plain_text > path').each(function(i) {
             TweenLite.set($('#slide_4_plain_text > path')[i], {opacity: 0.0})
           })
+          TweenLite.set($('#slide_4_plain_text_bg'), {y: -300})
 
-          TweenLite.to($("#slide_4_plain_text > path")[0], 0.1, {opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[1], 0.1, {delay: 0.1, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[2], 0.1, {delay: 0.2, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[3], 0.1, {delay: 0.3, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[4], 0.1, {delay: 0.4, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[5], 0.1, {delay: 0.5, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[6], 0.1, {delay: 0.6, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[7], 0.1, {delay: 0.7, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[8], 0.1, {delay: 0.8, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[9], 0.1, {delay: 0.9, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[10], 0.1, {delay: 1.0, opacity: 1.0})
-          TweenLite.to($("#slide_4_plain_text > path")[11], 0.1, {delay: 1.1, opacity: 1.0})
+          
+          var text_animation_duration = 0.1
+          var bg_animation_duration = 1.0
+          TweenLite.to($("#slide_4_plain_text_bg"), 1.0, {y: 0})
+          TweenLite.to($("#slide_4_plain_text > path")[0], text_animation_duration, {delay: bg_animation_duration, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[1], text_animation_duration, {delay: bg_animation_duration + 0.1, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[2], text_animation_duration, {delay: bg_animation_duration + 0.2, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[3], text_animation_duration, {delay: bg_animation_duration + 0.3, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[4], text_animation_duration, {delay: bg_animation_duration + 0.4, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[5], text_animation_duration, {delay: bg_animation_duration + 0.5, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[6], text_animation_duration, {delay: bg_animation_duration + 0.6, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[7], text_animation_duration, {delay: bg_animation_duration + 0.7, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[8], text_animation_duration, {delay: bg_animation_duration + 0.8, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[9], text_animation_duration, {delay: bg_animation_duration + 0.9, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[10], text_animation_duration, {delay: bg_animation_duration + 1.0, opacity: 1.0})
+          TweenLite.to($("#slide_4_plain_text > path")[11], text_animation_duration, {delay: bg_animation_duration + 1.1, opacity: 1.0})
 
         }
 
