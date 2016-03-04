@@ -17,14 +17,14 @@
 	</g>
 	<g id="tap">
 	</g>
-	<path fill="#3B88C3" d="M738.1,325.6H411.9c-11,0-20-9-20-20V119.1c0-11,9-20,20-20h326.4c11,0,20,9,20,20v186.1
+	<path id="slide_3_plain_text_bg" fill="#3B88C3" d="M738.1,325.6H411.9c-11,0-20-9-20-20V119.1c0-11,9-20,20-20h326.4c11,0,20,9,20,20v186.1
 		C758.1,316.6,749.1,325.6,738.1,325.6z"/>
 	<g>
 		<text transform="matrix(1 0 0 1 408.3732 562.4642)" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="30.8571">WRITE THE MESSAGE </text>
 		<text transform="matrix(1 0 0 1 417.659 599.465)" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="30.8571">YOU WANT TO TURN </text>
 		<text transform="matrix(1 0 0 1 473.2306 636.4649)" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="30.8571">INTO EMOJIS</text>
 	</g>
-	<g id="slide_4_plain_text">
+	<g id="slide_3_plain_text">
 		<path fill="#FFFFFF" d="M439,152.3h-11.7v16.3h-6v-35.7h6v14.5H439v-14.5h6v35.7h-6V152.3z"/>
 		<path fill="#FFFFFF" d="M476.3,165.2l-1.3,3.9c-2.6-0.3-4.7-1.4-5.6-3.8c-2,2.5-5.2,3.8-8.7,3.8c-5.6,0-9-3.4-9-8.5
 			c0-5.7,4.7-9,13-9h3.9V150c0-3.6-2.2-5-6.1-5c-1.8,0-4.5,0.4-7.2,1.4l-1.4-4.1c3.4-1.3,6.8-1.9,9.6-1.9c7.3,0,10.9,3.4,10.9,9.2
