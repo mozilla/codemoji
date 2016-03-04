@@ -90,9 +90,22 @@
 
         if (n === 4) {
           timeline.clear()
+          timeline.stop()
+          TweenLite.set($("#slide_4_emoji_1"), {opacity: 0})
+          TweenLite.set($("#slide_4_emoji_2"), {opacity: 0})
+          TweenLite.set($("#slide_4_emoji_3"), {opacity: 0})
+
+          TweenLite.to($("#slide_4_emoji_1"), 0.5, {delay: 1, opacity: 1})
+          TweenLite.to($("#slide_4_emoji_2"), 0.5, {delay: 1, opacity: 1})
+          TweenLite.to($("#slide_4_emoji_3"), 0.5, {delay: 1, opacity: 1, onComplete: function() { timeline.play()}})
+
+          // timeline.to($("#slide_4_emoji_1"), 0.5, {opacity: 1})
+          // .to($("#slide_4_emoji_2"), 0.5, {opacity: 1})
+          // .to($("#slide_4_emoji_3"), 0.5, {opacity: 1})
+
+          
           timeline.to($("#slide_4_emoji_2"), 0.3, {opacity: 0.2})
-          timeline.to($("#slide_4_emoji_2"), 0.3, {opacity: 1.0})
-          //timeline.to($("#slide_4_emoji_2"), 1, {scale: 1.5})
+          .to($("#slide_4_emoji_2"), 0.3, {opacity: 1.0})
         }
 
         if (n === 5) {
