@@ -15,10 +15,13 @@
       return true
     },
     enter: function () {
-      TweenLite.set($('.section_share'), {y: window.innerHeight})
-      TweenLite.to($('.section_share'), .75, {y: 0, ease:Expo.easeInOut, onComplete: function(){
-        $(this).removeClass('section-show')
-      }})
+      $('.section_share').css({y:window.innerHeight})
+      setTimeout(function(){
+        $('.section_share').transition({duration:750, y:0, easing:'easeInOutExpo', complete: function(){
+          $('.section_share').removeClass('section-show')
+        }})
+      }, 0)
+      
       $(".section_share").addClass("section-show")
       setTimeout(function(){
         $("#share_more_arrow").addClass("shown")
