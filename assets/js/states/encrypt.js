@@ -54,7 +54,12 @@
           }, 800)
           Cryptoloji.UI.selectKey(key)
           $('#encryption_selected_key').html(Cryptoloji.UI.toTwemoji(key))
-          Cryptoloji.UI.encryptText()
+          // coachmark error
+          if (_.isEmpty($('#encryption_input').val())) {
+            Cryptoloji.UI.KeyPanel('encrypt').tooltipAnimation(key)
+          } else {
+            Cryptoloji.UI.encryptText()
+          }
         })
       }
 
@@ -115,6 +120,8 @@
       // $('.encryption').removeClass('section-show')
       Cryptoloji.stateman.off('encrypt')
       Cryptoloji.stateman.off('keyslider')
+      Cryptoloji.stateman.off('keypanel')
+      Cryptoloji.stateman.off('keymodal')
       $('.section_more').removeClass('section-show')
     }
   }

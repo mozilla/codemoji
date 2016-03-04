@@ -86,9 +86,14 @@
     },
     leave: function () {
       $(".decryption").removeClass("section-show")
+      Cryptoloji.stateman.emit('footer:hide')
+      Cryptoloji.UI.KeyModal().close()
       // unregister listeners
       Cryptoloji.stateman.off('decrypt')
       Cryptoloji.stateman.off('keyslider')
+      Cryptoloji.stateman.off('keypanel')
+      Cryptoloji.stateman.off('keymodal')
+      $('.section_more').removeClass('section-show')
     }
   }
 

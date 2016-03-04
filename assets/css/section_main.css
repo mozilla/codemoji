@@ -3,23 +3,13 @@
   padding: 0;
 }
 
-.encryption_help_button{
-  display: none;
-  position: absolute;
-  top: 50%;
-  right: 2rem;
-  width: 4.5rem;
-  transform: translate(0,-50%);
-  opacity: 1;
-  cursor: pointer;
-}
-
+.encryption_help_button,
 .decryption_help_button{
   display: none;
   position: absolute;
   top: 50%;
   right: 2rem;
-  width: 6rem;
+  width: 4.5rem;
   transform: translate(0,-50%);
   opacity: 1;
   cursor: pointer;

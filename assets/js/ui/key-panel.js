@@ -42,29 +42,7 @@
     return self
   }
 
-  var _tooltipTimeout = null
   KeyPanel.prototype.select = function select (key) {
-    function tooltipAnimation (x,y) {
-      // aggiorna Cryptoloji.UI.tooltipPosition
-      if ( Cryptoloji.UI.tooltipPosition.top === 0 && Cryptoloji.UI.tooltipPosition.left === 0){
-        TweenLite.set($("#tooltip_panel"), {display: "block", opacity: 1})
-        TweenLite.to($("#tooltip_panel"), 0, {x: x - 70,y: y - 85})
-        Cryptoloji.UI.tooltipPosition.top = y
-        Cryptoloji.UI.tooltipPosition.left = x
-      } else {
-        TweenLite.set($("#tooltip_panel"), {display: "block", opacity: 1})
-        TweenLite.to($("#tooltip_panel"), .4, {x: x - 70,y: y - 85})
-      }
-      if (_tooltipTimeout) {
-        clearTimeout(_tooltipTimeout)
-      }
-      _tooltipTimeout = setTimeout(function() {
-        TweenLite.to($("#tooltip_panel"), 1, {opacity: 0, onComplete: function(){
-          TweenLite.set($("#tooltip_panel"), {display: "none"})
-          Cryptoloji.UI.tooltipPosition = { top : 0, left: 0}
-        }})
-      }, 2000);
-    }
     var self = this
     // select only if not already selected ( we are notifying subscribers of 
     // element selection, so we should assure to avoid "false positives" and 
@@ -78,13 +56,36 @@
       $('.main_key_panel_emoji_container .key[key="' + key + '"]', self.$element).addClass('selected')
       // notify
       Cryptoloji.stateman.emit('keypanel:key-chosen', key)
-      // coachmark error
-      if ($('#encryption_input').val().length == 0) {
-        $('.main_key_panel_emoji_container .key[key="' + key + '"]', self.$element).addClass('notext')
-        tooltipAnimation($('.notext').offset().left,$('.notext').offset().top)
-      }
     }
     return self
+  }
+
+  var _tooltipTimeout = null
+  KeyPanel.prototype.tooltipAnimation = function tooltipAnimation (key) {
+    // get the selected key
+    key = $('.main_key_panel_emoji_container .key[key="' + key + '"]', self.$element).addClass('notext')
+    var x = key.offset().left
+    var y = key.offset().top
+
+    // aggiorna Cryptoloji.UI.tooltipPosition
+    if ( Cryptoloji.UI.tooltipPosition.top === 0 && Cryptoloji.UI.tooltipPosition.left === 0){
+      TweenLite.set($("#tooltip_panel"), {display: "block", opacity: 1})
+      TweenLite.to($("#tooltip_panel"), 0, {x: x - 70,y: y - 85})
+      Cryptoloji.UI.tooltipPosition.top = y
+      Cryptoloji.UI.tooltipPosition.left = x
+    } else {
+      TweenLite.set($("#tooltip_panel"), {display: "block", opacity: 1})
+      TweenLite.to($("#tooltip_panel"), .4, {x: x - 70,y: y - 85})
+    }
+    if (_tooltipTimeout) {
+      clearTimeout(_tooltipTimeout)
+    }
+    _tooltipTimeout = setTimeout(function() {
+      TweenLite.to($("#tooltip_panel"), 1, {opacity: 0, onComplete: function(){
+        TweenLite.set($("#tooltip_panel"), {display: "none"})
+        Cryptoloji.UI.tooltipPosition = { top : 0, left: 0}
+      }})
+    }, 2000);
   }
 
   KeyPanel.prototype.resetSelection = function resetSelection () {
