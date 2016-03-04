@@ -495,7 +495,7 @@
     svg_loaded: svg_loaded,
     animate_onboarding: animate_onboarding,
     paginationLogic: paginationLogic,
-    tooltipPosition: tooltipPosition
+    tooltipPosition: tooltipPosition,
     slideLeft: slideLeft,
     slideLeftNext: slideLeftNext
   }
