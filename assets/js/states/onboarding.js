@@ -90,8 +90,6 @@
 
         if (n === 4) {
           timeline.clear()
-          //timeline.stop()
-
 
           $('#slide_4_plain_text > path').each(function(i) { 
             TweenLite.set($('#slide_4_plain_text > path')[i], {opacity: 1.0})
@@ -125,26 +123,40 @@
             })
 
             $('#slide_4_encrypted_emoji > g').each(function(i) { 
-              TweenLite.to($('#slide_4_encrypted_emoji > g')[i], text_animation_duration, {delay: i * text_animation_duration, opacity: 1.0})
+              TweenLite.to($(this), text_animation_duration, {delay: i * text_animation_duration, opacity: 1.0})
             })
           }})
-
-          // timeline.to($("#slide_4_emoji_2"), 0.3, {opacity: 0.2})
-          // .to($("#slide_4_emoji_2"), 0.3, {opacity: 1.0})
-
-          
-          
-
-          // $('#slide_4_encrypted_emoji > g').each(function(i) { 
-          //   TweenLite.to($('#slide_4_encrypted_emoji > g')[i], text_animation_duration, {delay: i * text_animation_duration, opacity: 1.0})
-          // })
         }
 
         if (n === 5) {
           timeline.clear()
-          timeline.to($("#slide_5_emoji_selector"), 1.5, {delay: 1, x: "-73"})
-          timeline.to($("#slide_5_emoji_selector"), 0.0, {delay: 1, x: "77"})
-          timeline.to($("#slide_5_emoji_selector"), 1.5, {delay: 1, x: "0rem"})
+          timeline.set($('#slide_5_delivered_text'), {y: 100, opacity: 0})
+          timeline.set($('#slide_5_bubble_white_text_bg'), {y: 100, opacity: 0})
+          timeline.set($('#slide_5_bubble_white_text'), {opacity: 0})
+          timeline.set($('#slide_5_bubble_white_dots_bg'), {opacity: 0})
+          timeline.set($('#slide_5_bubble_white_dots > circle')[0], {opacity: 0})
+          timeline.set($('#slide_5_bubble_white_dots > circle')[1], {opacity: 0})
+          timeline.set($('#slide_5_bubble_white_dots > circle')[2], {opacity: 0})
+
+          timeline.to($('#slide_5_delivered_text'), 0.5, {delay: 0.5, y: 0, opacity: 1})
+          .to($('#slide_5_bubble_white_dots_bg'), 0.5, {delay: 0.5, y: 0, opacity: 1})
+          .to($('#slide_5_bubble_white_dots > circle')[0], 0.0, {opacity: 1})
+          .to($('#slide_5_bubble_white_dots > circle')[1], 0.0, {opacity: 1})
+          .to($('#slide_5_bubble_white_dots > circle')[2], 0.0, {opacity: 1})
+          .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: -5})
+          .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: -5})
+          .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: -5})
+          .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: 0})
+          .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: 0})
+          .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: 0})
+          .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: -5})
+          .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: -5})
+          .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: -5})
+          .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: 0})
+          .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: 0})
+          .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: 0})
+
+
         }
       },
       leave: function () {
