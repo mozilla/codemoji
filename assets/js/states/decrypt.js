@@ -9,6 +9,8 @@
   Cryptoloji.states.decrypt = {
     enter: function (options) {
 
+      $('.main_share').css({y:100})
+      $('.decrypt_feedback').css({y:200})
       
       // Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
@@ -67,23 +69,37 @@
       // wrong key handler
       Cryptoloji.stateman.on('decrypt:wrong-key', function () {
         console.log('wrong key')
-        $('#decryption_reply_button').removeClass('main_share-open')
-        if ($('#decryption_reply_button').hasClass('decrypt_feedback-open')) {
-          $('#decryption_reply_button').removeClass('decrypt_feedback-open')
-          setTimeout(function() {
-            $('#decryption_reply_button').addClass('decrypt_feedback-open')
-          }, 200)
-        } else {
-          $('#decryption_reply_button').addClass('decrypt_feedback-open')
+        $('.main_share').transition({duration:1000, y:100, easing:'easeInOutExpo'})
+
+        var y = $('.decrypt_feedback').css('y')
+        if(y == '0px'){
+          $('.decrypt_feedback').css({scale:1.1})
+          $('.decrypt_feedback').transition({duration:1000, scale:1, easing:'easeOutExpo'})
+        }else{
+          $('.decrypt_feedback').transition({duration:1000, y:0, easing:'easeInOutExpo'})
         }
+        
+
+
+
+        // $('#decryption_reply_button').removeClass('main_share-open')
+        // if ($('#decryption_reply_button').hasClass('decrypt_feedback-open')) {
+        //   $('#decryption_reply_button').removeClass('decrypt_feedback-open')
+        //   setTimeout(function() {
+        //     $('#decryption_reply_button').addClass('decrypt_feedback-open')
+        //   }, 200)
+        // } else {
+        //   $('#decryption_reply_button').addClass('decrypt_feedback-open')
+        // }
       })
 
       // right key handler
       Cryptoloji.stateman.on('decrypt:right-key', function () {
         console.log('right key')
         $('body').removeClass('main_key_modal-open')
-        $('#decryption_reply_button').removeClass('decrypt_feedback-open')
-        $('#decryption_reply_button').addClass('main_share-open')
+
+        $('.main_share').transition({duration:1000, y:0, easing:'easeInOutExpo'})
+        $('.decrypt_feedback').transition({duration:1000, y:200, easing:'easeOutExpo'})
       })
     },
     leave: function () {

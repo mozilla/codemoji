@@ -386,8 +386,6 @@
   right: 0;
   width: 100%;
   padding: 0 2rem;
-  transform: translate(0,300%);
-  transition: transform .5s;
   z-index: 9;
 }
 

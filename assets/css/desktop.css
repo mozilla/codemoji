@@ -244,6 +244,9 @@
     font-size: 120%;
   }
 
+  #key-modal{
+    display: none;
+  }
 }
 
 
