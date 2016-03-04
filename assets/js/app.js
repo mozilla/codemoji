@@ -11,16 +11,6 @@
     FastClick.attach(document.body);
 
     // remove main loader
-
-    $('#mainHeaderBig').css({y:-300})
-    $('#footer').css({y:200})
-    $('#body_landing').css({opacity:0})
-    setTimeout(function(){
-          $('#body_landing').transition({opacity:1, duration:750})
-          $('#mainHeaderBig').transition({y:0, duration:750, delay:1000})
-          $('#footer').transition({y:0, duration:750, delay:1250})
-    },10)
-
     $('#mainLoader').remove();
 
     TweenLite.to('#body_landing', .75, {opacity:1, delay:.2, ease:Expo.easeInOut})
