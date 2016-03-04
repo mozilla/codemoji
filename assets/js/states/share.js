@@ -59,9 +59,10 @@
       })
     },
     leave: function () {
-      TweenLite.to($('.section_share'), .75, {y: window.innerHeight, ease:Expo.easeInOut, onComplete: function(){
+      $('.section_share').transition({duration:750, y:window.innerHeight, easing:'easeInOutExpo', complete: function(){
         $('.section_share').removeClass('section-show')
       }})
+      
       // $(".section_share").removeClass("section-show")
       linkClipboard.destroy()
       keyClipboard.destroy()

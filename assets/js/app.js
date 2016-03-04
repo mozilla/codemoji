@@ -13,8 +13,6 @@
     // remove main loader
     $('#mainLoader').remove();
 
-    TweenLite.to('#body_landing', .75, {opacity:1, delay:.2, ease:Expo.easeInOut})
-
 
     // 
     // fix height

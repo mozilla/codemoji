@@ -8,7 +8,7 @@
 
       Cryptoloji.stateman.emit('header:hide')
       Cryptoloji.stateman.emit('footer:show') 
-      
+
       $(".section_welcome").addClass("section-show")
 
       $('#mainHeaderBig').css({y:-300})
