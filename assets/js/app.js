@@ -12,15 +12,18 @@
 
     // remove main loader
 
-    TweenLite.set('.section_welcome_header', {y:-300})
-    TweenLite.set('#footer', {y:200})
-    TweenLite.set('#body_landing', {opacity:0})
+    $('#mainHeaderBig').css({y:-300})
+    $('#footer').css({y:200})
+    $('#body_landing').css({opacity:0})
+    setTimeout(function(){
+          $('#body_landing').transition({opacity:1, duration:750})
+          $('#mainHeaderBig').transition({y:0, duration:750, delay:1000})
+          $('#footer').transition({y:0, duration:750, delay:1250})
+    },10)
 
     $('#mainLoader').remove();
 
     TweenLite.to('#body_landing', .75, {opacity:1, delay:.2, ease:Expo.easeInOut})
-    TweenLite.to('.section_welcome_header', .75, {y:0, delay:1.2, ease:Expo.easeInOut})
-    TweenLite.to('#footer', .75, {y:0, delay:1.8, ease:Expo.easeInOut})
 
 
     // 
