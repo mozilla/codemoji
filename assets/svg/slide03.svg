@@ -66,7 +66,7 @@
 	</g>
 	<g id="tap">
 	</g>
-	<path fill="#3B88C3" d="M738.1,325.6H411.9c-11,0-20-9-20-20V119.1c0-11,9-20,20-20h326.4c11,0,20,9,20,20v186.1
+	<path id="slide_4_plain_text_bg" fill="#3B88C3" d="M738.1,325.6H411.9c-11,0-20-9-20-20V119.1c0-11,9-20,20-20h326.4c11,0,20,9,20,20v186.1
 		C758.1,316.6,749.1,325.6,738.1,325.6z"/>
 	<g>
 		<text transform="matrix(1 0 0 1 408.3732 562.4642)" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="30.8571">WRITE THE MESSAGE </text>
