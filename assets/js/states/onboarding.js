@@ -1,6 +1,10 @@
 (function (window, Cryptoloji, undefined) {
   'use strict'
-
+  var timeline = new TimelineLite({onComplete: function() {
+    //loop the animation
+    this.restart()
+  }});
+  
   Cryptoloji.states.onboarding = {}
   Cryptoloji.states.onboarding.root = {
     enter: function () {
@@ -59,6 +63,30 @@
           else {
             Cryptoloji.UI.animate_onboarding(svg_elements)
           }
+        }
+
+        if (n === 3) {
+          timeline.clear()
+          $('#slide_4_plain_text > path').each(function(i) {
+            TweenLite.set($('#slide_4_plain_text > path')[i], {opacity: 0.0})
+          })
+
+         
+
+        }
+
+        if (n === 4) {
+          timeline.clear()
+          timeline.to($("#slide_4_emoji_2"), 0.3, {opacity: 0.2})
+          timeline.to($("#slide_4_emoji_2"), 0.3, {opacity: 1.0})
+          //timeline.to($("#slide_4_emoji_2"), 1, {scale: 1.5})
+        }
+
+        if (n === 5) {
+          timeline.clear()
+          timeline.to($("#slide_5_emoji_selector"), 1.5, {delay: 1, x: "-73", transformOrigin:'50% 50%'})
+          timeline.to($("#slide_5_emoji_selector"), 0.0, {delay: 1, x: "77", transformOrigin:'50% 50%'})
+          timeline.to($("#slide_5_emoji_selector"), 1.5, {delay: 1, x: "0rem", transformOrigin:'50% 50%'})
         }
       },
       leave: function () {
