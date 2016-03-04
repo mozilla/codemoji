@@ -374,14 +374,9 @@
   left: 0;
   right: 0;
   width: 100%;  
-  transform: translate(0,300%);
-  transition: transform .5s;
   z-index: 9;
 }
 
-.main_share-open .main_share{
-  transform: translate(0,0%);
-}
 
 .decrypt_feedback{
   /*height: 45px;*/

@@ -8,6 +8,8 @@
 
   Cryptoloji.states.decrypt = {
     enter: function (options) {
+
+      
       // Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
 

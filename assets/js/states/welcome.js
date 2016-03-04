@@ -19,14 +19,15 @@
             $('#body_landing').transition({opacity:1, duration:750})
             $('#mainHeaderBig').transition({y:0, duration:1000, delay:500, easing:'easeInOutExpo'})
             $('#footer').transition({y:0, duration:1000, delay:750, easing:'easeInOutExpo'})
-      },5)
+      },0)
 
     },
     leave: function () {
 
+      $('#mainHeaderBig').transition({y:-300, duration:500, easing:'easeInOutExpo'})
+
       $('#body_landing').transition({opacity:0, duration:500, complete:function(){
         $(".section_welcome").removeClass("section-show")
-        
       }})
       Cryptoloji.stateman.emit('footer:hide') 
       
