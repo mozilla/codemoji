@@ -66,7 +66,14 @@
       Cryptoloji.stateman.on('decrypt:wrong-key', function () {
         console.log('wrong key')
         $('#decryption_reply_button').removeClass('main_share-open')
-        $('#decryption_reply_button').addClass('decrypt_feedback-open')
+        if ($('#decryption_reply_button').hasClass('decrypt_feedback-open')) {
+          $('#decryption_reply_button').removeClass('decrypt_feedback-open')
+          setTimeout(function() {
+            $('#decryption_reply_button').addClass('decrypt_feedback-open')
+          }, 200)
+        } else {
+          $('#decryption_reply_button').addClass('decrypt_feedback-open')
+        }
       })
 
       // right key handler
