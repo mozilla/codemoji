@@ -13,10 +13,14 @@
 
       $('#mainHeaderBig').css({y:-300})
       $('#footer').css({y:200})
-      $('#body_landing').css({opacity:0})
+      $('#body_landing').children().each(function(i, e){
+        $(e).css({opacity:0})
+      })
 
       setTimeout(function(){
-            $('#body_landing').transition({opacity:1, duration:750})
+            $('#body_landing').children().each(function(i, e){
+              $(e).transition({opacity:1, delay:i*125, duration:500})
+            })
             $('#mainHeaderBig').transition({y:0, duration:1000, delay:500, easing:'easeInOutExpo'})
             $('#footer').transition({y:0, duration:1000, delay:750, easing:'easeInOutExpo'})
       },0)

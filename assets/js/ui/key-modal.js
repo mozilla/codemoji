@@ -20,6 +20,10 @@
 
     _setupGlobalHandler()
 
+    var h = $('.section_main.encryption .header').height() + $('.section_main.encryption .main_content_top').height()
+    $('.main_key_modal').css({height: h, y:-h})
+
+
     $('.main_key_modal_emoji_container', self.$element).on('click', '.key', self.onClick.bind(this))
     return self
   }
@@ -35,6 +39,8 @@
     var self = this
     $('body').removeClass('main_key_modal-open')
     Cryptoloji.stateman.emit('encrypt:show-share')
+    var h = $('.main_key_modal').height()
+    $('.main_key_modal').transition({y:-h, duration:750, easing:'easeInOutExpo'})
     return self
   }
 
@@ -104,6 +110,8 @@
         // hide share button when you open the key modal to choose a new key
         Cryptoloji.stateman.emit('encrypt:hide-share')
         $('body').addClass('main_key_modal-open')
+
+        $('.main_key_modal').transition({y:0, duration:750, easing:'easeInOutExpo'})
       }
     }
 
