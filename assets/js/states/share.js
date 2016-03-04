@@ -32,11 +32,7 @@
       }
       if (emojiLength == 1) {
         emojiSize = emojiSize * 12
-      } else if (emojiLength >= 2 && emojiLength < 4) {
-        emojiSize = emojiSize * 8
-      } else if (emojiLength >= 4 && emojiLength < 6) {
-        emojiSize = emojiSize * 6
-      } else if (emojiLength >= 6 && emojiLength < 13) {
+      } else if (emojiLength >= 2 && emojiLength < 13) {
         emojiSize = emojiSize * 4
       } else if (emojiLength >= 13 && emojiLength < 20) {
         emojiSize = emojiSize * 3

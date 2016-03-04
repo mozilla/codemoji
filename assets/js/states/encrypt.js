@@ -6,6 +6,9 @@
       var theater = theaterJS()
 
       $('.main_share').css({y:100})
+      if (!_.isEmpty(Cryptoloji.current.output)) {
+        $('.main_share').transition({delay:500, duration:1000, y:0, easing:'easeInOutExpo'})
+      }
 
       if(Cryptoloji.stateman.previous.name === 'welcome'){
         $('#encryptHeader').css({y:-300})
