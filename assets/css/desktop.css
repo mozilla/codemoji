@@ -225,6 +225,25 @@
     font-size: 90%;
     line-height: 22px;
   }
+
+  .share_key-wrapper,
+  .share_key_emoji-item_before, .share_key_emoji-item_after,
+  .share_key_emoji-item {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .share_key_emoji-item {
+    font-size: 75%;
+    padding-left: 1.5rem;
+  }
+
+  .share_key_sentence {
+    max-width: 40rem;
+    line-height: 4rem;
+    font-size: 120%;
+  }
+
 }
 
 

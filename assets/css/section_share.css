@@ -187,6 +187,9 @@ input#share_copytoclipboard {
   margin-top: 1rem;
   font-size: 96%;
 }
+.share_message_item img{
+  margin: .1rem .14rem
+}
 
 .share_social_wrapper{
   margin-top: 1.5rem;

@@ -75,12 +75,12 @@
       $('.encryption').addClass('section-show')
 
       // encrypt text on input
-      $('#encryption_input').bind('input propertychange', function () {
+      $('#encryption_input').bind('input propertychange', _.debounce(function () {
         Cryptoloji.UI.encryptText()
         if (_.isEmpty($('#encryption_input').val())) {
           emptyOutput()
         }
-      })
+      }, 350))
 
       // show share button at proper time
       Cryptoloji.stateman.on('encrypt:show-share', function () {
