@@ -18,8 +18,18 @@
   // function
   // 
   
-  function function_name () {
-     // body...  
+  function slideLogic (n) {
+      Cryptoloji.UI.paginationLogic(n)
+      switch (n) {
+        case 1:
+              var svg_elements = ["#onboarding_slide_1_encrypted_hello g", "#onboarding_slide_1_encrypted_hello_2 g", "#onboarding_slide_1_encrypted_hello_3 g", "#onboarding_slide_1_encrypted_hello_4 g"]         
+              Cryptoloji.UI.animate_onboarding(svg_elements)
+          break;
+        case 2:
+              var svg_elements = ["#onboarding_slide_2_encrypted_hello>g", "#onboarding_slide_2_encrypted_hello_2>g", "#onboarding_slide_2_encrypted_hello_3>g", "#onboarding_slide_2_encrypted_hello_4>g"]
+              Cryptoloji.UI.animate_onboarding(svg_elements)
+          break;
+      }
   }
 
   function next_slide(n){
@@ -42,40 +52,14 @@
 
         if (Cryptoloji.UI.svg_loaded.length === $('[data-svg]').length){
           // if svgs are preloaded so you are caming from welcome
-          // load pagination bottom icon logic 
-          Cryptoloji.UI.paginationLogic(n)
+         slideLogic (n)
         } else {
           // wait for all svgs
           Cryptoloji.stateman.on('svg:loaded-all', function() {
-            console.log('all svgs loaded')
-            Cryptoloji.UI.paginationLogic(n)
-            if (n === 1){
-              var svg_elements = ["#onboarding_slide_1_encrypted_hello g", "#onboarding_slide_1_encrypted_hello_2 g", "#onboarding_slide_1_encrypted_hello_3 g", "#onboarding_slide_1_encrypted_hello_4 g"]         
-              Cryptoloji.UI.animate_onboarding(svg_elements)
-            }
-
+            slideLogic (n)
           })
         }
 
-
-        if (n === 2) {
-          //Set the array to be passed to the animation function with the name of the four groups we want to animate
-          var svg_elements = []
-          svg_elements.push("#onboarding_slide_2_encrypted_hello>g")
-          svg_elements.push("#onboarding_slide_2_encrypted_hello_2>g")
-          svg_elements.push("#onboarding_slide_2_encrypted_hello_3>g")
-          svg_elements.push("#onboarding_slide_2_encrypted_hello_4>g")
-          if (_.indexOf(Cryptoloji.UI.svg_loaded, "assets/svg/slide02.svg") == -1) {
-            Cryptoloji.stateman.on('svg:loaded', function(path) {
-              if (path === "assets/svg/slide02.svg") {
-                Cryptoloji.UI.animate_onboarding(svg_elements)
-              }
-            })
-          }
-          else {
-            Cryptoloji.UI.animate_onboarding(svg_elements)
-          }
-        }
 
         if (n === 3) {
           $('#slide_3_plain_text > path').each(function(i) {
