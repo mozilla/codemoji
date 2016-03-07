@@ -28,6 +28,7 @@
     "punycode": "^1.4.0",
     "clipboard": "^1.5.8",
     "cookie": "^1.1.0",
-    "jquery.transit": "^0.9.12"
+    "jquery.transit": "^0.9.12",
+    "youarei": "^1.0.1"
   }
 }
