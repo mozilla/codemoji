@@ -2,6 +2,14 @@
   'use strict'
   
   Cryptoloji.states.landing = {
+    canEnter: function () {
+      console.log(Cryptoloji.storage.get('message'))
+      // verify a message is present in the storage
+      if (_.isUndefined(Cryptoloji.storage.get('message')) || _.isEmpty(Cryptoloji.storage.get('message'))) {
+        // if not redirect to not found state
+        Cryptoloji.stateman.go('404')
+      }
+    },
     enter: function () {
       fillMessage()
 
