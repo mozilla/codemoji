@@ -164,6 +164,16 @@
 
   function fillLinkForClipboardCopy () {
     // fill copy to clipboard link input
+    // first store message and key
+    Cryptoloji.storage.set('message', Cryptoloji.current.output)
+    Cryptoloji.storage.set('key', Cryptoloji.current.key)
+    // create URL
+    var uri = new YouAreI(Cryptoloji.storage.getPersistedURL())
+    uri.fragment('/landing')
+    var shareURI = uri.toString()
+    // fill link
+    $('#share_copytoclipboard').attr('data-clipboard-text', shareURI)
+    $('#share_copytoclipboard').val(shareURI)
   }
 
   function fillKeyForClipboardCopy () {
