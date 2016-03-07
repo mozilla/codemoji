@@ -106,6 +106,8 @@
       Cryptoloji.stateman.off('keypanel')
       Cryptoloji.stateman.off('keymodal')
       $('.section_more').removeClass('section-show')
+      // reset current object before proceeding
+      Cryptoloji.current = { input: null, output: null, key: null }
     }
   }
 
