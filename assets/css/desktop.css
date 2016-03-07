@@ -1,4 +1,8 @@
 @media screen and (min-width: 1024px) {
+
+  html[orientation="landscape"] .landscape-overlay {
+    display: none;
+  }
   
   body [hideItIfMobile]{
     display: block;
