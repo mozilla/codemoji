@@ -19,14 +19,15 @@
   // 
   
   function slideLogic (n) {
+
       Cryptoloji.UI.paginationLogic(n)
       switch (n) {
+
         case 1:
               var svg_elements = []    
               _.times(4, function(i){
                 svg_elements.push("#onboarding_slide_1_encrypted_hello_" + (i+1) + ">g")
-              })     
-              console.log("SVGS " + svg_elements)
+              })  
               Cryptoloji.UI.animate_onboarding(svg_elements)
           break
 

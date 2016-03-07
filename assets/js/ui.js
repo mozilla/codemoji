@@ -418,7 +418,7 @@
 
     //Duration of a single letter transition
     var animation_duration = 0.2
-    var animation_delay = 0.8
+    var animation_delay = .8
     var y_transform = 20
     
     //First svg group containing encrypted letter
@@ -441,7 +441,7 @@
 
 
     //First encrypted word animation
-    .to(third_group[4], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(third_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
     .to(first_group[4], animation_duration, {y: 0, opacity: 1.0})
     .to(third_group[3], animation_duration, {y: y_transform, opacity: 0.0})
     .to(first_group[3], animation_duration, {y: 0, opacity: 1.0})
