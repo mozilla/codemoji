@@ -333,12 +333,14 @@
       TweenLite.set($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), {opacity: "0"})
       TweenLite.set($('.'+state+' .main_content_bottom_input.placeholdit'), {opacity: "0"})
       TweenLite.set($('.'+state+' .main_content_top_input'), {opacity: "0"})
-      TweenLite.set($('.'+state+' .encryption_help_button > svg'), {opacity: 0, scale:1.3})
+      // TweenLite.set($('.'+state+' .encryption_help_button > svg'), {opacity: 0, scale:1.3})
+      TweenLite.set($('.'+state+'_help_button'), {opacity: 0})
 
 
       // keyslider width
       TweenLite.to($('.'+state+' .main_keyslider'), 0.5, {delay: 0, width: "35%"})
-      TweenLite.to($('.'+state+' .encryption_help_button > svg'), 1.25, {delay: 2.5, opacity: 1, scale:1, ease:Elastic.easeInOut})
+      // TweenLite.to($('.'+state+' .encryption_help_button > svg'), 1.25, {delay: 2.5, opacity: 1, scale: 1, ease:Elastic.easeInOut})
+      TweenLite.to($('.'+state+'_help_button'), 1.25, {delay: 2.5, opacity: 1, ease:Elastic.easeInOut})
       // emoji in keyslider
       // then load nano scroller
       TweenLite.to($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), .5, {delay: 1, opacity: "1", onComplete: function(){
