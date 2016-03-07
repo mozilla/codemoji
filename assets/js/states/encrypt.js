@@ -35,7 +35,7 @@
         animateInputPlaceholder(theater)
 
         Cryptoloji.UI.Keyslider('encrypt', '#encryption_keyslider')
-          .fill(_.take(EmojiList, 10))
+          .fill(keysliderEmojiList)
 
         Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
           // select corresponding emoji in keymodal
