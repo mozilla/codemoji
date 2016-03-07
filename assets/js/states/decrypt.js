@@ -9,9 +9,6 @@
   Cryptoloji.states.decrypt = {
     enter: function (options) {
 
-      $('.main_share').css({y:100})
-      $('.decrypt_feedback').css({y:200})
-      
       // Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
 
@@ -25,13 +22,7 @@
       }
       $(".decryption").addClass("section-show")
 
-
-      Cryptoloji.Api.getMessage(options.param.id)
-        .then(function (result) {
-          Cryptoloji.UI.showDecryptableText(result.message)
-          correctKey = result.key
-        })  
-        .catch(function () { alert('cannot retrieve from server') })   
+      initFromStorage()
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
         // select corresponding emoji in keymodal
@@ -69,28 +60,15 @@
       // wrong key handler
       Cryptoloji.stateman.on('decrypt:wrong-key', function () {
         console.log('wrong key')
-        $('.main_share').transition({duration:1000, y:100, easing:'easeInOutExpo'})
+        $('.main_share').removeClass('main_share-visible')
 
-        var y = $('.decrypt_feedback').css('y')
-        if(y == '0px'){
-          $('.decrypt_feedback').css({scale:1.1})
-          $('.decrypt_feedback').transition({duration:1000, scale:1, easing:'easeOutExpo'})
-        }else{
-          $('.decrypt_feedback').transition({duration:1000, y:0, easing:'easeInOutExpo'})
+        // decrypt_feedback is already visible, make it bounce
+        if ($('.decrypt_feedback').hasClass('decrypt_feedback-visible')) {
+          $('.decrypt_feedback').addClass('decrypt_feedback-bounce')
+          setTimeout(function () { $('.decrypt_feedback').removeClass('decrypt_feedback-bounce') }, 1000)
         }
-        
-
-
-
-        // $('#decryption_reply_button').removeClass('main_share-open')
-        // if ($('#decryption_reply_button').hasClass('decrypt_feedback-open')) {
-        //   $('#decryption_reply_button').removeClass('decrypt_feedback-open')
-        //   setTimeout(function() {
-        //     $('#decryption_reply_button').addClass('decrypt_feedback-open')
-        //   }, 200)
-        // } else {
-        //   $('#decryption_reply_button').addClass('decrypt_feedback-open')
-        // }
+        // now set decrypt visible ( this avoids bounce on first animation )
+        $('.decrypt_feedback').addClass('decrypt_feedback-visible')
       })
 
       // right key handler
@@ -98,8 +76,8 @@
         console.log('right key')
         $('body').removeClass('main_key_modal-open')
 
-        $('.main_share').transition({duration:1000, y:0, easing:'easeInOutExpo'})
-        $('.decrypt_feedback').transition({duration:1000, y:200, easing:'easeOutExpo'})
+        $('.decrypt_feedback').removeClass('decrypt_feedback-visible')
+        $('.main_share').addClass('main_share-visible')
       })
     },
     leave: function () {
@@ -112,12 +90,22 @@
       Cryptoloji.stateman.off('keypanel')
       Cryptoloji.stateman.off('keymodal')
       $('.section_more').removeClass('section-show')
+      // reset current object before proceeding
+      Cryptoloji.current = { input: null, output: null, key: null }
+      // reset main share
+      $('.main_share').removeClass('main_share-visible')
     }
   }
 
   function scrollToSelectedKey () {
     var value = $('.keyslider .selected', $('.section-show')).position().left - Cryptoloji.utils.remToPx(1.7)
     $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
+  }
+
+  function initFromStorage () {
+    Cryptoloji.UI.showDecryptableText(Cryptoloji.storage.get('message'))
+    correctKey = Cryptoloji.storage.get('key')
+    CryptoLib.generateEmojiSubsetFrom(correctKey)
   }
 
 })(window, window.Cryptoloji); 

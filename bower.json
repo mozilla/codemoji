@@ -22,12 +22,12 @@
     "jquery": "~2.2.0",
     "esrever": "~0.2.0",
     "stateman": "0.2.0",
-    "q": "1.0.1",
     "gsap": "~1.18.2",
     "rebound-js": "~0.0.10",
     "punycode": "^1.4.0",
     "clipboard": "^1.5.8",
     "cookie": "^1.1.0",
-    "jquery.transit": "^0.9.12"
+    "jquery.transit": "^0.9.12",
+    "youarei": "^1.0.1"
   }
 }

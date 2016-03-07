@@ -13,6 +13,10 @@
     // remove main loader
     $('#mainLoader').remove();
 
+    //
+    // Storage initialization
+    //
+    Cryptoloji.storage.init()
 
     // 
     // fix height

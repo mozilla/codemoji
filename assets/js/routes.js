@@ -8,7 +8,7 @@
   stateman
     .state('welcome', Cryptoloji.states.welcome)
     .state('encrypt', Cryptoloji.states.encrypt)
-    .state('decrypt/:id', Cryptoloji.states.decrypt)
+    .state('decrypt', Cryptoloji.states.decrypt)
     .state('share',   Cryptoloji.states.share)
     .state('onboarding', Cryptoloji.states.onboarding.root)
     // use nested states
