@@ -9,6 +9,8 @@
   Cryptoloji.states.decrypt = {
     enter: function (options) {
 
+      $('.decrypt_feedback').css({y:200})
+      
       // Cryptoloji.stateman.emit('header:show')
       Cryptoloji.stateman.emit('footer:show') 
 
@@ -62,13 +64,13 @@
         console.log('wrong key')
         $('.main_share').removeClass('main_share-visible')
 
-        // decrypt_feedback is already visible, make it bounce
-        if ($('.decrypt_feedback').hasClass('decrypt_feedback-visible')) {
-          $('.decrypt_feedback').addClass('decrypt_feedback-bounce')
-          setTimeout(function () { $('.decrypt_feedback').removeClass('decrypt_feedback-bounce') }, 1000)
+        var y = $('.decrypt_feedback').css('y')
+        if(y == '0px'){
+          $('.decrypt_feedback').css({scale:1.1})
+          $('.decrypt_feedback').transition({duration:1000, scale:1, easing:'easeOutExpo'})
+        }else{
+          $('.decrypt_feedback').transition({duration:1000, y:0, easing:'easeInOutExpo'})
         }
-        // now set decrypt visible ( this avoids bounce on first animation )
-        $('.decrypt_feedback').addClass('decrypt_feedback-visible')
       })
 
       // right key handler
@@ -76,7 +78,8 @@
         console.log('right key')
         $('body').removeClass('main_key_modal-open')
 
-        $('.decrypt_feedback').removeClass('decrypt_feedback-visible')
+        $('.decrypt_feedback').transition({duration:1000, y:200, easing:'easeInOutExpo'})
+
         $('.main_share').addClass('main_share-visible')
       })
     },

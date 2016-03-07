@@ -375,7 +375,7 @@
   right: 0;
   width: 100%;  
   z-index: 9;
-  transition: transform 1s ease-in-out;
+  transition: transform 1s cubic-bezier(1,0,0,1);
   transform: translate(0, 100px);
 }
 .main_share.main_share-visible {
@@ -391,20 +391,12 @@
   width: 100%;
   padding: 0 2rem;
   z-index: 9;
-  transition: transform 1s ease-in-out, scale .1s ease-out;
-  transform: translate(0, 200px) scale(1);
 }
 
 .decrypt_feedback .wrong_mozilla_key{
   display: none;
 }
 
-.decrypt_feedback.decrypt_feedback-visible{
-  transform: translate(0,0%);
-}
-.decrypt_feedback.decrypt_feedback-bounce{
-  transform: scale(1.1);
-}
 
 .main_keyslider_plus{
   height: 100%;
