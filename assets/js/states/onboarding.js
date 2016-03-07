@@ -26,6 +26,7 @@
               _.times(4, function(i){
                 svg_elements.push("#onboarding_slide_1_encrypted_hello_" + (i+1) + ">g")
               })     
+              console.log("SVGS " + svg_elements)
               Cryptoloji.UI.animate_onboarding(svg_elements)
           break
 
@@ -33,7 +34,7 @@
               var svg_elements = []    
               _.times(4, function(i){
                 svg_elements.push("#onboarding_slide_2_encrypted_hello_" + (i+1) + ">g")
-              })                   
+              })         
               Cryptoloji.UI.animate_onboarding(svg_elements)
           break
 
@@ -81,16 +82,8 @@
         $('#next_button_onboarding').on("click", function(){
           Cryptoloji.stateman.go('onboarding.step'+(n+1))
         })
-
-        if (Cryptoloji.UI.svg_loaded.length === $('[data-svg]').length){
-          // if svgs are preloaded so you are caming from welcome
-         slideLogic (n)
-        } else {
-          // wait for all svgs
-          Cryptoloji.stateman.on('svg:loaded-all', function() {
-            slideLogic (n)
-          })
-        }
+        
+        slideLogic (n)
       },
       leave: function () {
         $('[slide-num="'+n+'"]').removeClass("section-show")
