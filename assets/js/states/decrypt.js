@@ -25,9 +25,7 @@
       }
       $(".decryption").addClass("section-show")
 
-      Cryptoloji.UI.showDecryptableText(Cryptoloji.storage.get('message'))
-      correctKey = Cryptoloji.storage.get('key')
-      CryptoLib.generateEmojiSubsetFrom(correctKey)
+      initFromStorage()
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
         // select corresponding emoji in keymodal
@@ -114,6 +112,12 @@
   function scrollToSelectedKey () {
     var value = $('.keyslider .selected', $('.section-show')).position().left - Cryptoloji.utils.remToPx(1.7)
     $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
+  }
+
+  function initFromStorage () {
+    Cryptoloji.UI.showDecryptableText(Cryptoloji.storage.get('message'))
+    correctKey = Cryptoloji.storage.get('key')
+    CryptoLib.generateEmojiSubsetFrom(correctKey)
   }
 
 })(window, window.Cryptoloji); 
