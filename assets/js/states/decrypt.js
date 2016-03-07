@@ -9,7 +9,6 @@
   Cryptoloji.states.decrypt = {
     enter: function (options) {
 
-      $('.main_share').css({y:100})
       $('.decrypt_feedback').css({y:200})
       
       // Cryptoloji.stateman.emit('header:show')
@@ -63,7 +62,7 @@
       // wrong key handler
       Cryptoloji.stateman.on('decrypt:wrong-key', function () {
         console.log('wrong key')
-        $('.main_share').transition({duration:1000, y:100, easing:'easeInOutExpo'})
+        $('.main_share').addClass('main_share-visible')
 
         var y = $('.decrypt_feedback').css('y')
         if(y == '0px'){
@@ -92,7 +91,7 @@
         console.log('right key')
         $('body').removeClass('main_key_modal-open')
 
-        $('.main_share').transition({duration:1000, y:0, easing:'easeInOutExpo'})
+        $('.main_share').addClass('main_share-visible')
         $('.decrypt_feedback').transition({duration:1000, y:200, easing:'easeOutExpo'})
       })
     },
@@ -108,6 +107,8 @@
       $('.section_more').removeClass('section-show')
       // reset current object before proceeding
       Cryptoloji.current = { input: null, output: null, key: null }
+      // reset main share
+      $('.main_share').removeClass('main_share-visible')
     }
   }
 

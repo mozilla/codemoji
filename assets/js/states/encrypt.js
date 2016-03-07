@@ -5,9 +5,8 @@
     enter: function () {
       var theater = theaterJS()
 
-      $('.main_share').css({y:100})
       if (!_.isEmpty(Cryptoloji.current.output)) {
-        $('.main_share').transition({delay:500, duration:1000, y:0, easing:'easeInOutExpo'})
+        $('.main_share').addClass('main_share-visible')
       }
 
       if(Cryptoloji.stateman.previous.name === 'welcome'){
@@ -93,11 +92,11 @@
         // if want to show the share button only if key modal is closed
         // if (!$('body').hasClass('main_key_modal-open')) {}
         if (!_.isEmpty(text)) {
-          $('.main_share').transition({duration:1000, y:0, easing:'easeInOutExpo'})
+          $('.main_share').addClass('main_share-visible')
         }
       })
       Cryptoloji.stateman.on('encrypt:hide-share', function () {
-        $('.main_share').transition({duration:1000, y:100, easing:'easeInOutExpo'})
+        $('.main_share').removeClass('main_share-visible')
       })
 
       Cryptoloji.stateman.on('encrypt:animate-input-placeholder', function () {
@@ -137,6 +136,8 @@
       Cryptoloji.stateman.off('keypanel')
       Cryptoloji.stateman.off('keymodal')
       $('.section_more').removeClass('section-show')
+      // reset main share
+      $('.main_share').removeClass('main_share-visible')
     }
   }
 
@@ -177,7 +178,7 @@
     $('#encryption_output > .bluebox_output').html('')
     $('#encryption_output').addClass('placeholdit')
     $('.share_message_item').html('')
-    $('.main_share').transition({duration:1000, y:100, easing:'easeInOutExpo'})
+    $('.main_share').removeClass('main_share-visible')
   }
 
   function scrollToSelectedKey () {
