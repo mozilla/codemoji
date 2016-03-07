@@ -29,6 +29,11 @@
                 svg_elements.push("#onboarding_slide_1_encrypted_hello_" + (i+1) + ">g")
               })  
               Cryptoloji.UI.animate_onboarding(svg_elements)
+              TweenLite.set($('#onboarding_slide_1_text'), {opacity: 0})
+              TweenLite.set($('.mozilla_button'), {opacity: 0})
+              TweenLite.to($('#onboarding_slide_1_text'), .5, {delay: 2.8, opacity: 1})
+              TweenLite.to($('.mozilla_button'), .5, {delay: 3.8, opacity: 1})
+
           break
 
         case 2:
@@ -37,16 +42,24 @@
                 svg_elements.push("#onboarding_slide_2_encrypted_hello_" + (i+1) + ">g")
               })         
               Cryptoloji.UI.animate_onboarding(svg_elements)
+              TweenLite.set($('#onboarding_slide_2_text'), {opacity: 0})
+              TweenLite.set($('.mozilla_button'), {opacity: 0})
+              TweenLite.to($('#onboarding_slide_2_text'), .5, {delay: 2.8, opacity: 1})
+              TweenLite.to($('.mozilla_button'), .5, {delay: 3.8, opacity: 1})
           break
 
         case 3:
-            TweenLite.set($('#slide_3_plain_text > path'), {opacity: 0.0})
-            TweenLite.set($('#slide_3_plain_text_bg'), {y: -300})
-            TweenLite.to($("#slide_3_plain_text_bg"), 1, {y: 0})
-            $("#slide_3_plain_text > path").each(function(i){
+            TweenLite.set($('#onboarding_slide_3_plain_text > g'), {opacity: 0.0})
+            TweenLite.set($('#onboarding_slide_3_plain_text_bg'), {y: -300})
+            TweenLite.to($("#onboarding_slide_3_plain_text_bg"), 1, {y: 0})
+            $("#onboarding_slide_3_plain_text > g").each(function(i){
               var self = this
               TweenLite.to($(self), .1, {delay: i / 10 + 1 , opacity: 1.0})
             })
+            TweenLite.set($('#onboarding_slide_3_text'), {opacity: 0})
+            TweenLite.set($('.mozilla_button'), {opacity: 0})
+            TweenLite.to($('#onboarding_slide_3_text'), .5, {delay: 2.8, opacity: 1})
+            TweenLite.to($('.mozilla_button'), .5, {delay: 3.8, opacity: 1})
           break
           
         case 4:
