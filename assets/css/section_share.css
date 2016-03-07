@@ -94,26 +94,29 @@
   position: relative;
 }
 
-.share_key_emoji-item {
+.share_key_emoji-item{
+  background-color: transparent;
   position: relative;
   margin: 0;
-  border-radius: 50%;
   width: 4.5rem;
   height: 4.5rem;
-  font-size: 50%;
+  font-size: 80%;
   letter-spacing: 1px;
-  padding-top: 1.5rem;
-  padding-left: 1.2rem;
-
   box-sizing: border-box;
   border: none;
+  text-align: center;
   color: black;
   z-index: 1;
+  transform: translateY(5%);
 }
+
 .share_key-wrapper {
+  border-radius: 50%;
   height: 4.5rem;
   width: 4.5rem;
+  background-color: white;
 }
+
 .share_key_emoji-item_before,
 .share_key_emoji-item_after {
     content: "";
@@ -124,12 +127,12 @@
     position: absolute;
 }
 .share_key_emoji-item_before {
-    background-color: lightblue;
+    background-color: white;
     opacity: 0;
     animation: jumper 2s -0.333s ease-out infinite;
 }
 .share_key_emoji-item_after {
-    background-color: #ffffff;
+    background-color: white;
     opacity: 0;
     animation: jumper 2s -0.666s ease-out infinite;
 }
@@ -164,6 +167,10 @@ input#share_copytoclipboard {
   box-sizing: border-box;
   border: none;
   box-shadow: none;
+}
+
+input.share_key_emoji-item:value{
+  transform: translateY(100%);
 }
 
 .share_key_sentence{
