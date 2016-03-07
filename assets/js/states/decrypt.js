@@ -21,7 +21,7 @@
       // if we should serve a smaller version
       if (!Cryptoloji.mq.matches) {
         Cryptoloji.UI.Keyslider('decrypt', '#decryption_keyslider')
-          .fill(_.take(EmojiList, 10))
+          .fill(keysliderEmojiList)
       }
       $(".decryption").addClass("section-show")
 
