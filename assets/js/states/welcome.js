@@ -18,6 +18,7 @@
       })
 
       setTimeout(function(){
+        $('#body_landing').transition({opacity:1, duration:250})
             $('#body_landing').children().each(function(i, e){
               $(e).transition({opacity:1, delay:i*125, duration:500})
             })

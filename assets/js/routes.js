@@ -24,6 +24,7 @@
     .state('more', Cryptoloji.states.more)
     .state('landing', Cryptoloji.states.landing)
     .state('captcha', Cryptoloji.states.captcha)
+    .state('404', Cryptoloji.states.notFound)
 
   $('body').on('click', '[to-state]', function (event) {
     event.preventDefault()

@@ -67,7 +67,9 @@
       
     Cryptoloji.stateman.on('begin', function (event) { console.log('begin ', event) })
     Cryptoloji.stateman.on('end', function (phase) { console.log('end ', phase) })
-    Cryptoloji.stateman.on('notfound', function () { console.log('notfound') })
+    Cryptoloji.stateman.on('notfound', function () {
+      Cryptoloji.stateman.go('404')
+    })
 
 
     //

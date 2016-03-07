@@ -1,0 +1,9 @@
+.svg_wrapper_not_found{
+  width: 30rem;
+  height: auto;
+}
+
+.section_not_found .mozilla_button:hover{
+  background-color: #005189;
+  color: #fff;
+}
