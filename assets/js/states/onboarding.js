@@ -58,6 +58,10 @@
         case 6:
           animate_slide_6()
           break
+
+        case 7:
+          animate_slide_7()
+          break
       }
   }
 
@@ -187,7 +191,27 @@
     timeline.set($('#slide_6_bubble_white_dots_bg'), {opacity: 0})
     timeline.set($('#slide_6_bubble_white_dots'), {opacity: 0})
 
-    timeline.to($('#slide_6_emoji_bg'), 0.5, {y: -200})
+    TweenLite.to($('#slide_6_emoji_bg'), 0.5, {y: -150})
+    TweenLite.to($('#slide_6_bubble_white_text_bg'), 0.5, {y: -150})
+    TweenLite.to($('#slide_6_bubble_white_text'), 0.5, {y: -150})
+    //timeline.to($('#slide_6_emoji_bg'), 0.5, {y: -200})
+  }
+
+  function animate_slide_7() {
+    timeline.clear()
+    timeline.set($('#slide_7_mais_bg'), {y: 150, opacity: 0})
+    timeline.set($('#slide_7_mais'), {opacity: 0})
+    timeline.set($('#slide_7_answer_bg'), {y: 150, opacity: 0})
+    timeline.set($('#slide_7_answer_emoji'), {opacity: 0})
+    timeline.set($('#slide_7_answer_text'), {opacity: 0})
+    
+    timeline.to($('#slide_7_mais_bg'), 0.5, {y: 0, opacity: 1})
+    .to($('#slide_7_mais'), 0.5, {opacity: 1})
+    .to($('#slide_7_answer_bg'), 0.5, {y: 0, opacity: 1, onComplete: function() {
+      TweenLite.to($('#slide_7_answer_emoji'), 0.5, {opacity: 1})
+      TweenLite.to($('#slide_7_answer_text'), 0.5, {opacity: 1})
+    }})
+
   }
 
   Cryptoloji.states.onboarding.step1 = next_slide(1)
