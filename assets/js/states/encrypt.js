@@ -60,14 +60,16 @@
         })
       } else {
         Cryptoloji.stateman.on('keypanel:key-chosen', function (key) {
-          $('body').addClass('main_content_top_input-first')
-          setTimeout(function () {
-            $('body').removeClass('main_content_top_input-first')
-          }, 800)
+
           Cryptoloji.UI.selectKey(key)
           $('#encryption_selected_key').html(Cryptoloji.UI.toTwemoji(key))
           // coachmark error
           if (_.isEmpty($('#encryption_input').val())) {
+            $('body').addClass('main_content_top_input-first')
+            setTimeout(function () {
+              $('body').removeClass('main_content_top_input-first')
+              $('#encryption_input').focus()
+            }, 800)
             Cryptoloji.UI.KeyPanel('encrypt').tooltipAnimation(key)
           } else {
             Cryptoloji.UI.encryptText()

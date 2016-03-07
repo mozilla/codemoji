@@ -353,6 +353,9 @@
         TweenLite.to($('.'+state+' .main_content_top_input'), .5, {delay: 1.5, onComplete: function() {
           $('.'+state+' .main_content_top_input').css('opacity', '1')
           Cryptoloji.stateman.emit('encrypt:animate-input-placeholder')
+          setTimeout(function () {
+            $('#encryption_input').focus()
+          }, 1500)
         }})
       }
       // placeholder rigtht
