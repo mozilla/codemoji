@@ -56,7 +56,7 @@ content += '<script>twemoji.parse(document.body);</script>'
 content += '<div id="removed"></div>'
 content += '<script>var removed = [];\
 function toggle(event, codepoint) {\
-  event.target.parentE.classList.toggle("removed");\
+  event.target.classList.toggle("removed");\
   if (event.target.classList.contains("removed")) {\
     removed.push(codepoint);\
   } else {\
