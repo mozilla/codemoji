@@ -22,29 +22,42 @@
       Cryptoloji.UI.paginationLogic(n)
       switch (n) {
         case 1:
-              var svg_elements = ["#onboarding_slide_1_encrypted_hello g", "#onboarding_slide_1_encrypted_hello_2 g", "#onboarding_slide_1_encrypted_hello_3 g", "#onboarding_slide_1_encrypted_hello_4 g"]         
+              var svg_elements = []    
+              _.times(4, function(i){
+                svg_elements.push("#onboarding_slide_1_encrypted_hello_" + (i+1) + ">g")
+              })     
               Cryptoloji.UI.animate_onboarding(svg_elements)
-          break;
+          break
+
         case 2:
-              var svg_elements = ["#onboarding_slide_2_encrypted_hello>g", "#onboarding_slide_2_encrypted_hello_2>g", "#onboarding_slide_2_encrypted_hello_3>g", "#onboarding_slide_2_encrypted_hello_4>g"]
+              var svg_elements = []    
+              _.times(4, function(i){
+                svg_elements.push("#onboarding_slide_2_encrypted_hello_" + (i+1) + ">g")
+              })                   
               Cryptoloji.UI.animate_onboarding(svg_elements)
-          break;
+          break
 
         case 3:
-          animate_slide_3()
-          break;
+            TweenLite.set($('#slide_3_plain_text > path'), {opacity: 0.0})
+            TweenLite.set($('#slide_3_plain_text_bg'), {y: -300})
+            TweenLite.to($("#slide_3_plain_text_bg"), 1, {y: 0})
+            $("#slide_3_plain_text > path").each(function(i){
+              var self = this
+              TweenLite.to($(self), .1, {delay: i / 10 + 1 , opacity: 1.0})
+            })
+          break
           
         case 4:
           animate_slide_4()
-          break;
+          break
 
         case 5:
           animate_slide_5()
-          break; 
+          break
 
         case 6:
           animate_slide_6()
-          break;
+          break
       }
   }
 
@@ -96,30 +109,6 @@
         Cryptoloji.stateman.emit('header:hide')
       }
     }
-  }
-  
-  function animate_slide_3() {
-    $('#slide_3_plain_text > path').each(function(i) {
-            TweenLite.set($(this), {opacity: 0.0})
-    })
-    TweenLite.set($('#slide_3_plain_text_bg'), {y: -300})
-
-    
-    var text_animation_duration = 0.1
-    var bg_animation_duration = 1.0
-    TweenLite.to($("#slide_3_plain_text_bg"), 1.0, {y: 0})
-    TweenLite.to($("#slide_3_plain_text > path")[0], text_animation_duration, {delay: bg_animation_duration, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[1], text_animation_duration, {delay: bg_animation_duration + 0.1, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[2], text_animation_duration, {delay: bg_animation_duration + 0.2, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[3], text_animation_duration, {delay: bg_animation_duration + 0.3, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[4], text_animation_duration, {delay: bg_animation_duration + 0.4, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[5], text_animation_duration, {delay: bg_animation_duration + 0.5, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[6], text_animation_duration, {delay: bg_animation_duration + 0.6, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[7], text_animation_duration, {delay: bg_animation_duration + 0.7, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[8], text_animation_duration, {delay: bg_animation_duration + 0.8, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[9], text_animation_duration, {delay: bg_animation_duration + 0.9, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[10], text_animation_duration, {delay: bg_animation_duration + 1.0, opacity: 1.0})
-    TweenLite.to($("#slide_3_plain_text > path")[11], text_animation_duration, {delay: bg_animation_duration + 1.1, opacity: 1.0})
   }
 
   function animate_slide_4() {
