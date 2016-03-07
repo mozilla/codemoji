@@ -25,13 +25,9 @@
       }
       $(".decryption").addClass("section-show")
 
-
-      Cryptoloji.Api.getMessage(options.param.id)
-        .then(function (result) {
-          Cryptoloji.UI.showDecryptableText(result.message)
-          correctKey = result.key
-        })  
-        .catch(function () { alert('cannot retrieve from server') })   
+      Cryptoloji.UI.showDecryptableText(Cryptoloji.storage.get('message'))
+      correctKey = Cryptoloji.storage.get('key')
+      CryptoLib.generateEmojiSubsetFrom(correctKey)
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
         // select corresponding emoji in keymodal
