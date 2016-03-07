@@ -25,29 +25,7 @@
 
 
       // resize font based on screen height
-      var emojiSize = $('body').height() / 480 * 100
-      var emojiLength = 120
-      if (Cryptoloji.current.output) {
-        emojiLength = Cryptoloji.current.output.length
-      }
-      if (emojiLength == 1) {
-        emojiSize = emojiSize * 12
-      } else if (emojiLength >= 2 && emojiLength < 13) {
-        emojiSize = emojiSize * 4
-      } else if (emojiLength >= 13 && emojiLength < 20) {
-        emojiSize = emojiSize * 3
-      } else if (emojiLength >= 20 && emojiLength < 36) {
-        emojiSize = emojiSize * 2
-      } else if (emojiLength >= 36 && emojiLength < 60) {
-        emojiSize = emojiSize * 1.7
-      } else if (emojiLength >= 60 && emojiLength < 80) {
-        emojiSize = emojiSize * 1.5
-      } else if (emojiLength >= 80 && emojiLength < 100) {
-        emojiSize = emojiSize * 1.2
-      } else{
-        emojiSize = emojiSize * 1
-      }
-      $('.share_message_item').css('font-size', emojiSize + '%')
+      resizeEmojis()
 
       fillLinkForClipboardCopy()
       fillKeyForClipboardCopy()
@@ -57,31 +35,9 @@
 
       setupShareButtons()
 
-      // set the height and the top y coordinate to reach when share key modal is open
-      // Cryptoloji.utils.remToPx(.5) is for add a margin
-      // 23 is the magic number...
-      var share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23
-      var share_modal_margin = Cryptoloji.utils.remToPx(10)
-      if (Cryptoloji.mq.matches) {
-        share_modal_margin = Cryptoloji.utils.remToPx(15)
-      }
-      $('.share_key').css('height', share_modal_height)
-      TweenLite.set($('.share_key'), {y: share_modal_height - share_modal_margin})
+      setShareModalCoordinates()
 
-      $('#share_currentkey').on('click', function () {
-        // open modal
-        $('.share_key').addClass('share_key-open')
-        TweenLite.to($('.share_key'), .75, {y: 0, ease:Expo.easeInOut, onComplete: function(){
-          $('.share_key_emoji-item').attr('id', 'share_copykeytoclipboard')
-        }})
-      })
-      $('#share_key_hide').on('click', function () {
-        // close modal
-        $('.share_key').removeClass('share_key-open')
-        TweenLite.to($('.share_key'), .75, {y: share_modal_height - share_modal_margin, ease:Expo.easeInOut, onComplete: function(){
-          $('.share_key_emoji-item').attr('id', '')
-        }})
-      })
+      handleShareModal()
     },
     leave: function () {
       // close the modal than exit
@@ -95,7 +51,6 @@
         $('.section_share').removeClass('section-show')
       }})
       
-      // $(".section_share").removeClass("section-show")
       linkClipboard.destroy()
       keyClipboard.destroy()
 
@@ -212,6 +167,62 @@
       .addParam('subject', 'A secret message')
       .addParam('body', 'http://crypt.ji/F937U2M9')
       .bind()
+  }
+
+  function resizeEmojis () {
+    var emojiSize = $('body').height() / 480 * 100
+    var emojiLength = 120
+    if (Cryptoloji.current.output) {
+      emojiLength = Cryptoloji.current.output.length
+    }
+    if (emojiLength == 1) {
+      emojiSize = emojiSize * 12
+    } else if (emojiLength >= 2 && emojiLength < 13) {
+      emojiSize = emojiSize * 4
+    } else if (emojiLength >= 13 && emojiLength < 20) {
+      emojiSize = emojiSize * 3
+    } else if (emojiLength >= 20 && emojiLength < 36) {
+      emojiSize = emojiSize * 2
+    } else if (emojiLength >= 36 && emojiLength < 60) {
+      emojiSize = emojiSize * 1.7
+    } else if (emojiLength >= 60 && emojiLength < 80) {
+      emojiSize = emojiSize * 1.5
+    } else if (emojiLength >= 80 && emojiLength < 100) {
+      emojiSize = emojiSize * 1.2
+    } else {
+      emojiSize = emojiSize * 1
+    }
+    $('.share_message_item').css('font-size', emojiSize + '%')
+  }
+
+  function setShareModalCoordinates () {
+    // set the height and the top y coordinate to reach when share key modal is open
+    // Cryptoloji.utils.remToPx(.5) is for add a margin
+    // 23 is the magic number...
+    var share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23
+    var share_modal_margin = Cryptoloji.utils.remToPx(10)
+    if (Cryptoloji.mq.matches) {
+      share_modal_margin = Cryptoloji.utils.remToPx(15)
+    }
+    $('.share_key').css('height', share_modal_height)
+    TweenLite.set($('.share_key'), {y: share_modal_height - share_modal_margin})
+  }
+
+  function handleShareModal () {
+    $('#share_currentkey').on('click', function () {
+      // open modal
+      $('.share_key').addClass('share_key-open')
+      TweenLite.to($('.share_key'), .75, {y: 0, ease:Expo.easeInOut, onComplete: function(){
+        $('.share_key_emoji-item').attr('id', 'share_copykeytoclipboard')
+      }})
+    })
+    $('#share_key_hide').on('click', function () {
+      // close modal
+      $('.share_key').removeClass('share_key-open')
+      TweenLite.to($('.share_key'), .75, {y: share_modal_height - share_modal_margin, ease:Expo.easeInOut, onComplete: function(){
+        $('.share_key_emoji-item').attr('id', '')
+      }})
+    })
   }
 
 })(window, window.Cryptoloji); 
