@@ -194,13 +194,14 @@
     }
     $('.share_message_item').css('font-size', emojiSize + '%')
   }
-
+    var share_modal_height = 0
+    var share_modal_margin = 0
   function setShareModalCoordinates () {
     // set the height and the top y coordinate to reach when share key modal is open
     // Cryptoloji.utils.remToPx(.5) is for add a margin
     // 23 is the magic number...
-    var share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23
-    var share_modal_margin = Cryptoloji.utils.remToPx(10)
+    share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23
+    share_modal_margin = Cryptoloji.utils.remToPx(10)
     if (Cryptoloji.mq.matches) {
       share_modal_margin = Cryptoloji.utils.remToPx(15)
     }
