@@ -338,7 +338,10 @@
 
 
       // keyslider width
-      TweenLite.to($('.'+state+' .main_keyslider'), 0.5, {delay: 0, width: "35%"})
+      TweenLite.to($('.'+state+' .main_keyslider'), 0.5, {delay: 0, width: "35%", onComplete: function () {
+        // needed to reset element width for viewport changes
+        $('.'+state+' .main_keyslider').css('width', '')
+      }})
       // TweenLite.to($('.'+state+' .encryption_help_button > svg'), 1.25, {delay: 2.5, opacity: 1, scale: 1, ease:Elastic.easeInOut})
       TweenLite.to($('.'+state+'_help_button'), 1.25, {delay: 2.5, opacity: 1, ease:Elastic.easeInOut})
       // emoji in keyslider
@@ -464,7 +467,6 @@
     fixHeight: fixHeight,
     handleFooter: handleFooter,
     handleHeader: handleHeader,
-    handleOrientationChanges: handleOrientationChanges,
     handleOrientationChanges: handleOrientationChanges,
     loadLogicHelpButton: loadLogicHelpButton,
     selectKey: selectKey,
