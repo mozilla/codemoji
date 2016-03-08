@@ -139,7 +139,6 @@
 
   function animate_slide_4() {
     timeline.clear()
-    timeline.set($('#onboarding_slide_4_text'), {opacity: 1})
     timeline.set($('#onboarding_slide_4_plain_text > g'), {opacity: 1})
     timeline.set($('#onboarding_slide_4_emoji_1 > g'), {opacity: 0})
     timeline.set($('#onboarding_slide_4_emoji_2 > g'), {opacity: 0})
@@ -148,7 +147,7 @@
     timeline.set($('#onboarding_slide_4_encrypted_emoji_1'), {opacity: 0})
     timeline.set($('#onboarding_slide_4_encrypted_emoji_2'), {opacity: 0})
     timeline.set($('#onboarding_slide_4_encrypted_emoji_3'), {opacity: 0})
-    timeline.set($('#onboarding_slide_4_text'), {opacity: 0})
+    timeline.set($('#onboarding_slide_4_text_tutor'), {opacity: 0})
     timeline.set($('#next_button_onboarding'), {opacity: 0})
     var num_of_interaction = 0
 
@@ -163,18 +162,20 @@
     })
 
     $('#onboarding_slide_4_emoji_2').on('click', function() {
-      TweenLite.to($('#onboarding_slide_4_emoji_selector'), 0.1, {x:0})
-      TweenLite.to($('#onboarding_slide_4_encrypted_emoji_1'), 0, {opacity: 0})
-      TweenLite.to($('#onboarding_slide_4_encrypted_emoji_3'), 0, {opacity: 0})
-      TweenLite.to($('#onboarding_slide_4_encrypted_emoji_2'), 0.1, {opacity: 1})
+      timeline.to($('#onboarding_slide_4_plain_text > g'), 0.1, {opacity: 0})
+      .to($('#onboarding_slide_4_emoji_selector'), 0.1, {x: 0})
+      .to($('#onboarding_slide_4_encrypted_emoji_3'), 0, {opacity: 0})
+      .to($('#onboarding_slide_4_encrypted_emoji_1'), 0, {opacity: 0})
+      .to($('#onboarding_slide_4_encrypted_emoji_2'), 0, {opacity: 1})
       chosen_key = 1
     })
 
     $('#onboarding_slide_4_emoji_3').on('click', function() {
-      TweenLite.to($('#onboarding_slide_4_emoji_selector'), 0.1, {x:'95rem'})
-      TweenLite.to($('#onboarding_slide_4_encrypted_emoji_1'), 0, {opacity: 0})
-      TweenLite.to($('#onboarding_slide_4_encrypted_emoji_2'), 0, {opacity: 0})
-      TweenLite.to($('#onboarding_slide_4_encrypted_emoji_3'), 0.1, {opacity: 1})
+      timeline.to($('#onboarding_slide_4_plain_text > g'), 0.1, {opacity: 0})
+      .to($('#onboarding_slide_4_emoji_selector'), 0.1, {x: '95rem'})
+      .to($('#onboarding_slide_4_encrypted_emoji_1'), 0, {opacity: 0})
+      .to($('#onboarding_slide_4_encrypted_emoji_2'), 0, {opacity: 0})
+      .to($('#onboarding_slide_4_encrypted_emoji_3'), 0, {opacity: 1})
       chosen_key = 2
     })
     
@@ -199,7 +200,7 @@
     .to($('#onboarding_slide_4_encrypted_emoji_1'), 0, {opacity: 0})
     .to($('#onboarding_slide_4_encrypted_emoji_3'), 0, {opacity: 0})
     .to($('#onboarding_slide_4_encrypted_emoji_2'), 0.3, {opacity: 1})
-    .to($('#onboarding_slide_4_text'), 0.5, {opacity: 1})
+    .to($('#onboarding_slide_4_text_tutor'), 0.5, {opacity: 1})
     .to($('#next_button_onboarding'), 0.5, {opacity: 1})
 
     // $('#onboarding_slide_4_plain_text > g').each(function(i) {
@@ -294,11 +295,6 @@
     .to($('#onboarding_slide_6_graphic'), 0.5, {delay: 0.5, y: -130})
     .to($('#onboarding_slide_6_text'), 0.5, {opacity: 1})
     .to($('#next_button_onboarding'), 0.5, {opacity: 1})
-  }
-
-  function animate_slide_7() {
-
-
   }
 
   Cryptoloji.states.onboarding.step1 = next_slide(1)
