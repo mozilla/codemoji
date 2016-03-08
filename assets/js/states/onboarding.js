@@ -25,44 +25,15 @@
       switch (n) {
 
         case 1:
-            var svg_elements = []    
-            _.times(4, function(i){
-              svg_elements.push("#onboarding_slide_1_encrypted_hello_" + (i+1) + ">g")
-            })  
-            Cryptoloji.UI.animate_onboarding(svg_elements)
-            timeline.clear()
-            timeline.set($('#onboarding_slide_1_text'), {opacity: 0})
-            timeline.set($('#next_button_onboarding'), {opacity: 0})
-            timeline.to($('#onboarding_slide_1_text'), .5, {delay: 4.8, opacity: 1})
-            .to($('#next_button_onboarding'), 1, {opacity: 1})
+            animate_slide1()
           break
 
         case 2:
-            var svg_elements = []    
-            _.times(4, function(i){
-              svg_elements.push("#onboarding_slide_2_encrypted_hello_" + (i+1) + ">g")
-            })         
-            Cryptoloji.UI.animate_onboarding(svg_elements)
-            timeline.clear()
-            timeline.set($('#onboarding_slide_2_text'), {opacity: 0})
-            timeline.set($('#next_button_onboarding'), {opacity: 0})
-            timeline.to($('#onboarding_slide_2_text'), .5, {delay: 2.8, opacity: 1})
-            .to($('#next_button_onboarding'), 1, {opacity: 1})
+            animate_slide2()
           break
 
         case 3:
-            timeline.clear()
-            timeline.set($('#next_button_onboarding'), {opacity: 0})
-            timeline.set($('#onboarding_slide_3_plain_text > g'), {opacity: 0.0})
-            timeline.set($('#onboarding_slide_3_plain_text_bg'), {y: -300})
-            timeline.set($('#onboarding_slide_3_text'), {opacity: 0})
-
-            timeline.to($("#onboarding_slide_3_plain_text_bg"), 1, {y: 0})
-            $("#onboarding_slide_3_plain_text > g").each(function(i){
-              timeline.to($(this), .1, {delay: 0.05 , opacity: 1.0})
-            })
-            timeline.to($('#onboarding_slide_3_text'), 0.5, {opacity: 1})
-            .to($('#next_button_onboarding'), 0.5, {opacity: 1})
+            animate_slide3()
           break
           
         case 4:
@@ -123,6 +94,47 @@
         Cryptoloji.stateman.emit('header:hide')
       }
     }
+  }
+
+  function animate_slide1() {
+    var svg_elements = []    
+    _.times(4, function(i){
+      svg_elements.push("#onboarding_slide_1_encrypted_hello_" + (i+1) + ">g")
+    })  
+    Cryptoloji.UI.animate_onboarding(svg_elements)
+    timeline.clear()
+    timeline.set($('#onboarding_slide_1_text'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {opacity: 0})
+    timeline.to($('#onboarding_slide_1_text'), .5, {delay: 4.8, opacity: 1})
+    .to($('#next_button_onboarding'), 1, {opacity: 1})
+  }
+
+  function animate_slide2() {
+    var svg_elements = []    
+    _.times(4, function(i){
+      svg_elements.push("#onboarding_slide_2_encrypted_hello_" + (i+1) + ">g")
+    })         
+    Cryptoloji.UI.animate_onboarding(svg_elements)
+    timeline.clear()
+    timeline.set($('#onboarding_slide_2_text'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {opacity: 0})
+    timeline.to($('#onboarding_slide_2_text'), .5, {delay: 2.8, opacity: 1})
+    .to($('#next_button_onboarding'), 1, {opacity: 1})
+  }
+
+  function animate_slide3() {
+    timeline.clear()
+    timeline.set($('#next_button_onboarding'), {opacity: 0})
+    timeline.set($('#onboarding_slide_3_plain_text > g'), {opacity: 0.0})
+    timeline.set($('#onboarding_slide_3_plain_text_bg'), {y: -300})
+    timeline.set($('#onboarding_slide_3_text'), {opacity: 0})
+
+    timeline.to($("#onboarding_slide_3_plain_text_bg"), 1, {y: 0})
+    $("#onboarding_slide_3_plain_text > g").each(function(i){
+    timeline.to($(this), .1, {delay: 0.05 , opacity: 1.0})
+    })
+    timeline.to($('#onboarding_slide_3_text'), 0.5, {opacity: 1})
+    .to($('#next_button_onboarding'), 0.5, {opacity: 1})
   }
 
   function animate_slide_4() {
