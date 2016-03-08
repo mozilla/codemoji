@@ -96,4 +96,4 @@
       })
   }
 
-})(window, window.Cryptoloji, window.jQuery)
+})(window, window.Cryptoloji, window.jQuery);
