@@ -5,6 +5,7 @@
     //this.restart()
   }});
   var chosen_key = 0;
+  var currentN;
   
   // 
   // go directly to step 1
@@ -13,6 +14,11 @@
   Cryptoloji.states.onboarding.root = {
     enter: function () {
       Cryptoloji.stateman.go('onboarding.step1')
+
+      // load next slide button logic
+      $('#next_button_onboarding').on("click", function(){
+        Cryptoloji.stateman.go('onboarding.step'+(currentN+1))
+      })
     }
   }
 
@@ -57,6 +63,9 @@
   function next_slide(n){
     return {
       enter: function () {
+
+        currentN = n
+
         // display cross-slide elements
         $('.section_onboarding_wrapper').addClass("section-show")
 
@@ -66,11 +75,6 @@
         // display header
         Cryptoloji.stateman.emit('header:show')
 
-        // load next slide button logic
-        $('#next_button_onboarding').on("click", function(){
-          Cryptoloji.stateman.go('onboarding.step'+(n+1))
-        })
-        
         slideLogic (n)
       },
       leave: function () {
