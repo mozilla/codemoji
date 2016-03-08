@@ -38,9 +38,10 @@
     "gulp-usemin": "^0.3.21",
     "load-grunt-tasks": "^3.4.0",
     "lodash": "^4.0.0",
+    "lodash-cli": "^4.6.1",
     "pixrem": "^3.0.0",
-    "through2": "^2.0.1",
-    "svg-injectr": "^0.1.5"
+    "svg-injectr": "^0.1.5",
+    "through2": "^2.0.1"
   },
   "dependencies": {
     "connect-history-api-fallback": "^1.1.0"
