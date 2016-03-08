@@ -534,14 +534,17 @@
 .decryption .main_content_bottom .coachmark{
   background-color: #F57070;
   color: white;
+  box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
 }
 .encryption .main_keyslider .coachmark,
 .decryption .main_keyslider .coachmark{
   background-color: #3D4757;
+  box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
 }
 .encryption .main_content_bottom .coachmark,
 .decryption .main_content_top .coachmark{
   background-color: #EAEBEC;
+  box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
 }
 /******************************************************************************/
 
