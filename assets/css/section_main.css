@@ -527,15 +527,44 @@
 .decryption .main_content_bottom .coachmark{
   background-color: #F57070;
   color: white;
+  box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
 }
 .encryption .main_keyslider .coachmark,
 .decryption .main_keyslider .coachmark{
   background-color: #3D4757;
+  box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
 }
 .encryption .main_content_bottom .coachmark,
 .decryption .main_content_top .coachmark{
   background-color: #EAEBEC;
+  box-shadow: 0px -2px 30px rgba(113, 113, 110, 0.19);
 }
+/* Colors for encrypt/decrypt sections title with coachmarks open */
+.coachmarks-open .encryption .header__label.main_content_top_label {
+  color: #FAFAFA; /* color-light */
+  opacity: 1 !important;
+}
+.coachmarks-open .encryption .header__label.main_keyslider_bottom_label {
+  color: #FAFAFA; /* color-light */
+  opacity: 1 !important;
+}
+.coachmarks-open .encryption .header__label.main_content_bottom_label {
+  color: #005189; /* color-main-alt */
+  opacity: 1 !important;
+}
+.coachmarks-open .decryption .header__label.main_content_top_label {
+  color: #005189; /* color-main-alt */
+  opacity: 1 !important;
+}
+.coachmarks-open .decryption .header__label.main_keyslider_bottom_label {
+  color: #FAFAFA; /* color-light */
+  opacity: 1 !important;
+}
+.coachmarks-open .decryption .header__label.main_content_bottom_label {
+  color: #FAFAFA; /* color-light */
+  opacity: 1 !important;
+}
+
 /******************************************************************************/
 
 /*desktop*/
