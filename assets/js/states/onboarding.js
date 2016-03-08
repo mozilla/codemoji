@@ -12,7 +12,7 @@
   Cryptoloji.states.onboarding = {}
   Cryptoloji.states.onboarding.root = {
     enter: function () {
-      Cryptoloji.stateman.go('onboarding.step4')
+      Cryptoloji.stateman.go('onboarding.step1')
     }
   }
 
@@ -197,7 +197,7 @@
     .to($('#onboarding_slide_4_emoji_selector'), 0.5, {delay: 3, x: 0, onComplete: function() {
       scrumbletext('#onboarding_slide_4_encrypted_emoji_2 > g', 1.0)
     }})
-    .to($('#onboarding_slide_4_text_tutor'), 0.5, {opacity: 1})
+    .to($('#onboarding_slide_4_text_tutor'), 0.5, {delay: 3, opacity: 1})
     .to($('#next_button_onboarding'), 0.5, {opacity: 1})
 
     // $('#onboarding_slide_4_plain_text > g').each(function(i) {
