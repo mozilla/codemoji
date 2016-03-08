@@ -83,9 +83,17 @@
   function to_encrypt(n){
     return {
       enter: function () {
+
+        TweenLite.set($('.svg_wrapper_pagination'), {opacity: 0})
+        TweenLite.set($('.onboarding_skip_button'), {opacity: 0})
+        TweenLite.to($('#next_button_onboarding'), 0.5, {delay: 1, opacity: 1})
         $('[slide-num="'+n+'"]').addClass("section-show")
-        $('#next_button_onboarding').on("click", function(){
-          Cryptoloji.stateman.go("encrypt")
+        $('#next_button_onboarding').text('Go for it!').on("click", function(){
+          TweenLite.to($('[slide-num="'+n+'"]'), 1, {y: "-100%", onComplete: function() {
+            TweenLite.to($('#next_button_onboarding'), 0, {opacity: 0})
+            Cryptoloji.stateman.go("encrypt")
+          }})
+          
         })
       },
       leave: function () {
@@ -294,7 +302,8 @@
     .to($('#onboarding_slide_6_smile_content'), 0.5, {opacity: 1})
     .to($('#onboarding_slide_6_graphic'), 0.5, {delay: 0.5, y: -130})
     .to($('#onboarding_slide_6_text'), 0.5, {opacity: 1})
-    .to($('#next_button_onboarding'), 0.5, {opacity: 1})
+    .to($('#next_button_onboarding'), 0.5, {opacity: 1, onComplete: function() {
+    }})
   }
 
   Cryptoloji.states.onboarding.step1 = next_slide(1)
@@ -303,8 +312,9 @@
   Cryptoloji.states.onboarding.step4 = next_slide(4)
   Cryptoloji.states.onboarding.step5 = next_slide(5)
   Cryptoloji.states.onboarding.step6 = next_slide(6)
-  Cryptoloji.states.onboarding.step7 = next_slide(7)
-  Cryptoloji.states.onboarding.step8 = to_encrypt(8)
+  Cryptoloji.states.onboarding.step7 = to_encrypt(7)
+  // Cryptoloji.states.onboarding.step7 = next_slide(7)
+  // Cryptoloji.states.onboarding.step8 = to_encrypt(8)
 
 
 })(window, window.Cryptoloji); 
