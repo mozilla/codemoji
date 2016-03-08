@@ -196,10 +196,15 @@
   function animate_slide_5() {
     timeline.clear()
     timeline.set($('.mozilla_button'), {opacity: 0})
+    timeline.set($('#onboarding_slide_5_text'), {opacity: 0})
     timeline.set($('#onboarding_slide_5_plain_text'), {opacity: 0})
     timeline.set($('#onboarding_slide_5_encrypted_emoji_1'), {opacity: 0})
     timeline.set($('#onboarding_slide_5_encrypted_emoji_2'), {opacity: 0})
     timeline.set($('#onboarding_slide_5_encrypted_emoji_3'), {opacity: 0})
+    timeline.set($('#onboarding_slide_5_delivered_text'), {y: 100, opacity: 0})
+    timeline.set($('#slide_5_bubble_white_text_bg'), {y: 80, opacity: 0})
+    timeline.set($('#slide_5_bubble_white_text'), {opacity: 0})
+    timeline.set($('#slide_5_bubble_white_dots_bg'), {opacity: 0})
 
     //Set the visible encrypted text following what the user chose on slide 4
     switch(chosen_key) {
@@ -216,17 +221,8 @@
         break
     }
     
-    timeline.set($('#onboarding_slide_5_delivered_text'), {y: 100, opacity: 0})
-    timeline.set($('#slide_5_bubble_white_text_bg'), {y: 80, opacity: 0})
-    timeline.set($('#slide_5_bubble_white_text'), {opacity: 0})
-    timeline.set($('#slide_5_bubble_white_dots_bg'), {opacity: 0})
-    timeline.set($('#slide_5_bubble_white_dots'), {opacity: 1})
-
-    .to($('#onboarding_slide_5_delivered_text'), 0.5, {delay: 0.5, y: 0, opacity: 1})
+    timeline.to($('#onboarding_slide_5_delivered_text'), 0.5, {delay: 0.5, y: 0, opacity: 1})
     .to($('#slide_5_bubble_white_dots_bg'), 0.5, {delay: 0.5, y: 0, opacity: 1})
-    .to($('#slide_5_bubble_white_dots > circle')[0], 0.0, {opacity: 1})
-    .to($('#slide_5_bubble_white_dots > circle')[1], 0.0, {opacity: 1})
-    .to($('#slide_5_bubble_white_dots > circle')[2], 0.0, {opacity: 1})
     .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: -5})
     .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: -5})
     .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: -5})
@@ -243,6 +239,8 @@
     .to($('#slide_5_bubble_white_dots'), 0.1, {y: 0, opacity: 0})
     .to($('#slide_5_bubble_white_text_bg'), 0.5, {y: 0, opacity: 1})
     .to($('#slide_5_bubble_white_text'), 0.5, {opacity: 1})
+    .to($('#onboarding_slide_5_text'), 0.5, {opacity: 1})
+    .to($('.mozilla_button'), 0.5, {opacity: 1})
   }
 
   function animate_slide_6() {
