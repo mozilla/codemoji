@@ -119,10 +119,11 @@
 
 .share_key_emoji-item_feedback{
   position: absolute;
-  bottom: -1rem;
+  top: -2.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  font-size: 40%;
 }
 
 .share_key_emoji-item_before,
