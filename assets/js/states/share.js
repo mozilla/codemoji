@@ -94,11 +94,9 @@
 
     keyClipboard.on('success', function(e) {
       console.log('success', e)
-
       e.clearSelection()
 
       // give feedback in place
-      // var oldVal = $(e.trigger).text()
       $('.share_key_emoji-item_feedback').text('COPIED!')
       setTimeout(function () {
         $('.share_key_emoji-item_feedback').text('')
@@ -111,9 +109,8 @@
       console.warn('Action:', e.action)
       console.warn('Trigger:', e.trigger)
       // select as fallback
-      var input = e.trigger
-      // input.focus()
-      // input.setSelectionRange(0, 50)
+      var keyVal = $(e.trigger).attr('data-clipboard-text')
+      window.prompt('Copy the emoji', keyVal)
     });
   }
 
