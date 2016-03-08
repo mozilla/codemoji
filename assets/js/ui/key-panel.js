@@ -80,6 +80,12 @@
     if (_tooltipTimeout) {
       clearTimeout(_tooltipTimeout)
     }
+    $("#encryption_keypanel .main_key_panel_emoji_container").bind("scroll", function () {
+      TweenLite.to($("#tooltip_panel"), .3, {opacity: 0, onComplete: function(){
+        TweenLite.set($("#tooltip_panel"), {display: "none"})
+        Cryptoloji.UI.tooltipPosition = { top : 0, left: 0}
+      }})
+    })
     _tooltipTimeout = setTimeout(function() {
       TweenLite.to($("#tooltip_panel"), 1, {opacity: 0, onComplete: function(){
         TweenLite.set($("#tooltip_panel"), {display: "none"})
