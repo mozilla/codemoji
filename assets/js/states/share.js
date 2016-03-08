@@ -205,20 +205,29 @@
     TweenLite.set($('.share_key'), {y: share_modal_height - share_modal_margin})
   }
 
+  function _closeModal () {
+    $('.share_key').removeClass('share_key-open')
+    TweenLite.to($('.share_key'), .75, {y: share_modal_height - share_modal_margin, ease:Expo.easeInOut, onComplete: function(){
+      $('.share_key_emoji-item').attr('id', '')
+    }})
+    $('.section_share .share_main_wrap').off()
+  }
   function handleShareModal () {
-    $('#share_currentkey').on('click', function () {
+    $('.share_key_emoji-item').on('click', function () {
       // open modal
       $('.share_key').addClass('share_key-open')
       TweenLite.to($('.share_key'), .75, {y: 0, ease:Expo.easeInOut, onComplete: function(){
         $('.share_key_emoji-item').attr('id', 'share_copykeytoclipboard')
+        handleCloseShareModal()
       }})
     })
     $('#share_key_hide').on('click', function () {
-      // close modal
-      $('.share_key').removeClass('share_key-open')
-      TweenLite.to($('.share_key'), .75, {y: share_modal_height - share_modal_margin, ease:Expo.easeInOut, onComplete: function(){
-        $('.share_key_emoji-item').attr('id', '')
-      }})
+      _closeModal()
+    })
+  }
+  function handleCloseShareModal () {
+    $('.section_share .share_main_wrap').on("click", function () {
+      _closeModal()
     })
   }
 
