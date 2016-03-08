@@ -373,13 +373,34 @@
       tooltipPosition.top = 0
       tooltipPosition.left = 0
 
-
-
-
   function paginationLogic (slide) {
-     var num = $('[slide-num='+slide+'] [pagination-step]').attr('pagination-step')
+    console.log(">>>>>>>>",slide, $('.pagination_emoji>g'))
      TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
-     TweenLite.set($('[slide-num='+slide+'] .pagination_emoji_'+num), {opacity: "1"})
+     TweenLite.set($('.svg_wrapper_pagination .pagination_emoji_'+slide), {opacity: "1"})
+  }
+
+  // function paginationLogic (slide) {
+  //    var num = $('[slide-num='+slide+'] [pagination-step]').attr('pagination-step')
+  //    TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
+  //    TweenLite.set($('[slide-num='+slide+'] .pagination_emoji_'+num), {opacity: "1"})
+  // }
+
+  function slideLeft (el, duration) {
+    console.log(">>>>>>", el, duration)
+    function removeSlide () {
+      el.removeClass("section-show")
+    }
+    TweenLite.set(el, {x: "0%"})
+    TweenLite.to(el, duration, {x: "-100%", onComplete: removeSlide})
+  }
+
+  function slideLeftNext (el, duration) {
+    console.log(">>>>>>", el, duration)
+    function dispaySlide () {
+      el.addClass("section-show")
+    }
+    TweenLite.to(el, 0, {x: "100%", onComplete: dispaySlide})
+    TweenLite.to(el, duration, {x: "0%"})
   }
 
   //Onboarding cryptoloji animation
@@ -397,7 +418,7 @@
 
     //Duration of a single letter transition
     var animation_duration = 0.2
-    var animation_delay = 0.8
+    var animation_delay = .8
     var y_transform = 20
     
     //First svg group containing encrypted letter
@@ -420,7 +441,7 @@
 
 
     //First encrypted word animation
-    .to(third_group[4], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(third_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
     .to(first_group[4], animation_duration, {y: 0, opacity: 1.0})
     .to(third_group[3], animation_duration, {y: y_transform, opacity: 0.0})
     .to(first_group[3], animation_duration, {y: 0, opacity: 1.0})
@@ -477,7 +498,9 @@
     svg_loaded: svg_loaded,
     animate_onboarding: animate_onboarding,
     paginationLogic: paginationLogic,
-    tooltipPosition: tooltipPosition
+    tooltipPosition: tooltipPosition,
+    slideLeft: slideLeft,
+    slideLeftNext: slideLeftNext
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.twemoji);

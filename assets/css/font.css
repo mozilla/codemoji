@@ -216,6 +216,7 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   transition: all .2s ease-in-out 0s;
   cursor: pointer;
   text-transform: lowercase;
+  user-select: none;
 }
 
 .mozilla_button::first-letter { 
