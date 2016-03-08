@@ -94,34 +94,40 @@
   position: relative;
 }
 
+.share_key-wrapper,
+.share_key_emoji-item,
+.share_key_emoji-item_before,
+.share_key_emoji-item_after {
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
 .share_key_emoji-item{
   background-color: transparent;
   position: relative;
   margin: 0;
-  width: 4.5rem;
-  height: 4.5rem;
-  font-size: 80%;
+  font-size: 70%;
   letter-spacing: 1px;
   box-sizing: border-box;
   border: none;
   text-align: center;
   color: black;
   z-index: 1;
-  transform: translateY(5%);
+  border-radius: 50%;
+  background-color: white;
 }
 
-.share_key-wrapper {
-  border-radius: 50%;
-  height: 4.5rem;
-  width: 4.5rem;
-  background-color: white;
+.share_key_emoji-item_feedback{
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .share_key_emoji-item_before,
 .share_key_emoji-item_after {
     content: "";
-    width: 4.5rem;
-    height: 4.5rem;
     border-radius: 100%;
     animation-fill-mode: both;
     position: absolute;
@@ -136,6 +142,7 @@
     opacity: 0;
     animation: jumper 2s -0.666s ease-out infinite;
 }
+
 
 .share_key-open .share_key_emoji-item_before,
 .share_key-open .share_key_emoji-item_after{

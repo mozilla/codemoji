@@ -98,10 +98,10 @@
       e.clearSelection()
 
       // give feedback in place
-      var oldVal = $(e.trigger).val()
-      $(e.trigger).val('COPIED!')
+      // var oldVal = $(e.trigger).text()
+      $('.share_key_emoji-item_feedback').text('COPIED!')
       setTimeout(function () {
-        $(e.trigger).val(oldVal)
+        $('.share_key_emoji-item_feedback').text('')
       }, 350)
     });
 
@@ -112,8 +112,8 @@
       console.warn('Trigger:', e.trigger)
       // select as fallback
       var input = e.trigger
-      input.focus()
-      input.setSelectionRange(0, 50)
+      // input.focus()
+      // input.setSelectionRange(0, 50)
     });
   }
 

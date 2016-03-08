@@ -113,7 +113,7 @@
 
     function _generateEmojiHtml (blueBoxText, emojiText) {
       emojiText = toTwemoji(emojiText)
-      // temporarly removed
+      // load emoji text to share
       $('.share_message_item').html(emojiText)
 
       emojiText = emojiText.replace(/>/g, '>,').split(',')
@@ -270,7 +270,7 @@
   function selectKey (key) {
     Cryptoloji.current.key = key
     console.debug('Chosen key', key)
-    // temporarly removed
+    // load emoji key to share
     $(".share_key_emoji-item").html(toTwemoji(key))
     $(".share_key_emoji-item").attr('value', key)
     TweenLite.from($('#encryption_selected_key'), 1.25, {scale:1.25, ease:Expo.easeOut})
