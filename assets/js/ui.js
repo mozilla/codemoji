@@ -311,6 +311,7 @@
       var orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize'
       $(window).on(orientationEvent, function (event) {
         _writeOrientationAttr()
+        Cryptoloji.stateman.emit('orientationchange')
       })
     }
   }
