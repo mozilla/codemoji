@@ -83,9 +83,8 @@
       console.warn('Action:', e.action)
       console.warn('Trigger:', e.trigger)
       // select as fallback
-      var input = e.trigger
-      input.focus()
-      input.setSelectionRange(0, 50)
+      var textVal = $(e.trigger).val()
+      window.prompt('Copy the link', textVal)
     });
   }
 
