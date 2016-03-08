@@ -9,17 +9,17 @@
 }
 
 .onboarding_skip_button{
-    position: absolute;
-    font-family: "Fira_Sans";
-    font-size: 1.2rem;
-    font-weight: 300;
-    bottom: 0;
-    left: 50%;
-    opacity: .5;
-    color: white;
-    font-size: 1.5rem;
-    transform: translateX(-50%);
-    cursor: pointer;
+  position: absolute;
+  font-family: "Fira_Sans";
+  font-size: 1.2rem;
+  font-weight: 300;
+  bottom: 0;
+  left: 50%;
+  opacity: .5;
+  color: white;
+  font-size: 1.5rem;
+  transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .svg_wrapper_pagination{
@@ -28,7 +28,6 @@
   bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
-
 }
 
 .next_button_onboarding{

@@ -71,6 +71,7 @@
   .main_key_panel_emoji_container p{
     margin: 3px;
     font-size: 3.7rem;
+    line-height: 90%;
   }
   .main_content_top,
   .main_keyslider{
