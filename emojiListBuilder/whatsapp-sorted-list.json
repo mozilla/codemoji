@@ -1,0 +1,9608 @@
+[
+  {
+    "number": 0,
+    "emoji": "😀",
+    "codePoint": 128512,
+    "url": "/grinning-face/"
+  },
+  {
+    "number": 1,
+    "emoji": "😁",
+    "codePoint": 128513,
+    "url": "/grinning-face-with-smiling-eyes/"
+  },
+  {
+    "number": 2,
+    "emoji": "😂",
+    "codePoint": 128514,
+    "url": "/face-with-tears-of-joy/"
+  },
+  {
+    "number": 3,
+    "emoji": "😃",
+    "codePoint": 128515,
+    "url": "/smiling-face-with-open-mouth/"
+  },
+  {
+    "number": 4,
+    "emoji": "😄",
+    "codePoint": 128516,
+    "url": "/smiling-face-with-open-mouth-and-smiling-eyes/"
+  },
+  {
+    "number": 5,
+    "emoji": "😅",
+    "codePoint": 128517,
+    "url": "/smiling-face-with-open-mouth-and-cold-sweat/"
+  },
+  {
+    "number": 6,
+    "emoji": "😆",
+    "codePoint": 128518,
+    "url": "/smiling-face-with-open-mouth-and-tightly-closed-eyes/"
+  },
+  {
+    "number": 7,
+    "emoji": "😉",
+    "codePoint": 128521,
+    "url": "/winking-face/"
+  },
+  {
+    "number": 8,
+    "emoji": "😊",
+    "codePoint": 128522,
+    "url": "/smiling-face-with-smiling-eyes/"
+  },
+  {
+    "number": 9,
+    "emoji": "😋",
+    "codePoint": 128523,
+    "url": "/face-savouring-delicious-food/"
+  },
+  {
+    "number": 10,
+    "emoji": "😎",
+    "codePoint": 128526,
+    "url": "/smiling-face-with-sunglasses/"
+  },
+  {
+    "number": 11,
+    "emoji": "😍",
+    "codePoint": 128525,
+    "url": "/smiling-face-with-heart-shaped-eyes/"
+  },
+  {
+    "number": 12,
+    "emoji": "😘",
+    "codePoint": 128536,
+    "url": "/face-throwing-a-kiss/"
+  },
+  {
+    "number": 13,
+    "emoji": "😗",
+    "codePoint": 128535,
+    "url": "/kissing-face/"
+  },
+  {
+    "number": 14,
+    "emoji": "😙",
+    "codePoint": 128537,
+    "url": "/kissing-face-with-smiling-eyes/"
+  },
+  {
+    "number": 15,
+    "emoji": "😚",
+    "codePoint": 128538,
+    "url": "/kissing-face-with-closed-eyes/"
+  },
+  {
+    "number": 16,
+    "emoji": "☺️",
+    "codePoint": 9786,
+    "url": "/white-smiling-face/"
+  },
+  {
+    "number": 17,
+    "emoji": "🙂",
+    "codePoint": 128578,
+    "url": "/slightly-smiling-face/"
+  },
+  {
+    "number": 18,
+    "emoji": "🤗",
+    "codePoint": 129303,
+    "url": "/hugging-face/"
+  },
+  {
+    "number": 19,
+    "emoji": "😇",
+    "codePoint": 128519,
+    "url": "/smiling-face-with-halo/"
+  },
+  {
+    "number": 20,
+    "emoji": "🤔",
+    "codePoint": 129300,
+    "url": "/thinking-face/"
+  },
+  {
+    "number": 21,
+    "emoji": "😐",
+    "codePoint": 128528,
+    "url": "/neutral-face/"
+  },
+  {
+    "number": 22,
+    "emoji": "😑",
+    "codePoint": 128529,
+    "url": "/expressionless-face/"
+  },
+  {
+    "number": 23,
+    "emoji": "😶",
+    "codePoint": 128566,
+    "url": "/face-without-mouth/"
+  },
+  {
+    "number": 24,
+    "emoji": "🙄",
+    "codePoint": 128580,
+    "url": "/face-with-rolling-eyes/"
+  },
+  {
+    "number": 25,
+    "emoji": "😏",
+    "codePoint": 128527,
+    "url": "/smirking-face/"
+  },
+  {
+    "number": 26,
+    "emoji": "😣",
+    "codePoint": 128547,
+    "url": "/persevering-face/"
+  },
+  {
+    "number": 27,
+    "emoji": "😥",
+    "codePoint": 128549,
+    "url": "/disappointed-but-relieved-face/"
+  },
+  {
+    "number": 28,
+    "emoji": "😮",
+    "codePoint": 128558,
+    "url": "/face-with-open-mouth/"
+  },
+  {
+    "number": 29,
+    "emoji": "🤐",
+    "codePoint": 129296,
+    "url": "/zipper-mouth-face/"
+  },
+  {
+    "number": 30,
+    "emoji": "😯",
+    "codePoint": 128559,
+    "url": "/hushed-face/"
+  },
+  {
+    "number": 31,
+    "emoji": "😪",
+    "codePoint": 128554,
+    "url": "/sleepy-face/"
+  },
+  {
+    "number": 32,
+    "emoji": "😫",
+    "codePoint": 128555,
+    "url": "/tired-face/"
+  },
+  {
+    "number": 33,
+    "emoji": "😴",
+    "codePoint": 128564,
+    "url": "/sleeping-face/"
+  },
+  {
+    "number": 34,
+    "emoji": "😌",
+    "codePoint": 128524,
+    "url": "/relieved-face/"
+  },
+  {
+    "number": 35,
+    "emoji": "🤓",
+    "codePoint": 129299,
+    "url": "/nerd-face/"
+  },
+  {
+    "number": 36,
+    "emoji": "😛",
+    "codePoint": 128539,
+    "url": "/face-with-stuck-out-tongue/"
+  },
+  {
+    "number": 37,
+    "emoji": "😜",
+    "codePoint": 128540,
+    "url": "/face-with-stuck-out-tongue-and-winking-eye/"
+  },
+  {
+    "number": 38,
+    "emoji": "😝",
+    "codePoint": 128541,
+    "url": "/face-with-stuck-out-tongue-and-tightly-closed-eyes/"
+  },
+  {
+    "number": 39,
+    "emoji": "☹",
+    "codePoint": 9785,
+    "url": "/white-frowning-face/"
+  },
+  {
+    "number": 40,
+    "emoji": "🙁",
+    "codePoint": 128577,
+    "url": "/slightly-frowning-face/"
+  },
+  {
+    "number": 41,
+    "emoji": "😒",
+    "codePoint": 128530,
+    "url": "/unamused-face/"
+  },
+  {
+    "number": 42,
+    "emoji": "😓",
+    "codePoint": 128531,
+    "url": "/face-with-cold-sweat/"
+  },
+  {
+    "number": 43,
+    "emoji": "😔",
+    "codePoint": 128532,
+    "url": "/pensive-face/"
+  },
+  {
+    "number": 44,
+    "emoji": "😕",
+    "codePoint": 128533,
+    "url": "/confused-face/"
+  },
+  {
+    "number": 45,
+    "emoji": "😖",
+    "codePoint": 128534,
+    "url": "/confounded-face/"
+  },
+  {
+    "number": 46,
+    "emoji": "🙃",
+    "codePoint": 128579,
+    "url": "/upside-down-face/"
+  },
+  {
+    "number": 47,
+    "emoji": "😷",
+    "codePoint": 128567,
+    "url": "/face-with-medical-mask/"
+  },
+  {
+    "number": 48,
+    "emoji": "🤒",
+    "codePoint": 129298,
+    "url": "/face-with-thermometer/"
+  },
+  {
+    "number": 49,
+    "emoji": "🤕",
+    "codePoint": 129301,
+    "url": "/face-with-head-bandage/"
+  },
+  {
+    "number": 50,
+    "emoji": "🤑",
+    "codePoint": 129297,
+    "url": "/money-mouth-face/"
+  },
+  {
+    "number": 51,
+    "emoji": "😲",
+    "codePoint": 128562,
+    "url": "/astonished-face/"
+  },
+  {
+    "number": 52,
+    "emoji": "😞",
+    "codePoint": 128542,
+    "url": "/disappointed-face/"
+  },
+  {
+    "number": 53,
+    "emoji": "😟",
+    "codePoint": 128543,
+    "url": "/worried-face/"
+  },
+  {
+    "number": 54,
+    "emoji": "😤",
+    "codePoint": 128548,
+    "url": "/face-with-look-of-triumph/"
+  },
+  {
+    "number": 55,
+    "emoji": "😢",
+    "codePoint": 128546,
+    "url": "/crying-face/"
+  },
+  {
+    "number": 56,
+    "emoji": "😭",
+    "codePoint": 128557,
+    "url": "/loudly-crying-face/"
+  },
+  {
+    "number": 57,
+    "emoji": "😦",
+    "codePoint": 128550,
+    "url": "/frowning-face-with-open-mouth/"
+  },
+  {
+    "number": 58,
+    "emoji": "😧",
+    "codePoint": 128551,
+    "url": "/anguished-face/"
+  },
+  {
+    "number": 59,
+    "emoji": "😨",
+    "codePoint": 128552,
+    "url": "/fearful-face/"
+  },
+  {
+    "number": 60,
+    "emoji": "😩",
+    "codePoint": 128553,
+    "url": "/weary-face/"
+  },
+  {
+    "number": 61,
+    "emoji": "😬",
+    "codePoint": 128556,
+    "url": "/grimacing-face/"
+  },
+  {
+    "number": 62,
+    "emoji": "😰",
+    "codePoint": 128560,
+    "url": "/face-with-open-mouth-and-cold-sweat/"
+  },
+  {
+    "number": 63,
+    "emoji": "😱",
+    "codePoint": 128561,
+    "url": "/face-screaming-in-fear/"
+  },
+  {
+    "number": 64,
+    "emoji": "😳",
+    "codePoint": 128563,
+    "url": "/flushed-face/"
+  },
+  {
+    "number": 65,
+    "emoji": "😵",
+    "codePoint": 128565,
+    "url": "/dizzy-face/"
+  },
+  {
+    "number": 66,
+    "emoji": "😡",
+    "codePoint": 128545,
+    "url": "/pouting-face/"
+  },
+  {
+    "number": 67,
+    "emoji": "😠",
+    "codePoint": 128544,
+    "url": "/angry-face/"
+  },
+  {
+    "number": 68,
+    "emoji": "👿",
+    "codePoint": 128127,
+    "url": "/imp/"
+  },
+  {
+    "number": 69,
+    "emoji": "😈",
+    "codePoint": 128520,
+    "url": "/smiling-face-with-horns/"
+  },
+  {
+    "number": 70,
+    "emoji": "👦",
+    "codePoint": 128102,
+    "url": "/boy/"
+  },
+  {
+    "number": 71,
+    "emoji": "👧",
+    "codePoint": 128103,
+    "url": "/girl/"
+  },
+  {
+    "number": 72,
+    "emoji": "👨",
+    "codePoint": 128104,
+    "url": "/man/"
+  },
+  {
+    "number": 73,
+    "emoji": "👩",
+    "codePoint": 128105,
+    "url": "/woman/"
+  },
+  {
+    "number": 74,
+    "emoji": "👴",
+    "codePoint": 128116,
+    "url": "/older-man/"
+  },
+  {
+    "number": 75,
+    "emoji": "👵",
+    "codePoint": 128117,
+    "url": "/older-woman/"
+  },
+  {
+    "number": 76,
+    "emoji": "👶",
+    "codePoint": 128118,
+    "url": "/baby/"
+  },
+  {
+    "number": 77,
+    "emoji": "👱",
+    "codePoint": 128113,
+    "url": "/person-with-blond-hair/"
+  },
+  {
+    "number": 78,
+    "emoji": "👮",
+    "codePoint": 128110,
+    "url": "/police-officer/"
+  },
+  {
+    "number": 79,
+    "emoji": "👲",
+    "codePoint": 128114,
+    "url": "/man-with-gua-pi-mao/"
+  },
+  {
+    "number": 80,
+    "emoji": "👳",
+    "codePoint": 128115,
+    "url": "/man-with-turban/"
+  },
+  {
+    "number": 81,
+    "emoji": "👷",
+    "codePoint": 128119,
+    "url": "/construction-worker/"
+  },
+  {
+    "number": 82,
+    "emoji": "⛑",
+    "codePoint": 9937,
+    "url": "/helmet-with-white-cross/"
+  },
+  {
+    "number": 83,
+    "emoji": "👸",
+    "codePoint": 128120,
+    "url": "/princess/"
+  },
+  {
+    "number": 84,
+    "emoji": "💂",
+    "codePoint": 128130,
+    "url": "/guardsman/"
+  },
+  {
+    "number": 85,
+    "emoji": "🎅",
+    "codePoint": 127877,
+    "url": "/father-christmas/"
+  },
+  {
+    "number": 86,
+    "emoji": "👼",
+    "codePoint": 128124,
+    "url": "/baby-angel/"
+  },
+  {
+    "number": 87,
+    "emoji": "🕵",
+    "codePoint": 128373,
+    "url": "/sleuth-or-spy/"
+  },
+  {
+    "number": 88,
+    "emoji": "👯",
+    "codePoint": 128111,
+    "url": "/woman-with-bunny-ears/"
+  },
+  {
+    "number": 89,
+    "emoji": "💆",
+    "codePoint": 128134,
+    "url": "/face-massage/"
+  },
+  {
+    "number": 90,
+    "emoji": "💇",
+    "codePoint": 128135,
+    "url": "/haircut/"
+  },
+  {
+    "number": 91,
+    "emoji": "👰",
+    "codePoint": 128112,
+    "url": "/bride-with-veil/"
+  },
+  {
+    "number": 92,
+    "emoji": "🙍",
+    "codePoint": 128589,
+    "url": "/person-frowning/"
+  },
+  {
+    "number": 93,
+    "emoji": "🙎",
+    "codePoint": 128590,
+    "url": "/person-with-pouting-face/"
+  },
+  {
+    "number": 94,
+    "emoji": "🙅",
+    "codePoint": 128581,
+    "url": "/face-with-no-good-gesture/"
+  },
+  {
+    "number": 95,
+    "emoji": "🙆",
+    "codePoint": 128582,
+    "url": "/face-with-ok-gesture/"
+  },
+  {
+    "number": 96,
+    "emoji": "💁",
+    "codePoint": 128129,
+    "url": "/information-desk-person/"
+  },
+  {
+    "number": 97,
+    "emoji": "🙋",
+    "codePoint": 128587,
+    "url": "/happy-person-raising-one-hand/"
+  },
+  {
+    "number": 98,
+    "emoji": "🙇",
+    "codePoint": 128583,
+    "url": "/person-bowing-deeply/"
+  },
+  {
+    "number": 99,
+    "emoji": "🙌",
+    "codePoint": 128588,
+    "url": "/person-raising-both-hands-in-celebration/"
+  },
+  {
+    "number": 100,
+    "emoji": "🙏",
+    "codePoint": 128591,
+    "url": "/person-with-folded-hands/"
+  },
+  {
+    "number": 101,
+    "emoji": "🗣",
+    "codePoint": 128483,
+    "url": "/speaking-head-in-silhouette/"
+  },
+  {
+    "number": 102,
+    "emoji": "👤",
+    "codePoint": 128100,
+    "url": "/bust-in-silhouette/"
+  },
+  {
+    "number": 103,
+    "emoji": "👥",
+    "codePoint": 128101,
+    "url": "/busts-in-silhouette/"
+  },
+  {
+    "number": 104,
+    "emoji": "🚶",
+    "codePoint": 128694,
+    "url": "/pedestrian/"
+  },
+  {
+    "number": 105,
+    "emoji": "🏃",
+    "codePoint": 127939,
+    "url": "/runner/"
+  },
+  {
+    "number": 106,
+    "emoji": "💃",
+    "codePoint": 128131,
+    "url": "/dancer/"
+  },
+  {
+    "number": 107,
+    "emoji": "🕴",
+    "codePoint": 128372,
+    "url": "/man-in-business-suit-levitating/"
+  },
+  {
+    "number": 108,
+    "emoji": "💏",
+    "codePoint": 128143,
+    "url": "/kiss/"
+  },
+  {
+    "number": 109,
+    "emoji": "💑",
+    "codePoint": 128145,
+    "url": "/couple-with-heart/"
+  },
+  {
+    "number": 110,
+    "emoji": "👪",
+    "codePoint": 128106,
+    "url": "/family/"
+  },
+  {
+    "number": 111,
+    "emoji": "👫",
+    "codePoint": 128107,
+    "url": "/man-and-woman-holding-hands/"
+  },
+  {
+    "number": 112,
+    "emoji": "👬",
+    "codePoint": 128108,
+    "url": "/two-men-holding-hands/"
+  },
+  {
+    "number": 113,
+    "emoji": "👭",
+    "codePoint": 128109,
+    "url": "/two-women-holding-hands/"
+  },
+  {
+    "number": 114,
+    "emoji": "🏻",
+    "codePoint": 127995,
+    "url": "/emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 115,
+    "emoji": "🏼",
+    "codePoint": 127996,
+    "url": "/emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 116,
+    "emoji": "🏽",
+    "codePoint": 127997,
+    "url": "/emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 117,
+    "emoji": "🏾",
+    "codePoint": 127998,
+    "url": "/emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 118,
+    "emoji": "🏿",
+    "codePoint": 127999,
+    "url": "/emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 119,
+    "emoji": "💪",
+    "codePoint": 128170,
+    "url": "/flexed-biceps/"
+  },
+  {
+    "number": 120,
+    "emoji": "👈",
+    "codePoint": 128072,
+    "url": "/white-left-pointing-backhand-index/"
+  },
+  {
+    "number": 121,
+    "emoji": "👉",
+    "codePoint": 128073,
+    "url": "/white-right-pointing-backhand-index/"
+  },
+  {
+    "number": 122,
+    "emoji": "☝️",
+    "codePoint": 9757,
+    "url": "/white-up-pointing-index/"
+  },
+  {
+    "number": 123,
+    "emoji": "👆",
+    "codePoint": 128070,
+    "url": "/white-up-pointing-backhand-index/"
+  },
+  {
+    "number": 124,
+    "emoji": "🖕",
+    "codePoint": 128405,
+    "url": "/reversed-hand-with-middle-finger-extended/"
+  },
+  {
+    "number": 125,
+    "emoji": "👇",
+    "codePoint": 128071,
+    "url": "/white-down-pointing-backhand-index/"
+  },
+  {
+    "number": 126,
+    "emoji": "✌️",
+    "codePoint": 9996,
+    "url": "/victory-hand/"
+  },
+  {
+    "number": 127,
+    "emoji": "🖖",
+    "codePoint": 128406,
+    "url": "/raised-hand-with-part-between-middle-and-ring-fingers/"
+  },
+  {
+    "number": 128,
+    "emoji": "🤘",
+    "codePoint": 129304,
+    "url": "/sign-of-the-horns/"
+  },
+  {
+    "number": 129,
+    "emoji": "🖐",
+    "codePoint": 128400,
+    "url": "/raised-hand-with-fingers-splayed/"
+  },
+  {
+    "number": 130,
+    "emoji": "✊",
+    "codePoint": 9994,
+    "url": "/raised-fist/"
+  },
+  {
+    "number": 131,
+    "emoji": "✋",
+    "codePoint": 9995,
+    "url": "/raised-hand/"
+  },
+  {
+    "number": 132,
+    "emoji": "👊",
+    "codePoint": 128074,
+    "url": "/fisted-hand-sign/"
+  },
+  {
+    "number": 133,
+    "emoji": "👌",
+    "codePoint": 128076,
+    "url": "/ok-hand-sign/"
+  },
+  {
+    "number": 134,
+    "emoji": "👍",
+    "codePoint": 128077,
+    "url": "/thumbs-up-sign/"
+  },
+  {
+    "number": 135,
+    "emoji": "👎",
+    "codePoint": 128078,
+    "url": "/thumbs-down-sign/"
+  },
+  {
+    "number": 136,
+    "emoji": "👋",
+    "codePoint": 128075,
+    "url": "/waving-hand-sign/"
+  },
+  {
+    "number": 137,
+    "emoji": "👏",
+    "codePoint": 128079,
+    "url": "/clapping-hands-sign/"
+  },
+  {
+    "number": 138,
+    "emoji": "👐",
+    "codePoint": 128080,
+    "url": "/open-hands-sign/"
+  },
+  {
+    "number": 139,
+    "emoji": "✍",
+    "codePoint": 9997,
+    "url": "/writing-hand/"
+  },
+  {
+    "number": 140,
+    "emoji": "💅",
+    "codePoint": 128133,
+    "url": "/nail-polish/"
+  },
+  {
+    "number": 141,
+    "emoji": "👣",
+    "codePoint": 128099,
+    "url": "/footprints/"
+  },
+  {
+    "number": 142,
+    "emoji": "👀",
+    "codePoint": 128064,
+    "url": "/eyes/"
+  },
+  {
+    "number": 143,
+    "emoji": "👁",
+    "codePoint": 128065,
+    "url": "/eye/"
+  },
+  {
+    "number": 144,
+    "emoji": "👂",
+    "codePoint": 128066,
+    "url": "/ear/"
+  },
+  {
+    "number": 145,
+    "emoji": "👃",
+    "codePoint": 128067,
+    "url": "/nose/"
+  },
+  {
+    "number": 146,
+    "emoji": "👅",
+    "codePoint": 128069,
+    "url": "/tongue/"
+  },
+  {
+    "number": 147,
+    "emoji": "👄",
+    "codePoint": 128068,
+    "url": "/mouth/"
+  },
+  {
+    "number": 148,
+    "emoji": "💋",
+    "codePoint": 128139,
+    "url": "/kiss-mark/"
+  },
+  {
+    "number": 149,
+    "emoji": "💘",
+    "codePoint": 128152,
+    "url": "/heart-with-arrow/"
+  },
+  {
+    "number": 150,
+    "emoji": "❤️",
+    "codePoint": 10084,
+    "url": "/heavy-black-heart/"
+  },
+  {
+    "number": 151,
+    "emoji": "💓",
+    "codePoint": 128147,
+    "url": "/beating-heart/"
+  },
+  {
+    "number": 152,
+    "emoji": "💔",
+    "codePoint": 128148,
+    "url": "/broken-heart/"
+  },
+  {
+    "number": 153,
+    "emoji": "💕",
+    "codePoint": 128149,
+    "url": "/two-hearts/"
+  },
+  {
+    "number": 154,
+    "emoji": "💖",
+    "codePoint": 128150,
+    "url": "/sparkling-heart/"
+  },
+  {
+    "number": 155,
+    "emoji": "💗",
+    "codePoint": 128151,
+    "url": "/growing-heart/"
+  },
+  {
+    "number": 156,
+    "emoji": "💙",
+    "codePoint": 128153,
+    "url": "/blue-heart/"
+  },
+  {
+    "number": 157,
+    "emoji": "💚",
+    "codePoint": 128154,
+    "url": "/green-heart/"
+  },
+  {
+    "number": 158,
+    "emoji": "💛",
+    "codePoint": 128155,
+    "url": "/yellow-heart/"
+  },
+  {
+    "number": 159,
+    "emoji": "💜",
+    "codePoint": 128156,
+    "url": "/purple-heart/"
+  },
+  {
+    "number": 160,
+    "emoji": "💝",
+    "codePoint": 128157,
+    "url": "/heart-with-ribbon/"
+  },
+  {
+    "number": 161,
+    "emoji": "💞",
+    "codePoint": 128158,
+    "url": "/revolving-hearts/"
+  },
+  {
+    "number": 162,
+    "emoji": "💟",
+    "codePoint": 128159,
+    "url": "/heart-decoration/"
+  },
+  {
+    "number": 163,
+    "emoji": "❣",
+    "codePoint": 10083,
+    "url": "/heavy-heart-exclamation-mark-ornament/"
+  },
+  {
+    "number": 164,
+    "emoji": "💌",
+    "codePoint": 128140,
+    "url": "/love-letter/"
+  },
+  {
+    "number": 165,
+    "emoji": "💧",
+    "codePoint": 128167,
+    "url": "/droplet/"
+  },
+  {
+    "number": 166,
+    "emoji": "💤",
+    "codePoint": 128164,
+    "url": "/sleeping-symbol/"
+  },
+  {
+    "number": 167,
+    "emoji": "💢",
+    "codePoint": 128162,
+    "url": "/anger-symbol/"
+  },
+  {
+    "number": 168,
+    "emoji": "💣",
+    "codePoint": 128163,
+    "url": "/bomb/"
+  },
+  {
+    "number": 169,
+    "emoji": "💥",
+    "codePoint": 128165,
+    "url": "/collision-symbol/"
+  },
+  {
+    "number": 170,
+    "emoji": "💦",
+    "codePoint": 128166,
+    "url": "/splashing-sweat-symbol/"
+  },
+  {
+    "number": 171,
+    "emoji": "💨",
+    "codePoint": 128168,
+    "url": "/dash-symbol/"
+  },
+  {
+    "number": 172,
+    "emoji": "💫",
+    "codePoint": 128171,
+    "url": "/dizzy-symbol/"
+  },
+  {
+    "number": 173,
+    "emoji": "💬",
+    "codePoint": 128172,
+    "url": "/speech-balloon/"
+  },
+  {
+    "number": 174,
+    "emoji": "💭",
+    "codePoint": 128173,
+    "url": "/thought-balloon/"
+  },
+  {
+    "number": 175,
+    "emoji": "🕳",
+    "codePoint": 128371,
+    "url": "/hole/"
+  },
+  {
+    "number": 176,
+    "emoji": "🗯",
+    "codePoint": 128495,
+    "url": "/right-anger-bubble/"
+  },
+  {
+    "number": 177,
+    "emoji": "👓",
+    "codePoint": 128083,
+    "url": "/eyeglasses/"
+  },
+  {
+    "number": 178,
+    "emoji": "🕶",
+    "codePoint": 128374,
+    "url": "/dark-sunglasses/"
+  },
+  {
+    "number": 179,
+    "emoji": "👔",
+    "codePoint": 128084,
+    "url": "/necktie/"
+  },
+  {
+    "number": 180,
+    "emoji": "👕",
+    "codePoint": 128085,
+    "url": "/t-shirt/"
+  },
+  {
+    "number": 181,
+    "emoji": "👖",
+    "codePoint": 128086,
+    "url": "/jeans/"
+  },
+  {
+    "number": 182,
+    "emoji": "👗",
+    "codePoint": 128087,
+    "url": "/dress/"
+  },
+  {
+    "number": 183,
+    "emoji": "👘",
+    "codePoint": 128088,
+    "url": "/kimono/"
+  },
+  {
+    "number": 184,
+    "emoji": "👙",
+    "codePoint": 128089,
+    "url": "/bikini/"
+  },
+  {
+    "number": 185,
+    "emoji": "👚",
+    "codePoint": 128090,
+    "url": "/womans-clothes/"
+  },
+  {
+    "number": 186,
+    "emoji": "👛",
+    "codePoint": 128091,
+    "url": "/purse/"
+  },
+  {
+    "number": 187,
+    "emoji": "👜",
+    "codePoint": 128092,
+    "url": "/handbag/"
+  },
+  {
+    "number": 188,
+    "emoji": "👝",
+    "codePoint": 128093,
+    "url": "/pouch/"
+  },
+  {
+    "number": 189,
+    "emoji": "🛍",
+    "codePoint": 128717,
+    "url": "/shopping-bags/"
+  },
+  {
+    "number": 190,
+    "emoji": "🎒",
+    "codePoint": 127890,
+    "url": "/school-satchel/"
+  },
+  {
+    "number": 191,
+    "emoji": "👞",
+    "codePoint": 128094,
+    "url": "/mans-shoe/"
+  },
+  {
+    "number": 192,
+    "emoji": "👟",
+    "codePoint": 128095,
+    "url": "/athletic-shoe/"
+  },
+  {
+    "number": 193,
+    "emoji": "👠",
+    "codePoint": 128096,
+    "url": "/high-heeled-shoe/"
+  },
+  {
+    "number": 194,
+    "emoji": "👡",
+    "codePoint": 128097,
+    "url": "/womans-sandal/"
+  },
+  {
+    "number": 195,
+    "emoji": "👢",
+    "codePoint": 128098,
+    "url": "/womans-boots/"
+  },
+  {
+    "number": 196,
+    "emoji": "👑",
+    "codePoint": 128081,
+    "url": "/crown/"
+  },
+  {
+    "number": 197,
+    "emoji": "👒",
+    "codePoint": 128082,
+    "url": "/womans-hat/"
+  },
+  {
+    "number": 198,
+    "emoji": "🎩",
+    "codePoint": 127913,
+    "url": "/top-hat/"
+  },
+  {
+    "number": 199,
+    "emoji": "📿",
+    "codePoint": 128255,
+    "url": "/prayer-beads/"
+  },
+  {
+    "number": 200,
+    "emoji": "💄",
+    "codePoint": 128132,
+    "url": "/lipstick/"
+  },
+  {
+    "number": 201,
+    "emoji": "💍",
+    "codePoint": 128141,
+    "url": "/ring/"
+  },
+  {
+    "number": 202,
+    "emoji": "💎",
+    "codePoint": 128142,
+    "url": "/gem-stone/"
+  },
+  {
+    "number": 203,
+    "emoji": "👹",
+    "codePoint": 128121,
+    "url": "/japanese-ogre/"
+  },
+  {
+    "number": 204,
+    "emoji": "👺",
+    "codePoint": 128122,
+    "url": "/japanese-goblin/"
+  },
+  {
+    "number": 205,
+    "emoji": "👻",
+    "codePoint": 128123,
+    "url": "/ghost/"
+  },
+  {
+    "number": 206,
+    "emoji": "💀",
+    "codePoint": 128128,
+    "url": "/skull/"
+  },
+  {
+    "number": 207,
+    "emoji": "☠",
+    "codePoint": 9760,
+    "url": "/skull-and-crossbones/"
+  },
+  {
+    "number": 208,
+    "emoji": "👽",
+    "codePoint": 128125,
+    "url": "/extraterrestrial-alien/"
+  },
+  {
+    "number": 209,
+    "emoji": "👾",
+    "codePoint": 128126,
+    "url": "/alien-monster/"
+  },
+  {
+    "number": 210,
+    "emoji": "🤖",
+    "codePoint": 129302,
+    "url": "/robot-face/"
+  },
+  {
+    "number": 211,
+    "emoji": "💩",
+    "codePoint": 128169,
+    "url": "/pile-of-poo/"
+  },
+  {
+    "number": 212,
+    "emoji": "🐵",
+    "codePoint": 128053,
+    "url": "/monkey-face/"
+  },
+  {
+    "number": 213,
+    "emoji": "🙈",
+    "codePoint": 128584,
+    "url": "/see-no-evil-monkey/"
+  },
+  {
+    "number": 214,
+    "emoji": "🙉",
+    "codePoint": 128585,
+    "url": "/hear-no-evil-monkey/"
+  },
+  {
+    "number": 215,
+    "emoji": "🙊",
+    "codePoint": 128586,
+    "url": "/speak-no-evil-monkey/"
+  },
+  {
+    "number": 216,
+    "emoji": "🐒",
+    "codePoint": 128018,
+    "url": "/monkey/"
+  },
+  {
+    "number": 217,
+    "emoji": "🐶",
+    "codePoint": 128054,
+    "url": "/dog-face/"
+  },
+  {
+    "number": 218,
+    "emoji": "🐕",
+    "codePoint": 128021,
+    "url": "/dog/"
+  },
+  {
+    "number": 219,
+    "emoji": "🐩",
+    "codePoint": 128041,
+    "url": "/poodle/"
+  },
+  {
+    "number": 220,
+    "emoji": "🐺",
+    "codePoint": 128058,
+    "url": "/wolf-face/"
+  },
+  {
+    "number": 221,
+    "emoji": "🐱",
+    "codePoint": 128049,
+    "url": "/cat-face/"
+  },
+  {
+    "number": 222,
+    "emoji": "😸",
+    "codePoint": 128568,
+    "url": "/grinning-cat-face-with-smiling-eyes/"
+  },
+  {
+    "number": 223,
+    "emoji": "😹",
+    "codePoint": 128569,
+    "url": "/cat-face-with-tears-of-joy/"
+  },
+  {
+    "number": 224,
+    "emoji": "😺",
+    "codePoint": 128570,
+    "url": "/smiling-cat-face-with-open-mouth/"
+  },
+  {
+    "number": 225,
+    "emoji": "😻",
+    "codePoint": 128571,
+    "url": "/smiling-cat-face-with-heart-shaped-eyes/"
+  },
+  {
+    "number": 226,
+    "emoji": "😼",
+    "codePoint": 128572,
+    "url": "/cat-face-with-wry-smile/"
+  },
+  {
+    "number": 227,
+    "emoji": "😽",
+    "codePoint": 128573,
+    "url": "/kissing-cat-face-with-closed-eyes/"
+  },
+  {
+    "number": 228,
+    "emoji": "😾",
+    "codePoint": 128574,
+    "url": "/pouting-cat-face/"
+  },
+  {
+    "number": 229,
+    "emoji": "😿",
+    "codePoint": 128575,
+    "url": "/crying-cat-face/"
+  },
+  {
+    "number": 230,
+    "emoji": "🙀",
+    "codePoint": 128576,
+    "url": "/weary-cat-face/"
+  },
+  {
+    "number": 231,
+    "emoji": "🐈",
+    "codePoint": 128008,
+    "url": "/cat/"
+  },
+  {
+    "number": 232,
+    "emoji": "🦁",
+    "codePoint": 129409,
+    "url": "/lion-face/"
+  },
+  {
+    "number": 233,
+    "emoji": "🐯",
+    "codePoint": 128047,
+    "url": "/tiger-face/"
+  },
+  {
+    "number": 234,
+    "emoji": "🐅",
+    "codePoint": 128005,
+    "url": "/tiger/"
+  },
+  {
+    "number": 235,
+    "emoji": "🐆",
+    "codePoint": 128006,
+    "url": "/leopard/"
+  },
+  {
+    "number": 236,
+    "emoji": "🐴",
+    "codePoint": 128052,
+    "url": "/horse-face/"
+  },
+  {
+    "number": 237,
+    "emoji": "🐎",
+    "codePoint": 128014,
+    "url": "/horse/"
+  },
+  {
+    "number": 238,
+    "emoji": "🦄",
+    "codePoint": 129412,
+    "url": "/unicorn-face/"
+  },
+  {
+    "number": 239,
+    "emoji": "🐮",
+    "codePoint": 128046,
+    "url": "/cow-face/"
+  },
+  {
+    "number": 240,
+    "emoji": "🐂",
+    "codePoint": 128002,
+    "url": "/ox/"
+  },
+  {
+    "number": 241,
+    "emoji": "🐃",
+    "codePoint": 128003,
+    "url": "/water-buffalo/"
+  },
+  {
+    "number": 242,
+    "emoji": "🐄",
+    "codePoint": 128004,
+    "url": "/cow/"
+  },
+  {
+    "number": 243,
+    "emoji": "🐷",
+    "codePoint": 128055,
+    "url": "/pig-face/"
+  },
+  {
+    "number": 244,
+    "emoji": "🐖",
+    "codePoint": 128022,
+    "url": "/pig/"
+  },
+  {
+    "number": 245,
+    "emoji": "🐗",
+    "codePoint": 128023,
+    "url": "/boar/"
+  },
+  {
+    "number": 246,
+    "emoji": "🐽",
+    "codePoint": 128061,
+    "url": "/pig-nose/"
+  },
+  {
+    "number": 247,
+    "emoji": "🐏",
+    "codePoint": 128015,
+    "url": "/ram/"
+  },
+  {
+    "number": 248,
+    "emoji": "🐑",
+    "codePoint": 128017,
+    "url": "/sheep/"
+  },
+  {
+    "number": 249,
+    "emoji": "🐐",
+    "codePoint": 128016,
+    "url": "/goat/"
+  },
+  {
+    "number": 250,
+    "emoji": "🐪",
+    "codePoint": 128042,
+    "url": "/dromedary-camel/"
+  },
+  {
+    "number": 251,
+    "emoji": "🐫",
+    "codePoint": 128043,
+    "url": "/bactrian-camel/"
+  },
+  {
+    "number": 252,
+    "emoji": "🐘",
+    "codePoint": 128024,
+    "url": "/elephant/"
+  },
+  {
+    "number": 253,
+    "emoji": "🐭",
+    "codePoint": 128045,
+    "url": "/mouse-face/"
+  },
+  {
+    "number": 254,
+    "emoji": "🐁",
+    "codePoint": 128001,
+    "url": "/mouse/"
+  },
+  {
+    "number": 255,
+    "emoji": "🐀",
+    "codePoint": 128000,
+    "url": "/rat/"
+  },
+  {
+    "number": 256,
+    "emoji": "🐹",
+    "codePoint": 128057,
+    "url": "/hamster-face/"
+  },
+  {
+    "number": 257,
+    "emoji": "🐰",
+    "codePoint": 128048,
+    "url": "/rabbit-face/"
+  },
+  {
+    "number": 258,
+    "emoji": "🐇",
+    "codePoint": 128007,
+    "url": "/rabbit/"
+  },
+  {
+    "number": 259,
+    "emoji": "🐿",
+    "codePoint": 128063,
+    "url": "/chipmunk/"
+  },
+  {
+    "number": 260,
+    "emoji": "🐻",
+    "codePoint": 128059,
+    "url": "/bear-face/"
+  },
+  {
+    "number": 261,
+    "emoji": "🐨",
+    "codePoint": 128040,
+    "url": "/koala/"
+  },
+  {
+    "number": 262,
+    "emoji": "🐼",
+    "codePoint": 128060,
+    "url": "/panda-face/"
+  },
+  {
+    "number": 263,
+    "emoji": "🐾",
+    "codePoint": 128062,
+    "url": "/paw-prints/"
+  },
+  {
+    "number": 264,
+    "emoji": "🦃",
+    "codePoint": 129411,
+    "url": "/turkey/"
+  },
+  {
+    "number": 265,
+    "emoji": "🐔",
+    "codePoint": 128020,
+    "url": "/chicken/"
+  },
+  {
+    "number": 266,
+    "emoji": "🐓",
+    "codePoint": 128019,
+    "url": "/rooster/"
+  },
+  {
+    "number": 267,
+    "emoji": "🐣",
+    "codePoint": 128035,
+    "url": "/hatching-chick/"
+  },
+  {
+    "number": 268,
+    "emoji": "🐤",
+    "codePoint": 128036,
+    "url": "/baby-chick/"
+  },
+  {
+    "number": 269,
+    "emoji": "🐥",
+    "codePoint": 128037,
+    "url": "/front-facing-baby-chick/"
+  },
+  {
+    "number": 270,
+    "emoji": "🐦",
+    "codePoint": 128038,
+    "url": "/bird/"
+  },
+  {
+    "number": 271,
+    "emoji": "🐧",
+    "codePoint": 128039,
+    "url": "/penguin/"
+  },
+  {
+    "number": 272,
+    "emoji": "🕊",
+    "codePoint": 128330,
+    "url": "/dove-of-peace/"
+  },
+  {
+    "number": 273,
+    "emoji": "🐸",
+    "codePoint": 128056,
+    "url": "/frog-face/"
+  },
+  {
+    "number": 274,
+    "emoji": "🐊",
+    "codePoint": 128010,
+    "url": "/crocodile/"
+  },
+  {
+    "number": 275,
+    "emoji": "🐢",
+    "codePoint": 128034,
+    "url": "/turtle/"
+  },
+  {
+    "number": 276,
+    "emoji": "🐍",
+    "codePoint": 128013,
+    "url": "/snake/"
+  },
+  {
+    "number": 277,
+    "emoji": "🐲",
+    "codePoint": 128050,
+    "url": "/dragon-face/"
+  },
+  {
+    "number": 278,
+    "emoji": "🐉",
+    "codePoint": 128009,
+    "url": "/dragon/"
+  },
+  {
+    "number": 279,
+    "emoji": "🐳",
+    "codePoint": 128051,
+    "url": "/spouting-whale/"
+  },
+  {
+    "number": 280,
+    "emoji": "🐋",
+    "codePoint": 128011,
+    "url": "/whale/"
+  },
+  {
+    "number": 281,
+    "emoji": "🐬",
+    "codePoint": 128044,
+    "url": "/dolphin/"
+  },
+  {
+    "number": 282,
+    "emoji": "🐟",
+    "codePoint": 128031,
+    "url": "/fish/"
+  },
+  {
+    "number": 283,
+    "emoji": "🐠",
+    "codePoint": 128032,
+    "url": "/tropical-fish/"
+  },
+  {
+    "number": 284,
+    "emoji": "🐡",
+    "codePoint": 128033,
+    "url": "/blowfish/"
+  },
+  {
+    "number": 285,
+    "emoji": "🐙",
+    "codePoint": 128025,
+    "url": "/octopus/"
+  },
+  {
+    "number": 286,
+    "emoji": "🐚",
+    "codePoint": 128026,
+    "url": "/spiral-shell/"
+  },
+  {
+    "number": 287,
+    "emoji": "🦀",
+    "codePoint": 129408,
+    "url": "/crab/"
+  },
+  {
+    "number": 288,
+    "emoji": "🐌",
+    "codePoint": 128012,
+    "url": "/snail/"
+  },
+  {
+    "number": 289,
+    "emoji": "🐛",
+    "codePoint": 128027,
+    "url": "/bug/"
+  },
+  {
+    "number": 290,
+    "emoji": "🐜",
+    "codePoint": 128028,
+    "url": "/ant/"
+  },
+  {
+    "number": 291,
+    "emoji": "🐝",
+    "codePoint": 128029,
+    "url": "/honeybee/"
+  },
+  {
+    "number": 292,
+    "emoji": "🐞",
+    "codePoint": 128030,
+    "url": "/lady-beetle/"
+  },
+  {
+    "number": 293,
+    "emoji": "🕷",
+    "codePoint": 128375,
+    "url": "/spider/"
+  },
+  {
+    "number": 294,
+    "emoji": "🕸",
+    "codePoint": 128376,
+    "url": "/spider-web/"
+  },
+  {
+    "number": 295,
+    "emoji": "🦂",
+    "codePoint": 129410,
+    "url": "/scorpion/"
+  },
+  {
+    "number": 296,
+    "emoji": "💐",
+    "codePoint": 128144,
+    "url": "/bouquet/"
+  },
+  {
+    "number": 297,
+    "emoji": "🌸",
+    "codePoint": 127800,
+    "url": "/cherry-blossom/"
+  },
+  {
+    "number": 298,
+    "emoji": "💮",
+    "codePoint": 128174,
+    "url": "/white-flower/"
+  },
+  {
+    "number": 299,
+    "emoji": "🏵",
+    "codePoint": 127989,
+    "url": "/rosette/"
+  },
+  {
+    "number": 300,
+    "emoji": "🌹",
+    "codePoint": 127801,
+    "url": "/rose/"
+  },
+  {
+    "number": 301,
+    "emoji": "🌺",
+    "codePoint": 127802,
+    "url": "/hibiscus/"
+  },
+  {
+    "number": 302,
+    "emoji": "🌻",
+    "codePoint": 127803,
+    "url": "/sunflower/"
+  },
+  {
+    "number": 303,
+    "emoji": "🌼",
+    "codePoint": 127804,
+    "url": "/blossom/"
+  },
+  {
+    "number": 304,
+    "emoji": "🌷",
+    "codePoint": 127799,
+    "url": "/tulip/"
+  },
+  {
+    "number": 305,
+    "emoji": "☘",
+    "codePoint": 9752,
+    "url": "/shamrock/"
+  },
+  {
+    "number": 306,
+    "emoji": "🌱",
+    "codePoint": 127793,
+    "url": "/seedling/"
+  },
+  {
+    "number": 307,
+    "emoji": "🌲",
+    "codePoint": 127794,
+    "url": "/evergreen-tree/"
+  },
+  {
+    "number": 308,
+    "emoji": "🌳",
+    "codePoint": 127795,
+    "url": "/deciduous-tree/"
+  },
+  {
+    "number": 309,
+    "emoji": "🌴",
+    "codePoint": 127796,
+    "url": "/palm-tree/"
+  },
+  {
+    "number": 310,
+    "emoji": "🌵",
+    "codePoint": 127797,
+    "url": "/cactus/"
+  },
+  {
+    "number": 311,
+    "emoji": "🌾",
+    "codePoint": 127806,
+    "url": "/ear-of-rice/"
+  },
+  {
+    "number": 312,
+    "emoji": "🌿",
+    "codePoint": 127807,
+    "url": "/herb/"
+  },
+  {
+    "number": 313,
+    "emoji": "🍀",
+    "codePoint": 127808,
+    "url": "/four-leaf-clover/"
+  },
+  {
+    "number": 314,
+    "emoji": "🍁",
+    "codePoint": 127809,
+    "url": "/maple-leaf/"
+  },
+  {
+    "number": 315,
+    "emoji": "🍂",
+    "codePoint": 127810,
+    "url": "/fallen-leaf/"
+  },
+  {
+    "number": 316,
+    "emoji": "🍃",
+    "codePoint": 127811,
+    "url": "/leaf-fluttering-in-wind/"
+  },
+  {
+    "number": 317,
+    "emoji": "🍇",
+    "codePoint": 127815,
+    "url": "/grapes/"
+  },
+  {
+    "number": 318,
+    "emoji": "🍈",
+    "codePoint": 127816,
+    "url": "/melon/"
+  },
+  {
+    "number": 319,
+    "emoji": "🍉",
+    "codePoint": 127817,
+    "url": "/watermelon/"
+  },
+  {
+    "number": 320,
+    "emoji": "🍊",
+    "codePoint": 127818,
+    "url": "/tangerine/"
+  },
+  {
+    "number": 321,
+    "emoji": "🍋",
+    "codePoint": 127819,
+    "url": "/lemon/"
+  },
+  {
+    "number": 322,
+    "emoji": "🍌",
+    "codePoint": 127820,
+    "url": "/banana/"
+  },
+  {
+    "number": 323,
+    "emoji": "🍍",
+    "codePoint": 127821,
+    "url": "/pineapple/"
+  },
+  {
+    "number": 324,
+    "emoji": "🍎",
+    "codePoint": 127822,
+    "url": "/red-apple/"
+  },
+  {
+    "number": 325,
+    "emoji": "🍏",
+    "codePoint": 127823,
+    "url": "/green-apple/"
+  },
+  {
+    "number": 326,
+    "emoji": "🍐",
+    "codePoint": 127824,
+    "url": "/pear/"
+  },
+  {
+    "number": 327,
+    "emoji": "🍑",
+    "codePoint": 127825,
+    "url": "/peach/"
+  },
+  {
+    "number": 328,
+    "emoji": "🍒",
+    "codePoint": 127826,
+    "url": "/cherries/"
+  },
+  {
+    "number": 329,
+    "emoji": "🍓",
+    "codePoint": 127827,
+    "url": "/strawberry/"
+  },
+  {
+    "number": 330,
+    "emoji": "🍅",
+    "codePoint": 127813,
+    "url": "/tomato/"
+  },
+  {
+    "number": 331,
+    "emoji": "🍆",
+    "codePoint": 127814,
+    "url": "/aubergine/"
+  },
+  {
+    "number": 332,
+    "emoji": "🌽",
+    "codePoint": 127805,
+    "url": "/ear-of-maize/"
+  },
+  {
+    "number": 333,
+    "emoji": "🌶",
+    "codePoint": 127798,
+    "url": "/hot-pepper/"
+  },
+  {
+    "number": 334,
+    "emoji": "🍄",
+    "codePoint": 127812,
+    "url": "/mushroom/"
+  },
+  {
+    "number": 335,
+    "emoji": "🌰",
+    "codePoint": 127792,
+    "url": "/chestnut/"
+  },
+  {
+    "number": 336,
+    "emoji": "🍞",
+    "codePoint": 127838,
+    "url": "/bread/"
+  },
+  {
+    "number": 337,
+    "emoji": "🧀",
+    "codePoint": 129472,
+    "url": "/cheese-wedge/"
+  },
+  {
+    "number": 338,
+    "emoji": "🍖",
+    "codePoint": 127830,
+    "url": "/meat-on-bone/"
+  },
+  {
+    "number": 339,
+    "emoji": "🍗",
+    "codePoint": 127831,
+    "url": "/poultry-leg/"
+  },
+  {
+    "number": 340,
+    "emoji": "🍔",
+    "codePoint": 127828,
+    "url": "/hamburger/"
+  },
+  {
+    "number": 341,
+    "emoji": "🍟",
+    "codePoint": 127839,
+    "url": "/french-fries/"
+  },
+  {
+    "number": 342,
+    "emoji": "🍕",
+    "codePoint": 127829,
+    "url": "/slice-of-pizza/"
+  },
+  {
+    "number": 343,
+    "emoji": "🌭",
+    "codePoint": 127789,
+    "url": "/hot-dog/"
+  },
+  {
+    "number": 344,
+    "emoji": "🌮",
+    "codePoint": 127790,
+    "url": "/taco/"
+  },
+  {
+    "number": 345,
+    "emoji": "🌯",
+    "codePoint": 127791,
+    "url": "/burrito/"
+  },
+  {
+    "number": 346,
+    "emoji": "🍿",
+    "codePoint": 127871,
+    "url": "/popcorn/"
+  },
+  {
+    "number": 347,
+    "emoji": "🍲",
+    "codePoint": 127858,
+    "url": "/pot-of-food/"
+  },
+  {
+    "number": 348,
+    "emoji": "🍱",
+    "codePoint": 127857,
+    "url": "/bento-box/"
+  },
+  {
+    "number": 349,
+    "emoji": "🍘",
+    "codePoint": 127832,
+    "url": "/rice-cracker/"
+  },
+  {
+    "number": 350,
+    "emoji": "🍙",
+    "codePoint": 127833,
+    "url": "/rice-ball/"
+  },
+  {
+    "number": 351,
+    "emoji": "🍚",
+    "codePoint": 127834,
+    "url": "/cooked-rice/"
+  },
+  {
+    "number": 352,
+    "emoji": "🍛",
+    "codePoint": 127835,
+    "url": "/curry-and-rice/"
+  },
+  {
+    "number": 353,
+    "emoji": "🍜",
+    "codePoint": 127836,
+    "url": "/steaming-bowl/"
+  },
+  {
+    "number": 354,
+    "emoji": "🍝",
+    "codePoint": 127837,
+    "url": "/spaghetti/"
+  },
+  {
+    "number": 355,
+    "emoji": "🍠",
+    "codePoint": 127840,
+    "url": "/roasted-sweet-potato/"
+  },
+  {
+    "number": 356,
+    "emoji": "🍢",
+    "codePoint": 127842,
+    "url": "/oden/"
+  },
+  {
+    "number": 357,
+    "emoji": "🍣",
+    "codePoint": 127843,
+    "url": "/sushi/"
+  },
+  {
+    "number": 358,
+    "emoji": "🍤",
+    "codePoint": 127844,
+    "url": "/fried-shrimp/"
+  },
+  {
+    "number": 359,
+    "emoji": "🍥",
+    "codePoint": 127845,
+    "url": "/fish-cake-with-swirl-design/"
+  },
+  {
+    "number": 360,
+    "emoji": "🍡",
+    "codePoint": 127841,
+    "url": "/dango/"
+  },
+  {
+    "number": 361,
+    "emoji": "🍦",
+    "codePoint": 127846,
+    "url": "/soft-ice-cream/"
+  },
+  {
+    "number": 362,
+    "emoji": "🍧",
+    "codePoint": 127847,
+    "url": "/shaved-ice/"
+  },
+  {
+    "number": 363,
+    "emoji": "🍨",
+    "codePoint": 127848,
+    "url": "/ice-cream/"
+  },
+  {
+    "number": 364,
+    "emoji": "🍩",
+    "codePoint": 127849,
+    "url": "/doughnut/"
+  },
+  {
+    "number": 365,
+    "emoji": "🍪",
+    "codePoint": 127850,
+    "url": "/cookie/"
+  },
+  {
+    "number": 366,
+    "emoji": "🎂",
+    "codePoint": 127874,
+    "url": "/birthday-cake/"
+  },
+  {
+    "number": 367,
+    "emoji": "🍰",
+    "codePoint": 127856,
+    "url": "/shortcake/"
+  },
+  {
+    "number": 368,
+    "emoji": "🍫",
+    "codePoint": 127851,
+    "url": "/chocolate-bar/"
+  },
+  {
+    "number": 369,
+    "emoji": "🍬",
+    "codePoint": 127852,
+    "url": "/candy/"
+  },
+  {
+    "number": 370,
+    "emoji": "🍭",
+    "codePoint": 127853,
+    "url": "/lollipop/"
+  },
+  {
+    "number": 371,
+    "emoji": "🍮",
+    "codePoint": 127854,
+    "url": "/custard/"
+  },
+  {
+    "number": 372,
+    "emoji": "🍯",
+    "codePoint": 127855,
+    "url": "/honey-pot/"
+  },
+  {
+    "number": 373,
+    "emoji": "🍼",
+    "codePoint": 127868,
+    "url": "/baby-bottle/"
+  },
+  {
+    "number": 374,
+    "emoji": "☕",
+    "codePoint": 9749,
+    "url": "/hot-beverage/"
+  },
+  {
+    "number": 375,
+    "emoji": "🍵",
+    "codePoint": 127861,
+    "url": "/teacup-without-handle/"
+  },
+  {
+    "number": 376,
+    "emoji": "🍶",
+    "codePoint": 127862,
+    "url": "/sake-bottle-and-cup/"
+  },
+  {
+    "number": 377,
+    "emoji": "🍾",
+    "codePoint": 127870,
+    "url": "/bottle-with-popping-cork/"
+  },
+  {
+    "number": 378,
+    "emoji": "🍷",
+    "codePoint": 127863,
+    "url": "/wine-glass/"
+  },
+  {
+    "number": 379,
+    "emoji": "🍸",
+    "codePoint": 127864,
+    "url": "/cocktail-glass/"
+  },
+  {
+    "number": 380,
+    "emoji": "🍹",
+    "codePoint": 127865,
+    "url": "/tropical-drink/"
+  },
+  {
+    "number": 381,
+    "emoji": "🍺",
+    "codePoint": 127866,
+    "url": "/beer-mug/"
+  },
+  {
+    "number": 382,
+    "emoji": "🍻",
+    "codePoint": 127867,
+    "url": "/clinking-beer-mugs/"
+  },
+  {
+    "number": 383,
+    "emoji": "🍽",
+    "codePoint": 127869,
+    "url": "/fork-and-knife-with-plate/"
+  },
+  {
+    "number": 384,
+    "emoji": "🍴",
+    "codePoint": 127860,
+    "url": "/fork-and-knife/"
+  },
+  {
+    "number": 385,
+    "emoji": "🍳",
+    "codePoint": 127859,
+    "url": "/cooking/"
+  },
+  {
+    "number": 386,
+    "emoji": "🏺",
+    "codePoint": 127994,
+    "url": "/amphora/"
+  },
+  {
+    "number": 387,
+    "emoji": "🌍",
+    "codePoint": 127757,
+    "url": "/earth-globe-europe-africa/"
+  },
+  {
+    "number": 388,
+    "emoji": "🌎",
+    "codePoint": 127758,
+    "url": "/earth-globe-americas/"
+  },
+  {
+    "number": 389,
+    "emoji": "🌏",
+    "codePoint": 127759,
+    "url": "/earth-globe-asia-australia/"
+  },
+  {
+    "number": 390,
+    "emoji": "🌐",
+    "codePoint": 127760,
+    "url": "/globe-with-meridians/"
+  },
+  {
+    "number": 391,
+    "emoji": "🗺",
+    "codePoint": 128506,
+    "url": "/world-map/"
+  },
+  {
+    "number": 392,
+    "emoji": "🏔",
+    "codePoint": 127956,
+    "url": "/snow-capped-mountain/"
+  },
+  {
+    "number": 393,
+    "emoji": "⛰",
+    "codePoint": 9968,
+    "url": "/mountain/"
+  },
+  {
+    "number": 394,
+    "emoji": "🌋",
+    "codePoint": 127755,
+    "url": "/volcano/"
+  },
+  {
+    "number": 395,
+    "emoji": "🗻",
+    "codePoint": 128507,
+    "url": "/mount-fuji/"
+  },
+  {
+    "number": 396,
+    "emoji": "🏕",
+    "codePoint": 127957,
+    "url": "/camping/"
+  },
+  {
+    "number": 397,
+    "emoji": "🏖",
+    "codePoint": 127958,
+    "url": "/beach-with-umbrella/"
+  },
+  {
+    "number": 398,
+    "emoji": "🏜",
+    "codePoint": 127964,
+    "url": "/desert/"
+  },
+  {
+    "number": 399,
+    "emoji": "🏝",
+    "codePoint": 127965,
+    "url": "/desert-island/"
+  },
+  {
+    "number": 400,
+    "emoji": "🏞",
+    "codePoint": 127966,
+    "url": "/national-park/"
+  },
+  {
+    "number": 401,
+    "emoji": "🏟",
+    "codePoint": 127967,
+    "url": "/stadium/"
+  },
+  {
+    "number": 402,
+    "emoji": "🏛",
+    "codePoint": 127963,
+    "url": "/classical-building/"
+  },
+  {
+    "number": 403,
+    "emoji": "🏗",
+    "codePoint": 127959,
+    "url": "/building-construction/"
+  },
+  {
+    "number": 404,
+    "emoji": "🏘",
+    "codePoint": 127960,
+    "url": "/house-buildings/"
+  },
+  {
+    "number": 405,
+    "emoji": "🏙",
+    "codePoint": 127961,
+    "url": "/cityscape/"
+  },
+  {
+    "number": 406,
+    "emoji": "🏚",
+    "codePoint": 127962,
+    "url": "/derelict-house-building/"
+  },
+  {
+    "number": 407,
+    "emoji": "🏠",
+    "codePoint": 127968,
+    "url": "/house-building/"
+  },
+  {
+    "number": 408,
+    "emoji": "🏡",
+    "codePoint": 127969,
+    "url": "/house-with-garden/"
+  },
+  {
+    "number": 409,
+    "emoji": "🛐",
+    "codePoint": 128720,
+    "url": "/place-of-worship/"
+  },
+  {
+    "number": 410,
+    "emoji": "⛪",
+    "codePoint": 9962,
+    "url": "/church/"
+  },
+  {
+    "number": 411,
+    "emoji": "🕋",
+    "codePoint": 128331,
+    "url": "/kaaba/"
+  },
+  {
+    "number": 412,
+    "emoji": "🕌",
+    "codePoint": 128332,
+    "url": "/mosque/"
+  },
+  {
+    "number": 413,
+    "emoji": "🕍",
+    "codePoint": 128333,
+    "url": "/synagogue/"
+  },
+  {
+    "number": 414,
+    "emoji": "🏢",
+    "codePoint": 127970,
+    "url": "/office-building/"
+  },
+  {
+    "number": 415,
+    "emoji": "🏣",
+    "codePoint": 127971,
+    "url": "/japanese-post-office/"
+  },
+  {
+    "number": 416,
+    "emoji": "🏤",
+    "codePoint": 127972,
+    "url": "/european-post-office/"
+  },
+  {
+    "number": 417,
+    "emoji": "🏥",
+    "codePoint": 127973,
+    "url": "/hospital/"
+  },
+  {
+    "number": 418,
+    "emoji": "🏦",
+    "codePoint": 127974,
+    "url": "/bank/"
+  },
+  {
+    "number": 419,
+    "emoji": "🏨",
+    "codePoint": 127976,
+    "url": "/hotel/"
+  },
+  {
+    "number": 420,
+    "emoji": "🏩",
+    "codePoint": 127977,
+    "url": "/love-hotel/"
+  },
+  {
+    "number": 421,
+    "emoji": "🏪",
+    "codePoint": 127978,
+    "url": "/convenience-store/"
+  },
+  {
+    "number": 422,
+    "emoji": "🏫",
+    "codePoint": 127979,
+    "url": "/school/"
+  },
+  {
+    "number": 423,
+    "emoji": "🏬",
+    "codePoint": 127980,
+    "url": "/department-store/"
+  },
+  {
+    "number": 424,
+    "emoji": "🏭",
+    "codePoint": 127981,
+    "url": "/factory/"
+  },
+  {
+    "number": 425,
+    "emoji": "🏯",
+    "codePoint": 127983,
+    "url": "/japanese-castle/"
+  },
+  {
+    "number": 426,
+    "emoji": "🏰",
+    "codePoint": 127984,
+    "url": "/european-castle/"
+  },
+  {
+    "number": 427,
+    "emoji": "💒",
+    "codePoint": 128146,
+    "url": "/wedding/"
+  },
+  {
+    "number": 428,
+    "emoji": "🗼",
+    "codePoint": 128508,
+    "url": "/tokyo-tower/"
+  },
+  {
+    "number": 429,
+    "emoji": "🗽",
+    "codePoint": 128509,
+    "url": "/statue-of-liberty/"
+  },
+  {
+    "number": 430,
+    "emoji": "🗾",
+    "codePoint": 128510,
+    "url": "/silhouette-of-japan/"
+  },
+  {
+    "number": 431,
+    "emoji": "⛲",
+    "codePoint": 9970,
+    "url": "/fountain/"
+  },
+  {
+    "number": 432,
+    "emoji": "⛺",
+    "codePoint": 9978,
+    "url": "/tent/"
+  },
+  {
+    "number": 433,
+    "emoji": "🌁",
+    "codePoint": 127745,
+    "url": "/foggy/"
+  },
+  {
+    "number": 434,
+    "emoji": "🌃",
+    "codePoint": 127747,
+    "url": "/night-with-stars/"
+  },
+  {
+    "number": 435,
+    "emoji": "🌄",
+    "codePoint": 127748,
+    "url": "/sunrise-over-mountains/"
+  },
+  {
+    "number": 436,
+    "emoji": "🌅",
+    "codePoint": 127749,
+    "url": "/sunrise/"
+  },
+  {
+    "number": 437,
+    "emoji": "🌆",
+    "codePoint": 127750,
+    "url": "/cityscape-at-dusk/"
+  },
+  {
+    "number": 438,
+    "emoji": "🌇",
+    "codePoint": 127751,
+    "url": "/sunset-over-buildings/"
+  },
+  {
+    "number": 439,
+    "emoji": "🌉",
+    "codePoint": 127753,
+    "url": "/bridge-at-night/"
+  },
+  {
+    "number": 440,
+    "emoji": "🌊",
+    "codePoint": 127754,
+    "url": "/water-wave/"
+  },
+  {
+    "number": 441,
+    "emoji": "♨️",
+    "codePoint": 9832,
+    "url": "/hot-springs/"
+  },
+  {
+    "number": 442,
+    "emoji": "🗿",
+    "codePoint": 128511,
+    "url": "/moyai/"
+  },
+  {
+    "number": 443,
+    "emoji": "🌌",
+    "codePoint": 127756,
+    "url": "/milky-way/"
+  },
+  {
+    "number": 444,
+    "emoji": "🎠",
+    "codePoint": 127904,
+    "url": "/carousel-horse/"
+  },
+  {
+    "number": 445,
+    "emoji": "🎡",
+    "codePoint": 127905,
+    "url": "/ferris-wheel/"
+  },
+  {
+    "number": 446,
+    "emoji": "🎢",
+    "codePoint": 127906,
+    "url": "/roller-coaster/"
+  },
+  {
+    "number": 447,
+    "emoji": "💈",
+    "codePoint": 128136,
+    "url": "/barber-pole/"
+  },
+  {
+    "number": 448,
+    "emoji": "🎪",
+    "codePoint": 127914,
+    "url": "/circus-tent/"
+  },
+  {
+    "number": 449,
+    "emoji": "🎭",
+    "codePoint": 127917,
+    "url": "/performing-arts/"
+  },
+  {
+    "number": 450,
+    "emoji": "🖼",
+    "codePoint": 128444,
+    "url": "/frame-with-picture/"
+  },
+  {
+    "number": 451,
+    "emoji": "🎨",
+    "codePoint": 127912,
+    "url": "/artist-palette/"
+  },
+  {
+    "number": 452,
+    "emoji": "🎰",
+    "codePoint": 127920,
+    "url": "/slot-machine/"
+  },
+  {
+    "number": 453,
+    "emoji": "🚂",
+    "codePoint": 128642,
+    "url": "/steam-locomotive/"
+  },
+  {
+    "number": 454,
+    "emoji": "🚃",
+    "codePoint": 128643,
+    "url": "/railway-car/"
+  },
+  {
+    "number": 455,
+    "emoji": "🚄",
+    "codePoint": 128644,
+    "url": "/high-speed-train/"
+  },
+  {
+    "number": 456,
+    "emoji": "🚅",
+    "codePoint": 128645,
+    "url": "/high-speed-train-with-bullet-nose/"
+  },
+  {
+    "number": 457,
+    "emoji": "🚆",
+    "codePoint": 128646,
+    "url": "/train/"
+  },
+  {
+    "number": 458,
+    "emoji": "🚇",
+    "codePoint": 128647,
+    "url": "/metro/"
+  },
+  {
+    "number": 459,
+    "emoji": "🚈",
+    "codePoint": 128648,
+    "url": "/light-rail/"
+  },
+  {
+    "number": 460,
+    "emoji": "🚉",
+    "codePoint": 128649,
+    "url": "/station/"
+  },
+  {
+    "number": 461,
+    "emoji": "🚊",
+    "codePoint": 128650,
+    "url": "/tram/"
+  },
+  {
+    "number": 462,
+    "emoji": "🚝",
+    "codePoint": 128669,
+    "url": "/monorail/"
+  },
+  {
+    "number": 463,
+    "emoji": "🚞",
+    "codePoint": 128670,
+    "url": "/mountain-railway/"
+  },
+  {
+    "number": 464,
+    "emoji": "🚋",
+    "codePoint": 128651,
+    "url": "/tram-car/"
+  },
+  {
+    "number": 465,
+    "emoji": "🚌",
+    "codePoint": 128652,
+    "url": "/bus/"
+  },
+  {
+    "number": 466,
+    "emoji": "🚍",
+    "codePoint": 128653,
+    "url": "/oncoming-bus/"
+  },
+  {
+    "number": 467,
+    "emoji": "🚎",
+    "codePoint": 128654,
+    "url": "/trolleybus/"
+  },
+  {
+    "number": 468,
+    "emoji": "🚏",
+    "codePoint": 128655,
+    "url": "/bus-stop/"
+  },
+  {
+    "number": 469,
+    "emoji": "🚐",
+    "codePoint": 128656,
+    "url": "/minibus/"
+  },
+  {
+    "number": 470,
+    "emoji": "🚑",
+    "codePoint": 128657,
+    "url": "/ambulance/"
+  },
+  {
+    "number": 471,
+    "emoji": "🚒",
+    "codePoint": 128658,
+    "url": "/fire-engine/"
+  },
+  {
+    "number": 472,
+    "emoji": "🚓",
+    "codePoint": 128659,
+    "url": "/police-car/"
+  },
+  {
+    "number": 473,
+    "emoji": "🚔",
+    "codePoint": 128660,
+    "url": "/oncoming-police-car/"
+  },
+  {
+    "number": 474,
+    "emoji": "🚕",
+    "codePoint": 128661,
+    "url": "/taxi/"
+  },
+  {
+    "number": 475,
+    "emoji": "🚖",
+    "codePoint": 128662,
+    "url": "/oncoming-taxi/"
+  },
+  {
+    "number": 476,
+    "emoji": "🚗",
+    "codePoint": 128663,
+    "url": "/automobile/"
+  },
+  {
+    "number": 477,
+    "emoji": "🚘",
+    "codePoint": 128664,
+    "url": "/oncoming-automobile/"
+  },
+  {
+    "number": 478,
+    "emoji": "🚙",
+    "codePoint": 128665,
+    "url": "/recreational-vehicle/"
+  },
+  {
+    "number": 479,
+    "emoji": "🚚",
+    "codePoint": 128666,
+    "url": "/delivery-truck/"
+  },
+  {
+    "number": 480,
+    "emoji": "🚛",
+    "codePoint": 128667,
+    "url": "/articulated-lorry/"
+  },
+  {
+    "number": 481,
+    "emoji": "🚜",
+    "codePoint": 128668,
+    "url": "/tractor/"
+  },
+  {
+    "number": 482,
+    "emoji": "🚲",
+    "codePoint": 128690,
+    "url": "/bicycle/"
+  },
+  {
+    "number": 483,
+    "emoji": "🚳",
+    "codePoint": 128691,
+    "url": "/no-bicycles/"
+  },
+  {
+    "number": 484,
+    "emoji": "⛽",
+    "codePoint": 9981,
+    "url": "/fuel-pump/"
+  },
+  {
+    "number": 485,
+    "emoji": "🛢",
+    "codePoint": 128738,
+    "url": "/oil-drum/"
+  },
+  {
+    "number": 486,
+    "emoji": "🛣",
+    "codePoint": 128739,
+    "url": "/motorway/"
+  },
+  {
+    "number": 487,
+    "emoji": "🛤",
+    "codePoint": 128740,
+    "url": "/railway-track/"
+  },
+  {
+    "number": 488,
+    "emoji": "🚨",
+    "codePoint": 128680,
+    "url": "/police-cars-revolving-light/"
+  },
+  {
+    "number": 489,
+    "emoji": "⚓",
+    "codePoint": 9875,
+    "url": "/anchor/"
+  },
+  {
+    "number": 490,
+    "emoji": "🔱",
+    "codePoint": 128305,
+    "url": "/trident-emblem/"
+  },
+  {
+    "number": 491,
+    "emoji": "⛵",
+    "codePoint": 9973,
+    "url": "/sailboat/"
+  },
+  {
+    "number": 492,
+    "emoji": "🚣",
+    "codePoint": 128675,
+    "url": "/rowboat/"
+  },
+  {
+    "number": 493,
+    "emoji": "🚤",
+    "codePoint": 128676,
+    "url": "/speedboat/"
+  },
+  {
+    "number": 494,
+    "emoji": "🛳",
+    "codePoint": 128755,
+    "url": "/passenger-ship/"
+  },
+  {
+    "number": 495,
+    "emoji": "⛴",
+    "codePoint": 9972,
+    "url": "/ferry/"
+  },
+  {
+    "number": 496,
+    "emoji": "🛥",
+    "codePoint": 128741,
+    "url": "/motor-boat/"
+  },
+  {
+    "number": 497,
+    "emoji": "🚢",
+    "codePoint": 128674,
+    "url": "/ship/"
+  },
+  {
+    "number": 498,
+    "emoji": "✈️",
+    "codePoint": 9992,
+    "url": "/airplane/"
+  },
+  {
+    "number": 499,
+    "emoji": "🛩",
+    "codePoint": 128745,
+    "url": "/small-airplane/"
+  },
+  {
+    "number": 500,
+    "emoji": "🛫",
+    "codePoint": 128747,
+    "url": "/airplane-departure/"
+  },
+  {
+    "number": 501,
+    "emoji": "🛬",
+    "codePoint": 128748,
+    "url": "/airplane-arriving/"
+  },
+  {
+    "number": 502,
+    "emoji": "💺",
+    "codePoint": 128186,
+    "url": "/seat/"
+  },
+  {
+    "number": 503,
+    "emoji": "🚁",
+    "codePoint": 128641,
+    "url": "/helicopter/"
+  },
+  {
+    "number": 504,
+    "emoji": "🚟",
+    "codePoint": 128671,
+    "url": "/suspension-railway/"
+  },
+  {
+    "number": 505,
+    "emoji": "🚠",
+    "codePoint": 128672,
+    "url": "/mountain-cableway/"
+  },
+  {
+    "number": 506,
+    "emoji": "🚡",
+    "codePoint": 128673,
+    "url": "/aerial-tramway/"
+  },
+  {
+    "number": 507,
+    "emoji": "🚀",
+    "codePoint": 128640,
+    "url": "/rocket/"
+  },
+  {
+    "number": 508,
+    "emoji": "🛰",
+    "codePoint": 128752,
+    "url": "/satellite/"
+  },
+  {
+    "number": 509,
+    "emoji": "🏧",
+    "codePoint": 127975,
+    "url": "/automated-teller-machine/"
+  },
+  {
+    "number": 510,
+    "emoji": "🚮",
+    "codePoint": 128686,
+    "url": "/put-litter-in-its-place-symbol/"
+  },
+  {
+    "number": 511,
+    "emoji": "🚥",
+    "codePoint": 128677,
+    "url": "/horizontal-traffic-light/"
+  },
+  {
+    "number": 512,
+    "emoji": "🚦",
+    "codePoint": 128678,
+    "url": "/vertical-traffic-light/"
+  },
+  {
+    "number": 513,
+    "emoji": "🚧",
+    "codePoint": 128679,
+    "url": "/construction-sign/"
+  },
+  {
+    "number": 514,
+    "emoji": "🚫",
+    "codePoint": 128683,
+    "url": "/no-entry-sign/"
+  },
+  {
+    "number": 515,
+    "emoji": "🚭",
+    "codePoint": 128685,
+    "url": "/no-smoking-symbol/"
+  },
+  {
+    "number": 516,
+    "emoji": "🚯",
+    "codePoint": 128687,
+    "url": "/do-not-litter-symbol/"
+  },
+  {
+    "number": 517,
+    "emoji": "🚰",
+    "codePoint": 128688,
+    "url": "/potable-water-symbol/"
+  },
+  {
+    "number": 518,
+    "emoji": "🚱",
+    "codePoint": 128689,
+    "url": "/non-potable-water-symbol/"
+  },
+  {
+    "number": 519,
+    "emoji": "🚷",
+    "codePoint": 128695,
+    "url": "/no-pedestrians/"
+  },
+  {
+    "number": 520,
+    "emoji": "🚸",
+    "codePoint": 128696,
+    "url": "/children-crossing/"
+  },
+  {
+    "number": 521,
+    "emoji": "♿",
+    "codePoint": 9855,
+    "url": "/wheelchair-symbol/"
+  },
+  {
+    "number": 522,
+    "emoji": "🚹",
+    "codePoint": 128697,
+    "url": "/mens-symbol/"
+  },
+  {
+    "number": 523,
+    "emoji": "🚺",
+    "codePoint": 128698,
+    "url": "/womens-symbol/"
+  },
+  {
+    "number": 524,
+    "emoji": "🚻",
+    "codePoint": 128699,
+    "url": "/restroom/"
+  },
+  {
+    "number": 525,
+    "emoji": "🚼",
+    "codePoint": 128700,
+    "url": "/baby-symbol/"
+  },
+  {
+    "number": 526,
+    "emoji": "🚾",
+    "codePoint": 128702,
+    "url": "/water-closet/"
+  },
+  {
+    "number": 527,
+    "emoji": "🛂",
+    "codePoint": 128706,
+    "url": "/passport-control/"
+  },
+  {
+    "number": 528,
+    "emoji": "🛃",
+    "codePoint": 128707,
+    "url": "/customs/"
+  },
+  {
+    "number": 529,
+    "emoji": "🛄",
+    "codePoint": 128708,
+    "url": "/baggage-claim/"
+  },
+  {
+    "number": 530,
+    "emoji": "🛅",
+    "codePoint": 128709,
+    "url": "/left-luggage/"
+  },
+  {
+    "number": 531,
+    "emoji": "⚠️",
+    "codePoint": 9888,
+    "url": "/warning-sign/"
+  },
+  {
+    "number": 532,
+    "emoji": "⛔",
+    "codePoint": 9940,
+    "url": "/no-entry/"
+  },
+  {
+    "number": 533,
+    "emoji": "🛎",
+    "codePoint": 128718,
+    "url": "/bellhop-bell/"
+  },
+  {
+    "number": 534,
+    "emoji": "🚪",
+    "codePoint": 128682,
+    "url": "/door/"
+  },
+  {
+    "number": 535,
+    "emoji": "🛌",
+    "codePoint": 128716,
+    "url": "/sleeping-accommodation/"
+  },
+  {
+    "number": 536,
+    "emoji": "🛏",
+    "codePoint": 128719,
+    "url": "/bed/"
+  },
+  {
+    "number": 537,
+    "emoji": "🛋",
+    "codePoint": 128715,
+    "url": "/couch-and-lamp/"
+  },
+  {
+    "number": 538,
+    "emoji": "🚽",
+    "codePoint": 128701,
+    "url": "/toilet/"
+  },
+  {
+    "number": 539,
+    "emoji": "🚿",
+    "codePoint": 128703,
+    "url": "/shower/"
+  },
+  {
+    "number": 540,
+    "emoji": "🛀",
+    "codePoint": 128704,
+    "url": "/bath/"
+  },
+  {
+    "number": 541,
+    "emoji": "🛁",
+    "codePoint": 128705,
+    "url": "/bathtub/"
+  },
+  {
+    "number": 542,
+    "emoji": "⌛",
+    "codePoint": 8987,
+    "url": "/hourglass/"
+  },
+  {
+    "number": 543,
+    "emoji": "⏳",
+    "codePoint": 9203,
+    "url": "/hourglass-with-flowing-sand/"
+  },
+  {
+    "number": 544,
+    "emoji": "⌚",
+    "codePoint": 8986,
+    "url": "/watch/"
+  },
+  {
+    "number": 545,
+    "emoji": "⏰",
+    "codePoint": 9200,
+    "url": "/alarm-clock/"
+  },
+  {
+    "number": 546,
+    "emoji": "⏱",
+    "codePoint": 9201,
+    "url": "/stopwatch/"
+  },
+  {
+    "number": 547,
+    "emoji": "⏲",
+    "codePoint": 9202,
+    "url": "/timer-clock/"
+  },
+  {
+    "number": 548,
+    "emoji": "🕰",
+    "codePoint": 128368,
+    "url": "/mantelpiece-clock/"
+  },
+  {
+    "number": 549,
+    "emoji": "🕛",
+    "codePoint": 128347,
+    "url": "/clock-face-twelve-oclock/"
+  },
+  {
+    "number": 550,
+    "emoji": "🕧",
+    "codePoint": 128359,
+    "url": "/clock-face-twelve-thirty/"
+  },
+  {
+    "number": 551,
+    "emoji": "🕐",
+    "codePoint": 128336,
+    "url": "/clock-face-one-oclock/"
+  },
+  {
+    "number": 552,
+    "emoji": "🕜",
+    "codePoint": 128348,
+    "url": "/clock-face-one-thirty/"
+  },
+  {
+    "number": 553,
+    "emoji": "🕑",
+    "codePoint": 128337,
+    "url": "/clock-face-two-oclock/"
+  },
+  {
+    "number": 554,
+    "emoji": "🕝",
+    "codePoint": 128349,
+    "url": "/clock-face-two-thirty/"
+  },
+  {
+    "number": 555,
+    "emoji": "🕒",
+    "codePoint": 128338,
+    "url": "/clock-face-three-oclock/"
+  },
+  {
+    "number": 556,
+    "emoji": "🕞",
+    "codePoint": 128350,
+    "url": "/clock-face-three-thirty/"
+  },
+  {
+    "number": 557,
+    "emoji": "🕓",
+    "codePoint": 128339,
+    "url": "/clock-face-four-oclock/"
+  },
+  {
+    "number": 558,
+    "emoji": "🕟",
+    "codePoint": 128351,
+    "url": "/clock-face-four-thirty/"
+  },
+  {
+    "number": 559,
+    "emoji": "🕔",
+    "codePoint": 128340,
+    "url": "/clock-face-five-oclock/"
+  },
+  {
+    "number": 560,
+    "emoji": "🕠",
+    "codePoint": 128352,
+    "url": "/clock-face-five-thirty/"
+  },
+  {
+    "number": 561,
+    "emoji": "🕕",
+    "codePoint": 128341,
+    "url": "/clock-face-six-oclock/"
+  },
+  {
+    "number": 562,
+    "emoji": "🕡",
+    "codePoint": 128353,
+    "url": "/clock-face-six-thirty/"
+  },
+  {
+    "number": 563,
+    "emoji": "🕖",
+    "codePoint": 128342,
+    "url": "/clock-face-seven-oclock/"
+  },
+  {
+    "number": 564,
+    "emoji": "🕢",
+    "codePoint": 128354,
+    "url": "/clock-face-seven-thirty/"
+  },
+  {
+    "number": 565,
+    "emoji": "🕗",
+    "codePoint": 128343,
+    "url": "/clock-face-eight-oclock/"
+  },
+  {
+    "number": 566,
+    "emoji": "🕣",
+    "codePoint": 128355,
+    "url": "/clock-face-eight-thirty/"
+  },
+  {
+    "number": 567,
+    "emoji": "🕘",
+    "codePoint": 128344,
+    "url": "/clock-face-nine-oclock/"
+  },
+  {
+    "number": 568,
+    "emoji": "🕤",
+    "codePoint": 128356,
+    "url": "/clock-face-nine-thirty/"
+  },
+  {
+    "number": 569,
+    "emoji": "🕙",
+    "codePoint": 128345,
+    "url": "/clock-face-ten-oclock/"
+  },
+  {
+    "number": 570,
+    "emoji": "🕥",
+    "codePoint": 128357,
+    "url": "/clock-face-ten-thirty/"
+  },
+  {
+    "number": 571,
+    "emoji": "🕚",
+    "codePoint": 128346,
+    "url": "/clock-face-eleven-oclock/"
+  },
+  {
+    "number": 572,
+    "emoji": "🕦",
+    "codePoint": 128358,
+    "url": "/clock-face-eleven-thirty/"
+  },
+  {
+    "number": 573,
+    "emoji": "♈",
+    "codePoint": 9800,
+    "url": "/aries/"
+  },
+  {
+    "number": 574,
+    "emoji": "♉",
+    "codePoint": 9801,
+    "url": "/taurus/"
+  },
+  {
+    "number": 575,
+    "emoji": "♊",
+    "codePoint": 9802,
+    "url": "/gemini/"
+  },
+  {
+    "number": 576,
+    "emoji": "♋",
+    "codePoint": 9803,
+    "url": "/cancer/"
+  },
+  {
+    "number": 577,
+    "emoji": "♌",
+    "codePoint": 9804,
+    "url": "/leo/"
+  },
+  {
+    "number": 578,
+    "emoji": "♍",
+    "codePoint": 9805,
+    "url": "/virgo/"
+  },
+  {
+    "number": 579,
+    "emoji": "♎",
+    "codePoint": 9806,
+    "url": "/libra/"
+  },
+  {
+    "number": 580,
+    "emoji": "♏",
+    "codePoint": 9807,
+    "url": "/scorpius/"
+  },
+  {
+    "number": 581,
+    "emoji": "♐",
+    "codePoint": 9808,
+    "url": "/sagittarius/"
+  },
+  {
+    "number": 582,
+    "emoji": "♑",
+    "codePoint": 9809,
+    "url": "/capricorn/"
+  },
+  {
+    "number": 583,
+    "emoji": "♒",
+    "codePoint": 9810,
+    "url": "/aquarius/"
+  },
+  {
+    "number": 584,
+    "emoji": "♓",
+    "codePoint": 9811,
+    "url": "/pisces/"
+  },
+  {
+    "number": 585,
+    "emoji": "⛎",
+    "codePoint": 9934,
+    "url": "/ophiuchus/"
+  },
+  {
+    "number": 586,
+    "emoji": "🌑",
+    "codePoint": 127761,
+    "url": "/new-moon-symbol/"
+  },
+  {
+    "number": 587,
+    "emoji": "🌒",
+    "codePoint": 127762,
+    "url": "/waxing-crescent-moon-symbol/"
+  },
+  {
+    "number": 588,
+    "emoji": "🌓",
+    "codePoint": 127763,
+    "url": "/first-quarter-moon-symbol/"
+  },
+  {
+    "number": 589,
+    "emoji": "🌔",
+    "codePoint": 127764,
+    "url": "/waxing-gibbous-moon-symbol/"
+  },
+  {
+    "number": 590,
+    "emoji": "🌕",
+    "codePoint": 127765,
+    "url": "/full-moon-symbol/"
+  },
+  {
+    "number": 591,
+    "emoji": "🌖",
+    "codePoint": 127766,
+    "url": "/waning-gibbous-moon-symbol/"
+  },
+  {
+    "number": 592,
+    "emoji": "🌗",
+    "codePoint": 127767,
+    "url": "/last-quarter-moon-symbol/"
+  },
+  {
+    "number": 593,
+    "emoji": "🌘",
+    "codePoint": 127768,
+    "url": "/waning-crescent-moon-symbol/"
+  },
+  {
+    "number": 594,
+    "emoji": "🌙",
+    "codePoint": 127769,
+    "url": "/crescent-moon/"
+  },
+  {
+    "number": 595,
+    "emoji": "🌚",
+    "codePoint": 127770,
+    "url": "/new-moon-with-face/"
+  },
+  {
+    "number": 596,
+    "emoji": "🌛",
+    "codePoint": 127771,
+    "url": "/first-quarter-moon-with-face/"
+  },
+  {
+    "number": 597,
+    "emoji": "🌜",
+    "codePoint": 127772,
+    "url": "/last-quarter-moon-with-face/"
+  },
+  {
+    "number": 598,
+    "emoji": "🌡",
+    "codePoint": 127777,
+    "url": "/thermometer/"
+  },
+  {
+    "number": 599,
+    "emoji": "☀️",
+    "codePoint": 9728,
+    "url": "/black-sun-with-rays/"
+  },
+  {
+    "number": 600,
+    "emoji": "🌝",
+    "codePoint": 127773,
+    "url": "/full-moon-with-face/"
+  },
+  {
+    "number": 601,
+    "emoji": "🌞",
+    "codePoint": 127774,
+    "url": "/sun-with-face/"
+  },
+  {
+    "number": 602,
+    "emoji": "☁️",
+    "codePoint": 9729,
+    "url": "/cloud/"
+  },
+  {
+    "number": 603,
+    "emoji": "⛅",
+    "codePoint": 9925,
+    "url": "/sun-behind-cloud/"
+  },
+  {
+    "number": 604,
+    "emoji": "⛈",
+    "codePoint": 9928,
+    "url": "/thunder-cloud-and-rain/"
+  },
+  {
+    "number": 605,
+    "emoji": "🌤",
+    "codePoint": 127780,
+    "url": "/white-sun-with-small-cloud/"
+  },
+  {
+    "number": 606,
+    "emoji": "🌥",
+    "codePoint": 127781,
+    "url": "/white-sun-behind-cloud/"
+  },
+  {
+    "number": 607,
+    "emoji": "🌦",
+    "codePoint": 127782,
+    "url": "/white-sun-behind-cloud-with-rain/"
+  },
+  {
+    "number": 608,
+    "emoji": "🌧",
+    "codePoint": 127783,
+    "url": "/cloud-with-rain/"
+  },
+  {
+    "number": 609,
+    "emoji": "🌨",
+    "codePoint": 127784,
+    "url": "/cloud-with-snow/"
+  },
+  {
+    "number": 610,
+    "emoji": "🌩",
+    "codePoint": 127785,
+    "url": "/cloud-with-lightning/"
+  },
+  {
+    "number": 611,
+    "emoji": "🌪",
+    "codePoint": 127786,
+    "url": "/cloud-with-tornado/"
+  },
+  {
+    "number": 612,
+    "emoji": "🌫",
+    "codePoint": 127787,
+    "url": "/fog/"
+  },
+  {
+    "number": 613,
+    "emoji": "🌬",
+    "codePoint": 127788,
+    "url": "/wind-blowing-face/"
+  },
+  {
+    "number": 614,
+    "emoji": "🌀",
+    "codePoint": 127744,
+    "url": "/cyclone/"
+  },
+  {
+    "number": 615,
+    "emoji": "🌈",
+    "codePoint": 127752,
+    "url": "/rainbow/"
+  },
+  {
+    "number": 616,
+    "emoji": "🌂",
+    "codePoint": 127746,
+    "url": "/closed-umbrella/"
+  },
+  {
+    "number": 617,
+    "emoji": "☂",
+    "codePoint": 9730,
+    "url": "/umbrella/"
+  },
+  {
+    "number": 618,
+    "emoji": "☔",
+    "codePoint": 9748,
+    "url": "/umbrella-with-rain-drops/"
+  },
+  {
+    "number": 619,
+    "emoji": "⛱",
+    "codePoint": 9969,
+    "url": "/umbrella-on-ground/"
+  },
+  {
+    "number": 620,
+    "emoji": "❄️",
+    "codePoint": 10052,
+    "url": "/snowflake/"
+  },
+  {
+    "number": 621,
+    "emoji": "☃",
+    "codePoint": 9731,
+    "url": "/snowman/"
+  },
+  {
+    "number": 622,
+    "emoji": "⛄",
+    "codePoint": 9924,
+    "url": "/snowman-without-snow/"
+  },
+  {
+    "number": 623,
+    "emoji": "🌟",
+    "codePoint": 127775,
+    "url": "/glowing-star/"
+  },
+  {
+    "number": 624,
+    "emoji": "🌠",
+    "codePoint": 127776,
+    "url": "/shooting-star/"
+  },
+  {
+    "number": 625,
+    "emoji": "☄",
+    "codePoint": 9732,
+    "url": "/comet/"
+  },
+  {
+    "number": 626,
+    "emoji": "🔥",
+    "codePoint": 128293,
+    "url": "/fire/"
+  },
+  {
+    "number": 627,
+    "emoji": "🎃",
+    "codePoint": 127875,
+    "url": "/jack-o-lantern/"
+  },
+  {
+    "number": 628,
+    "emoji": "🎄",
+    "codePoint": 127876,
+    "url": "/christmas-tree/"
+  },
+  {
+    "number": 629,
+    "emoji": "🕎",
+    "codePoint": 128334,
+    "url": "/menorah-with-nine-branches/"
+  },
+  {
+    "number": 630,
+    "emoji": "🎆",
+    "codePoint": 127878,
+    "url": "/fireworks/"
+  },
+  {
+    "number": 631,
+    "emoji": "🎇",
+    "codePoint": 127879,
+    "url": "/firework-sparkler/"
+  },
+  {
+    "number": 632,
+    "emoji": "✨",
+    "codePoint": 10024,
+    "url": "/sparkles/"
+  },
+  {
+    "number": 633,
+    "emoji": "🎈",
+    "codePoint": 127880,
+    "url": "/balloon/"
+  },
+  {
+    "number": 634,
+    "emoji": "🎉",
+    "codePoint": 127881,
+    "url": "/party-popper/"
+  },
+  {
+    "number": 635,
+    "emoji": "🎊",
+    "codePoint": 127882,
+    "url": "/confetti-ball/"
+  },
+  {
+    "number": 636,
+    "emoji": "🎋",
+    "codePoint": 127883,
+    "url": "/tanabata-tree/"
+  },
+  {
+    "number": 637,
+    "emoji": "🎌",
+    "codePoint": 127884,
+    "url": "/crossed-flags/"
+  },
+  {
+    "number": 638,
+    "emoji": "🎍",
+    "codePoint": 127885,
+    "url": "/pine-decoration/"
+  },
+  {
+    "number": 639,
+    "emoji": "🎎",
+    "codePoint": 127886,
+    "url": "/japanese-dolls/"
+  },
+  {
+    "number": 640,
+    "emoji": "🎏",
+    "codePoint": 127887,
+    "url": "/carp-streamer/"
+  },
+  {
+    "number": 641,
+    "emoji": "🎐",
+    "codePoint": 127888,
+    "url": "/wind-chime/"
+  },
+  {
+    "number": 642,
+    "emoji": "🎑",
+    "codePoint": 127889,
+    "url": "/moon-viewing-ceremony/"
+  },
+  {
+    "number": 643,
+    "emoji": "🎓",
+    "codePoint": 127891,
+    "url": "/graduation-cap/"
+  },
+  {
+    "number": 644,
+    "emoji": "🎯",
+    "codePoint": 127919,
+    "url": "/direct-hit/"
+  },
+  {
+    "number": 645,
+    "emoji": "🎴",
+    "codePoint": 127924,
+    "url": "/flower-playing-cards/"
+  },
+  {
+    "number": 646,
+    "emoji": "🎀",
+    "codePoint": 127872,
+    "url": "/ribbon/"
+  },
+  {
+    "number": 647,
+    "emoji": "🎁",
+    "codePoint": 127873,
+    "url": "/wrapped-present/"
+  },
+  {
+    "number": 648,
+    "emoji": "🎖",
+    "codePoint": 127894,
+    "url": "/military-medal/"
+  },
+  {
+    "number": 649,
+    "emoji": "🎗",
+    "codePoint": 127895,
+    "url": "/reminder-ribbon/"
+  },
+  {
+    "number": 650,
+    "emoji": "🎞",
+    "codePoint": 127902,
+    "url": "/film-frames/"
+  },
+  {
+    "number": 651,
+    "emoji": "🎟",
+    "codePoint": 127903,
+    "url": "/admission-tickets/"
+  },
+  {
+    "number": 652,
+    "emoji": "🎫",
+    "codePoint": 127915,
+    "url": "/ticket/"
+  },
+  {
+    "number": 653,
+    "emoji": "🏷",
+    "codePoint": 127991,
+    "url": "/label/"
+  },
+  {
+    "number": 654,
+    "emoji": "⚽",
+    "codePoint": 9917,
+    "url": "/soccer-ball/"
+  },
+  {
+    "number": 655,
+    "emoji": "⚾",
+    "codePoint": 9918,
+    "url": "/baseball/"
+  },
+  {
+    "number": 656,
+    "emoji": "🏀",
+    "codePoint": 127936,
+    "url": "/basketball-and-hoop/"
+  },
+  {
+    "number": 657,
+    "emoji": "🏈",
+    "codePoint": 127944,
+    "url": "/american-football/"
+  },
+  {
+    "number": 658,
+    "emoji": "🏉",
+    "codePoint": 127945,
+    "url": "/rugby-football/"
+  },
+  {
+    "number": 659,
+    "emoji": "🎾",
+    "codePoint": 127934,
+    "url": "/tennis-racquet-and-ball/"
+  },
+  {
+    "number": 660,
+    "emoji": "🎱",
+    "codePoint": 127921,
+    "url": "/billiards/"
+  },
+  {
+    "number": 661,
+    "emoji": "🎳",
+    "codePoint": 127923,
+    "url": "/bowling/"
+  },
+  {
+    "number": 662,
+    "emoji": "⛳",
+    "codePoint": 9971,
+    "url": "/flag-in-hole/"
+  },
+  {
+    "number": 663,
+    "emoji": "🏌",
+    "codePoint": 127948,
+    "url": "/golfer/"
+  },
+  {
+    "number": 664,
+    "emoji": "⛸",
+    "codePoint": 9976,
+    "url": "/ice-skate/"
+  },
+  {
+    "number": 665,
+    "emoji": "🎣",
+    "codePoint": 127907,
+    "url": "/fishing-pole-and-fish/"
+  },
+  {
+    "number": 666,
+    "emoji": "🎽",
+    "codePoint": 127933,
+    "url": "/running-shirt-with-sash/"
+  },
+  {
+    "number": 667,
+    "emoji": "🎿",
+    "codePoint": 127935,
+    "url": "/ski-and-ski-boot/"
+  },
+  {
+    "number": 668,
+    "emoji": "⛷",
+    "codePoint": 9975,
+    "url": "/skier/"
+  },
+  {
+    "number": 669,
+    "emoji": "🏂",
+    "codePoint": 127938,
+    "url": "/snowboarder/"
+  },
+  {
+    "number": 670,
+    "emoji": "🏄",
+    "codePoint": 127940,
+    "url": "/surfer/"
+  },
+  {
+    "number": 671,
+    "emoji": "🏇",
+    "codePoint": 127943,
+    "url": "/horse-racing/"
+  },
+  {
+    "number": 672,
+    "emoji": "🏊",
+    "codePoint": 127946,
+    "url": "/swimmer/"
+  },
+  {
+    "number": 673,
+    "emoji": "⛹",
+    "codePoint": 9977,
+    "url": "/person-with-ball/"
+  },
+  {
+    "number": 674,
+    "emoji": "🏋",
+    "codePoint": 127947,
+    "url": "/weight-lifter/"
+  },
+  {
+    "number": 675,
+    "emoji": "🚴",
+    "codePoint": 128692,
+    "url": "/bicyclist/"
+  },
+  {
+    "number": 676,
+    "emoji": "🚵",
+    "codePoint": 128693,
+    "url": "/mountain-bicyclist/"
+  },
+  {
+    "number": 677,
+    "emoji": "🏎",
+    "codePoint": 127950,
+    "url": "/racing-car/"
+  },
+  {
+    "number": 678,
+    "emoji": "🏍",
+    "codePoint": 127949,
+    "url": "/racing-motorcycle/"
+  },
+  {
+    "number": 679,
+    "emoji": "🏅",
+    "codePoint": 127941,
+    "url": "/sports-medal/"
+  },
+  {
+    "number": 680,
+    "emoji": "🏆",
+    "codePoint": 127942,
+    "url": "/trophy/"
+  },
+  {
+    "number": 681,
+    "emoji": "🏏",
+    "codePoint": 127951,
+    "url": "/cricket-bat-and-ball/"
+  },
+  {
+    "number": 682,
+    "emoji": "🏐",
+    "codePoint": 127952,
+    "url": "/volleyball/"
+  },
+  {
+    "number": 683,
+    "emoji": "🏑",
+    "codePoint": 127953,
+    "url": "/field-hockey-stick-and-ball/"
+  },
+  {
+    "number": 684,
+    "emoji": "🏒",
+    "codePoint": 127954,
+    "url": "/ice-hockey-stick-and-puck/"
+  },
+  {
+    "number": 685,
+    "emoji": "🏓",
+    "codePoint": 127955,
+    "url": "/table-tennis-paddle-and-ball/"
+  },
+  {
+    "number": 686,
+    "emoji": "🏸",
+    "codePoint": 127992,
+    "url": "/badminton-racquet-and-shuttlecock/"
+  },
+  {
+    "number": 687,
+    "emoji": "🎮",
+    "codePoint": 127918,
+    "url": "/video-game/"
+  },
+  {
+    "number": 688,
+    "emoji": "🕹",
+    "codePoint": 128377,
+    "url": "/joystick/"
+  },
+  {
+    "number": 689,
+    "emoji": "🎲",
+    "codePoint": 127922,
+    "url": "/game-die/"
+  },
+  {
+    "number": 690,
+    "emoji": "♠️",
+    "codePoint": 9824,
+    "url": "/black-spade-suit/"
+  },
+  {
+    "number": 691,
+    "emoji": "♥️",
+    "codePoint": 9829,
+    "url": "/black-heart-suit/"
+  },
+  {
+    "number": 692,
+    "emoji": "♦️",
+    "codePoint": 9830,
+    "url": "/black-diamond-suit/"
+  },
+  {
+    "number": 693,
+    "emoji": "♣️",
+    "codePoint": 9827,
+    "url": "/black-club-suit/"
+  },
+  {
+    "number": 694,
+    "emoji": "🃏",
+    "codePoint": 127183,
+    "url": "/playing-card-black-joker/"
+  },
+  {
+    "number": 695,
+    "emoji": "🀄",
+    "codePoint": 126980,
+    "url": "/mahjong-tile-red-dragon/"
+  },
+  {
+    "number": 696,
+    "emoji": "🔇",
+    "codePoint": 128263,
+    "url": "/speaker-with-cancellation-stroke/"
+  },
+  {
+    "number": 697,
+    "emoji": "🔈",
+    "codePoint": 128264,
+    "url": "/speaker/"
+  },
+  {
+    "number": 698,
+    "emoji": "🔉",
+    "codePoint": 128265,
+    "url": "/speaker-with-one-sound-wave/"
+  },
+  {
+    "number": 699,
+    "emoji": "🔊",
+    "codePoint": 128266,
+    "url": "/speaker-with-three-sound-waves/"
+  },
+  {
+    "number": 700,
+    "emoji": "📢",
+    "codePoint": 128226,
+    "url": "/public-address-loudspeaker/"
+  },
+  {
+    "number": 701,
+    "emoji": "📣",
+    "codePoint": 128227,
+    "url": "/cheering-megaphone/"
+  },
+  {
+    "number": 702,
+    "emoji": "📯",
+    "codePoint": 128239,
+    "url": "/postal-horn/"
+  },
+  {
+    "number": 703,
+    "emoji": "🔔",
+    "codePoint": 128276,
+    "url": "/bell/"
+  },
+  {
+    "number": 704,
+    "emoji": "🔕",
+    "codePoint": 128277,
+    "url": "/bell-with-cancellation-stroke/"
+  },
+  {
+    "number": 705,
+    "emoji": "🔀",
+    "codePoint": 128256,
+    "url": "/twisted-rightwards-arrows/"
+  },
+  {
+    "number": 706,
+    "emoji": "🔁",
+    "codePoint": 128257,
+    "url": "/clockwise-rightwards-and-leftwards-open-circle-arrows/"
+  },
+  {
+    "number": 707,
+    "emoji": "🔂",
+    "codePoint": 128258,
+    "url": "/clockwise-rightwards-and-leftwards-open-circle-arrows-with-circled-one-overlay/"
+  },
+  {
+    "number": 708,
+    "emoji": "▶️",
+    "codePoint": 9654,
+    "url": "/black-right-pointing-triangle/"
+  },
+  {
+    "number": 709,
+    "emoji": "⏩",
+    "codePoint": 9193,
+    "url": "/black-right-pointing-double-triangle/"
+  },
+  {
+    "number": 710,
+    "emoji": "⏭",
+    "codePoint": 9197,
+    "url": "/black-right-pointing-double-triangle-with-vertical-bar/"
+  },
+  {
+    "number": 711,
+    "emoji": "⏯",
+    "codePoint": 9199,
+    "url": "/black-right-pointing-triangle-with-double-vertical-bar/"
+  },
+  {
+    "number": 712,
+    "emoji": "◀️",
+    "codePoint": 9664,
+    "url": "/black-left-pointing-triangle/"
+  },
+  {
+    "number": 713,
+    "emoji": "⏪",
+    "codePoint": 9194,
+    "url": "/black-left-pointing-double-triangle/"
+  },
+  {
+    "number": 714,
+    "emoji": "⏮",
+    "codePoint": 9198,
+    "url": "/black-left-pointing-double-triangle-with-vertical-bar/"
+  },
+  {
+    "number": 715,
+    "emoji": "🔼",
+    "codePoint": 128316,
+    "url": "/up-pointing-small-red-triangle/"
+  },
+  {
+    "number": 716,
+    "emoji": "⏫",
+    "codePoint": 9195,
+    "url": "/black-up-pointing-double-triangle/"
+  },
+  {
+    "number": 717,
+    "emoji": "🔽",
+    "codePoint": 128317,
+    "url": "/down-pointing-small-red-triangle/"
+  },
+  {
+    "number": 718,
+    "emoji": "⏬",
+    "codePoint": 9196,
+    "url": "/black-down-pointing-double-triangle/"
+  },
+  {
+    "number": 719,
+    "emoji": "⏸",
+    "codePoint": 9208,
+    "url": "/double-vertical-bar/"
+  },
+  {
+    "number": 720,
+    "emoji": "⏹",
+    "codePoint": 9209,
+    "url": "/black-square-for-stop/"
+  },
+  {
+    "number": 721,
+    "emoji": "⏺",
+    "codePoint": 9210,
+    "url": "/black-circle-for-record/"
+  },
+  {
+    "number": 722,
+    "emoji": "🎼",
+    "codePoint": 127932,
+    "url": "/musical-score/"
+  },
+  {
+    "number": 723,
+    "emoji": "🎵",
+    "codePoint": 127925,
+    "url": "/musical-note/"
+  },
+  {
+    "number": 724,
+    "emoji": "🎶",
+    "codePoint": 127926,
+    "url": "/multiple-musical-notes/"
+  },
+  {
+    "number": 725,
+    "emoji": "🎙",
+    "codePoint": 127897,
+    "url": "/studio-microphone/"
+  },
+  {
+    "number": 726,
+    "emoji": "🎚",
+    "codePoint": 127898,
+    "url": "/level-slider/"
+  },
+  {
+    "number": 727,
+    "emoji": "🎛",
+    "codePoint": 127899,
+    "url": "/control-knobs/"
+  },
+  {
+    "number": 728,
+    "emoji": "🎤",
+    "codePoint": 127908,
+    "url": "/microphone/"
+  },
+  {
+    "number": 729,
+    "emoji": "🎧",
+    "codePoint": 127911,
+    "url": "/headphone/"
+  },
+  {
+    "number": 730,
+    "emoji": "🎷",
+    "codePoint": 127927,
+    "url": "/saxophone/"
+  },
+  {
+    "number": 731,
+    "emoji": "🎸",
+    "codePoint": 127928,
+    "url": "/guitar/"
+  },
+  {
+    "number": 732,
+    "emoji": "🎹",
+    "codePoint": 127929,
+    "url": "/musical-keyboard/"
+  },
+  {
+    "number": 733,
+    "emoji": "🎺",
+    "codePoint": 127930,
+    "url": "/trumpet/"
+  },
+  {
+    "number": 734,
+    "emoji": "🎻",
+    "codePoint": 127931,
+    "url": "/violin/"
+  },
+  {
+    "number": 735,
+    "emoji": "📻",
+    "codePoint": 128251,
+    "url": "/radio/"
+  },
+  {
+    "number": 736,
+    "emoji": "📱",
+    "codePoint": 128241,
+    "url": "/mobile-phone/"
+  },
+  {
+    "number": 737,
+    "emoji": "📳",
+    "codePoint": 128243,
+    "url": "/vibration-mode/"
+  },
+  {
+    "number": 738,
+    "emoji": "📴",
+    "codePoint": 128244,
+    "url": "/mobile-phone-off/"
+  },
+  {
+    "number": 739,
+    "emoji": "📲",
+    "codePoint": 128242,
+    "url": "/mobile-phone-with-rightwards-arrow-at-left/"
+  },
+  {
+    "number": 740,
+    "emoji": "📵",
+    "codePoint": 128245,
+    "url": "/no-mobile-phones/"
+  },
+  {
+    "number": 741,
+    "emoji": "☎️",
+    "codePoint": 9742,
+    "url": "/black-telephone/"
+  },
+  {
+    "number": 742,
+    "emoji": "📞",
+    "codePoint": 128222,
+    "url": "/telephone-receiver/"
+  },
+  {
+    "number": 743,
+    "emoji": "#⃣️",
+    "codePoint": 35,
+    "url": "/keycap-number-sign/"
+  },
+  {
+    "number": 744,
+    "emoji": "*⃣",
+    "codePoint": 42,
+    "url": "/keycap-asterisk/"
+  },
+  {
+    "number": 745,
+    "emoji": "0⃣️",
+    "codePoint": 48,
+    "url": "/keycap-digit-zero/"
+  },
+  {
+    "number": 746,
+    "emoji": "1⃣️",
+    "codePoint": 49,
+    "url": "/keycap-digit-one/"
+  },
+  {
+    "number": 747,
+    "emoji": "2⃣️",
+    "codePoint": 50,
+    "url": "/keycap-digit-two/"
+  },
+  {
+    "number": 748,
+    "emoji": "3⃣️",
+    "codePoint": 51,
+    "url": "/keycap-digit-three/"
+  },
+  {
+    "number": 749,
+    "emoji": "4⃣️",
+    "codePoint": 52,
+    "url": "/keycap-digit-four/"
+  },
+  {
+    "number": 750,
+    "emoji": "5⃣️",
+    "codePoint": 53,
+    "url": "/keycap-digit-five/"
+  },
+  {
+    "number": 751,
+    "emoji": "6⃣️",
+    "codePoint": 54,
+    "url": "/keycap-digit-six/"
+  },
+  {
+    "number": 752,
+    "emoji": "7⃣️",
+    "codePoint": 55,
+    "url": "/keycap-digit-seven/"
+  },
+  {
+    "number": 753,
+    "emoji": "8⃣️",
+    "codePoint": 56,
+    "url": "/keycap-digit-eight/"
+  },
+  {
+    "number": 754,
+    "emoji": "9⃣️",
+    "codePoint": 57,
+    "url": "/keycap-digit-nine/"
+  },
+  {
+    "number": 755,
+    "emoji": "🔟",
+    "codePoint": 128287,
+    "url": "/keycap-ten/"
+  },
+  {
+    "number": 756,
+    "emoji": "📶",
+    "codePoint": 128246,
+    "url": "/antenna-with-bars/"
+  },
+  {
+    "number": 757,
+    "emoji": "📟",
+    "codePoint": 128223,
+    "url": "/pager/"
+  },
+  {
+    "number": 758,
+    "emoji": "📠",
+    "codePoint": 128224,
+    "url": "/fax-machine/"
+  },
+  {
+    "number": 759,
+    "emoji": "🔋",
+    "codePoint": 128267,
+    "url": "/battery/"
+  },
+  {
+    "number": 760,
+    "emoji": "🔌",
+    "codePoint": 128268,
+    "url": "/electric-plug/"
+  },
+  {
+    "number": 761,
+    "emoji": "💻",
+    "codePoint": 128187,
+    "url": "/personal-computer/"
+  },
+  {
+    "number": 762,
+    "emoji": "🖥",
+    "codePoint": 128421,
+    "url": "/desktop-computer/"
+  },
+  {
+    "number": 763,
+    "emoji": "🖨",
+    "codePoint": 128424,
+    "url": "/printer/"
+  },
+  {
+    "number": 764,
+    "emoji": "⌨",
+    "codePoint": 9000,
+    "url": "/keyboard/"
+  },
+  {
+    "number": 765,
+    "emoji": "🖱",
+    "codePoint": 128433,
+    "url": "/three-button-mouse/"
+  },
+  {
+    "number": 766,
+    "emoji": "🖲",
+    "codePoint": 128434,
+    "url": "/trackball/"
+  },
+  {
+    "number": 767,
+    "emoji": "💽",
+    "codePoint": 128189,
+    "url": "/minidisc/"
+  },
+  {
+    "number": 768,
+    "emoji": "💾",
+    "codePoint": 128190,
+    "url": "/floppy-disk/"
+  },
+  {
+    "number": 769,
+    "emoji": "💿",
+    "codePoint": 128191,
+    "url": "/optical-disc/"
+  },
+  {
+    "number": 770,
+    "emoji": "📀",
+    "codePoint": 128192,
+    "url": "/dvd/"
+  },
+  {
+    "number": 771,
+    "emoji": "🎥",
+    "codePoint": 127909,
+    "url": "/movie-camera/"
+  },
+  {
+    "number": 772,
+    "emoji": "🎦",
+    "codePoint": 127910,
+    "url": "/cinema/"
+  },
+  {
+    "number": 773,
+    "emoji": "🎬",
+    "codePoint": 127916,
+    "url": "/clapper-board/"
+  },
+  {
+    "number": 774,
+    "emoji": "📽",
+    "codePoint": 128253,
+    "url": "/film-projector/"
+  },
+  {
+    "number": 775,
+    "emoji": "📺",
+    "codePoint": 128250,
+    "url": "/television/"
+  },
+  {
+    "number": 776,
+    "emoji": "📷",
+    "codePoint": 128247,
+    "url": "/camera/"
+  },
+  {
+    "number": 777,
+    "emoji": "📸",
+    "codePoint": 128248,
+    "url": "/camera-with-flash/"
+  },
+  {
+    "number": 778,
+    "emoji": "📹",
+    "codePoint": 128249,
+    "url": "/video-camera/"
+  },
+  {
+    "number": 779,
+    "emoji": "📼",
+    "codePoint": 128252,
+    "url": "/videocassette/"
+  },
+  {
+    "number": 780,
+    "emoji": "🔅",
+    "codePoint": 128261,
+    "url": "/low-brightness-symbol/"
+  },
+  {
+    "number": 781,
+    "emoji": "🔆",
+    "codePoint": 128262,
+    "url": "/high-brightness-symbol/"
+  },
+  {
+    "number": 782,
+    "emoji": "🔍",
+    "codePoint": 128269,
+    "url": "/left-pointing-magnifying-glass/"
+  },
+  {
+    "number": 783,
+    "emoji": "🔎",
+    "codePoint": 128270,
+    "url": "/right-pointing-magnifying-glass/"
+  },
+  {
+    "number": 784,
+    "emoji": "🔬",
+    "codePoint": 128300,
+    "url": "/microscope/"
+  },
+  {
+    "number": 785,
+    "emoji": "🔭",
+    "codePoint": 128301,
+    "url": "/telescope/"
+  },
+  {
+    "number": 786,
+    "emoji": "📡",
+    "codePoint": 128225,
+    "url": "/satellite-antenna/"
+  },
+  {
+    "number": 787,
+    "emoji": "🕯",
+    "codePoint": 128367,
+    "url": "/candle/"
+  },
+  {
+    "number": 788,
+    "emoji": "💡",
+    "codePoint": 128161,
+    "url": "/electric-light-bulb/"
+  },
+  {
+    "number": 789,
+    "emoji": "🔦",
+    "codePoint": 128294,
+    "url": "/electric-torch/"
+  },
+  {
+    "number": 790,
+    "emoji": "🏮",
+    "codePoint": 127982,
+    "url": "/izakaya-lantern/"
+  },
+  {
+    "number": 791,
+    "emoji": "📔",
+    "codePoint": 128212,
+    "url": "/notebook-with-decorative-cover/"
+  },
+  {
+    "number": 792,
+    "emoji": "📕",
+    "codePoint": 128213,
+    "url": "/closed-book/"
+  },
+  {
+    "number": 793,
+    "emoji": "📖",
+    "codePoint": 128214,
+    "url": "/open-book/"
+  },
+  {
+    "number": 794,
+    "emoji": "📗",
+    "codePoint": 128215,
+    "url": "/green-book/"
+  },
+  {
+    "number": 795,
+    "emoji": "📘",
+    "codePoint": 128216,
+    "url": "/blue-book/"
+  },
+  {
+    "number": 796,
+    "emoji": "📙",
+    "codePoint": 128217,
+    "url": "/orange-book/"
+  },
+  {
+    "number": 797,
+    "emoji": "📚",
+    "codePoint": 128218,
+    "url": "/books/"
+  },
+  {
+    "number": 798,
+    "emoji": "📓",
+    "codePoint": 128211,
+    "url": "/notebook/"
+  },
+  {
+    "number": 799,
+    "emoji": "📒",
+    "codePoint": 128210,
+    "url": "/ledger/"
+  },
+  {
+    "number": 800,
+    "emoji": "📃",
+    "codePoint": 128195,
+    "url": "/page-with-curl/"
+  },
+  {
+    "number": 801,
+    "emoji": "📜",
+    "codePoint": 128220,
+    "url": "/scroll/"
+  },
+  {
+    "number": 802,
+    "emoji": "📄",
+    "codePoint": 128196,
+    "url": "/page-facing-up/"
+  },
+  {
+    "number": 803,
+    "emoji": "📰",
+    "codePoint": 128240,
+    "url": "/newspaper/"
+  },
+  {
+    "number": 804,
+    "emoji": "🗞",
+    "codePoint": 128478,
+    "url": "/rolled-up-newspaper/"
+  },
+  {
+    "number": 805,
+    "emoji": "📑",
+    "codePoint": 128209,
+    "url": "/bookmark-tabs/"
+  },
+  {
+    "number": 806,
+    "emoji": "🔖",
+    "codePoint": 128278,
+    "url": "/bookmark/"
+  },
+  {
+    "number": 807,
+    "emoji": "💰",
+    "codePoint": 128176,
+    "url": "/money-bag/"
+  },
+  {
+    "number": 808,
+    "emoji": "💴",
+    "codePoint": 128180,
+    "url": "/banknote-with-yen-sign/"
+  },
+  {
+    "number": 809,
+    "emoji": "💵",
+    "codePoint": 128181,
+    "url": "/banknote-with-dollar-sign/"
+  },
+  {
+    "number": 810,
+    "emoji": "💶",
+    "codePoint": 128182,
+    "url": "/banknote-with-euro-sign/"
+  },
+  {
+    "number": 811,
+    "emoji": "💷",
+    "codePoint": 128183,
+    "url": "/banknote-with-pound-sign/"
+  },
+  {
+    "number": 812,
+    "emoji": "💸",
+    "codePoint": 128184,
+    "url": "/money-with-wings/"
+  },
+  {
+    "number": 813,
+    "emoji": "💱",
+    "codePoint": 128177,
+    "url": "/currency-exchange/"
+  },
+  {
+    "number": 814,
+    "emoji": "💲",
+    "codePoint": 128178,
+    "url": "/heavy-dollar-sign/"
+  },
+  {
+    "number": 815,
+    "emoji": "💳",
+    "codePoint": 128179,
+    "url": "/credit-card/"
+  },
+  {
+    "number": 816,
+    "emoji": "💹",
+    "codePoint": 128185,
+    "url": "/chart-with-upwards-trend-and-yen-sign/"
+  },
+  {
+    "number": 817,
+    "emoji": "✉️",
+    "codePoint": 9993,
+    "url": "/envelope/"
+  },
+  {
+    "number": 818,
+    "emoji": "📧",
+    "codePoint": 128231,
+    "url": "/e-mail-symbol/"
+  },
+  {
+    "number": 819,
+    "emoji": "📨",
+    "codePoint": 128232,
+    "url": "/incoming-envelope/"
+  },
+  {
+    "number": 820,
+    "emoji": "📩",
+    "codePoint": 128233,
+    "url": "/envelope-with-downwards-arrow-above/"
+  },
+  {
+    "number": 821,
+    "emoji": "📤",
+    "codePoint": 128228,
+    "url": "/outbox-tray/"
+  },
+  {
+    "number": 822,
+    "emoji": "📥",
+    "codePoint": 128229,
+    "url": "/inbox-tray/"
+  },
+  {
+    "number": 823,
+    "emoji": "📦",
+    "codePoint": 128230,
+    "url": "/package/"
+  },
+  {
+    "number": 824,
+    "emoji": "📫",
+    "codePoint": 128235,
+    "url": "/closed-mailbox-with-raised-flag/"
+  },
+  {
+    "number": 825,
+    "emoji": "📪",
+    "codePoint": 128234,
+    "url": "/closed-mailbox-with-lowered-flag/"
+  },
+  {
+    "number": 826,
+    "emoji": "📬",
+    "codePoint": 128236,
+    "url": "/open-mailbox-with-raised-flag/"
+  },
+  {
+    "number": 827,
+    "emoji": "📭",
+    "codePoint": 128237,
+    "url": "/open-mailbox-with-lowered-flag/"
+  },
+  {
+    "number": 828,
+    "emoji": "📮",
+    "codePoint": 128238,
+    "url": "/postbox/"
+  },
+  {
+    "number": 829,
+    "emoji": "🗳",
+    "codePoint": 128499,
+    "url": "/ballot-box-with-ballot/"
+  },
+  {
+    "number": 830,
+    "emoji": "✏️",
+    "codePoint": 9999,
+    "url": "/pencil/"
+  },
+  {
+    "number": 831,
+    "emoji": "✒️",
+    "codePoint": 10002,
+    "url": "/black-nib/"
+  },
+  {
+    "number": 832,
+    "emoji": "🖋",
+    "codePoint": 128395,
+    "url": "/lower-left-fountain-pen/"
+  },
+  {
+    "number": 833,
+    "emoji": "🖊",
+    "codePoint": 128394,
+    "url": "/lower-left-ballpoint-pen/"
+  },
+  {
+    "number": 834,
+    "emoji": "🖌",
+    "codePoint": 128396,
+    "url": "/lower-left-paintbrush/"
+  },
+  {
+    "number": 835,
+    "emoji": "🖍",
+    "codePoint": 128397,
+    "url": "/lower-left-crayon/"
+  },
+  {
+    "number": 836,
+    "emoji": "📝",
+    "codePoint": 128221,
+    "url": "/memo/"
+  },
+  {
+    "number": 837,
+    "emoji": "💼",
+    "codePoint": 128188,
+    "url": "/briefcase/"
+  },
+  {
+    "number": 838,
+    "emoji": "📁",
+    "codePoint": 128193,
+    "url": "/file-folder/"
+  },
+  {
+    "number": 839,
+    "emoji": "📂",
+    "codePoint": 128194,
+    "url": "/open-file-folder/"
+  },
+  {
+    "number": 840,
+    "emoji": "🗂",
+    "codePoint": 128450,
+    "url": "/card-index-dividers/"
+  },
+  {
+    "number": 841,
+    "emoji": "📅",
+    "codePoint": 128197,
+    "url": "/calendar/"
+  },
+  {
+    "number": 842,
+    "emoji": "📆",
+    "codePoint": 128198,
+    "url": "/tear-off-calendar/"
+  },
+  {
+    "number": 843,
+    "emoji": "🗒",
+    "codePoint": 128466,
+    "url": "/spiral-note-pad/"
+  },
+  {
+    "number": 844,
+    "emoji": "🗓",
+    "codePoint": 128467,
+    "url": "/spiral-calendar-pad/"
+  },
+  {
+    "number": 845,
+    "emoji": "📇",
+    "codePoint": 128199,
+    "url": "/card-index/"
+  },
+  {
+    "number": 846,
+    "emoji": "📈",
+    "codePoint": 128200,
+    "url": "/chart-with-upwards-trend/"
+  },
+  {
+    "number": 847,
+    "emoji": "📉",
+    "codePoint": 128201,
+    "url": "/chart-with-downwards-trend/"
+  },
+  {
+    "number": 848,
+    "emoji": "📊",
+    "codePoint": 128202,
+    "url": "/bar-chart/"
+  },
+  {
+    "number": 849,
+    "emoji": "📋",
+    "codePoint": 128203,
+    "url": "/clipboard/"
+  },
+  {
+    "number": 850,
+    "emoji": "📌",
+    "codePoint": 128204,
+    "url": "/pushpin/"
+  },
+  {
+    "number": 851,
+    "emoji": "📍",
+    "codePoint": 128205,
+    "url": "/round-pushpin/"
+  },
+  {
+    "number": 852,
+    "emoji": "📎",
+    "codePoint": 128206,
+    "url": "/paperclip/"
+  },
+  {
+    "number": 853,
+    "emoji": "🖇",
+    "codePoint": 128391,
+    "url": "/linked-paperclips/"
+  },
+  {
+    "number": 854,
+    "emoji": "📏",
+    "codePoint": 128207,
+    "url": "/straight-ruler/"
+  },
+  {
+    "number": 855,
+    "emoji": "📐",
+    "codePoint": 128208,
+    "url": "/triangular-ruler/"
+  },
+  {
+    "number": 856,
+    "emoji": "📛",
+    "codePoint": 128219,
+    "url": "/name-badge/"
+  },
+  {
+    "number": 857,
+    "emoji": "✂️",
+    "codePoint": 9986,
+    "url": "/black-scissors/"
+  },
+  {
+    "number": 858,
+    "emoji": "🗃",
+    "codePoint": 128451,
+    "url": "/card-file-box/"
+  },
+  {
+    "number": 859,
+    "emoji": "🗄",
+    "codePoint": 128452,
+    "url": "/file-cabinet/"
+  },
+  {
+    "number": 860,
+    "emoji": "🗑",
+    "codePoint": 128465,
+    "url": "/wastebasket/"
+  },
+  {
+    "number": 861,
+    "emoji": "🔒",
+    "codePoint": 128274,
+    "url": "/lock/"
+  },
+  {
+    "number": 862,
+    "emoji": "🔓",
+    "codePoint": 128275,
+    "url": "/open-lock/"
+  },
+  {
+    "number": 863,
+    "emoji": "🔏",
+    "codePoint": 128271,
+    "url": "/lock-with-ink-pen/"
+  },
+  {
+    "number": 864,
+    "emoji": "🔐",
+    "codePoint": 128272,
+    "url": "/closed-lock-with-key/"
+  },
+  {
+    "number": 865,
+    "emoji": "🔑",
+    "codePoint": 128273,
+    "url": "/key/"
+  },
+  {
+    "number": 866,
+    "emoji": "🗝",
+    "codePoint": 128477,
+    "url": "/old-key/"
+  },
+  {
+    "number": 867,
+    "emoji": "🔨",
+    "codePoint": 128296,
+    "url": "/hammer/"
+  },
+  {
+    "number": 868,
+    "emoji": "⛏",
+    "codePoint": 9935,
+    "url": "/pick/"
+  },
+  {
+    "number": 869,
+    "emoji": "⚒",
+    "codePoint": 9874,
+    "url": "/hammer-and-pick/"
+  },
+  {
+    "number": 870,
+    "emoji": "🛠",
+    "codePoint": 128736,
+    "url": "/hammer-and-wrench/"
+  },
+  {
+    "number": 871,
+    "emoji": "🔧",
+    "codePoint": 128295,
+    "url": "/wrench/"
+  },
+  {
+    "number": 872,
+    "emoji": "🔩",
+    "codePoint": 128297,
+    "url": "/nut-and-bolt/"
+  },
+  {
+    "number": 873,
+    "emoji": "⚙",
+    "codePoint": 9881,
+    "url": "/gear/"
+  },
+  {
+    "number": 874,
+    "emoji": "🗜",
+    "codePoint": 128476,
+    "url": "/compression/"
+  },
+  {
+    "number": 875,
+    "emoji": "⚗",
+    "codePoint": 9879,
+    "url": "/alembic/"
+  },
+  {
+    "number": 876,
+    "emoji": "⚖",
+    "codePoint": 9878,
+    "url": "/scales/"
+  },
+  {
+    "number": 877,
+    "emoji": "🔗",
+    "codePoint": 128279,
+    "url": "/link-symbol/"
+  },
+  {
+    "number": 878,
+    "emoji": "⛓",
+    "codePoint": 9939,
+    "url": "/chains/"
+  },
+  {
+    "number": 879,
+    "emoji": "💉",
+    "codePoint": 128137,
+    "url": "/syringe/"
+  },
+  {
+    "number": 880,
+    "emoji": "💊",
+    "codePoint": 128138,
+    "url": "/pill/"
+  },
+  {
+    "number": 881,
+    "emoji": "🗡",
+    "codePoint": 128481,
+    "url": "/dagger-knife/"
+  },
+  {
+    "number": 882,
+    "emoji": "🔪",
+    "codePoint": 128298,
+    "url": "/hocho/"
+  },
+  {
+    "number": 883,
+    "emoji": "⚔",
+    "codePoint": 9876,
+    "url": "/crossed-swords/"
+  },
+  {
+    "number": 884,
+    "emoji": "🔫",
+    "codePoint": 128299,
+    "url": "/pistol/"
+  },
+  {
+    "number": 885,
+    "emoji": "🛡",
+    "codePoint": 128737,
+    "url": "/shield/"
+  },
+  {
+    "number": 886,
+    "emoji": "🏹",
+    "codePoint": 127993,
+    "url": "/bow-and-arrow/"
+  },
+  {
+    "number": 887,
+    "emoji": "🚬",
+    "codePoint": 128684,
+    "url": "/smoking-symbol/"
+  },
+  {
+    "number": 888,
+    "emoji": "⚰",
+    "codePoint": 9904,
+    "url": "/coffin/"
+  },
+  {
+    "number": 889,
+    "emoji": "⚱",
+    "codePoint": 9905,
+    "url": "/funeral-urn/"
+  },
+  {
+    "number": 890,
+    "emoji": "🏁",
+    "codePoint": 127937,
+    "url": "/chequered-flag/"
+  },
+  {
+    "number": 891,
+    "emoji": "🏳",
+    "codePoint": 127987,
+    "url": "/waving-white-flag/"
+  },
+  {
+    "number": 892,
+    "emoji": "🏴",
+    "codePoint": 127988,
+    "url": "/waving-black-flag/"
+  },
+  {
+    "number": 893,
+    "emoji": "🚩",
+    "codePoint": 128681,
+    "url": "/triangular-flag-on-post/"
+  },
+  {
+    "number": 894,
+    "emoji": "🇦🇫",
+    "codePoint": 127462,
+    "url": "/flag-for-afghanistan/"
+  },
+  {
+    "number": 895,
+    "emoji": "🇦🇽",
+    "codePoint": 127462,
+    "url": "/flag-for-aland-islands/"
+  },
+  {
+    "number": 896,
+    "emoji": "🇦🇱",
+    "codePoint": 127462,
+    "url": "/flag-for-albania/"
+  },
+  {
+    "number": 897,
+    "emoji": "🇩🇿",
+    "codePoint": 127465,
+    "url": "/flag-for-algeria/"
+  },
+  {
+    "number": 898,
+    "emoji": "🇦🇸",
+    "codePoint": 127462,
+    "url": "/flag-for-american-samoa/"
+  },
+  {
+    "number": 899,
+    "emoji": "🇦🇩",
+    "codePoint": 127462,
+    "url": "/flag-for-andorra/"
+  },
+  {
+    "number": 900,
+    "emoji": "🇦🇴",
+    "codePoint": 127462,
+    "url": "/flag-for-angola/"
+  },
+  {
+    "number": 901,
+    "emoji": "🇦🇮",
+    "codePoint": 127462,
+    "url": "/flag-for-anguilla/"
+  },
+  {
+    "number": 902,
+    "emoji": "🇦🇶",
+    "codePoint": 127462,
+    "url": "/flag-for-antarctica/"
+  },
+  {
+    "number": 903,
+    "emoji": "🇦🇬",
+    "codePoint": 127462,
+    "url": "/flag-for-antigua-barbuda/"
+  },
+  {
+    "number": 904,
+    "emoji": "🇦🇷",
+    "codePoint": 127462,
+    "url": "/flag-for-argentina/"
+  },
+  {
+    "number": 905,
+    "emoji": "🇦🇲",
+    "codePoint": 127462,
+    "url": "/flag-for-armenia/"
+  },
+  {
+    "number": 906,
+    "emoji": "🇦🇼",
+    "codePoint": 127462,
+    "url": "/flag-for-aruba/"
+  },
+  {
+    "number": 907,
+    "emoji": "🇦🇨",
+    "codePoint": 127462,
+    "url": "/flag-for-ascension-island/"
+  },
+  {
+    "number": 908,
+    "emoji": "🇦🇺",
+    "codePoint": 127462,
+    "url": "/flag-for-australia/"
+  },
+  {
+    "number": 909,
+    "emoji": "🇦🇹",
+    "codePoint": 127462,
+    "url": "/flag-for-austria/"
+  },
+  {
+    "number": 910,
+    "emoji": "🇦🇿",
+    "codePoint": 127462,
+    "url": "/flag-for-azerbaijan/"
+  },
+  {
+    "number": 911,
+    "emoji": "🇧🇸",
+    "codePoint": 127463,
+    "url": "/flag-for-bahamas/"
+  },
+  {
+    "number": 912,
+    "emoji": "🇧🇭",
+    "codePoint": 127463,
+    "url": "/flag-for-bahrain/"
+  },
+  {
+    "number": 913,
+    "emoji": "🇧🇩",
+    "codePoint": 127463,
+    "url": "/flag-for-bangladesh/"
+  },
+  {
+    "number": 914,
+    "emoji": "🇧🇧",
+    "codePoint": 127463,
+    "url": "/flag-for-barbados/"
+  },
+  {
+    "number": 915,
+    "emoji": "🇧🇾",
+    "codePoint": 127463,
+    "url": "/flag-for-belarus/"
+  },
+  {
+    "number": 916,
+    "emoji": "🇧🇪",
+    "codePoint": 127463,
+    "url": "/flag-for-belgium/"
+  },
+  {
+    "number": 917,
+    "emoji": "🇧🇿",
+    "codePoint": 127463,
+    "url": "/flag-for-belize/"
+  },
+  {
+    "number": 918,
+    "emoji": "🇧🇯",
+    "codePoint": 127463,
+    "url": "/flag-for-benin/"
+  },
+  {
+    "number": 919,
+    "emoji": "🇧🇲",
+    "codePoint": 127463,
+    "url": "/flag-for-bermuda/"
+  },
+  {
+    "number": 920,
+    "emoji": "🇧🇹",
+    "codePoint": 127463,
+    "url": "/flag-for-bhutan/"
+  },
+  {
+    "number": 921,
+    "emoji": "🇧🇴",
+    "codePoint": 127463,
+    "url": "/flag-for-bolivia/"
+  },
+  {
+    "number": 922,
+    "emoji": "🇧🇦",
+    "codePoint": 127463,
+    "url": "/flag-for-bosnia-herzegovina/"
+  },
+  {
+    "number": 923,
+    "emoji": "🇧🇼",
+    "codePoint": 127463,
+    "url": "/flag-for-botswana/"
+  },
+  {
+    "number": 924,
+    "emoji": "🇧🇻",
+    "codePoint": 127463,
+    "url": "/flag-for-bouvet-island/"
+  },
+  {
+    "number": 925,
+    "emoji": "🇧🇷",
+    "codePoint": 127463,
+    "url": "/flag-for-brazil/"
+  },
+  {
+    "number": 926,
+    "emoji": "🇮🇴",
+    "codePoint": 127470,
+    "url": "/flag-for-british-indian-ocean-territory/"
+  },
+  {
+    "number": 927,
+    "emoji": "🇻🇬",
+    "codePoint": 127483,
+    "url": "/flag-for-british-virgin-islands/"
+  },
+  {
+    "number": 928,
+    "emoji": "🇧🇳",
+    "codePoint": 127463,
+    "url": "/flag-for-brunei/"
+  },
+  {
+    "number": 929,
+    "emoji": "🇧🇬",
+    "codePoint": 127463,
+    "url": "/flag-for-bulgaria/"
+  },
+  {
+    "number": 930,
+    "emoji": "🇧🇫",
+    "codePoint": 127463,
+    "url": "/flag-for-burkina-faso/"
+  },
+  {
+    "number": 931,
+    "emoji": "🇧🇮",
+    "codePoint": 127463,
+    "url": "/flag-for-burundi/"
+  },
+  {
+    "number": 932,
+    "emoji": "🇰🇭",
+    "codePoint": 127472,
+    "url": "/flag-for-cambodia/"
+  },
+  {
+    "number": 933,
+    "emoji": "🇨🇲",
+    "codePoint": 127464,
+    "url": "/flag-for-cameroon/"
+  },
+  {
+    "number": 934,
+    "emoji": "🇨🇦",
+    "codePoint": 127464,
+    "url": "/flag-for-canada/"
+  },
+  {
+    "number": 935,
+    "emoji": "🇮🇨",
+    "codePoint": 127470,
+    "url": "/flag-for-canary-islands/"
+  },
+  {
+    "number": 936,
+    "emoji": "🇨🇻",
+    "codePoint": 127464,
+    "url": "/flag-for-cape-verde/"
+  },
+  {
+    "number": 937,
+    "emoji": "🇧🇶",
+    "codePoint": 127463,
+    "url": "/flag-for-caribbean-netherlands/"
+  },
+  {
+    "number": 938,
+    "emoji": "🇰🇾",
+    "codePoint": 127472,
+    "url": "/flag-for-cayman-islands/"
+  },
+  {
+    "number": 939,
+    "emoji": "🇨🇫",
+    "codePoint": 127464,
+    "url": "/flag-for-central-african-republic/"
+  },
+  {
+    "number": 940,
+    "emoji": "🇪🇦",
+    "codePoint": 127466,
+    "url": "/flag-for-ceuta-melilla/"
+  },
+  {
+    "number": 941,
+    "emoji": "🇹🇩",
+    "codePoint": 127481,
+    "url": "/flag-for-chad/"
+  },
+  {
+    "number": 942,
+    "emoji": "🇨🇱",
+    "codePoint": 127464,
+    "url": "/flag-for-chile/"
+  },
+  {
+    "number": 943,
+    "emoji": "🇨🇳",
+    "codePoint": 127464,
+    "url": "/flag-for-china/"
+  },
+  {
+    "number": 944,
+    "emoji": "🇨🇽",
+    "codePoint": 127464,
+    "url": "/flag-for-christmas-island/"
+  },
+  {
+    "number": 945,
+    "emoji": "🇨🇵",
+    "codePoint": 127464,
+    "url": "/flag-for-clipperton-island/"
+  },
+  {
+    "number": 946,
+    "emoji": "🇨🇨",
+    "codePoint": 127464,
+    "url": "/flag-for-cocos-islands/"
+  },
+  {
+    "number": 947,
+    "emoji": "🇨🇴",
+    "codePoint": 127464,
+    "url": "/flag-for-colombia/"
+  },
+  {
+    "number": 948,
+    "emoji": "🇰🇲",
+    "codePoint": 127472,
+    "url": "/flag-for-comoros/"
+  },
+  {
+    "number": 949,
+    "emoji": "🇨🇬",
+    "codePoint": 127464,
+    "url": "/flag-for-congo-brazzaville/"
+  },
+  {
+    "number": 950,
+    "emoji": "🇨🇩",
+    "codePoint": 127464,
+    "url": "/flag-for-congo-kinshasa/"
+  },
+  {
+    "number": 951,
+    "emoji": "🇨🇰",
+    "codePoint": 127464,
+    "url": "/flag-for-cook-islands/"
+  },
+  {
+    "number": 952,
+    "emoji": "🇨🇷",
+    "codePoint": 127464,
+    "url": "/flag-for-costa-rica/"
+  },
+  {
+    "number": 953,
+    "emoji": "🇨🇮",
+    "codePoint": 127464,
+    "url": "/flag-for-cote-divoire/"
+  },
+  {
+    "number": 954,
+    "emoji": "🇭🇷",
+    "codePoint": 127469,
+    "url": "/flag-for-croatia/"
+  },
+  {
+    "number": 955,
+    "emoji": "🇨🇺",
+    "codePoint": 127464,
+    "url": "/flag-for-cuba/"
+  },
+  {
+    "number": 956,
+    "emoji": "🇨🇼",
+    "codePoint": 127464,
+    "url": "/flag-for-curacao/"
+  },
+  {
+    "number": 957,
+    "emoji": "🇨🇾",
+    "codePoint": 127464,
+    "url": "/flag-for-cyprus/"
+  },
+  {
+    "number": 958,
+    "emoji": "🇨🇿",
+    "codePoint": 127464,
+    "url": "/flag-for-czech-republic/"
+  },
+  {
+    "number": 959,
+    "emoji": "🇩🇰",
+    "codePoint": 127465,
+    "url": "/flag-for-denmark/"
+  },
+  {
+    "number": 960,
+    "emoji": "🇩🇬",
+    "codePoint": 127465,
+    "url": "/flag-for-diego-garcia/"
+  },
+  {
+    "number": 961,
+    "emoji": "🇩🇯",
+    "codePoint": 127465,
+    "url": "/flag-for-djibouti/"
+  },
+  {
+    "number": 962,
+    "emoji": "🇩🇲",
+    "codePoint": 127465,
+    "url": "/flag-for-dominica/"
+  },
+  {
+    "number": 963,
+    "emoji": "🇩🇴",
+    "codePoint": 127465,
+    "url": "/flag-for-dominican-republic/"
+  },
+  {
+    "number": 964,
+    "emoji": "🇪🇨",
+    "codePoint": 127466,
+    "url": "/flag-for-ecuador/"
+  },
+  {
+    "number": 965,
+    "emoji": "🇪🇬",
+    "codePoint": 127466,
+    "url": "/flag-for-egypt/"
+  },
+  {
+    "number": 966,
+    "emoji": "🇸🇻",
+    "codePoint": 127480,
+    "url": "/flag-for-el-salvador/"
+  },
+  {
+    "number": 967,
+    "emoji": "🇬🇶",
+    "codePoint": 127468,
+    "url": "/flag-for-equatorial-guinea/"
+  },
+  {
+    "number": 968,
+    "emoji": "🇪🇷",
+    "codePoint": 127466,
+    "url": "/flag-for-eritrea/"
+  },
+  {
+    "number": 969,
+    "emoji": "🇪🇪",
+    "codePoint": 127466,
+    "url": "/flag-for-estonia/"
+  },
+  {
+    "number": 970,
+    "emoji": "🇪🇹",
+    "codePoint": 127466,
+    "url": "/flag-for-ethiopia/"
+  },
+  {
+    "number": 971,
+    "emoji": "🇪🇺",
+    "codePoint": 127466,
+    "url": "/flag-for-european-union/"
+  },
+  {
+    "number": 972,
+    "emoji": "🇫🇰",
+    "codePoint": 127467,
+    "url": "/flag-for-falkland-islands/"
+  },
+  {
+    "number": 973,
+    "emoji": "🇫🇴",
+    "codePoint": 127467,
+    "url": "/flag-for-faroe-islands/"
+  },
+  {
+    "number": 974,
+    "emoji": "🇫🇯",
+    "codePoint": 127467,
+    "url": "/flag-for-fiji/"
+  },
+  {
+    "number": 975,
+    "emoji": "🇫🇮",
+    "codePoint": 127467,
+    "url": "/flag-for-finland/"
+  },
+  {
+    "number": 976,
+    "emoji": "🇫🇷",
+    "codePoint": 127467,
+    "url": "/flag-for-france/"
+  },
+  {
+    "number": 977,
+    "emoji": "🇬🇫",
+    "codePoint": 127468,
+    "url": "/flag-for-french-guiana/"
+  },
+  {
+    "number": 978,
+    "emoji": "🇵🇫",
+    "codePoint": 127477,
+    "url": "/flag-for-french-polynesia/"
+  },
+  {
+    "number": 979,
+    "emoji": "🇹🇫",
+    "codePoint": 127481,
+    "url": "/flag-for-french-southern-territories/"
+  },
+  {
+    "number": 980,
+    "emoji": "🇬🇦",
+    "codePoint": 127468,
+    "url": "/flag-for-gabon/"
+  },
+  {
+    "number": 981,
+    "emoji": "🇬🇲",
+    "codePoint": 127468,
+    "url": "/flag-for-gambia/"
+  },
+  {
+    "number": 982,
+    "emoji": "🇬🇪",
+    "codePoint": 127468,
+    "url": "/flag-for-georgia/"
+  },
+  {
+    "number": 983,
+    "emoji": "🇩🇪",
+    "codePoint": 127465,
+    "url": "/flag-for-germany/"
+  },
+  {
+    "number": 984,
+    "emoji": "🇬🇭",
+    "codePoint": 127468,
+    "url": "/flag-for-ghana/"
+  },
+  {
+    "number": 985,
+    "emoji": "🇬🇮",
+    "codePoint": 127468,
+    "url": "/flag-for-gibraltar/"
+  },
+  {
+    "number": 986,
+    "emoji": "🇬🇷",
+    "codePoint": 127468,
+    "url": "/flag-for-greece/"
+  },
+  {
+    "number": 987,
+    "emoji": "🇬🇱",
+    "codePoint": 127468,
+    "url": "/flag-for-greenland/"
+  },
+  {
+    "number": 988,
+    "emoji": "🇬🇩",
+    "codePoint": 127468,
+    "url": "/flag-for-grenada/"
+  },
+  {
+    "number": 989,
+    "emoji": "🇬🇵",
+    "codePoint": 127468,
+    "url": "/flag-for-guadeloupe/"
+  },
+  {
+    "number": 990,
+    "emoji": "🇬🇺",
+    "codePoint": 127468,
+    "url": "/flag-for-guam/"
+  },
+  {
+    "number": 991,
+    "emoji": "🇬🇹",
+    "codePoint": 127468,
+    "url": "/flag-for-guatemala/"
+  },
+  {
+    "number": 992,
+    "emoji": "🇬🇬",
+    "codePoint": 127468,
+    "url": "/flag-for-guernsey/"
+  },
+  {
+    "number": 993,
+    "emoji": "🇬🇳",
+    "codePoint": 127468,
+    "url": "/flag-for-guinea/"
+  },
+  {
+    "number": 994,
+    "emoji": "🇬🇼",
+    "codePoint": 127468,
+    "url": "/flag-for-guinea-bissau/"
+  },
+  {
+    "number": 995,
+    "emoji": "🇬🇾",
+    "codePoint": 127468,
+    "url": "/flag-for-guyana/"
+  },
+  {
+    "number": 996,
+    "emoji": "🇭🇹",
+    "codePoint": 127469,
+    "url": "/flag-for-haiti/"
+  },
+  {
+    "number": 997,
+    "emoji": "🇭🇲",
+    "codePoint": 127469,
+    "url": "/flag-for-heard-mcdonald-islands/"
+  },
+  {
+    "number": 998,
+    "emoji": "🇭🇳",
+    "codePoint": 127469,
+    "url": "/flag-for-honduras/"
+  },
+  {
+    "number": 999,
+    "emoji": "🇭🇰",
+    "codePoint": 127469,
+    "url": "/flag-for-hong-kong/"
+  },
+  {
+    "number": 1000,
+    "emoji": "🇭🇺",
+    "codePoint": 127469,
+    "url": "/flag-for-hungary/"
+  },
+  {
+    "number": 1001,
+    "emoji": "🇮🇸",
+    "codePoint": 127470,
+    "url": "/flag-for-iceland/"
+  },
+  {
+    "number": 1002,
+    "emoji": "🇮🇳",
+    "codePoint": 127470,
+    "url": "/flag-for-india/"
+  },
+  {
+    "number": 1003,
+    "emoji": "🇮🇩",
+    "codePoint": 127470,
+    "url": "/flag-for-indonesia/"
+  },
+  {
+    "number": 1004,
+    "emoji": "🇮🇷",
+    "codePoint": 127470,
+    "url": "/flag-for-iran/"
+  },
+  {
+    "number": 1005,
+    "emoji": "🇮🇶",
+    "codePoint": 127470,
+    "url": "/flag-for-iraq/"
+  },
+  {
+    "number": 1006,
+    "emoji": "🇮🇪",
+    "codePoint": 127470,
+    "url": "/flag-for-ireland/"
+  },
+  {
+    "number": 1007,
+    "emoji": "🇮🇲",
+    "codePoint": 127470,
+    "url": "/flag-for-isle-of-man/"
+  },
+  {
+    "number": 1008,
+    "emoji": "🇮🇱",
+    "codePoint": 127470,
+    "url": "/flag-for-israel/"
+  },
+  {
+    "number": 1009,
+    "emoji": "🇮🇹",
+    "codePoint": 127470,
+    "url": "/flag-for-italy/"
+  },
+  {
+    "number": 1010,
+    "emoji": "🇯🇲",
+    "codePoint": 127471,
+    "url": "/flag-for-jamaica/"
+  },
+  {
+    "number": 1011,
+    "emoji": "🇯🇵",
+    "codePoint": 127471,
+    "url": "/flag-for-japan/"
+  },
+  {
+    "number": 1012,
+    "emoji": "🇯🇪",
+    "codePoint": 127471,
+    "url": "/flag-for-jersey/"
+  },
+  {
+    "number": 1013,
+    "emoji": "🇯🇴",
+    "codePoint": 127471,
+    "url": "/flag-for-jordan/"
+  },
+  {
+    "number": 1014,
+    "emoji": "🇰🇿",
+    "codePoint": 127472,
+    "url": "/flag-for-kazakhstan/"
+  },
+  {
+    "number": 1015,
+    "emoji": "🇰🇪",
+    "codePoint": 127472,
+    "url": "/flag-for-kenya/"
+  },
+  {
+    "number": 1016,
+    "emoji": "🇰🇮",
+    "codePoint": 127472,
+    "url": "/flag-for-kiribati/"
+  },
+  {
+    "number": 1017,
+    "emoji": "🇽🇰",
+    "codePoint": 127485,
+    "url": "/flag-for-kosovo/"
+  },
+  {
+    "number": 1018,
+    "emoji": "🇰🇼",
+    "codePoint": 127472,
+    "url": "/flag-for-kuwait/"
+  },
+  {
+    "number": 1019,
+    "emoji": "🇰🇬",
+    "codePoint": 127472,
+    "url": "/flag-for-kyrgyzstan/"
+  },
+  {
+    "number": 1020,
+    "emoji": "🇱🇦",
+    "codePoint": 127473,
+    "url": "/flag-for-laos/"
+  },
+  {
+    "number": 1021,
+    "emoji": "🇱🇻",
+    "codePoint": 127473,
+    "url": "/flag-for-latvia/"
+  },
+  {
+    "number": 1022,
+    "emoji": "🇱🇧",
+    "codePoint": 127473,
+    "url": "/flag-for-lebanon/"
+  },
+  {
+    "number": 1023,
+    "emoji": "🇱🇸",
+    "codePoint": 127473,
+    "url": "/flag-for-lesotho/"
+  },
+  {
+    "number": 1024,
+    "emoji": "🇱🇷",
+    "codePoint": 127473,
+    "url": "/flag-for-liberia/"
+  },
+  {
+    "number": 1025,
+    "emoji": "🇱🇾",
+    "codePoint": 127473,
+    "url": "/flag-for-libya/"
+  },
+  {
+    "number": 1026,
+    "emoji": "🇱🇮",
+    "codePoint": 127473,
+    "url": "/flag-for-liechtenstein/"
+  },
+  {
+    "number": 1027,
+    "emoji": "🇱🇹",
+    "codePoint": 127473,
+    "url": "/flag-for-lithuania/"
+  },
+  {
+    "number": 1028,
+    "emoji": "🇱🇺",
+    "codePoint": 127473,
+    "url": "/flag-for-luxembourg/"
+  },
+  {
+    "number": 1029,
+    "emoji": "🇲🇴",
+    "codePoint": 127474,
+    "url": "/flag-for-macau/"
+  },
+  {
+    "number": 1030,
+    "emoji": "🇲🇰",
+    "codePoint": 127474,
+    "url": "/flag-for-macedonia/"
+  },
+  {
+    "number": 1031,
+    "emoji": "🇲🇬",
+    "codePoint": 127474,
+    "url": "/flag-for-madagascar/"
+  },
+  {
+    "number": 1032,
+    "emoji": "🇲🇼",
+    "codePoint": 127474,
+    "url": "/flag-for-malawi/"
+  },
+  {
+    "number": 1033,
+    "emoji": "🇲🇾",
+    "codePoint": 127474,
+    "url": "/flag-for-malaysia/"
+  },
+  {
+    "number": 1034,
+    "emoji": "🇲🇻",
+    "codePoint": 127474,
+    "url": "/flag-for-maldives/"
+  },
+  {
+    "number": 1035,
+    "emoji": "🇲🇱",
+    "codePoint": 127474,
+    "url": "/flag-for-mali/"
+  },
+  {
+    "number": 1036,
+    "emoji": "🇲🇹",
+    "codePoint": 127474,
+    "url": "/flag-for-malta/"
+  },
+  {
+    "number": 1037,
+    "emoji": "🇲🇭",
+    "codePoint": 127474,
+    "url": "/flag-for-marshall-islands/"
+  },
+  {
+    "number": 1038,
+    "emoji": "🇲🇶",
+    "codePoint": 127474,
+    "url": "/flag-for-martinique/"
+  },
+  {
+    "number": 1039,
+    "emoji": "🇲🇷",
+    "codePoint": 127474,
+    "url": "/flag-for-mauritania/"
+  },
+  {
+    "number": 1040,
+    "emoji": "🇲🇺",
+    "codePoint": 127474,
+    "url": "/flag-for-mauritius/"
+  },
+  {
+    "number": 1041,
+    "emoji": "🇾🇹",
+    "codePoint": 127486,
+    "url": "/flag-for-mayotte/"
+  },
+  {
+    "number": 1042,
+    "emoji": "🇲🇽",
+    "codePoint": 127474,
+    "url": "/flag-for-mexico/"
+  },
+  {
+    "number": 1043,
+    "emoji": "🇫🇲",
+    "codePoint": 127467,
+    "url": "/flag-for-micronesia/"
+  },
+  {
+    "number": 1044,
+    "emoji": "🇲🇩",
+    "codePoint": 127474,
+    "url": "/flag-for-moldova/"
+  },
+  {
+    "number": 1045,
+    "emoji": "🇲🇨",
+    "codePoint": 127474,
+    "url": "/flag-for-monaco/"
+  },
+  {
+    "number": 1046,
+    "emoji": "🇲🇳",
+    "codePoint": 127474,
+    "url": "/flag-for-mongolia/"
+  },
+  {
+    "number": 1047,
+    "emoji": "🇲🇪",
+    "codePoint": 127474,
+    "url": "/flag-for-montenegro/"
+  },
+  {
+    "number": 1048,
+    "emoji": "🇲🇸",
+    "codePoint": 127474,
+    "url": "/flag-for-montserrat/"
+  },
+  {
+    "number": 1049,
+    "emoji": "🇲🇦",
+    "codePoint": 127474,
+    "url": "/flag-for-morocco/"
+  },
+  {
+    "number": 1050,
+    "emoji": "🇲🇿",
+    "codePoint": 127474,
+    "url": "/flag-for-mozambique/"
+  },
+  {
+    "number": 1051,
+    "emoji": "🇲🇲",
+    "codePoint": 127474,
+    "url": "/flag-for-myanmar/"
+  },
+  {
+    "number": 1052,
+    "emoji": "🇳🇦",
+    "codePoint": 127475,
+    "url": "/flag-for-namibia/"
+  },
+  {
+    "number": 1053,
+    "emoji": "🇳🇷",
+    "codePoint": 127475,
+    "url": "/flag-for-nauru/"
+  },
+  {
+    "number": 1054,
+    "emoji": "🇳🇵",
+    "codePoint": 127475,
+    "url": "/flag-for-nepal/"
+  },
+  {
+    "number": 1055,
+    "emoji": "🇳🇱",
+    "codePoint": 127475,
+    "url": "/flag-for-netherlands/"
+  },
+  {
+    "number": 1056,
+    "emoji": "🇳🇨",
+    "codePoint": 127475,
+    "url": "/flag-for-new-caledonia/"
+  },
+  {
+    "number": 1057,
+    "emoji": "🇳🇿",
+    "codePoint": 127475,
+    "url": "/flag-for-new-zealand/"
+  },
+  {
+    "number": 1058,
+    "emoji": "🇳🇮",
+    "codePoint": 127475,
+    "url": "/flag-for-nicaragua/"
+  },
+  {
+    "number": 1059,
+    "emoji": "🇳🇪",
+    "codePoint": 127475,
+    "url": "/flag-for-niger/"
+  },
+  {
+    "number": 1060,
+    "emoji": "🇳🇬",
+    "codePoint": 127475,
+    "url": "/flag-for-nigeria/"
+  },
+  {
+    "number": 1061,
+    "emoji": "🇳🇺",
+    "codePoint": 127475,
+    "url": "/flag-for-niue/"
+  },
+  {
+    "number": 1062,
+    "emoji": "🇳🇫",
+    "codePoint": 127475,
+    "url": "/flag-for-norfolk-island/"
+  },
+  {
+    "number": 1063,
+    "emoji": "🇲🇵",
+    "codePoint": 127474,
+    "url": "/flag-for-northern-mariana-islands/"
+  },
+  {
+    "number": 1064,
+    "emoji": "🇰🇵",
+    "codePoint": 127472,
+    "url": "/flag-for-north-korea/"
+  },
+  {
+    "number": 1065,
+    "emoji": "🇳🇴",
+    "codePoint": 127475,
+    "url": "/flag-for-norway/"
+  },
+  {
+    "number": 1066,
+    "emoji": "🇴🇲",
+    "codePoint": 127476,
+    "url": "/flag-for-oman/"
+  },
+  {
+    "number": 1067,
+    "emoji": "🇵🇰",
+    "codePoint": 127477,
+    "url": "/flag-for-pakistan/"
+  },
+  {
+    "number": 1068,
+    "emoji": "🇵🇼",
+    "codePoint": 127477,
+    "url": "/flag-for-palau/"
+  },
+  {
+    "number": 1069,
+    "emoji": "🇵🇸",
+    "codePoint": 127477,
+    "url": "/flag-for-palestinian-territories/"
+  },
+  {
+    "number": 1070,
+    "emoji": "🇵🇦",
+    "codePoint": 127477,
+    "url": "/flag-for-panama/"
+  },
+  {
+    "number": 1071,
+    "emoji": "🇵🇬",
+    "codePoint": 127477,
+    "url": "/flag-for-papua-new-guinea/"
+  },
+  {
+    "number": 1072,
+    "emoji": "🇵🇾",
+    "codePoint": 127477,
+    "url": "/flag-for-paraguay/"
+  },
+  {
+    "number": 1073,
+    "emoji": "🇵🇪",
+    "codePoint": 127477,
+    "url": "/flag-for-peru/"
+  },
+  {
+    "number": 1074,
+    "emoji": "🇵🇭",
+    "codePoint": 127477,
+    "url": "/flag-for-philippines/"
+  },
+  {
+    "number": 1075,
+    "emoji": "🇵🇳",
+    "codePoint": 127477,
+    "url": "/flag-for-pitcairn-islands/"
+  },
+  {
+    "number": 1076,
+    "emoji": "🇵🇱",
+    "codePoint": 127477,
+    "url": "/flag-for-poland/"
+  },
+  {
+    "number": 1077,
+    "emoji": "🇵🇹",
+    "codePoint": 127477,
+    "url": "/flag-for-portugal/"
+  },
+  {
+    "number": 1078,
+    "emoji": "🇵🇷",
+    "codePoint": 127477,
+    "url": "/flag-for-puerto-rico/"
+  },
+  {
+    "number": 1079,
+    "emoji": "🇶🇦",
+    "codePoint": 127478,
+    "url": "/flag-for-qatar/"
+  },
+  {
+    "number": 1080,
+    "emoji": "🇷🇪",
+    "codePoint": 127479,
+    "url": "/flag-for-reunion/"
+  },
+  {
+    "number": 1081,
+    "emoji": "🇷🇴",
+    "codePoint": 127479,
+    "url": "/flag-for-romania/"
+  },
+  {
+    "number": 1082,
+    "emoji": "🇷🇺",
+    "codePoint": 127479,
+    "url": "/flag-for-russia/"
+  },
+  {
+    "number": 1083,
+    "emoji": "🇷🇼",
+    "codePoint": 127479,
+    "url": "/flag-for-rwanda/"
+  },
+  {
+    "number": 1084,
+    "emoji": "🇼🇸",
+    "codePoint": 127484,
+    "url": "/flag-for-samoa/"
+  },
+  {
+    "number": 1085,
+    "emoji": "🇸🇲",
+    "codePoint": 127480,
+    "url": "/flag-for-san-marino/"
+  },
+  {
+    "number": 1086,
+    "emoji": "🇸🇹",
+    "codePoint": 127480,
+    "url": "/flag-for-sao-tome-principe/"
+  },
+  {
+    "number": 1087,
+    "emoji": "🇸🇦",
+    "codePoint": 127480,
+    "url": "/flag-for-saudi-arabia/"
+  },
+  {
+    "number": 1088,
+    "emoji": "🇸🇳",
+    "codePoint": 127480,
+    "url": "/flag-for-senegal/"
+  },
+  {
+    "number": 1089,
+    "emoji": "🇷🇸",
+    "codePoint": 127479,
+    "url": "/flag-for-serbia/"
+  },
+  {
+    "number": 1090,
+    "emoji": "🇸🇨",
+    "codePoint": 127480,
+    "url": "/flag-for-seychelles/"
+  },
+  {
+    "number": 1091,
+    "emoji": "🇸🇱",
+    "codePoint": 127480,
+    "url": "/flag-for-sierra-leone/"
+  },
+  {
+    "number": 1092,
+    "emoji": "🇸🇬",
+    "codePoint": 127480,
+    "url": "/flag-for-singapore/"
+  },
+  {
+    "number": 1093,
+    "emoji": "🇸🇽",
+    "codePoint": 127480,
+    "url": "/flag-for-sint-maarten/"
+  },
+  {
+    "number": 1094,
+    "emoji": "🇸🇰",
+    "codePoint": 127480,
+    "url": "/flag-for-slovakia/"
+  },
+  {
+    "number": 1095,
+    "emoji": "🇸🇮",
+    "codePoint": 127480,
+    "url": "/flag-for-slovenia/"
+  },
+  {
+    "number": 1096,
+    "emoji": "🇸🇧",
+    "codePoint": 127480,
+    "url": "/flag-for-solomon-islands/"
+  },
+  {
+    "number": 1097,
+    "emoji": "🇸🇴",
+    "codePoint": 127480,
+    "url": "/flag-for-somalia/"
+  },
+  {
+    "number": 1098,
+    "emoji": "🇿🇦",
+    "codePoint": 127487,
+    "url": "/flag-for-south-africa/"
+  },
+  {
+    "number": 1099,
+    "emoji": "🇬🇸",
+    "codePoint": 127468,
+    "url": "/flag-for-south-georgia-south-sandwich-islands/"
+  },
+  {
+    "number": 1100,
+    "emoji": "🇰🇷",
+    "codePoint": 127472,
+    "url": "/flag-for-south-korea/"
+  },
+  {
+    "number": 1101,
+    "emoji": "🇸🇸",
+    "codePoint": 127480,
+    "url": "/flag-for-south-sudan/"
+  },
+  {
+    "number": 1102,
+    "emoji": "🇪🇸",
+    "codePoint": 127466,
+    "url": "/flag-for-spain/"
+  },
+  {
+    "number": 1103,
+    "emoji": "🇱🇰",
+    "codePoint": 127473,
+    "url": "/flag-for-sri-lanka/"
+  },
+  {
+    "number": 1104,
+    "emoji": "🇧🇱",
+    "codePoint": 127463,
+    "url": "/flag-for-st-barthelemy/"
+  },
+  {
+    "number": 1105,
+    "emoji": "🇸🇭",
+    "codePoint": 127480,
+    "url": "/flag-for-st-helena/"
+  },
+  {
+    "number": 1106,
+    "emoji": "🇰🇳",
+    "codePoint": 127472,
+    "url": "/flag-for-st-kitts-nevis/"
+  },
+  {
+    "number": 1107,
+    "emoji": "🇱🇨",
+    "codePoint": 127473,
+    "url": "/flag-for-st-lucia/"
+  },
+  {
+    "number": 1108,
+    "emoji": "🇲🇫",
+    "codePoint": 127474,
+    "url": "/flag-for-st-martin/"
+  },
+  {
+    "number": 1109,
+    "emoji": "🇵🇲",
+    "codePoint": 127477,
+    "url": "/flag-for-st-pierre-miquelon/"
+  },
+  {
+    "number": 1110,
+    "emoji": "🇻🇨",
+    "codePoint": 127483,
+    "url": "/flag-for-st-vincent-grenadines/"
+  },
+  {
+    "number": 1111,
+    "emoji": "🇸🇩",
+    "codePoint": 127480,
+    "url": "/flag-for-sudan/"
+  },
+  {
+    "number": 1112,
+    "emoji": "🇸🇷",
+    "codePoint": 127480,
+    "url": "/flag-for-suriname/"
+  },
+  {
+    "number": 1113,
+    "emoji": "🇸🇯",
+    "codePoint": 127480,
+    "url": "/flag-for-svalbard-jan-mayen/"
+  },
+  {
+    "number": 1114,
+    "emoji": "🇸🇿",
+    "codePoint": 127480,
+    "url": "/flag-for-swaziland/"
+  },
+  {
+    "number": 1115,
+    "emoji": "🇸🇪",
+    "codePoint": 127480,
+    "url": "/flag-for-sweden/"
+  },
+  {
+    "number": 1116,
+    "emoji": "🇨🇭",
+    "codePoint": 127464,
+    "url": "/flag-for-switzerland/"
+  },
+  {
+    "number": 1117,
+    "emoji": "🇸🇾",
+    "codePoint": 127480,
+    "url": "/flag-for-syria/"
+  },
+  {
+    "number": 1118,
+    "emoji": "🇹🇼",
+    "codePoint": 127481,
+    "url": "/flag-for-taiwan/"
+  },
+  {
+    "number": 1119,
+    "emoji": "🇹🇯",
+    "codePoint": 127481,
+    "url": "/flag-for-tajikistan/"
+  },
+  {
+    "number": 1120,
+    "emoji": "🇹🇿",
+    "codePoint": 127481,
+    "url": "/flag-for-tanzania/"
+  },
+  {
+    "number": 1121,
+    "emoji": "🇹🇭",
+    "codePoint": 127481,
+    "url": "/flag-for-thailand/"
+  },
+  {
+    "number": 1122,
+    "emoji": "🇹🇱",
+    "codePoint": 127481,
+    "url": "/flag-for-timor-leste/"
+  },
+  {
+    "number": 1123,
+    "emoji": "🇹🇬",
+    "codePoint": 127481,
+    "url": "/flag-for-togo/"
+  },
+  {
+    "number": 1124,
+    "emoji": "🇹🇰",
+    "codePoint": 127481,
+    "url": "/flag-for-tokelau/"
+  },
+  {
+    "number": 1125,
+    "emoji": "🇹🇴",
+    "codePoint": 127481,
+    "url": "/flag-for-tonga/"
+  },
+  {
+    "number": 1126,
+    "emoji": "🇹🇹",
+    "codePoint": 127481,
+    "url": "/flag-for-trinidad-tobago/"
+  },
+  {
+    "number": 1127,
+    "emoji": "🇹🇦",
+    "codePoint": 127481,
+    "url": "/flag-for-tristan-da-cunha/"
+  },
+  {
+    "number": 1128,
+    "emoji": "🇹🇳",
+    "codePoint": 127481,
+    "url": "/flag-for-tunisia/"
+  },
+  {
+    "number": 1129,
+    "emoji": "🇹🇷",
+    "codePoint": 127481,
+    "url": "/flag-for-turkey/"
+  },
+  {
+    "number": 1130,
+    "emoji": "🇹🇲",
+    "codePoint": 127481,
+    "url": "/flag-for-turkmenistan/"
+  },
+  {
+    "number": 1131,
+    "emoji": "🇹🇨",
+    "codePoint": 127481,
+    "url": "/flag-for-turks-caicos-islands/"
+  },
+  {
+    "number": 1132,
+    "emoji": "🇹🇻",
+    "codePoint": 127481,
+    "url": "/flag-for-tuvalu/"
+  },
+  {
+    "number": 1133,
+    "emoji": "🇺🇬",
+    "codePoint": 127482,
+    "url": "/flag-for-uganda/"
+  },
+  {
+    "number": 1134,
+    "emoji": "🇺🇦",
+    "codePoint": 127482,
+    "url": "/flag-for-ukraine/"
+  },
+  {
+    "number": 1135,
+    "emoji": "🇦🇪",
+    "codePoint": 127462,
+    "url": "/flag-for-united-arab-emirates/"
+  },
+  {
+    "number": 1136,
+    "emoji": "🇬🇧",
+    "codePoint": 127468,
+    "url": "/flag-for-united-kingdom/"
+  },
+  {
+    "number": 1137,
+    "emoji": "🇺🇸",
+    "codePoint": 127482,
+    "url": "/flag-for-united-states/"
+  },
+  {
+    "number": 1138,
+    "emoji": "🇺🇾",
+    "codePoint": 127482,
+    "url": "/flag-for-uruguay/"
+  },
+  {
+    "number": 1139,
+    "emoji": "🇺🇲",
+    "codePoint": 127482,
+    "url": "/flag-for-us-outlying-islands/"
+  },
+  {
+    "number": 1140,
+    "emoji": "🇻🇮",
+    "codePoint": 127483,
+    "url": "/flag-for-us-virgin-islands/"
+  },
+  {
+    "number": 1141,
+    "emoji": "🇺🇿",
+    "codePoint": 127482,
+    "url": "/flag-for-uzbekistan/"
+  },
+  {
+    "number": 1142,
+    "emoji": "🇻🇺",
+    "codePoint": 127483,
+    "url": "/flag-for-vanuatu/"
+  },
+  {
+    "number": 1143,
+    "emoji": "🇻🇦",
+    "codePoint": 127483,
+    "url": "/flag-for-vatican-city/"
+  },
+  {
+    "number": 1144,
+    "emoji": "🇻🇪",
+    "codePoint": 127483,
+    "url": "/flag-for-venezuela/"
+  },
+  {
+    "number": 1145,
+    "emoji": "🇻🇳",
+    "codePoint": 127483,
+    "url": "/flag-for-vietnam/"
+  },
+  {
+    "number": 1146,
+    "emoji": "🇼🇫",
+    "codePoint": 127484,
+    "url": "/flag-for-wallis-futuna/"
+  },
+  {
+    "number": 1147,
+    "emoji": "🇪🇭",
+    "codePoint": 127466,
+    "url": "/flag-for-western-sahara/"
+  },
+  {
+    "number": 1148,
+    "emoji": "🇾🇪",
+    "codePoint": 127486,
+    "url": "/flag-for-yemen/"
+  },
+  {
+    "number": 1149,
+    "emoji": "🇿🇲",
+    "codePoint": 127487,
+    "url": "/flag-for-zambia/"
+  },
+  {
+    "number": 1150,
+    "emoji": "🇿🇼",
+    "codePoint": 127487,
+    "url": "/flag-for-zimbabwe/"
+  },
+  {
+    "number": 1151,
+    "emoji": "⬆️",
+    "codePoint": 11014,
+    "url": "/upwards-black-arrow/"
+  },
+  {
+    "number": 1152,
+    "emoji": "↗️",
+    "codePoint": 8599,
+    "url": "/north-east-arrow/"
+  },
+  {
+    "number": 1153,
+    "emoji": "➡️",
+    "codePoint": 10145,
+    "url": "/black-rightwards-arrow/"
+  },
+  {
+    "number": 1154,
+    "emoji": "↘️",
+    "codePoint": 8600,
+    "url": "/south-east-arrow/"
+  },
+  {
+    "number": 1155,
+    "emoji": "⬇️",
+    "codePoint": 11015,
+    "url": "/downwards-black-arrow/"
+  },
+  {
+    "number": 1156,
+    "emoji": "↙️",
+    "codePoint": 8601,
+    "url": "/south-west-arrow/"
+  },
+  {
+    "number": 1157,
+    "emoji": "⬅️",
+    "codePoint": 11013,
+    "url": "/leftwards-black-arrow/"
+  },
+  {
+    "number": 1158,
+    "emoji": "↖️",
+    "codePoint": 8598,
+    "url": "/north-west-arrow/"
+  },
+  {
+    "number": 1159,
+    "emoji": "↕️",
+    "codePoint": 8597,
+    "url": "/up-down-arrow/"
+  },
+  {
+    "number": 1160,
+    "emoji": "↔️",
+    "codePoint": 8596,
+    "url": "/left-right-arrow/"
+  },
+  {
+    "number": 1161,
+    "emoji": "↩️",
+    "codePoint": 8617,
+    "url": "/leftwards-arrow-with-hook/"
+  },
+  {
+    "number": 1162,
+    "emoji": "↪️",
+    "codePoint": 8618,
+    "url": "/rightwards-arrow-with-hook/"
+  },
+  {
+    "number": 1163,
+    "emoji": "⤴️",
+    "codePoint": 10548,
+    "url": "/arrow-pointing-rightwards-then-curving-upwards/"
+  },
+  {
+    "number": 1164,
+    "emoji": "⤵️",
+    "codePoint": 10549,
+    "url": "/arrow-pointing-rightwards-then-curving-downwards/"
+  },
+  {
+    "number": 1165,
+    "emoji": "🔃",
+    "codePoint": 128259,
+    "url": "/clockwise-downwards-and-upwards-open-circle-arrows/"
+  },
+  {
+    "number": 1166,
+    "emoji": "🔄",
+    "codePoint": 128260,
+    "url": "/anticlockwise-downwards-and-upwards-open-circle-arrows/"
+  },
+  {
+    "number": 1167,
+    "emoji": "🔙",
+    "codePoint": 128281,
+    "url": "/back-with-leftwards-arrow-above/"
+  },
+  {
+    "number": 1168,
+    "emoji": "🔚",
+    "codePoint": 128282,
+    "url": "/end-with-leftwards-arrow-above/"
+  },
+  {
+    "number": 1169,
+    "emoji": "🔛",
+    "codePoint": 128283,
+    "url": "/on-with-exclamation-mark-with-left-right-arrow-above/"
+  },
+  {
+    "number": 1170,
+    "emoji": "🔜",
+    "codePoint": 128284,
+    "url": "/soon-with-rightwards-arrow-above/"
+  },
+  {
+    "number": 1171,
+    "emoji": "🔝",
+    "codePoint": 128285,
+    "url": "/top-with-upwards-arrow-above/"
+  },
+  {
+    "number": 1172,
+    "emoji": "⚜",
+    "codePoint": 9884,
+    "url": "/fleur-de-lis/"
+  },
+  {
+    "number": 1173,
+    "emoji": "🔰",
+    "codePoint": 128304,
+    "url": "/japanese-symbol-for-beginner/"
+  },
+  {
+    "number": 1174,
+    "emoji": "⚛",
+    "codePoint": 9883,
+    "url": "/atom-symbol/"
+  },
+  {
+    "number": 1175,
+    "emoji": "🕉",
+    "codePoint": 128329,
+    "url": "/om-symbol/"
+  },
+  {
+    "number": 1176,
+    "emoji": "✡",
+    "codePoint": 10017,
+    "url": "/star-of-david/"
+  },
+  {
+    "number": 1177,
+    "emoji": "☸",
+    "codePoint": 9784,
+    "url": "/wheel-of-dharma/"
+  },
+  {
+    "number": 1178,
+    "emoji": "☯",
+    "codePoint": 9775,
+    "url": "/yin-yang/"
+  },
+  {
+    "number": 1179,
+    "emoji": "✝",
+    "codePoint": 10013,
+    "url": "/latin-cross/"
+  },
+  {
+    "number": 1180,
+    "emoji": "☦",
+    "codePoint": 9766,
+    "url": "/orthodox-cross/"
+  },
+  {
+    "number": 1181,
+    "emoji": "⛩",
+    "codePoint": 9961,
+    "url": "/shinto-shrine/"
+  },
+  {
+    "number": 1182,
+    "emoji": "☪",
+    "codePoint": 9770,
+    "url": "/star-and-crescent/"
+  },
+  {
+    "number": 1183,
+    "emoji": "☮",
+    "codePoint": 9774,
+    "url": "/peace-symbol/"
+  },
+  {
+    "number": 1184,
+    "emoji": "🔮",
+    "codePoint": 128302,
+    "url": "/crystal-ball/"
+  },
+  {
+    "number": 1185,
+    "emoji": "🔯",
+    "codePoint": 128303,
+    "url": "/six-pointed-star-with-middle-dot/"
+  },
+  {
+    "number": 1186,
+    "emoji": "♻️",
+    "codePoint": 9851,
+    "url": "/black-universal-recycling-symbol/"
+  },
+  {
+    "number": 1187,
+    "emoji": "☢",
+    "codePoint": 9762,
+    "url": "/radioactive-sign/"
+  },
+  {
+    "number": 1188,
+    "emoji": "☣",
+    "codePoint": 9763,
+    "url": "/biohazard-sign/"
+  },
+  {
+    "number": 1189,
+    "emoji": "⚡",
+    "codePoint": 9889,
+    "url": "/high-voltage-sign/"
+  },
+  {
+    "number": 1190,
+    "emoji": "⭐",
+    "codePoint": 11088,
+    "url": "/white-medium-star/"
+  },
+  {
+    "number": 1191,
+    "emoji": "⭕",
+    "codePoint": 11093,
+    "url": "/heavy-large-circle/"
+  },
+  {
+    "number": 1192,
+    "emoji": "✅",
+    "codePoint": 9989,
+    "url": "/white-heavy-check-mark/"
+  },
+  {
+    "number": 1193,
+    "emoji": "☑️",
+    "codePoint": 9745,
+    "url": "/ballot-box-with-check/"
+  },
+  {
+    "number": 1194,
+    "emoji": "✔️",
+    "codePoint": 10004,
+    "url": "/heavy-check-mark/"
+  },
+  {
+    "number": 1195,
+    "emoji": "✖️",
+    "codePoint": 10006,
+    "url": "/heavy-multiplication-x/"
+  },
+  {
+    "number": 1196,
+    "emoji": "❌",
+    "codePoint": 10060,
+    "url": "/cross-mark/"
+  },
+  {
+    "number": 1197,
+    "emoji": "❎",
+    "codePoint": 10062,
+    "url": "/negative-squared-cross-mark/"
+  },
+  {
+    "number": 1198,
+    "emoji": "➕",
+    "codePoint": 10133,
+    "url": "/heavy-plus-sign/"
+  },
+  {
+    "number": 1199,
+    "emoji": "➖",
+    "codePoint": 10134,
+    "url": "/heavy-minus-sign/"
+  },
+  {
+    "number": 1200,
+    "emoji": "➗",
+    "codePoint": 10135,
+    "url": "/heavy-division-sign/"
+  },
+  {
+    "number": 1201,
+    "emoji": "➰",
+    "codePoint": 10160,
+    "url": "/curly-loop/"
+  },
+  {
+    "number": 1202,
+    "emoji": "➿",
+    "codePoint": 10175,
+    "url": "/double-curly-loop/"
+  },
+  {
+    "number": 1203,
+    "emoji": "〽",
+    "codePoint": 12349,
+    "url": "/part-alternation-mark/"
+  },
+  {
+    "number": 1204,
+    "emoji": "✳️",
+    "codePoint": 10035,
+    "url": "/eight-spoked-asterisk/"
+  },
+  {
+    "number": 1205,
+    "emoji": "✴️",
+    "codePoint": 10036,
+    "url": "/eight-pointed-black-star/"
+  },
+  {
+    "number": 1206,
+    "emoji": "❇️",
+    "codePoint": 10055,
+    "url": "/sparkle/"
+  },
+  {
+    "number": 1207,
+    "emoji": "‼️",
+    "codePoint": 8252,
+    "url": "/double-exclamation-mark/"
+  },
+  {
+    "number": 1208,
+    "emoji": "⁉️",
+    "codePoint": 8265,
+    "url": "/exclamation-question-mark/"
+  },
+  {
+    "number": 1209,
+    "emoji": "❓",
+    "codePoint": 10067,
+    "url": "/black-question-mark-ornament/"
+  },
+  {
+    "number": 1210,
+    "emoji": "❔",
+    "codePoint": 10068,
+    "url": "/white-question-mark-ornament/"
+  },
+  {
+    "number": 1211,
+    "emoji": "❕",
+    "codePoint": 10069,
+    "url": "/white-exclamation-mark-ornament/"
+  },
+  {
+    "number": 1212,
+    "emoji": "❗",
+    "codePoint": 10071,
+    "url": "/heavy-exclamation-mark-symbol/"
+  },
+  {
+    "number": 1213,
+    "emoji": "〰",
+    "codePoint": 12336,
+    "url": "/wavy-dash/"
+  },
+  {
+    "number": 1214,
+    "emoji": "©️",
+    "codePoint": 169,
+    "url": "/copyright-sign/"
+  },
+  {
+    "number": 1215,
+    "emoji": "®️",
+    "codePoint": 174,
+    "url": "/registered-sign/"
+  },
+  {
+    "number": 1216,
+    "emoji": "™️",
+    "codePoint": 8482,
+    "url": "/trade-mark-sign/"
+  },
+  {
+    "number": 1217,
+    "emoji": "💯",
+    "codePoint": 128175,
+    "url": "/hundred-points-symbol/"
+  },
+  {
+    "number": 1218,
+    "emoji": "🔞",
+    "codePoint": 128286,
+    "url": "/no-one-under-eighteen-symbol/"
+  },
+  {
+    "number": 1219,
+    "emoji": "🔠",
+    "codePoint": 128288,
+    "url": "/input-symbol-for-latin-capital-letters/"
+  },
+  {
+    "number": 1220,
+    "emoji": "🔡",
+    "codePoint": 128289,
+    "url": "/input-symbol-for-latin-small-letters/"
+  },
+  {
+    "number": 1221,
+    "emoji": "🔢",
+    "codePoint": 128290,
+    "url": "/input-symbol-for-numbers/"
+  },
+  {
+    "number": 1222,
+    "emoji": "🔣",
+    "codePoint": 128291,
+    "url": "/input-symbol-for-symbols/"
+  },
+  {
+    "number": 1223,
+    "emoji": "🔤",
+    "codePoint": 128292,
+    "url": "/input-symbol-for-latin-letters/"
+  },
+  {
+    "number": 1224,
+    "emoji": "🅰️",
+    "codePoint": 127344,
+    "url": "/negative-squared-latin-capital-letter-a/"
+  },
+  {
+    "number": 1225,
+    "emoji": "🆎",
+    "codePoint": 127374,
+    "url": "/negative-squared-ab/"
+  },
+  {
+    "number": 1226,
+    "emoji": "🅱️",
+    "codePoint": 127345,
+    "url": "/negative-squared-latin-capital-letter-b/"
+  },
+  {
+    "number": 1227,
+    "emoji": "🆑",
+    "codePoint": 127377,
+    "url": "/squared-cl/"
+  },
+  {
+    "number": 1228,
+    "emoji": "🆒",
+    "codePoint": 127378,
+    "url": "/squared-cool/"
+  },
+  {
+    "number": 1229,
+    "emoji": "🆓",
+    "codePoint": 127379,
+    "url": "/squared-free/"
+  },
+  {
+    "number": 1230,
+    "emoji": "ℹ️",
+    "codePoint": 8505,
+    "url": "/information-source/"
+  },
+  {
+    "number": 1231,
+    "emoji": "🆔",
+    "codePoint": 127380,
+    "url": "/squared-id/"
+  },
+  {
+    "number": 1232,
+    "emoji": "Ⓜ️",
+    "codePoint": 9410,
+    "url": "/circled-latin-capital-letter-m/"
+  },
+  {
+    "number": 1233,
+    "emoji": "🆕",
+    "codePoint": 127381,
+    "url": "/squared-new/"
+  },
+  {
+    "number": 1234,
+    "emoji": "🆖",
+    "codePoint": 127382,
+    "url": "/squared-ng/"
+  },
+  {
+    "number": 1235,
+    "emoji": "🅾️",
+    "codePoint": 127358,
+    "url": "/negative-squared-latin-capital-letter-o/"
+  },
+  {
+    "number": 1236,
+    "emoji": "🆗",
+    "codePoint": 127383,
+    "url": "/squared-ok/"
+  },
+  {
+    "number": 1237,
+    "emoji": "🅿️",
+    "codePoint": 127359,
+    "url": "/negative-squared-latin-capital-letter-p/"
+  },
+  {
+    "number": 1238,
+    "emoji": "🆘",
+    "codePoint": 127384,
+    "url": "/squared-sos/"
+  },
+  {
+    "number": 1239,
+    "emoji": "🆙",
+    "codePoint": 127385,
+    "url": "/squared-up-with-exclamation-mark/"
+  },
+  {
+    "number": 1240,
+    "emoji": "🆚",
+    "codePoint": 127386,
+    "url": "/squared-vs/"
+  },
+  {
+    "number": 1241,
+    "emoji": "🈁",
+    "codePoint": 127489,
+    "url": "/squared-katakana-koko/"
+  },
+  {
+    "number": 1242,
+    "emoji": "🈂",
+    "codePoint": 127490,
+    "url": "/squared-katakana-sa/"
+  },
+  {
+    "number": 1243,
+    "emoji": "🈷",
+    "codePoint": 127543,
+    "url": "/squared-cjk-unified-ideograph-6708/"
+  },
+  {
+    "number": 1244,
+    "emoji": "🈶",
+    "codePoint": 127542,
+    "url": "/squared-cjk-unified-ideograph-6709/"
+  },
+  {
+    "number": 1245,
+    "emoji": "🈯",
+    "codePoint": 127535,
+    "url": "/squared-cjk-unified-ideograph-6307/"
+  },
+  {
+    "number": 1246,
+    "emoji": "🉐",
+    "codePoint": 127568,
+    "url": "/circled-ideograph-advantage/"
+  },
+  {
+    "number": 1247,
+    "emoji": "🈹",
+    "codePoint": 127545,
+    "url": "/squared-cjk-unified-ideograph-5272/"
+  },
+  {
+    "number": 1248,
+    "emoji": "🈚",
+    "codePoint": 127514,
+    "url": "/squared-cjk-unified-ideograph-7121/"
+  },
+  {
+    "number": 1249,
+    "emoji": "🈲",
+    "codePoint": 127538,
+    "url": "/squared-cjk-unified-ideograph-7981/"
+  },
+  {
+    "number": 1250,
+    "emoji": "🉑",
+    "codePoint": 127569,
+    "url": "/circled-ideograph-accept/"
+  },
+  {
+    "number": 1251,
+    "emoji": "🈸",
+    "codePoint": 127544,
+    "url": "/squared-cjk-unified-ideograph-7533/"
+  },
+  {
+    "number": 1252,
+    "emoji": "🈴",
+    "codePoint": 127540,
+    "url": "/squared-cjk-unified-ideograph-5408/"
+  },
+  {
+    "number": 1253,
+    "emoji": "🈳",
+    "codePoint": 127539,
+    "url": "/squared-cjk-unified-ideograph-7a7a/"
+  },
+  {
+    "number": 1254,
+    "emoji": "㊗",
+    "codePoint": 12951,
+    "url": "/circled-ideograph-congratulation/"
+  },
+  {
+    "number": 1255,
+    "emoji": "㊙",
+    "codePoint": 12953,
+    "url": "/circled-ideograph-secret/"
+  },
+  {
+    "number": 1256,
+    "emoji": "🈺",
+    "codePoint": 127546,
+    "url": "/squared-cjk-unified-ideograph-55b6/"
+  },
+  {
+    "number": 1257,
+    "emoji": "🈵",
+    "codePoint": 127541,
+    "url": "/squared-cjk-unified-ideograph-6e80/"
+  },
+  {
+    "number": 1258,
+    "emoji": "▪️",
+    "codePoint": 9642,
+    "url": "/black-small-square/"
+  },
+  {
+    "number": 1259,
+    "emoji": "▫️",
+    "codePoint": 9643,
+    "url": "/white-small-square/"
+  },
+  {
+    "number": 1260,
+    "emoji": "◻️",
+    "codePoint": 9723,
+    "url": "/white-medium-square/"
+  },
+  {
+    "number": 1261,
+    "emoji": "◼️",
+    "codePoint": 9724,
+    "url": "/black-medium-square/"
+  },
+  {
+    "number": 1262,
+    "emoji": "◽",
+    "codePoint": 9725,
+    "url": "/white-medium-small-square/"
+  },
+  {
+    "number": 1263,
+    "emoji": "◾",
+    "codePoint": 9726,
+    "url": "/black-medium-small-square/"
+  },
+  {
+    "number": 1264,
+    "emoji": "⬛",
+    "codePoint": 11035,
+    "url": "/black-large-square/"
+  },
+  {
+    "number": 1265,
+    "emoji": "⬜",
+    "codePoint": 11036,
+    "url": "/white-large-square/"
+  },
+  {
+    "number": 1266,
+    "emoji": "🔶",
+    "codePoint": 128310,
+    "url": "/large-orange-diamond/"
+  },
+  {
+    "number": 1267,
+    "emoji": "🔷",
+    "codePoint": 128311,
+    "url": "/large-blue-diamond/"
+  },
+  {
+    "number": 1268,
+    "emoji": "🔸",
+    "codePoint": 128312,
+    "url": "/small-orange-diamond/"
+  },
+  {
+    "number": 1269,
+    "emoji": "🔹",
+    "codePoint": 128313,
+    "url": "/small-blue-diamond/"
+  },
+  {
+    "number": 1270,
+    "emoji": "🔺",
+    "codePoint": 128314,
+    "url": "/up-pointing-red-triangle/"
+  },
+  {
+    "number": 1271,
+    "emoji": "🔻",
+    "codePoint": 128315,
+    "url": "/down-pointing-red-triangle/"
+  },
+  {
+    "number": 1272,
+    "emoji": "💠",
+    "codePoint": 128160,
+    "url": "/diamond-shape-with-a-dot-inside/"
+  },
+  {
+    "number": 1273,
+    "emoji": "🔘",
+    "codePoint": 128280,
+    "url": "/radio-button/"
+  },
+  {
+    "number": 1274,
+    "emoji": "🔲",
+    "codePoint": 128306,
+    "url": "/black-square-button/"
+  },
+  {
+    "number": 1275,
+    "emoji": "🔳",
+    "codePoint": 128307,
+    "url": "/white-square-button/"
+  },
+  {
+    "number": 1276,
+    "emoji": "⚪",
+    "codePoint": 9898,
+    "url": "/medium-white-circle/"
+  },
+  {
+    "number": 1277,
+    "emoji": "⚫",
+    "codePoint": 9899,
+    "url": "/medium-black-circle/"
+  },
+  {
+    "number": 1278,
+    "emoji": "🔴",
+    "codePoint": 128308,
+    "url": "/large-red-circle/"
+  },
+  {
+    "number": 1279,
+    "emoji": "🔵",
+    "codePoint": 128309,
+    "url": "/large-blue-circle/"
+  },
+  {
+    "number": 1280,
+    "emoji": "👦🏻",
+    "codePoint": 128102,
+    "url": "/boy-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1281,
+    "emoji": "👦🏼",
+    "codePoint": 128102,
+    "url": "/boy-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1282,
+    "emoji": "👦🏽",
+    "codePoint": 128102,
+    "url": "/boy-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1283,
+    "emoji": "👦🏾",
+    "codePoint": 128102,
+    "url": "/boy-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1284,
+    "emoji": "👦🏿",
+    "codePoint": 128102,
+    "url": "/boy-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1285,
+    "emoji": "👧🏻",
+    "codePoint": 128103,
+    "url": "/girl-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1286,
+    "emoji": "👧🏼",
+    "codePoint": 128103,
+    "url": "/girl-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1287,
+    "emoji": "👧🏽",
+    "codePoint": 128103,
+    "url": "/girl-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1288,
+    "emoji": "👧🏾",
+    "codePoint": 128103,
+    "url": "/girl-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1289,
+    "emoji": "👧🏿",
+    "codePoint": 128103,
+    "url": "/girl-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1290,
+    "emoji": "👨🏻",
+    "codePoint": 128104,
+    "url": "/man-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1291,
+    "emoji": "👨🏼",
+    "codePoint": 128104,
+    "url": "/man-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1292,
+    "emoji": "👨🏽",
+    "codePoint": 128104,
+    "url": "/man-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1293,
+    "emoji": "👨🏾",
+    "codePoint": 128104,
+    "url": "/man-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1294,
+    "emoji": "👨🏿",
+    "codePoint": 128104,
+    "url": "/man-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1295,
+    "emoji": "👩🏻",
+    "codePoint": 128105,
+    "url": "/woman-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1296,
+    "emoji": "👩🏼",
+    "codePoint": 128105,
+    "url": "/woman-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1297,
+    "emoji": "👩🏽",
+    "codePoint": 128105,
+    "url": "/woman-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1298,
+    "emoji": "👩🏾",
+    "codePoint": 128105,
+    "url": "/woman-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1299,
+    "emoji": "👩🏿",
+    "codePoint": 128105,
+    "url": "/woman-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1300,
+    "emoji": "👴🏻",
+    "codePoint": 128116,
+    "url": "/older-man-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1301,
+    "emoji": "👴🏼",
+    "codePoint": 128116,
+    "url": "/older-man-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1302,
+    "emoji": "👴🏽",
+    "codePoint": 128116,
+    "url": "/older-man-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1303,
+    "emoji": "👴🏾",
+    "codePoint": 128116,
+    "url": "/older-man-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1304,
+    "emoji": "👴🏿",
+    "codePoint": 128116,
+    "url": "/older-man-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1305,
+    "emoji": "👵🏻",
+    "codePoint": 128117,
+    "url": "/older-woman-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1306,
+    "emoji": "👵🏼",
+    "codePoint": 128117,
+    "url": "/older-woman-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1307,
+    "emoji": "👵🏽",
+    "codePoint": 128117,
+    "url": "/older-woman-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1308,
+    "emoji": "👵🏾",
+    "codePoint": 128117,
+    "url": "/older-woman-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1309,
+    "emoji": "👵🏿",
+    "codePoint": 128117,
+    "url": "/older-woman-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1310,
+    "emoji": "👶🏻",
+    "codePoint": 128118,
+    "url": "/baby-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1311,
+    "emoji": "👶🏼",
+    "codePoint": 128118,
+    "url": "/baby-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1312,
+    "emoji": "👶🏽",
+    "codePoint": 128118,
+    "url": "/baby-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1313,
+    "emoji": "👶🏾",
+    "codePoint": 128118,
+    "url": "/baby-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1314,
+    "emoji": "👶🏿",
+    "codePoint": 128118,
+    "url": "/baby-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1315,
+    "emoji": "👱🏻",
+    "codePoint": 128113,
+    "url": "/person-with-blond-hair-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1316,
+    "emoji": "👱🏼",
+    "codePoint": 128113,
+    "url": "/person-with-blond-hair-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1317,
+    "emoji": "👱🏽",
+    "codePoint": 128113,
+    "url": "/person-with-blond-hair-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1318,
+    "emoji": "👱🏾",
+    "codePoint": 128113,
+    "url": "/person-with-blond-hair-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1319,
+    "emoji": "👱🏿",
+    "codePoint": 128113,
+    "url": "/person-with-blond-hair-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1320,
+    "emoji": "👮🏻",
+    "codePoint": 128110,
+    "url": "/police-officer-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1321,
+    "emoji": "👮🏼",
+    "codePoint": 128110,
+    "url": "/police-officer-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1322,
+    "emoji": "👮🏽",
+    "codePoint": 128110,
+    "url": "/police-officer-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1323,
+    "emoji": "👮🏾",
+    "codePoint": 128110,
+    "url": "/police-officer-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1324,
+    "emoji": "👮🏿",
+    "codePoint": 128110,
+    "url": "/police-officer-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1325,
+    "emoji": "👲🏻",
+    "codePoint": 128114,
+    "url": "/man-with-gua-pi-mao-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1326,
+    "emoji": "👲🏼",
+    "codePoint": 128114,
+    "url": "/man-with-gua-pi-mao-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1327,
+    "emoji": "👲🏽",
+    "codePoint": 128114,
+    "url": "/man-with-gua-pi-mao-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1328,
+    "emoji": "👲🏾",
+    "codePoint": 128114,
+    "url": "/man-with-gua-pi-mao-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1329,
+    "emoji": "👲🏿",
+    "codePoint": 128114,
+    "url": "/man-with-gua-pi-mao-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1330,
+    "emoji": "👳🏻",
+    "codePoint": 128115,
+    "url": "/man-with-turban-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1331,
+    "emoji": "👳🏼",
+    "codePoint": 128115,
+    "url": "/man-with-turban-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1332,
+    "emoji": "👳🏽",
+    "codePoint": 128115,
+    "url": "/man-with-turban-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1333,
+    "emoji": "👳🏾",
+    "codePoint": 128115,
+    "url": "/man-with-turban-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1334,
+    "emoji": "👳🏿",
+    "codePoint": 128115,
+    "url": "/man-with-turban-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1335,
+    "emoji": "👷🏻",
+    "codePoint": 128119,
+    "url": "/construction-worker-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1336,
+    "emoji": "👷🏼",
+    "codePoint": 128119,
+    "url": "/construction-worker-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1337,
+    "emoji": "👷🏽",
+    "codePoint": 128119,
+    "url": "/construction-worker-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1338,
+    "emoji": "👷🏾",
+    "codePoint": 128119,
+    "url": "/construction-worker-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1339,
+    "emoji": "👷🏿",
+    "codePoint": 128119,
+    "url": "/construction-worker-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1340,
+    "emoji": "👸🏻",
+    "codePoint": 128120,
+    "url": "/princess-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1341,
+    "emoji": "👸🏼",
+    "codePoint": 128120,
+    "url": "/princess-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1342,
+    "emoji": "👸🏽",
+    "codePoint": 128120,
+    "url": "/princess-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1343,
+    "emoji": "👸🏾",
+    "codePoint": 128120,
+    "url": "/princess-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1344,
+    "emoji": "👸🏿",
+    "codePoint": 128120,
+    "url": "/princess-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1345,
+    "emoji": "💂🏻",
+    "codePoint": 128130,
+    "url": "/guardsman-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1346,
+    "emoji": "💂🏼",
+    "codePoint": 128130,
+    "url": "/guardsman-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1347,
+    "emoji": "💂🏽",
+    "codePoint": 128130,
+    "url": "/guardsman-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1348,
+    "emoji": "💂🏾",
+    "codePoint": 128130,
+    "url": "/guardsman-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1349,
+    "emoji": "💂🏿",
+    "codePoint": 128130,
+    "url": "/guardsman-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1350,
+    "emoji": "🎅🏻",
+    "codePoint": 127877,
+    "url": "/father-christmas-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1351,
+    "emoji": "🎅🏼",
+    "codePoint": 127877,
+    "url": "/father-christmas-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1352,
+    "emoji": "🎅🏽",
+    "codePoint": 127877,
+    "url": "/father-christmas-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1353,
+    "emoji": "🎅🏾",
+    "codePoint": 127877,
+    "url": "/father-christmas-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1354,
+    "emoji": "🎅🏿",
+    "codePoint": 127877,
+    "url": "/father-christmas-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1355,
+    "emoji": "👼🏻",
+    "codePoint": 128124,
+    "url": "/baby-angel-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1356,
+    "emoji": "👼🏼",
+    "codePoint": 128124,
+    "url": "/baby-angel-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1357,
+    "emoji": "👼🏽",
+    "codePoint": 128124,
+    "url": "/baby-angel-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1358,
+    "emoji": "👼🏾",
+    "codePoint": 128124,
+    "url": "/baby-angel-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1359,
+    "emoji": "👼🏿",
+    "codePoint": 128124,
+    "url": "/baby-angel-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1360,
+    "emoji": "💆🏻",
+    "codePoint": 128134,
+    "url": "/face-massage-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1361,
+    "emoji": "💆🏼",
+    "codePoint": 128134,
+    "url": "/face-massage-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1362,
+    "emoji": "💆🏽",
+    "codePoint": 128134,
+    "url": "/face-massage-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1363,
+    "emoji": "💆🏾",
+    "codePoint": 128134,
+    "url": "/face-massage-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1364,
+    "emoji": "💆🏿",
+    "codePoint": 128134,
+    "url": "/face-massage-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1365,
+    "emoji": "💇🏻",
+    "codePoint": 128135,
+    "url": "/haircut-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1366,
+    "emoji": "💇🏼",
+    "codePoint": 128135,
+    "url": "/haircut-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1367,
+    "emoji": "💇🏽",
+    "codePoint": 128135,
+    "url": "/haircut-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1368,
+    "emoji": "💇🏾",
+    "codePoint": 128135,
+    "url": "/haircut-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1369,
+    "emoji": "💇🏿",
+    "codePoint": 128135,
+    "url": "/haircut-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1370,
+    "emoji": "👰🏻",
+    "codePoint": 128112,
+    "url": "/bride-with-veil-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1371,
+    "emoji": "👰🏼",
+    "codePoint": 128112,
+    "url": "/bride-with-veil-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1372,
+    "emoji": "👰🏽",
+    "codePoint": 128112,
+    "url": "/bride-with-veil-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1373,
+    "emoji": "👰🏾",
+    "codePoint": 128112,
+    "url": "/bride-with-veil-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1374,
+    "emoji": "👰🏿",
+    "codePoint": 128112,
+    "url": "/bride-with-veil-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1375,
+    "emoji": "🙍🏻",
+    "codePoint": 128589,
+    "url": "/person-frowning-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1376,
+    "emoji": "🙍🏼",
+    "codePoint": 128589,
+    "url": "/person-frowning-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1377,
+    "emoji": "🙍🏽",
+    "codePoint": 128589,
+    "url": "/person-frowning-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1378,
+    "emoji": "🙍🏾",
+    "codePoint": 128589,
+    "url": "/person-frowning-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1379,
+    "emoji": "🙍🏿",
+    "codePoint": 128589,
+    "url": "/person-frowning-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1380,
+    "emoji": "🙎🏻",
+    "codePoint": 128590,
+    "url": "/person-with-pouting-face-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1381,
+    "emoji": "🙎🏼",
+    "codePoint": 128590,
+    "url": "/person-with-pouting-face-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1382,
+    "emoji": "🙎🏽",
+    "codePoint": 128590,
+    "url": "/person-with-pouting-face-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1383,
+    "emoji": "🙎🏾",
+    "codePoint": 128590,
+    "url": "/person-with-pouting-face-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1384,
+    "emoji": "🙎🏿",
+    "codePoint": 128590,
+    "url": "/person-with-pouting-face-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1385,
+    "emoji": "🙅🏻",
+    "codePoint": 128581,
+    "url": "/face-with-no-good-gesture-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1386,
+    "emoji": "🙅🏼",
+    "codePoint": 128581,
+    "url": "/face-with-no-good-gesture-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1387,
+    "emoji": "🙅🏽",
+    "codePoint": 128581,
+    "url": "/face-with-no-good-gesture-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1388,
+    "emoji": "🙅🏾",
+    "codePoint": 128581,
+    "url": "/face-with-no-good-gesture-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1389,
+    "emoji": "🙅🏿",
+    "codePoint": 128581,
+    "url": "/face-with-no-good-gesture-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1390,
+    "emoji": "🙆🏻",
+    "codePoint": 128582,
+    "url": "/face-with-ok-gesture-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1391,
+    "emoji": "🙆🏼",
+    "codePoint": 128582,
+    "url": "/face-with-ok-gesture-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1392,
+    "emoji": "🙆🏽",
+    "codePoint": 128582,
+    "url": "/face-with-ok-gesture-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1393,
+    "emoji": "🙆🏾",
+    "codePoint": 128582,
+    "url": "/face-with-ok-gesture-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1394,
+    "emoji": "🙆🏿",
+    "codePoint": 128582,
+    "url": "/face-with-ok-gesture-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1395,
+    "emoji": "💁🏻",
+    "codePoint": 128129,
+    "url": "/information-desk-person-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1396,
+    "emoji": "💁🏼",
+    "codePoint": 128129,
+    "url": "/information-desk-person-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1397,
+    "emoji": "💁🏽",
+    "codePoint": 128129,
+    "url": "/information-desk-person-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1398,
+    "emoji": "💁🏾",
+    "codePoint": 128129,
+    "url": "/information-desk-person-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1399,
+    "emoji": "💁🏿",
+    "codePoint": 128129,
+    "url": "/information-desk-person-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1400,
+    "emoji": "🙋🏻",
+    "codePoint": 128587,
+    "url": "/happy-person-raising-one-hand-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1401,
+    "emoji": "🙋🏼",
+    "codePoint": 128587,
+    "url": "/happy-person-raising-one-hand-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1402,
+    "emoji": "🙋🏽",
+    "codePoint": 128587,
+    "url": "/happy-person-raising-one-hand-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1403,
+    "emoji": "🙋🏾",
+    "codePoint": 128587,
+    "url": "/happy-person-raising-one-hand-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1404,
+    "emoji": "🙋🏿",
+    "codePoint": 128587,
+    "url": "/happy-person-raising-one-hand-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1405,
+    "emoji": "🙇🏻",
+    "codePoint": 128583,
+    "url": "/person-bowing-deeply-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1406,
+    "emoji": "🙇🏼",
+    "codePoint": 128583,
+    "url": "/person-bowing-deeply-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1407,
+    "emoji": "🙇🏽",
+    "codePoint": 128583,
+    "url": "/person-bowing-deeply-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1408,
+    "emoji": "🙇🏾",
+    "codePoint": 128583,
+    "url": "/person-bowing-deeply-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1409,
+    "emoji": "🙇🏿",
+    "codePoint": 128583,
+    "url": "/person-bowing-deeply-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1410,
+    "emoji": "🙌🏻",
+    "codePoint": 128588,
+    "url": "/person-raising-both-hands-in-celebration-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1411,
+    "emoji": "🙌🏼",
+    "codePoint": 128588,
+    "url": "/person-raising-both-hands-in-celebration-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1412,
+    "emoji": "🙌🏽",
+    "codePoint": 128588,
+    "url": "/person-raising-both-hands-in-celebration-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1413,
+    "emoji": "🙌🏾",
+    "codePoint": 128588,
+    "url": "/person-raising-both-hands-in-celebration-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1414,
+    "emoji": "🙌🏿",
+    "codePoint": 128588,
+    "url": "/person-raising-both-hands-in-celebration-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1415,
+    "emoji": "🙏🏻",
+    "codePoint": 128591,
+    "url": "/person-with-folded-hands-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1416,
+    "emoji": "🙏🏼",
+    "codePoint": 128591,
+    "url": "/person-with-folded-hands-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1417,
+    "emoji": "🙏🏽",
+    "codePoint": 128591,
+    "url": "/person-with-folded-hands-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1418,
+    "emoji": "🙏🏾",
+    "codePoint": 128591,
+    "url": "/person-with-folded-hands-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1419,
+    "emoji": "🙏🏿",
+    "codePoint": 128591,
+    "url": "/person-with-folded-hands-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1420,
+    "emoji": "🚶🏻",
+    "codePoint": 128694,
+    "url": "/pedestrian-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1421,
+    "emoji": "🚶🏼",
+    "codePoint": 128694,
+    "url": "/pedestrian-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1422,
+    "emoji": "🚶🏽",
+    "codePoint": 128694,
+    "url": "/pedestrian-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1423,
+    "emoji": "🚶🏾",
+    "codePoint": 128694,
+    "url": "/pedestrian-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1424,
+    "emoji": "🚶🏿",
+    "codePoint": 128694,
+    "url": "/pedestrian-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1425,
+    "emoji": "🏃🏻",
+    "codePoint": 127939,
+    "url": "/runner-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1426,
+    "emoji": "🏃🏼",
+    "codePoint": 127939,
+    "url": "/runner-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1427,
+    "emoji": "🏃🏽",
+    "codePoint": 127939,
+    "url": "/runner-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1428,
+    "emoji": "🏃🏾",
+    "codePoint": 127939,
+    "url": "/runner-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1429,
+    "emoji": "🏃🏿",
+    "codePoint": 127939,
+    "url": "/runner-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1430,
+    "emoji": "💃🏻",
+    "codePoint": 128131,
+    "url": "/dancer-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1431,
+    "emoji": "💃🏼",
+    "codePoint": 128131,
+    "url": "/dancer-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1432,
+    "emoji": "💃🏽",
+    "codePoint": 128131,
+    "url": "/dancer-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1433,
+    "emoji": "💃🏾",
+    "codePoint": 128131,
+    "url": "/dancer-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1434,
+    "emoji": "💃🏿",
+    "codePoint": 128131,
+    "url": "/dancer-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1435,
+    "emoji": "💪🏻",
+    "codePoint": 128170,
+    "url": "/flexed-biceps-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1436,
+    "emoji": "💪🏼",
+    "codePoint": 128170,
+    "url": "/flexed-biceps-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1437,
+    "emoji": "💪🏽",
+    "codePoint": 128170,
+    "url": "/flexed-biceps-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1438,
+    "emoji": "💪🏾",
+    "codePoint": 128170,
+    "url": "/flexed-biceps-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1439,
+    "emoji": "💪🏿",
+    "codePoint": 128170,
+    "url": "/flexed-biceps-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1440,
+    "emoji": "👈🏻",
+    "codePoint": 128072,
+    "url": "/white-left-pointing-backhand-index-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1441,
+    "emoji": "👈🏼",
+    "codePoint": 128072,
+    "url": "/white-left-pointing-backhand-index-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1442,
+    "emoji": "👈🏽",
+    "codePoint": 128072,
+    "url": "/white-left-pointing-backhand-index-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1443,
+    "emoji": "👈🏾",
+    "codePoint": 128072,
+    "url": "/white-left-pointing-backhand-index-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1444,
+    "emoji": "👈🏿",
+    "codePoint": 128072,
+    "url": "/white-left-pointing-backhand-index-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1445,
+    "emoji": "👉🏻",
+    "codePoint": 128073,
+    "url": "/white-right-pointing-backhand-index-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1446,
+    "emoji": "👉🏼",
+    "codePoint": 128073,
+    "url": "/white-right-pointing-backhand-index-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1447,
+    "emoji": "👉🏽",
+    "codePoint": 128073,
+    "url": "/white-right-pointing-backhand-index-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1448,
+    "emoji": "👉🏾",
+    "codePoint": 128073,
+    "url": "/white-right-pointing-backhand-index-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1449,
+    "emoji": "👉🏿",
+    "codePoint": 128073,
+    "url": "/white-right-pointing-backhand-index-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1450,
+    "emoji": "☝🏻",
+    "codePoint": 9757,
+    "url": "/white-up-pointing-index-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1451,
+    "emoji": "☝🏼",
+    "codePoint": 9757,
+    "url": "/white-up-pointing-index-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1452,
+    "emoji": "☝🏽",
+    "codePoint": 9757,
+    "url": "/white-up-pointing-index-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1453,
+    "emoji": "☝🏾",
+    "codePoint": 9757,
+    "url": "/white-up-pointing-index-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1454,
+    "emoji": "☝🏿",
+    "codePoint": 9757,
+    "url": "/white-up-pointing-index-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1455,
+    "emoji": "👆🏻",
+    "codePoint": 128070,
+    "url": "/white-up-pointing-backhand-index-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1456,
+    "emoji": "👆🏼",
+    "codePoint": 128070,
+    "url": "/white-up-pointing-backhand-index-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1457,
+    "emoji": "👆🏽",
+    "codePoint": 128070,
+    "url": "/white-up-pointing-backhand-index-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1458,
+    "emoji": "👆🏾",
+    "codePoint": 128070,
+    "url": "/white-up-pointing-backhand-index-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1459,
+    "emoji": "👆🏿",
+    "codePoint": 128070,
+    "url": "/white-up-pointing-backhand-index-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1460,
+    "emoji": "🖕🏻",
+    "codePoint": 128405,
+    "url": "/reversed-hand-with-middle-finger-extended-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1461,
+    "emoji": "🖕🏼",
+    "codePoint": 128405,
+    "url": "/reversed-hand-with-middle-finger-extended-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1462,
+    "emoji": "🖕🏽",
+    "codePoint": 128405,
+    "url": "/reversed-hand-with-middle-finger-extended-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1463,
+    "emoji": "🖕🏾",
+    "codePoint": 128405,
+    "url": "/reversed-hand-with-middle-finger-extended-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1464,
+    "emoji": "🖕🏿",
+    "codePoint": 128405,
+    "url": "/reversed-hand-with-middle-finger-extended-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1465,
+    "emoji": "👇🏻",
+    "codePoint": 128071,
+    "url": "/white-down-pointing-backhand-index-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1466,
+    "emoji": "👇🏼",
+    "codePoint": 128071,
+    "url": "/white-down-pointing-backhand-index-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1467,
+    "emoji": "👇🏽",
+    "codePoint": 128071,
+    "url": "/white-down-pointing-backhand-index-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1468,
+    "emoji": "👇🏾",
+    "codePoint": 128071,
+    "url": "/white-down-pointing-backhand-index-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1469,
+    "emoji": "👇🏿",
+    "codePoint": 128071,
+    "url": "/white-down-pointing-backhand-index-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1470,
+    "emoji": "✌🏻",
+    "codePoint": 9996,
+    "url": "/victory-hand-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1471,
+    "emoji": "✌🏼",
+    "codePoint": 9996,
+    "url": "/victory-hand-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1472,
+    "emoji": "✌🏽",
+    "codePoint": 9996,
+    "url": "/victory-hand-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1473,
+    "emoji": "✌🏾",
+    "codePoint": 9996,
+    "url": "/victory-hand-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1474,
+    "emoji": "✌🏿",
+    "codePoint": 9996,
+    "url": "/victory-hand-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1475,
+    "emoji": "🖖🏻",
+    "codePoint": 128406,
+    "url": "/raised-hand-with-part-between-middle-and-ring-fingers-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1476,
+    "emoji": "🖖🏼",
+    "codePoint": 128406,
+    "url": "/raised-hand-with-part-between-middle-and-ring-fingers-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1477,
+    "emoji": "🖖🏽",
+    "codePoint": 128406,
+    "url": "/raised-hand-with-part-between-middle-and-ring-fingers-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1478,
+    "emoji": "🖖🏾",
+    "codePoint": 128406,
+    "url": "/raised-hand-with-part-between-middle-and-ring-fingers-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1479,
+    "emoji": "🖖🏿",
+    "codePoint": 128406,
+    "url": "/raised-hand-with-part-between-middle-and-ring-fingers-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1480,
+    "emoji": "🤘🏻",
+    "codePoint": 129304,
+    "url": "/sign-of-the-horns-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1481,
+    "emoji": "🤘🏼",
+    "codePoint": 129304,
+    "url": "/sign-of-the-horns-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1482,
+    "emoji": "🤘🏽",
+    "codePoint": 129304,
+    "url": "/sign-of-the-horns-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1483,
+    "emoji": "🤘🏾",
+    "codePoint": 129304,
+    "url": "/sign-of-the-horns-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1484,
+    "emoji": "🤘🏿",
+    "codePoint": 129304,
+    "url": "/sign-of-the-horns-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1485,
+    "emoji": "🖐🏻",
+    "codePoint": 128400,
+    "url": "/raised-hand-with-fingers-splayed-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1486,
+    "emoji": "🖐🏼",
+    "codePoint": 128400,
+    "url": "/raised-hand-with-fingers-splayed-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1487,
+    "emoji": "🖐🏽",
+    "codePoint": 128400,
+    "url": "/raised-hand-with-fingers-splayed-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1488,
+    "emoji": "🖐🏾",
+    "codePoint": 128400,
+    "url": "/raised-hand-with-fingers-splayed-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1489,
+    "emoji": "🖐🏿",
+    "codePoint": 128400,
+    "url": "/raised-hand-with-fingers-splayed-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1490,
+    "emoji": "✊🏻",
+    "codePoint": 9994,
+    "url": "/raised-fist-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1491,
+    "emoji": "✊🏼",
+    "codePoint": 9994,
+    "url": "/raised-fist-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1492,
+    "emoji": "✊🏽",
+    "codePoint": 9994,
+    "url": "/raised-fist-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1493,
+    "emoji": "✊🏾",
+    "codePoint": 9994,
+    "url": "/raised-fist-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1494,
+    "emoji": "✊🏿",
+    "codePoint": 9994,
+    "url": "/raised-fist-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1495,
+    "emoji": "✋🏻",
+    "codePoint": 9995,
+    "url": "/raised-hand-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1496,
+    "emoji": "✋🏼",
+    "codePoint": 9995,
+    "url": "/raised-hand-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1497,
+    "emoji": "✋🏽",
+    "codePoint": 9995,
+    "url": "/raised-hand-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1498,
+    "emoji": "✋🏾",
+    "codePoint": 9995,
+    "url": "/raised-hand-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1499,
+    "emoji": "✋🏿",
+    "codePoint": 9995,
+    "url": "/raised-hand-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1500,
+    "emoji": "👊🏻",
+    "codePoint": 128074,
+    "url": "/fisted-hand-sign-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1501,
+    "emoji": "👊🏼",
+    "codePoint": 128074,
+    "url": "/fisted-hand-sign-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1502,
+    "emoji": "👊🏽",
+    "codePoint": 128074,
+    "url": "/fisted-hand-sign-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1503,
+    "emoji": "👊🏾",
+    "codePoint": 128074,
+    "url": "/fisted-hand-sign-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1504,
+    "emoji": "👊🏿",
+    "codePoint": 128074,
+    "url": "/fisted-hand-sign-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1505,
+    "emoji": "👌🏻",
+    "codePoint": 128076,
+    "url": "/ok-hand-sign-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1506,
+    "emoji": "👌🏼",
+    "codePoint": 128076,
+    "url": "/ok-hand-sign-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1507,
+    "emoji": "👌🏽",
+    "codePoint": 128076,
+    "url": "/ok-hand-sign-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1508,
+    "emoji": "👌🏾",
+    "codePoint": 128076,
+    "url": "/ok-hand-sign-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1509,
+    "emoji": "👌🏿",
+    "codePoint": 128076,
+    "url": "/ok-hand-sign-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1510,
+    "emoji": "👍🏻",
+    "codePoint": 128077,
+    "url": "/thumbs-up-sign-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1511,
+    "emoji": "👍🏼",
+    "codePoint": 128077,
+    "url": "/thumbs-up-sign-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1512,
+    "emoji": "👍🏽",
+    "codePoint": 128077,
+    "url": "/thumbs-up-sign-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1513,
+    "emoji": "👍🏾",
+    "codePoint": 128077,
+    "url": "/thumbs-up-sign-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1514,
+    "emoji": "👍🏿",
+    "codePoint": 128077,
+    "url": "/thumbs-up-sign-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1515,
+    "emoji": "👎🏻",
+    "codePoint": 128078,
+    "url": "/thumbs-down-sign-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1516,
+    "emoji": "👎🏼",
+    "codePoint": 128078,
+    "url": "/thumbs-down-sign-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1517,
+    "emoji": "👎🏽",
+    "codePoint": 128078,
+    "url": "/thumbs-down-sign-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1518,
+    "emoji": "👎🏾",
+    "codePoint": 128078,
+    "url": "/thumbs-down-sign-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1519,
+    "emoji": "👎🏿",
+    "codePoint": 128078,
+    "url": "/thumbs-down-sign-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1520,
+    "emoji": "👋🏻",
+    "codePoint": 128075,
+    "url": "/waving-hand-sign-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1521,
+    "emoji": "👋🏼",
+    "codePoint": 128075,
+    "url": "/waving-hand-sign-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1522,
+    "emoji": "👋🏽",
+    "codePoint": 128075,
+    "url": "/waving-hand-sign-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1523,
+    "emoji": "👋🏾",
+    "codePoint": 128075,
+    "url": "/waving-hand-sign-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1524,
+    "emoji": "👋🏿",
+    "codePoint": 128075,
+    "url": "/waving-hand-sign-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1525,
+    "emoji": "👏🏻",
+    "codePoint": 128079,
+    "url": "/clapping-hands-sign-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1526,
+    "emoji": "👏🏼",
+    "codePoint": 128079,
+    "url": "/clapping-hands-sign-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1527,
+    "emoji": "👏🏽",
+    "codePoint": 128079,
+    "url": "/clapping-hands-sign-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1528,
+    "emoji": "👏🏾",
+    "codePoint": 128079,
+    "url": "/clapping-hands-sign-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1529,
+    "emoji": "👏🏿",
+    "codePoint": 128079,
+    "url": "/clapping-hands-sign-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1530,
+    "emoji": "👐🏻",
+    "codePoint": 128080,
+    "url": "/open-hands-sign-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1531,
+    "emoji": "👐🏼",
+    "codePoint": 128080,
+    "url": "/open-hands-sign-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1532,
+    "emoji": "👐🏽",
+    "codePoint": 128080,
+    "url": "/open-hands-sign-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1533,
+    "emoji": "👐🏾",
+    "codePoint": 128080,
+    "url": "/open-hands-sign-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1534,
+    "emoji": "👐🏿",
+    "codePoint": 128080,
+    "url": "/open-hands-sign-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1535,
+    "emoji": "✍🏻",
+    "codePoint": 9997,
+    "url": "/writing-hand-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1536,
+    "emoji": "✍🏼",
+    "codePoint": 9997,
+    "url": "/writing-hand-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1537,
+    "emoji": "✍🏽",
+    "codePoint": 9997,
+    "url": "/writing-hand-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1538,
+    "emoji": "✍🏾",
+    "codePoint": 9997,
+    "url": "/writing-hand-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1539,
+    "emoji": "✍🏿",
+    "codePoint": 9997,
+    "url": "/writing-hand-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1540,
+    "emoji": "💅🏻",
+    "codePoint": 128133,
+    "url": "/nail-polish-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1541,
+    "emoji": "💅🏼",
+    "codePoint": 128133,
+    "url": "/nail-polish-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1542,
+    "emoji": "💅🏽",
+    "codePoint": 128133,
+    "url": "/nail-polish-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1543,
+    "emoji": "💅🏾",
+    "codePoint": 128133,
+    "url": "/nail-polish-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1544,
+    "emoji": "💅🏿",
+    "codePoint": 128133,
+    "url": "/nail-polish-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1545,
+    "emoji": "👂🏻",
+    "codePoint": 128066,
+    "url": "/ear-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1546,
+    "emoji": "👂🏼",
+    "codePoint": 128066,
+    "url": "/ear-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1547,
+    "emoji": "👂🏽",
+    "codePoint": 128066,
+    "url": "/ear-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1548,
+    "emoji": "👂🏾",
+    "codePoint": 128066,
+    "url": "/ear-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1549,
+    "emoji": "👂🏿",
+    "codePoint": 128066,
+    "url": "/ear-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1550,
+    "emoji": "👃🏻",
+    "codePoint": 128067,
+    "url": "/nose-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1551,
+    "emoji": "👃🏼",
+    "codePoint": 128067,
+    "url": "/nose-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1552,
+    "emoji": "👃🏽",
+    "codePoint": 128067,
+    "url": "/nose-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1553,
+    "emoji": "👃🏾",
+    "codePoint": 128067,
+    "url": "/nose-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1554,
+    "emoji": "👃🏿",
+    "codePoint": 128067,
+    "url": "/nose-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1555,
+    "emoji": "🚣🏻",
+    "codePoint": 128675,
+    "url": "/rowboat-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1556,
+    "emoji": "🚣🏼",
+    "codePoint": 128675,
+    "url": "/rowboat-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1557,
+    "emoji": "🚣🏽",
+    "codePoint": 128675,
+    "url": "/rowboat-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1558,
+    "emoji": "🚣🏾",
+    "codePoint": 128675,
+    "url": "/rowboat-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1559,
+    "emoji": "🚣🏿",
+    "codePoint": 128675,
+    "url": "/rowboat-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1560,
+    "emoji": "🛀🏻",
+    "codePoint": 128704,
+    "url": "/bath-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1561,
+    "emoji": "🛀🏼",
+    "codePoint": 128704,
+    "url": "/bath-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1562,
+    "emoji": "🛀🏽",
+    "codePoint": 128704,
+    "url": "/bath-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1563,
+    "emoji": "🛀🏾",
+    "codePoint": 128704,
+    "url": "/bath-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1564,
+    "emoji": "🛀🏿",
+    "codePoint": 128704,
+    "url": "/bath-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1565,
+    "emoji": "🏄🏻",
+    "codePoint": 127940,
+    "url": "/surfer-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1566,
+    "emoji": "🏄🏼",
+    "codePoint": 127940,
+    "url": "/surfer-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1567,
+    "emoji": "🏄🏽",
+    "codePoint": 127940,
+    "url": "/surfer-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1568,
+    "emoji": "🏄🏾",
+    "codePoint": 127940,
+    "url": "/surfer-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1569,
+    "emoji": "🏄🏿",
+    "codePoint": 127940,
+    "url": "/surfer-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1570,
+    "emoji": "🏊🏻",
+    "codePoint": 127946,
+    "url": "/swimmer-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1571,
+    "emoji": "🏊🏼",
+    "codePoint": 127946,
+    "url": "/swimmer-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1572,
+    "emoji": "🏊🏽",
+    "codePoint": 127946,
+    "url": "/swimmer-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1573,
+    "emoji": "🏊🏾",
+    "codePoint": 127946,
+    "url": "/swimmer-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1574,
+    "emoji": "🏊🏿",
+    "codePoint": 127946,
+    "url": "/swimmer-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1575,
+    "emoji": "🚴🏻",
+    "codePoint": 128692,
+    "url": "/bicyclist-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1576,
+    "emoji": "🚴🏼",
+    "codePoint": 128692,
+    "url": "/bicyclist-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1577,
+    "emoji": "🚴🏽",
+    "codePoint": 128692,
+    "url": "/bicyclist-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1578,
+    "emoji": "🚴🏾",
+    "codePoint": 128692,
+    "url": "/bicyclist-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1579,
+    "emoji": "🚴🏿",
+    "codePoint": 128692,
+    "url": "/bicyclist-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1580,
+    "emoji": "🚵🏻",
+    "codePoint": 128693,
+    "url": "/mountain-bicyclist-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1581,
+    "emoji": "🚵🏼",
+    "codePoint": 128693,
+    "url": "/mountain-bicyclist-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1582,
+    "emoji": "🚵🏽",
+    "codePoint": 128693,
+    "url": "/mountain-bicyclist-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1583,
+    "emoji": "🚵🏾",
+    "codePoint": 128693,
+    "url": "/mountain-bicyclist-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1584,
+    "emoji": "🚵🏿",
+    "codePoint": 128693,
+    "url": "/mountain-bicyclist-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1585,
+    "emoji": "⛹🏻",
+    "codePoint": 9977,
+    "url": "/person-with-ball-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1586,
+    "emoji": "⛹🏼",
+    "codePoint": 9977,
+    "url": "/person-with-ball-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1587,
+    "emoji": "⛹🏽",
+    "codePoint": 9977,
+    "url": "/person-with-ball-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1588,
+    "emoji": "⛹🏾",
+    "codePoint": 9977,
+    "url": "/person-with-ball-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1589,
+    "emoji": "⛹🏿",
+    "codePoint": 9977,
+    "url": "/person-with-ball-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1590,
+    "emoji": "🏋🏻",
+    "codePoint": 127947,
+    "url": "/weight-lifter-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1591,
+    "emoji": "🏋🏼",
+    "codePoint": 127947,
+    "url": "/weight-lifter-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1592,
+    "emoji": "🏋🏽",
+    "codePoint": 127947,
+    "url": "/weight-lifter-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1593,
+    "emoji": "🏋🏾",
+    "codePoint": 127947,
+    "url": "/weight-lifter-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1594,
+    "emoji": "🏋🏿",
+    "codePoint": 127947,
+    "url": "/weight-lifter-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1595,
+    "emoji": "🕵🏻",
+    "codePoint": 128373,
+    "url": "/sleuth-or-spy-emoji-modifier-fitzpatrick-type-1-2/"
+  },
+  {
+    "number": 1596,
+    "emoji": "🕵🏼",
+    "codePoint": 128373,
+    "url": "/sleuth-or-spy-emoji-modifier-fitzpatrick-type-3/"
+  },
+  {
+    "number": 1597,
+    "emoji": "🕵🏽",
+    "codePoint": 128373,
+    "url": "/sleuth-or-spy-emoji-modifier-fitzpatrick-type-4/"
+  },
+  {
+    "number": 1598,
+    "emoji": "🕵🏾",
+    "codePoint": 128373,
+    "url": "/sleuth-or-spy-emoji-modifier-fitzpatrick-type-5/"
+  },
+  {
+    "number": 1599,
+    "emoji": "🕵🏿",
+    "codePoint": 128373,
+    "url": "/sleuth-or-spy-emoji-modifier-fitzpatrick-type-6/"
+  },
+  {
+    "number": 1600,
+    "emoji": "🗨",
+    "codePoint": 128488,
+    "url": "/left-speech-bubble/"
+  }
+]

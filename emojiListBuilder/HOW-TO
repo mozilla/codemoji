@@ -6,4 +6,6 @@
 5. open /tmp/test.html in using a browser via a webserver
 6. execute get-not-found-emoji snippet on page
 7. save it as not-found-emojis.json
-8. run complete.js
+8. modify bad-emojis.json according to preferences
+9. run get-sorted-list.js to get whatsapp ordered emoji list
+10. run complete.js

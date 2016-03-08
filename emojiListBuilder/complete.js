@@ -12,12 +12,12 @@ var emojis = probable_emojis
 
 // filter not found emojis
 emojis = _.filter(emojis, function (e) {
-  console.log(_.includes(not_found_emojis, e))
+  // console.log(_.includes(not_found_emojis, e))
   return !_.includes(not_found_emojis, e)
 })
 // filter bad emojis
 emojis = _.filter(emojis, function (e) {
-  console.log(_.includes(bad_emojis, e))
+  // console.log(_.includes(bad_emojis, e))
   return !_.includes(bad_emojis, e)
 })
 
@@ -31,11 +31,27 @@ console.log('remaining       : ' + emojis.length)
 // var template = "(function (window, Cryptoloji, undefined) {\n  'use strict'\n  Cryptoloji.emojis = <%= emojis %>\n})(window, window.Cryptoloji)"
 // var content = _.template(template)({ emojis: JSON.stringify(emojis) })
 
+// Sort emojis array based on sort order of whatsapp-sorted-list.json
+var sortedEmojis = require('./whatsapp-sorted-list.json')
+sortedEmojis = _.uniqBy(sortedEmojis, 'codePoint')
+sortedEmojis = _.map(sortedEmojis, function (se) { return se.codePoint })
+var tempEmojis = []
+_.each(sortedEmojis, function (se) {
+  var emojiIndex = (_.indexOf(emojis, se))
+  if (emojiIndex >= 0) {
+    tempEmojis.push(emojis[emojiIndex])
+  }
+})
+console.log('sorted emojis   : ' + tempEmojis.length + ' (should be equal to remaining)')
+emojis = tempEmojis
+
+// write emojis to file
 fs.writeFile("./complete.json", JSON.stringify(emojis), function(err) {
   if(err) return console.log(err)
   console.log("The file complete.json was saved!")
 })
 
+// write html recap and exclusion tool
 var content = '<html><head>'
 content += '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'
 content += '<style>body { background-color: #f0f0f0; } .removed { opacity: 0.5; }</style>'
