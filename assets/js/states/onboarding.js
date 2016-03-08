@@ -31,9 +31,9 @@
               })  
               Cryptoloji.UI.animate_onboarding(svg_elements)
               TweenLite.set($('#onboarding_slide_1_text'), {opacity: 0})
-              TweenLite.set($('.mozilla_button'), {opacity: 0})
+              TweenLite.set($('#next_button_onboarding'), {opacity: 0})
               TweenLite.to($('#onboarding_slide_1_text'), .5, {delay: 2.8, opacity: 1})
-              TweenLite.to($('.mozilla_button'), .5, {delay: 3.8, opacity: 1})
+              TweenLite.to($('#next_button_onboarding'), .5, {delay: 3.8, opacity: 1})
 
           break
 
@@ -44,9 +44,9 @@
             })         
             Cryptoloji.UI.animate_onboarding(svg_elements)
             TweenLite.set($('#onboarding_slide_2_text'), {opacity: 0})
-            TweenLite.set($('.mozilla_button'), {opacity: 0})
+            TweenLite.set($('#next_button_onboarding'), {opacity: 0})
             TweenLite.to($('#onboarding_slide_2_text'), .5, {delay: 2.8, opacity: 1})
-            TweenLite.to($('.mozilla_button'), .5, {delay: 3.8, opacity: 1})
+            TweenLite.to($('#next_button_onboarding'), .5, {delay: 3.8, opacity: 1})
           break
 
         case 3:
@@ -58,9 +58,9 @@
               TweenLite.to($(self), .1, {delay: i / 10 + 1 , opacity: 1.0})
             })
             TweenLite.set($('#onboarding_slide_3_text'), {opacity: 0})
-            TweenLite.set($('.mozilla_button'), {opacity: 0})
+            TweenLite.set($('#next_button_onboarding'), {opacity: 0})
             TweenLite.to($('#onboarding_slide_3_text'), .5, {delay: 2.8, opacity: 1})
-            TweenLite.to($('.mozilla_button'), .5, {delay: 3.8, opacity: 1})
+            TweenLite.to($('#next_button_onboarding'), .5, {delay: 3.8, opacity: 1})
           break
           
         case 4:
@@ -135,7 +135,7 @@
     timeline.set($('#onboarding_slide_4_encrypted_emoji_2'), {opacity: 0})
     timeline.set($('#onboarding_slide_4_encrypted_emoji_3'), {opacity: 0})
     timeline.set($('#onboarding_slide_4_text'), {opacity: 0})
-    timeline.set($('.mozilla_button'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {opacity: 0})
     var num_of_interaction = 0
 
     //Playground on click events
@@ -186,7 +186,7 @@
     .to($('#onboarding_slide_4_encrypted_emoji_3'), 0, {opacity: 0})
     .to($('#onboarding_slide_4_encrypted_emoji_2'), 0.3, {opacity: 1})
     .to($('#onboarding_slide_4_text'), 0.5, {opacity: 1})
-    .to($('.mozilla_button'), 0.5, {opacity: 1})
+    .to($('#next_button_onboarding'), 0.5, {opacity: 1})
 
     // $('#onboarding_slide_4_plain_text > g').each(function(i) {
     //   timeline.to($(this), 0.5, {opacity: 0})
@@ -195,7 +195,7 @@
 
   function animate_slide_5() {
     timeline.clear()
-    timeline.set($('.mozilla_button'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {opacity: 0})
     timeline.set($('#onboarding_slide_5_text'), {opacity: 0})
     timeline.set($('#onboarding_slide_5_plain_text'), {opacity: 0})
     timeline.set($('#onboarding_slide_5_encrypted_emoji_1'), {opacity: 0})
@@ -240,35 +240,50 @@
     .to($('#slide_5_bubble_white_text_bg'), 0.5, {y: 0, opacity: 1})
     .to($('#slide_5_bubble_white_text'), 0.5, {opacity: 1})
     .to($('#onboarding_slide_5_text'), 0.5, {opacity: 1})
-    .to($('.mozilla_button'), 0.5, {opacity: 1})
+    .to($('#next_button_onboarding'), 0.5, {opacity: 1})
   }
 
   function animate_slide_6() {
     timeline.clear()
-    timeline.set($('#slide_6_delivered_text'), {y: 100, opacity: 0})
-    timeline.set($('#slide_6_bubble_white_dots_bg'), {opacity: 0})
-    timeline.set($('#slide_6_bubble_white_dots'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_plain_text'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_text'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_encrypted_emoji_1'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_encrypted_emoji_2'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_encrypted_emoji_3'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_delivered_text'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_mais_bubble'), {y: 100, opacity: 0})
+    timeline.set($('#onboarding_slide_6_mais'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_smile'), {y: 100, opacity: 0})
+    timeline.set($('#onboarding_slide_6_smile_content'), {opacity: 0})
 
-    TweenLite.to($('#slide_6_emoji_bg'), 0.5, {y: -150})
-    TweenLite.to($('#slide_6_bubble_white_text_bg'), 0.5, {y: -150})
-    TweenLite.to($('#slide_6_bubble_white_text'), 0.5, {y: -150})
-    //timeline.to($('#slide_6_emoji_bg'), 0.5, {y: -200})
+    //Set the visible encrypted text following what the user chose on slide 4
+    switch(chosen_key) {
+      case 0:
+          timeline.set($('#onboarding_slide_6_encrypted_emoji_1'), {opacity: 1})
+        break
+
+      case 1:
+        timeline.set($('#onboarding_slide_6_encrypted_emoji_2'), {opacity: 1})
+        break
+
+      case 2:
+        timeline.set($('#onboarding_slide_6_encrypted_emoji_3'), {opacity: 1})
+        break
+    }
+
+    timeline.to($('#onboarding_slide_6_mais_bubble'), 0.5, {delay: 0.5, y: 0, opacity: 1})
+    .to($('#onboarding_slide_6_mais'), 0.5, {opacity: 1})
+    .to($('#onboarding_slide_6_delivered_text'), 0, {opacity: 1})
+    .to($('#onboarding_slide_6_smile'), 0.5, {y: 0, opacity: 1})
+    .to($('#onboarding_slide_6_smile_content'), 0.5, {opacity: 1})
+    .to($('#onboarding_slide_6_graphic'), 0.5, {delay: 0.5, y: -130})
+    .to($('#onboarding_slide_6_text'), 0.5, {opacity: 1})
+    .to($('#next_button_onboarding'), 0.5, {opacity: 1})
   }
 
   function animate_slide_7() {
-    timeline.clear()
-    timeline.set($('#slide_7_mais_bg'), {y: 150, opacity: 0})
-    timeline.set($('#slide_7_mais'), {opacity: 0})
-    timeline.set($('#slide_7_answer_bg'), {y: 150, opacity: 0})
-    timeline.set($('#slide_7_answer_emoji'), {opacity: 0})
-    timeline.set($('#slide_7_answer_text'), {opacity: 0})
-    
-    timeline.to($('#slide_7_mais_bg'), 0.5, {y: 0, opacity: 1})
-    .to($('#slide_7_mais'), 0.5, {opacity: 1})
-    .to($('#slide_7_answer_bg'), 0.5, {y: 0, opacity: 1, onComplete: function() {
-      TweenLite.to($('#slide_7_answer_emoji'), 0.5, {opacity: 1})
-      TweenLite.to($('#slide_7_answer_text'), 0.5, {opacity: 1})
-    }})
+
 
   }
 
