@@ -75,7 +75,7 @@
   function toNumber (emoji) {
     emoji = _.toString(emoji)
     if (_.isEmpty(emoji)) throw 'Emojifier.generateEmojiSubset needs a non-empty string'
-    return _.first(punycode.ucs2.decode(emoji))
+    return _.head(punycode.ucs2.decode(emoji))
   }
 
   return {
