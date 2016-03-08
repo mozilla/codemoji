@@ -21,7 +21,7 @@
     _setupGlobalHandler()
 
     var h = $('.section_main.encryption .header').height() + $('.section_main.encryption .main_content_top').height()
-    $('.main_key_modal').css({height: h, y:-h})
+    $('.main_key_modal').css({height: h, y:-h-50})
 
 
     $('.main_key_modal_emoji_container', self.$element).on('click', '.key', self.onClick.bind(this))
