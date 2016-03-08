@@ -409,6 +409,7 @@
 }
 
 .main_keyslider_plus-show .main_keyslider_plus{
+  display: block;
   transform: translate(0%,0);
 }
 

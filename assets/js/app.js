@@ -27,6 +27,11 @@
     // on rotation/resize
     //
     Cryptoloji.UI.handleOrientationChanges()
+    // hard refresh when orientation changes
+    Cryptoloji.stateman.on('orientationchange', function () {
+      window.location.reload()
+    })
+
 
     
     //
@@ -54,6 +59,7 @@
           .fill(EmojiList)
       }
     }, 2000)
+
     //
     // handle header show/hide
     //
