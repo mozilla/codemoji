@@ -15,9 +15,7 @@
    top: 40rem;
   }
   .svg_wrapper_header_name{
-    /*width: 40rem;*/
-    /*height: 76px;*/
-    min-height: 76px;
+    width: 40rem;
   }
 
   .svg_wrapper_header{

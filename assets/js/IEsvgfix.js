@@ -1,4 +1,5 @@
-;function detectIE() {
+;(function (window, $) {
+  function detectIE() {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf('MSIE ');
     if (msie > 0) {
@@ -17,54 +18,62 @@
        return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
     }
     return false;
-}
+  }
 
-// if(detectIE())
+  if (detectIE()) {
+  // if (true) {
+    function fixSvgDimensions () {
+      // $('[data-svg]').each(function() {
+      $('svg').parent().each(function() {
+        var $svg = $('svg', this)
+        var $wrapper = $(this)
 
-(function fix_svg_fn(){
-    if(detectIE()){
-        $("svg").parent().each(function() {
-            var h = parseInt($('svg', this).attr("height"),10)
-            var w = parseInt($('svg', this).attr("width"),10)
+        var svgWidth = $svg.attr('width')
+        var svgHeight = $svg.attr('height')
 
-            var hw = parseInt($(this).css("height"),10)
-            var ww = parseInt($(this).css("width"),10)
+        console.info($wrapper.attr('class'), $svg, $wrapper)
+        console.info(!!svgWidth || !!svgHeight)
 
-            var minhw = $(this).css("min-height")
-            var minww = $(this).css("min-width")
+        if (svgWidth && svgHeight) {
+          svgWidth = parseInt(svgWidth, 10)
+          svgHeight = parseInt(svgHeight, 10)
 
-            console.log(">>>>>>>>")
-            console.log($(this))
-            console.log($(this).attr("class"))
-            console.log(h, w)
-            console.log("-", hw, ww)
+          var wrapperWidth = parseInt($wrapper.css("width"), 10)
+          var wrapperHeight = parseInt($wrapper.css("height"), 10)
 
-            $('svg', this).attr("height", "100%")
-            $('svg', this).attr("width", "100%")    
+          console.log(wrapperWidth, wrapperHeight)
 
-            // if (ww && hw){
-            //     console.log('----- width and height to svg parent')
-            // }
-            // else if (ww && !hw){
+          $svg.attr('height', '100%')
+          $svg.attr('width', '100%')
 
-            if(minhw === "auto"){
-                $(this).css("height", ww * h / w)
-            } else {
-                $(this).css("width", parseInt(minhw,10) * w / h)
-                // $(this).css("width", "122px")
-                $(this).css("height", parseInt(minhw,10))
-                console.log(parseInt(minhw,10) * w / h)
-            }
+          var fixWidth = $wrapper.attr('iefix-width') !== undefined
+          var fixHeight = $wrapper.attr('iefix-height') !== undefined
 
-            // }
-            // else if (hw && !ww){
-            //     var wn = hw*w/h
-            //     $('svg', this).css("height", wn)
-            // }
-            // else if (!hw && !ww){
-            //     console.log('!!!!! no width - no height to svg parent')
-            // }
+          if (!fixWidth && !fixHeight)
+            fixWidth = true
+
+          console.log(fixWidth, fixHeight)
+
+          if (fixWidth) {
+            $wrapper.css('width', wrapperHeight * svgWidth / svgHeight)
+          } else if (fixHeight) {
+            $wrapper.css('height', wrapperWidth * svgHeight / svgWidth)
+          }
+
+          // var minhw = $wrapper.css("min-height")
+          // var minww = $wrapper.css("min-width")
+          // if(minhw === "auto"){
+          //   $wrapper.css("height", wrapperWidth * svgHeight / svgWidth)
+          // } else {
+          //   $wrapper.css("width", parseInt(minhw,10) * svgWidth / svgHeight)
+          //   $wrapper.css("height", parseInt(minhw,10))
+          //   console.warn(parseInt(minhw,10) * svgWidth / svgHeight)
+          // }
+        }
             
-        })
+      })
     }
-})()
+    $(document).ready(function () { fixSvgDimensions() })
+    $(window).resize(function () { fixSvgDimensions() })
+  }
+}(window, window.jQuery));

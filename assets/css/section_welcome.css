@@ -31,9 +31,9 @@
   min-height: 10rem;
 }
 
-/*.svg_wrapper_header_name{
+.svg_wrapper_header_name{
   width: 22rem;
-}*/
+}
 
 .svg_wrapper_header_name svg{
     width: 100%;
