@@ -262,42 +262,27 @@
 
   function animate_slide_6() {
     timeline.clear()
-    timeline.set($('#next_button_onboarding'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
     timeline.set($('#onboarding_slide_6_plain_text'), {opacity: 0})
     timeline.set($('#onboarding_slide_6_text'), {opacity: 0})
     timeline.set($('#onboarding_slide_6_encrypted_emoji_1'), {opacity: 0})
     timeline.set($('#onboarding_slide_6_encrypted_emoji_2'), {opacity: 0})
     timeline.set($('#onboarding_slide_6_encrypted_emoji_3'), {opacity: 0})
-    timeline.set($('#onboarding_slide_6_delivered_text'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_delivered_text'), {y: 100, opacity: 0})
     timeline.set($('#onboarding_slide_6_mais_bubble'), {y: 100, opacity: 0})
     timeline.set($('#onboarding_slide_6_mais'), {opacity: 0})
     timeline.set($('#onboarding_slide_6_smile'), {y: 100, opacity: 0})
     timeline.set($('#onboarding_slide_6_smile_content'), {opacity: 0})
+    timeline.set($('#onboarding_slide_6_encrypted_emoji_' + chosen_key), {opacity: 1})
 
-    //Set the visible encrypted text following what the user chose on slide 4
-    switch(chosen_key) {
-      case 0:
-          timeline.set($('#onboarding_slide_6_encrypted_emoji_1'), {opacity: 1})
-        break
-
-      case 1:
-        timeline.set($('#onboarding_slide_6_encrypted_emoji_2'), {opacity: 1})
-        break
-
-      case 2:
-        timeline.set($('#onboarding_slide_6_encrypted_emoji_3'), {opacity: 1})
-        break
-    }
-
-    timeline.to($('#onboarding_slide_6_mais_bubble'), 0.5, {delay: 0.5, y: 0, opacity: 1})
-    .to($('#onboarding_slide_6_mais'), 0.5, {opacity: 1})
-    .to($('#onboarding_slide_6_delivered_text'), 0, {opacity: 1})
-    .to($('#onboarding_slide_6_smile'), 0.5, {y: 0, opacity: 1})
-    .to($('#onboarding_slide_6_smile_content'), 0.5, {opacity: 1})
+    timeline.to($('#onboarding_slide_6_mais_bubble'), 0.5, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
+    .to($('#onboarding_slide_6_mais'), 0.1, {opacity: 1})
+    .to($('#onboarding_slide_6_delivered_text'), 0.2, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
+    .to($('#onboarding_slide_6_smile'), 0.5, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
+    .to($('#onboarding_slide_6_smile_content'), 0.1, {opacity: 1})
     .to($('#onboarding_slide_6_graphic'), 0.5, {delay: 0.5, y: -130})
     .to($('#onboarding_slide_6_text'), 0.5, {opacity: 1})
-    .to($('#next_button_onboarding'), 0.5, {opacity: 1, onComplete: function() {
-    }})
+    .to($('#next_button_onboarding'), 0.1, {scale: 1, opacity: 1})
   }
 
   function paginationLogic (slide) {
