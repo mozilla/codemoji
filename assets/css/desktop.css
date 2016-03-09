@@ -21,6 +21,11 @@
   .svg_wrapper_header{
     height: 7rem;
   }
+  .svg_wrapper_header > svg{
+    width: 100%;
+    height: 100%;
+  }
+
   .section_main_wrapper{
     flex-direction: row;
   }
