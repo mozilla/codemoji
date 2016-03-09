@@ -27,7 +27,7 @@
   
   function slideLogic (n) {
 
-      Cryptoloji.UI.paginationLogic(n)
+      paginationLogic(n)
       switch (n) {
 
         case 1:
@@ -312,6 +312,13 @@
     }})
   }
 
+  function paginationLogic (slide) {
+    // console.log(">>>>>>>>",slide, $('.pagination_emoji>g'))
+    TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
+    TweenLite.set($('.svg_wrapper_pagination .pagination_emoji_'+slide), {opacity: "1"})
+  }
+
+
   Cryptoloji.states.onboarding.step1 = next_slide(1)
   Cryptoloji.states.onboarding.step2 = next_slide(2)
   Cryptoloji.states.onboarding.step3 = next_slide(3)
@@ -319,8 +326,6 @@
   Cryptoloji.states.onboarding.step5 = next_slide(5)
   Cryptoloji.states.onboarding.step6 = next_slide(6)
   Cryptoloji.states.onboarding.step7 = to_encrypt(7)
-  // Cryptoloji.states.onboarding.step7 = next_slide(7)
-  // Cryptoloji.states.onboarding.step8 = to_encrypt(8)
 
 
 })(window, window.Cryptoloji); 
