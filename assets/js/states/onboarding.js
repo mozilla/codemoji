@@ -218,7 +218,7 @@
 
   function animate_slide_5() {
     timeline.clear()
-    timeline.set($('#next_button_onboarding'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
     timeline.set($('#onboarding_slide_5_text'), {opacity: 0})
     timeline.set($('#onboarding_slide_5_plain_text'), {opacity: 0})
     timeline.set($('#onboarding_slide_5_encrypted_emoji_1'), {opacity: 0})
@@ -257,7 +257,7 @@
     .to($('#slide_5_bubble_white_text_bg'), 0.5, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
     .to($('#slide_5_bubble_white_text'), 0.5, {opacity: 1})
     .to($('#onboarding_slide_5_text'), 0.5, {opacity: 1})
-    .to($('#next_button_onboarding'), 0.5, {opacity: 1})
+    .to($('#next_button_onboarding'), 0.1, {scale: 1, opacity: 1})
   }
 
   function animate_slide_6() {
