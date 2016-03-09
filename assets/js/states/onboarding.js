@@ -140,8 +140,8 @@
     $("#onboarding_slide_3_plain_text > g").each(function(i){
       timeline.to($(this), .02, {opacity: 1.0})
     })
-    timeline.to($('#onboarding_slide_3_text'), 0.5, {opacity: 1})
-    .to($('#next_button_onboarding'), 0.1, {scale: 1, opacity: 1})
+    timeline.to($('#onboarding_slide_3_text'), 0.1, {delay: 0.3, opacity: 1})
+    .to($('#next_button_onboarding'), 0.1, {delay: 0.3, scale: 1, opacity: 1})
   }
 
   function animate_slide_4() {
