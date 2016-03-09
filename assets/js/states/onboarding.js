@@ -4,7 +4,7 @@
     //loop the animation
     //this.restart()
   }});
-  var chosen_key = 0;
+  var chosen_key = 1;
   
   // 
   // go directly to step 1
@@ -163,21 +163,21 @@
         scrambletext('#onboarding_slide_4_encrypted_emoji_1 > g', 0.0)
       }})
       
-      chosen_key = 0
+      chosen_key = 1
     })
 
     $('#onboarding_slide_4_emoji_2').on('click', function() {
      timeline.to($('#onboarding_slide_4_emoji_selector'), 0.5, {x: 0, onComplete: function() {
         scrambletext('#onboarding_slide_4_encrypted_emoji_2 > g', 0.0)
       }})
-      chosen_key = 1
+      chosen_key = 2
     })
 
     $('#onboarding_slide_4_emoji_3').on('click', function() {
       timeline.to($('#onboarding_slide_4_emoji_selector'), 0.5, {x: '95rem', onComplete: function() {
         scrambletext('#onboarding_slide_4_encrypted_emoji_3 > g', 0.0)
       }})
-      chosen_key = 2
+      chosen_key = 3
     })
     
     //Animation
@@ -227,26 +227,14 @@
     timeline.set($('#onboarding_slide_5_delivered_text'), {y: 100, opacity: 0})
     timeline.set($('#slide_5_bubble_white_text_bg'), {y: 80, opacity: 0})
     timeline.set($('#slide_5_bubble_white_text'), {opacity: 0})
-    timeline.set($('#slide_5_bubble_white_dots_bg'), {opacity: 0})
-
-    //Set the visible encrypted text following what the user chose on slide 4
-    switch(chosen_key) {
-      case 0:
-          timeline.set($('#onboarding_slide_5_encrypted_emoji_1'), {opacity: 1})
-        break
-
-      case 1:
-        timeline.set($('#onboarding_slide_5_encrypted_emoji_2'), {opacity: 1})
-        break
-
-      case 2:
-        timeline.set($('#onboarding_slide_5_encrypted_emoji_3'), {opacity: 1})
-        break
-    }
+    timeline.set($('#slide_5_bubble_white_dots_bg'), {y: 100, opacity: 0})
+    timeline.set($('#onboarding_slide_5_encrypted_emoji_' + chosen_key), {opacity: 1})
+    timeline.set($('#slide_5_bubble_white_dots > circle'), {scale: 1.2, opacity: 0})
     
-    timeline.to($('#onboarding_slide_5_delivered_text'), 0.5, {delay: 0.5, y: 0, opacity: 1})
-    .to($('#slide_5_bubble_white_dots_bg'), 0.5, {delay: 0.5, y: 0, opacity: 1})
-    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: -5})
+    timeline.to($('#onboarding_slide_5_delivered_text'), 0.3, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
+    .to($('#slide_5_bubble_white_dots_bg'), 0.3, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
+    .to($('#slide_5_bubble_white_dots > circle'), 0.3, {ease: Bounce.easeOut, scale: 1, opacity: 1})
+    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {delay: 0.5, y: -5})
     .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: -5})
     .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: -5})
     .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: 0})
@@ -258,9 +246,15 @@
     .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: 0})
     .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: 0})
     .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots_bg'), 0.1, {opacity: 0})
-    .to($('#slide_5_bubble_white_dots'), 0.1, {y: 0, opacity: 0})
-    .to($('#slide_5_bubble_white_text_bg'), 0.5, {y: 0, opacity: 1})
+    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: -5})
+    .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: -5})
+    .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: -5})
+    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: 0})
+    .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: 0})
+    .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: 0})
+    .to($('#slide_5_bubble_white_dots > circle'), 0.0, {y: 0, opacity: 0})
+    .to($('#slide_5_bubble_white_dots_bg'), 0.3, {ease: Bounce.easeIn, y: -100, opacity: 0})
+    .to($('#slide_5_bubble_white_text_bg'), 0.5, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
     .to($('#slide_5_bubble_white_text'), 0.5, {opacity: 1})
     .to($('#onboarding_slide_5_text'), 0.5, {opacity: 1})
     .to($('#next_button_onboarding'), 0.5, {opacity: 1})
