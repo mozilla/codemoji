@@ -131,17 +131,17 @@
 
   function animate_slide3() {
     timeline.clear()
-    timeline.set($('#next_button_onboarding'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
     timeline.set($('#onboarding_slide_3_plain_text > g'), {opacity: 0.0})
     timeline.set($('#onboarding_slide_3_plain_text_bg'), {y: -300})
     timeline.set($('#onboarding_slide_3_text'), {opacity: 0})
 
-    timeline.to($("#onboarding_slide_3_plain_text_bg"), 1, {y: 0})
+    timeline.to($("#onboarding_slide_3_plain_text_bg"), 0.5, {ease: Bounce.easeOut, y: 0})
     $("#onboarding_slide_3_plain_text > g").each(function(i){
-    timeline.to($(this), .1, {delay: 0.05 , opacity: 1.0})
+      timeline.to($(this), .02, {opacity: 1.0})
     })
     timeline.to($('#onboarding_slide_3_text'), 0.5, {opacity: 1})
-    .to($('#next_button_onboarding'), 0.5, {opacity: 1})
+    .to($('#next_button_onboarding'), 0.1, {scale: 1, opacity: 1})
   }
 
   function animate_slide_4() {
