@@ -25,16 +25,21 @@
       if (Cryptoloji.stateman.current.name === 'onboarding') {
         Cryptoloji.stateman.go('onboarding.step1')
       }
+
+      // display cross-slide elements
+      $('.section_onboarding_wrapper').addClass('section-show')
+    },
+    leave: function () {
+      // hide cross-slide elements
+      $('.section_onboarding_wrapper').removeClass('section-show')
     }
   }
 
   function buildSlide (n, animateFn) {
     return {
       enter: function () {
-        // display cross-slide elements
-        $('.section_onboarding_wrapper').addClass("section-show")
         // display current slide content
-        $('[slide-num="'+n+'"]').addClass("section-show")
+        $('[slide-num="'+n+'"]').addClass('section-show')
         // display header
         Cryptoloji.stateman.emit('header:show')
         // correct assign to-state for next button
@@ -45,8 +50,7 @@
         animateFn()
       },
       leave: function () {
-        $('[slide-num="'+n+'"]').removeClass("section-show")
-        $('.section_onboarding_wrapper').removeClass("section-show")
+        $('[slide-num="'+n+'"]').removeClass('section-show')
       }
     }
   }
@@ -65,7 +69,6 @@
       },
       leave: function () {
         $('[slide-num="7"]').removeClass('section-show')
-        $('.section_onboarding_wrapper').removeClass('section-show')
         Cryptoloji.stateman.emit('header:hide')
       }
     }
