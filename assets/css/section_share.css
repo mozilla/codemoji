@@ -40,6 +40,7 @@
   width: 100%;
   font-weight: 100;
   bottom: 0;
+  left: 0;
   transition: background-color .75s ease-in-out;
   position: absolute;
 }
@@ -96,10 +97,14 @@
 
 .share_key-wrapper,
 .share_key_emoji-item,
-.share_key_emoji-item_before,
-.share_key_emoji-item_after {
+.share_key-wrapper:before,
+.share_key-wrapper:after {
   height: 4.5rem;
   width: 4.5rem;
+}
+
+.share_key-wrapper{
+  position: relative;
 }
 
 .share_key_emoji-item{
@@ -126,27 +131,29 @@
   font-size: 40%;
 }
 
-.share_key_emoji-item_before,
-.share_key_emoji-item_after {
+.share_key-wrapper:before,
+.share_key-wrapper:after {
     content: "";
     border-radius: 100%;
     animation-fill-mode: both;
     position: absolute;
+    left: 0;
+    top: 0;
 }
-.share_key_emoji-item_before {
+.share_key-wrapper:before {
     background-color: white;
     opacity: 0;
     animation: jumper 2s -0.333s ease-out infinite;
 }
-.share_key_emoji-item_after {
+.share_key-wrapper:after {
     background-color: white;
     opacity: 0;
     animation: jumper 2s -0.666s ease-out infinite;
 }
 
 
-.share_key-open .share_key_emoji-item_before,
-.share_key-open .share_key_emoji-item_after{
+.share_key-open .share_key-wrapper:before,
+.share_key-open .share_key-wrapper:after{
   animation-name: none;
 }
 @keyframes jumper{

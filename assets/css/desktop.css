@@ -223,7 +223,7 @@
   }
 
   .share_key-wrapper,
-  .share_key_emoji-item_before, .share_key_emoji-item_after,
+  .share_key-wrapper:before, .share_key-wrapper:after,
   .share_key_emoji-item {
     height: 6rem;
     width: 6rem;
