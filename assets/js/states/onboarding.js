@@ -111,9 +111,9 @@
     wordLetterScrumblingAnimation(svg_elements)
     timeline.clear()
     timeline.set($('#onboarding_slide_1_text'), {opacity: 0})
-    timeline.set($('#next_button_onboarding'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
     timeline.to($('#onboarding_slide_1_text'), .5, {delay: 4.8, opacity: 1})
-    .to($('#next_button_onboarding'), 1, {opacity: 1})
+    .to($('#next_button_onboarding'), 0.1, {delay: 2.0, scale: 1, opacity: 1})
   }
 
   function animate_slide2() {
