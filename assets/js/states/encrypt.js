@@ -130,7 +130,7 @@
       // Cryptoloji.stateman.emit('header:hide')
       Cryptoloji.stateman.emit('footer:hide')
       Cryptoloji.UI.KeyModal().close()
-      // $('.encryption').removeClass('section-show')
+      $('.encryption').removeClass('section-show')
       Cryptoloji.stateman.off('encrypt')
       Cryptoloji.stateman.off('keyslider')
       Cryptoloji.stateman.off('keypanel')

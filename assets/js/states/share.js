@@ -15,6 +15,7 @@
       return true
     },
     enter: function () {
+      $('.section_main.encryption').addClass('section-show')
       $(".section_share").addClass("section-show")
       $('.section_share').css({y:window.innerHeight})
       setTimeout(function(){
@@ -40,6 +41,7 @@
       handleShareModal()
     },
     leave: function () {
+      $('.section_main.encryption').removeClass('section-show')
       // close the modal than exit
       if ($('.share_key').hasClass('share_key-open')) {
         $('.share_key').removeClass('share_key-open')
