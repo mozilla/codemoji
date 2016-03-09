@@ -270,8 +270,8 @@
     // load emoji key to share
     $(".share_key_emoji-item").html(toTwemoji(key))
     $(".share_key_emoji-item").attr('value', key)
-    TweenLite.from($('#encryption_selected_key'), 1.25, {scale:1.25, ease:Expo.easeOut})
-    TweenLite.from($('#decryption_selected_key'), 1.25, {scale:1.25, ease:Expo.easeOut})
+    TweenLite.from($('#encryption_selected_key'), 1.25, {scale:1.4, ease:Expo.easeOut})
+    TweenLite.from($('#decryption_selected_key'), 1.25, {scale:1.4, ease:Expo.easeOut})
   }
 
   function showDecryptableText (text) {

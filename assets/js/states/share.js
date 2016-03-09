@@ -47,7 +47,7 @@
           $('.share_key_emoji-item').attr('id', '')
         }})
       }
-      $('.section_share').transition({delay: 450, duration:750, y:window.innerHeight, easing:'easeInOutExpo', complete: function(){
+      $('.section_share').transition({delay: 0, duration:750, y:window.innerHeight, easing:'easeInOutExpo', complete: function(){
         $('.section_share').removeClass('section-show')
       }})
       
@@ -73,9 +73,11 @@
       // give feedback in place
       var oldVal = $(e.trigger).val()
       $(e.trigger).val('COPIED!')
+      $(e.trigger).css({scale:1.25})
+      $(e.trigger).transition({scale:1, duration:900, easing:'easeInOutExpo'})
       setTimeout(function () {
         $(e.trigger).val(oldVal)
-      }, 350)
+      }, 1000)
     });
 
     linkClipboard.on('error', function(e) {
