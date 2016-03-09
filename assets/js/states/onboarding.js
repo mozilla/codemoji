@@ -155,7 +155,7 @@
     timeline.set($('#onboarding_slide_4_encrypted_emoji_2 > g'), {opacity: 0})
     timeline.set($('#onboarding_slide_4_encrypted_emoji_3 > g'), {opacity: 0})
     timeline.set($('#onboarding_slide_4_text_tutor'), {opacity: 0})
-    timeline.set($('#next_button_onboarding'), {opacity: 0})
+    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
 
     //Playground on click events
     $('#onboarding_slide_4_emoji_1').on('click', function() {
