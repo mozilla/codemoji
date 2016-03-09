@@ -4,7 +4,16 @@
     //loop the animation
     //this.restart()
   }});
-  var chosen_key = 1;
+  var chosenKey = 2;
+  var slide1LetterScrambleAnimation = null
+  var slide2LetterScrambleAnimation = null
+  var slide1Timeline = null
+  var slide2Timeline = null
+  var slide3Timeline = null
+  var slide4Timeline = null
+  var slide5Timeline = null
+  var slide6Timeline = null
+  var slide7Timeline = null
   
   // 
   // go directly to step 1
@@ -12,65 +21,28 @@
   Cryptoloji.states.onboarding = {}
   Cryptoloji.states.onboarding.root = {
     enter: function () {
-      Cryptoloji.stateman.go('onboarding.step1')
+      // go to step1 if we are headering to root state
+      if (Cryptoloji.stateman.current.name === 'onboarding') {
+        Cryptoloji.stateman.go('onboarding.step1')
+      }
     }
   }
 
-  // function
-  // 
-  
-  function slideLogic (n) {
-
-      paginationLogic(n)
-      switch (n) {
-
-        case 1:
-            animate_slide1()
-          break
-
-        case 2:
-            animate_slide2()
-          break
-
-        case 3:
-            animate_slide3()
-          break
-          
-        case 4:
-          animate_slide_4()
-          break
-
-        case 5:
-          animate_slide_5()
-          break
-
-        case 6:
-          animate_slide_6()
-          break
-
-        case 7:
-          animate_slide_7()
-          break
-      }
-  }
-
-  function next_slide(n){
+  function buildSlide (n, animateFn) {
     return {
       enter: function () {
-
         // display cross-slide elements
         $('.section_onboarding_wrapper').addClass("section-show")
-
         // display current slide content
         $('[slide-num="'+n+'"]').addClass("section-show")
-
         // display header
         Cryptoloji.stateman.emit('header:show')
-
         // correct assign to-state for next button
         $('#next_button_onboarding').attr('to-state', 'onboarding.step'+(n+1))
-
-        slideLogic (n)
+        // update pagination
+        paginationLogic(n)
+        // run slide animate function
+        animateFn()
       },
       leave: function () {
         $('[slide-num="'+n+'"]').removeClass("section-show")
@@ -79,233 +51,107 @@
     }
   }
 
-  function to_encrypt(n){
+  function to_encrypt () {
     return {
       enter: function () {
-
-        TweenLite.set($('.svg_wrapper_pagination'), {opacity: 0})
-        TweenLite.set($('.onboarding_skip_button'), {opacity: 0})
-        TweenLite.to($('#next_button_onboarding'), 0.5, {delay: 1, opacity: 1})
-        $('[slide-num="'+n+'"]').addClass("section-show")
-        $('#next_button_onboarding').text('Go for it!').on("click", function(){
-          TweenLite.to($('[slide-num="'+n+'"]'), 1, {y: "-100%", onComplete: function() {
-            TweenLite.to($('#next_button_onboarding'), 0, {opacity: 0})
-            Cryptoloji.stateman.go("encrypt")
+        slide7Timeline.play()
+        $('[slide-num="7"]').addClass('section-show')
+        $('#next_button_onboarding').text('Go for it!').click(function(){
+          TweenLite.to($('[slide-num="7"]'), 1, {y: '-100%', onComplete: function() {
+            TweenLite.to('#next_button_onboarding', 0, { opacity: 0 })
+            Cryptoloji.stateman.go('encrypt')
           }})
-          
         })
       },
       leave: function () {
-        $('[slide-num="'+n+'"]').removeClass("section-show")
-        $('.section_onboarding_wrapper').removeClass("section-show")
+        $('[slide-num="7"]').removeClass('section-show')
+        $('.section_onboarding_wrapper').removeClass('section-show')
         Cryptoloji.stateman.emit('header:hide')
       }
     }
   }
 
   function animate_slide1() {
-    var svg_elements = []    
-    _.times(4, function(i){
-      svg_elements.push("#onboarding_slide_1_encrypted_hello_" + (i+1) + ">g")
-    })  
-    wordLetterScrumblingAnimation(svg_elements)
-    timeline.clear()
-    timeline.set($('#onboarding_slide_1_text'), {opacity: 0})
-    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
-    timeline.to($('#onboarding_slide_1_text'), .5, {delay: 4.8, opacity: 1})
-    .to($('#next_button_onboarding'), 0.1, {delay: 2.0, scale: 1, opacity: 1})
+    slide1LetterScrambleAnimation.play()
+    slide1Timeline.play()
   }
 
   function animate_slide2() {
-    var svg_elements = []    
-    _.times(4, function(i){
-      svg_elements.push("#onboarding_slide_2_encrypted_hello_" + (i+1) + ">g")
-    })         
-    wordLetterScrumblingAnimation(svg_elements)
-    timeline.clear()
-    timeline.set($('#onboarding_slide_2_text'), {opacity: 0})
-    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
-    timeline.to($('#onboarding_slide_2_text'), .5, {delay: 2.8, opacity: 1})
-    .to($('#next_button_onboarding'), 0.1, {delay: 2.5, scale: 1, opacity: 1})
+    slide2LetterScrambleAnimation.play()
+    slide2Timeline.play()
   }
 
   function animate_slide3() {
-    timeline.clear()
-    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
-    timeline.set($('#onboarding_slide_3_plain_text > g'), {opacity: 0.0})
-    timeline.set($('#onboarding_slide_3_plain_text_bg'), {y: -300})
-    timeline.set($('#onboarding_slide_3_text'), {opacity: 0})
-
-    timeline.to($("#onboarding_slide_3_plain_text_bg"), 0.5, {ease: Bounce.easeOut, y: 0})
-    $("#onboarding_slide_3_plain_text > g").each(function(i){
-      timeline.to($(this), .02, {opacity: 1.0})
-    })
-    timeline.to($('#onboarding_slide_3_text'), 0.1, {delay: 0.3, opacity: 1})
-    .to($('#next_button_onboarding'), 0.1, {delay: 0.3, scale: 1, opacity: 1})
+    slide3Timeline.play()
   }
 
-  function animate_slide_4() {
-    timeline.clear()
-    timeline.set($('#onboarding_slide_4_plain_text > g'), {opacity: 1})
-    timeline.set($('#onboarding_slide_4_emoji_1 > g'), {scale: 1.2, opacity: 0})
-    timeline.set($('#onboarding_slide_4_emoji_2 > g'), {scale: 1.2, opacity: 0})
-    timeline.set($('#onboarding_slide_4_emoji_3 > g'), {scale: 1.2, opacity: 0})
-    timeline.set($('#onboarding_slide_4_emoji_selector'), {x: '95rem', opacity: 0})
-    timeline.set($('#onboarding_slide_4_encrypted_emoji_1 > g'), {opacity: 0})
-    timeline.set($('#onboarding_slide_4_encrypted_emoji_2 > g'), {opacity: 0})
-    timeline.set($('#onboarding_slide_4_encrypted_emoji_3 > g'), {opacity: 0})
-    timeline.set($('#onboarding_slide_4_text_tutor'), {opacity: 0})
-    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
+  function animate_slide4() {
+    slide4Timeline.play()
 
-    //Playground on click events
+    // Playground on click events
     $('#onboarding_slide_4_emoji_1').on('click', function() {
-      timeline.to($('#onboarding_slide_4_emoji_selector'), 0.5, {x: '-95rem', onComplete: function() {
-        scrambletext('#onboarding_slide_4_encrypted_emoji_1 > g', 0.0)
-      }})
-      
-      chosen_key = 1
+      changeScrambledTextAnimation(1, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_1')
+      chosenKey = 1
     })
-
     $('#onboarding_slide_4_emoji_2').on('click', function() {
-     timeline.to($('#onboarding_slide_4_emoji_selector'), 0.5, {x: 0, onComplete: function() {
-        scrambletext('#onboarding_slide_4_encrypted_emoji_2 > g', 0.0)
-      }})
-      chosen_key = 2
+      changeScrambledTextAnimation(2, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_2')
+      chosenKey = 2
     })
-
     $('#onboarding_slide_4_emoji_3').on('click', function() {
-      timeline.to($('#onboarding_slide_4_emoji_selector'), 0.5, {x: '95rem', onComplete: function() {
-        scrambletext('#onboarding_slide_4_encrypted_emoji_3 > g', 0.0)
-      }})
-      chosen_key = 3
-    })
-    
-    //Animation
-    timeline.to('#onboarding_slide_4_emoji_1 > g', 0.3, {ease: Bounce.easeOut, scale: 1, opacity: 1})
-    .to($('#onboarding_slide_4_emoji_2 > g'), 0.3, {ease: Bounce.easeOut, scale: 1, opacity: 1})
-    .to($('#onboarding_slide_4_emoji_3 > g'), 0.3, {ease: Bounce.easeOut, scale: 1, opacity: 1})
-    .to($('#onboarding_slide_4_emoji_selector'), 0.3, {ease: Bounce.easeOut, x: 0, opacity: 1})
-
-    .to($('#onboarding_slide_4_emoji_selector'), 0.5, {delay: 0.2, x: '-95rem', onComplete: function() {
-      scrambletext('#onboarding_slide_4_encrypted_emoji_1 > g', 0.0)
-    }})
-    .to($('#onboarding_slide_4_emoji_selector'), 0.5, {delay: 0.8, x: "95rem", onComplete: function() {
-      scrambletext('#onboarding_slide_4_encrypted_emoji_3 > g', 0.0)
-    }})
-    .to($('#onboarding_slide_4_emoji_selector'), 0.5, {delay: 0.8, x: 0, onComplete: function() {
-      scrambletext('#onboarding_slide_4_encrypted_emoji_2 > g', 0.0)
-    }})
-    .to($('#onboarding_slide_4_text_tutor'), 0.02, {delay: 0.8, opacity: 1})
-    .to($('#next_button_onboarding'), 0.1, {delay: 0.2, scale: 1, opacity: 1})
-
-    // $('#onboarding_slide_4_plain_text > g').each(function(i) {
-    //   timeline.to($(this), 0.5, {opacity: 0})
-    // })
-  }
-
-  function scrambletext(emoji_group, start_delay) {
-    TweenLite.set($('#onboarding_slide_4_plain_text > g'), {opacity: 1})
-    TweenLite.set($('#onboarding_slide_4_encrypted_emoji_1 > g'), {opacity: 0})
-    TweenLite.set($('#onboarding_slide_4_encrypted_emoji_2 > g'), {opacity: 0})
-    TweenLite.set($('#onboarding_slide_4_encrypted_emoji_3 > g'), {opacity: 0})
-    $($(emoji_group).get().reverse()).each(function(i) {
-     TweenLite.to($(this), 0.5, {delay: start_delay + i * 0.02,  opacity: 1})
-    })
-    $('#onboarding_slide_4_plain_text > g').each(function(i) {
-      TweenLite.to($(this), 0.5, {delay: start_delay + i * 0.02,  opacity: 0})
+      changeScrambledTextAnimation(3, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_3')
+      chosenKey = 3
     })
   }
 
-  function animate_slide_5() {
-    timeline.clear()
-    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
-    timeline.set($('#onboarding_slide_5_text'), {opacity: 0})
-    timeline.set($('#onboarding_slide_5_plain_text'), {opacity: 0})
-    timeline.set($('#onboarding_slide_5_encrypted_emoji_1'), {opacity: 0})
-    timeline.set($('#onboarding_slide_5_encrypted_emoji_2'), {opacity: 0})
-    timeline.set($('#onboarding_slide_5_encrypted_emoji_3'), {opacity: 0})
-    timeline.set($('#onboarding_slide_5_delivered_text'), {y: 100, opacity: 0})
-    timeline.set($('#slide_5_bubble_white_text_bg'), {y: 80, opacity: 0})
-    timeline.set($('#slide_5_bubble_white_text'), {opacity: 0})
-    timeline.set($('#slide_5_bubble_white_dots_bg'), {y: 100, opacity: 0})
-    timeline.set($('#onboarding_slide_5_encrypted_emoji_' + chosen_key), {opacity: 1})
-    timeline.set($('#slide_5_bubble_white_dots > circle'), {scale: 1.2, opacity: 0})
-    
-    timeline.to($('#onboarding_slide_5_delivered_text'), 0.3, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
-    .to($('#slide_5_bubble_white_dots_bg'), 0.3, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
-    .to($('#slide_5_bubble_white_dots > circle'), 0.3, {ease: Bounce.easeOut, scale: 1, opacity: 1})
-    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {delay: 0.5, y: -5})
-    .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: -5})
-    .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: -5})
-    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: -5})
-    .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: -5})
-    .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: -5})
-    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: -5})
-    .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: -5})
-    .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: -5})
-    .to($('#slide_5_bubble_white_dots > circle')[0], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots > circle')[1], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots > circle')[2], 0.05, {y: 0})
-    .to($('#slide_5_bubble_white_dots > circle'), 0.0, {y: 0, opacity: 0})
-    .to($('#slide_5_bubble_white_dots_bg'), 0.3, {ease: Bounce.easeIn, y: -100, opacity: 0})
-    .to($('#slide_5_bubble_white_text_bg'), 0.5, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
-    .to($('#slide_5_bubble_white_text'), 0.5, {opacity: 1})
-    .to($('#onboarding_slide_5_text'), 0.5, {opacity: 1})
-    .to($('#next_button_onboarding'), 0.1, {scale: 1, opacity: 1})
+  function animate_slide5() {
+    slide5Timeline.play()
   }
 
-  function animate_slide_6() {
-    timeline.clear()
-    timeline.set($('#next_button_onboarding'), {scale: 1.2, opacity: 0})
-    timeline.set($('#onboarding_slide_6_plain_text'), {opacity: 0})
-    timeline.set($('#onboarding_slide_6_text'), {opacity: 0})
-    timeline.set($('#onboarding_slide_6_encrypted_emoji_1'), {opacity: 0})
-    timeline.set($('#onboarding_slide_6_encrypted_emoji_2'), {opacity: 0})
-    timeline.set($('#onboarding_slide_6_encrypted_emoji_3'), {opacity: 0})
-    timeline.set($('#onboarding_slide_6_delivered_text'), {y: 100, opacity: 0})
-    timeline.set($('#onboarding_slide_6_mais_bubble'), {y: 100, opacity: 0})
-    timeline.set($('#onboarding_slide_6_mais'), {opacity: 0})
-    timeline.set($('#onboarding_slide_6_smile'), {y: 100, opacity: 0})
-    timeline.set($('#onboarding_slide_6_smile_content'), {opacity: 0})
-    timeline.set($('#onboarding_slide_6_encrypted_emoji_' + chosen_key), {opacity: 1})
-
-    timeline.to($('#onboarding_slide_6_mais_bubble'), 0.5, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
-    .to($('#onboarding_slide_6_mais'), 0.1, {opacity: 1})
-    .to($('#onboarding_slide_6_delivered_text'), 0.2, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
-    .to($('#onboarding_slide_6_smile'), 0.5, {delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1})
-    .to($('#onboarding_slide_6_smile_content'), 0.1, {opacity: 1})
-    .to($('#onboarding_slide_6_graphic'), 0.5, {delay: 0.5, y: -130})
-    .to($('#onboarding_slide_6_text'), 0.5, {opacity: 1})
-    .to($('#next_button_onboarding'), 0.1, {scale: 1, opacity: 1})
+  function animate_slide6() {
+    slide6Timeline.play()
   }
 
   function paginationLogic (slide) {
-    // console.log(">>>>>>>>",slide, $('.pagination_emoji>g'))
     TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
     TweenLite.set($('.svg_wrapper_pagination .pagination_emoji_'+slide), {opacity: "1"})
   }
 
-  // Step1, Step2 multiple word scrambling animation
-  var wordLetterScrumblingAnimationTimeline = null
-  function wordLetterScrumblingAnimation (elements) {
-    var timeline = wordLetterScrumblingAnimationTimeline
+  function buildScrambleTextAnimation (emojiGroup) {
+    return new TimelineLite()
+      .add([
+        new TimelineLite().staggerTo($(emojiGroup).get().reverse(), 0.5, { opacity: 1 }, 0.05),
+        new TimelineLite().staggerTo('#onboarding_slide_4_plain_text > g', 0.5, {  opacity: 0 }, 0.05),
+      ], '+=0', 'start')
+  }
+  function changeScrambledTextAnimation (chosenKey, previousEmojiGroup, nextEmojiGroup) {
+    var selectorX = '0'
+    if (chosenKey === 1) selectorX = '-95rem'
+    else if (chosenKey === 3) selectorX = '95rem'
 
-    //Prevent istanciating multiple timelines
-    if (!timeline) {
-      timeline = new TimelineLite({onComplete: function() {
+    return new TimelineLite()
+      .to('#onboarding_slide_4_emoji_selector', 0.5, { delay: 0.2, x: selectorX })
+      .add([
+        new TimelineLite().staggerTo($(previousEmojiGroup + ' > g').get().reverse(), 0.5, { opacity: 0 }, 0.05),
+        buildScrambleTextAnimation(nextEmojiGroup + ' > g')
+      ], '+=0', 'start')
+  }
+
+  function buildTextButtonAnimationTimeline (onboardingText) {
+    return new TimelineLite({ paused: true })
+      .set(onboardingText, { opacity: 0 })
+      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .to(onboardingText, .5, { delay: 2.8, opacity: 1 })
+      .to('#next_button_onboarding', 0.1, { delay: 2.5, scale: 1, opacity: 1 })
+  }
+
+  function buildLetterScramblingAnimationTimeline (elements) {
+    var timeline = new TimelineLite({
+      paused: true,
+      onComplete: function () {
         //loop the animation
         this.restart()
-      }});
-    }
-
-    //Clear the timeline in case we are creating the animation for a different slide
-    timeline.clear()
+      }
+    })
 
     //Duration of a single letter transition
     var animation_duration = 0.2
@@ -313,73 +159,188 @@
     var y_transform = 20
     
     //First svg group containing encrypted letter
-    var first_group = $($(elements[0]))
+    var first_group = $(elements[0])
     //Second svg group containing encrypted letter
-    var second_group = $($(elements[1]))
+    var second_group = $(elements[1])
     //Third svg group containing encrypted letter
-    var third_group = $($(elements[2]))
+    var third_group = $(elements[2])
     //Fourth svg group containing encrypted letter (the same as the third one to get a perfect loop)
-    var fourth_group = $($(elements[3]))
+    var fourth_group = $(elements[3])
 
     //Set initial state
-    timeline.set(first_group, {y: -60, opacity: 0.0})
-    //Second encryption letters
-    .set(second_group, {y: -60, opacity: 0.0})
-    //Third encryption letters
-    .set(third_group, {y: 0, opacity: 1.0})
-    //Third encryption letters bis
-    .set(fourth_group, {y: -60, opacity: 0.0})
+    timeline
+      // First encryption letters setup
+      .set(first_group, {y: -60, opacity: 0.0})
+      // Second encryption letters setup
+      .set(second_group, {y: -60, opacity: 0.0})
+      // Third encryption letters setup
+      .set(third_group, {y: 0, opacity: 1.0})
+      // Third encryption letters bis setup
+      .set(fourth_group, {y: -60, opacity: 0.0})
+      // First encrypted letters animation
+      .to(third_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
+      .to(first_group[4], animation_duration, {y: 0, opacity: 1.0})
+      .to(third_group[3], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(first_group[3], animation_duration, {y: 0, opacity: 1.0})
+      .to(third_group[2], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(first_group[2], animation_duration, {y: 0, opacity: 1.0})
+      .to(third_group[1], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(first_group[1], animation_duration, {y: 0, opacity: 1.0})
+      .to(third_group[0], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(first_group[0], animation_duration, {y: 0, opacity: 1.0})
+      // Second encrypted letters animation
+      .to(first_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
+      .to(second_group[4], animation_duration, {y: 0, opacity: 1.0})
+      .to(first_group[3], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(second_group[3], animation_duration, {y: 0, opacity: 1.0})
+      .to(first_group[2], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(second_group[2], animation_duration, {y: 0, opacity: 1.0})
+      .to(first_group[1], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(second_group[1], animation_duration, {y: 0, opacity: 1.0})
+      .to(first_group[0], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(second_group[0], animation_duration, {y: 0, opacity: 1.0})
+      // /hird encrypted letters animation
+      .to(second_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
+      .to(fourth_group[4], animation_duration, {y: 0, opacity: 1.0})
+      .to(second_group[3], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(fourth_group[3], animation_duration, {y: 0, opacity: 1.0})
+      .to(second_group[2], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(fourth_group[2], animation_duration, {y: 0, opacity: 1.0})
+      .to(second_group[1], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(fourth_group[1], animation_duration, {y: 0, opacity: 1.0})
+      .to(second_group[0], animation_duration, {y: y_transform, opacity: 0.0})
+      .to(fourth_group[0], animation_duration, {y: 0, opacity: 1.0})
+      // Set a delay before looping
+      .to(fourth_group, 0.0, {delay: animation_delay, y: y_transform, opacity: 0.0})
 
-
-    //First encrypted word animation
-    .to(third_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
-    .to(first_group[4], animation_duration, {y: 0, opacity: 1.0})
-    .to(third_group[3], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(first_group[3], animation_duration, {y: 0, opacity: 1.0})
-    .to(third_group[2], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(first_group[2], animation_duration, {y: 0, opacity: 1.0})
-    .to(third_group[1], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(first_group[1], animation_duration, {y: 0, opacity: 1.0})
-    .to(third_group[0], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(first_group[0], animation_duration, {y: 0, opacity: 1.0})
-    
-    // //Second encrypted word animation
-    .to(first_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
-    .to(second_group[4], animation_duration, {y: 0, opacity: 1.0})
-    .to(first_group[3], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(second_group[3], animation_duration, {y: 0, opacity: 1.0})
-    .to(first_group[2], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(second_group[2], animation_duration, {y: 0, opacity: 1.0})
-    .to(first_group[1], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(second_group[1], animation_duration, {y: 0, opacity: 1.0})
-    .to(first_group[0], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(second_group[0], animation_duration, {y: 0, opacity: 1.0})
-    
-    // //Third encrypted word animation
-    .to(second_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
-    .to(fourth_group[4], animation_duration, {y: 0, opacity: 1.0})
-    .to(second_group[3], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(fourth_group[3], animation_duration, {y: 0, opacity: 1.0})
-    .to(second_group[2], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(fourth_group[2], animation_duration, {y: 0, opacity: 1.0})
-    .to(second_group[1], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(fourth_group[1], animation_duration, {y: 0, opacity: 1.0})
-    .to(second_group[0], animation_duration, {y: y_transform, opacity: 0.0})
-    .to(fourth_group[0], animation_duration, {y: 0, opacity: 1.0})
-    
-    //Set a delay before looping
-    .to(fourth_group, 0.0, {delay: animation_delay, y: y_transform, opacity: 0.0})
-
+    return timeline
   }
 
+  $(document).ready(function () {
+    var slide1SvgElements = []
+    _.times(4, function(i) { slide1SvgElements.push("#onboarding_slide_1_encrypted_hello_" + (i+1) + ">g") })  
+    slide1LetterScrambleAnimation = buildLetterScramblingAnimationTimeline (slide1SvgElements)
+    var slide2SvgElements = []
+    _.times(4, function(i) { slide2SvgElements.push("#onboarding_slide_2_encrypted_hello_" + (i+1) + ">g") }) 
+    slide2LetterScrambleAnimation = buildLetterScramblingAnimationTimeline (slide2SvgElements)
 
-  Cryptoloji.states.onboarding.step1 = next_slide(1)
-  Cryptoloji.states.onboarding.step2 = next_slide(2)
-  Cryptoloji.states.onboarding.step3 = next_slide(3)
-  Cryptoloji.states.onboarding.step4 = next_slide(4)
-  Cryptoloji.states.onboarding.step5 = next_slide(5)
-  Cryptoloji.states.onboarding.step6 = next_slide(6)
-  Cryptoloji.states.onboarding.step7 = to_encrypt(7)
+    slide1Timeline = buildTextButtonAnimationTimeline('#onboarding_slide_1_text')
+    slide2Timeline = buildTextButtonAnimationTimeline('#onboarding_slide_2_text')
+
+    slide3Timeline = new TimelineLite({ paused: true })
+      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#onboarding_slide_3_plain_text > g', { opacity: 0 })
+      .set('#onboarding_slide_3_plain_text_bg', { y: -300 })
+      .set('#onboarding_slide_3_text', { opacity: 0 })
+      .to('#onboarding_slide_3_plain_text_bg', 0.5, { ease: Bounce.easeOut, y: 0 })
+      .staggerTo('#onboarding_slide_3_plain_text > g', .02, { opacity: 1.0 }, .02)
+      .to('#onboarding_slide_3_text', 0.1, { delay: 0.3, opacity: 1 })
+      .to('#next_button_onboarding', 0.1, { delay: 0.3, scale: 1, opacity: 1 })
+
+    slide4Timeline = new TimelineLite({ paused: true })
+      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#onboarding_slide_4_plain_text > g', { opacity: 1 })
+      .set('#onboarding_slide_4_emoji_1 > g', { scale: 1.2, opacity: 0 })
+      .set('#onboarding_slide_4_emoji_2 > g', { scale: 1.2, opacity: 0 })
+      .set('#onboarding_slide_4_emoji_3 > g', { scale: 1.2, opacity: 0 })
+      .set('#onboarding_slide_4_emoji_selector', { x: '95rem', opacity: 0 })
+      .set('#onboarding_slide_4_encrypted_emoji_1 > g', {opacity: 0 })
+      .set('#onboarding_slide_4_encrypted_emoji_2 > g', {opacity: 0 })
+      .set('#onboarding_slide_4_encrypted_emoji_3 > g', {opacity: 0 })
+      .set('#onboarding_slide_4_text_tutor', { opacity: 0 })
+      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .to('#onboarding_slide_4_emoji_1 > g', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
+      .to('#onboarding_slide_4_emoji_2 > g', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
+      .to('#onboarding_slide_4_emoji_3 > g', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
+      .to('#onboarding_slide_4_emoji_selector', 0.3, { ease: Bounce.easeOut, x: 0, opacity: 1 })
+      // animate selector 2nd to 1st
+      .to('#onboarding_slide_4_emoji_selector', 0.5, { delay: 0.2, x: '-95rem' })
+      .add(buildScrambleTextAnimation('#onboarding_slide_4_encrypted_emoji_1 > g'))
+      // animate selector 1st to 3rd
+      .add(changeScrambledTextAnimation(3, '#onboarding_slide_4_encrypted_emoji_1', '#onboarding_slide_4_encrypted_emoji_3'))
+      // animate selector 3rd to 2nd
+      .add(changeScrambledTextAnimation(2, '#onboarding_slide_4_encrypted_emoji_3', '#onboarding_slide_4_encrypted_emoji_2'))
+      // show text
+      .to('#onboarding_slide_4_text_tutor', 0.02, { delay: 0.8, opacity: 1 })
+      // show next button
+      .to('#next_button_onboarding', 0.1, { delay: 0.2, scale: 1, opacity: 1 })
+
+    slide5Timeline = new TimelineLite({ paused: true })
+      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#onboarding_slide_5_text', { opacity: 0 })
+      .set('#onboarding_slide_5_plain_text', { opacity: 0 })
+      .set('#onboarding_slide_5_encrypted_emoji_1', { opacity: 0 })
+      .set('#onboarding_slide_5_encryptedemoji_2', { opacity: 0 })
+      .set('#onboarding_slide_5_encrypted_emoji_3', { opacity: 0 })
+      .set('#onboarding_slide_5_delivered_text', { y: 100, opacity: 0 })
+      .set('#slide_5_bubble_white_text_bg', { y: 80, opacity: 0 })
+      .set('#slide_5_bubble_white_text', { opacity: 0 })
+      .set('#slide_5_bubble_white_dots_bg', { y: 100, opacity: 0 })
+      .set('#onboarding_slide_5_encrypted_emoji_'+ chosenKey, {opacity: 1 })
+      .set('#slide_5_bubble_white_dots  ci rcle', {scale: 1.2, opacity: 0 })
+      .to('#onboarding_slide_5_delivered_text', 0.3, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
+      .to('#slide_5_bubble_white_dots_bg', 0.3, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
+      .to('#slide_5_bubble_white_dots > circle', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(1)', 0.05, { delay: 0.5, y: -5 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(2)', 0.05, { y: -5 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(3)', 0.05, { y: -5 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(1)', 0.05, { y: 0 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(2)', 0.05, { y: 0 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(3)', 0.05, { y: 0 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(1)', 0.05, { y: -5 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(2)', 0.05, { y: -5 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(3)', 0.05, { y: -5 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(1)', 0.05, { y: 0 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(2)', 0.05, { y: 0 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(3)', 0.05, { y: 0 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(1)', 0.05, { y: -5 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(2)', 0.05, { y: -5 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(3)', 0.05, { y: -5 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(1)', 0.05, { y: 0 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(2)', 0.05, { y: 0 })
+      .to('#slide_5_bubble_white_dots > circle:nth-child(3)', 0.05, { y: 0 })
+      .to('#slide_5_bubble_white_dots > circle', 0.0, { y: 0, opacity: 0 })
+      .to('#slide_5_bubble_white_dots_bg', 0.3, { ease: Bounce.easeIn, y: -100, opacity: 0 })
+      .to('#slide_5_bubble_white_text_bg', 0.5, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
+      .to('#slide_5_bubble_white_text', 0.5, { opacity: 1 })
+      .to('#onboarding_slide_5_text', 0.5, { opacity: 1 })
+      .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1 })
+
+    slide6Timeline = new TimelineLite({ paused: true })
+      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#onboarding_slide_6_plain_text', { opacity: 0 })
+      .set('#onboarding_slide_6_text', { opacity: 0 })
+      .set('#onboarding_slide_6_encrypted_emoji_1', { opacity: 0 })
+      .set('#onboarding_slide_6_encrypted_emoji_2', { opacity: 0 })
+      .set('#onboarding_slide_6_encrypted_emoji_3', { opacity: 0 })
+      .set('#onboarding_slide_6_delivered_text', { y: 100, opacity: 0 })
+      .set('#onboarding_slide_6_mais_bubble', { y: 100, opacity: 0 })
+      .set('#onboarding_slide_6_mais', { opacity: 0 })
+      .set('#onboarding_slide_6_smile', { y: 100, opacity: 0 })
+      .set('#onboarding_slide_6_smile_content', { opacity: 0 })
+      .set('#onboarding_slide_6_encrypted_emoji_' + chosenKey, { opacity: 1 })
+      .to('#onboarding_slide_6_mais_bubble', 0.5, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
+      .to('#onboarding_slide_6_mais', 0.1, { opacity: 1 })
+      .to('#onboarding_slide_6_delivered_text', 0.2, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
+      .to('#onboarding_slide_6_smile', 0.5, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
+      .to('#onboarding_slide_6_smile_content', 0.1, { opacity: 1 })
+      .to('#onboarding_slide_6_graphic', 0.5, { delay: 0.5, y: -130 })
+      .to('#onboarding_slide_6_text', 0.5, { opacity: 1 })
+      .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1 })
+
+    slide7Timeline = new TimelineLite({ paused: true })
+      .set('.svg_wrapper_pagination', { opacity: 0 })
+      .set('.onboarding_skip_button', { opacity: 0 })
+      .to('#next_button_onboarding', 0.5, { delay: 1, opacity: 1 })
+  })
+
+  Cryptoloji.states.onboarding.step1 = buildSlide(1, animate_slide1)
+  Cryptoloji.states.onboarding.step2 = buildSlide(2, animate_slide2)
+  Cryptoloji.states.onboarding.step3 = buildSlide(3, animate_slide3)
+  Cryptoloji.states.onboarding.step4 = buildSlide(4, animate_slide4)
+  Cryptoloji.states.onboarding.step5 = buildSlide(5, animate_slide5)
+  Cryptoloji.states.onboarding.step6 = buildSlide(6, animate_slide6)
+  Cryptoloji.states.onboarding.step7 = to_encrypt()
 
 
 })(window, window.Cryptoloji); 
