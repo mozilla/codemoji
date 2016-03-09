@@ -108,7 +108,7 @@
     _.times(4, function(i){
       svg_elements.push("#onboarding_slide_1_encrypted_hello_" + (i+1) + ">g")
     })  
-    Cryptoloji.UI.animate_onboarding(svg_elements)
+    wordLetterScrumblingAnimation(svg_elements)
     timeline.clear()
     timeline.set($('#onboarding_slide_1_text'), {opacity: 0})
     timeline.set($('#next_button_onboarding'), {opacity: 0})
@@ -121,7 +121,7 @@
     _.times(4, function(i){
       svg_elements.push("#onboarding_slide_2_encrypted_hello_" + (i+1) + ">g")
     })         
-    Cryptoloji.UI.animate_onboarding(svg_elements)
+    wordLetterScrumblingAnimation(svg_elements)
     timeline.clear()
     timeline.set($('#onboarding_slide_2_text'), {opacity: 0})
     timeline.set($('#next_button_onboarding'), {opacity: 0})
@@ -311,6 +311,87 @@
     // console.log(">>>>>>>>",slide, $('.pagination_emoji>g'))
     TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
     TweenLite.set($('.svg_wrapper_pagination .pagination_emoji_'+slide), {opacity: "1"})
+  }
+
+  // Step1, Step2 multiple word scrambling animation
+  var wordLetterScrumblingAnimationTimeline = null
+  function wordLetterScrumblingAnimation (elements) {
+    var timeline = wordLetterScrumblingAnimationTimeline
+
+    //Prevent istanciating multiple timelines
+    if (!timeline) {
+      timeline = new TimelineLite({onComplete: function() {
+        //loop the animation
+        this.restart()
+      }});
+    }
+
+    //Clear the timeline in case we are creating the animation for a different slide
+    timeline.clear()
+
+    //Duration of a single letter transition
+    var animation_duration = 0.2
+    var animation_delay = .8
+    var y_transform = 20
+    
+    //First svg group containing encrypted letter
+    var first_group = $($(elements[0]))
+    //Second svg group containing encrypted letter
+    var second_group = $($(elements[1]))
+    //Third svg group containing encrypted letter
+    var third_group = $($(elements[2]))
+    //Fourth svg group containing encrypted letter (the same as the third one to get a perfect loop)
+    var fourth_group = $($(elements[3]))
+
+    //Set initial state
+    timeline.set(first_group, {y: -60, opacity: 0.0})
+    //Second encryption letters
+    .set(second_group, {y: -60, opacity: 0.0})
+    //Third encryption letters
+    .set(third_group, {y: 0, opacity: 1.0})
+    //Third encryption letters bis
+    .set(fourth_group, {y: -60, opacity: 0.0})
+
+
+    //First encrypted word animation
+    .to(third_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
+    .to(first_group[4], animation_duration, {y: 0, opacity: 1.0})
+    .to(third_group[3], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(first_group[3], animation_duration, {y: 0, opacity: 1.0})
+    .to(third_group[2], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(first_group[2], animation_duration, {y: 0, opacity: 1.0})
+    .to(third_group[1], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(first_group[1], animation_duration, {y: 0, opacity: 1.0})
+    .to(third_group[0], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(first_group[0], animation_duration, {y: 0, opacity: 1.0})
+    
+    // //Second encrypted word animation
+    .to(first_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
+    .to(second_group[4], animation_duration, {y: 0, opacity: 1.0})
+    .to(first_group[3], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(second_group[3], animation_duration, {y: 0, opacity: 1.0})
+    .to(first_group[2], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(second_group[2], animation_duration, {y: 0, opacity: 1.0})
+    .to(first_group[1], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(second_group[1], animation_duration, {y: 0, opacity: 1.0})
+    .to(first_group[0], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(second_group[0], animation_duration, {y: 0, opacity: 1.0})
+    
+    // //Third encrypted word animation
+    .to(second_group[4], animation_duration, {delay: animation_delay, y: y_transform, opacity: 0.0})
+    .to(fourth_group[4], animation_duration, {y: 0, opacity: 1.0})
+    .to(second_group[3], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(fourth_group[3], animation_duration, {y: 0, opacity: 1.0})
+    .to(second_group[2], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(fourth_group[2], animation_duration, {y: 0, opacity: 1.0})
+    .to(second_group[1], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(fourth_group[1], animation_duration, {y: 0, opacity: 1.0})
+    .to(second_group[0], animation_duration, {y: y_transform, opacity: 0.0})
+    .to(fourth_group[0], animation_duration, {y: 0, opacity: 1.0})
+    
+    //Set a delay before looping
+    .to(fourth_group, 0.0, {delay: animation_delay, y: y_transform, opacity: 0.0})
+
   }
 
 
