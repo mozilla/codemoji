@@ -157,17 +157,18 @@
     slide2Timeline = buildTextButtonAnimationTimeline(1.6, .9, '#onboarding_slide_2_text')
 
     slide3Timeline = new TimelineLite({ paused: true })
-      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#next_button_onboarding', { display: 'none', scale: 1.2, opacity: 0 })
       .set('#onboarding_slide_3_plain_text > g', { opacity: 0 })
       .set('#onboarding_slide_3_plain_text_bg', { y: -300, opacity: 1 })
       .set('#onboarding_slide_3_text', { opacity: 0 })
       .to('#onboarding_slide_3_plain_text_bg', 0.5, { ease: Bounce.easeOut, y: 0 })
       .staggerTo('#onboarding_slide_3_plain_text > g', .05, { opacity: 1.0 }, .1)
       .to('#onboarding_slide_3_text', 0.1, { delay: 0.3, opacity: 1 })
+      .set('#next_button_onboarding', { display: 'block' })
       .to('#next_button_onboarding', 0.1, { delay: 0.3, scale: 1, opacity: 1 })
 
     slide4Timeline = new TimelineLite({ paused: true })
-      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#next_button_onboarding', { display: 'none', scale: 1.2, opacity: 0 })
       .set('#onboarding_slide_4_plain_text > g', { opacity: 1 })
       .set('#onboarding_slide_4_emoji_1 > g', { scale: 1.2, opacity: 0 })
       .set('#onboarding_slide_4_emoji_2 > g', { scale: 1.2, opacity: 0 })
@@ -191,12 +192,13 @@
       // animate selector 3rd to 2nd
       .add(changeScrambledTextAnimation(2, '#onboarding_slide_4_encrypted_emoji_3', '#onboarding_slide_4_encrypted_emoji_2'))
       // show text
+      .set('#next_button_onboarding', { display: 'block' })
       .to('#onboarding_slide_4_text_tutor', 0.02, { opacity: 1 })
       // show next button
       .to('#next_button_onboarding', 0.1, { delay: 0.6, scale: 1, opacity: 1 })
 
     slide5Timeline = new TimelineLite({ paused: true })
-      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#next_button_onboarding', { display: 'none', scale: 1.2, opacity: 0 })
       .set('#onboarding_slide_5_text', { opacity: 0 })
       .set('#onboarding_slide_5_plain_text', { opacity: 0 })
       .set('#onboarding_slide_5_encrypted_emoji_1', { opacity: 0 })
@@ -233,11 +235,12 @@
       .to('#slide_5_bubble_white_dots_bg', 0.3, { ease: Bounce.easeIn, y: -100, opacity: 0 })
       .to('#slide_5_bubble_white_text_bg', 0.5, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
       .to('#slide_5_bubble_white_text', 0.5, { opacity: 1 })
+      .set('#next_button_onboarding', { display: 'block' })
       .to('#onboarding_slide_5_text', 0.5, { opacity: 1 })
       .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1 })
 
     slide6Timeline = new TimelineLite({ paused: true })
-      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#next_button_onboarding', { display: 'none', scale: 1.2, opacity: 0 })
       .set('#onboarding_slide_6_plain_text', { opacity: 0 })
       .set('#onboarding_slide_6_text', { opacity: 0 })
       .set('#onboarding_slide_6_encrypted_emoji_1', { opacity: 0 })
@@ -256,6 +259,7 @@
         new TimelineLite().to('#onboarding_slide_6_smile', 0.5, { delay: 0.8, ease: Bounce.easeOut, y: 0, opacity: 1 })
           .to('#onboarding_slide_6_smile_content', 0.1, { opacity: 1 }),
         new TimelineLite().to('#onboarding_slide_6_text', 0.5, { delay: 1.3, opacity: 1 })
+          .set('#next_button_onboarding', { display: 'block' })
           .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1 }),
         new TimelineLite().to('#onboarding_slide_6_graphic', 0.5, { delay: 1, y: -130 })
       ])
@@ -263,8 +267,9 @@
     slide7EnterTimeline = new TimelineLite({ paused: true })
       .set('.svg_wrapper_pagination', { opacity: 0 })
       .set('.onboarding_skip_button', { opacity: 0 })
-      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#next_button_onboarding', { display: 'none', scale: 1.2, opacity: 0 })
       .to('#onboarding_slide7_text > text', 1, { delay: 0.5, opacity: 1 })
+      .set('#next_button_onboarding', { display: 'block' })
       .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1, onComplete: function() {
         $('#next_button_onboarding').text('Go for it!').click(function(){
           TweenLite.to($('[slide-num="7"]'), 1, {y: '-100%', onComplete: function() {
