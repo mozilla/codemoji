@@ -203,6 +203,9 @@
   .decryption .main_content_top_input {
     line-height: 120%;
   }
+  .decryption .main_content_top{
+    background-color: #FAFAFA;
+  }
   .welcome_text{
     font-family: "fira_sans";
     font-size: 140%;

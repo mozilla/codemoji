@@ -34,13 +34,9 @@ div#decryptHeader{
   min-height: 5rem;
 }
 
-/*.decryption .main_content_bottom{ 
-  background-color: #B3B3B3;
-}
-
 .decryption .main_content_top{
-  background-color: #4D4D4D;
-}*/
+  background-color: #283344;
+}
 
 .encryption .main_content_bottom{ 
   background-color: #283344;
@@ -59,7 +55,7 @@ div#decryptHeader{
 }
 
 .decryption .main_keyslider{
-  background-color: #283344;
+  background-color: #FAFAFA;
   color: #FAFAFA;
   transition: .5s width;
 }
