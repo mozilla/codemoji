@@ -13,7 +13,7 @@
   var slide4Timeline = null
   var slide5Timeline = null
   var slide6Timeline = null
-  var slide7Timeline = null
+  var slide7EnterTimeline = null
   var slide2EnterTimeline = null
   
   // 
@@ -24,7 +24,7 @@
     enter: function () {
       // go to step1 if we are headering to root state
       if (Cryptoloji.stateman.current.name === 'onboarding') {
-        Cryptoloji.stateman.go('onboarding.step4')
+        Cryptoloji.stateman.go('onboarding.step6')
       }
 
       // display cross-slide elements
@@ -54,33 +54,6 @@
         $('[slide-num="'+n+'"]').removeClass('section-show')
       }
     }
-  }
-
-  function to_encrypt () {
-    return {
-      enter: function () {
-        slide7Timeline.play()
-        $('[slide-num="7"]').addClass('section-show')
-        $('#next_button_onboarding').text('Go for it!').click(function(){
-          TweenLite.to($('[slide-num="7"]'), 1, {y: '-100%', onComplete: function() {
-            TweenLite.to('#next_button_onboarding', 0, { opacity: 0 })
-            Cryptoloji.stateman.go('encrypt')
-          }})
-        })
-      },
-      leave: function () {
-        $('[slide-num="7"]').removeClass('section-show')
-        Cryptoloji.stateman.emit('header:hide')
-      }
-    }
-  }
-
-  function animate_slide5() {
-    slide5Timeline.play()
-  }
-
-  function animate_slide6() {
-    slide6Timeline.play()
   }
 
   function paginationLogic (slide) {
@@ -296,19 +269,30 @@
       .set('#onboarding_slide_6_smile', { y: 100, opacity: 0 })
       .set('#onboarding_slide_6_smile_content', { opacity: 0 })
       .set('#onboarding_slide_6_encrypted_emoji_' + chosenKey, { opacity: 1 })
-      .to('#onboarding_slide_6_mais_bubble', 0.5, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
-      .to('#onboarding_slide_6_mais', 0.1, { opacity: 1 })
-      .to('#onboarding_slide_6_delivered_text', 0.2, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
-      .to('#onboarding_slide_6_smile', 0.5, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 })
-      .to('#onboarding_slide_6_smile_content', 0.1, { opacity: 1 })
-      .to('#onboarding_slide_6_graphic', 0.5, { delay: 0.5, y: -130 })
-      .to('#onboarding_slide_6_text', 0.5, { opacity: 1 })
-      .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1 })
+      .add([
+        new TimelineLite().to('#onboarding_slide_6_mais_bubble', 0.7, { ease: Bounce.easeOut, y: 0, opacity: 1 })
+          .to('#onboarding_slide_6_mais', 0.4, { opacity: 1 }),
+        new TimelineLite().to('#onboarding_slide_6_delivered_text', 0.5, { delay: 0.5, ease: Bounce.easeOut, y: 0, opacity: 1 }),
+        new TimelineLite().to('#onboarding_slide_6_smile', 0.5, { delay: 0.8, ease: Bounce.easeOut, y: 0, opacity: 1 })
+          .to('#onboarding_slide_6_smile_content', 0.1, { opacity: 1 }),
+        new TimelineLite().to('#onboarding_slide_6_text', 0.5, { delay: 1.3, opacity: 1 })
+          .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1 }),
+        new TimelineLite().to('#onboarding_slide_6_graphic', 0.5, { delay: 1, y: -130 })
+      ])
 
-    slide7Timeline = new TimelineLite({ paused: true })
+    slide7EnterTimeline = new TimelineLite({ paused: true })
       .set('.svg_wrapper_pagination', { opacity: 0 })
       .set('.onboarding_skip_button', { opacity: 0 })
-      .to('#next_button_onboarding', 0.5, { delay: 1, opacity: 1 })
+      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .to('#onboarding_slide7_text > text', 1, { delay: 0.5, opacity: 1 })
+      .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1, onComplete: function() {
+        $('#next_button_onboarding').text('Go for it!').click(function(){
+          TweenLite.to($('[slide-num="7"]'), 1, {y: '-100%', onComplete: function() {
+            TweenLite.to('#next_button_onboarding', 0, { opacity: 0 })
+            Cryptoloji.stateman.go('encrypt')
+          }})
+        })
+      } })
 
     slide2EnterTimeline = new TimelineLite({ paused: true })
       .to('#onboarding_slide_2_encrypted_hello_3 > g', 0.35, { opacity: 1, onComplete: function() {
@@ -395,6 +379,7 @@
       slide3Timeline.play()
     },
     leave: function() {
+      $('[slide-num="3"]').removeClass('section-show')
     }
   }
 
@@ -440,9 +425,51 @@
     }
   }
 
-  Cryptoloji.states.onboarding.step5 = buildSlide(5, animate_slide5)
-  Cryptoloji.states.onboarding.step6 = buildSlide(6, animate_slide6)
-  Cryptoloji.states.onboarding.step7 = to_encrypt()
+  Cryptoloji.states.onboarding.step5 = {
+    enter: function() {
+      commonSlideEnterBehaviour(5)
+      slide5Timeline.play()
+    },
+    leave: function() {
+      $('[slide-num="5"]').removeClass('section-show')
+    }
+  }
+
+  Cryptoloji.states.onboarding.step6 = {
+    enter: function() {
+      commonSlideEnterBehaviour(6)
+      slide6Timeline.play()
+    },
+    leave: function() {
+      return new Promise(function(resolve, reject) {
+        var fade_duration = 0.5
+        new TimelineLite()
+          .to('#onboarding_slide_6_mais_bubble', fade_duration, { opacity: 0 })
+          .to('#onboarding_slide_6_mais',fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_6_delivered_text', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_6_smile', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_6_smile_content', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_6_graphic', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_6_text', fade_duration, { opacity: 0 }, 0)
+          .to('#next_button_onboarding', fade_duration, { opacity: 0, onComplete: function() {
+            $('[slide-num="6"]').removeClass('section-show')
+            resolve()
+          } }, 0)
+          .set('#onboarding_slide7_text > text', { opacity: 0 })
+          .set('#next_button_onboarding', { opacity: 0 })
+      })
+    }
+  }
+  Cryptoloji.states.onboarding.step7 = {
+    enter: function () {
+      commonSlideEnterBehaviour(7)
+      slide7EnterTimeline.play()
+    },
+    leave: function () {
+      $('[slide-num="7"]').removeClass('section-show')
+      Cryptoloji.stateman.emit('header:hide')
+    }
+  }
 
 
 })(window, window.Cryptoloji); 
