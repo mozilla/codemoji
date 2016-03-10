@@ -18,7 +18,7 @@
 		<i:pgfRef  xlink:href="#adobe_illustrator_pgf">
 		</i:pgfRef>
 	</foreignObject>
-	<g i:extraneous="self">
+	<g id="onboarding_slide7_text" i:extraneous="self">
 		<polyline fill="#283344" points="3.8,700 3.8,0 396.9,0 396.9,700 		"/>
 		<text transform="matrix(1 0 0 1 59.9534 294.5773)" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="26">THAT&apos;S IT. NOW YOU </text>
 		<text transform="matrix(1 0 0 1 83.3528 325.7775)" fill="#FFFFFF" font-family="'FiraMono-Medium'" font-size="26">KNOW THE BASICS </text>
