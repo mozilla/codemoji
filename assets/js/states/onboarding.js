@@ -24,7 +24,7 @@
     enter: function () {
       // go to step1 if we are headering to root state
       if (Cryptoloji.stateman.current.name === 'onboarding') {
-        Cryptoloji.stateman.go('onboarding.step1')
+        Cryptoloji.stateman.go('onboarding.step4')
       }
 
       // display cross-slide elements
@@ -113,17 +113,20 @@
         new TimelineLite().staggerTo('#onboarding_slide_4_plain_text > g', 0.5, {  opacity: 0 }, 0.05),
       ], '+=0', 'start')
   }
+  
   function changeScrambledTextAnimation (chosenKey, previousEmojiGroup, nextEmojiGroup) {
     var selectorX = '0'
     if (chosenKey === 1) selectorX = '-95rem'
     else if (chosenKey === 3) selectorX = '95rem'
 
     return new TimelineLite()
-      .to('#onboarding_slide_4_emoji_selector', 0.5, { delay: 0.2, x: selectorX })
+      
       .add([
+        new TimelineLite().to('#onboarding_slide_4_emoji_selector', 0.15, { ease: Expo.easeOut, x: selectorX }),
         new TimelineLite().staggerTo($(previousEmojiGroup + ' > g').get().reverse(), 0.5, { opacity: 0 }, 0.05),
         buildScrambleTextAnimation(nextEmojiGroup + ' > g')
       ], '+=0', 'start')
+      
   }
 
   function buildTextButtonAnimationTimeline (start_delay_text, start_delay_button, onboardingText) {
@@ -242,16 +245,18 @@
       .to('#onboarding_slide_4_emoji_1 > g', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
       .to('#onboarding_slide_4_emoji_2 > g', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
       .to('#onboarding_slide_4_emoji_3 > g', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
-      .to('#onboarding_slide_4_emoji_selector', 0.3, { ease: Bounce.easeOut, x: 0, opacity: 1 })
+      .to('#onboarding_slide_4_emoji_selector', 0.3, { ease: Expo.easeOut, x: 0, opacity: 1 })
       // animate selector 2nd to 1st
-      .to('#onboarding_slide_4_emoji_selector', 0.5, { delay: 0.2, x: '-95rem' })
-      .add(buildScrambleTextAnimation('#onboarding_slide_4_encrypted_emoji_1 > g'))
+      .add([
+        new TimelineLite().to('#onboarding_slide_4_emoji_selector', 0.25, { delay: 0.2, x: '-95rem' }),
+        buildScrambleTextAnimation('#onboarding_slide_4_encrypted_emoji_1 > g')
+      ])
       // animate selector 1st to 3rd
       .add(changeScrambledTextAnimation(3, '#onboarding_slide_4_encrypted_emoji_1', '#onboarding_slide_4_encrypted_emoji_3'))
       // animate selector 3rd to 2nd
       .add(changeScrambledTextAnimation(2, '#onboarding_slide_4_encrypted_emoji_3', '#onboarding_slide_4_encrypted_emoji_2'))
       // show text
-      .to('#onboarding_slide_4_text_tutor', 0.02, { delay: 0.8, opacity: 1 })
+      .to('#onboarding_slide_4_text_tutor', 0.02, { opacity: 1 })
       // show next button
       .to('#next_button_onboarding', 0.1, { delay: 0.2, scale: 1, opacity: 1 })
 
