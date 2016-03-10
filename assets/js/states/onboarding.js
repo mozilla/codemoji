@@ -139,12 +139,12 @@
       ], '+=0', 'start')
   }
 
-  function buildTextButtonAnimationTimeline (onboardingText) {
+  function buildTextButtonAnimationTimeline (start_delay_text, start_delay_button, onboardingText) {
     return new TimelineLite({ paused: true })
       .set(onboardingText, { opacity: 0 })
       .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
-      .to(onboardingText, .5, { delay: 2.8, opacity: 1 })
-      .to('#next_button_onboarding', 0.1, { delay: 2.5, scale: 1, opacity: 1 })
+      .to(onboardingText, .5, { delay: start_delay_text, opacity: 1 })
+      .to('#next_button_onboarding', 0.1, { delay: start_delay_button, scale: 1, opacity: 1 })
   }
 
   function buildLetterScramblingAnimationTimeline (elements) {
@@ -157,8 +157,8 @@
     })
 
     //Duration of a single letter transition
-    var animation_duration = 0.2
-    var animation_delay = .8
+    var animation_duration = 0.1
+    var animation_delay = .5
     var y_transform = 20
     
     //First svg group containing encrypted letter
@@ -227,8 +227,8 @@
     _.times(4, function(i) { slide2SvgElements.push("#onboarding_slide_2_encrypted_hello_" + (i+1) + ">g") }) 
     slide2LetterScrambleAnimation = buildLetterScramblingAnimationTimeline (slide2SvgElements)
 
-    slide1Timeline = buildTextButtonAnimationTimeline('#onboarding_slide_1_text')
-    slide2Timeline = buildTextButtonAnimationTimeline('#onboarding_slide_2_text')
+    slide1Timeline = buildTextButtonAnimationTimeline(1.6, .9, '#onboarding_slide_1_text')
+    slide2Timeline = buildTextButtonAnimationTimeline(1.6, .9, '#onboarding_slide_2_text')
 
     slide3Timeline = new TimelineLite({ paused: true })
       .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
@@ -337,7 +337,41 @@
       .to('#next_button_onboarding', 0.5, { delay: 1, opacity: 1 })
   })
 
-  Cryptoloji.states.onboarding.step1 = buildSlide(1, animate_slide1)
+  function commonSlideEnterBehaviour(n) {
+    // display current slide content
+    $('[slide-num="'+n+'"]').addClass('section-show')
+    // display header
+    Cryptoloji.stateman.emit('header:show')
+    // correct assign to-state for next button
+    $('#next_button_onboarding').attr('to-state', 'onboarding.step'+(n+1))
+    // update pagination
+    paginationLogic(n)
+  }
+
+  //Cryptoloji.states.onboarding.step1 = buildSlide(1, animate_slide1)
+  Cryptoloji.states.onboarding.step1 = {
+    enter: function() {
+      commonSlideEnterBehaviour(1)
+      slide1LetterScrambleAnimation.play()
+      slide1Timeline.play()
+    },
+    leave: function() {
+      return new Promise(function (resolve, reject) {
+        var fade_duration = 0.5
+        new TimelineLite()
+          .to('#onboarding_slide_1_encrypted_hello_1', fade_duration, { opacity: 0 })
+          .to('#onboarding_slide_1_encrypted_hello_2', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_1_encrypted_hello_3', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_1_encrypted_hello_4', fade_duration, { opacity: 0 }, 0)
+          .to('#next_button_onboarding', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_1_text', fade_duration, { opacity: 0 , onComplete: function() {
+            $('[slide-num="1"]').removeClass('section-show')
+            resolve()
+          }}, 0)
+      })
+    }
+  }
+
   Cryptoloji.states.onboarding.step2 = buildSlide(2, animate_slide2)
   Cryptoloji.states.onboarding.step3 = buildSlide(3, animate_slide3)
   Cryptoloji.states.onboarding.step4 = buildSlide(4, animate_slide4)
