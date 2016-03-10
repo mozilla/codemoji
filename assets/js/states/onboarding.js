@@ -14,6 +14,7 @@
   var slide5Timeline = null
   var slide6Timeline = null
   var slide7Timeline = null
+  var slide2EnterTimeline = null
   
   // 
   // go directly to step 1
@@ -74,14 +75,8 @@
     }
   }
 
-  function animate_slide1() {
-    slide1LetterScrambleAnimation.play()
-    slide1Timeline.play()
-  }
-
   function animate_slide2() {
-    slide2LetterScrambleAnimation.play()
-    slide2Timeline.play()
+    
   }
 
   function animate_slide3() {
@@ -335,6 +330,15 @@
       .set('.svg_wrapper_pagination', { opacity: 0 })
       .set('.onboarding_skip_button', { opacity: 0 })
       .to('#next_button_onboarding', 0.5, { delay: 1, opacity: 1 })
+
+    slide2EnterTimeline = new TimelineLite({ paused: true })
+      // .to('#onboarding_slide_2_encrypted_hello_1', 0.35, { opacity: 1 })
+      // .to('#onboarding_slide_2_encrypted_hello_2', 0.35, { opacity: 1 }, 0)
+      // .to('#onboarding_slide_2_encrypted_hello_3', 0.35, { opacity: 1 }, 0)
+      .to('#onboarding_slide_2_encrypted_hello_3 > g', 0.35, { opacity: 1, onComplete: function() {
+        slide2LetterScrambleAnimation.play()
+        slide2Timeline.play()
+      } }, 0)
   })
 
   function commonSlideEnterBehaviour(n) {
@@ -368,11 +372,27 @@
             $('[slide-num="1"]').removeClass('section-show')
             resolve()
           }}, 0)
+          //We have to set the opacity of the next slide here otherwise strange effects happen
+          .set('#onboarding_slide_2_encrypted_hello_1 > g', { opacity: 0 })
+          .set('#onboarding_slide_2_encrypted_hello_2 > g', { opacity: 0 })
+          .set('#onboarding_slide_2_encrypted_hello_3 > g', { opacity: 0 })
+          .set('#onboarding_slide_2_encrypted_hello_4 > g', { opacity: 0 })
+          .set('#onboarding_slide_2_text', { opacity: 0 })
       })
     }
   }
 
-  Cryptoloji.states.onboarding.step2 = buildSlide(2, animate_slide2)
+  //Cryptoloji.states.onboarding.step2 = buildSlide(2, animate_slide2)
+  Cryptoloji.states.onboarding.step2 = {
+    enter: function() {
+      commonSlideEnterBehaviour(2)
+      slide2EnterTimeline.play()
+      
+    },
+    leave: function() {
+
+    }
+  }
   Cryptoloji.states.onboarding.step3 = buildSlide(3, animate_slide3)
   Cryptoloji.states.onboarding.step4 = buildSlide(4, animate_slide4)
   Cryptoloji.states.onboarding.step5 = buildSlide(5, animate_slide5)
