@@ -271,7 +271,7 @@
       .to('#onboarding_slide7_text > text', 1, { delay: 0.5, opacity: 1 })
       .set('#next_button_onboarding', { display: 'block' })
       .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1, onComplete: function() {
-        $('#next_button_onboarding').text('Go for it!').click(function(){
+        $('#next_button_onboarding').click(function(){
           TweenLite.to($('[slide-num="7"]'), 1, {y: '-100%', onComplete: function() {
             TweenLite.to('#next_button_onboarding', 0, { opacity: 0 })
             Cryptoloji.stateman.go('encrypt')
@@ -448,6 +448,7 @@
   Cryptoloji.states.onboarding.step7 = {
     enter: function () {
       commonSlideEnterBehaviour(7)
+      $('#next_button_onboarding').text('Go for it!')
       slide7EnterTimeline.play()
     },
     leave: function () {
