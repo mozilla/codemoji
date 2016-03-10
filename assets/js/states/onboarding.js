@@ -24,7 +24,7 @@
     enter: function () {
       // go to step1 if we are headering to root state
       if (Cryptoloji.stateman.current.name === 'onboarding') {
-        Cryptoloji.stateman.go('onboarding.step6')
+        Cryptoloji.stateman.go('onboarding.step1')
       }
 
       // display cross-slide elements
