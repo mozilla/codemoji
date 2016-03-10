@@ -243,3 +243,10 @@ input.share_key_emoji-item:value{
   margin: 0 .5rem;
   position: relative;
 }
+
+.share_copytoclipboardcta {
+  outline: none;
+  font-size: 1.3rem;
+  padding: 0.2rem 1.1rem;
+  margin-left: 0.3rem;
+}

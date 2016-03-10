@@ -2,6 +2,7 @@
   'use strict'
 
   var linkClipboard = null
+  var linkClipboardCta = null
   var keyClipboard = null
 
   Cryptoloji.states.share = {
@@ -67,29 +68,39 @@
   }
 
   function copyLinkToClipboardHandler () {
-    linkClipboard = new Clipboard('#share_copytoclipboard')
-
-    linkClipboard.on('success', function(e) {
+    function _success (e) {
       e.clearSelection()
 
       // give feedback in place
-      var oldVal = $(e.trigger).val()
-      $(e.trigger).val('COPIED!')
-      $(e.trigger).css({scale:1.25})
-      $(e.trigger).transition({scale:1, duration:900, easing:'easeInOutExpo'})
+      var oldVal = $('#share_copytoclipboard').val()
+      $('#share_copytoclipboard').val('COPIED!')
+      $('#share_copytoclipboard').css({scale:1.25})
+      $('#share_copytoclipboard').transition({scale:1, duration:900, easing:'easeInOutExpo'})
       setTimeout(function () {
-        $(e.trigger).val(oldVal)
+        $('#share_copytoclipboard').val(oldVal)
       }, 1000)
-    });
-
-    linkClipboard.on('error', function(e) {
-      console.warn('using copy fallback')
-      console.warn('Action:', e.action)
-      console.warn('Trigger:', e.trigger)
+    }
+    function _error (e) {
+      // console.warn('using copy fallback')
+      // console.warn('Action:', e.action)
+      // console.warn('Trigger:', e.trigger)
       // select as fallback
-      var textVal = $(e.trigger).val()
+      var textVal = $('#share_copytoclipboard').val()
       window.prompt('Copy the link', textVal)
-    });
+    }
+
+    linkClipboard = new Clipboard('#share_copytoclipboard')
+    linkClipboardCta = new Clipboard('#share_copytoclipboardcta', {
+      text: function(trigger) {
+        // make sure to return proper content
+        return $('#share_copytoclipboard').attr('data-clipboard-text')
+      }
+    })
+
+    linkClipboard.on('success', _success)
+    linkClipboardCta.on('success', _success)
+    linkClipboard.on('error', _error)
+    linkClipboardCta.on('error', _error)
   }
 
   function copyKeyToClipboardHandler () {
@@ -107,10 +118,10 @@
     });
 
     keyClipboard.on('error', function(e) {
-      console.log('error', e)
-      console.warn('using copy fallback')
-      console.warn('Action:', e.action)
-      console.warn('Trigger:', e.trigger)
+      // console.log('error', e)
+      // console.warn('using copy fallback')
+      // console.warn('Action:', e.action)
+      // console.warn('Trigger:', e.trigger)
       // select as fallback
       var keyVal = $(e.trigger).attr('data-clipboard-text')
       window.prompt('Copy the emoji', keyVal)
@@ -119,16 +130,12 @@
 
   function fillLinkForClipboardCopy () {
     // fill copy to clipboard link input
-    // first store message and key
-    Cryptoloji.storage.set('message', Cryptoloji.current.output)
-    Cryptoloji.storage.set('key', Cryptoloji.current.key)
-    // create URL
-    var uri = new YouAreI(Cryptoloji.storage.getPersistedURL())
-    uri.fragment('/landing')
-    var shareURI = uri.toString()
-    // fill link
-    $('#share_copytoclipboard').attr('data-clipboard-text', shareURI)
-    $('#share_copytoclipboard').val(shareURI)
+    Cryptoloji.Api.getShortenedLink()
+      .then(function (shareURI) {    
+        // fill link
+        $('#share_copytoclipboard').attr('data-clipboard-text', shareURI)
+        $('#share_copytoclipboard').val(shareURI.replace('http://', ''))
+      })
   }
 
   function fillKeyForClipboardCopy () {

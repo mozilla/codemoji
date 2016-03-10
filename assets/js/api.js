@@ -1,24 +1,27 @@
 ;(function (window, Cryptoloji, $, undefined) {
 
-  function getMessage (id) {
-    return Q.promise(function (resolve, reject) {
-      var url = 'backend' + escape(id)
-      url = 'backend/GET-message-id.json' // only for DEV
-      $.get(url)
-        .done(function (result) {
-          // console.log(result)
-          CryptoLib.generateEmojiSubsetFrom(result.key)
-          resolve(result)
-        })
-        .fail(function () {
-          console.error(this)
-          reject()
-        })
-    })
+  function getShortenedLink () {
+    var deferred = jQuery.Deferred()
+
+    // store message and key for persistence
+    Cryptoloji.storage.set('message', Cryptoloji.current.output)
+    Cryptoloji.storage.set('key', Cryptoloji.current.key)
+    // create URL
+    var uri = new YouAreI(Cryptoloji.storage.getPersistedURL())
+    uri.fragment('/landing')
+    // get URL as string
+    var shareURI = uri.toString()
+
+    // shareURI should be sent to bit.ly to be shortened
+
+    //deferred.resolve('http://bit.ly/1M8Iuj1') // should be shortened shareURI
+    deferred.resolve(shareURI)
+
+    return deferred.promise()
   }
 
   Cryptoloji.Api = {
-    getMessage: getMessage
+    getShortenedLink: getShortenedLink
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.Q); 
