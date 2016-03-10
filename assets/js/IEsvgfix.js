@@ -50,27 +50,17 @@
           var fixHeight = $wrapper.attr('iefix-height') !== undefined
 
           if (!fixWidth && !fixHeight)
-            fixWidth = true
+            fixHeight = true
 
           console.log(fixWidth, fixHeight)
+          console.log(svgWidth, svgHeight)
 
-          if (fixWidth) {
-            $wrapper.css('width', wrapperHeight * svgWidth / svgHeight)
-          } else if (fixHeight) {
+          if (fixHeight) {
             $wrapper.css('height', wrapperWidth * svgHeight / svgWidth)
+          } else if (fixWidth) {
+            $wrapper.css('width', wrapperHeight * svgWidth / svgHeight)
           }
-
-          // var minhw = $wrapper.css("min-height")
-          // var minww = $wrapper.css("min-width")
-          // if(minhw === "auto"){
-          //   $wrapper.css("height", wrapperWidth * svgHeight / svgWidth)
-          // } else {
-          //   $wrapper.css("width", parseInt(minhw,10) * svgWidth / svgHeight)
-          //   $wrapper.css("height", parseInt(minhw,10))
-          //   console.warn(parseInt(minhw,10) * svgWidth / svgHeight)
-          // }
         }
-            
       })
     }
     $(document).ready(function () { fixSvgDimensions() })

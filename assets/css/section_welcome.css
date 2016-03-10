@@ -31,6 +31,10 @@
   min-height: 10rem;
 }
 
+.svg_wrapper_welcome_footer_icon{
+  width: 3rem;
+}
+
 .svg_wrapper_header_name{
   width: 20rem;
 }
