@@ -223,7 +223,7 @@
       .set('#onboarding_slide_3_plain_text_bg', { y: -300, opacity: 1 })
       .set('#onboarding_slide_3_text', { opacity: 0 })
       .to('#onboarding_slide_3_plain_text_bg', 0.5, { ease: Bounce.easeOut, y: 0 })
-      .staggerTo('#onboarding_slide_3_plain_text > g', .02, { opacity: 1.0 }, .02)
+      .staggerTo('#onboarding_slide_3_plain_text > g', .05, { opacity: 1.0 }, .1)
       .to('#onboarding_slide_3_text', 0.1, { delay: 0.3, opacity: 1 })
       .to('#next_button_onboarding', 0.1, { delay: 0.3, scale: 1, opacity: 1 })
 
