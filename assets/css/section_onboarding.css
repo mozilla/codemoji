@@ -6,6 +6,12 @@
 .svg_wrapper_onboarding{
   width: 100%;
   height: 100%;
+
+  padding-bottom:50px;
+}
+
+.svg_wrapper_onboarding > svg{
+  width:100%;
 }
 
 .onboarding_skip_button{

@@ -272,8 +272,9 @@
       .set('#next_button_onboarding', { display: 'block' })
       .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1, onComplete: function() {
         $('#next_button_onboarding').click(function(){
-          TweenLite.to($('[slide-num="7"]'), 1, {y: '-100%', onComplete: function() {
-            TweenLite.to('#next_button_onboarding', 0, { opacity: 0 })
+
+          $('#next_button_onboarding').css({opacity:0})
+          $('[slide-num="7"]').transition({duration:750, y:-$(document).height(), easing:'easeInOutExpo', complete:function(){
             Cryptoloji.stateman.go('encrypt')
           }})
         })
