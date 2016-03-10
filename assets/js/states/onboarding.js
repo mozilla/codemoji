@@ -75,14 +75,6 @@
     }
   }
 
-  function animate_slide2() {
-    
-  }
-
-  function animate_slide3() {
-    slide3Timeline.play()
-  }
-
   function animate_slide4() {
     slide4Timeline.play()
 
@@ -228,7 +220,7 @@
     slide3Timeline = new TimelineLite({ paused: true })
       .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
       .set('#onboarding_slide_3_plain_text > g', { opacity: 0 })
-      .set('#onboarding_slide_3_plain_text_bg', { y: -300 })
+      .set('#onboarding_slide_3_plain_text_bg', { y: -300, opacity: 1 })
       .set('#onboarding_slide_3_text', { opacity: 0 })
       .to('#onboarding_slide_3_plain_text_bg', 0.5, { ease: Bounce.easeOut, y: 0 })
       .staggerTo('#onboarding_slide_3_plain_text > g', .02, { opacity: 1.0 }, .02)
@@ -332,9 +324,6 @@
       .to('#next_button_onboarding', 0.5, { delay: 1, opacity: 1 })
 
     slide2EnterTimeline = new TimelineLite({ paused: true })
-      // .to('#onboarding_slide_2_encrypted_hello_1', 0.35, { opacity: 1 })
-      // .to('#onboarding_slide_2_encrypted_hello_2', 0.35, { opacity: 1 }, 0)
-      // .to('#onboarding_slide_2_encrypted_hello_3', 0.35, { opacity: 1 }, 0)
       .to('#onboarding_slide_2_encrypted_hello_3 > g', 0.35, { opacity: 1, onComplete: function() {
         slide2LetterScrambleAnimation.play()
         slide2Timeline.play()
@@ -390,10 +379,39 @@
       
     },
     leave: function() {
+      return new Promise(function(resolve, reject) {
+        var fade_duration = 0.5
+        new TimelineLite()
+          .to('#onboarding_slide_2_hello', fade_duration, { opacity: 0 })
+          .to('#onboarding_slide_2_lines', fade_duration, { opacity: 0}, 0)
+          .to('#onboarding_slide_2_encrypted_hello_1', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_2_encrypted_hello_2', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_2_encrypted_hello_3', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_2_encrypted_hello_4', fade_duration, { opacity: 0 }, 0)
+          .to('#next_button_onboarding', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_2_text', fade_duration, { opacity: 0 , onComplete: function() {
+            $('[slide-num="2"]').removeClass('section-show')
+            resolve()
+          }}, 0)
+          .set('#onboarding_slide_3_plain_text > g', { opacity: 0 })
+          .set('#onboarding_slide_3_plain_text_bg', { opacity: 0 })
+          .set('#onboarding_slide_3_text', { opacity: 0 })
+          
+      })
+    }
+  }
+  
+  //Cryptoloji.states.onboarding.step3 = buildSlide(3, animate_slide3)
+  Cryptoloji.states.onboarding.step3 = {
+    enter: function() {
+      commonSlideEnterBehaviour(3)
+      slide3Timeline.play()
+    },
+    leave: function() {
 
     }
   }
-  Cryptoloji.states.onboarding.step3 = buildSlide(3, animate_slide3)
+
   Cryptoloji.states.onboarding.step4 = buildSlide(4, animate_slide4)
   Cryptoloji.states.onboarding.step5 = buildSlide(5, animate_slide5)
   Cryptoloji.states.onboarding.step6 = buildSlide(6, animate_slide6)
