@@ -29,7 +29,8 @@
   overflow: hidden;
 }
 
-div#encryptHeader{
+div#encryptHeader,
+div#decryptHeader{
   min-height: 5rem;
 }
 
