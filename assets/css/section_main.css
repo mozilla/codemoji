@@ -291,6 +291,7 @@ div#decryptHeader{
 
 .decryption .main_content_top_input{
   padding: 0 .7rem 1rem .7rem;
+  margin-top: 3.2rem;
 }
 
 .main_content_bottom_input{
@@ -302,6 +303,7 @@ div#decryptHeader{
 }
 
 .main_content_bottom_input.placeholdit {
+  line-height: 109%;
   /*opacity: .5;*/
 }
 .main_content_bottom_input.placeholdit:after {
