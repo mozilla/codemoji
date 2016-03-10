@@ -29,6 +29,10 @@
   overflow: hidden;
 }
 
+div#encryptHeader{
+  min-height: 5rem;
+}
+
 /*.decryption .main_content_bottom{ 
   background-color: #B3B3B3;
 }

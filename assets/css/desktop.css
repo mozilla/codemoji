@@ -19,7 +19,8 @@
   }
 
   .svg_wrapper_header{
-    height: 7rem;
+    width: 22rem;
+    margin: 2rem 0;
   }
   .svg_wrapper_header > svg{
     width: 100%;
