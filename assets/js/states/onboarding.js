@@ -36,26 +36,6 @@
     }
   }
 
-  function buildSlide (n, animateFn) {
-    return {
-      enter: function () {
-        // display current slide content
-        $('[slide-num="'+n+'"]').addClass('section-show')
-        // display header
-        Cryptoloji.stateman.emit('header:show')
-        // correct assign to-state for next button
-        $('#next_button_onboarding').attr('to-state', 'onboarding.step'+(n+1))
-        // update pagination
-        paginationLogic(n)
-        // run slide animate function
-        animateFn()
-      },
-      leave: function () {
-        $('[slide-num="'+n+'"]').removeClass('section-show')
-      }
-    }
-  }
-
   function paginationLogic (slide) {
     TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
     TweenLite.set($('.svg_wrapper_pagination .pagination_emoji_'+slide), {opacity: "1"})
@@ -197,7 +177,6 @@
       .set('#onboarding_slide_4_encrypted_emoji_2 > g', {opacity: 0 })
       .set('#onboarding_slide_4_encrypted_emoji_3 > g', {opacity: 0 })
       .set('#onboarding_slide_4_text_tutor', { opacity: 0 })
-      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
       .to('#onboarding_slide_4_emoji_1 > g', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
       .to('#onboarding_slide_4_emoji_2 > g', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
       .to('#onboarding_slide_4_emoji_3 > g', 0.3, { ease: Bounce.easeOut, scale: 1, opacity: 1 })
