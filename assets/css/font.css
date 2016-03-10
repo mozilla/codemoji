@@ -205,13 +205,13 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 
 .mozilla_button{
   font-family: 'fira_sans';
-  font-size: 18px;
+  font-size: 1.8rem;
   background-color: #f46060;
   border: none;
   color: #fff;
-  padding: 5px 37px;
+  padding: 0.5rem 3.7rem;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 2.5rem;
   -webkit-transition: all .5s ease-in-out 0s;
   transition: all .2s ease-in-out 0s;
   cursor: pointer;
