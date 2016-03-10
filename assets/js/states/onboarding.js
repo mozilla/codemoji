@@ -75,24 +75,6 @@
     }
   }
 
-  function animate_slide4() {
-    slide4Timeline.play()
-
-    // Playground on click events
-    $('#onboarding_slide_4_emoji_1').on('click', function() {
-      changeScrambledTextAnimation(1, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_1')
-      chosenKey = 1
-    })
-    $('#onboarding_slide_4_emoji_2').on('click', function() {
-      changeScrambledTextAnimation(2, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_2')
-      chosenKey = 2
-    })
-    $('#onboarding_slide_4_emoji_3').on('click', function() {
-      changeScrambledTextAnimation(3, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_3')
-      chosenKey = 3
-    })
-  }
-
   function animate_slide5() {
     slide5Timeline.play()
   }
@@ -113,7 +95,7 @@
         new TimelineLite().staggerTo('#onboarding_slide_4_plain_text > g', 0.5, {  opacity: 0 }, 0.05),
       ], '+=0', 'start')
   }
-  
+
   function changeScrambledTextAnimation (chosenKey, previousEmojiGroup, nextEmojiGroup) {
     var selectorX = '0'
     if (chosenKey === 1) selectorX = '-95rem'
@@ -258,7 +240,7 @@
       // show text
       .to('#onboarding_slide_4_text_tutor', 0.02, { opacity: 1 })
       // show next button
-      .to('#next_button_onboarding', 0.1, { delay: 0.2, scale: 1, opacity: 1 })
+      .to('#next_button_onboarding', 0.1, { delay: 0.6, scale: 1, opacity: 1 })
 
     slide5Timeline = new TimelineLite({ paused: true })
       .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
@@ -413,11 +395,51 @@
       slide3Timeline.play()
     },
     leave: function() {
-
     }
   }
 
-  Cryptoloji.states.onboarding.step4 = buildSlide(4, animate_slide4)
+  //Cryptoloji.states.onboarding.step4 = buildSlide(4, animate_slide4)
+  Cryptoloji.states.onboarding.step4 = {
+    enter: function() {
+      commonSlideEnterBehaviour(4)
+      slide4Timeline.play()
+      // Playground on click events
+      $('#onboarding_slide_4_emoji_1').on('click', function() {
+        changeScrambledTextAnimation(1, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_1')
+        chosenKey = 1
+      })
+      $('#onboarding_slide_4_emoji_2').on('click', function() {
+        changeScrambledTextAnimation(2, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_2')
+        chosenKey = 2
+      })
+      $('#onboarding_slide_4_emoji_3').on('click', function() {
+        changeScrambledTextAnimation(3, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_3')
+        chosenKey = 3
+      })
+    },
+    leave: function() {
+      return new Promise(function(resolve, reject) {
+        var fade_duration = 0.5
+        new TimelineLite()
+          .to('#onboarding_slide_4_emoji_1', fade_duration, { opacity: 0 })
+          .to('#onboarding_slide_4_emoji_2', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_4_emoji_3', fade_duration, { opacity: 0, onComplete: function() {
+            $('[slide-num="4"]').removeClass('section-show')
+            resolve()
+          } }, 0)
+          .set('#onboarding_slide_5_delivered_text', { opacity: 0})
+          .set('#onboarding_slide_5_text', { opacity: 0 })
+          .set('#onboarding_slide_5_plain_text', { opacity: 0 })
+          .set('#onboarding_slide_5_encrypted_emoji_1', { opacity: 0 })
+          .set('#onboarding_slide_5_encryptedemoji_2', { opacity: 0 })
+          .set('#onboarding_slide_5_encrypted_emoji_3', { opacity: 0 })
+          .set('#slide_5_bubble_white_text_bg', { opacity: 0 })
+          .set('#slide_5_bubble_white_text', { opacity: 0 })
+          .set('#slide_5_bubble_white_dots_bg', { opacity: 0 })
+      })
+    }
+  }
+
   Cryptoloji.states.onboarding.step5 = buildSlide(5, animate_slide5)
   Cryptoloji.states.onboarding.step6 = buildSlide(6, animate_slide6)
   Cryptoloji.states.onboarding.step7 = to_encrypt()
