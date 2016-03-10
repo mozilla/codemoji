@@ -87,8 +87,9 @@
   function buildTextButtonAnimationTimeline (start_delay_text, start_delay_button, onboardingText) {
     return new TimelineLite({ paused: true })
       .set(onboardingText, { opacity: 0 })
-      .set('#next_button_onboarding', { scale: 1.2, opacity: 0 })
+      .set('#next_button_onboarding', { display: 'none', scale: 1.2, opacity: 0 })
       .to(onboardingText, .5, { delay: start_delay_text, opacity: 1 })
+      .set('#next_button_onboarding', { display: 'block' })
       .to('#next_button_onboarding', 0.1, { delay: start_delay_button, scale: 1, opacity: 1 })
   }
 
