@@ -19,13 +19,11 @@
 
 .svg_wrapper_header_logo {
     width: 7rem;
+    height: auto;
     margin: 1.2rem 0 1.6rem 0;
 }
 
-.svg_wrapper_header_logo svg{
-    width: 100%;
-    height: 100%;
-}
+
 
 .section_welcome_header{
   min-height: 10rem;
@@ -37,12 +35,10 @@
 
 .svg_wrapper_header_name{
   width: 20rem;
+    height: auto;
 }
 
-.svg_wrapper_header_name svg{
-    width: 100%;
-    height: 100%;
-  }
+
 .section_welcome_header_text{
   margin: 1rem 2rem;
   font-size: 80%;
