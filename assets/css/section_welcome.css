@@ -24,8 +24,8 @@
 }
 
 .svg_wrapper_landing_key{
-  width: 15rem;
-  margin-bottom: 4rem;
+  width: 8rem;
+  margin-bottom: 2rem; 
 }
 
 .svg_wrapper_landing_key svg{
@@ -34,6 +34,9 @@
 }
 .section_welcome_header{
   min-height: 10rem;
+}
+.section_landing .section_welcome_main{
+  padding-bottom: 4rem;
 }
 
 .svg_wrapper_welcome_footer_icon{
@@ -131,9 +134,9 @@
 }
 
 .landing_encrypted_message{
-    margin: 0.2rem .2rem 1.2rem .2rem;
+    margin: 0.2rem 2rem 1.2rem 2rem;
     max-width: 80rem;
-    line-height: 223%;
+    line-height: 140%;
     padding: 15px;
     font-size: 50%;
     text-align: center;

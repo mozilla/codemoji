@@ -26,6 +26,11 @@
     width: 100%;
     height: 100%;
   }
+  
+  .svg_wrapper_landing_key{
+    width: 15rem;
+    margin-bottom: 4rem;
+  }
 
   .svg_wrapper_not_found{
     width: 30rem!important;
