@@ -268,7 +268,7 @@
       .set('.svg_wrapper_pagination', { opacity: 0 })
       .set('.onboarding_skip_button', { opacity: 0 })
       .set('#next_button_onboarding', { display: 'none', scale: 1.2, opacity: 0 })
-      .to('#onboarding_slide7_text > text', 1, { delay: 0.5, opacity: 1 })
+      .to('#onboarding_slide7_text > text', 0.5, { delay: 0.5, opacity: 1 })
       .set('#next_button_onboarding', { display: 'block' })
       .to('#next_button_onboarding', 0.1, { scale: 1, opacity: 1, onComplete: function() {
         $('#next_button_onboarding').click(function(){
