@@ -105,6 +105,7 @@
 
 .share_key-wrapper{
   position: relative;
+  cursor: pointer;
 }
 
 .share_key_emoji-item{
@@ -182,6 +183,7 @@ input#share_copytoclipboard {
   box-sizing: border-box;
   border: none;
   box-shadow: none;
+  cursor: copy;
 }
 
 input.share_key_emoji-item:value{
