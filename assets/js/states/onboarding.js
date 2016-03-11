@@ -24,7 +24,7 @@
     enter: function () {
       // go to step1 if we are headering to root state
       if (Cryptoloji.stateman.current.name === 'onboarding') {
-        Cryptoloji.stateman.go('onboarding.step5')
+        Cryptoloji.stateman.go('onboarding.step1')
       }
 
       // display cross-slide elements
@@ -196,7 +196,7 @@
       .set('#next_button_onboarding', { display: 'block' })
       .to('#onboarding_slide_4_text_tutor', 0.5, { opacity: 1 })
       // show next button
-      .to('#next_button_onboarding', 0.1, { delay: 0.6, scale: 1, opacity: 1 })
+      .to('#next_button_onboarding', 0.1, { delay: 0.1, scale: 1, opacity: 1 })
 
     slide5Timeline = new TimelineLite({ paused: true })
       .set('#next_button_onboarding', { display: 'none', scale: 1.2, opacity: 0 })
@@ -330,10 +330,10 @@
   Cryptoloji.states.onboarding.step2 = {
     enter: function() {
       commonSlideEnterBehaviour(2)
-      slide2EnterTimeline.play()
+      //slide2EnterTimeline.play()
 
-      // slide2LetterScrambleAnimation.play()
-      // slide2Timeline.play()
+      slide2LetterScrambleAnimation.play()
+      slide2Timeline.play()
     },
     leave: function() {
       return new Promise(function(resolve, reject) {
@@ -410,6 +410,8 @@
           .to('#onboarding_slide_4_emoji_1', fade_duration, { opacity: 0 })
           .to('#onboarding_slide_4_emoji_2', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_4_emoji_3', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_4_text_tutor', fade_duration, { opacity: 0 }, 0)
+          .to('#onboarding_slide_4_emoji_selector', fade_duration, { opacity: 0 }, 0)
           .to('#next_button_onboarding', fade_duration, { scale: 1.5, onComplete: function() {
             $('[slide-num="4"]').removeClass('section-show')
             resolve()
