@@ -1,15 +1,18 @@
 # Cryptoloji
 
 
-### Dev set up
+### Dev
 
 	npm install
 	bower intall
+	grunt dev
 	
 
-### How to build
+### Build
 
 	gulp build
+	
+	
 
 ## LICENSE
 
