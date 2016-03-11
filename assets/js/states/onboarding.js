@@ -42,11 +42,11 @@
     TweenLite.to($('.svg_wrapper_pagination .pagination_emoji_'+slide), .4, {opacity: 1, scale: 1.2, transformOrigin: "center center"})
   }
 
-  function buildScrambleTextAnimation (emojiGroup) {
+  function buildScrambleTextAnimation (start_delay, emojiGroup) {
     return new TimelineLite()
       .add([
-        new TimelineLite().staggerTo($(emojiGroup).get().reverse(), 0.5, { opacity: 1 }, 0.05),
-        new TimelineLite().staggerTo('#onboarding_slide_4_plain_text > g', 0.5, {  opacity: 0 }, 0.05),
+        new TimelineLite().staggerTo($(emojiGroup).get().reverse(), 0.5, { delay: start_delay, opacity: 1 }, 0.05),
+        new TimelineLite().staggerTo('#onboarding_slide_4_plain_text > g', 0.5, { delay: start_delay, opacity: 0 }, 0.05),
       ], '+=0', 'start')
   }
 
@@ -60,7 +60,7 @@
       .add([
         new TimelineLite().to('#onboarding_slide_4_emoji_selector', duration, { delay: start_delay, ease: Expo.easeOut, x: selectorX }),
         new TimelineLite().staggerTo($(previousEmojiGroup + ' > g').get().reverse(), 0.5, { opacity: 0 }, 0.05),
-        buildScrambleTextAnimation(nextEmojiGroup + ' > g')
+        buildScrambleTextAnimation(start_delay, nextEmojiGroup + ' > g')
       ], '+=0', 'start')
       
   }
@@ -186,12 +186,12 @@
       // animate selector 2nd to 1st
       .add([
         new TimelineLite().to('#onboarding_slide_4_emoji_selector', 0.5, { delay: 0.5, x: '-95rem' }),
-        buildScrambleTextAnimation('#onboarding_slide_4_encrypted_emoji_1 > g')
+        buildScrambleTextAnimation(.25, '#onboarding_slide_4_encrypted_emoji_1 > g')
       ])
       // animate selector 1st to 3rd
-      .add(changeScrambledTextAnimation(3, 1, .5, '#onboarding_slide_4_encrypted_emoji_1', '#onboarding_slide_4_encrypted_emoji_3'))
+      .add(changeScrambledTextAnimation(3, 1, .25, '#onboarding_slide_4_encrypted_emoji_1', '#onboarding_slide_4_encrypted_emoji_3'))
       // animate selector 3rd to 2nd
-      .add(changeScrambledTextAnimation(2, .5, .5, '#onboarding_slide_4_encrypted_emoji_3', '#onboarding_slide_4_encrypted_emoji_2'))
+      .add(changeScrambledTextAnimation(2, .5, .25, '#onboarding_slide_4_encrypted_emoji_3', '#onboarding_slide_4_encrypted_emoji_2'))
       // show text
       .set('#next_button_onboarding', { display: 'block' })
       .to('#onboarding_slide_4_text_tutor', 0.5, { opacity: 1 })
