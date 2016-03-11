@@ -50,7 +50,7 @@
       ], '+=0', 'start')
   }
 
-  function changeScrambledTextAnimation (chosenKey, previousEmojiGroup, nextEmojiGroup) {
+  function changeScrambledTextAnimation (chosenKey, duration, start_delay, previousEmojiGroup, nextEmojiGroup) {
     var selectorX = '0'
     if (chosenKey === 1) selectorX = '-95rem'
     else if (chosenKey === 3) selectorX = '95rem'
@@ -58,7 +58,7 @@
     return new TimelineLite()
       
       .add([
-        new TimelineLite().to('#onboarding_slide_4_emoji_selector', 0.15, { ease: Expo.easeOut, x: selectorX }),
+        new TimelineLite().to('#onboarding_slide_4_emoji_selector', duration, { delay: start_delay, ease: Expo.easeOut, x: selectorX }),
         new TimelineLite().staggerTo($(previousEmojiGroup + ' > g').get().reverse(), 0.5, { opacity: 0 }, 0.05),
         buildScrambleTextAnimation(nextEmojiGroup + ' > g')
       ], '+=0', 'start')
@@ -185,13 +185,13 @@
       .to('#onboarding_slide_4_emoji_selector', 0.3, { ease: Expo.easeOut, x: 0, opacity: 1 })
       // animate selector 2nd to 1st
       .add([
-        new TimelineLite().to('#onboarding_slide_4_emoji_selector', 0.25, { delay: 0.2, x: '-95rem' }),
+        new TimelineLite().to('#onboarding_slide_4_emoji_selector', 0.5, { delay: 0.5, x: '-95rem' }),
         buildScrambleTextAnimation('#onboarding_slide_4_encrypted_emoji_1 > g')
       ])
       // animate selector 1st to 3rd
-      .add(changeScrambledTextAnimation(3, '#onboarding_slide_4_encrypted_emoji_1', '#onboarding_slide_4_encrypted_emoji_3'))
+      .add(changeScrambledTextAnimation(3, 1, .5, '#onboarding_slide_4_encrypted_emoji_1', '#onboarding_slide_4_encrypted_emoji_3'))
       // animate selector 3rd to 2nd
-      .add(changeScrambledTextAnimation(2, '#onboarding_slide_4_encrypted_emoji_3', '#onboarding_slide_4_encrypted_emoji_2'))
+      .add(changeScrambledTextAnimation(2, .5, .5, '#onboarding_slide_4_encrypted_emoji_3', '#onboarding_slide_4_encrypted_emoji_2'))
       // show text
       .set('#next_button_onboarding', { display: 'block' })
       .to('#onboarding_slide_4_text_tutor', 0.5, { opacity: 1 })
@@ -388,15 +388,15 @@
       slide4Timeline.play()
       // Playground on click events
       $('#onboarding_slide_4_emoji_1').on('click', function() {
-        changeScrambledTextAnimation(1, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_1')
+        changeScrambledTextAnimation(1,.5,0, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_1')
         chosenKey = 1
       })
       $('#onboarding_slide_4_emoji_2').on('click', function() {
-        changeScrambledTextAnimation(2, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_2')
+        changeScrambledTextAnimation(2,.5,0, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_2')
         chosenKey = 2
       })
       $('#onboarding_slide_4_emoji_3').on('click', function() {
-        changeScrambledTextAnimation(3, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_3')
+        changeScrambledTextAnimation(3,.5,0, '#onboarding_slide_4_encrypted_emoji_'+chosenKey, '#onboarding_slide_4_encrypted_emoji_3')
         chosenKey = 3
       })
     },
