@@ -41,10 +41,6 @@
     width: 15rem;
 }
 
-.svg_wrapper_header svg{
-    width: 100%;
-    height: 100%;
-}
 
 .svg_wrapper_header > svg{
   width: 100%;
