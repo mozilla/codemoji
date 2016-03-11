@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%;
 
-  padding-bottom:50px;
+  padding-bottom:60px;
 }
 
 .svg_wrapper_onboarding > svg{
@@ -44,3 +44,9 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+.section_onboarding_wrapper .mozilla_button{
+ margin: .5rem 0; 
+}
+
+

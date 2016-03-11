@@ -41,6 +41,9 @@
     width: 15rem;
 }
 
+.header_onboarding_fix{
+  min-height: 5rem;
+}
 
 .header_spacer{
   width: 100%;

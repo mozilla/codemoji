@@ -37,8 +37,9 @@
   }
 
   function paginationLogic (slide) {
-    TweenLite.set($('.pagination_emoji>g'), {opacity: "0"})
-    TweenLite.set($('.svg_wrapper_pagination .pagination_emoji_'+slide), {opacity: "1"})
+    console.log(slide)
+    TweenLite.to($('.pagination_emoji>g'), .3, {opacity: 0})
+    TweenLite.to($('.svg_wrapper_pagination .pagination_emoji_'+slide), .4, {opacity: 1, scale: 1.2, transformOrigin: "center center"})
   }
 
   function buildScrambleTextAnimation (emojiGroup) {
