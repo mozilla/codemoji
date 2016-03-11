@@ -7,6 +7,13 @@
   var wrongKey = false
 
   Cryptoloji.states.decrypt = {
+    canEnter: function () {
+      // verify a message is present in the storage
+      if (_.isUndefined(Cryptoloji.storage.get('message')) || _.isEmpty(Cryptoloji.storage.get('message'))) {
+        // if not redirect to not found state
+        Cryptoloji.stateman.go('welcome')
+      }
+    },
     enter: function (options) {
 
       $('.decrypt_feedback').css({y:200})
