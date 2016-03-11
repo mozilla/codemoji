@@ -38,8 +38,8 @@
         }
 
         var $size = {}
-        $size.x = $viewbox[2] - $viewbox[0]
-        $size.y = $viewbox[3] - $viewbox[1]
+        $size.x = $viewbox[2]
+        $size.y = $viewbox[3]
 
         var svgWidth = $size.x
         var svgHeight = $size.y
