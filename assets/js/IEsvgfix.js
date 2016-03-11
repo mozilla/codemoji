@@ -33,9 +33,10 @@
         // get dimensions from viebox
         // 
         var $viewbox = $svg[0].getAttribute('viewBox').split(' ')
-        _.times($viewbox.length, function(i){
+        for(var i = 0; i < $viewbox.length; i++){
           $viewbox[i] = parseInt($viewbox[i], 10)
-        })
+        }
+
         var $size = {}
         $size.x = $viewbox[2] - $viewbox[0]
         $size.y = $viewbox[3] - $viewbox[1]
