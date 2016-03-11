@@ -176,23 +176,25 @@
     <div class="section_welcome_main" color-bg-dark layout="column" layout-align="center center" wide flex>
         <div layout="column" layout-align="start center">
 
-
-          <p class="welcome_text" layout="column" layout-align="center center" landing-state="1">
+     <!-- landing state 1 -->
+          <p id="landing_state_1_text" class="welcome_text" layout="column" layout-align="center center" landing-state="1">
             Encrypted message:
           </p>
-          <p class="welcome_text" layout="column" layout-align="center center" landing-state="2">
-            You need the right emoji<br>to decrypt the text
-          </p>
-          <div class="svg_wrapper svg_wrapper_landing_key" data-svg="assets/svg/landing_choose_key.svg"landing-state="2"></div>
-          <p id="landing_encrypted_message" class="landing_encrypted_message" landing-state="1">
+          <p id="landing_state_1_encrypted_message" class="landing_encrypted_message" landing-state="1">
             <!-- js injected -->
           </p>
-
-          <button class="mozilla_button" id="landing_button_last" landing-state="2" to-state="decrypt">
-            Find the right emoji
-          </button>
-          <button class="mozilla_button" id="landing_button_first" landing-state="1">
+          <button class="mozilla_button" id="landing_state_1_button" landing-state="1">
             Decrypt this message
+          </button>
+
+     <!-- landing state 2 -->
+          <p class="welcome_text" id="landing_state_2_text" layout="column" layout-align="center center" landing-state="2">
+            You need the right emoji<br>to decrypt the text
+          </p>
+          <div class="svg_wrapper svg_wrapper_landing_key" id="landing_state_2_svg" data-svg="assets/svg/landing_choose_key.svg" landing-state="2"></div>
+
+          <button id="landing_state_2_button" class="mozilla_button" id="landing_button_last" landing-state="2" to-state="decrypt">
+            Find the right emoji
           </button>
         </div>
     </div>
