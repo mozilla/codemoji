@@ -12,7 +12,9 @@
       if (_.isUndefined(Cryptoloji.storage.get('message')) || _.isEmpty(Cryptoloji.storage.get('message'))) {
         // if not redirect to not found state
         Cryptoloji.stateman.go('welcome')
+        return false
       }
+      return true
     },
     enter: function (options) {
 
