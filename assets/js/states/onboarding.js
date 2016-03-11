@@ -307,17 +307,18 @@
     },
     leave: function() {
       return new Promise(function (resolve, reject) {
-        var fade_duration = 0.5
+        var fade_duration = 0.3
         new TimelineLite()
           .to('#onboarding_slide_1_encrypted_hello_1', fade_duration, { opacity: 0 })
           .to('#onboarding_slide_1_encrypted_hello_2', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_1_encrypted_hello_3', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_1_encrypted_hello_4', fade_duration, { opacity: 0 }, 0)
           .to('#next_button_onboarding', fade_duration, { opacity: 0 }, 0)
-          .to('#onboarding_slide_1_text', fade_duration, { opacity: 0 , onComplete: function() {
+          .to('#onboarding_slide_1_text', fade_duration, { opacity: 0 }, 0)
+          .to('#next_button_onboarding', fade_duration, { scale: 1.5, onComplete: function() {
             $('[slide-num="1"]').removeClass('section-show')
             resolve()
-          }}, 0)
+          } }, 0)
           //We have to set the opacity of the next slide here otherwise strange effects happen
           .set('#onboarding_slide_2_encrypted_hello_1 > g', { opacity: 0 })
           .set('#onboarding_slide_2_encrypted_hello_2 > g', { opacity: 0 })
@@ -333,11 +334,13 @@
     enter: function() {
       commonSlideEnterBehaviour(2)
       slide2EnterTimeline.play()
-      
+
+      // slide2LetterScrambleAnimation.play()
+      // slide2Timeline.play()
     },
     leave: function() {
       return new Promise(function(resolve, reject) {
-        var fade_duration = 0.5
+        var fade_duration = 0.3
         new TimelineLite()
           .to('#onboarding_slide_2_hello', fade_duration, { opacity: 0 })
           .to('#onboarding_slide_2_lines', fade_duration, { opacity: 0}, 0)
@@ -346,10 +349,11 @@
           .to('#onboarding_slide_2_encrypted_hello_3', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_2_encrypted_hello_4', fade_duration, { opacity: 0 }, 0)
           .to('#next_button_onboarding', fade_duration, { opacity: 0 }, 0)
-          .to('#onboarding_slide_2_text', fade_duration, { opacity: 0 , onComplete: function() {
+          .to('#onboarding_slide_2_text', fade_duration, { opacity: 0 }, 0)
+          .to('#next_button_onboarding', fade_duration, { scale: 1.5, onComplete: function() {
             $('[slide-num="2"]').removeClass('section-show')
             resolve()
-          }}, 0)
+          } }, 0)
           .set('#onboarding_slide_3_plain_text > g', { opacity: 0 })
           .set('#onboarding_slide_3_plain_text_bg', { opacity: 0 })
           .set('#onboarding_slide_3_text', { opacity: 0 })
@@ -365,7 +369,14 @@
       slide3Timeline.play()
     },
     leave: function() {
-      $('[slide-num="3"]').removeClass('section-show')
+      return new Promise(function(resolve, reject) {
+        var fade_duration = 0.3
+        new TimelineLite()
+          .to('#next_button_onboarding', fade_duration, { scale: 1.5, onComplete: function() {
+            $('[slide-num="3"]').removeClass('section-show')
+            resolve()
+          } }, 0)
+      })
     }
   }
 
@@ -394,7 +405,8 @@
         new TimelineLite()
           .to('#onboarding_slide_4_emoji_1', fade_duration, { opacity: 0 })
           .to('#onboarding_slide_4_emoji_2', fade_duration, { opacity: 0 }, 0)
-          .to('#onboarding_slide_4_emoji_3', fade_duration, { opacity: 0, onComplete: function() {
+          .to('#onboarding_slide_4_emoji_3', fade_duration, { opacity: 0 }, 0)
+          .to('#next_button_onboarding', fade_duration, { scale: 1.5, onComplete: function() {
             $('[slide-num="4"]').removeClass('section-show')
             resolve()
           } }, 0)
@@ -417,7 +429,14 @@
       slide5Timeline.play()
     },
     leave: function() {
-      $('[slide-num="5"]').removeClass('section-show')
+      return new Promise(function(resolve, reject) {
+        var fade_duration = 0.3
+        new TimelineLite()
+          .to('#next_button_onboarding', fade_duration, { scale: 1.5, onComplete: function() {
+            $('[slide-num="5"]').removeClass('section-show')
+            resolve()
+          } }, 0)
+      })
     }
   }
 
@@ -437,7 +456,8 @@
           .to('#onboarding_slide_6_smile_content', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_6_graphic', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_6_text', fade_duration, { opacity: 0 }, 0)
-          .to('#next_button_onboarding', fade_duration, { opacity: 0, onComplete: function() {
+          .to('#next_button_onboarding', fade_duration, { opacity: 0 }, 0)
+          .to('#next_button_onboarding', fade_duration, { scale: 1.5, onComplete: function() {
             $('[slide-num="6"]').removeClass('section-show')
             resolve()
           } }, 0)
