@@ -193,7 +193,7 @@
       .add(changeScrambledTextAnimation(2, '#onboarding_slide_4_encrypted_emoji_3', '#onboarding_slide_4_encrypted_emoji_2'))
       // show text
       .set('#next_button_onboarding', { display: 'block' })
-      .to('#onboarding_slide_4_text_tutor', 0.02, { opacity: 1 })
+      .to('#onboarding_slide_4_text_tutor', 0.5, { opacity: 1 })
       // show next button
       .to('#next_button_onboarding', 0.1, { delay: 0.6, scale: 1, opacity: 1 })
 
