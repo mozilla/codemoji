@@ -24,7 +24,7 @@
     enter: function () {
       // go to step1 if we are headering to root state
       if (Cryptoloji.stateman.current.name === 'onboarding') {
-        Cryptoloji.stateman.go('onboarding.step1')
+        Cryptoloji.stateman.go('onboarding.step5')
       }
 
       // display cross-slide elements
@@ -244,15 +244,11 @@
       .set('#next_button_onboarding', { display: 'none', scale: 1.2, opacity: 0 })
       .set('#onboarding_slide_6_plain_text', { opacity: 0 })
       .set('#onboarding_slide_6_text', { opacity: 0 })
-      .set('#onboarding_slide_6_encrypted_emoji_1', { opacity: 0 })
-      .set('#onboarding_slide_6_encrypted_emoji_2', { opacity: 0 })
-      .set('#onboarding_slide_6_encrypted_emoji_3', { opacity: 0 })
       .set('#onboarding_slide_6_delivered_text', { y: 100, opacity: 0 })
       .set('#onboarding_slide_6_mais_bubble', { y: 100, opacity: 0 })
       .set('#onboarding_slide_6_mais', { opacity: 0 })
       .set('#onboarding_slide_6_smile', { y: 100, opacity: 0 })
       .set('#onboarding_slide_6_smile_content', { opacity: 0 })
-      .set('#onboarding_slide_6_encrypted_emoji_' + chosenKey, { opacity: 1 })
       .add([
         new TimelineLite().to('#onboarding_slide_6_mais_bubble', 0.7, { ease: Bounce.easeOut, y: 0, opacity: 1 })
           .to('#onboarding_slide_6_mais', 0.4, { opacity: 1 }),
@@ -444,6 +440,16 @@
             $('[slide-num="5"]').removeClass('section-show')
             resolve()
           } }, 0)
+          .set('#onboarding_slide_6_plain_text', { opacity: 0 })
+          .set('#onboarding_slide_6_encrypted_emoji_3 > g' , { opacity: 0 })
+          .set('#onboarding_slide_6_encrypted_emoji_2 > g' , { opacity: 0 })
+          .set('#onboarding_slide_6_encrypted_emoji_1 > g' , { opacity: 0 })
+          .set('#onboarding_slide_6_encrypted_emoji_' + chosenKey + ' > g', { opacity: 1 })
+          .set('#onboarding_slide_6_mais', { opacity: 0 })
+          .set('#onboarding_slide_6_mais_bubble', { opacity: 0 })
+          .set('#onboarding_slide_6_delivered_text', { opacity: 0 })
+          .set('#onboarding_slide_6_smile', { opacity: 0 })
+          .set('#onboarding_slide_6_smile_content', { opacity: 0 })
       })
     }
   }
