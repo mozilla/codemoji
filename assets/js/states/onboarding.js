@@ -377,6 +377,13 @@
             $('[slide-num="3"]').removeClass('section-show')
             resolve()
           } }, 0)
+          .set('#onboarding_slide_4_encrypted_emoji_3 > g', { opacity: 0 })
+          .set('#onboarding_slide_4_encrypted_emoji_2 > g', { opacity: 0 })
+          .set('#onboarding_slide_4_encrypted_emoji_1 > g', { opacity: 0 })
+          .set('#onboarding_slide_4_emoji_3 > g', { opacity: 0 })
+          .set('#onboarding_slide_4_emoji_2 > g', { opacity: 0 })
+          .set('#onboarding_slide_4_emoji_1 > g', { opacity: 0 })
+          .set('#onboarding_slide_4_emoji_selector', { opacity: 0 })
       })
     }
   }
