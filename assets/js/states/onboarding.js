@@ -310,7 +310,7 @@
           .to('#onboarding_slide_1_encrypted_hello_2', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_1_encrypted_hello_3', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_1_encrypted_hello_4', fade_duration, { opacity: 0 }, 0)
-          .to('#next_button_onboarding', fade_duration, { opacity: 0 }, 0)
+          //.to('#next_button_onboarding', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_1_text', fade_duration, { opacity: 0 }, 0)
           .to('#next_button_onboarding', fade_duration, { scale: 1.5, onComplete: function() {
             $('[slide-num="1"]').removeClass('section-show')
