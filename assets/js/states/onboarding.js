@@ -470,7 +470,6 @@
           .to('#onboarding_slide_6_smile_content', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_6_graphic', fade_duration, { opacity: 0 }, 0)
           .to('#onboarding_slide_6_text', fade_duration, { opacity: 0 }, 0)
-          .to('#next_button_onboarding', fade_duration, { opacity: 0 }, 0)
           .to('#next_button_onboarding', fade_duration, { scale: 1.5, onComplete: function() {
             $('[slide-num="6"]').removeClass('section-show')
             resolve()
