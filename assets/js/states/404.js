@@ -7,7 +7,7 @@
 
       shuffle_error()
 
-      $('.section_not_found').on('click', function () {
+      $('.svg_wrapper_not_found').on('click', function () {
         shuffle_error()
       })
     },
@@ -20,11 +20,12 @@
     _.times(3, function (i) {
       var offset = Math.random() * 800 + 600
       // element
+      console.log($('#444_slot_' + (i + 1)), offset)
       TweenLite.set($('#444_slot_' + (i + 1)), {y: offset})
-      TweenLite.to($('#444_slot_' + (i + 1)), 1, {y: 0, ease: Elastic})
+      TweenLite.to($('#444_slot_' + (i + 1)), 1, {y: 0})
       // mask
       TweenLite.set($('#444_mask_' + (i + 1) + '_1_'), {y: -1 * offset})
-      TweenLite.to($('#444_mask_' + (i + 1) + '_1_'), 1, {y: 0, ease: Elastic})
+      TweenLite.to($('#444_mask_' + (i + 1) + '_1_'), 1, {y: 0})
     })
   }
 

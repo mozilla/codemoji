@@ -27,6 +27,10 @@
     height: 100%;
   }
 
+  .svg_wrapper_not_found{
+    width: 30rem!important;
+    height: auto;
+  }
   .section_main_wrapper{
     flex-direction: row;
   }
