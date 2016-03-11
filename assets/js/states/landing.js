@@ -15,6 +15,15 @@
 
       $(".section_landing").addClass("section-show")
       Cryptoloji.stateman.emit('footer:show') 
+
+      TweenLite.set($("[landing-state]"), {display: "none"})
+      TweenLite.set($("[landing-state='1']"), {display: "block"})
+
+      $("#landing_button_first").on("click", function(){
+        TweenLite.set($("[landing-state]"), {display: "none"})
+        TweenLite.set($("[landing-state='2']"), {display: "block"})
+      })
+
     },
     leave: function () {
       $(".section_landing").removeClass("section-show")

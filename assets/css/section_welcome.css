@@ -23,8 +23,15 @@
     margin: 1.2rem 0 1.6rem 0;
 }
 
+.svg_wrapper_landing_key{
+  width: 15rem;
+  margin-bottom: 4rem;
+}
 
-
+.svg_wrapper_landing_key svg{
+  width: 100%!important;
+  height: 100%!important;
+}
 .section_welcome_header{
   min-height: 10rem;
 }
@@ -124,10 +131,32 @@
 }
 
 .landing_encrypted_message{
-  margin: 0.2rem .2rem 1.2rem .2rem;
-  max-width: 80rem;
-  line-height: 223%;
-  padding: 0;
-  font-size: 50%;
-  text-align: center;
+    margin: 0.2rem .2rem 1.2rem .2rem;
+    max-width: 80rem;
+    line-height: 223%;
+    padding: 15px;
+    font-size: 50%;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #3B88C3;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.landing_encrypted_message:after{
+  content: '';
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  height: 0;
+     border-top: solid .7rem transparent;
+  border-bottom: solid .7rem #3B88C3;
+    border-left: solid 1rem #3B88C3;
+   border-right: solid 1rem transparent;
+transform: translateX(70%);
+}
+
+#landing_button_last{
+  display: none;
 }

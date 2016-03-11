@@ -42,9 +42,6 @@
   /process -->
 
 
-
-
-
   <!-- <script type="text/javascript" src="assets/text/text.json"></script> -->
   <script type="text/javascript">
     // Setup global namespace
@@ -178,16 +175,24 @@
     </div>
     <div class="section_welcome_main" color-bg-dark layout="column" layout-align="center center" wide flex>
         <div layout="column" layout-align="start center">
-          <p class="welcome_text" layout="column" layout-align="center center">
-            Someone has shared<br showItIfMobile>&nbsp;this message with you.&nbsp;
+
+
+          <p class="welcome_text" layout="column" layout-align="center center" landing-state="1">
+            Encrypted message:
           </p>
-          <p id="landing_encrypted_message" class="landing_encrypted_message">
+          <p class="welcome_text" layout="column" layout-align="center center" landing-state="2">
+            You need the right emoji<br>to decrypt the text
+          </p>
+          <div class="svg_wrapper svg_wrapper_landing_key" data-svg="assets/svg/landing_choose_key.svg"landing-state="2"></div>
+          <p id="landing_encrypted_message" class="landing_encrypted_message" landing-state="1">
             <!-- js injected -->
           </p>
-          <p hideItIfMobile class="landing_small_text">It was scrambled into emojis, but you can decipher it here<br>(if you have the right key).</p>
-          <p showItIfMobile class="landing_small_text">It was scrambled into emojis, but you can decipher it here (if you have the right key).</p>
-          <button class="mozilla_button" to-state="decrypt" hide-on-first-visit-only>
-            Next
+
+          <button class="mozilla_button" id="landing_button_last" landing-state="2" to-state="decrypt">
+            Find the right emoji
+          </button>
+          <button class="mozilla_button" id="landing_button_first" landing-state="1">
+            Decrypt this message
           </button>
         </div>
     </div>
@@ -453,7 +458,8 @@
             <p class="wrong_key">Doesn't look like the right key. Ask the sender or try again!</p>
           </div>
           <div class="main_share" layout="column" layout-align="start center">
-            <a class="mozilla_button" to-state="encrypt">Try using a cipher</a>
+            <p class="decryption_succeded">Well done!</p>
+            <a class="mozilla_button" to-state="encrypt">Encrypt a new message</a>
           </div>
         </div>
       </div>

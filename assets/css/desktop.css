@@ -232,7 +232,8 @@
     text-align: center;
   }
   .landing_encrypted_message{
-    font-size: 70%;
+    font-size: 200%;
+    max-width: 60rem;
   }
 
   .decrypt_feedback{

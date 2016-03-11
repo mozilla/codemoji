@@ -504,6 +504,13 @@ div#decryptHeader{
   opacity: 1;
 }
 
+.decryption_succeded{
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .coachmark{
   display: none;
   position: absolute;
