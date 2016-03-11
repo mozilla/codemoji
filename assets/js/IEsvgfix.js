@@ -28,11 +28,27 @@
         var $svg = $('svg', this)
         var $wrapper = $(this)
 
-        var svgWidth = $svg.attr('width')
-        var svgHeight = $svg.attr('height')
 
-        console.info($wrapper.attr('class'), $svg, $wrapper)
-        console.info(!!svgWidth || !!svgHeight)
+        // 
+        // get dimensions from viebox
+        // 
+        var $viewbox = $svg[0].getAttribute('viewBox').split(' ')
+        _.times($viewbox.length, function(i){
+          $viewbox[i] = parseInt($viewbox[i], 10)
+        })
+        var $size = {}
+        $size.x = $viewbox[2] - $viewbox[0]
+        $size.y = $viewbox[3] - $viewbox[1]
+
+        var svgWidth = $size.x
+        var svgHeight = $size.y
+
+        // 
+        // get dimensions from attributes
+        // 
+        // var svgWidth = $svg.attr('width')
+        // var svgHeight = $svg.attr('height')
+        
 
         if (svgWidth && svgHeight) {
           svgWidth = parseInt(svgWidth, 10)
@@ -40,8 +56,6 @@
 
           var wrapperWidth = parseInt($wrapper.css("width"), 10)
           var wrapperHeight = parseInt($wrapper.css("height"), 10)
-
-          console.log(wrapperWidth, wrapperHeight)
 
           $svg.attr('height', '100%')
           $svg.attr('width', '100%')
@@ -52,8 +66,6 @@
           if (!fixWidth && !fixHeight)
             fixHeight = true
 
-          console.log(fixWidth, fixHeight)
-          console.log(svgWidth, svgHeight)
 
           if (fixHeight) {
             $wrapper.css('height', wrapperWidth * svgHeight / svgWidth)
