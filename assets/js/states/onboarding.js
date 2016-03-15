@@ -84,7 +84,7 @@
     })
 
     //Duration of a single letter transition
-    var animation_duration = 0.01
+    var animation_duration = 0.0
     var animation_delay = 1.5
     var y_transform = 20
     
