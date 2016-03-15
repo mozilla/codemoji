@@ -18,15 +18,18 @@
 .onboarding_skip_button{
   position: absolute;
   font-family: "Fira_Sans";
-  font-size: 1.2rem;
   font-weight: 300;
   bottom: 0;
   left: 50%;
   opacity: .5;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   transform: translateX(-50%);
   cursor: pointer;
+}
+
+.onboarding_skip_button:hover{
+  opacity: .8;
 }
 
 .svg_wrapper_pagination{
