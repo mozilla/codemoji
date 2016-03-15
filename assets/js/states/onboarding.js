@@ -84,8 +84,8 @@
     })
 
     //Duration of a single letter transition
-    var animation_duration = 0.1
-    var animation_delay = .5
+    var animation_duration = 0.01
+    var animation_delay = 1.5
     var y_transform = 20
     
     //First svg group containing encrypted letter
