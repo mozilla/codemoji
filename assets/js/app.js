@@ -13,6 +13,12 @@
     // remove main loader
     $('#mainLoader').remove();
 
+    if ('ontouchstart' in window) {
+      $('body').addClass('touch')
+    }else{
+      $('body').addClass('mouse')
+    }
+
     //
     // Storage initialization
     //

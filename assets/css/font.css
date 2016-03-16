@@ -35,6 +35,16 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
     font-style: normal;
 }
 @font-face {
+    font-family: 'FiraSans-Regular';
+    src: url('font/firasans-regular-webfont.eot');
+    src: url('font/firasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/firasans-regular-webfont.woff2') format('woff2'),
+         url('font/firasans-regular-webfont.woff') format('woff'),
+         url('font/firasans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'fira_sans';
     src: url('font/firasans-regular-webfont.eot');
     src: url('font/firasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
@@ -222,12 +232,12 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
 .mozilla_button::first-letter { 
   text-transform: uppercase;
 }
-.mozilla_button:hover{
+.mouse .mozilla_button:hover{
   background-color: #fff;
   color: #f46060;
 }
 
-.encryption .mozilla_button:hover{
+.mouse .encryption .mozilla_button:hover{
   background-color: #005189;
   color: #fff;
 }
@@ -236,7 +246,7 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   background-color: #005189;
   color: #fff;
 }
-.decryption .mozilla_button:hover{
+.mouse .decryption .mozilla_button:hover{
   background-color: #fff;
   color: #f46060;
 }
@@ -247,7 +257,7 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   margin-bottom: 2rem;
 }
 
-.mozilla_button_blue:hover{
+.mouse .mozilla_button_blue:hover{
   background-color: #fff;
   color: #005189;
 }
