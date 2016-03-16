@@ -184,6 +184,9 @@ input#share_copytoclipboard {
   border: none;
   box-shadow: none;
   cursor: copy;
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow: ellipsis;
 }
 
 input.share_key_emoji-item:value{
@@ -208,7 +211,7 @@ input.share_key_emoji-item:value{
 }
 
 .share_message_item{
-  margin: 6rem 0;
+  margin: 1rem 0;
   font-size: 96%;
 
   /* ie fix */
@@ -251,5 +254,5 @@ input.share_key_emoji-item:value{
   outline: none;
   font-size: 1.3rem;
   padding: 0.2rem 1.1rem;
-  margin-left: 0.3rem;
+  margin-left: 1.3rem;
 }
