@@ -27,7 +27,7 @@
 
 
       // resize font based on screen height
-      resizeEmojis()
+      Cryptoloji.utils.resizeEmojis(Cryptoloji.current.output, .5, '.share_message_item')
 
       fillLinkForClipboardCopy()
       fillKeyForClipboardCopy()
@@ -175,32 +175,7 @@
       .addParam('body', 'http://crypt.ji/F937U2M9')
       .bind()
   }
-
-  function resizeEmojis () {
-    var emojiSize = $('body').height() / 480 * 100
-    var emojiLength = 120
-    if (Cryptoloji.current.output) {
-      emojiLength = Cryptoloji.current.output.length
-    }
-    if (emojiLength == 1) {
-      emojiSize = emojiSize * 12
-    } else if (emojiLength >= 2 && emojiLength < 13) {
-      emojiSize = emojiSize * 4
-    } else if (emojiLength >= 13 && emojiLength < 20) {
-      emojiSize = emojiSize * 3
-    } else if (emojiLength >= 20 && emojiLength < 36) {
-      emojiSize = emojiSize * 2
-    } else if (emojiLength >= 36 && emojiLength < 60) {
-      emojiSize = emojiSize * 1.7
-    } else if (emojiLength >= 60 && emojiLength < 80) {
-      emojiSize = emojiSize * 1.5
-    } else if (emojiLength >= 80 && emojiLength < 100) {
-      emojiSize = emojiSize * 1.2
-    } else {
-      emojiSize = emojiSize * 1
-    }
-    $('.share_message_item').css('font-size', emojiSize + '%')
-  }
+  
     var share_modal_height = 0
     var share_modal_margin = 0
   function setShareModalCoordinates () {

@@ -208,8 +208,9 @@ input.share_key_emoji-item:value{
 }
 
 .share_message_item{
-  margin-top: 1rem;
+  margin: 6rem 0;
   font-size: 96%;
+
   /* ie fix */
   max-width: 40rem;
   flex: 1 0 auto;
