@@ -11,8 +11,6 @@
 
 	function enter(clb){
 
-		console.log('enter 1');
-
 		[1,2,3].forEach(function(d){
 			$(prep + '#b'+d+' > g').css('display', 'none')
 		});
