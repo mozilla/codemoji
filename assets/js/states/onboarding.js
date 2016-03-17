@@ -1,11 +1,6 @@
 (function (window, Cryptoloji, undefined) {
   'use strict'
 
-
-  var current_step = 1
-  // 
-  // go directly to step 1
-  // 
   Cryptoloji.states.onboarding = {}
   Cryptoloji.states.onboarding.root = {
     enter: function () {
