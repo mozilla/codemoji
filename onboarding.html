@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0'/>
+  <title>Mozilla Cryptoloji</title>
+
+ 
+  <!-- build:css style.css -->
+  <link rel="stylesheet" type="text/css" href="vendor/nanoscroller/nanoscroller.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/font.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/color.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/flex_light.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/generic.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/module_header.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_welcome.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_share.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_onboarding.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_loading.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_more.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/js_handlers.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/desktop.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/loader.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_not_found.css">
+  <!-- endbuild -->
+
+ 
+</head>
+<body>
+  
+
+
+   <div class="svg_wrapper svg_wrapper_onboarding" data-svg="assets/svg/slide01.svg"></div>
+
+
+
+
+
+  <!-- process:remove -->
+  <script type="text/javascript" src="assets/js/handleSvgLoading.js"></script>
+  <!-- /process -->
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/jquery.transit/jquery.transit.js"></script>
+  <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
+  
+  <script type="text/javascript" src="vendor/gsap/src/uncompressed/TweenLite.js"></script>
+  <script type="text/javascript" src="vendor/gsap/src/uncompressed/TimelineLite.js"></script>
+  <script type="text/javascript" scr="vendor/gsap/src/uncompressed/jquery.gsap.js"></script>
+  <script type="text/javascript" src="vendor/gsap/src/uncompressed/plugins/CSSPlugin.js"></script>
+  <script type="text/javascript" src="vendor/gsap/src/uncompressed/plugins/DrawSVGPlugin.js"></script>
+  <script type="text/javascript" src="vendor/gsap/src/uncompressed/easing/EasePack.js"></script>
+
+  <script type="text/javascript" src="assets/js/onboarding/init.js"></script>
+  <script type="text/javascript" src="assets/js/onboarding/scene_01.js"></script>
+  <script type="text/javascript" src="assets/js/onboarding/scene_02.js"></script>
+  <script type="text/javascript" src="assets/js/onboarding/scene_03.js"></script>
+  <script type="text/javascript" src="assets/js/onboarding/scene_04.js"></script>
+  <script type="text/javascript" src="assets/js/onboarding/scene_05.js"></script>
+  <script type="text/javascript" src="assets/js/onboarding/scene_06.js"></script>
+  <script type="text/javascript" src="assets/js/onboarding/scene_07.js"></script>
+
+
+<script type="text/javascript">
+  window.gHandleSvgLoading([])
+
+  var curr = OnBoardingAnimations.scene_01
+
+
+  $(document).ready(function () {
+    curr.enter(endEnter)
+  })
+
+
+  $('body').on('click', function () {
+    curr.exit(endExit)
+  })
+
+
+
+  function endEnter(){
+    $('body').css('backgroundColor', 'red')
+  }
+  function endExit(){
+    $('body').css('backgroundColor', 'green')
+  }
+  
+</script>
+
+
+</body>
+</html>
