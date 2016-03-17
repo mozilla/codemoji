@@ -12,19 +12,17 @@
 
       $('.next_button_onboarding').css('display', 'none')
 
+      $('#main_section_onboarding_wrapper').addClass('section-show')
+
       // go to step1 if we are headering to root state
       if (Cryptoloji.stateman.current.name === 'onboarding') {
         Cryptoloji.stateman.go('onboarding.step1')
       }
 
-      // display cross-slide elements
-      $('.section_onboarding_wrapper').addClass('section-show')
-
-
     },
     leave: function () {
       // hide cross-slide elements
-      $('.section_onboarding_wrapper').removeClass('section-show')
+      $('#main_section_onboarding_wrapper').removeClass('section-show')
     }
   }
 
@@ -157,6 +155,10 @@
   Cryptoloji.states.onboarding.step7 = {
     enter: function () {
       commonSlideEnterBehaviour(7)
+
+      TweenLite.to($('.svg_wrapper_pagination'), 1, {opacity:0})
+      TweenLite.to($('.onboarding_skip_button'), 1, {delay:.2, opacity:0})
+
       $('#next_button_onboarding').text('Go for it!')
       $('#next_button_onboarding').click(function(){
         Cryptoloji.stateman.go('encrypt')

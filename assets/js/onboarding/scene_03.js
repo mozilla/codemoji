@@ -9,7 +9,10 @@
 	var index = 1
 
 	function enter(clb){
-		
+
+		TweenLite.set($(prep + '#bubble'), {y:90});
+		TweenLite.set($(prep + '#txt'), {y:90});
+
 
 		[1,2,3].forEach(function(d){
 			$(prep + '#tt'+d).css('display', 'none')
@@ -17,7 +20,7 @@
 
 		$(prep + '#txt > g').css('display', 'none')
 
-		TweenLite.from($(prep + '#bubble'), 1, {delay:.1, opacity:0, y:50, ease:Elastic.easeInOut})
+		TweenLite.from($(prep + '#bubble'), 1, {delay:.1, opacity:0, y:0, ease:Elastic.easeInOut})
 		
 		$(prep + '#txt > g').each(function(i, e){
 			var e = $(e).css('display', 'block')
@@ -63,6 +66,9 @@
 			var e = $(prep + '#tt'+d)
 			TweenLite.to(e, .5, {delay:i*.1, opacity:0})
 		});
+
+		TweenLite.to($(prep + '#bubble'), .5, {y:0, ease:Quart.easeInOut});
+		TweenLite.to($(prep + '#txt'), .5, {y:0, ease:Quart.easeInOut});
 
 		setTimeout(function(){
 			clb()

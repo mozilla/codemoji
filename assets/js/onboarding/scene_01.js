@@ -19,7 +19,7 @@
 		})
 
 		$(prep + '#a1 > g').each(function(i, e){
-			TweenLite.from($(e), 2, {delay:.1 + .75-i*.15, opacity:0, scale:1.4, transformOrigin:'center center', ease:Elastic.easeInOut})
+			TweenLite.from($(e), 2, {delay:.1 + .75-i*.15, opacity:0, scale:1.5, transformOrigin:'center center', ease:Elastic.easeInOut})
 		})
 
 		$(prep + '#a2 > *').each(function(i, e){
@@ -28,7 +28,7 @@
 
 		setTimeout(function(){
 			swap()
-			interval = setInterval(swap, 1750)
+			interval = setInterval(swap, 1600)
 		}, 2200);
 		
 		[1,2,3,4].forEach(function(d){
