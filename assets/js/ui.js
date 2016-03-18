@@ -193,7 +193,7 @@
           })
         })
       } else {
-        var t = $("."+section+" .header").innerHeight()
+        var t = $("."+section+" .header").innerHeight() + 58
         $('.'+section+' .coachmark').each(function(i){
           var self = this
           TweenLite.to($(self), 1, {
