@@ -192,6 +192,7 @@ input#share_copytoclipboard {
   overflow:hidden; 
   white-space:nowrap; 
   text-overflow: ellipsis;
+  color: #F46060;
 }
 
 input.share_key_emoji-item:value{
