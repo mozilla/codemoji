@@ -133,7 +133,8 @@
   left: 0;
 }
 
-.landing_encrypted_message{
+.landing_encrypted_message,
+  .share_encrypted_message{
     margin: 0.2rem 2rem 1.2rem 2rem;
     max-width: 80rem;
     line-height: 140%;
@@ -146,7 +147,8 @@
     margin-bottom: 4rem;
 }
 
-.landing_encrypted_message:after{
+.landing_encrypted_message:after,
+  .share_encrypted_message:after{
   content: '';
   position: absolute;
   width: 0;

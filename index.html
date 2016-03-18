@@ -517,7 +517,7 @@
           <div class="share_message">
             <span style-text uppercase color-light>SHARE THIS MESSAGE</span>
           </div>
-          <div flex class="share_message_item" layout="row" layout-align="center center" layout-wrap></div>
+          <div flex class="share_message_item share_encrypted_message" layout="row" layout-align="center center" layout-wrap></div>
         </div>
         
         <div layout="column" layout-align="space-between center" wide>
@@ -540,7 +540,7 @@
             </a>
           </div>
           <span style-text text="extra-small" opacity="65">or copy this sharable link</span>
-          <div layout="row" layout-align="center center">
+          <div layout="column" layout-align="center center">
             <input type="text" style-text id="share_copytoclipboard" readonly="readonly" />
             <button id="share_copytoclipboardcta" class="mozilla_button mozilla_button_blue share_copytoclipboardcta" button-box>Copy</button>
           </div>
