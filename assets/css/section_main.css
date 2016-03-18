@@ -596,9 +596,9 @@ div#decryptHeader{
   position: absolute;
   top: 0;
   left: 0;
-  color: white;
+  color: #F46060;
   max-width: 18rem;
-  background-color: #F46060;
+  background-color: white;
   font-family: "fira_sans";
   border-radius: 6px;
   font-size: 14px;
