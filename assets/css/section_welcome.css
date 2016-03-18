@@ -140,7 +140,7 @@
     padding: 15px;
     font-size: 50%;
     text-align: center;
-    border-radius: 7px;
+    border-radius: 17px;
     background-color: #3B88C3;
     position: relative;
     margin-bottom: 4rem;
@@ -153,11 +153,11 @@
   bottom: 0;
   right: 0;
   height: 0;
-     border-top: solid .7rem transparent;
-  border-bottom: solid .7rem #3B88C3;
-    border-left: solid 1rem #3B88C3;
-   border-right: solid 1rem transparent;
-transform: translateX(70%);
+  border-top: solid 1.3rem transparent;
+  border-bottom: solid 1.3rem #3B88C3;
+  border-left: solid 2rem #3B88C3;
+  border-right: solid 2rem transparent;
+  transform: translateX(50%);
 }
 
 #landing_button_last{
