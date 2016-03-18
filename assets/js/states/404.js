@@ -4,7 +4,6 @@
   Cryptoloji.states.notFound = {
     enter: function () {
       $('.section_not_found').addClass('section-show')
-
       shuffle_error()
 
       $('.svg_wrapper_not_found').on('click', function () {

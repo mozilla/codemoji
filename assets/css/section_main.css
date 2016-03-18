@@ -88,6 +88,7 @@ div#decryptHeader{
 .bluebox_output,
 .bluebox_output *{
   user-select: none;
+  -webkit-user-select: none;
 }
 
 
@@ -320,6 +321,7 @@ div#decryptHeader{
   left: 10px;
   transform: translate(0,-50%);
   user-select: none;
+  -webkit-user-select: none;
   width: 80px;
   height: 80px;
   border-radius: 50%;

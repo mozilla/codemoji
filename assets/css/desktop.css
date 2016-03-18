@@ -201,13 +201,6 @@
     margin: 1.2rem 0 1.6rem 0;
     /*margin: 2rem 0 5rem 0;*/
   }
-  .unselectable {
-    /* enable selection */
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
-  }
   .header__input{
     font-size: 2.4rem;
   }
