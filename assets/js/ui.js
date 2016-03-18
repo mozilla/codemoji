@@ -277,8 +277,8 @@
     TweenLite.to($('#decryption_selected_key'), 1.25, {scale:1, ease:Expo.easeInOut})
 
     setTimeout(function(){
-      TweenLite.set($('.main_share .mozilla_button'), {scale:2})
-      TweenLite.to($('.main_share .mozilla_button'), .75, {scale:1, ease:Expo.easeOut})
+      TweenLite.set($('.main_share #share_wrapper_js'), {scale:1.3, overwrite:true})
+      TweenLite.to($('.main_share #share_wrapper_js'), 1, {scale:1, ease:Quad.easeOut, overwrite:true})
     }, 750)
     
   }

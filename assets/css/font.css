@@ -222,8 +222,7 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   padding: 0.5rem 3.7rem;
   text-align: center;
   border-radius: 2.5rem;
-  -webkit-transition: all .5s ease-in-out 0s;
-  transition: all .2s ease-in-out 0s;
+  transition: background-color .2s ease-in-out 0s;
   cursor: pointer;
   text-transform: lowercase;
   user-select: none;
