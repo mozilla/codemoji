@@ -33,17 +33,22 @@
 }
 
 .svg_wrapper_pagination{
-  width: 20rem;
+  width: 15rem;
   position: absolute;
-  bottom: 4rem;
+  bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.svg_wrapper_pagination svg{
+  width: 100%;
+  height: 100%;
 }
 
 .next_button_onboarding{
   width: 30rem;
   position: absolute;
-  bottom: 9rem;
+  bottom: 8.5rem;
   left: 50%;
   transform: translateX(-50%);
 }
