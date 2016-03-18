@@ -85,7 +85,10 @@ div#decryptHeader{
   z-index: 2;
 }
 
-
+.bluebox_output,
+.bluebox_output *{
+  user-select: none;
+}
 
 
 .main_keyslider{
