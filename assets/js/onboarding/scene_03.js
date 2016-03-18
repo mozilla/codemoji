@@ -8,10 +8,13 @@
 
 	var index = 1
 
+	var interv
+
 	function enter(clb){
 
 		TweenLite.set($(prep + '#bubble'), {y:90});
 		TweenLite.set($(prep + '#txt'), {y:90});
+		TweenLite.set($(prep + '#cur'), {y:90});
 
 
 		[1,2,3].forEach(function(d){
@@ -19,23 +22,42 @@
 		})
 
 		$(prep + '#txt > g').css('display', 'none')
+		$(prep + '#cur').css('display', 'none')
 
-		TweenLite.from($(prep + '#bubble'), 1, {delay:.1, opacity:0, y:0, ease:Elastic.easeInOut})
+		TweenLite.from($(prep + '#bubble'), 1, {delay:.1, opacity:0, y:0, ease:Elastic.easeInOut, onComplete:function(){
+
+			$(prep + '#cur').css('display', 'block')
+			var st = 0
+			interv = setInterval(function(){
+				st = (st==0) ? 1 : 0
+				TweenLite.set($(prep + '#cur'), {opacity:st})	
+			}, 500)
+
+			setTimeout(function(){
+				clearInterval(interv)
+				$(prep + '#cur').css('display', 'none')
+			}, 2000)
+
+		}})
+
+		
 		
 		$(prep + '#txt > g').each(function(i, e){
 			var e = $(e).css('display', 'block')
-			TweenLite.from($(e), .65, {delay:.5 + i*.1, opacity:0, scale:1.5, transformOrigin:'center center', ease:Elastic.easeInOut})
+			TweenLite.set(e, {opacity:1, scale:1, transformOrigin:'center center'})
+			TweenLite.from($(e), .25, {delay:2.5 + .7 + i*.1, opacity:0, ease:Expo.easeInOut})
 		});
 
 		[1,2,3].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
-			TweenLite.from(e, 1.5, {delay:1.5 + d*.15, opacity:0, y:20, transformOrigin:'center center', ease:Elastic.easeInOut})
+			TweenLite.set(e, {opacity:1, y:0, transformOrigin:'center center'})
+			TweenLite.from(e, 1, {delay:4 + d*.2, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
 		});
 
 
 		setTimeout(function(){
 			clb()
-		}, 3500)
+		}, 5500)
 
 	}
 
@@ -58,6 +80,8 @@
 
 	function exit(clb){
 
+		clearInterval(interv)
+
 		$(prep + '#b'+index+' > g').each(function(i, e){
 			TweenLite.to($(e), .4, {delay:.5-i*.1, opacity:0})
 		});
@@ -67,8 +91,8 @@
 			TweenLite.to(e, .5, {delay:i*.1, opacity:0})
 		});
 
-		TweenLite.to($(prep + '#bubble'), .5, {y:0, ease:Quart.easeInOut});
-		TweenLite.to($(prep + '#txt'), .5, {y:0, ease:Quart.easeInOut});
+		TweenLite.to($(prep + '#bubble'), .75, {y:0, ease:Elastic.easeInOut});
+		TweenLite.to($(prep + '#txt'), .75, {y:0, ease:Elastic.easeInOut});
 
 		setTimeout(function(){
 			clb()

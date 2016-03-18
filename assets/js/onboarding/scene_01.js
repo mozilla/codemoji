@@ -19,7 +19,7 @@
 		})
 
 		$(prep + '#a1 > g').each(function(i, e){
-			TweenLite.from($(e), 2, {delay:.1 + .75-i*.15, opacity:0, scale:1.5, transformOrigin:'center center', ease:Elastic.easeInOut})
+			TweenLite.from($(e), 1, {delay:.1 + .75-i*.15, opacity:0, scale:1.5, transformOrigin:'center center', ease:Expo.easeInOut})
 		})
 
 		$(prep + '#a2 > *').each(function(i, e){
@@ -33,7 +33,8 @@
 		
 		[1,2,3,4].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
-			TweenLite.from(e, 1.5, {delay:4 + d*.15, opacity:0, y:20, transformOrigin:'center center', ease:Elastic.easeInOut})
+			TweenLite.set(e, {opacity:1, y:0})
+			TweenLite.from(e, 1, {delay:4 + d*.2, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
 		});
 
 		setTimeout(function(){
