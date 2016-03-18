@@ -12,6 +12,7 @@
 
     // remove main loader
     TweenLite.to($('#mainLoader'), .8, {opacity: 0})
+    TweenLite.to($('#mainLoader'), 0, {display: "none", delay: .8})
 
     if ('ontouchstart' in window) {
       $('body').addClass('touch')
