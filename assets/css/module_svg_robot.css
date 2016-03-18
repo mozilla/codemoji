@@ -1,0 +1,34 @@
+#eye_pupils path:nth-child(even){
+  animation: blinkeyes 2s infinite;
+}
+
+#eye_pupils path:nth-child(odd){
+  animation: blinkeyes .7s infinite;
+}
+
+#teeth rect{
+  animation: moveteeth 2s infinite linear;
+}
+
+@keyframes blinkeyes{
+  0%{
+    opacity: 1
+  }
+  90%{
+
+    opacity: 1
+  }
+  100%{
+
+    opacity: 0
+  }
+}
+
+@keyframes moveteeth{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(250%);
+  }
+}

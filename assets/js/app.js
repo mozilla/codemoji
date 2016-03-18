@@ -11,7 +11,7 @@
     FastClick.attach(document.body);
 
     // remove main loader
-    $('#mainLoader').remove();
+    TweenLite.to($('#mainLoader'), .8, {opacity: 0})
 
     if ('ontouchstart' in window) {
       $('body').addClass('touch')

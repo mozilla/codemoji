@@ -8,6 +8,11 @@
   margin-bottom: 5rem;
 }
 
+.svg_captcha_robot svg{
+  height: 100%;
+  width: 100%;
+}
+
 .section_captcha{
   z-index: 4000;
 }
