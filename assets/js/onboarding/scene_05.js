@@ -23,27 +23,35 @@
 
 		TweenLite.from($(prep+'#d1'), 1.5, {delay:1.5, opacity:0, y:10, ease:Expo.easeInOut});
 
-        $(prep+'#d1 #dots > g').each(function(i, e){
-          TweenLite.to($(e), .25, {delay: 2.5+i*.1, y:-12, ease:Quad.easeInOut})
-          TweenLite.to($(e), .25, {delay: 2.5+.25+i*.1, y:0, ease:Quad.easeInOut})
-        })
+		TweenLite.to($('#s5'), 2.5, {onComplete:dotss})
+		TweenLite.to($('#s5'), 3, {onComplete:dotss})
+		TweenLite.to($('#s5'), 3.5, {onComplete:dotss})
 
-		TweenLite.to($(prep+'#d1'), 1, {delay:2.8, opacity:0, ease:Expo.easeInOut});
-		TweenLite.from($(prep+'#d2'), 1, {delay:2.8, opacity:0, ease:Expo.easeInOut});
+        
+		TweenLite.to($(prep+'#d1'), 1, {delay:3.8, opacity:0, ease:Expo.easeInOut});
+		TweenLite.from($(prep+'#d2'), 1, {delay:3.8, opacity:0, ease:Expo.easeInOut});
 
 		[1,2,3,4].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0})
-			TweenLite.from(e, 1, {delay:3.5 + d*.2, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
+			TweenLite.from(e, 1, {delay:5 + d*.2, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
 		});
 
 
 		timer = setTimeout(function(){
 			clb()
-		}, 5800)
+		}, 7200)
 
 	}
 
+
+
+	function dotss(){
+		$(prep+'#d1 #dots > g').each(function(i, e){
+          TweenLite.to($(e), .2, {delay: i*.1, y:-12, ease:Sine.easeInOut})
+          TweenLite.to($(e), .2, {delay: .2+i*.1, y:0, ease:Sine.easeInOut})
+        })
+	}
 
 
 

@@ -224,9 +224,8 @@ rgb(244,96,96) rgb(undefined,undefined,undefined) rgb(undefined,undefined,undefi
   border-radius: 2.5rem;
   transition: background-color .2s ease-in-out 0s;
   cursor: pointer;
-  text-transform: lowercase;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 .mozilla_button::first-letter { 

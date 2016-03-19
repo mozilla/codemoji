@@ -2,6 +2,12 @@
   width: 100%;
   height: 100%;
   background-color: #283344;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.section_onboarding_wrapper text{
+  cursor: default;
 }
 
 .svg_wrapper_onboarding{
