@@ -9,8 +9,11 @@
 	var index = 1
 
 	var interv
+	var timer
 
 	function enter(clb){
+
+		clearTimeout(timer)
 
 		TweenLite.set($(prep + '#bubble'), {y:90});
 		TweenLite.set($(prep + '#txt'), {y:90});
@@ -55,7 +58,7 @@
 		});
 
 
-		setTimeout(function(){
+		timer = setTimeout(function(){
 			clb()
 		}, 5500)
 
@@ -81,6 +84,7 @@
 	function exit(clb){
 
 		clearInterval(interv)
+		clearTimeout(timer)
 
 		$(prep + '#b'+index+' > g').each(function(i, e){
 			TweenLite.to($(e), .4, {delay:.5-i*.1, opacity:0})
@@ -91,12 +95,12 @@
 			TweenLite.to(e, .5, {delay:i*.1, opacity:0})
 		});
 
-		TweenLite.to($(prep + '#bubble'), .75, {y:0, ease:Elastic.easeInOut});
-		TweenLite.to($(prep + '#txt'), .75, {y:0, ease:Elastic.easeInOut});
+		TweenLite.to($(prep + '#bubble'), 1, {y:0, ease:Elastic.easeInOut});
+		TweenLite.to($(prep + '#txt'), 1, {y:0, ease:Elastic.easeInOut});
 
-		setTimeout(function(){
+		timer = setTimeout(function(){
 			clb()
-		}, 1000)
+		}, 1050)
 	}
 
 	oo.scene_03.enter = enter

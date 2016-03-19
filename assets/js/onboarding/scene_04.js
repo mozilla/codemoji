@@ -7,16 +7,21 @@
 	var prep = '#s4 '
 
 	var interval
+	var timer
 
-	var pos = [0, -95, 0, 95]
-	var first=true
+	var pos = [null, -95, 0, 95, 95]
+	var ops = [null, 1,1,1,0]
 	var indexing = 0
-	var indexArr = [2, 1, 3]
-	var previndex
+	var indexArr = [2, 1, 3, 0]
+	var previndex = 0
 
 	function enter(clb){
 
-		first=true;
+		clearInterval(interval)
+		clearTimeout(timer)
+
+		indexing = 0;
+		previndex = 0;
 		
 		[1,2,3].forEach(function(d){
 			$(prep + '#tt'+d).css('display', 'none')
@@ -27,7 +32,7 @@
 		})
 
 		TweenLite.set($(prep + '#sel'), {opacity:0, scale:1})
-		TweenLite.set($(prep + '#txt > g'), {opacity:1});
+		TweenLite.set($(prep + '#g0 > g'), {opacity:1});
 
 		// var del = 2350
 		// var step=1250
@@ -47,16 +52,16 @@
 		[1,2,3].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0})
-			TweenLite.from(e, 1.5, {delay:1.25 + d*.15, opacity:0, y:20, transformOrigin:'center center', ease:Elastic.easeInOut})
+			TweenLite.from(e, 1, {delay:1.25 + d*.25, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
 		});
 
 		TweenLite.to($(prep), 1.5, {onComplete:function(){
-			interval = setInterval(swap, 2350)
+			interval = setInterval(swap, 2000)
 		}})
 
 		
 
-		setTimeout(function(){
+		timer = setTimeout(function(){
 			clb()
 		}, 5500)
 
@@ -72,35 +77,36 @@
 			indexing = 0
 		}
 
-		if(first){
-			$(prep + '#txt > g').each(function(i, e){
-				TweenLite.to($(e), .5, {delay:Math.random()*.25, opacity:0, ease:Quart.easeInOut})
-			})
-		}
-
 		TweenLite.from($(prep + '#f'+index), .5, {scale:1.2, transformOrigin:'center center', ease:Quart.easeInOut})
-		TweenLite.set($(prep + '#sel'), {scale:1.3, transformOrigin:'center center'})
-		TweenLite.to($(prep + '#sel'), .9, {opacity:1, x:pos[index], scale:1, transformOrigin:'center center', ease:Expo.easeInOut})
+		TweenLite.to($(prep + '#sel'), .6, {opacity:ops[index], x:pos[index], ease:Expo.easeInOut})
 		
-		if(!first && previndex){
-			$(prep + '#g'+previndex+' > g').each(function(i, e){
-				TweenLite.to($(e), .5, {delay:Math.random()*.25, opacity:0, ease:Quart.easeInOut})
-			})
-		}
+		$(prep + '#g'+previndex+' > g').each(function(i, e){
+			TweenLite.to($(e), .35, {delay:Math.random()*.5, opacity:0, ease:Quart.easeInOut})
+		})
 
 		$(prep + '#g'+index).css('display', 'block')
 		$(prep + '#g'+index+' > g').each(function(i, e){
-			TweenLite.set($(e), {opacity:0, transformOrigin:'center center'})
+			TweenLite.set($(e), {opacity:0})
 			TweenLite.to($(e), .5, {delay:Math.random()*.25, opacity:1, ease:Quart.easeInOut})
 		})
 
 		previndex=index
-		first=false
 	}
 
 	function exit(clb){
 
-		clearInterval(interval)
+		clearInterval(interval);
+		clearTimeout(timer);
+
+		if(previndex!=3){
+			$(prep + '#g3').css('display', 'block')
+			$(prep + '#g'+previndex+' > g').each(function(i, e){
+				TweenLite.to($(e), .35, {delay:Math.random()*.25, opacity:0, ease:Quart.easeInOut, overwrite:true})
+			})
+			$(prep + '#g3 > g').each(function(i, e){
+				TweenLite.to($(e), .35, {delay:Math.random()*.25, opacity:1, ease:Quart.easeInOut, overwrite:true})
+			})
+		};
 
 		[1,2,3].forEach(function(d, i){
 			var e = $(prep + '#tt'+d)
@@ -110,7 +116,7 @@
 
 		TweenLite.to($(prep + '#sel'), .5, {opacity:0, scale:1.2, transformOrigin:'center center', ease:Expo.easeInOut})
 
-		setTimeout(function(){
+		timer = setTimeout(function(){
 			clb()
 		}, 1000)
 	}

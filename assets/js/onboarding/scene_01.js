@@ -7,9 +7,12 @@
 	var prep = '#s1 '
 
 	var interval
+	var timer
 	var index = 1
 
 	function enter(clb){
+		clearTimeout(timer);
+
 		[1,2,3].forEach(function(d){
 			$(prep + '#b'+d+' > g').css('display', 'none')
 		});
@@ -37,7 +40,7 @@
 			TweenLite.from(e, 1, {delay:4 + d*.2, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
 		});
 
-		setTimeout(function(){
+		timer = setTimeout(function(){
 			clb()
 		}, 6000)
 
@@ -63,6 +66,7 @@
 	function exit(clb){
 
 		clearInterval(interval)
+		clearTimeout(timer)
 		interval=null
 
 		$(prep + '#b'+index+' > g').each(function(i, e){
@@ -74,7 +78,7 @@
 			TweenLite.to(e, .5, {delay:i*.1, opacity:0, ease:Quart.easeInOut})
 		});
 
-		setTimeout(function(){
+		timer = setTimeout(function(){
 			clb()
 		}, 1000)
 	}
