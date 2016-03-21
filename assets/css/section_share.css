@@ -185,6 +185,10 @@
   transform: translateX(-50%);
 }
 
+#share_copyIosHint {
+  display: none;
+}
+
 #share_copytoclipboard {
   background-color: transparent;
   border: none;
@@ -199,7 +203,7 @@
   text-overflow: ellipsis;
   color: #F46060;
   text-decoration: underline;
-  max-width: 25rem;
+  margin-top: 1.5rem;
 }
 
 input.share_key_emoji-item:value{

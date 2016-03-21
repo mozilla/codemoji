@@ -39,8 +39,10 @@
       fillLinkForClipboardCopy()
       fillKeyForClipboardCopy()
 
-      copyLinkToClipboardHandler()
-      copyKeyToClipboardHandler()
+      if (!iosTest()) {
+        copyLinkToClipboardHandler()
+        copyKeyToClipboardHandler()
+      }
 
       setupShareButtons()
 
@@ -144,7 +146,7 @@
     var actionMsg = ''
     var actionKey = (action === 'cut' ? 'X' : 'C')
 
-    if (/iPhone|iPad/i.test(navigator.userAgent)) {
+    if (iosTest()) {
       // actionMsg = 'No support :('
       return
     }
@@ -176,12 +178,25 @@
         // fill link
         $('#share_copytoclipboard').attr('data-clipboard-text', shareURI)
         $('#share_copytoclipboard').attr('href', shareURI)
-        $('#share_copytoclipboard').text(shareURI.replace('http://', ''))
+        $('#share_copytoclipboard').text('This is the link to share')
+        // copy link fallback if ios
+        if (iosTest()) {
+          $('#share_copytoclipboardcta').hide()
+          $('#share_copyIosHint').show()
+        }
       })
   }
 
   function fillKeyForClipboardCopy () {
     $('.share_key_emoji-item').attr('data-clipboard-text', Cryptoloji.current.key)
+    // copy key fallback if ios
+    if (iosTest()) {
+      $('.share_key_emoji-item').text(Cryptoloji.current.key)
+    }
+  }
+
+  function iosTest () {
+    return /iPhone|iPad/i.test(navigator.userAgent)
   }
 
   function setupShareButtons () {
