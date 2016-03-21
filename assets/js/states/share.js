@@ -47,20 +47,27 @@
 
       setupShareButtons()
 
-      setShareModalCoordinates()
-
-      handleShareModal()
-
-      TweenLite.to($('#encryption_help_button'), .5, {opacity:0})
+      // share modal is fixed in desktop layout
+      if (Cryptoloji.mq.matches) {
+        $('.share_key').addClass('share_key-open')
+        $('.share_key_emoji-item').attr('id', 'share_copykeytoclipboard')
+      } else {
+        setShareModalCoordinates()
+        handleShareModal()
+      }
     },
     leave: function () {
       $('.section_main.encryption').removeClass('section-show')
-      // close the modal than exit
-      if ($('.share_key').hasClass('share_key-open')) {
-        $('.share_key').removeClass('share_key-open')
-        $('.share_key').transition({duration:500, y:$('.share_key').height(), easing:'easeInOutExpo', complete: function(){
-          $('.share_key_emoji-item').attr('id', '')
-        }})
+
+      // only in mobile
+      if (!Cryptoloji.mq.matches) {
+        // close the modal than exit
+        if ($('.share_key').hasClass('share_key-open')) {
+          $('.share_key').removeClass('share_key-open')
+          $('.share_key').transition({duration:500, y:$('.share_key').height(), easing:'easeInOutExpo', complete: function(){
+            $('.share_key_emoji-item').attr('id', '')
+          }})
+        }
       }
       $('.section_share').transition({delay: 0, duration:750, y:window.innerHeight, easing:'easeInOutExpo', complete: function(){
         $('.section_share').removeClass('section-show')
@@ -71,8 +78,6 @@
         linkClipboard.destroy()
         keyClipboard.destroy()
       }
-
-      TweenLite.to($('#encryption_help_button'), .5, {opacity:1})
 
       // sharer cleanup
       Cryptoloji.UI.Sharer('facebook').unbind()

@@ -246,6 +246,16 @@
     line-height: 22px;
   }
 
+  .share_key {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .share_key_emoji {
+    max-width: 10rem;
+  }
+
   .share_key-wrapper,
   .share_key-wrapper:before, .share_key-wrapper:after,
   .share_key_emoji-item {
@@ -258,9 +268,15 @@
   }
 
   .share_key_sentence {
-    max-width: 40rem;
-    line-height: 4rem;
+    max-width: 60rem;
+    line-height: 2.5rem;
     font-size: 120%;
+    margin: 4rem 0;
+    text-align: left;
+  }
+
+  #share_key_hide {
+    display: none;
   }
 
   #key-modal{
