@@ -18,9 +18,12 @@
     enter: function () {
       $('.section_main.encryption').addClass('section-show')
       $(".section_share").addClass("section-show")
-      $('.section_share').css({y:window.innerHeight})
+      $('.section_share').css({
+             y: window.innerHeight,
+        height: window.innerHeight-$('#encryptHeader').innerHeight()
+      })
       setTimeout(function(){
-        $('.section_share').transition({duration:750, y:0, easing:'easeInOutExpo', complete: function(){
+        $('.section_share').transition({duration:750, y:$('#encryptHeader').innerHeight(), easing:'easeInOutExpo', complete: function(){
           $("#share_more_arrow").addClass("shown")
         }})
       }, 0)
@@ -182,7 +185,7 @@
     // set the height and the top y coordinate to reach when share key modal is open
     // Cryptoloji.utils.remToPx(.5) is for add a margin
     // 23 is the magic number...
-    share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23
+    share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23 -$('#encryptHeader').innerHeight()
     share_modal_margin = Cryptoloji.utils.remToPx(10)
     if (Cryptoloji.mq.matches) {
       share_modal_margin = Cryptoloji.utils.remToPx(15)
