@@ -25,9 +25,7 @@
 
   function decrypt (input, key) {
     var output = input
-    if (!_.isNumber(key)) {
-      key = Emojifier.toNumber(key)
-    }
+    key = Emojifier.toNumber(key)
     key = EmojiList.indexOf(key)
     // cesar chyper
     generateEmojiSubsetFrom(key)

@@ -31,6 +31,21 @@
     // encode in ucs2
     return punycode.ucs2.encode(points)
   }
+  /**
+  * Shuffles string in place.
+  */
+  function _shuffle (a) {
+    a = a.split('')
+    var n = a.length
+
+    for (var i = n - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1))
+      var tmp = a[i]
+      a[i] = a[j]
+      a[j] = tmp
+    }
+    return a.join('')
+  }
 
   function decode (text) {
     var decodeAlfaBet = CharList.slice(0)
@@ -39,7 +54,7 @@
     // add shuffle padding to the decoding alfabet to make it length like emoji set
     while (decodeAlfaBet.length < emojis.length && i < 10) {
       var temp = CharList.slice(0)
-      temp = _.shuffle(temp).join('')
+      temp = _shuffle(temp)
       decodeAlfaBet += temp
       i++
     }
