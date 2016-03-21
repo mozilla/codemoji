@@ -19,6 +19,7 @@
 
 .svg_wrapper_onboarding > svg{
   width:100%;
+  overflow: visible;
 }
 
 .onboarding_skip_button{
