@@ -38,24 +38,35 @@
           .fill(keysliderEmojiList)
 
         Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
-          // select corresponding emoji in keymodal
-          Cryptoloji.UI.KeyModal().select(key)
-
           if ($('#encryption_input').val().length === 0) {
             var newplaceholder = ['You\'ve picked a key. ', 500, '\nWrite your message here to see it in cipher.', 400]
             animateInputPlaceholder(theater, newplaceholder)
           }
-          Cryptoloji.UI.selectKey(key)
-          Cryptoloji.UI.encryptText()
+
+          // check if the key is already being selected
+          // this avoid multiple call from slider and modal
+          if (Cryptoloji.current.key !== key) {
+            Cryptoloji.UI.selectKey(key)
+
+            // select corresponding emoji in keymodal
+            Cryptoloji.UI.KeyModal().select(key)
+
+            Cryptoloji.UI.encryptText()
+          }
         })
 
         Cryptoloji.stateman.on('keymodal:key-chosen', function (key) {
-          Cryptoloji.UI.Keyslider('encrypt')
-            .resetSelection()
-            .addKey(key).select(key)
-          scrollToSelectedKey()
-          Cryptoloji.UI.selectKey(key)
-          Cryptoloji.UI.encryptText()
+          // check if the key is already being selected
+          // this avoid multiple call from slider and modal
+          if (Cryptoloji.current.key !== key) {
+            Cryptoloji.UI.selectKey(key)
+
+            Cryptoloji.UI.Keyslider('encrypt')
+              .resetSelection()
+              .addKey(key).select(key).scrollToSelectedKey()
+
+            Cryptoloji.UI.encryptText()
+          }
         })
       } else {
         Cryptoloji.stateman.on('keypanel:key-chosen', function (key) {
@@ -179,11 +190,6 @@
     $('#encryption_output').addClass('placeholdit')
     $('.share_message_item').html('')
     $('.main_share').removeClass('main_share-visible')
-  }
-
-  function scrollToSelectedKey () {
-    var value = $('.keyslider .selected', $('.section-show')).position().left - Cryptoloji.utils.remToPx(1.7)
-    $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
   }
 
 })(window, window.Cryptoloji, window.jQuery, window._, window.theaterJS);

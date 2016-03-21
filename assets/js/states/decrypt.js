@@ -36,18 +36,29 @@
       initFromStorage()
 
       Cryptoloji.stateman.on('keyslider:key-chosen', function (key) {
-        // select corresponding emoji in keymodal
-        Cryptoloji.UI.KeyModal().select(key)
-        Cryptoloji.UI.selectKey(key)
-        Cryptoloji.UI.decryptText()
+        // check if the key is already being selected
+        // this avoid multiple call from slider and modal
+        if (Cryptoloji.current.key !== key) {
+          Cryptoloji.UI.selectKey(key)
+
+          // select corresponding emoji in keymodal
+          Cryptoloji.UI.KeyModal().select(key)
+
+          Cryptoloji.UI.decryptText()
+        }
       })
       Cryptoloji.stateman.on('keymodal:key-chosen', function (key) {
-        Cryptoloji.UI.Keyslider('decrypt')
-          .resetSelection()
-          .addKey(key).select(key)
-        scrollToSelectedKey()
-        Cryptoloji.UI.selectKey(key)
-        Cryptoloji.UI.decryptText()
+        // check if the key is already being selected
+        // this avoid multiple call from slider and modal
+        if (Cryptoloji.current.key !== key) {
+          Cryptoloji.UI.selectKey(key)
+
+          Cryptoloji.UI.Keyslider('decrypt')
+            .resetSelection()
+            .addKey(key).select(key).scrollToSelectedKey()
+
+          Cryptoloji.UI.decryptText()
+        }
       })
       Cryptoloji.stateman.on('keypanel:key-chosen', function (key) {
         Cryptoloji.UI.Keyslider('decrypt')
@@ -85,7 +96,6 @@
       // right key handler
       Cryptoloji.stateman.on('decrypt:right-key', function () {
         console.log('right key')
-        $('body').removeClass('main_key_modal-open')
 
         $('.decrypt_feedback').transition({duration:1000, y:200, easing:'easeInOutExpo'})
 
@@ -106,14 +116,14 @@
       $('.section_more').removeClass('section-show')
       // reset current object before proceeding
       Cryptoloji.current = { input: null, output: null, key: null }
+      // reset also key slider and modal to clear key selection in ui
+      Cryptoloji.UI.Keyslider('decrypt')
+                   .resetSelection()
+      Cryptoloji.UI.KeyModal('decrypt')
+                   .resetSelection()
       // reset main share
       $('.main_share').removeClass('main_share-visible')
     }
-  }
-
-  function scrollToSelectedKey () {
-    var value = $('.keyslider .selected', $('.section-show')).position().left - Cryptoloji.utils.remToPx(1.7)
-    $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
   }
 
   function initFromStorage () {

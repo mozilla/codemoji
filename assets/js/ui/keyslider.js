@@ -73,6 +73,11 @@
     return self
   }
 
+  Keyslider.prototype.scrollToSelectedKey = function scrollToSelectedKey () {
+    var value = $('.keyslider .selected', $('.section-show')).position().left - Cryptoloji.utils.remToPx(1.7)
+    $('.keyslider', $('.section-show')).animate({ scrollLeft: value }, 500)
+  }
+
   function _createKeyElement (key) {
     return '<p class="key" key="' + key + '">' + Cryptoloji.UI.toTwemoji(key) + '</p>'
   }
