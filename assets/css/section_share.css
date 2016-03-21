@@ -180,7 +180,12 @@
   }
 }
 
-input#share_copytoclipboard {
+#tooltip_share {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#share_copytoclipboard {
   background-color: transparent;
   border: none;
   width: 100%;
@@ -193,6 +198,8 @@ input#share_copytoclipboard {
   white-space:nowrap; 
   text-overflow: ellipsis;
   color: #F46060;
+  text-decoration: underline;
+  max-width: 25rem;
 }
 
 input.share_key_emoji-item:value{

@@ -369,7 +369,7 @@
       </div>
     </div>
   </div>
-  <div id="tooltip_panel">
+  <div id="tooltip_panel" class="tooltip_panel">
      You've picked a key. Write your message to see it in cipher.
   </div>
   <!-- /ENCRYPTION -->
@@ -500,6 +500,8 @@
 
   <!-- SHARE views/share -->
   <div color-bg-dark class="section_share section" layout="column" layout-align="start center">
+    <div id="tooltip_share" class="tooltip_panel">
+    </div>
     <div class="share_main_wrap" wide>
       <div layout="column" layout-align="center end" wide>
         <div id="share_message_exit" class="share_message_exit" style-title to-state="encrypt" data-svg="assets/svg/x.svg"></div>
@@ -533,7 +535,8 @@
           </div>
           <span style-text text="extra-small" opacity="65">or copy this sharable link</span>
           <div layout="column" layout-align="center center">
-            <input type="text" style-text id="share_copytoclipboard" readonly="readonly" />
+            <!-- <input type="text" style-text id="share_copytoclipboard" readonly="readonly" /> -->
+            <a href style-text id="share_copytoclipboard" readonly="readonly" /></a>
             <button id="share_copytoclipboardcta" class="mozilla_button mozilla_button share_copytoclipboardcta" button-box>Copy</button>
           </div>
         </div>
