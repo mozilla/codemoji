@@ -39,6 +39,7 @@
       fillLinkForClipboardCopy()
       fillKeyForClipboardCopy()
 
+      // don't handle copy to clipboard if ios
       if (!iosTest()) {
         copyLinkToClipboardHandler()
         copyKeyToClipboardHandler()
@@ -65,8 +66,11 @@
         $('.section_share').removeClass('section-show')
       }})
       
-      linkClipboard.destroy()
-      keyClipboard.destroy()
+      // don't handle copy to clipboard if ios
+      if (!iosTest()) {
+        linkClipboard.destroy()
+        keyClipboard.destroy()
+      }
 
       TweenLite.to($('#encryption_help_button'), .5, {opacity:1})
 
@@ -159,7 +163,7 @@
     // fill the tooltip and position on the trigger elem
     $("#tooltip_share").text(actionMsg)
     TweenLite.set($("#tooltip_share"), {display: "block", opacity: 1})
-    TweenLite.to($("#tooltip_share"), 0, {y: y - 55})
+    TweenLite.to($("#tooltip_share"), 0, {y: y - 165})
 
     if (_tooltipTimeout) {
       clearTimeout(_tooltipTimeout)
