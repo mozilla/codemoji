@@ -9,11 +9,14 @@
         $('.main_share').addClass('main_share-visible')
       }
 
-      if(Cryptoloji.stateman.previous.name === 'welcome'){
+      if (Cryptoloji.stateman.previous.name === 'welcome'){
         $('#encryptHeader').css({y:-300})
         setTimeout(function(){
               $('#encryptHeader').transition({y:0, duration:1000, delay:250, easing:'easeInOutExpo'})
         },0)
+      } else if (Cryptoloji.mq.matches) {
+        $('.encryption_help_button').show()
+        TweenLite.to($('.encryption_help_button'), 1.25, {opacity: 1, ease:Elastic.easeInOut})
       }
 
       // Cryptoloji.stateman.emit('header:show')
@@ -146,6 +149,9 @@
       Cryptoloji.stateman.off('keyslider')
       Cryptoloji.stateman.off('keypanel')
       Cryptoloji.stateman.off('keymodal')
+      TweenLite.to($('.encryption_help_button'), 1.25, {opacity: 0, ease:Elastic.easeInOut, onComplete: function () {
+        $('.encryption_help_button').hide()
+      }})
       $('.section_more').removeClass('section-show')
       // reset main share
       $('.main_share').removeClass('main_share-visible')
