@@ -36,7 +36,10 @@
     Cryptoloji.UI.handleOrientationChanges()
     // hard refresh when orientation changes
     Cryptoloji.stateman.on('orientationchange', function () {
-      window.location.reload()
+      // only in desktop-like view refresh objects init
+      if (Cryptoloji.mq.matches) {
+        window.location.reload()
+      }
     })
 
 
