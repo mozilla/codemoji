@@ -43,6 +43,8 @@
       setShareModalCoordinates()
 
       handleShareModal()
+
+      TweenLite.to($('#encryption_help_button'), .5, {opacity:0})
     },
     leave: function () {
       $('.section_main.encryption').removeClass('section-show')
@@ -59,6 +61,8 @@
       
       linkClipboard.destroy()
       keyClipboard.destroy()
+
+      TweenLite.to($('#encryption_help_button'), .5, {opacity:1})
 
       // sharer cleanup
       Cryptoloji.UI.Sharer('facebook').unbind()
