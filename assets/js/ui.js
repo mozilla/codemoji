@@ -178,22 +178,8 @@
 
   function loadLogicHelpButton (section) {
 
-    function toggleCoachmark() {
-      if($('body').hasClass('coachmarks-open')){
-        $('.'+section+' .coachmark').each(function(i){
-          var self = this
-          TweenLite.to($(self), .8, {
-              delay: i * .15 + .2,
-              y: 0 - $('.'+section+' .coachmark').innerHeight(),
-              ease:Expo.easeInOut
-          })
-          TweenLite.to($(self).children(), .3, {
-              delay: i * .2,
-              opacity: 0
-          })
-        })
-      } else {
-        var t = $("."+section+" .header").innerHeight() + 58
+    function _openCoachmarks () {
+      var t = $("."+section+" .header").innerHeight() + 58
         $('.'+section+' .coachmark').each(function(i){
           var self = this
           TweenLite.to($(self), 1, {
@@ -206,8 +192,42 @@
               opacity: 1
           })
         })
+    }
+
+    function _closeCoachmarks () {
+      $('.'+section+' .coachmark').each(function(i){
+          var self = this
+          TweenLite.to($(self), .8, {
+              delay: i * .15 + .2,
+              y: 0 - $('.'+section+' .coachmark').innerHeight(),
+              ease:Expo.easeInOut
+          })
+          TweenLite.to($(self).children(), .3, {
+              delay: i * .2,
+              opacity: 0
+          })
+        })
+    }
+
+    function toggleCoachmark() {
+      if($('body').hasClass('coachmarks-open')){
+        _closeCoachmarks()
+        $('.section_main_wrapper').off()
+      } else {
+        _openCoachmarks()
+        setTimeout(function() {
+          handleCloseCoachmarks()
+        }, 500)
       }
       $('body').toggleClass('coachmarks-open')
+    }
+
+    function handleCloseCoachmarks () {
+      $('.section_main_wrapper').on("click", function () {
+        toggleHelpButtonColor()
+        toggleCoachmark()
+        toggleX()
+      })
     }
     
     function toggleHelpButtonColor () {
