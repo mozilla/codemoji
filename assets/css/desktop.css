@@ -1,3 +1,12 @@
+@media screen and (min-width: 760px) {
+  .welcome_text{
+    font-family: "fira_sans";
+    font-size: 140%;
+    line-height: 140%;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
 @media screen and (min-width: 1024px) {
 
   html[orientation="landscape"] .landscape-overlay {
@@ -212,13 +221,6 @@
   }
   .decryption .main_content_top{
     background-color: #FAFAFA;
-  }
-  .welcome_text{
-    font-family: "fira_sans";
-    font-size: 140%;
-    line-height: 140%;
-    text-align: center;
-    margin-bottom: 4rem;
   }
   .coachmark,
   .encryption_help_button,
