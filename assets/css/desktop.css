@@ -159,6 +159,22 @@
     transition: all .5s;
     transform: translate(0,0);
   }
+  .footer_link{
+    font-family: "fira_sans";
+    font-size: 16px;
+    margin: 0;
+    margin-left: 5px;
+    font-weight: 300;
+  }
+
+  .footer_link_wrapper_opacity,
+  .footer_link_wrapper_opacity:active,
+  .footer_link_wrapper_opacity:visited{
+    opacity: .5;
+    margin: 0 20px;
+    color: white;
+    font-family: "fira_sans";
+  }
   .more_text_title{
     color: gray;
   }

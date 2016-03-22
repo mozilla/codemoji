@@ -52,9 +52,9 @@
 
 .footer_link{
   font-family: "fira_sans";
-  font-size: 16px;
+  font-size: 13px;
   margin: 0;
-  margin-left: 5px;
+  margin-left: 0;
   font-weight: 300;
 }
 
@@ -62,7 +62,7 @@
 .footer_link_wrapper_opacity:active,
 .footer_link_wrapper_opacity:visited{
   opacity: .5;
-  margin: 0 20px;
+  margin: 0 7px;
   color: white;
   font-family: "fira_sans";
 }
