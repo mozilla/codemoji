@@ -392,6 +392,8 @@
       }
       // placeholder rigtht
       TweenLite.to($('.'+state+' .main_content_bottom_input.placeholdit'), .5, {delay: 2.5, opacity: 1})
+      TweenLite.set($('.coachmark'), {delay: 2.5, display: "block"})
+
     }
   }
 
