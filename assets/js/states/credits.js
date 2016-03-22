@@ -5,7 +5,12 @@
     enter: function () {
       $(".credits_section").addClass("section-show")
       $(".credits_section .mozilla_button").on("click", function(){
-        Cryptoloji.stateman.go(Cryptoloji.stateman.previous.name)
+        var prev = Cryptoloji.stateman.previous.name
+        if(prev){
+          Cryptoloji.stateman.go(prev)
+        } else {
+          Cryptoloji.stateman.go("welcome")
+        }
       })
     },
     leave: function () {
