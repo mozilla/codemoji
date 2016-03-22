@@ -24,7 +24,7 @@
       // transition
       if (Cryptoloji.stateman.previous.name !== 'share') {
         Cryptoloji.UI.encryptionEnteringTransition('encryption')
-      } else {
+      } else if (Cryptoloji.mq.matches){
         $('.coachmark').show()
       }
       if (Cryptoloji.mq.matches) {
