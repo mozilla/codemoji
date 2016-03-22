@@ -28,10 +28,11 @@
   <link rel="stylesheet" type="text/css" href="assets/css/section_onboarding.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_loading.css">
   <link rel="stylesheet" type="text/css" href="assets/css/section_more.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_not_found.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/section_credits.css">
   <link rel="stylesheet" type="text/css" href="assets/css/js_handlers.css">
   <link rel="stylesheet" type="text/css" href="assets/css/desktop.css">
   <link rel="stylesheet" type="text/css" href="assets/css/loader.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/section_not_found.css">
   <!-- endbuild -->
 
   <!-- process:template 
@@ -112,6 +113,16 @@
     </div>
   </div>
   <!-- /LANDSCAPE OVERLAY -->
+
+
+  <!-- CREDITS -->
+  <div class="section credits_section" layout="column" layout-align="center center" color-bg-dark>
+    <div class="content" flex layout="column" layout-align="center center">
+      <p class="credits_text">credits</p>
+      <a class="mozilla_button">back</a>
+    </div>
+  </div>
+  <!-- /CREDITS -->
 
 
   <!-- WELCOME views/welcome -->
@@ -619,6 +630,13 @@
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Donate</p>
         </a>
+        <a to-state="credits" class="footer_link_wrapper_opacity" 
+           layout="row" layout-align="center center">
+          <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
+               data-svg="assets/svg/footer-icon-credits.svg"
+               layout="column" layout-align="center center"></div>
+          <p class="footer_link">Credits</p>
+        </a>
       </div>
       <div class="footer_info" layout="row" layout-align="center center">
         <div class="svg_wrapper svg_wrapper_footer" data-svg="assets/svg/mozilla_logo.svg"></div>
@@ -712,6 +730,7 @@
   <script type="text/javascript" src="assets/js/states/welcome.js"></script>
   <script type="text/javascript" src="assets/js/states/more.js"></script>
   <script type="text/javascript" src="assets/js/states/landing.js"></script>
+  <script type="text/javascript" src="assets/js/states/credits.js"></script>
   
   <script type="text/javascript" src="assets/js/states/404.js"></script>
   <script type="text/javascript" src="assets/js/settings.js"></script>
