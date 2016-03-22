@@ -25,7 +25,7 @@
 
       // transition
       if (Cryptoloji.stateman.previous.name !== 'share' &&
-          Cryptoloji.stateman.previous.name !== 'captcha') {
+          Cryptoloji.stateman.previous.name !== 'credits') {
         Cryptoloji.UI.encryptionEnteringTransition('encryption')
       }
 
