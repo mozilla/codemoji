@@ -31,6 +31,8 @@
       // prevent href navigation on click n share link
       $('#share_copytoclipboard').click(function (e) {
         e.preventDefault()
+        $('#share_copyIosHint').css({scale:1.25, opacity:1})
+        $('#share_copyIosHint').transition({scale:1, opacity:.65, duration:900, easing:'easeInOutExpo'})
       })
 
       // resize font based on screen height
