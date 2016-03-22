@@ -168,7 +168,7 @@
     // fill the tooltip and position on the trigger elem
     $("#tooltip_share").text(actionMsg)
     TweenLite.set($("#tooltip_share"), {display: "block", opacity: 1})
-    TweenLite.to($("#tooltip_share"), 0, {y: y - 165})
+    TweenLite.to($("#tooltip_share"), 0, {x: x, y: y - 165})
 
     if (_tooltipTimeout) {
       clearTimeout(_tooltipTimeout)
@@ -249,7 +249,7 @@
     // Cryptoloji.utils.remToPx(.5) is for add a margin
     // 23 is the magic number...
     share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23 -$('#encryptHeader').innerHeight()
-    share_modal_margin = Cryptoloji.utils.remToPx(10)
+    share_modal_margin = Cryptoloji.utils.remToPx(12.5)
     if (Cryptoloji.mq.matches) {
       share_modal_margin = Cryptoloji.utils.remToPx(15)
     }

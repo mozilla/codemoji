@@ -78,7 +78,7 @@
   background-color: transparent;
   display: inline-block;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 1rem 1.5rem;
   font-size: 125%; 
   line-height: 0.8;
 }
@@ -98,6 +98,7 @@
 .share_key_emoji{
   font-size: 250%;
   position: relative;
+  bottom: 1.5rem;
 }
 
 .share_key-wrapper,
@@ -180,10 +181,10 @@
   }
 }
 
-#tooltip_share {
+/*#tooltip_share {
   left: 50%;
   transform: translateX(-50%);
-}
+}*/
 
 #share_copyIosHint {
   display: none;

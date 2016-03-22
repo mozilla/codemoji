@@ -254,6 +254,7 @@
 
   .share_key_emoji {
     max-width: 10rem;
+    bottom: 0;
   }
 
   .share_key-wrapper,
