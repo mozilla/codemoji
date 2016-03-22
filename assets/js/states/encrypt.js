@@ -5,6 +5,7 @@
     enter: function () {
       var theater = theaterJS()
 
+      $('.coachmark').hide()
       if (!_.isEmpty(Cryptoloji.current.output)) {
         $('.main_share').addClass('main_share-visible')
       }
@@ -14,9 +15,6 @@
         setTimeout(function(){
               $('#encryptHeader').transition({y:0, duration:1000, delay:250, easing:'easeInOutExpo'})
         },0)
-      } else if (Cryptoloji.mq.matches) {
-        $('.encryption_help_button').show()
-        TweenLite.to($('.encryption_help_button'), 1.25, {opacity: 1, ease:Elastic.easeInOut})
       }
 
       // Cryptoloji.stateman.emit('header:show')
@@ -24,9 +22,14 @@
       Cryptoloji.stateman.emit('header:hide')
 
       // transition
-      if (Cryptoloji.stateman.previous.name !== 'share' &&
-          Cryptoloji.stateman.previous.name !== 'credits') {
+      if (Cryptoloji.stateman.previous.name !== 'share') {
         Cryptoloji.UI.encryptionEnteringTransition('encryption')
+      } else {
+        $('.coachmark').show()
+      }
+      if (Cryptoloji.mq.matches) {
+        $('.encryption_help_button').show()
+        TweenLite.to($('.encryption_help_button'), 1.25, {opacity: 1, ease:Elastic.easeInOut})
       }
 
       Cryptoloji.UI.CharCounter('encrypt', '#encryption_input_count')

@@ -354,7 +354,6 @@
 
   function encryptionEnteringTransition (state) {
     if(Cryptoloji.mq.matches){
-
       TweenLite.set($('.'+state+' .main_keyslider'), {delay: 0, width: "0%"})
       TweenLite.set($('.'+state+' .main_keyslider .main_key_panel_emoji_wrapper'), {opacity: "0"})
       TweenLite.set($('.'+state+' .main_keyslider .main_keyslider_bottom_label'), {opacity: "0"})
