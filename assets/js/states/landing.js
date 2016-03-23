@@ -1,6 +1,22 @@
 (function (window, Cryptoloji, undefined) {
   'use strict'
-  
+
+  function landing_animation_shuffle(timing, initdelay) {
+    TweenLite.set($("#landing_state_2_svg>svg>g"), {"opacity": 0, scale: .8, transformOrigin:'center center'})
+    $("#landing_state_2_svg>svg>g").each(function(i){
+      var self = this
+      var tim = timing
+      TweenLite.to($(this), .4, {opacity: 1, scale: 1, delay: i*tim+initdelay})
+      if(i < $("#landing_state_2_svg>svg>g").length - 1){
+        TweenLite.to($(this), .4, {opacity: 0, scale: .8, delay: i*tim+(tim*3)/5+initdelay})
+      }
+    })
+  }
+
+  // $('.svg_wrapper_landing_key').on("click", function(){
+  //   landing_animation_shuffle(.4, 0)
+  // })
+
   Cryptoloji.states.landing = {
     canEnter: function () {
       console.log(Cryptoloji.storage.get('message'))
@@ -39,16 +55,8 @@
         TweenLite.to($("#landing_state_2_text"), time, {opacity: 1, delay: delay})
         // svg
         TweenLite.to($("#landing_state_2_svg"), time, {opacity: 1, delay: delay * 2})
-        TweenLite.set($("#landing_state_2_svg>svg>g"), {"opacity": 0, scale: .8, transformOrigin:'center center'})
-        $("#landing_state_2_svg>svg>g").each(function(i){
-          var self = this
-          var tim = .4
-          TweenLite.to($(this), .4, {opacity: 1, scale: 1, delay: i*tim+1})
-          if(i < $("#landing_state_2_svg>svg>g").length - 1){
-            TweenLite.to($(this), .4, {opacity: 0, scale: .8, delay: i*tim+(tim*3)/5+1})
-          }
-        })
 
+        landing_animation_shuffle(.4, 1)
 
         // button
         TweenLite.to($("#landing_state_2_button"), time, {opacity: 1, delay: delay * 3})
