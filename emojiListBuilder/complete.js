@@ -54,7 +54,7 @@ fs.writeFile("./complete.json", JSON.stringify(emojis), function(err) {
 // write html recap and exclusion tool
 var content = '<html><head>'
 content += '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'
-content += '<style>body { background-color: #f0f0f0; } .removed { opacity: 0.5; }</style>'
+content += '<style>body { background-color: #f0f0f0; } .removed { opacity: 0.5; } span { display: inline-block; margin: 0.3em; }</style>'
 content += '</head><body>'
 content += '<div><input id="bg_color" value="#f0f0f0" /></div>'
 content += '<script>\
