@@ -1,4 +1,4 @@
-;(function (window, Cryptoloji, $, twemoji, undefined) {
+;(function (window, Cryptoloji, CryptoLib, $, twemoji, undefined) {
 
   /*
     methods prefixed with _ are "private"
@@ -29,7 +29,7 @@
 
     console.debug('Chosen text:', Cryptoloji.current.input)
     text = CryptoLib.decrypt(Cryptoloji.current.input, Cryptoloji.current.key)
-    console.debug('Decrypted text:', text)
+    console.debug('Decrypted text:', text, text.length)
     Cryptoloji.current.output = text
     $('#decryption_output').removeClass('placeholdit').text(text)
     Cryptoloji.stateman.emit('decrypt:show-reply', Cryptoloji.current.key)
@@ -39,10 +39,10 @@
     if (Cryptoloji.current.key) {
       var text = $('#encryption_input').val()
       if (text !== '' && !/^\s+$/.test(text)) {
-        CryptoLib.generateEmojiSubsetFrom(Cryptoloji.current.key)
+
         Cryptoloji.current.input = text
         Cryptoloji.stateman.emit('encrypt:hide-output-placeholder')
-        console.debug('Chosen text:', text)
+        console.debug('Chosen text:', text, text.length)
         text = CryptoLib.encrypt(Cryptoloji.current.input, Cryptoloji.current.key)
         console.debug('Encrypted text:', text)
         Cryptoloji.current.output = text
@@ -308,8 +308,6 @@
                           .attr('text', text)
   }
 
-  
-
   function toTwemoji (text) {
       return twemoji.parse(text, {
         folder: 'svg',
@@ -437,5 +435,5 @@
     slideLeft: slideLeft,
     slideLeftNext: slideLeftNext
   }
-  
-})(window, window.Cryptoloji, window.jQuery, window.twemoji);
+
+})(window, window.Cryptoloji, window.CryptoLib, window.jQuery, window.twemoji)

@@ -2,8 +2,8 @@ var _ = require('lodash')
 var jsesc = require('jsesc')
 var punycode = require('punycode')
 
-
 var chars = require('./libs/crypto-lib/char-list.js')
+var emojis = require('./libs/crypto-lib/emoji-list.js')
 // var chars = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~£¥¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ'
 console.log('chars  ', chars)
 
@@ -12,45 +12,60 @@ var CryptoLib = require('./libs/crypto-lib.js')
 // console.log('encrypt', encryptedText)
 // console.log('decrypt', CryptoLib.decrypt(encryptedText, '🍘'))
 
-
 // CryptoLib.generateEmojiSubsetFrom('🍘')
 // var encryptedText = CryptoLib.encrypt('this is a text', '🍘')
 // console.log('encrypt', encryptedText)
 // console.log('decrypt', CryptoLib.decrypt(encryptedText, '🍘'))
 
-var clearText = 'this is a text bau bau!!!'
+var clearText = 'this is a text bau bau!!! :) AHAHAHAHAH'
 
-CryptoLib.generateEmojiSubsetFrom('🍎')
+clearText = chars
+
+// CryptoLib.generateEmojiSubsetFrom('🍎')
 var encryptedText = CryptoLib.encrypt(clearText, '🍎')
-console.log('Cryptoloji with key 🍎')
-console.log('encrypt', encryptedText)
-console.log('decrypt', CryptoLib.decrypt(encryptedText, '🍎'))
+console.log('clear text', clearText)
+console.log('Cryptoloji with key 🍎    ', encryptedText)
+var decryptedText = CryptoLib.decrypt(encryptedText, '🍎')
+console.log('decrypt with key 🍎       ', decryptedText)
+decryptedText = CryptoLib.decrypt(encryptedText, '🐢')
+console.log('decrypt with key 🐢       ', decryptedText)
 
-CryptoLib.generateEmojiSubsetFrom('🐝')
-var encryptedText = CryptoLib.encrypt(clearText, '🐝')
-console.log('Cryptoloji with key 🐝')
-console.log('encrypt', encryptedText)
-console.log('decrypt', CryptoLib.decrypt(encryptedText, '🐝'))
+_.each(emojis, function (e, i) {
+  console.log('try n.' + i + ' with key ' + e)
+  // 127822 is 🍎
+  var bruteforceDecrypt = CryptoLib.decrypt(encryptedText, e)
+  if (bruteforceDecrypt === clearText) {
+    console.log('FAIL!!! 😢 with key ', e, bruteforceDecrypt)
+    if (e === 127822) console.log('BUT 127822 is actually the key  🍎   😜')
+  }
+})
+console.log('Done')
 
-CryptoLib.generateEmojiSubsetFrom('💣')
-var encryptedText = CryptoLib.encrypt(clearText, '💣')
-console.log('Cryptoloji with key 💣')
-console.log('encrypt', encryptedText)
-console.log('decrypt', CryptoLib.decrypt(encryptedText, '💣'))
+// CryptoLib.generateEmojiSubsetFrom('🐝')
+// var encryptedText = CryptoLib.encrypt(clearText, '🐝')
+// console.log('Cryptoloji with key 🐝')
+// console.log('encrypt', encryptedText)
+// console.log('decrypt', CryptoLib.decrypt(encryptedText, '🐝'))
 
-CryptoLib.generateEmojiSubsetFrom('🚝')
-var encryptedText = CryptoLib.encrypt(clearText, '🚝')
-console.log('Cryptoloji with key 🚝')
-console.log('encrypt', encryptedText)
-console.log('decrypt', CryptoLib.decrypt(encryptedText, '🚝'))
-console.log('decrypt', CryptoLib.decrypt(encryptedText, '💺'))
+// CryptoLib.generateEmojiSubsetFrom('💣')
+// var encryptedText = CryptoLib.encrypt(clearText, '💣')
+// console.log('Cryptoloji with key 💣')
+// console.log('encrypt', encryptedText)
+// console.log('decrypt', CryptoLib.decrypt(encryptedText, '💣'))
 
-CryptoLib.generateEmojiSubsetFrom('💺')
-var encryptedText = CryptoLib.encrypt(clearText, '💺')
-console.log('Cryptoloji with key 💺')
-console.log('encrypt', encryptedText)
-console.log('decrypt', CryptoLib.decrypt(encryptedText, '💺'))
-console.log('decrypt', CryptoLib.decrypt(encryptedText, '🚝'))
+// CryptoLib.generateEmojiSubsetFrom('🚝')
+// var encryptedText = CryptoLib.encrypt(clearText, '🚝')
+// console.log('Cryptoloji with key 🚝')
+// console.log('encrypt', encryptedText)
+// console.log('decrypt', CryptoLib.decrypt(encryptedText, '🚝'))
+// console.log('decrypt', CryptoLib.decrypt(encryptedText, '💺'))
+
+// CryptoLib.generateEmojiSubsetFrom('💺')
+// var encryptedText = CryptoLib.encrypt(clearText, '💺')
+// console.log('Cryptoloji with key 💺')
+// console.log('encrypt', encryptedText)
+// console.log('decrypt', CryptoLib.decrypt(encryptedText, '💺'))
+// console.log('decrypt', CryptoLib.decrypt(encryptedText, '🚝'))
 
 
 // caesar cypher OK

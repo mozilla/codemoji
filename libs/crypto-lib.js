@@ -4,27 +4,33 @@
 
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
-    define(['lodash', './crypto-lib/caesar-shifter.js', './crypto-lib/emojifier.js'], factory);
+    define(['lodash', './crypto-lib/emojifier.js', './crypto-lib/emoji-list.js'], factory)
   } else if (typeof exports === 'object') {
-    module.exports = factory(require('lodash'), require('./crypto-lib/caesar-shifter.js'), require('./crypto-lib/emojifier.js'));
+    module.exports = factory(require('lodash'), require('./crypto-lib/emojifier.js'), require('./crypto-lib/emoji-list.js'))
   } else {
-    root.CryptoLib = factory(root._, root.CaesarShifter, root.Emojifier);
+    root.CryptoLib = factory(root._, root.Emojifier, root.EmojiList)
   }
-}(this, function (_, CaesarShifter, Emojifier) {
+}(this, function (_, Emojifier, EmojiList) {
 
   function encrypt (input, key) {
     var output = input
-    key = _emoji2key(key)
-    output = CaesarShifter.encrypt(output, key)
+    key = Emojifier.toNumber(key)
+    key = EmojiList.indexOf(key)
+    // cesar chyper
+    generateEmojiSubsetFrom(key)
+    // encoding
     output = Emojifier.encode(output)
     return output
   }
 
   function decrypt (input, key) {
     var output = input
-    key = _emoji2key(key)
+    key = Emojifier.toNumber(key)
+    key = EmojiList.indexOf(key)
+    // cesar chyper
+    generateEmojiSubsetFrom(key)
+    // decoding
     output = Emojifier.decode(output)
-    output = CaesarShifter.decrypt(output, key)
     return output
   }
 
@@ -35,17 +41,7 @@
   return {
     encrypt: encrypt,
     decrypt: decrypt,
-    generateEmojiSubsetFrom: generateEmojiSubsetFrom,
+    generateEmojiSubsetFrom: generateEmojiSubsetFrom
   }
 
-  function _emoji2key (key) {
-    if (_isEmoji(key)) {
-      key = Emojifier.toKey(key)
-    }
-    return key
-  }
-
-  function _isEmoji (text) {
-    return isNaN(Number(text))
-  }
-}));
+}))
