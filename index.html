@@ -210,7 +210,8 @@
 
      <!-- landing state 1 -->
           <p id="landing_state_1_text" class="welcome_text" layout="column" layout-align="center center" landing-state="1">
-            Someone sent you this scrambled message: 
+            <span hideIfMozilla>Someone sent you this scrambled message: </span>
+            <span showIfMozilla>Mozilla sent you this scrambled message: </span>
           </p>
           <p id="landing_state_1_encrypted_message" class="landing_encrypted_message" landing-state="1">
             <!-- js injected -->

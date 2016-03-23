@@ -19,7 +19,6 @@
 
   Cryptoloji.states.landing = {
     canEnter: function () {
-      console.log(Cryptoloji.storage.get('message'))
       // verify a message is present in the storage
       if (_.isUndefined(Cryptoloji.storage.get('message')) || _.isEmpty(Cryptoloji.storage.get('message'))) {
         // if not redirect to not found state
@@ -29,6 +28,9 @@
       return true
     },
     enter: function () {
+
+      // check on mozilla newsletter landing by getting the 'mozilla' parameter append to the url
+      var landingFrom = window.location.hash.split('?')[1]
 
       fillMessage()
 
@@ -40,12 +42,16 @@
       TweenLite.set($("[landing-state]"), {display: "none"})
       TweenLite.set($("[landing-state='1']"), {display: "block", opacity: 0})
       // text
+      if (landingFrom === 'mozilla') {
+        $('[hideIfMozilla]').hide()
+      } else {
+        $('[showIfMozilla]').hide()
+      }
       TweenLite.to($("#landing_state_1_text"), time, {opacity: 1, delay: delay})
       // svg
       TweenLite.to($("#landing_state_1_encrypted_message"), time, {opacity: 1, delay: delay * 2})
       // button
       TweenLite.to($("#landing_state_1_button"), time, {opacity: 1, delay: delay * 3})
-
 
       $("#landing_state_1_button").on("click", function(){
         TweenLite.set($("[landing-state]"), {display: "none"})
