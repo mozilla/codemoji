@@ -242,7 +242,7 @@
           // why differentation for ios is needed
           Cryptoloji.UI.Sharer('sms', '#share_button_sms')
             .sameWindow()
-            .setSeparator(';')
+            .setSeparator('&')
             .setShareLink('sms:')
             .addParam('body', shareURI)
             .bind()
