@@ -85,9 +85,9 @@
       Cryptoloji.UI.Sharer('facebook').unbind()
       Cryptoloji.UI.Sharer('twitter').unbind()
       Cryptoloji.UI.Sharer('gplus').unbind()
-      // Cryptoloji.UI.Sharer('tumblr').unbind()
       Cryptoloji.UI.Sharer('whatsapp').unbind()
       Cryptoloji.UI.Sharer('mail').unbind()
+      Cryptoloji.UI.Sharer('sms').unbind()
 
       $('#share_copytoclipboard').off()
     }
@@ -226,24 +226,40 @@
           .setShareLink('https://plus.google.com/share')
           .addParam('url', shareURI)
           .bind()
-        // Cryptoloji.UI.Sharer('tumblr', '#share_button_tu')
-        //   .setShareLink('https://www.tumblr.com/widgets/share/tool')
-        //   .addParam('canonicalUrl', shareURI)
-        //   .addParam('posttype', 'link')
-        //   .addParam('tags', 'mozilla,cryptoloji')
-        //   .addParam('description', 'a message')
-        //   .bind()
-        Cryptoloji.UI.Sharer('whatsapp', '#share_button_wa')
-          .sameWindow()
-          .setShareLink('whatsapp://send')
-          .addParam('text', shareURI)
-          .bind()
         Cryptoloji.UI.Sharer('mail', '#share_button_ma')
           .sameWindow()
           .setShareLink('mailto:')
           .addParam('subject', 'A secret message')
           .addParam('body', shareURI)
           .bind()
+
+        if (bowser.mobile) {
+          // show whatsapp and sms on mobile only
+          // see https://github.com/todotoit/cryptoloji/issues/156
+
+          Cryptoloji.UI.Sharer('whatsapp', '#share_button_wa')
+          .sameWindow()
+          .setShareLink('whatsapp://send')
+          .addParam('text', shareURI)
+          .bind()
+
+          if (bowser.ios) {
+            // see http://stackoverflow.com/a/19126326
+            // why differentation for ios is needed
+            Cryptoloji.UI.Sharer('sms', '#share_button_sms')
+              .sameWindow()
+              .setSeparator('&')
+              .setShareLink('sms:')
+              .addParam('body', shareURI)
+              .bind()
+          } else {
+            Cryptoloji.UI.Sharer('sms', '#share_button_sms')
+              .sameWindow()
+              .setShareLink('sms:')
+              .addParam('body', shareURI)
+              .bind()
+          }
+        }
       })
   }
   

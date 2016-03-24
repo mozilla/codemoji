@@ -16,6 +16,7 @@
     self.openWindow = true
     self.shareLink = null
     self.params = {}
+    self.separator = '?'
 
     return self
   }
@@ -41,8 +42,7 @@
           r = screen.width / 2 - i / 2,
           s = screen.height / 2 - n / 2;
 
-      console.log()
-      var link = self.shareLink + '?'
+      var link = self.shareLink + self.separator
       var keys = _.keys(self.params)
       _.each(keys, function (key, idx) {
         link += key + '=' + encodeURIComponent(self.params[key])
@@ -78,6 +78,12 @@
   Sharer.prototype.unbind = function unbind () {
     var self = this
     self.$element.off()
+  }
+
+  Sharer.prototype.setSeparator = function setSeparator (sep) {
+    var self = this
+    self.separator = sep
+    return self
   }
 
 })(window, window.Cryptoloji, window.jQuery); 
