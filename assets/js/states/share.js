@@ -226,32 +226,39 @@
           .setShareLink('https://plus.google.com/share')
           .addParam('url', shareURI)
           .bind()
-        Cryptoloji.UI.Sharer('whatsapp', '#share_button_wa')
-          .sameWindow()
-          .setShareLink('whatsapp://send')
-          .addParam('text', shareURI)
-          .bind()
         Cryptoloji.UI.Sharer('mail', '#share_button_ma')
           .sameWindow()
           .setShareLink('mailto:')
           .addParam('subject', 'A secret message')
           .addParam('body', shareURI)
           .bind()
-        if (bowser.ios) {
-          // see http://weblog.west-wind.com/posts/2013/Oct/09/Prefilling-an-SMS-on-Mobile-Devices-with-the-sms-Uri-Scheme#Whatworks
-          // why differentation for ios is needed
-          Cryptoloji.UI.Sharer('sms', '#share_button_sms')
-            .sameWindow()
-            .setSeparator('&')
-            .setShareLink('sms:')
-            .addParam('body', shareURI)
-            .bind()
-        } else {
-          Cryptoloji.UI.Sharer('sms', '#share_button_sms')
-            .sameWindow()
-            .setShareLink('sms:')
-            .addParam('body', shareURI)
-            .bind()
+
+        if (bowser.mobile) {
+          // show whatsapp and sms on mobile only
+          // see https://github.com/todotoit/cryptoloji/issues/156
+
+          Cryptoloji.UI.Sharer('whatsapp', '#share_button_wa')
+          .sameWindow()
+          .setShareLink('whatsapp://send')
+          .addParam('text', shareURI)
+          .bind()
+
+          if (bowser.ios) {
+            // see http://stackoverflow.com/a/19126326
+            // why differentation for ios is needed
+            Cryptoloji.UI.Sharer('sms', '#share_button_sms')
+              .sameWindow()
+              .setSeparator('&')
+              .setShareLink('sms:')
+              .addParam('body', shareURI)
+              .bind()
+          } else {
+            Cryptoloji.UI.Sharer('sms', '#share_button_sms')
+              .sameWindow()
+              .setShareLink('sms:')
+              .addParam('body', shareURI)
+              .bind()
+          }
         }
       })
   }
