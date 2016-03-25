@@ -169,4 +169,6 @@
 .Learn_more_button{
   margin-top: 2rem!important;
   opacity: .6;
+  text-decoration: underline;
+  cursor: pointer;
 }
