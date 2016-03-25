@@ -165,3 +165,8 @@
 #landing_button_last{
   display: none;
 }
+
+.Learn_more_button{
+  margin-top: 2rem!important;
+  opacity: .6;
+}

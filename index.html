@@ -176,7 +176,7 @@
             <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                  data-svg="assets/svg/footer-icon-privacy.svg"
                  layout="column" layout-align="center center"></div>
-            <p class="footer_link">Privacy Policy</p>
+            <p class="footer_link">Privacy Notice</p>
           </a>
           <a to-state="credits" class="footer_link_wrapper_opacity" 
              layout="row" layout-align="center center">
@@ -219,15 +219,18 @@
           <button class="mozilla_button" id="landing_state_1_button" landing-state="1">
             Decipher it
           </button>
+          <p class="Learn_more_button footer_link">
+            Learn more about encryption
+          </p>
 
      <!-- landing state 2 -->
           <p class="welcome_text" id="landing_state_2_text" layout="column" layout-align="center center" landing-state="2">
-            The right emoji key deciphers the message
+            The right emoji deciphers the message.<br>Your friends should have sent you hints to help. 
           </p>
           <div class="svg_wrapper svg_wrapper_landing_key" id="landing_state_2_svg" data-svg="assets/svg/landing_choose_key1.svg" landing-state="2"></div>
 
           <button id="landing_state_2_button" class="mozilla_button" id="landing_button_last" landing-state="2" to-state="decrypt">
-            Find the key
+            Find the emoji
           </button>
         </div>
     </div>
@@ -245,7 +248,7 @@
             <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                  data-svg="assets/svg/footer-icon-privacy.svg"
                  layout="column" layout-align="center center"></div>
-            <p class="footer_link">Privacy Policy</p>
+            <p class="footer_link">Privacy Notice</p>
           </a>
           <a to-state="credits" class="footer_link_wrapper_opacity" 
              layout="row" layout-align="center center">
@@ -356,7 +359,7 @@
           </div>
         </div>
         <label class="header__label main_keyslider_bottom_label" uppercase style-lable>
-               KEY TO SCRAMBLE THE MESSAGE
+               EMOJI TO SCRAMBLE THE MESSAGE
         </label>
         <div class="keyslider" showItIfMobile>
           <div class="keyslider_content unselectable" layout="row" layout-align="start center">
@@ -485,16 +488,16 @@
         </label>
         <div flex id="decryption_output" 
              class="header__input main_content_bottom_input unselectable placeholdit" 
-             placeholder="Your message will be encrypted here."></div>
+             placeholder="Your message will be unscrambled here."></div>
 
         <div id="decryption_reply_button">
           <div class="decrypt_feedback" layout="column" layout-align="start center" style-lable>
             <p class="wrong_mozilla_key">Oops! The right key is hidden in Mozilla's newsletter. Try again.</p>
-            <p class="wrong_key">Doesn't look like the right key. Ask the sender or try again!</p>
+            <p class="wrong_key">Doesn’t look like the right emoji. Ask the sender for a hint or try again!</p>
           </div>
           <div class="main_share" layout="column" layout-align="start center">
             <p class="decryption_succeded">Well done!</p>
-            <a class="mozilla_button" to-state="encrypt">Encrypt a new message</a>
+            <a class="mozilla_button" to-state="encrypt">Create a new message</a>
           </div>
         </div>
       </div>
@@ -583,9 +586,9 @@
         </div>
           <span class="share_key_emoji-item_feedback" style-text color-dark></span>
       </div>
-      <span showItIfMobile style-text text="extra-small" opacity="65" class="unselectable" uppercase>Your key</span>
-      <p style-text color-light class="share_key_sentence hidden unselectable" uppercase>
-        Remember to find a way to give the key to the people you want deciphering your message.
+      <span showItIfMobile style-text text="extra-small" opacity="65" class="unselectable" uppercase>Emoji that unscrambles your message</span>
+      <p style-text color-light class="share_key_sentence hidden unselectable">
+        Remember to send your friends hints about which emoji you used. Otherwise they won’t be able to read your message!
       </p>
     </div>
   </div>
@@ -640,7 +643,7 @@
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                data-svg="assets/svg/footer-icon-privacy.svg"
                layout="column" layout-align="center center"></div>
-          <p class="footer_link">Privacy Policy</p>
+          <p class="footer_link">Privacy Notice</p>
         </a>
         <a href="https://donate.mozilla.org" class="footer_link_wrapper_opacity" 
            layout="row" layout-align="center center">
