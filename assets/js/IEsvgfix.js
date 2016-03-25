@@ -25,53 +25,56 @@
     function fixSvgDimensions () {
       // $('[data-svg]').each(function() {
       $('svg').parent().each(function() {
-        var $svg = $('svg', this)
-        var $wrapper = $(this)
+        console.log($(this).attr("unfixme"))
+        if (!$(this).attr("unfixme")){
+          var $svg = $('svg', this)
+          var $wrapper = $(this)
 
 
-        // 
-        // get dimensions from viebox
-        // 
-        var $viewbox = $svg[0].getAttribute('viewBox').split(' ')
-        for(var i = 0; i < $viewbox.length; i++){
-          $viewbox[i] = parseInt($viewbox[i], 10)
-        }
+          // 
+          // get dimensions from viebox
+          // 
+          var $viewbox = $svg[0].getAttribute('viewBox').split(' ')
+          for(var i = 0; i < $viewbox.length; i++){
+            $viewbox[i] = parseInt($viewbox[i], 10)
+          }
 
-        var $size = {}
-        $size.x = $viewbox[2]
-        $size.y = $viewbox[3]
+          var $size = {}
+          $size.x = $viewbox[2]
+          $size.y = $viewbox[3]
 
-        var svgWidth = $size.x
-        var svgHeight = $size.y
+          var svgWidth = $size.x
+          var svgHeight = $size.y
 
-        // 
-        // get dimensions from attributes
-        // 
-        // var svgWidth = $svg.attr('width')
-        // var svgHeight = $svg.attr('height')
-        
+          // 
+          // get dimensions from attributes
+          // 
+          // var svgWidth = $svg.attr('width')
+          // var svgHeight = $svg.attr('height')
+          
 
-        if (svgWidth && svgHeight) {
-          svgWidth = parseInt(svgWidth, 10)
-          svgHeight = parseInt(svgHeight, 10)
+          if (svgWidth && svgHeight) {
+            svgWidth = parseInt(svgWidth, 10)
+            svgHeight = parseInt(svgHeight, 10)
 
-          var wrapperWidth = parseInt($wrapper.css("width"), 10)
-          var wrapperHeight = parseInt($wrapper.css("height"), 10)
+            var wrapperWidth = parseInt($wrapper.css("width"), 10)
+            var wrapperHeight = parseInt($wrapper.css("height"), 10)
 
-          $svg.attr('height', '100%')
-          $svg.attr('width', '100%')
+            $svg.attr('height', '100%')
+            $svg.attr('width', '100%')
 
-          var fixWidth = $wrapper.attr('iefix-width') !== undefined
-          var fixHeight = $wrapper.attr('iefix-height') !== undefined
+            var fixWidth = $wrapper.attr('iefix-width') !== undefined
+            var fixHeight = $wrapper.attr('iefix-height') !== undefined
 
-          if (!fixWidth && !fixHeight)
-            fixHeight = true
+            if (!fixWidth && !fixHeight)
+              fixHeight = true
 
 
-          if (fixHeight) {
-            $wrapper.css('height', wrapperWidth * svgHeight / svgWidth)
-          } else if (fixWidth) {
-            $wrapper.css('width', wrapperHeight * svgWidth / svgHeight)
+            if (fixHeight) {
+              $wrapper.css('height', wrapperWidth * svgHeight / svgWidth)
+            } else if (fixWidth) {
+              $wrapper.css('width', wrapperHeight * svgWidth / svgHeight)
+            }
           }
         }
       })
