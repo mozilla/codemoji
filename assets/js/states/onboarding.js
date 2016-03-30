@@ -146,12 +146,8 @@
     enter: function() {
       commonSlideEnterBehaviour(6)
 
-      TweenLite.to($('.onboarding_skip_button'), 1, {delay:.2, opacity:0})
-      $('#next_button_onboarding').text('Go for it!')
-      $('#next_button_onboarding').on('click', function(){
-        Cryptoloji.stateman.go('encrypt')
-        return false;
-      })
+      //TweenLite.to($('.onboarding_skip_button'), 1, {delay:.2, opacity:0})
+      $('#next_button_onboarding').text('Next')
 
       OnBoardingAnimations.scene_06.enter(showNextBtn)
     },
@@ -159,13 +155,12 @@
       return new Promise(function(resolve, reject) {
         simpleHideNextBtn();
         OnBoardingAnimations.scene_06.exit(function(){
-          Cryptoloji.stateman.emit('header:hide')
           endOut(6, resolve)
         })
       })
     }
   }
-  /*Cryptoloji.states.onboarding.step7 = {
+  Cryptoloji.states.onboarding.step7 = {
     enter: function () {
       commonSlideEnterBehaviour(7)
 
@@ -188,7 +183,7 @@
         })
       })
     }
-  }*/
+  }
 
 
 })(window, window.Cryptoloji); 

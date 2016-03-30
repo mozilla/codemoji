@@ -18,7 +18,7 @@
       .state('onboarding.step4', Cryptoloji.states.onboarding.step4)
       .state('onboarding.step5', Cryptoloji.states.onboarding.step5)
       .state('onboarding.step6', Cryptoloji.states.onboarding.step6)
-      //.state('onboarding.step7', Cryptoloji.states.onboarding.step7)
+      .state('onboarding.step7', Cryptoloji.states.onboarding.step7)
     //.state('loading', Cryptoloji.states.loading)
     .state('more', Cryptoloji.states.more)
     .state('landing', Cryptoloji.states.landing)

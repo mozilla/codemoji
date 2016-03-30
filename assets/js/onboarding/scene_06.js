@@ -14,7 +14,7 @@
 		
 		clearTimeout(timer);
 
-		[1,2,3,4].forEach(function(d){
+		[1,2,3,4,5].forEach(function(d){
 			$(prep + '#tt'+d).css('display', 'none')
 		});
 
@@ -27,17 +27,18 @@
 		TweenLite.from($(prep+'#thekey'), 1, {delay:.25, opacity:0, y:10, transformOrigin:'center center', ease:Expo.easeInOut})
 		TweenLite.from($(prep+'#deli_2'), 1.5, {delay:.35, opacity:0, y:10, transformOrigin:'center center', ease:Elastic.easeInOut});
 
-		TweenLite.from($(prep+'#panno'), 1, {delay:1.25, opacity:0, y:10, transformOrigin:'center center', ease:Expo.easeInOut})
-		TweenLite.from($(prep+'#deli_3'), 1.5, {delay:1.35, opacity:0, y:10, transformOrigin:'center center', ease:Elastic.easeInOut});
+		TweenLite.from($(prep+'#good'), 1, {delay:1.5, opacity:0, y:10, ease:Expo.easeInOut});
 
-		TweenLite.from($(prep+'#good'), 1, {delay:2.25, opacity:0, y:10, ease:Expo.easeInOut});
+		TweenLite.from($(prep+'#panno'), 1, {delay:2.15, opacity:0, y:10, transformOrigin:'center center', ease:Expo.easeInOut})
+		TweenLite.from($(prep+'#deli_3'), 1.5, {delay:2.25, opacity:0, y:10, transformOrigin:'center center', ease:Elastic.easeInOut});
+
 
 		clp.forEach(function(d, i){
 			var e = $(prep+d)
-			TweenLite.to(e, 1.25, {delay:3.5 + i*.05, y:-230, ease:Expo.easeInOut});
+			TweenLite.to(e, 1.25, {delay:3.5 + i*.05, y:-240, ease:Expo.easeInOut});
 		});
 
-		[1,2,3,4].forEach(function(d){
+		[1,2,3,4,5].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0})
 			TweenLite.from(e, 1, {delay:4 + d*.2, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
@@ -56,14 +57,14 @@
 
 		clearTimeout(timer);
 
-		[1,2,3,4].forEach(function(d, i){
+		[1,2,3,4,5].forEach(function(d, i){
 			var e = $(prep + '#tt'+d)
 			TweenLite.to(e, .5, {delay:.3 + i*.1, opacity:0})
 		});
 
 		clp.forEach(function(d, i){
 			var e = $(prep+d)
-			TweenLite.to(e, .65, {delay:i*.05, y:-260, opacity:0, ease:Expo.easeInOut});
+			TweenLite.to(e, .65, {delay:i*.05, y:-270, opacity:0, ease:Expo.easeInOut});
 		});
 
 		timer = setTimeout(function(){
