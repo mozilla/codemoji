@@ -99,7 +99,7 @@
 
   <div id="header" class="header">
     <div layout="column" layout-align="center center" class="header_onboarding_fix">
-    <a to-state="welcome">
+    <a to-state="welcome" track="header__home">
       <div class="svg_wrapper svg_wrapper_header" unfixme="true" data-svg="assets/svg/header_logo.svg"
            layout="column" layout-align="center center"></div>
     </a>
@@ -155,10 +155,10 @@
         <button button-box class="mozilla_button" to-state="onboarding" show-on-first-visit-only>
           Let's get going
         </button>
-        <button button-box class="mozilla_button mozilla_button_bottom_margin" to-state="encrypt" hide-on-first-visit-only>
+        <button button-box class="mozilla_button mozilla_button_bottom_margin" to-state="encrypt" hide-on-first-visit-only track="home__encrypt">
           Try It
         </button>
-        <button button-box class="mozilla_button mozilla_button_blue" to-state="onboarding" hide-on-first-visit-only>
+        <button button-box class="mozilla_button mozilla_button_blue" to-state="onboarding" hide-on-first-visit-only track="home__onboarding">
           Find out more
         </button>
     </div>
@@ -216,7 +216,7 @@
           <p id="landing_state_1_encrypted_message" class="landing_encrypted_message" landing-state="1">
             <!-- js injected -->
           </p>
-          <button class="mozilla_button" id="landing_state_1_button" landing-state="1">
+          <button class="mozilla_button" id="landing_state_1_button" landing-state="1" track="decrypt__decipher">
             Decipher it
           </button>
           <p class="Learn_more_button footer_link" landing-state="1">
@@ -229,7 +229,7 @@
           </p>
           <div class="svg_wrapper svg_wrapper_landing_key" id="landing_state_2_svg" data-svg="assets/svg/landing_choose_key1.svg" landing-state="2"></div>
 
-          <button id="landing_state_2_button" class="mozilla_button" id="landing_button_last" landing-state="2" to-state="decrypt">
+          <button id="landing_state_2_button" class="mozilla_button" id="landing_button_last" landing-state="2" to-state="decrypt" track="decrypt__find">
             Find the emoji
           </button>
         </div>
@@ -305,10 +305,10 @@
 
 
     <div class="next_button_onboarding" layout="column" layout-align="start center">
-        <p class="mozilla_button" id="next_button_onboarding">Next</p>
+        <p class="mozilla_button" id="next_button_onboarding" track="onboarding__next">Next</p>
     </div>
     <div class="svg_wrapper svg_wrapper_pagination" data-svg="assets/svg/pagination.svg" layout="column" layout-align="center center"></div>
-    <p to-state="encrypt" class="onboarding_skip_button">Got it</p>
+    <p to-state="encrypt" class="onboarding_skip_button" track="onboarding__gotit">Got it</p>
   </div>
   <!-- /ONBOARDING -->
 
@@ -328,7 +328,7 @@
     <div class="section_main_wrapper" layout="column" layout-align="center center" 
          footer-padding-bottom-correction>
       <div id="encryptHeader" class="header" layout="column" layout-align="center center" color-bg-light wide>
-          <div class="svg_wrapper encryption_help_button" id="encryption_help_button" data-svg="assets/svg/help1.svg"
+          <div class="svg_wrapper encryption_help_button" track="encrypt__help" id="encryption_help_button" data-svg="assets/svg/help1.svg"
            layout="column" layout-align="center center"></div>
             <a to-state="welcome">
               <div class="svg_wrapper svg_wrapper_header" unfixme="true" data-svg="assets/svg/header_logo.svg"
@@ -402,7 +402,7 @@
         <div id="encryption_share_button">
           <div class="main_share" layout="column" layout-align="start center">
             <div id="share_wrapper_js">
-              <a class="mozilla_button" to-state="share">Share this message</a>
+              <a class="mozilla_button" to-state="share" track="encrypt__share">Share this message</a>
             </div>
           </div>
         </div>
@@ -420,7 +420,7 @@
          footer-padding-bottom-correction>
       <!-- header -->
       <div id="decryptHeader" class="header" layout="column" layout-align="center center" color-bg-light wide>
-          <div class="svg_wrapper decryption_help_button" id="decryption_help_button" data-svg="assets/svg/help1.svg"
+          <div class="svg_wrapper decryption_help_button" track="decrypt__help" id="decryption_help_button" data-svg="assets/svg/help1.svg"
                layout="column" layout-align="center center"></div>
           <a to-state="welcome">
             <div class="svg_wrapper svg_wrapper_header" unfixme="true" data-svg="assets/svg/header_logo.svg"
@@ -544,7 +544,7 @@
     </div>
     <div class="share_main_wrap" wide>
       <div layout="column" layout-align="center end" wide>
-        <div id="share_message_exit" class="share_message_exit" style-title to-state="encrypt" data-svg="assets/svg/x.svg"></div>
+        <div id="share_message_exit" class="share_message_exit" style-title to-state="encrypt" data-svg="assets/svg/x.svg" track="share__close"></div>
       </div>
       <div class="share_social" layout="column" layout-align="start center" flex wide>
         <div layout="column" layout-align="center center">
@@ -556,25 +556,25 @@
         
         <div layout="column" layout-align="space-between center" wide>
           <div class="share_social_wrapper" layout="row" layout-align="center center" wide>
-            <a id="share_button_fb" class="social" target="blank">
+            <a id="share_button_fb" class="social" target="blank" track="share__fb">
               <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_fb.svg"></div>
             </a>
-            <a id="share_button_tw" class="social" target="blank">
+            <a id="share_button_tw" class="social" target="blank" track="share__tw">
               <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_tw.svg"></div>
             </a>
-            <a id="share_button_ma" class="social" target="blank">
+            <a id="share_button_ma" class="social" target="blank" track="share__ma">
               <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_ma.svg"></div>
             </a>
 <!--             <a id="share_button_wa" class="social" showItIfMobile target="blank">
               <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
             </a> -->
-            <a id="share_button_sms" class="social" showItIfMobile target="blank">
+            <a id="share_button_sms" class="social" showItIfMobile target="blank" track="share__sms">
               <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_ms.svg"></div>
             </a>
           </div>
           <div layout="column" layout-align="center center">
-            <a href style-text id="share_copytoclipboard" readonly="readonly" /></a>
-            <button id="share_copytoclipboardcta" class="mozilla_button mozilla_button share_copytoclipboardcta" button-box>Copy</button>
+            <a href style-text id="share_copytoclipboard" readonly="readonly" track="share__link"/></a>
+            <button id="share_copytoclipboardcta" class="mozilla_button mozilla_button share_copytoclipboardcta" button-box track="share__copy">Copy</button>
             <span id="share_copyIosHint" style-text text="extra-small" opacity="65">long press to copy the link</span>
           </div>
         </div>
@@ -587,7 +587,7 @@
       </div>
       <div id="share_currentkey" class="share_key_emoji" layout="row" layout-align="center center" wide>
         <div class="share_key-wrapper" layout="column" layout-align="center center">
-          <span class="share_key_emoji-item" layout="column" layout-align="center center" data-clipboard-text=""></span>
+          <span class="share_key_emoji-item" layout="column" layout-align="center center" data-clipboard-text="" track="share__emoji"></span>
         </div>
           <span class="share_key_emoji-item_feedback" style-text color-dark></span>
       </div>
@@ -696,7 +696,7 @@
       <h1 style-title color-main center class="section_not_found_title">Not found!</h1>
       <!-- <p>The page you requested was not found or has been moved</p> -->
       <p style-text class="section_not_found_text">The message you requested was not found or has expired</p>
-      <a class="mozilla_button" to-state="welcome">back home</a>
+      <a class="mozilla_button" to-state="welcome" track="notfound__home">back home</a>
     </div>
   </div>
   <!-- /NOT FOUND -->
@@ -770,7 +770,6 @@
   <script type="text/javascript" src="assets/js/api.js"></script>
   <script type="text/javascript" src="assets/js/storage.js"></script>
   <script type="text/javascript" src="assets/js/ui.js"></script>
-  <script type="text/javascript" src="assets/js/ui/slider_onboarding.js"></script>
   <script type="text/javascript" src="assets/js/ui/sharer.js"></script>
   <script type="text/javascript" src="assets/js/utils.js"></script>
   <script type="text/javascript" src="assets/js/ui/keyslider.js"></script>
@@ -793,6 +792,17 @@ _l('app.js?v=<%=version%>');
 </script>
 /process -->
 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-7954920-12', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 
 </body>

@@ -43,6 +43,9 @@
     })
 
 
+
+
+
     
     //
     // behavior help button
@@ -89,6 +92,19 @@
     //Cryptoloji.stateman.on('end', function (phase) { console.log('end ', phase) })
     Cryptoloji.stateman.on('notfound', function () {
       Cryptoloji.stateman.go('404')
+    })
+
+    //
+    // track any stage change in gAnalytics
+    //
+    Cryptoloji.stateman.on('begin', function (e) {
+      ga('send', 'pageview', e.path);
+    })
+
+    $('[track]').on('click', function(){
+      var t = $(this).attr('track')
+      var parts = t.split('__')
+      ga('send', 'event', parts[0], parts[1]);
     })
 
 

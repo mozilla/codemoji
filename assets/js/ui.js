@@ -255,7 +255,6 @@
       var elem = section + "_help_button"
       var a = $('.' + elem +  ' .help_button_x').css('opacity')
       var b = $('.' + elem +  ' .help_button_point').css('opacity')
-      console.log(a, b)
       TweenLite.to($('.' + elem +  ' .help_button_x'), .5, {opacity: b})
       TweenLite.to($('.' + elem +  ' .help_button_point'), .5, {opacity: a})
     }
