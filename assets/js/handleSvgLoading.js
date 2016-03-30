@@ -17,7 +17,6 @@ function gHandleSvgLoading (svg_loaded) {
     svgsPromises.push(loadSvg(self, path))
   })
   $.when.apply($, svgsPromises).then(function(){
-    console.log('all svg loaded!')
     $.holdReady(false)
   })
 }

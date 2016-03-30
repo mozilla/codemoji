@@ -27,9 +27,7 @@
     var text = $('#decryption_input').attr('text')
     Cryptoloji.current.input = text
 
-    console.debug('Chosen text:', Cryptoloji.current.input)
     text = CryptoLib.decrypt(Cryptoloji.current.input, Cryptoloji.current.key)
-    console.debug('Decrypted text:', text)
     Cryptoloji.current.output = text
     $('#decryption_output').removeClass('placeholdit').text(text)
     Cryptoloji.stateman.emit('decrypt:show-reply', Cryptoloji.current.key)
@@ -42,9 +40,7 @@
         CryptoLib.generateEmojiSubsetFrom(Cryptoloji.current.key)
         Cryptoloji.current.input = text
         Cryptoloji.stateman.emit('encrypt:hide-output-placeholder')
-        console.debug('Chosen text:', text)
         text = CryptoLib.encrypt(Cryptoloji.current.input, Cryptoloji.current.key)
-        console.debug('Encrypted text:', text)
         Cryptoloji.current.output = text
         encryptTextAnimation(Cryptoloji.current.input, text)
         // text = toTwemoji(text)
@@ -57,7 +53,6 @@
 
   var _animationTimeout = null
   function encryptTextAnimation (text, emojiText) {
-    console.log(text, emojiText)
 
     function _mapToBlueBox (text) {
       text = text.toLowerCase()
@@ -285,7 +280,6 @@
   }
   function selectKey (key) {
     Cryptoloji.current.key = key
-    console.debug('Chosen key', key)
     // load emoji key to share
     $(".share_key_emoji-item").html(toTwemoji(key))
     $(".share_key_emoji-item").attr('value', key)
@@ -320,10 +314,8 @@
     function _writeOrientationAttr () {
       // if orientation is 0 or 180 we are in portrait mode
       if (window.orientation == 0 || window.orientation == 180) {
-        console.info('changed orientation to portrait')
         $('html').attr('orientation', 'portrait')
       } else {
-        console.info('changed orientation to landscape')
         $('html').attr('orientation', 'landscape')
       }
     }
@@ -400,7 +392,6 @@
       tooltipPosition.left = 0
 
   function slideLeft (el, duration) {
-    console.log(">>>>>>", el, duration)
     function removeSlide () {
       el.removeClass("section-show")
     }
@@ -409,7 +400,6 @@
   }
 
   function slideLeftNext (el, duration) {
-    console.log(">>>>>>", el, duration)
     function dispaySlide () {
       el.addClass("section-show")
     }

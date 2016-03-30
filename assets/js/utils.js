@@ -21,7 +21,6 @@
     var emojiLength = 120
     if (message) {
       emojiLength = message.length
-      console.log("--->>>", emojiLength, message)
     }
     var molt = size
     if (emojiLength == 1) {

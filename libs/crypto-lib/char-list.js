@@ -43,7 +43,5 @@
               // 00F0 ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ 
               "ðñòóôõö÷øùúûüýþÿ"    // no 00F7
 
-  console.log('total chars:  ' + chars.length)
-
   return chars
 }));

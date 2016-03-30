@@ -12,7 +12,6 @@
   function KeyModal (selector) {
     var self = this
     self.mainSelector = selector
-    console.debug('creating KeyModal on ' + selector)
     self.$element = $(selector)
     // if instace .fill() has been called
     self.filled = false
@@ -30,7 +29,6 @@
 
   KeyModal.prototype.addClickHandler = function addClickHandler (selector) {
     var self = this
-    console.debug('attach click handler ' + selector + ' on ' + self.mainSelector)
     $(selector).click(_clickHandler)
     return self
   }

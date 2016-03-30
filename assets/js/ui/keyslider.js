@@ -10,7 +10,6 @@
 
   var Keyslider = function Keyslider (name, selector) {
     var self = this
-    console.debug('creating keyslider ' + name + ' on ' + selector)
     self.$element = $(selector)
 
     // if instace .fill() has been called

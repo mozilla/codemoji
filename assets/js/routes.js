@@ -29,7 +29,6 @@
   $('body').on('click', '[to-state]', function (event) {
     event.preventDefault()
     var goToState = $(event.target).closest('[to-state]').attr('to-state')
-    console.info('Change state detected:', goToState)
     if (goToState) Cryptoloji.stateman.go(goToState)
   })
 

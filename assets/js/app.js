@@ -107,6 +107,18 @@
       ga('send', 'event', parts[0], parts[1]);
     })
 
+    Cryptoloji.stateman.on('decrypt:wrong-key', function(){
+      ga('send', 'event', 'decrypt', 'wrong-key');
+    })
+    Cryptoloji.stateman.on('decrypt:right-key', function(){
+      ga('send', 'event', 'decrypt', 'right-key');
+    })
+    Cryptoloji.stateman.on('encrypt:key', function(){
+      ga('send', 'event', 'encrypt', 'key');
+    })
+    Cryptoloji.stateman.on('encrypt:key_soon', function(){
+      ga('send', 'event', 'encrypt', 'key_soon');
+    })
 
     //
     // handle first visit element display/hide

@@ -1,8 +1,6 @@
 (function (window, Cryptoloji, undefined) {
   'use strict'
   
-  console.log(Cryptoloji)
-
   Cryptoloji.states.welcome = {
     enter: function () {
 
