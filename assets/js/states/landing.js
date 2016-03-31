@@ -52,6 +52,8 @@
       TweenLite.to($("#landing_state_1_encrypted_message"), time, {opacity: 1, delay: delay * 2})
       // button
       TweenLite.to($("#landing_state_1_button"), time, {opacity: 1, delay: delay * 3})
+      // more
+      TweenLite.to($("#landing_state_1_more"), time, {opacity: .6, delay: delay * 4})
 
       $("#landing_state_1_button").on("click", function(){
         TweenLite.set($("[landing-state]"), {display: "none"})
