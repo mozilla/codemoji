@@ -28,7 +28,7 @@
 			$(prep + '#g'+d).css('display', 'none')
 
 			TweenLite.set($(prep + '#f'+d), {opacity:1, scale:1, transformOrigin:'center center'})
-			TweenLite.from($(prep + '#f'+d), .8, {delay:d*.25, opacity:0, scale:1.3, transformOrigin:'center center', ease:Expo.easeInOut})
+			TweenLite.from($(prep + '#f'+d), .8, {delay:d*.15, opacity:0, scale:1.3, transformOrigin:'center center', ease:Expo.easeInOut})
 		})
 
 		TweenLite.set($(prep + '#sel'), {opacity:0, scale:1})
@@ -52,18 +52,18 @@
 		[1,2,3].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0})
-			TweenLite.from(e, 1, {delay:1.25 + d*.25, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
+			TweenLite.from(e, 1, {delay:1 + d*.1, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
 		});
 
-		TweenLite.to($(prep), 1.5, {onComplete:function(){
-			interval = setInterval(swap, 2000)
+		TweenLite.to($(prep), .5, {onComplete:function(){
+			interval = setInterval(swap, 1600)
 		}})
 
 		
 
 		timer = setTimeout(function(){
 			clb()
-		}, 5500)
+		}, 4500)
 
 	}
 

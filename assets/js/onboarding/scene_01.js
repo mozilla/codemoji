@@ -37,12 +37,12 @@
 		[1,2,3,4].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0})
-			TweenLite.from(e, 1, {delay:4 + d*.2, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
+			TweenLite.from(e, 1, {delay:4 + d*.1, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
 		});
 
 		timer = setTimeout(function(){
 			clb()
-		}, 6000)
+		}, 5000)
 
 	}
 

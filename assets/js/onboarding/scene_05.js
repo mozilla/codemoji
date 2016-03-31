@@ -21,7 +21,7 @@
 		TweenLite.from($(prep+'#bubble_trig'), .5, {delay:.25, opacity:0, ease:Quart.easeInOut});
 		TweenLite.from($(prep+'#deli'), 1.5, {delay:.25, opacity:0, y:20, transformOrigin:'center center', ease:Expo.easeInOut});
 
-		TweenLite.from($(prep+'#d1'), 1.5, {delay:1.5, opacity:0, y:10, ease:Expo.easeInOut});
+		TweenLite.from($(prep+'#d1'), 1., {delay:1.5, opacity:0, y:10, ease:Expo.easeInOut});
 
 		TweenLite.to($('#s5'), 2.5, {onComplete:dotss})
 		TweenLite.to($('#s5'), 3, {onComplete:dotss})
@@ -34,13 +34,13 @@
 		[1,2,3,4].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0})
-			TweenLite.from(e, 1, {delay:5 + d*.2, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
+			TweenLite.from(e, 1, {delay:4 + d*.1, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
 		});
 
 
 		timer = setTimeout(function(){
 			clb()
-		}, 7200)
+		}, 5000)
 
 	}
 

@@ -34,12 +34,12 @@
 			interv = setInterval(function(){
 				st = (st==0) ? 1 : 0
 				TweenLite.set($(prep + '#cur'), {opacity:st})	
-			}, 500)
+			}, 350)
 
 			setTimeout(function(){
 				clearInterval(interv)
 				$(prep + '#cur').css('display', 'none')
-			}, 2000)
+			}, 1500)
 
 		}})
 
@@ -48,19 +48,19 @@
 		$(prep + '#txt > g').each(function(i, e){
 			var e = $(e).css('display', 'block')
 			TweenLite.set(e, {opacity:1, scale:1, transformOrigin:'center center'})
-			TweenLite.from($(e), .25, {delay:2.5 + .7 + i*.1, opacity:0, ease:Expo.easeInOut})
+			TweenLite.from($(e), .25, {delay:2.5 + .7 + i*.06, opacity:0, ease:Expo.easeInOut})
 		});
 
 		[1,2,3].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0, transformOrigin:'center center'})
-			TweenLite.from(e, 1, {delay:4 + d*.2, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
+			TweenLite.from(e, 1, {delay:4 + d*.1, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
 		});
 
 
 		timer = setTimeout(function(){
 			clb()
-		}, 5500)
+		}, 5000)
 
 	}
 
@@ -100,7 +100,7 @@
 
 		timer = setTimeout(function(){
 			clb()
-		}, 1050)
+		}, 1000)
 	}
 
 	oo.scene_03.enter = enter

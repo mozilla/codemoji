@@ -25,7 +25,7 @@
 
 		timer = setTimeout(function(){
 			clb()
-		}, 2500)
+		}, 1500)
 
 	}
 
