@@ -4,7 +4,7 @@
   Cryptoloji.states.credits = {
     enter: function () {
       $(".credits_section").addClass("section-show")
-      $(".credits_section .mozilla_button").on("click", function(){
+      $(".credits_section .svg_wrapper_x_button").on("click", function(){
         var prev = Cryptoloji.stateman.previous.name
         if(prev){
           Cryptoloji.stateman.go(prev)
