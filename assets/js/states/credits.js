@@ -15,6 +15,7 @@
     },
     leave: function () {
       $(".credits_section").removeClass("section-show")
+      $(".credits_section .mozilla_button").off("click")
     }
   }
 
