@@ -35,3 +35,7 @@
   font-family: 'fira_sans';
   text-align: center;
 }
+
+.credits_vendor::-webkit-scrollbar { 
+    display: none; 
+}
