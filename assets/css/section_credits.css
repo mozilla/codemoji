@@ -1,6 +1,20 @@
 .credits_text{
   color: white;
   font-family: 'fira_sans';
+  text-align: center;
+  font-weight: 100;
+  max-width: 50rem;
+}
+
+.credits_text a{
+  font-size: 90%;
+  opacity: .6;
+}
+
+.credits_text a:hover{
+  color: #F46060;
+  opacity: 1;
+
 }
 
 .credits_vendor{
@@ -34,6 +48,17 @@
   color: white;
   font-family: 'fira_sans';
   text-align: center;
+  font-weight: 100;
+}
+
+.credits_text_main a{
+  color: #f46060;
+   font-weight: 800;
+}
+
+.credits_text_main a:hover{
+  background-color: #005189;
+  color: white;
 }
 
 .credits_vendor::-webkit-scrollbar { 
