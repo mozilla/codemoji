@@ -9,7 +9,7 @@
     // create URL
     var uri = new YouAreI(Cryptoloji.storage.getPersistedURL())
     uri.fragment('/landing')
-    uri.path_parts(['share.html'])
+    uri.path_parts().push('share.html')
     // get URL as string
     var shareURI = uri.toString()
 
