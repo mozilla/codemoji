@@ -10,7 +10,7 @@
     var uri = new YouAreI(Cryptoloji.storage.getPersistedURL())
     uri.path_parts().push('share.html')
     uri.fragment('')
-    uri._path_leading_slash = false
+    // uri._path_leading_slash = false
     uri._path_trailing_slash = false
     // get URL as string
     var shareURI = uri.toString()
