@@ -100,7 +100,7 @@
 
       // give feedback in place
       var oldVal = $('#share_copytoclipboard').text()
-      $('#share_copytoclipboard').text('COPIED!')
+      $('#share_copytoclipboard').text('Copied!')
       $('#share_copytoclipboard').css({scale:1.25})
       $('#share_copytoclipboard').transition({scale:1, duration:900, easing:'easeInOutExpo'})
       setTimeout(function () {
