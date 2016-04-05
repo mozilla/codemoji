@@ -9,12 +9,12 @@
     // create URL
     var uri = new YouAreI(Cryptoloji.storage.getPersistedURL())
     uri.fragment('/landing')
+    uri.path_parts(['share.html'])
     // get URL as string
     var shareURI = uri.toString()
 
     // shareURI should be sent to bit.ly to be shortened
 
-    //deferred.resolve('http://bit.ly/1M8Iuj1') // should be shortened shareURI
     deferred.resolve(shareURI)
 
     return deferred.promise()
