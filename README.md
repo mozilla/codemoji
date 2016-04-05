@@ -23,7 +23,7 @@ The following open-source libraries were used in developing the website:
 - [theater](https://github.com/Zhouzi/TheaterJS)
 - [youarei](https://github.com/purge/youarei.js)
 
-Last but not least, a special thanks to Twitter for their twemoji [link: https://github.com/twitter/twemoji] library, which provided us with the widest set of cross-platform emojis we could us use in building this project.
+Last but not least, a special thanks to Twitter for their [twemoji](https://github.com/twitter/twemoji) library, which provided us with the widest set of cross-platform emojis we could us use in building this project.
 
 
 ### Development
