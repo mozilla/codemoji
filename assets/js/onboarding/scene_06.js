@@ -29,10 +29,6 @@
 
 		TweenLite.from($(prep+'#good'), 1, {delay:1.5, opacity:0, y:10, ease:Expo.easeInOut});
 
-		TweenLite.from($(prep+'#panno'), 1, {delay:2.15, opacity:0, y:10, transformOrigin:'center center', ease:Expo.easeInOut})
-		TweenLite.from($(prep+'#deli_3'), 1.5, {delay:2.25, opacity:0, y:10, transformOrigin:'center center', ease:Elastic.easeInOut});
-
-
 		clp.forEach(function(d, i){
 			var e = $(prep+d)
 			TweenLite.to(e, 1.25, {delay:3.5 + i*.05, y:-240, ease:Expo.easeInOut});
