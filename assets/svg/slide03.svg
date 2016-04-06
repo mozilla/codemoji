@@ -11,7 +11,7 @@
 	<text transform="matrix(1 0 0 1 95.7051 475.7773)" fill="#FFFFFF" font-family="'FiraSans-Regular'" font-size="26">you want to turn </text>
 </g>
 <g id="tt3">
-	<text transform="matrix(1 0 0 1 130.4268 506.9775)" fill="#FFFFFF" font-family="'FiraSans-Regular'" font-size="26">into emojis.</text>
+	<text transform="matrix(1 0 0 1 133.3782 506.9775)" fill="#FFFFFF" font-family="'FiraSans-Regular'" font-size="26">into emoji.</text>
 </g>
 <path id="bubble" fill="#005189" d="M338.9,269.4h-285c-9.6,0-17.5-7.9-17.5-17.5V111c0-9.6,7.9-17.5,17.5-17.5H339
 	c9.6,0,17.5,7.9,17.5,17.5v140.6C356.4,261.6,348.5,269.4,338.9,269.4z"/>
@@ -44,8 +44,8 @@
 			c0-5.5-0.7-7.6-4.5-7.6c-3.1,0-5.8,2.2-7.3,4.6v22.4h-6.7L59.4,196.8z"/>
 	</g>
 	<g>
-		<path fill="#FFFFFF" d="M112,223.3h8.7v4.9H96v-4.9h9.3v-21.5h-9.1v-4.9H112L112,223.3L112,223.3z M111.7,185.7
-			c0,2.4-1.8,4.1-4.3,4.1c-2.6,0-4.3-1.8-4.3-4.1c0-2.2,1.7-4.2,4.3-4.2S111.7,183.3,111.7,185.7z"/>
+		<path fill="#FFFFFF" d="M112,223.3h8.7v4.9H96v-4.9h9.3v-21.5h-9.1v-4.9H112V223.3L112,223.3z M111.7,185.7c0,2.4-1.8,4.1-4.3,4.1
+			c-2.6,0-4.3-1.8-4.3-4.1c0-2.2,1.7-4.2,4.3-4.2S111.7,183.3,111.7,185.7z"/>
 	</g>
 	<g>
 		<path fill="#FFFFFF" d="M153.3,220.8l3,4.2c-2.8,2.2-6.8,3.9-11,3.9c-9.6,0-15.2-6.4-15.2-16.3c0-9.6,5.8-16.7,15.3-16.7

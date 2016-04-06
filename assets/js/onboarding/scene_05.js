@@ -31,7 +31,7 @@
 		TweenLite.to($(prep+'#d1'), 1, {delay:3.8, opacity:0, ease:Expo.easeInOut});
 		TweenLite.from($(prep+'#d2'), 1, {delay:3.8, opacity:0, ease:Expo.easeInOut});
 
-		[1,2,3,4].forEach(function(d){
+		[1,2,3,4,5].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0})
 			TweenLite.from(e, 1, {delay:4 + d*.1, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
