@@ -12,7 +12,7 @@
 		
 		clearTimeout(timer);
 
-		[1,2,3,4].forEach(function(d){
+		[1,2,3,4,5].forEach(function(d){
 			$(prep + '#tt'+d).css('display', 'none')
 			var e = $(prep + '#tt'+d)
 			TweenLite.set(e, {opacity:0})
