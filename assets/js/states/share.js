@@ -217,6 +217,12 @@
           '... ' +
           'I scrambled a message for you using Codemoji, a fun tool to learn about ciphers.' +
           shareURI
+        
+        var mailMessage = Cryptoloji.current.output + 
+          '\n\n'+
+          'I wrote you a message and scrambled it with Codemoji, a fun tool to learn about ciphers.' + 
+          '\n\n'+
+          'Try to unscramble it on ' + shareURI
 
         Cryptoloji.UI.Sharer('facebook', '#share_button_fb')
           .setShareLink('https://www.facebook.com/sharer/sharer.php')
@@ -234,8 +240,8 @@
         Cryptoloji.UI.Sharer('mail', '#share_button_ma')
           .sameWindow()
           .setShareLink('mailto:')
-          .addParam('subject', 'A secret message')
-          .addParam('body', shareURI)
+          .addParam('subject', 'Can you read this emoji message?')
+          .addParam('body', mailMessage)
           .bind()
 
         if (bowser.mobile) {
