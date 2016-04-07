@@ -213,6 +213,11 @@
   function setupShareButtons () {
     Cryptoloji.Api.getShortenedLink()
       .then(function (shareURI) {
+        var twitterMessage = Cryptoloji.current.output.substring(0, 16) + 
+          '... ' +
+          'I scrambled a message for you using Codemoji, a fun tool to learn about ciphers.' +
+          shareURI
+
         Cryptoloji.UI.Sharer('facebook', '#share_button_fb')
           .setShareLink('https://www.facebook.com/sharer/sharer.php')
           .addParam('u', shareURI)
@@ -220,7 +225,7 @@
         Cryptoloji.UI.Sharer('twitter', '#share_button_tw')
           .setShareLink('https://twitter.com/intent/tweet')
           .addParam('url', shareURI)
-          .addParam('text', 'a message')
+          .addParam('text', twitterMessage)
           .bind()
         Cryptoloji.UI.Sharer('gplus', '#share_button_go')
           .setShareLink('https://plus.google.com/share')
