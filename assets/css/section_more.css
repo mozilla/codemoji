@@ -10,9 +10,10 @@
 }
 
 .svg_wrapper_footer{
-  width: 12rem;
-  margin-right: 2rem;
-  fill: white;
+    width: 10rem;
+    fill: white;
+    opacity: .5;
+    margin: 1rem;
 }
 .svg_wrapper_footer svg{
   width: 100%;
@@ -23,6 +24,7 @@
 }
 
 .footer_text{
+  display: none;
   font-family: "fira_sans";
   font-weight: 300;
   margin: 0;
