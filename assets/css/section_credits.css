@@ -4,10 +4,10 @@
   text-align: center;
   font-weight: 100;
   max-width: 50rem;
+  font-size: 80%;
 }
 
 .credits_text a{
-  font-size: 90%;
   opacity: .6;
 }
 
@@ -49,6 +49,7 @@
   font-family: 'fira_sans';
   text-align: center;
   font-weight: 100;
+  font-size: 110%;
 }
 
 .credits_text_main a{

@@ -299,6 +299,14 @@
   #key-modal{
     display: none;
   }
+
+  .credits_text{
+    font-size: 90%;
+  }
+  .credits_text_main{
+    font-size: 120%;
+  }
+}
 }
 
 
