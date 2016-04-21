@@ -44,10 +44,15 @@
 }
 
 .svg_wrapper_header_name{
-  width: 20rem;
-    height: auto;
+  max-width: 32rem;
+  height: auto;
+  margin: 2rem;
 }
 
+.svg_wrapper_header_name svg{
+  width: 100%;
+  height: 100%;
+}
 
 .section_welcome_header_text{
   margin: 1rem 2rem;
