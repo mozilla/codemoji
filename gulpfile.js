@@ -29,7 +29,8 @@ gulp.task('copy:assets', ['clean'], function() {
     'assets/svg/*',
     'assets/img/**/*',
     'vendor/**/*',
-    'share.html'
+    'share.html',
+    'bower_components/youarei/dist/youarei.js'
   ]
   
   return gulp.src(assets_paths)
