@@ -37,6 +37,17 @@ The following open-source libraries were also used in developing the website:
 	gulp build
 	
 	
+### Deploy on gh-pages
+
+	gulp build
+	git checkout -b temp
+	git add --force public
+	git commit -m "build"
+	git push origin :gh-pages
+	git subtree push --prefix public origin gh-pages
+	git checkout master
+	git branch -D temp
+
 
 ## LICENSE
 

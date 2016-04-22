@@ -4,7 +4,7 @@
   text-align: center;
   font-weight: 100;
   max-width: 50rem;
-  font-size: 75%;
+  font-size: 70%;
 }
 
 .credits_text a{
@@ -58,6 +58,10 @@
 .credits_text_main a:hover{
   background-color: #005189;
   color: white;
+}
+
+.credits_vendor{
+  overflow-y: scroll;
 }
 
 .credits_vendor::-webkit-scrollbar { 
