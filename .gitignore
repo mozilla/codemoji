@@ -4,4 +4,3 @@
 .tmp
 .DS_Store
 libs/gsap
-/public/*
