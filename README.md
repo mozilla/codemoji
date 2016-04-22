@@ -37,7 +37,11 @@ The following open-source libraries were also used in developing the website:
 	gulp build
 	
 	
-### Deploy on gh-pages
+### Build && Deploy on gh-pages
+	
+	npm run deploy_gh
+
+Under the hood here the details:
 
 	gulp build
 	git checkout -b temp
