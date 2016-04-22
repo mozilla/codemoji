@@ -28,7 +28,8 @@ gulp.task('copy:assets', ['clean'], function() {
   var assets_paths = [
     'assets/svg/*',
     'assets/img/**/*',
-    'vendor/**/*'
+    'vendor/**/*',
+    'share.html'
   ]
   
   return gulp.src(assets_paths)
