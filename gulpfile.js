@@ -120,7 +120,7 @@ gulp.task('generate-favicon', function(done) {
 
 gulp.task('finalhtml', ['copy:assets'], function(){
 
-  var htmlminopt = {collapseWhitespace: true, removeComments:true, collapseWhitespace:true}
+  var htmlminopt = {collapseWhitespace: true, removeComments:true}
   
   gulp.src('public/index.html')
     .pipe(through.obj(function (chunk, enc, cb) {
@@ -129,7 +129,9 @@ gulp.task('finalhtml', ['copy:assets'], function(){
         cb(null, chunk);
       })
     }))
-    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+    // disabled since it strip the og:image FB tag
+    // favicon tag are put manually into html markup
+    //.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
     .pipe(processhtml({
       commentMarker: 'process',
       recursive:true,
