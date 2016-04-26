@@ -65,6 +65,7 @@
 
   Cryptoloji.states.onboarding.step1 = {
     enter: function() {
+      TweenLite.to($('.onboarding_skip_button'), 1, {opacity:0})
       commonSlideEnterBehaviour(1)
       OnBoardingAnimations.scene_01.enter(showNextBtn)
       timer = setTimeout(function(){
