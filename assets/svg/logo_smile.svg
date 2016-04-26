@@ -18,7 +18,7 @@
 <metadata>
 	<sfw  xmlns="&ns_sfw;">
 		<slices></slices>
-		<sliceSourceBounds  width="1917.322" height="271.558" bottomLeftOrigin="true" y="-556.902" x="-363.322"></sliceSourceBounds>
+		<sliceSourceBounds bottomLeftOrigin="true" y="-556.902" x="-363.322"></sliceSourceBounds>
 	</sfw>
 </metadata>
 <switch>
