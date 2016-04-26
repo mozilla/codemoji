@@ -19,8 +19,8 @@
       $('.section_main.encryption').addClass('section-show')
       $(".section_share").addClass("section-show")
       $('.section_share').css({
-             y: window.innerHeight,
-        height: window.innerHeight-$('#encryptHeader').innerHeight()
+          y: window.innerHeight,
+          height: window.innerHeight-$('#encryptHeader').innerHeight()
       })
       setTimeout(function(){
         $('.section_share').transition({duration:750, y:$('#encryptHeader').innerHeight(), easing:'easeInOutExpo', complete: function(){
@@ -37,6 +37,19 @@
 
       // resize font based on screen height
       Cryptoloji.utils.resizeEmojis(Cryptoloji.current.output, .5, '.share_message_item')
+
+      $(window).resize(function () {
+        $('.section_share').css({
+          y: $('#encryptHeader').innerHeight(),
+          height: window.innerHeight-$('#encryptHeader').innerHeight()
+        })
+        // resize font based on screen height
+        Cryptoloji.utils.resizeEmojis(Cryptoloji.current.output, .5, '.share_message_item')
+        if (!Cryptoloji.mq.matches) {
+          // resize share modal in mobile layout
+          setShareModalCoordinates()
+        }
+      })
 
       fillLinkForClipboardCopy()
       fillKeyForClipboardCopy()

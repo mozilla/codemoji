@@ -33,6 +33,10 @@
       var landingFrom = window.location.hash.split('?')[1]
 
       fillMessage()
+      $(window).resize(function () {
+        // resize font based on screen height
+        Cryptoloji.utils.resizeEmojis(Cryptoloji.current.output, .5, '#landing_state_1_encrypted_message')
+      })
 
       $(".section_landing").addClass("section-show")
       Cryptoloji.stateman.emit('footer:show') 
