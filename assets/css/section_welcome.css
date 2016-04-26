@@ -150,6 +150,7 @@
     background-color: #005189;
     position: relative;
     margin-bottom: 4rem;
+    min-height: 7rem;
 }
 
 .landing_encrypted_message:after,

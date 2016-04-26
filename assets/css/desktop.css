@@ -157,9 +157,9 @@
   }
   .footer_link{
     font-family: "fira_sans";
-    font-size: 16px;
+    font-size: 1.6rem;
     margin: 0;
-    margin-left: 5px;
+    margin-left: 0.5rem;
     font-weight: 300;
   }
 
@@ -167,7 +167,7 @@
   .footer_link_wrapper_opacity:active,
   .footer_link_wrapper_opacity:visited{
     opacity: .5;
-    margin: 0 20px;
+    margin: 0 2rem;
     color: white;
     font-family: "fira_sans";
   }
@@ -255,7 +255,7 @@
 
   .decrypt_feedback{
     font-size: 90%;
-    line-height: 22px;
+    line-height: 2.2rem;
   }
 
   .share_key {
@@ -303,6 +303,73 @@
     font-size: 120%;
   }
 }
-}
 
+@media screen and (max-height: 500px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media screen and (max-height: 400px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  @media screen and (max-height: 800px) {
+    /* custom style for share page*/
+    .share_message_item {
+      margin: 4rem 0;
+    }
+    .share_key_sentence {
+      margin: 3rem 0;
+    }
+  }
+  @media screen and (max-height: 700px) {
+    html {
+      font-size: 9px;
+    }
+    /* custom style for landing page*/
+    .svg_wrapper_landing_key {
+      width: 12rem;
+      margin-bottom: 2rem;
+    }
+  }
+  @media screen and (max-height: 600px) {
+    html {
+      font-size: 8px;
+    }
+    /* custom style for share page*/
+    .share_message_item {
+      margin: 3.5rem 0;
+    }
+    .share_key_sentence {
+      margin: 3rem 0;
+    }
+  }
+  @media screen and (max-height: 500px) {
+    html {
+      font-size: 7px;
+    }
+    /* custom style for share page*/
+    .share_message_item {
+      margin: 2rem 0;
+    }
+    .share_key_sentence {
+      margin: 2rem 0;
+    }
+    /* custom style for landing page*/
+    .svg_wrapper_landing_key {
+      width: 10rem;
+      margin-bottom: 1rem;
+    }
+  }
+  @media screen and (max-height: 400px) {
+    html {
+      font-size: 6px;
+    }
+    .share_message_item {
+      margin: 2rem 0;
+    }
+  }
+}
 
