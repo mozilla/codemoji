@@ -224,6 +224,10 @@
           '\n\n'+
           'Try to unscramble it on ' + shareURI
 
+        var smsMessage = Cryptoloji.current.output + 
+          '\n' + 
+          'Check out ' + shareURI
+
         Cryptoloji.UI.Sharer('facebook', '#share_button_fb')
           .setShareLink('https://www.facebook.com/sharer/sharer.php')
           .addParam('u', shareURI)
@@ -261,13 +265,13 @@
               .sameWindow()
               .setSeparator('&')
               .setShareLink('sms:')
-              .addParam('body', shareURI)
+              .addParam('body', smsMessage)
               .bind()
           } else {
             Cryptoloji.UI.Sharer('sms', '#share_button_sms')
               .sameWindow()
               .setShareLink('sms:')
-              .addParam('body', shareURI)
+              .addParam('body', smsMessage)
               .bind()
           }
         }
