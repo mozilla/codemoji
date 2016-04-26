@@ -311,26 +311,52 @@
   }
 
   function handleOrientationChanges () {
-    function _writeOrientationAttr () {
+    function _getOrientation () {
       // if orientation is 0 or 180 we are in portrait mode
-      if (window.orientation == 0 || window.orientation == 180) {
-        $('html').attr('orientation', 'portrait')
+      if (_.isUndefined(window.orientation)) {
+        // window.orientation is undefined on desktop so check on media query
+        if (!Cryptoloji.mq.matches) {
+          return 'portrait'
+        } else {
+          return 'landscape'
+        }
+      }
+      else if (window.orientation == 0 || window.orientation == 180) {
+        return 'portrait'
       } else {
-        $('html').attr('orientation', 'landscape')
+        return 'landscape'
       }
     }
-
-    // window.orientation is undefined on desktop
-    if (!_.isUndefined(window.orientation)) {
-      _writeOrientationAttr()
-      // support both onorientationchange and resize event
-      var supportsOrientationChange = 'onorientationchange' in window
-      var orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize'
-      $(window).on(orientationEvent, function (event) {
-        _writeOrientationAttr()
-        Cryptoloji.stateman.emit('orientationchange')
-      })
+    function _writeOrientationAttr (orientation) {
+      $('html').attr('orientation', orientation)
     }
+
+    function _needReload (orientation) {
+      return orientation === 'landscape' && Cryptoloji.mq.matches
+    }
+
+    // get the current orientation
+    var orientation = _getOrientation()
+    _writeOrientationAttr(orientation)
+
+    var reloadCheck = _needReload(orientation)
+    // support both onorientationchange and resize event
+    var supportsOrientationChange = 'onorientationchange' in window
+    var orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize'
+    // hard refresh when orientation changes
+    $(window).on(orientationEvent, function (event) {
+      var temp = _getOrientation()
+      if (temp !== orientation) {
+        orientation = temp
+        _writeOrientationAttr(orientation)
+        Cryptoloji.stateman.emit('orientationchange')
+        // only in desktop-like view refresh objects init
+        if (reloadCheck || _needReload(orientation)) {
+          $('#mainLoader').css({opacity: 1, display: 'flex'})
+          window.location.reload()
+        }
+      }
+    })
   }
 
   function fixHeight () {
