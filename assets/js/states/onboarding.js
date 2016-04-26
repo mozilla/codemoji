@@ -61,12 +61,18 @@
     paginationLogic(n)
   }
 
+  var timer = null;
+
   Cryptoloji.states.onboarding.step1 = {
     enter: function() {
       commonSlideEnterBehaviour(1)
       OnBoardingAnimations.scene_01.enter(showNextBtn)
+      timer = setTimeout(function(){
+        TweenLite.to($('.onboarding_skip_button'), 1, {opacity:.5})
+      }, 3000)
     },
     leave: function() {
+      clearTimeout(timer)
       return new Promise(function(resolve, reject) {
         simpleHideNextBtn();
         OnBoardingAnimations.scene_01.exit(function(){
