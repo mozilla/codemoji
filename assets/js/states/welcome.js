@@ -2,40 +2,45 @@
   'use strict'
     
   function triggerLogoAnimation () {
-    TweenLite.set($("#final_emoji_1"),{opacity: 0})
-    TweenLite.set($("#final_emoji_2"),{opacity: 0})
 
     TweenLite.set($("#animation1"),{display: 'block'})
     TweenLite.set($("#animation2"),{display: 'block'})
-    TweenLite.set($("#animation1 > g"),{opacity: 0})
-    TweenLite.set($("#animation2 > g"),{opacity: 0})
+    TweenLite.set($("#animation1 > g"),{opacity: 0, scale:3, transformOrigin: 'center center'})
+    TweenLite.set($("#animation2 > g"),{opacity: 0, scale:3, transformOrigin: 'center center'})
+
+    var del = 2
 
     $("#animation1 > g").each(function(d){
-        popEmoji(this,d)
-    })
-    $("#animation2 > g").each(function(d){
-        popEmoji(this,d)
+        TweenLite.to($(this), .4, {
+          scale: 1, opacity:1, 
+          transformOrigin: 'center center',
+          delay: del + d*1.2
+        })
+        
+        if(d + 1 < $("#animation1 > g").length){
+          TweenLite.to($(this), .3, {
+            opacity:0, 
+            delay: del + d*1.2 + 1
+          })
+        }
     })
 
-    function popEmoji(el,i) {
-      var speed = .8
-      var general_delay = 1.5
-      TweenLite.from(el, speed/4, {
-        scale: 2, 
-        transformOrigin: 'center center',
-        delay: i * speed + general_delay + speed/4
-      })
-      TweenLite.to(el, speed/4, {
-        opacity: 1, 
-        delay: i * speed + general_delay
-      })
-      if(i + 1 < $("#animation1 > g").length){
-        TweenLite.to(el, speed/4, {
-          opacity: 0, 
-          delay: i * speed + general_delay + 3 * speed/4
+    $("#animation2 > g").each(function(d){
+        TweenLite.to($(this), .4, {
+          scale: 1, opacity:1, 
+          transformOrigin: 'center center',
+          delay: del + d*1.4
         })
-      }
-    }
+        
+        if(d + 1 < $("#animation1 > g").length){
+          TweenLite.to($(this), .3, {
+            opacity:0, 
+            delay: del + d*1.4 + 1
+          })
+        }
+    })
+
+    
   }
 
   ////////////////////////////////////////////////////////////
@@ -54,7 +59,7 @@
         $(e).css({opacity:0})
       })
 
-      triggerLogoAnimation()
+      
 
       setTimeout(function(){
         $('#body_landing').transition({opacity:1, duration:250})
@@ -63,6 +68,8 @@
             })
             $('#mainHeaderBig').transition({y:0, duration:1000, delay:500, easing:'easeInOutExpo'})
             $('#footer').transition({y:0, duration:1000, delay:750, easing:'easeInOutExpo'})
+
+            triggerLogoAnimation()
       },0)
 
     },
