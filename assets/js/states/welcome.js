@@ -5,13 +5,19 @@
 
     TweenLite.set($("#animation1"),{display: 'block'})
     TweenLite.set($("#animation2"),{display: 'block'})
-    TweenLite.set($("#animation1 > g"),{opacity: 0, scale: 1.6, rotation: Math.random() * 360, transformOrigin: 'center center'})
-    TweenLite.set($("#animation2 > g"),{opacity: 0, scale: 1.6, rotation: Math.random() * 360, transformOrigin: 'center center'})
+
+    $("#animation1 > g").each(function(i,e){
+      TweenLite.set(e, {opacity: 0, scale: 1.6, rotation: (Math.random() * 180)-90, transformOrigin: 'center center'})
+    })
+    $("#animation2 > g").each(function(i,e){
+      TweenLite.set(e, {opacity: 0, scale: 1.6, rotation: (Math.random() * 180)-90, transformOrigin: 'center center'})
+    })
+
     TweenLite.set($("#animation1 > #start_o"),{opacity: 1, scale: 1})
     TweenLite.set($("#animation2 > #start_o"),{opacity: 1, scale: 1})
 
-    _animate("#animation1 > g", .3, .8, 3)
-    _animate("#animation2 > g", .3, .95, 3)
+    _animate("#animation1 > g", .6, .8, 3)
+    _animate("#animation2 > g", .6, .95, 3)
 
     function _animate (group, startTime, delay, elements) {
       function _reduceto (array, num) {
