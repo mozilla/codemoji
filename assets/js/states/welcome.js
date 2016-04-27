@@ -5,42 +5,59 @@
 
     TweenLite.set($("#animation1"),{display: 'block'})
     TweenLite.set($("#animation2"),{display: 'block'})
-    TweenLite.set($("#animation1 > g"),{opacity: 0, scale:3, transformOrigin: 'center center'})
-    TweenLite.set($("#animation2 > g"),{opacity: 0, scale:3, transformOrigin: 'center center'})
+    TweenLite.set($("#animation1 > g"),{opacity: 0, scale: 1.6, rotation: Math.random() * 360, transformOrigin: 'center center'})
+    TweenLite.set($("#animation2 > g"),{opacity: 0, scale: 1.6, rotation: Math.random() * 360, transformOrigin: 'center center'})
+    TweenLite.set($("#animation1 > #start_o"),{opacity: 1, scale: 1})
+    TweenLite.set($("#animation2 > #start_o"),{opacity: 1, scale: 1})
 
-    var del = 2
+    _animate("#animation1 > g", .3, .8, 3)
+    _animate("#animation2 > g", .3, .95, 3)
 
-    $("#animation1 > g").each(function(d){
-        TweenLite.to($(this), .4, {
-          scale: 1, opacity:1, 
-          transformOrigin: 'center center',
-          delay: del + d*1.2
-        })
-        
-        if(d + 1 < $("#animation1 > g").length){
-          TweenLite.to($(this), .3, {
-            opacity:0, 
-            delay: del + d*1.2 + 1
-          })
+    function _animate (group, startTime, delay, elements) {
+      function _reduceto (array, num) {
+        var arr = array.toArray()
+        var temp_o = arr.shift()
+        var temp_f = arr.pop()
+        if (arr.length > num) {
+          // shuffle
+          var j, x, i;
+          for (i = arr.length; i; i -= 1) {
+              j = Math.floor(Math.random() * i);
+              x = arr[i - 1];
+              arr[i - 1] = arr[j];
+              arr[j] = x;
+          }
+          // get n elements
+          arr = arr.splice(0, num)
         }
-    })
+        // re add first and last elements
+        arr.unshift(temp_o)
+        arr.push(temp_f)
+        return arr
+      }
 
-    $("#animation2 > g").each(function(d){
-        TweenLite.to($(this), .4, {
-          scale: 1, opacity:1, 
-          transformOrigin: 'center center',
-          delay: del + d*1.4
+      group = _reduceto($(group), elements)
+      $(group).each(function (d, elem) {
+        TweenLite.to(elem, .3, {
+          opacity: 1,
+          delay: startTime + (d+1) * delay
         })
-        
-        if(d + 1 < $("#animation1 > g").length){
-          TweenLite.to($(this), .3, {
-            opacity:0, 
-            delay: del + d*1.4 + 1
-          })
-        }
-    })
-
-    
+        TweenLite.to(elem, .8, {
+          scale: 1,
+          rotation: 0,
+          delay: startTime + (d+1) * delay,
+          ease: Elastic.easeInOut,
+          onComplete: function () {
+            if (elem !== _.last($(group))) {
+              TweenLite.to(elem, .4, {
+                scale: 0,
+                ease: Expo.easeInOut
+              })
+            }
+          }
+        })
+      })
+    }
   }
 
   ////////////////////////////////////////////////////////////
@@ -63,13 +80,13 @@
 
       setTimeout(function(){
         $('#body_landing').transition({opacity:1, duration:250})
-            $('#body_landing').children().each(function(i, e){
-              $(e).transition({opacity:1, delay:i*125, duration:500})
-            })
-            $('#mainHeaderBig').transition({y:0, duration:1000, delay:500, easing:'easeInOutExpo'})
-            $('#footer').transition({y:0, duration:1000, delay:750, easing:'easeInOutExpo'})
+        $('#body_landing').children().each(function(i, e){
+          $(e).transition({opacity:1, delay:i*125, duration:500})
+        })
+        $('#footer').transition({y:0, duration:1000, delay:750, easing:'easeInOutExpo'})
+        $('#mainHeaderBig').transition({y:0, duration:1000, delay:500, easing:'easeInOutExpo'})
 
-            triggerLogoAnimation()
+        triggerLogoAnimation()
       },0)
 
     },
