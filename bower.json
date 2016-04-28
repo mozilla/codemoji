@@ -28,6 +28,7 @@
     "cookie": "^1.1.0",
     "jquery.transit": "^0.9.12",
     "youarei": "^1.0.1",
-    "promise-polyfill": "^4.0.2"
+    "promise-polyfill": "^4.0.2",
+    "console-polyfill": "^0.2.2"
   }
 }
