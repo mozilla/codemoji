@@ -28,6 +28,8 @@
         }})
       }, 0)
 
+      $('#share_elements').hide()
+
       // prevent href navigation on click n share link
       $('#share_copytoclipboard').click(function (e) {
         e.preventDefault()
@@ -72,6 +74,9 @@
       }
     },
     leave: function () {
+
+      Cryptoloji.Api.reset()
+
       $('.section_main.encryption').removeClass('section-show')
 
       // only in mobile
@@ -203,6 +208,7 @@
         $('#share_copytoclipboard').attr('data-clipboard-text', shareURI)
         $('#share_copytoclipboard').attr('href', shareURI)
         $('#share_copytoclipboard').text('This is the link to share')
+        $('#share_elements').show()
         // copy link fallback if ios
         if (iosTest()) {
           $('#share_copytoclipboardcta').hide()
@@ -260,6 +266,8 @@
           .addParam('subject', 'Can you read this emoji message?')
           .addParam('body', mailMessage)
           .bind()
+
+        $('#share_elements').show()
 
         if (bowser.mobile) {
           // show whatsapp and sms on mobile only

@@ -1,11 +1,13 @@
 ;(function (window, Cryptoloji, $, undefined) {
 
   // memoized share link
-  var shareURL = null
+  var shareURL
   // shared deferred object
-  var deferred = jQuery.Deferred()
+  var deferred
   // one promise at a time
-  var promiseRunning = false
+  var promiseRunning
+
+  reset()
 
   function getShortenedLink () {
     if (!promiseRunning) {
@@ -29,10 +31,10 @@
         $.post('https://bitly.mofoprod.net/generate/', {
           url: shareURL
         }, function success (data) {
-          shareURL = data
-          deferred.resolve(shareURL)
+          deferred.resolve(data)
         }).fail(function failure() {
           // console.error('URL shortening failed, falling back to long URL')
+          var resurl = shareURL
           deferred.resolve(shareURL)
         }).always(function always () {
           promiseRunning = false
@@ -43,8 +45,15 @@
     return deferred.promise()
   }
 
+  function reset(){
+    shareURL = null
+    promiseRunning=false
+    deferred = jQuery.Deferred()
+  }
+
   Cryptoloji.Api = {
-    getShortenedLink: getShortenedLink
+    getShortenedLink: getShortenedLink,
+    reset:reset
   }
   
 })(window, window.Cryptoloji, window.jQuery, window.Q); 

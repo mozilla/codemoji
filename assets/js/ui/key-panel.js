@@ -11,7 +11,6 @@
   function KeyPanel (selector) {
     var self = this
     self.mainSelector = selector
-    console.debug('creating KeyPanel on ' + selector)
     self.$element = $(selector)
     // if instace .fill() has been called
     self.filled = false
