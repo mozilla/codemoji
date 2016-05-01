@@ -195,7 +195,7 @@
   <!-- WELCOME views/welcome -->
   <div class="section_welcome section" footer-padding-bottom-correction color-bg-dark color-light layout="column" layout-align="center center">
     <div id="mainHeaderBig" class="section_welcome_header" color-bg-light layout="column" layout-align="center center" wide>
-      <div class="svg_wrapper svg_wrapper_header_name" data-svg="assets/svg/logo_complete_animation.svg" color-fill-main-alt
+      <div id="welcome_header" class="svg_wrapper svg_wrapper_header_name" data-svg="assets/svg/logo_complete_animation.svg" color-fill-main-alt
            layout="column" layout-align="center center"></div>
     </div>
     <div id="body_landing" class="section_welcome_main" color-bg-dark layout="column" layout-align="center center" wide flex>
@@ -242,14 +242,10 @@
 
 
   <!-- LANDING views/landing -->
-  <div class="section_landing section" footer-padding-bottom-correction color-bg-dark color-light 
-       layout="column" layout-align="center center">
-    <div class="section_welcome_header" color-bg-light layout="column" layout-align="start center" wide>
-      <div class="svg_wrapper_header_logo_wrp" layout="column" layout-align="start start" wide></div>
-      <a to-state="welcome">
-        <div class="svg_wrapper svg_wrapper_header_name" data-svg="assets/svg/logo_complete.svg" color-fill-main-alt
-             layout="column" layout-align="center center"></div>
-      </a>
+  <div class="section_landing section" footer-padding-bottom-correction color-bg-dark color-light layout="column" layout-align="center center">
+    <div id="mainLandingBig" class="section_welcome_header" color-bg-light layout="column" layout-align="center center" wide>
+      <div id="landing_header" class="svg_wrapper svg_wrapper_header_name" data-svg="assets/svg/logo_complete_animation.svg" color-fill-main-alt
+           layout="column" layout-align="center center"></div>
     </div>
     <div class="section_welcome_main" color-bg-dark layout="column" layout-align="center center" wide flex>
         <div layout="column" layout-align="start center">
@@ -799,6 +795,8 @@
   <script type="text/javascript" src="assets/js/onboarding/scene_05.js"></script>
   <script type="text/javascript" src="assets/js/onboarding/scene_06.js"></script>
   <script type="text/javascript" src="assets/js/onboarding/scene_07.js"></script>
+
+  <script type="text/javascript" src="assets/js/logo-header-animation.js"></script>
   
   <script type="text/javascript" src="assets/js/states/decrypt.js"></script>
   <script type="text/javascript" src="assets/js/states/encrypt.js"></script>

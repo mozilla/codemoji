@@ -29,6 +29,20 @@
     },
     enter: function () {
 
+      $('#mainLandingBig').css({y:-300})
+      $('#footer').css({y:200})
+
+      setTimeout(function(){
+        
+        $('#footer').transition({y:0, duration:1000, delay:750, easing:'easeInOutExpo'})
+        $('#mainLandingBig').transition({y:0, duration:1000, delay:500, easing:'easeInOutExpo'})
+
+        LogoHeaderAnimation.enter('#landing_header')
+
+      },10)
+      
+      
+
       // check on mozilla newsletter landing by getting the 'mozilla' parameter append to the url
       var landingFrom = window.location.hash.split('?')[1]
 
@@ -76,6 +90,7 @@
 
     },
     leave: function () {
+      LogoHeaderAnimation.exit('#landing_header')
       $(".section_landing").removeClass("section-show")
       Cryptoloji.stateman.emit('footer:hide') 
     }
