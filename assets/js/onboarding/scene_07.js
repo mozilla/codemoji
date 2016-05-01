@@ -8,9 +8,12 @@
 
 	var tt = [1,2,3,4,5,6,7,8,9]
 	var timer
+	var anims = []
+	var isEnter=false
 
 	function enter(clb){
 		
+		isEnter=true
 		clearTimeout(timer);
 
 		tt.forEach(function(d){
@@ -20,7 +23,7 @@
 		tt.forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0})
-			TweenLite.from(e, 1, {delay:d*.15, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
+			anims.push( TweenLite.from(e, 1, {delay:d*.15, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut}) )
 		});
 
 		timer = setTimeout(function(){
@@ -34,7 +37,19 @@
 
 	function exit(clb){
 
-		clearTimeout(timer);
+		if(!isEnter){
+			clb()
+			return
+		}
+		isEnter=false
+
+		clearTimeout(timer)
+
+		anims.forEach(function(d, i){
+			if(d) d.kill()
+		})
+		anims=[]
+
 
 		tt.forEach(function(d, i){
 			var e = $(prep + '#tt'+d)

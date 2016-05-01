@@ -65,12 +65,8 @@
 
   Cryptoloji.states.onboarding.step1 = {
     enter: function() {
-      TweenLite.to($('.onboarding_skip_button'), 1, {opacity:0})
       commonSlideEnterBehaviour(1)
       OnBoardingAnimations.scene_01.enter(showNextBtn)
-      timer = setTimeout(function(){
-        TweenLite.to($('.onboarding_skip_button'), 1, {opacity:.5})
-      }, 3000)
     },
     leave: function() {
       clearTimeout(timer)
@@ -133,7 +129,6 @@
       commonSlideEnterBehaviour(5)
 
       $('#next_button_onboarding').text('Next')
-      TweenLite.set($('.onboarding_skip_button'), {opacity:1})
       $('#next_button_onboarding').off()
 
 
@@ -153,7 +148,6 @@
     enter: function() {
       commonSlideEnterBehaviour(6)
 
-      //TweenLite.to($('.onboarding_skip_button'), 1, {delay:.2, opacity:0})
       $('#next_button_onboarding').text('Next')
 
       OnBoardingAnimations.scene_06.enter(showNextBtn)

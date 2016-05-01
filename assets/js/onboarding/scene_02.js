@@ -9,9 +9,12 @@
 	var interval
 	var timer
 	var index = 1
+	var anims = []
+	var isEnter=false
 
 	function enter(clb){
 
+		isEnter=true
 		clearTimeout(timer);
 
 		[1,2,3].forEach(function(d){
@@ -31,19 +34,19 @@
 		[1,2,3,4,5].forEach(function(d){
 			var e = $(prep + '#tt'+d).css({display:'block'})
 			TweenLite.set(e, {opacity:1, y:0})
-			TweenLite.from(e, 1, {delay:2.25 + d*.1, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut})
+			anims.push( TweenLite.from(e, 1, {delay:2.25 + d*.1, opacity:0, y:40, transformOrigin:'center center', ease:Expo.easeInOut}) )
 		});
 
 		timer = setTimeout(function(){
 			clb()
-		}, 3600)
+		}, 2600)
 
 	}
 
 	function swap(){
 		
 		$(prep + '#b'+index+' > g').each(function(i, e){
-			TweenLite.to($(e), .5, {delay:.5-i*.1, opacity:0})
+			anims.push( TweenLite.to($(e), .5, {delay:.5-i*.1, opacity:0}) )
 		})
 
 		if(index == 3) index = 0
@@ -51,7 +54,7 @@
 
 		$(prep + '#b'+index+' > g').each(function(i, e){
 			$(e).css({display: 'block', opacity:1})
-			TweenLite.from($(e), .5, {delay:.5-i*.1, scale:1.35, opacity:0, transformOrigin:'center center', ease:Quart.easeInOut})
+			anims.push( TweenLite.from($(e), .5, {delay:.5-i*.1, scale:1.35, opacity:0, transformOrigin:'center center', ease:Quart.easeInOut}) )
 		})
 
 
@@ -59,10 +62,21 @@
 
 	function exit(clb){
 
+		if(!isEnter){
+			clb()
+			return
+		}
+		isEnter=false
+
 		clearInterval(interval)
 		clearTimeout(timer)
 		interval=null
 
+		anims.forEach(function(d, i){
+			if(d) d.kill()
+		})
+		anims=[]
+		
 		$(prep + '#b'+index+' > g').each(function(i, e){
 			TweenLite.to($(e), .5, {delay:.5-i*.1, opacity:0})
 		});

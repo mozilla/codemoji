@@ -28,7 +28,7 @@
   font-weight: 300;
   bottom: 0;
   left: 50%;
-  opacity: 0;
+  opacity: 0.5;
   color: white;
   font-size: 1.6rem;
   transform: translateX(-50%);
