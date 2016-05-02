@@ -34,11 +34,21 @@
 
 .svg_wrapper_x_button{
   position: absolute;
-  width: 2rem;
-  top: 2rem;
-  right: 2rem;
-  fill: white;
+  top: 0;
+  right: 0;
+  font-weight: 100;
+  background-color: transparent;
+  display: inline-block;
   cursor: pointer;
+  padding: 2rem 2rem;
+  font-size: 125%; 
+  line-height: 0.8;
+}
+
+.svg_wrapper_x_button svg{
+  height: 2rem;
+  width: 2rem;
+  fill: white;
 }
 
 .credits_text_main{
