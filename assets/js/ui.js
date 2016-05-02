@@ -353,7 +353,10 @@
         // only in desktop-like view refresh objects init
         if (reloadCheck || _needReload(orientation)) {
           $('#mainLoader').css({opacity: 1, display: 'flex'})
-          window.location.reload()
+          // add timeout to fix reload issue on firefox
+          setTimeout(function() {
+            window.location.reload()
+          }, 10);
         }
       }
     })
