@@ -28,7 +28,10 @@
         }})
       }, 0)
 
+      // hide share elements untill they are completely loaded
+      // loader should be show instead
       $('#share_elements').hide()
+      $('#share_elements_loader').show()
 
       // prevent href navigation on click n share link
       $('#share_copytoclipboard').click(function (e) {
@@ -208,7 +211,13 @@
         $('#share_copytoclipboard').attr('data-clipboard-text', shareURI)
         $('#share_copytoclipboard').attr('href', shareURI)
         $('#share_copytoclipboard').text('This is the link to share')
+
+        // when share links are loaded
+        // hide the loader, show the share buttons div and recalculate share midal height
+        $('#share_elements_loader').hide()
         $('#share_elements').show()
+        setShareModalCoordinates()
+
         // copy link fallback if ios
         if (iosTest()) {
           $('#share_copytoclipboardcta').hide()
@@ -305,7 +314,15 @@
     // set the height and the top y coordinate to reach when share key modal is open
     // Cryptoloji.utils.remToPx(.5) is for add a margin
     // 23 is the magic number...
-    share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23 -$('#encryptHeader').innerHeight()
+    // 
+    
+    // if share components are still loading calculate loader height and position
+    // else calculate share buttons height and position
+    if ($('.share_social_wrapper').height() === 0) {
+      share_modal_height = $('body').height() - $('#share_elements_loader').position().top - $('#share_elements_loader').height() - Cryptoloji.utils.remToPx(2)
+    } else {
+      share_modal_height = $('body').height() - $('.share_social_wrapper').position().top - $('.share_social_wrapper').height() + Cryptoloji.utils.remToPx(.5) + 23 -$('#encryptHeader').innerHeight()
+    }
     share_modal_margin = Cryptoloji.utils.remToPx(12.5)
     if (Cryptoloji.mq.matches) {
       share_modal_margin = Cryptoloji.utils.remToPx(15)
