@@ -216,7 +216,9 @@
         // hide the loader, show the share buttons div and recalculate share midal height
         $('#share_elements_loader').hide()
         $('#share_elements').show()
-        setShareModalCoordinates()
+        if (!Cryptoloji.mq.matches) {
+          setShareModalCoordinates()
+        }
 
         // copy link fallback if ios
         if (iosTest()) {
