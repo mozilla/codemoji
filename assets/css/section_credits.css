@@ -48,6 +48,7 @@
   text-align: center;
   font-weight: 100;
   font-size: 110%;
+  margin: 3rem 0;
 }
 
 .credits_text_main a{
@@ -58,10 +59,6 @@
 .credits_text_main a:hover{
   background-color: #005189;
   color: white;
-}
-
-.credits_vendor{
-  overflow-y: scroll;
 }
 
 .credits_vendor::-webkit-scrollbar { 

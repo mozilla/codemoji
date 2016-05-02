@@ -124,7 +124,7 @@
   <!-- MODAL_KEYS -->
   <div id="key-modal" class="main_key_modal">
     <div class="main_key_modal_emoji_wrapper" layout="column" layout-align="start center">
-      <div class="main_key_modal_emoji_container" layout="column" layout-align="start center">
+      <div class="main_key_modal_emoji_container unselectable" layout="column" layout-align="start center">
         <!-- js injected -->
       </div>
     </div>
@@ -143,15 +143,15 @@
 
   <!-- CREDITS -->
   <div class="section credits_section" layout="column" layout-align="center center" color-bg-dark>
-    <div class="content" flex layout="column" layout-align="center center">
-      <div flex layout="column" layout-align="center center">
+    <div scroll-y class="content" flex layout="column" layout-align="center center">
+      <div layout="column" layout-align="center center">
         <p class="credits_text_main">
           Codemoji is a Mozilla Foundation project ideated and developed by 
           <a href="http://todo.to.it/" target="blank">TODO</a> in support of the  
           <a href="https://advocacy.mozilla.org/encrypt" target="blank">Encrypt campaign</a> launched in early 2016
         </p>
       </div>
-      <div scroll-y class="credits_vendor" flex layout="column" layout-align="start center">
+      <div class="credits_vendor" flex layout="column" layout-align="start center">
         <p class="credits_text">
           The Codemoji project source files are openly available under Mozilla Public License v2 on 
           <a href="https://github.com/todotoit/codemoji">GitHub</a>
@@ -184,10 +184,10 @@
       </div>
       <!-- <p class="credits_text">credits</p> -->
       <!-- <a class="mozilla_button">back</a> -->
-      <div class="svg_wrapper svg_wrapper_x_button" 
-           data-svg="assets/svg/x.svg"
-           layout="column" layout-align="center center"></div>
     </div>
+    <div class="svg_wrapper svg_wrapper_x_button" 
+         data-svg="assets/svg/x.svg"
+         layout="column" layout-align="center center"></div>
   </div>
   <!-- /CREDITS -->
 
@@ -399,7 +399,7 @@
           </p>
         </div>
         <div hideItIfMobile>        
-          <div class="desktop_main_selected_key" layout="row" layout-align="center center" wide>
+          <div class="desktop_main_selected_key unselectable" layout="row" layout-align="center center" wide>
             <div id="encryption_selected_key" class="desktop_key">
               <!-- js-injected -->
             </div>
@@ -415,7 +415,7 @@
         </div>
         <div id="encryption_keypanel" hideItifMobile class="main_key_panel_emoji_wrapper" layout="column" layout-align="start center">
           <div class="nano">          
-            <div class="main_key_panel_emoji_container nano-content" layout="column" layout-align="start center">
+            <div class="main_key_panel_emoji_container unselectable nano-content" layout="column" layout-align="start center">
               <!-- js injected -->
             </div>
           </div>
@@ -493,7 +493,7 @@
         </div>
         <!-- selected key desktop-->
         <div hideItIfMobile>        
-          <div class="desktop_main_selected_key" layout="row" layout-align="center center" wide>
+          <div class="desktop_main_selected_key unselectable" layout="row" layout-align="center center" wide>
             <div id="decryption_selected_key" class="desktop_key">
               <!-- js-injected -->
             </div>
@@ -511,7 +511,7 @@
         <!-- panel keys desktop -->
         <div id="decryption_keypanel" hideItifMobile class="main_key_panel_emoji_wrapper" layout="column" layout-align="start center">
           <div class="nano">          
-            <div class="main_key_panel_emoji_container nano-content" layout="column" layout-align="start center">
+            <div class="main_key_panel_emoji_container unselectable nano-content" layout="column" layout-align="start center">
               <!-- js injected -->
             </div>
           </div>
@@ -595,6 +595,9 @@
           <div flex class="share_message_item share_encrypted_message" layout="row" layout-align="center center" layout-wrap></div>
         </div>
         
+       <div id="share_elements_loader" layout="column" layout-align="space-between center" wide>
+          <p>Cooking the link... </p>
+       </div>
         <div id="share_elements" layout="column" layout-align="space-between center" wide>
           <div class="share_social_wrapper" layout="row" layout-align="center center" wide>
             <a id="share_button_fb" class="social" target="blank" track="share__fb">
