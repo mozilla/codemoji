@@ -58,15 +58,14 @@
 }
 
 .next_button_onboarding{
-  width: 30rem;
   position: absolute;
   bottom: 8rem;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
 }
 
 .section_onboarding_wrapper .mozilla_button{
-  margin: .5rem 0; 
+  margin: .5rem auto;
+  max-width: 20rem; 
 }
 
 
