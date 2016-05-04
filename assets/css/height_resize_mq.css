@@ -1,42 +1,14 @@
-@media screen and (max-height: 800px) {
-  .svg_wrapper_onboarding > svg {
-    height: 70rem;
-    margin-top: 4rem;
-  }
-}
-@media screen and (max-height: 700px) {
-  .svg_wrapper_onboarding > svg {
-    height: 65rem;
-    margin-top: 4rem;
-  }
-}
-@media screen and (max-height: 600px) {
-  .svg_wrapper_onboarding > svg {
-    height: 50rem;
-    margin-top: 5rem;
-  }
-  .share_key_sentence{
-    margin-bottom: 2rem;
-  }
-}
 @media screen and (max-height: 550px) {
   html {
     font-size: 9px;
   }
 }
-@media screen and (max-height: 500px) {
-  .svg_wrapper_onboarding > svg {
-    height: 45rem;
-    margin-top: 6rem;
-  }
-}
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 450px) {
   html {
-    font-size: 7px;
+    font-size: 8px;
   }
-  .svg_wrapper_onboarding > svg {
-    height: 40rem;
-    margin-top: 8rem;
+  .svg_wrapper_onboarding{
+    padding-bottom: 5rem;
   }
 }
 @media screen and (min-width: 1024px) {

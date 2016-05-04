@@ -364,12 +364,19 @@
 
   function fixHeight () {
     $('body').css('height', $(window).innerHeight())
+    resizeOnboardingSvg()
     var supportsOrientationChange = 'onorientationchange' in window
     var orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize'
     $(window).on(orientationEvent, function (event) {
       // recalculate height on orientation change
       $('body').css('height', $(window).innerHeight())
+
+      resizeOnboardingSvg()
     })
+  }
+
+  function resizeOnboardingSvg () {
+    $('.svg_wrapper_onboarding > svg').css('height', $(window).innerHeight() - $('#header').height() - Cryptoloji.utils.remToPx(8))
   }
 
   function encryptionEnteringTransition (state) {

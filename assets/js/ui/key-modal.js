@@ -38,7 +38,9 @@
     $('body').removeClass('main_key_modal-open')
     Cryptoloji.stateman.emit('encrypt:show-share')
     var h = $('.main_key_modal').height()
-    $('.main_key_modal').transition({y:-h, duration:750, easing:'easeInOutExpo'})
+    if (h > 0) {
+      $('.main_key_modal').transition({y:-h, duration:750, easing:'easeInOutExpo'})
+    }
     return self
   }
 
