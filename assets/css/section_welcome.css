@@ -187,11 +187,15 @@
   margin-top: 1rem;
   font-weight: 300;
   color: white;
-  opacity: .6;
+  opacity: .5;
   position: relative;
 }
+.footer_first_links:hover{
+  color: white;
+  opacity: .8;
+}
 
-.footer_first_links:before{
+/*.footer_first_links:before{
   content: '';
   position: absolute;
   right: 0;
@@ -200,4 +204,4 @@
   width: 100%;
   height: 1px;
   background-color: white;
-}
+}*/
