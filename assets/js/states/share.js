@@ -18,6 +18,13 @@
     enter: function () {
       $('.section_main.encryption').addClass('section-show')
       $(".section_share").addClass("section-show")
+      // learn more banner
+      $(".learnmore_popup_share").height($('#encryptHeader').innerHeight())
+      $(".learnmore_popup_share").css('y', -$(".learnmore_popup_share").innerHeight())
+      // 
+      // $(".learnmore_popup_share").addClass("section-show")
+      // $(".learnmore_popup_share").transition({delay: 1500, duration:500, y: 0, easing:'easeInOutExpo'})
+
       $('.section_share').css({
           y: window.innerHeight,
           height: window.innerHeight-$('#encryptHeader').innerHeight()
@@ -92,7 +99,11 @@
           }})
         }
       }
-      $('.section_share').transition({delay: 0, duration:750, y:window.innerHeight, easing:'easeInOutExpo', complete: function(){
+      // learn more banner
+      $('.learnmore_popup_share').transition({delay: 0, duration:750, y: -$('.learnmore_popup_share').innerHeight(), easing:'easeInOutExpo', complete: function(){
+        $('.learnmore_popup_share').removeClass('section-show')
+      }})
+      $('.section_share').transition({delay: 250, duration:750, y:window.innerHeight, easing:'easeInOutExpo', complete: function(){
         $('.section_share').removeClass('section-show')
       }})
       
@@ -216,6 +227,12 @@
         // hide the loader, show the share buttons div and recalculate share midal height
         $('#share_elements_loader').hide()
         $('#share_elements').show()
+
+        // show learn more banner
+        // 
+        $(".learnmore_popup_share").addClass("section-show")
+        $(".learnmore_popup_share").transition({delay: 1000, duration:2000, y: 0, easing:'easeInOutExpo'})
+        
         if (!Cryptoloji.mq.matches) {
           setShareModalCoordinates()
         }

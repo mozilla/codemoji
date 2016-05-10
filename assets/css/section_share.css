@@ -275,3 +275,18 @@ input.share_key_emoji-item:value{
   margin-left: 1.3rem;*/
   margin-top: 1rem;
 }
+
+.learnmore_popup_share {
+  z-index: 9000;
+  background-color: white;
+  padding: 0 2rem;
+  top: 0;
+  font-size: 80%;
+  text-decoration: underline;
+}
+
+.svg_wrapper_books svg{
+  width: 5rem;
+  height: 100%;
+  margin-right: 2rem;
+}
