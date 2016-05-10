@@ -225,8 +225,10 @@
 
         // when share links are loaded
         // hide the loader, show the share buttons div and recalculate share midal height
-        $('#share_elements_loader').hide()
-        $('#share_elements').show()
+        setTimeout(function() {
+          $('#share_elements_loader').hide()
+          $('#share_elements').show()
+        }, 500)
 
         // show learn more banner
         // 
@@ -295,7 +297,7 @@
           .addParam('body', mailMessage)
           .bind()
 
-        $('#share_elements').show()
+        // $('#share_elements').show()
 
         if (bowser.mobile) {
           // show whatsapp and sms on mobile only
