@@ -276,6 +276,11 @@
     width: 6rem;
   }
 
+  .share_key-open .share_key-wrapper:before,
+  .share_key-open .share_key-wrapper:after{
+    animation-name: jumper;
+  }
+
   .share_key_emoji-item {
     font-size: 75%;
   }
