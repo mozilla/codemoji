@@ -168,7 +168,7 @@
       TweenLite.to($('.svg_wrapper_pagination'), 1, {opacity:0})
       TweenLite.to($('.onboarding_skip_button'), 1, {delay:.2, opacity:0})
 
-      $('#next_button_onboarding').text('Go for it!')
+      $('#next_button_onboarding').text('I understand')
       $('#next_button_onboarding').click(function(){
         Cryptoloji.stateman.go('encrypt')
         return false;
