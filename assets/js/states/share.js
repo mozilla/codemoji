@@ -306,6 +306,8 @@
               .addParam('body', smsMessage)
               .bind()
           }
+        } else {
+          $('#share_button_wa, #share_button_sms').hide()
         }
       })
   }
