@@ -6,7 +6,7 @@
 
 	var prep = '#s7 '
 
-	var tt = [1,2,3,4,5,6,7,8,9]
+	var tt = [1,2,3,4,5,6,7,8,9,10]
 	var timer
 	var anims = []
 	var isEnter=false

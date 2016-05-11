@@ -18,6 +18,13 @@
     enter: function () {
       $('.section_main.encryption').addClass('section-show')
       $(".section_share").addClass("section-show")
+      // learn more banner
+      $(".learnmore_popup_share").height($('#encryptHeader').innerHeight())
+      $(".learnmore_popup_share").css('y', -$(".learnmore_popup_share").innerHeight())
+      // 
+      // $(".learnmore_popup_share").addClass("section-show")
+      // $(".learnmore_popup_share").transition({delay: 1500, duration:500, y: 0, easing:'easeInOutExpo'})
+
       $('.section_share').css({
           y: window.innerHeight,
           height: window.innerHeight-$('#encryptHeader').innerHeight()
@@ -92,7 +99,11 @@
           }})
         }
       }
-      $('.section_share').transition({delay: 0, duration:750, y:window.innerHeight, easing:'easeInOutExpo', complete: function(){
+      // learn more banner
+      $('.learnmore_popup_share').transition({delay: 0, duration:750, y: -$('.learnmore_popup_share').innerHeight(), easing:'easeInOutExpo', complete: function(){
+        $('.learnmore_popup_share').removeClass('section-show')
+      }})
+      $('.section_share').transition({delay: 250, duration:750, y:window.innerHeight, easing:'easeInOutExpo', complete: function(){
         $('.section_share').removeClass('section-show')
       }})
       
@@ -214,8 +225,16 @@
 
         // when share links are loaded
         // hide the loader, show the share buttons div and recalculate share midal height
-        $('#share_elements_loader').hide()
-        $('#share_elements').show()
+        setTimeout(function() {
+          $('#share_elements_loader').hide()
+          $('#share_elements').show()
+        }, 500)
+
+        // show learn more banner
+        // 
+        $(".learnmore_popup_share").addClass("section-show")
+        $(".learnmore_popup_share").transition({delay: 1000, duration:2000, y: 0, easing:'easeInOutExpo'})
+        
         if (!Cryptoloji.mq.matches) {
           setShareModalCoordinates()
         }
@@ -245,7 +264,7 @@
       .then(function (shareURI) {
         var twitterMessage = Cryptoloji.current.output.substring(0, 16) + 
           '... ' +
-          'I scrambled a message for you using Codemoji: try to unscramble it! ' +
+          'I scrambled a message for you using Codemoji from @Mozilla: Try to unscramble it!' +
           shareURI
         
         var mailMessage = Cryptoloji.current.output + 
@@ -278,7 +297,7 @@
           .addParam('body', mailMessage)
           .bind()
 
-        $('#share_elements').show()
+        // $('#share_elements').show()
 
         if (bowser.mobile) {
           // show whatsapp and sms on mobile only
@@ -306,6 +325,8 @@
               .addParam('body', smsMessage)
               .bind()
           }
+        } else {
+          $('#share_button_wa, #share_button_sms').hide()
         }
       })
   }

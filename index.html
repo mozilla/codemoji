@@ -352,7 +352,7 @@
         <p class="mozilla_button" id="next_button_onboarding" track="onboarding__next">Next</p>
     </div>
     <div class="svg_wrapper svg_wrapper_pagination" data-svg="assets/svg/pagination.svg" layout="column" layout-align="center center"></div>
-    <p to-state="encrypt" class="onboarding_skip_button" track="onboarding__gotit">Got it</p>
+    <p to-state="onboarding.step7" class="onboarding_skip_button" track="onboarding__gotit">Got it</p>
   </div>
   <!-- /ONBOARDING -->
 
@@ -383,7 +383,7 @@
         <div class="coachmark coachmark_encryption_text"
              layout="column" layout-align="start start">
           <p class="coachmark_text">
-            Is there something you would like to say that is just between you and your friends?
+            Create a message for your friends and let Codemoji scramble it.
           </p>
         </div>
         <label uppercase class="header__label main_content_top_label" style-lable color-light>
@@ -396,7 +396,7 @@
       <div id="encryption_keyslider" class="main_keyslider">
         <div class="coachmark coachmark_encryption_text">
           <p class="coachmark_text">
-            Each emoji scrambles your message in a different way.
+            Each emoji scrambles messages differently. Remember to give your friends a hint about the emoji you use. 
           </p>
         </div>
         <div hideItIfMobile>        
@@ -417,7 +417,7 @@
         <div id="encryption_keypanel" hideItifMobile class="main_key_panel_emoji_wrapper" layout="column" layout-align="start center">
           <div class="nano">          
             <div class="main_key_panel_emoji_container unselectable nano-content" layout="column" layout-align="start center">
-              <!-- js injected -->
+             <!-- js injected -->
             </div>
           </div>
         </div>
@@ -430,7 +430,9 @@
       </div>
       <div class="main_content_bottom" flex layout="column">
         <div class="coachmark coachmark_encryption_text">
-          <p class="coachmark_text">Have fun sharing your emoji message so your friends can learn more about ciphers too.</p>
+          <p class="coachmark_text">
+            Share your emoji message so your friends can learn more about ciphers too.
+          </p>
         </div>
         <label class="header__label main_content_bottom_label" uppercase style-lable>
           SCRAMBLED MESSAGE
@@ -475,7 +477,7 @@
         <div class="coachmark coachmark_decryption_text"
              layout="column" layout-align="start start">
           <p class="coachmark_text">
-             This looks like a bunch of emojis, but actually is a message for you!
+             This looks like a bunch of emojis, but actually is a message just for you!
           </p>
         </div>
         <label class="header__label main_content_top_label" uppercase style-lable color-light>
@@ -489,7 +491,7 @@
       <div id="decryption_keyslider" class="main_keyslider">
         <div class="coachmark coachmark_encryption_text">
           <p class="coachmark_text">
-             Do you know what key the sender used for their cipher? The right key deciphers the message.
+            Each emoji scrambles messages differently. Ask your friend for a hint to find the right one. 
           </p>
         </div>
         <!-- selected key desktop-->
@@ -528,7 +530,9 @@
       <!-- main content bottom -->
       <div class="main_content_bottom" flex layout="column" color-bg-main>
         <div class="coachmark coachmark_encryption_text">
-          <p class="coachmark_text">The right emoji unscrambles the message.<br>See gibberish? Ask the sender or try guessing.</p>
+          <p class="coachmark_text">
+            If you picked the right emoji you’ll see your message. See gibberish? Ask your friend for a hint or keep guessing!
+          </p>
         </div>
         <label class="header__label main_content_bottom_label" uppercase style-lable>
           YOUR MESSAGE
@@ -544,7 +548,7 @@
           </div>
           <div class="main_share" layout="column" layout-align="start center">
             <p class="decryption_succeded">Well done!</p>
-            <a class="mozilla_button" to-state="encrypt">Create a new message</a>
+            <a class="mozilla_button" to-state="onboarding.step7">Create a new message</a>
           </div>
         </div>
       </div>
@@ -579,7 +583,10 @@
   </div>
    /CAPTCHA -->
 
-
+  <div class="section learnmore_popup_share" layout="row" layout-align="center center">
+    <div class="svg_wrapper svg_wrapper_books" data-svg="assets/svg/books.svg" layout="row" layout-align="center center"></div>
+    <div>Learn more about how modern  Encryption works</div>
+  </div>
   <!-- SHARE views/share -->
   <div color-bg-dark class="section_share section" layout="column" layout-align="start center">
     <div id="tooltip_share" class="tooltip_panel">
@@ -597,7 +604,8 @@
         </div>
         
        <div id="share_elements_loader" layout="column" layout-align="space-between center" wide>
-          <p>Cooking the link... </p>
+          <!-- <p>Cooking the link... </p> -->
+          <div class="svg_wrapper svg_wrapper_loader" data-svg="assets/svg/loader.svg" layout="row" layout-align="center center"></div>
        </div>
         <div id="share_elements" layout="column" layout-align="space-between center" wide>
           <div class="share_social_wrapper" layout="row" layout-align="center center" wide>
@@ -610,9 +618,9 @@
             <a id="share_button_ma" class="social" target="blank" track="share__ma">
               <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_ma2.svg"></div>
             </a>
-<!--             <a id="share_button_wa" class="social" showItIfMobile target="blank">
+            <a id="share_button_wa" class="social" showItIfMobile target="blank">
               <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_wa.svg"></div>
-            </a> -->
+            </a>
             <a id="share_button_sms" class="social" showItIfMobile target="blank" track="share__sms">
               <div class="svg_wrapper svg_wrapper_social" data-svg="assets/svg/social_ms.svg"></div>
             </a>
@@ -666,21 +674,25 @@
   <!-- FOOTER -->
   <div color-bg-main-alt id="footer" class="footer">
     <div class="footer_wrapper" layout="column" layout-align="center center">
+      <div layout="row" layout-align="center center">
+        <a class="footer_first_links" href="https://teach.mozilla.org/encryption" target="_blank">learn more</a>
+        <a class="footer_first_links" href="https://teach.mozilla.org/encryption" target="_blank">feedback</a>
+      </div>
       <div class="footer_link" layout="row" layout-align="center center">  
-        <a href="https://www.mozilla.org/contact/" class="footer_link_wrapper_opacity" 
+<!--         <a href="https://www.mozilla.org/contact/" class="footer_link_wrapper_opacity" 
            layout="row" layout-align="center center" target="blank">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                data-svg="assets/svg/footer-icon-help.svg"
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Contact Us</p>
-        </a>
-        <a href="https://twitter.com/Mozilla" class="footer_link_wrapper_opacity" 
+        </a> -->
+<!--         <a href="https://twitter.com/Mozilla" class="footer_link_wrapper_opacity" 
            layout="row" layout-align="center center" target="blank">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                data-svg="assets/svg/footer-icon-twitter.svg"
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Connect on Twitter</p>
-        </a>
+        </a> -->
         <a href="https://www.mozilla.org/en-US/about/legal/" class="footer_link_wrapper_opacity" 
            layout="row" layout-align="center center" target="blank">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
@@ -695,13 +707,13 @@
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Privacy Notice</p>
         </a>
-        <a href="https://donate.mozilla.org" class="footer_link_wrapper_opacity" 
+<!--         <a href="https://donate.mozilla.org" class="footer_link_wrapper_opacity" 
            layout="row" layout-align="center center" target="blank">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
                data-svg="assets/svg/footer-icon-heart.svg"
                layout="column" layout-align="center center"></div>
           <p class="footer_link">Donate</p>
-        </a>
+        </a> -->
         <a to-state="credits" class="footer_link_wrapper_opacity" 
            layout="row" layout-align="center center" target="blank">
           <div class="svg_wrapper_welcome_footer_icon svg_wrapper" 
@@ -833,7 +845,7 @@
 
 
 
-<!-- process:template 
+<!-- process:template
 <script type="text/javascript">
 function _l(a,b){var c=new XMLHttpRequest,d=document;c.open("GET",a,!0),c.onload=function(){var a=d.createElement("script");a.type="text/javascript",a.textContent=c.responseText,d.body.appendChild(a),b&&b()},c.send()}
 _l('app.js?v=<%=version%>');

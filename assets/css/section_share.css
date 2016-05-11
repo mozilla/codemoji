@@ -275,3 +275,51 @@ input.share_key_emoji-item:value{
   margin-left: 1.3rem;*/
   margin-top: 1rem;
 }
+
+.learnmore_popup_share {
+  z-index: 9000;
+  background-color: white;
+  padding: 0 2rem;
+  top: 0;
+  font-size: 80%;
+  text-decoration: underline;
+}
+
+.svg_wrapper_books svg{
+  width: 5rem;
+  height: 100%;
+  margin-right: 2rem;
+}
+
+.svg_wrapper_loader svg{
+  width: 15rem;
+  height: 100%;
+  margin: 2rem 0;
+}
+
+#loader_barber{
+  animation: loading_barber 3s infinite;
+  animation-timing-function: linear;
+}
+
+#loader_SVGID_2_{
+  animation: loading_barber_mask 3s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes loading_barber{
+  0%{
+    transform: translateX(0px)
+  }
+  100%{
+    transform: translateX(372px)
+  }
+}
+@keyframes loading_barber_mask{
+  0%{
+    transform: translateX(0px)
+  }
+  100%{
+    transform: translateX(-372px)
+  }
+}
