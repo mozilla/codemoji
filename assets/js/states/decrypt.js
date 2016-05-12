@@ -99,7 +99,8 @@
 
         $('.decrypt_feedback').transition({duration:1000, y:200, easing:'easeInOutExpo'})
 
-        if(Cryptoloji.mq.matches) TweenLite.from($('.main_content_bottom'), .75, {backgroundColor:'#FAFAFA', ease:Expo.easeInOut})
+        // if(Cryptoloji.mq.matches) 
+        TweenLite.from($('.main_content_bottom'), .75, {backgroundColor:'#FAFAFA', ease:Expo.easeInOut})
 
         $('.main_share').addClass('main_share-visible')
       })

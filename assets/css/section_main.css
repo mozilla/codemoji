@@ -75,14 +75,26 @@ div#decryptHeader{
   padding-bottom: 4.5rem;
 }
 
+#decryption_output .bluebox_output, #decryption_output .emojis_output, #decryption_output .letters_output,
 #encryption_output .bluebox_output, #encryption_output .emojis_output {
   position: absolute;
 }
+#decryption_output .bluebox_output,
 #encryption_output .bluebox_output {
   z-index: 1;
 }
+#decryption_output .emojis_output,
 #encryption_output .emojis_output {
   z-index: 2;
+}
+#decryption_output .letters_output {
+  z-index: 3;
+}
+#decryption_output .letters_output span {
+  width: 1em;
+  height: 1.5em;
+  display: inline-block;
+  text-align: center;
 }
 
 .bluebox_output,
