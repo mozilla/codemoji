@@ -5,3 +5,4 @@
 .DS_Store
 libs/gsap
 public/*
+env.json

@@ -121,7 +121,17 @@ gulp.task('generate-favicon', function(done) {
 gulp.task('finalhtml', ['copy:assets'], function(){
 
   var htmlminopt = {collapseWhitespace: true, removeComments:true}
-  
+  var env = require('./env.json');
+
+  gulp.src('public/share.html')
+    .pipe(processhtml({
+      commentMarker: 'process',
+      recursive:true,
+      data:{version:Math.random()*10000, env:env}
+    }))
+    .pipe(htmlmin(htmlminopt))
+    .pipe(gulp.dest('public/'))
+
   gulp.src('public/index.html')
     .pipe(through.obj(function (chunk, enc, cb) {
       svgInject({source:chunk.path, selector:'data-svg'}, function(res){
@@ -135,7 +145,7 @@ gulp.task('finalhtml', ['copy:assets'], function(){
     .pipe(processhtml({
       commentMarker: 'process',
       recursive:true,
-      data:{version:Math.random()*10000}
+      data:{version:Math.random()*10000, env:env}
     }))
     .pipe(replace('<script src="app.js"></script>', ''))
     .pipe(replace('<link rel="stylesheet" href="style.css">', ''))

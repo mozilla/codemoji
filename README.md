@@ -34,6 +34,8 @@ The following open-source libraries were also used in developing the website:
 
 ### Build
 
+You need to create a file 'env.json' in the root based on 'env.template.json' then run:
+
 	gulp build
 	
 	
