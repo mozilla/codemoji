@@ -27,10 +27,12 @@
     var text = $('#decryption_input').attr('text')
     Cryptoloji.current.input = text
 
+    $('#decryption_output').removeClass('placeholdit')
+    // .text(text)
     text = CryptoLib.decrypt(Cryptoloji.current.input, Cryptoloji.current.key)
     Cryptoloji.current.output = text
-    $('#decryption_output').removeClass('placeholdit').text(text)
-    Cryptoloji.stateman.emit('decrypt:show-reply', Cryptoloji.current.key)
+    decryptTextAnimation(text, Cryptoloji.current.input)
+    // Cryptoloji.stateman.emit('decrypt:show-reply', Cryptoloji.current.key)
   }
 
   function encryptText () {
@@ -51,115 +53,157 @@
     }
   }
 
-  var _animationTimeout = null
-  function encryptTextAnimation (text, emojiText) {
+  function decryptTextAnimation (text, emojiText) {
+    var emojiContainer = $('#decryption_output > .emojis_output')
+    var letterContainer = $('#decryption_output > .letters_output')
 
-    function _mapToBlueBox (text) {
-      text = text.toLowerCase()
-      var letterEmoji = _.map(text, function (c) {
-        // escape space or newline
-        if (c === '\n' || c === ' ') return c
+    var blueBoxOut = _generateBlueBox(text)
+    var blueBoxElements = $(blueBoxOut.replace(/> /g, '>'))
+    
+    var emojiOut = _generateEmojFromBlueBox(blueBoxElements, emojiText)
+    emojiContainer.html(emojiOut)   
+    var emojiElements = emojiContainer.children()
+    
+    var letterOut = _generateLetterFromBlueBox(emojiElements, text)
+    letterContainer.html(letterOut)   
+    var letterElements = letterContainer.children()
 
-        // remap 'strange' characters
-        var pointC = punycode.ucs2.decode(c)[0]
-        // a <- à 0ca 224 á 1ca 225 â 2ca 226 ã 3ca 227 ä 4ca 228 å 5ca 229 æ 6ca 230
-        if (pointC >= 224 && pointC <= 230) c = 'a'
-        // c <- ç 7ca 231
-        else if (pointC === 231) c = 'c'
-        // d <- ð hda 240 þ vda 254
-        else if (pointC === 240 || pointC === 254) c = 'd'
-        // e <- è 8ca 232 é 9ca 233 ê bda 234 ë cda 235
-        else if (pointC >= 232 && pointC <= 235) c = 'e'
-        // i <- ì dda 236 í eda 237 î fda 238 ï gda 239
-        else if (pointC >= 236 && pointC <= 239) c = 'i'
-        // n <- ñ ida 241
-        else if (pointC === 241) c = 'n'
-        // o <- ò jda 242 ó kda 243 ô lda 244 õ mda 245 ö nda 246 ø pda 248
-        else if (pointC >= 242 && pointC <= 246 || pointC === 248) c = 'o'
-        // u <- ù qda 249 ú rda 250 û sda 251 ü tda 252
-        else if (pointC >= 249 && pointC <= 252) c = 'u'
-        // y <- ý uda 253 ÿ wda 255
-        else if (pointC === 253 || pointC === 255) c = 'y'
+    _letterAnimation(emojiElements, letterElements, emojiContainer, letterContainer, .2, function() {
+      Cryptoloji.stateman.emit('decrypt:show-reply', Cryptoloji.current.key)
+    })
 
-        // custom class attached to containing span element
-        var spanClass = null
-        // is a symbol
-        if (pointC < 48 || (pointC > 57 && pointC < 65) || (pointC > 90 && pointC < 97) || pointC > 122 ) {
-          spanClass = 'bb_symbol'
-        } else {
-          spanClass = 'bb_' + c
-        }
-
-        // find the emoji letter corresponding to the current char
-        var current = _emojiLetterSet[c]
-        // return the image of emoji letter wrapped in span
-        var openspan = '<span unselectable class="' + spanClass + '">'
-        var closespan = '</span>'
-        var currentTwemoji = current ? toTwemoji(current) : toTwemoji(_emojiLetterSet['symbol'])
-        return openspan + currentTwemoji + closespan
-        // return currentTwemoji
-      })
-      letterEmoji = letterEmoji.join('')
-      return letterEmoji
-    }
-
-    function _generateEmojiHtml (blueBoxText, emojiText) {
-      emojiText = toTwemoji(emojiText)
-      // load emoji text to share
-      $('.share_message_item').html(emojiText)
-
-      emojiText = emojiText.replace(/>/g, '>,').split(',')
-      var emojiOut = _.map(blueBoxText, function (bb, idx) {
-        var openspan = '<span class="' + $(bb).attr('class') + '">'
-        var closespan = '</span>'
-        return openspan + emojiText[idx] + closespan
-      })
-      $('#encryption_output > .emojis_output').html(emojiOut)
-    }
-
-    function _blueBoxAnimation (blueElem, emojiElem) {
-
-      blueElem.css('opacity', 0)
-      emojiElem.css('opacity', 0)
-
-      var fragtime = (blueElem.length<15) ? .02 : .01
-      var totaltime = blueElem.length * fragtime
-
-      blueElem.each(function(i, e){
-        TweenLite.to(e, .3, {opacity:1, delay:fragtime*i, ease:Expo.easeInOut})
-      })
-
-      var _uniqueClasses = []
-      blueElem.each(function(i, e){
-        var _classname = $(e).attr('class')
-        if(_uniqueClasses.indexOf(_classname) == -1) _uniqueClasses.push(_classname)
-      })
-
-      _.each(_uniqueClasses, function(d, i){
-        $('#encryption_output > .bluebox_output .'+d).each(function(j, e){
-          TweenLite.to(e, .5, {opacity:0, delay:totaltime + i*.25, ease:Expo.easeInOut})
-        })
-        $('#encryption_output > .emojis_output .'+d).each(function(j, e){
-          TweenLite.to(e, .5, {opacity:1, delay:totaltime + i*.25, ease:Expo.easeInOut})
-        })
-      })
-
-      if (_animationTimeout) {
-        clearTimeout(_animationTimeout)
-      }
-      _animationTimeout = setTimeout(function () {
-        Cryptoloji.stateman.emit('encrypt:show-share')
-      }, _uniqueClasses.length * 300)
-    }
-
-    var blueBoxOut = _mapToBlueBox(text)
-    $('#encryption_output > .bluebox_output').html(blueBoxOut)
-
-    var blueBoxElements = $('#encryption_output > .bluebox_output').children()
-    var emojiOut = _generateEmojiHtml(blueBoxElements, emojiText)
-    var emojiElements = $('#encryption_output > .emojis_output').children()
-    _blueBoxAnimation(blueBoxElements, emojiElements)
+    Cryptoloji.stateman.on('decrypt:right-key', function() {
+      letterContainer.html(text)
+    })
   }
+
+  function encryptTextAnimation (text, emojiText) {
+    var blueBoxContainer = $('#encryption_output > .bluebox_output')
+    var emojiContainer = $('#encryption_output > .emojis_output')
+
+    var blueBoxOut = _generateBlueBox(text)
+    blueBoxContainer.html(blueBoxOut)
+    var blueBoxElements = blueBoxContainer.children()
+
+    var emojiOut = _generateEmojFromBlueBox(blueBoxElements, emojiText)
+    emojiContainer.html(emojiOut)
+    var emojiElements = emojiContainer.children()
+
+    _letterAnimation(blueBoxElements, emojiElements, blueBoxContainer, emojiContainer, .25, function () {
+      Cryptoloji.stateman.emit('encrypt:show-share')
+    })
+  }
+
+  function _generateBlueBox (text) {
+    text = text.toLowerCase()
+    var letterEmoji = _.map(text, function (c) {
+      // escape space or newline
+      if (c === '\n' || c === ' ') return c
+
+      // remap 'strange' characters
+      var pointC = punycode.ucs2.decode(c)[0]
+      // a <- à 0ca 224 á 1ca 225 â 2ca 226 ã 3ca 227 ä 4ca 228 å 5ca 229 æ 6ca 230
+      if (pointC >= 224 && pointC <= 230) c = 'a'
+      // c <- ç 7ca 231
+      else if (pointC === 231) c = 'c'
+      // d <- ð hda 240 þ vda 254
+      else if (pointC === 240 || pointC === 254) c = 'd'
+      // e <- è 8ca 232 é 9ca 233 ê bda 234 ë cda 235
+      else if (pointC >= 232 && pointC <= 235) c = 'e'
+      // i <- ì dda 236 í eda 237 î fda 238 ï gda 239
+      else if (pointC >= 236 && pointC <= 239) c = 'i'
+      // n <- ñ ida 241
+      else if (pointC === 241) c = 'n'
+      // o <- ò jda 242 ó kda 243 ô lda 244 õ mda 245 ö nda 246 ø pda 248
+      else if (pointC >= 242 && pointC <= 246 || pointC === 248) c = 'o'
+      // u <- ù qda 249 ú rda 250 û sda 251 ü tda 252
+      else if (pointC >= 249 && pointC <= 252) c = 'u'
+      // y <- ý uda 253 ÿ wda 255
+      else if (pointC === 253 || pointC === 255) c = 'y'
+
+      // custom class attached to containing span element
+      var spanClass = null
+      // is a symbol
+      if (pointC < 48 || (pointC > 57 && pointC < 65) || (pointC > 90 && pointC < 97) || pointC > 122 ) {
+        spanClass = 'bb_symbol'
+      } else {
+        spanClass = 'bb_' + c
+      }
+
+      // find the emoji letter corresponding to the current char
+      var current = _emojiLetterSet[c]
+      // return the image of emoji letter wrapped in span
+      var openspan = '<span unselectable class="' + spanClass + '">'
+      var closespan = '</span>'
+      var currentTwemoji = current ? toTwemoji(current) : toTwemoji(_emojiLetterSet['symbol'])
+      return openspan + currentTwemoji + closespan
+      // return currentTwemoji
+    })
+    letterEmoji = letterEmoji.join('')
+    return letterEmoji
+  }
+  
+  function _generateEmojFromBlueBox (blueBoxText, emojiText) {
+    emojiText = toTwemoji(emojiText)
+    // load emoji text to share
+    $('.share_message_item').html(emojiText)
+
+    emojiText = emojiText.replace(/>/g, '>,').split(',')
+    var emojiOut = _.map(blueBoxText, function (bb, idx) {
+      var openspan = '<span class="' + $(bb).attr('class') + '">'
+      var closespan = '</span>'
+      return openspan + emojiText[idx] + closespan
+    })
+    return emojiOut
+  }
+
+  function _generateLetterFromBlueBox (blueBoxText, text) {
+    var letterOut = text.replace(/\s/g, '').split('')
+    var idx = 0
+    letterOut = _.map(letterOut, function (letter) {
+      var openspan = '<span class="' + $(blueBoxText[idx]).attr('class') + '">'
+      var closespan = '</span>'
+      return $(openspan + letter + closespan).width($(blueBoxText[idx ++]).innerWidth())
+    })
+    return letterOut
+  }
+
+  var _animationTimeout = null
+  function _letterAnimation (blueElem, letterElem, blueContainer, letterContainer, elemDelay, callback) {
+    blueElem.css('opacity', 0)
+    letterElem.css('opacity', 0)
+
+    var fragtime = (blueElem.length<15) ? .02 : .01
+    var totaltime = blueElem.length * fragtime
+
+    blueElem.each(function(i, e){
+      TweenLite.to(e, .3, {opacity:1, delay:fragtime*i, ease:Expo.easeInOut})
+    })
+
+    var _uniqueClasses = []
+    blueElem.each(function(i, e){
+      var _classname = $(e).attr('class')
+      if(_uniqueClasses.indexOf(_classname) == -1) _uniqueClasses.push(_classname)
+    })
+
+    _.each(_uniqueClasses, function(d, i){
+      blueContainer.find('.'+d).each(function(j, e){
+        TweenLite.to(e, .5, {opacity:0, delay:totaltime + i*elemDelay, ease:Expo.easeInOut})
+      })
+      letterContainer.find('.'+d).each(function(j, e){
+        TweenLite.to(e, .5, {opacity:1, delay:totaltime + i*elemDelay, ease:Expo.easeInOut})
+      })
+    })
+
+    if (_animationTimeout) {
+      clearTimeout(_animationTimeout)
+    }
+    var timeout = _uniqueClasses.length * (elemDelay * 1000 + 50)
+    _animationTimeout = setTimeout(function () {
+      callback()
+    }, timeout)
+  }
+
 
   function handleHeader () {
     Cryptoloji.stateman.on('header:show', function () {

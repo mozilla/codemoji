@@ -297,13 +297,8 @@ input.share_key_emoji-item:value{
   margin: 2rem 0;
 }
 
-#loader_barber{
+#loader_barber *{
   animation: loading_barber 3s infinite;
-  animation-timing-function: linear;
-}
-
-#loader_SVGID_2_{
-  animation: loading_barber_mask 3s infinite;
   animation-timing-function: linear;
 }
 
@@ -315,11 +310,4 @@ input.share_key_emoji-item:value{
     transform: translateX(372px)
   }
 }
-@keyframes loading_barber_mask{
-  0%{
-    transform: translateX(0px)
-  }
-  100%{
-    transform: translateX(-372px)
-  }
-}
+
