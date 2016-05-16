@@ -223,27 +223,28 @@
         $('#share_copytoclipboard').attr('href', shareURI)
         $('#share_copytoclipboard').text('This is the link to share')
 
-        // when share links are loaded
-        // hide the loader, show the share buttons div and recalculate share midal height
-        setTimeout(function() {
-          $('#share_elements_loader').hide()
-          $('#share_elements').show()
-        }, 500)
-
         // show learn more banner
         // 
         $(".learnmore_popup_share").addClass("section-show")
         $(".learnmore_popup_share").transition({delay: 1000, duration:2000, y: 0, easing:'easeInOutExpo'})
-        
-        if (!Cryptoloji.mq.matches) {
-          setShareModalCoordinates()
-        }
 
         // copy link fallback if ios
         if (iosTest()) {
           $('#share_copytoclipboardcta').hide()
           $('#share_copyIosHint').show()
         }
+        
+        // when share links are loaded
+        // hide the loader, show the share buttons div and recalculate share m0dal height
+        setTimeout(function() {
+          $('#share_elements_loader').hide()
+          $('#share_elements').show()
+          
+          if (!Cryptoloji.mq.matches) {
+            setShareModalCoordinates()
+          }
+        }, 500)
+
       })
   }
 
