@@ -265,12 +265,11 @@
       .then(function (shareURI) {
         var twitterMessage = Cryptoloji.current.output.substring(0, 16) + 
           '... ' +
-          'I scrambled a message for you using Codemoji from @Mozilla: Try to unscramble it!' +
-          shareURI
+          'I scrambled a message for you using Codemoji from @Mozilla: Try to unscramble it!'
         
         var mailMessage = Cryptoloji.current.output + 
           '\n\n'+
-          'I wrote you a message and scrambled it with Codemoji, a fun tool to learn about ciphers.' + 
+          'I wrote you a message and scrambled it with Codemoji, a fun tool from Mozilla to learn about ciphers.' + 
           '\n\n'+
           'Try to unscramble it on ' + shareURI
 

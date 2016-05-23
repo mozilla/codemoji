@@ -41,6 +41,8 @@ You need to create a file 'env.json' in the root based on 'env.template.json' th
 	
 ### Build && Deploy on gh-pages
 	
+This will deploy the built version straight to Github pages. Please take note the local env.json will be used for the required setting:
+
 	npm run deploy_gh
 
 Under the hood here the details:
