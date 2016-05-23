@@ -10,6 +10,9 @@
     },
     isFirstVisit: function isFirstVisit () {
       return visitNumber == 1
+    },
+    alreadySeen: function isFirstVisit () {
+      return visitNumber >= 1
     }
   }
   

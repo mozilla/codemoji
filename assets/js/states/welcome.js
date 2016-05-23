@@ -8,7 +8,7 @@
   Cryptoloji.states.welcome = {
     enter: function () {
 
-      if (!Cryptoloji.visitor.isFirstVisit()) {
+      if (Cryptoloji.visitor.alreadySeen()) {
         Cryptoloji.stateman.go('encrypt')
       }
 

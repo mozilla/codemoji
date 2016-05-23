@@ -22,12 +22,10 @@
 
   function detectIOS7 () {
     var ios7 = navigator.userAgent.match(/(iPad|iPhone|iPod touch);.*CPU.*OS 7_\d/i)
-    console.log(ios7)
     return ios7 ? true : false
   }
 
   if (detectIE() || detectIOS7()) {
-    console.log("fixer active")
   // if (true) {
     function fixSvgDimensions () {
       // $('[data-svg]').each(function() {
