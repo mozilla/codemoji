@@ -179,6 +179,7 @@
       return new Promise(function(resolve, reject) {
         simpleHideNextBtn();
         OnBoardingAnimations.scene_07.exit(function(){
+          Cryptoloji.visitor.countVisit()
           Cryptoloji.stateman.emit('header:hide')
           endOut(7, resolve)
         })

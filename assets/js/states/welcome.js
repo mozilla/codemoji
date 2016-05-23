@@ -8,6 +8,10 @@
   Cryptoloji.states.welcome = {
     enter: function () {
 
+      if (!Cryptoloji.visitor.isFirstVisit()) {
+        Cryptoloji.stateman.go('encrypt')
+      }
+
       Cryptoloji.stateman.emit('header:hide')
       Cryptoloji.stateman.emit('footer:show') 
 
@@ -18,8 +22,6 @@
       $('#body_landing').children().each(function(i, e){
         $(e).css({opacity:0})
       })
-
-      
 
       setTimeout(function(){
         $('#body_landing').transition({opacity:1, duration:250})

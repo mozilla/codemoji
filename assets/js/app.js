@@ -1,8 +1,6 @@
 ;(function (window, Cryptoloji, $, undefined) {
   'use strict'
-
-  Cryptoloji.visitor.countVisit()
-
+  
   //
   // jQuery document ready bootstrap
   //
@@ -108,16 +106,6 @@
       ga('send', 'event', 'encrypt', 'key_soon');
     })
 
-    //
-    // handle first visit element display/hide
-    //
-    if (Cryptoloji.visitor.isFirstVisit()) {
-      $('[hide-on-first-visit-only]').hide()
-    } else {
-      $('[show-on-first-visit-only]').hide()
-      // go straight to encrypt
-      Cryptoloji.stateman.go('encrypt')
-    }
   })
 
 })(window, window.Cryptoloji, jQuery); 

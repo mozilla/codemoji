@@ -17,6 +17,7 @@
       return true
     },
     enter: function (options) {
+      
 
       $('.decrypt_feedback').css({y:200})
       
