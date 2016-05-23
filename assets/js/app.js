@@ -115,6 +115,8 @@
       $('[hide-on-first-visit-only]').hide()
     } else {
       $('[show-on-first-visit-only]').hide()
+      // go straight to encrypt
+      Cryptoloji.stateman.go('encrypt')
     }
   })
 
