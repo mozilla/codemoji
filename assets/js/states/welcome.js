@@ -8,9 +8,7 @@
   Cryptoloji.states.welcome = {
     enter: function () {
 
-      if (Cryptoloji.visitor.alreadySeen()) {
-        Cryptoloji.stateman.go('encrypt')
-      }
+
 
       Cryptoloji.stateman.emit('header:hide')
       Cryptoloji.stateman.emit('footer:show') 
@@ -32,6 +30,11 @@
         $('#mainHeaderBig').transition({y:0, duration:1000, delay:500, easing:'easeInOutExpo'})
 
         LogoHeaderAnimation.enter('#welcome_header')
+
+        if (Cryptoloji.visitor.alreadySeen()) {
+          Cryptoloji.stateman.go('encrypt')
+          return
+        }
 
       },10)
 
