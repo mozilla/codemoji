@@ -24,6 +24,11 @@ gulp.task('copy:fonts', ['clean'], function() {
       .pipe(gulp.dest('public/font'));
 });
 
+gulp.task('copy:cname', ['clean'], function() {
+  return gulp.src('assets/CNAME')
+      .pipe(gulp.dest('public/'));
+});
+
 gulp.task('copy:assets', ['clean'], function() {
   var assets_paths = [
     'assets/svg/*',
@@ -156,5 +161,5 @@ gulp.task('finalhtml', ['copy:assets'], function(){
 
 
 
-gulp.task('build', ['clean', 'copy:fonts', 'copy:favicon', 'copy:assets', 'minify', 'finalhtml']);
+gulp.task('build', ['clean', 'copy:fonts', 'copy:cname', 'copy:favicon', 'copy:assets', 'minify', 'finalhtml']);
 gulp.task('favicon', ['generate-favicon']);
