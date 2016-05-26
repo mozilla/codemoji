@@ -18,6 +18,13 @@
     },
     enter: function (options) {
       
+      if (Cryptoloji.visitor.alreadySeen()) {
+        $('#createNewMessage').attr('to-state', 'encrypt')
+        // $('#createNewMessage').on('click', function(){
+        //   Cryptoloji.stateman.go('encrypt')
+        //   return false;
+        // })
+      }
 
       $('.decrypt_feedback').css({y:200})
       

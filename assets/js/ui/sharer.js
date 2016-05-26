@@ -49,7 +49,7 @@
         if (idx < keys.length - 1)
           link += '&'
       })
-      console.debug('share link:', link)
+      console.log('share link:', link)
       if (self.openWindow) {
         event.preventDefault()
         window.open(link, 
