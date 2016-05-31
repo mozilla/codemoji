@@ -420,7 +420,8 @@
   }
 
   function resizeOnboardingSvg () {
-    $('.svg_wrapper_onboarding > svg').css('height', $(window).innerHeight() - $('#header').height() - Cryptoloji.utils.remToPx(8))
+    var h = $(window).innerHeight() - $('#header').height() - Cryptoloji.utils.remToPx(8)
+    if(h>0) $('.svg_wrapper_onboarding > svg').css('height', h)
   }
 
   function encryptionEnteringTransition (state) {
