@@ -1,4 +1,6 @@
-;(function (window, $) {
+;(function (window, $, Cryptoloji) {
+
+
   function detectIE() {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf('MSIE ');
@@ -26,14 +28,21 @@
   }
 
   if (detectIE() || detectIOS7()) {
+
+      Cryptoloji.stateman.on('footer:show', function(){
+        fixSvgDimensions();
+      })
+
   // if (true) {
     function fixSvgDimensions () {
       // $('[data-svg]').each(function() {
       $('svg').parent().each(function() {
+        var that = this
+        setTimeout(function(){
         // console.log($(this).attr("unfixme"))
-        if (!$(this).attr("unfixme")){
-          var $svg = $('svg', this)
-          var $wrapper = $(this)
+        if (!$(that).attr("unfixme")){
+          var $svg = $('svg', that)
+          var $wrapper = $(that)
 
 
           // 
@@ -74,17 +83,17 @@
             if (!fixWidth && !fixHeight)
               fixHeight = true
 
-
             if (fixHeight) {
-              $wrapper.css('height', wrapperWidth * svgHeight / svgWidth)
+              if(wrapperWidth>0) $wrapper.css('height', wrapperWidth * svgHeight / svgWidth)
             } else if (fixWidth) {
-              $wrapper.css('width', wrapperHeight * svgWidth / svgHeight)
+              if(wrapperHeight>0) $wrapper.css('width', wrapperHeight * svgWidth / svgHeight)
             }
           }
         }
+        }, 10)
       })
     }
     $(document).ready(function () { fixSvgDimensions() })
     $(window).resize(function () { fixSvgDimensions() })
   }
-}(window, window.jQuery));
+})(window, window.jQuery, Cryptoloji);

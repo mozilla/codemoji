@@ -52,7 +52,7 @@ gulp.task('copy:favicon', ['clean'], function() {
 gulp.task('minify', ['clean'], function() {
 
   var cleancssOpt = {advanced:false, aggressiveMerging:false, restructuring:false}
-  var processors = [autoprefixer({browsers: ['last 2 version']})];
+  var processors = [autoprefixer({browsers: ['last 3 version']})];
 
   return gulp.src('index.html')
       .pipe(usemin({
