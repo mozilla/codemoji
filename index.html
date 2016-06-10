@@ -261,10 +261,10 @@
           <p id="landing_state_1_encrypted_message" class="landing_encrypted_message" landing-state="1">
             <!-- js injected -->
           </p>
-          <button class="mozilla_button" id="landing_state_1_button" to-state="decrypt" landing-state="1" track="decrypt__decipher">
+          <button class="mozilla_button" id="landing_state_1_button" to-state="decrypt" landing-state="1" track="landing__decipherit">
             Decipher it
           </button>
-          <a class="Learn_more_button footer_link" landing-state="1" id="landing_state_1_more"
+          <a track="decrypt__learnmore" class="Learn_more_button footer_link" landing-state="1" id="landing_state_1_more"
              href="https://advocacy.mozilla.org/encrypt/codemoji" target="_blank">
             Learn more about encryption
           </a>
@@ -591,7 +591,7 @@
 
   <div class="section learnmore_popup_share" layout="row" layout-align="center center">
     <div class="svg_wrapper svg_wrapper_books" data-svg="assets/svg/books.svg" layout="row" layout-align="center center"></div>
-    <div><a href="https://advocacy.mozilla.org/encrypt/codemoji" target="blank">Learn more about how modern Encryption works</a></div>
+    <div><a track="share__learnmore" href="https://advocacy.mozilla.org/encrypt/codemoji" target="blank">Learn more about how modern Encryption works</a></div>
   </div>
   <!-- SHARE views/share -->
   <div color-bg-dark class="section_share section" layout="column" layout-align="start center">
@@ -873,7 +873,7 @@ _l('app.js?v=<%=version%>');
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-7954920-12', 'auto');
-  ga('send', 'pageview');
+  //ga('send', 'pageview'); // handled in app.js
 
 </script>
 
