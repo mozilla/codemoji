@@ -49,13 +49,12 @@
             animateInputPlaceholder(theater, newplaceholder)
             Cryptoloji.stateman.emit('encrypt:key_soon')
           }
-
           // check if the key is already being selected
           // this avoid multiple call from slider and modal
           if (Cryptoloji.current.key !== key) {
             Cryptoloji.UI.selectKey(key)
 
-            Cryptoloji.stateman.emit('encrypt:key')
+            Cryptoloji.stateman.emit('encrypt:key', currkey)
 
             // select corresponding emoji in keymodal
             Cryptoloji.UI.KeyModal().select(key)
@@ -67,10 +66,11 @@
         Cryptoloji.stateman.on('keymodal:key-chosen', function (key) {
           // check if the key is already being selected
           // this avoid multiple call from slider and modal
+          var currkey = Cryptoloji.current.key
           if (Cryptoloji.current.key !== key) {
             Cryptoloji.UI.selectKey(key)
 
-            Cryptoloji.stateman.emit('encrypt:key')
+            Cryptoloji.stateman.emit('encrypt:key', currkey)
 
             Cryptoloji.UI.Keyslider('encrypt')
               .resetSelection()
@@ -81,9 +81,9 @@
         })
       } else {
         Cryptoloji.stateman.on('keypanel:key-chosen', function (key) {
-
+          var currkey = Cryptoloji.current.key
           Cryptoloji.UI.selectKey(key)
-          Cryptoloji.stateman.emit('encrypt:key')
+          Cryptoloji.stateman.emit('encrypt:key', currkey)
           $('#encryption_selected_key').html(Cryptoloji.UI.toTwemoji(key))
           // coachmark error
           if (_.isEmpty($('#encryption_input').val())) {

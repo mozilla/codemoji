@@ -83,6 +83,9 @@
     //
     // track any stage change in gAnalytics
     //
+    if(Cryptoloji.stateman.current){
+      ga('send', 'pageview', Cryptoloji.stateman.current.name);
+    }
     Cryptoloji.stateman.on('begin', function (e) {
       ga('send', 'pageview', e.path);
     })
@@ -99,8 +102,13 @@
     Cryptoloji.stateman.on('decrypt:right-key', function(){
       ga('send', 'event', 'decrypt', 'right-key');
     })
-    Cryptoloji.stateman.on('encrypt:key', function(){
-      ga('send', 'event', 'encrypt', 'key');
+    Cryptoloji.stateman.on('encrypt:key', function(key){
+      if(key){
+        ga('send', 'event', 'encrypt', 'key');
+      }else{
+        ga('send', 'event', 'encrypt', 'key_first');
+      }
+      
     })
     Cryptoloji.stateman.on('encrypt:key_soon', function(){
       ga('send', 'event', 'encrypt', 'key_soon');
