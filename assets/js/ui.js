@@ -61,11 +61,11 @@
     var blueBoxElements = $(blueBoxOut.replace(/> /g, '>'))
     
     var emojiOut = _generateEmojFromBlueBox(blueBoxElements, emojiText)
-    emojiContainer.html(emojiOut)   
+    emojiContainer.html(emojiOut)
     var emojiElements = emojiContainer.children()
     
     var letterOut = _generateLetterFromBlueBox(emojiElements, text)
-    letterContainer.html(letterOut)   
+    letterContainer.text(letterOut)
     var letterElements = letterContainer.children()
 
     _letterAnimation(emojiElements, letterElements, emojiContainer, letterContainer, .2, function() {
@@ -73,7 +73,7 @@
     })
 
     Cryptoloji.stateman.on('decrypt:right-key', function() {
-      letterContainer.html(text)
+      letterContainer.text(text)
     })
   }
 
