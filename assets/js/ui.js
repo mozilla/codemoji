@@ -65,7 +65,7 @@
     var emojiElements = emojiContainer.children()
     
     var letterOut = _generateLetterFromBlueBox(emojiElements, text)
-    letterContainer.text(letterOut)
+    letterContainer.html(letterOut)
     var letterElements = letterContainer.children()
 
     _letterAnimation(emojiElements, letterElements, emojiContainer, letterContainer, .2, function() {
