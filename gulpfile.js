@@ -126,7 +126,20 @@ gulp.task('generate-favicon', function(done) {
 gulp.task('finalhtml', ['copy:assets'], function(){
 
   var htmlminopt = {collapseWhitespace: true, removeComments:true}
-  var env = require('./env.json');
+  var env;
+
+  if (fs.existsSync('./env.json')) {
+    env = require('./env.json')
+  }
+  else if (process.env.DOMAIN) {
+    env = {
+      domain: process.env.DOMAIN
+    }
+  } else {
+    env = {
+      domain: 'http://localhost:8080'
+    }
+  }
 
   gulp.src('public/share.html')
     .pipe(processhtml({
