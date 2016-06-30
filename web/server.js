@@ -53,7 +53,8 @@ app.use(helmet.contentSecurityPolicy({
       'twemoji.maxcdn.com'
     ],
     connectSrc: [
-      '\'self\''
+      '\'self\'',
+      'https://bitly.mofoprod.net'
     ]
   },
   reportOnly: false,
