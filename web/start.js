@@ -1,3 +1,5 @@
+'use strict';
+
 const throng = require('throng');
 const codemoji = require('./server');
 const workers = process.env.WEB_CONCURRENCY || 1;
