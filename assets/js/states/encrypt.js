@@ -51,6 +51,7 @@
           }
           // check if the key is already being selected
           // this avoid multiple call from slider and modal
+          var currkey = Cryptoloji.current.key
           if (Cryptoloji.current.key !== key) {
             Cryptoloji.UI.selectKey(key)
 
