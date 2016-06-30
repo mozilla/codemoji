@@ -127,16 +127,13 @@ gulp.task('finalhtml', ['copy:assets'], function(){
 
   var htmlminopt = {collapseWhitespace: true, removeComments:true}
   var env;
-  var herokuEnv = `${process.env.ENV_DIR}/DOMAIN`
 
   if (fs.existsSync('./env.json')) {
     env = require('./env.json')
   }
-  else if (fs.existsSync(herokuEnv)) {
+  else if (process.env.DOMAIN) {
     env = {
-      domain: fs.readFileSync(herokuEnv, {
-        encoding: 'utf8'
-      })
+      domain: process.env.DOMAIN
     }
   } else {
     env = {
