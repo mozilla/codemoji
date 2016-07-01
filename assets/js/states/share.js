@@ -284,8 +284,6 @@
           '\n' + 
           'Check out ' + shareURI
 
-        console.log(shareURI)
-
         Cryptoloji.UI.Sharer('facebook', '#share_button_fb')
           .setShareLink('https://www.facebook.com/sharer/sharer.php')
           .addParam('u', shareURI)
