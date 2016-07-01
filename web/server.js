@@ -50,7 +50,8 @@ app.use(helmet.contentSecurityPolicy({
     imgSrc: [
       '\'self\'',
       '\'unsafe-inline\'',
-      'twemoji.maxcdn.com'
+      'twemoji.maxcdn.com',
+      'www.google-analytics.com'
     ],
     connectSrc: [
       '\'self\'',
