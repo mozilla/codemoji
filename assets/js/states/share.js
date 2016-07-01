@@ -265,9 +265,10 @@
       .then(function (shareURI) {
         var partial = ''
         try{
-          partial = encodeURIComponent(Cryptoloji.current.output.substring(0, 16))
+          var trytoencode = encodeURIComponent(Cryptoloji.current.output.substring(0, 16))
+          partial = Cryptoloji.current.output.substring(0, 16)
         } catch(err) {
-          partial = encodeURIComponent("🏩📒🗻😁")
+          partial = "🏩📒🗻😁"
         }
         var twitterMessage = partial + 
           '... ' +
