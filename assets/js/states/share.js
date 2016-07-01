@@ -263,7 +263,13 @@
   function setupShareButtons () {
     Cryptoloji.Api.getShortenedLink()
       .then(function (shareURI) {
-        var twitterMessage = Cryptoloji.current.output.substring(0, 16) + 
+        var partial = ''
+        try{
+          partial = encodeURIComponent(Cryptoloji.current.output.substring(0, 16))
+        } catch(err) {
+          partial = encodeURIComponent("🏩📒🗻😁")
+        }
+        var twitterMessage = partial + 
           '... ' +
           'I scrambled a message for you using Codemoji from @Mozilla: Try to unscramble it!'
         
@@ -276,6 +282,8 @@
         var smsMessage = Cryptoloji.current.output + 
           '\n' + 
           'Check out ' + shareURI
+
+        console.log(shareURI)
 
         Cryptoloji.UI.Sharer('facebook', '#share_button_fb')
           .setShareLink('https://www.facebook.com/sharer/sharer.php')
