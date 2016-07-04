@@ -263,12 +263,16 @@
   function setupShareButtons () {
     Cryptoloji.Api.getShortenedLink()
       .then(function (shareURI) {
+
+        // we cannot safely substring a surrogate pair string
+        // we need to try/catch the encodeURIComponent with that substring
         var partial = ''
         try{
-          var trytoencode = encodeURIComponent(Cryptoloji.current.output.substring(0, 16))
-          partial = Cryptoloji.current.output.substring(0, 16)
+          var str = Cryptoloji.current.output.replace(/ /g, '').substring(0, 16)
+          var trytoencode = encodeURIComponent(str)
+          partial = str
         } catch(err) {
-          partial = "🏩📒🗻😁"
+          partial = "🌈🚉🐰🚌"
         }
         var twitterMessage = partial + 
           '... ' +
