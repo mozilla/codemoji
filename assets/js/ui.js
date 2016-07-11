@@ -142,17 +142,39 @@
     letterEmoji = letterEmoji.join('')
     return letterEmoji
   }
-  
+
+  function _getEmojiTextElements (twemojifiedText) {
+    // get list of independent elements from twemojified string
+
+    var emojiElems = []
+
+    // Use jQuery.parseHTML to detect independent HTML elements
+    // in the twemojified text
+    $.parseHTML(twemojifiedText).forEach(function (elem) {
+      // if element is a tag just put its string representation 
+      // into array of elements
+      if (elem.nodeType === Node.ELEMENT_NODE) {
+        emojiElems.push(elem.outerHTML)
+      } else {
+        // In this case we deal with unprocessed characters.
+        // Add every character to array of elements
+        Array.prototype.push.apply(emojiElems, elem.nodeValue.split(''))
+      }
+    })
+
+    return emojiElems
+  }
+
   function _generateEmojFromBlueBox (blueBoxText, emojiText) {
     emojiText = toTwemoji(emojiText)
     // load emoji text to share
     $('.share_message_item').html(emojiText)
+    var emojiElems = _getEmojiTextElements(emojiText)
 
-    emojiText = emojiText.replace(/>/g, '>,').split(',')
     var emojiOut = _.map(blueBoxText, function (bb, idx) {
       var openspan = '<span class="' + $(bb).attr('class') + '">'
       var closespan = '</span>'
-      return openspan + emojiText[idx] + closespan
+      return openspan + emojiElems[idx] + closespan
     })
     return emojiOut
   }
