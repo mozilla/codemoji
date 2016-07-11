@@ -141,7 +141,7 @@
       if(key){
         ga('send', 'event', 'encrypt', 'key', 'click on a key');
       }else{
-        ga('send', 'event', 'encrypt', 'key_first', 'click on the first choosen key');
+        ga('send', 'event', 'encrypt', 'key_first', 'click on the first chosen key');
       }
     })
     Cryptoloji.stateman.on('encrypt:key_soon', function(){
