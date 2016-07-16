@@ -17,7 +17,7 @@
     // get query params
     var queryValues = uri.queryGet()
     // is there is something
-    if (!_.isEmpty(queryValues)) {
+    if (!_.isEmpty(queryValues) && queryValues.data) {
       // dehashify
       STORAGE = _dehashify(queryValues.data)
       // clean url
