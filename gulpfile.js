@@ -31,7 +31,7 @@ gulp.task('copy:cname', ['clean'], function() {
 
 gulp.task('copy:assets', ['clean'], function() {
   var assets_paths = [
-    'assets/svg/*',
+    'assets/svg/**/*',
     'assets/img/**/*',
     'vendor/**/*',
     'share.html',

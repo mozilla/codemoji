@@ -21,6 +21,8 @@
     if(svg.length>0) svg_loaded.push(attr)
   })
 
+  var twemojiBase = window.location.origin
+
   if(window.gHandleSvgLoading) window.gHandleSvgLoading(svg_loaded)
 
   function decryptText () {
@@ -371,7 +373,8 @@
 
   function toTwemoji (text) {
       return twemoji.parse(text, {
-        folder: 'svg',
+        base: twemojiBase,
+        folder: '/assets/svg/twemoji',
         ext:    '.svg'
       })
   }
