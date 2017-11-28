@@ -71,6 +71,20 @@
   margin: 1rem 0rem 2rem 0rem;
 }
 
+.welcome_the_other{
+  font-size: 65%;
+  margin: 3rem 3rem 0rem 3rem;
+}
+.welcome_the_other a{
+  text-decoration: underline;
+}
+
+.welcome_the_other .logocompetitor{
+  display: inline;
+  width: 100px;
+  vertical-align: text-bottom;
+}
+
 .section_welcome_main{
   padding: 1rem;
   position: relative;
